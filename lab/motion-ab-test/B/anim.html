@@ -19,6 +19,7 @@
   --ink: #0A0A0A; --paper: #F2EFE8; --gold: #E8B84A; --gray: #8C8A85;
   --margin: 80px;
   --scrim: 0.55;
+  --scrimCredit: 0.85;   /* 55% cannot lift the mandated #8C8A85 credit to 4.5:1 over the photo (measured 3.28:1) */
 }
 html, body { margin: 0; padding: 0; background: var(--ink); width: 1080px; height: 1920px; overflow: hidden; }
 #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); }
@@ -40,11 +41,18 @@ html, body { margin: 0; padding: 0; background: var(--ink); width: 1080px; heigh
 .blk { position: absolute; left: var(--margin); width: max-content; opacity: 0; transform-origin: 0 50%; }
 .scrim { position: absolute; left: -24px; right: -24px; top: -14px; bottom: -14px; background: var(--ink); opacity: 0; }
 .onPhoto .scrim { opacity: var(--scrim); }
+#credit.onPhoto .scrim { opacity: var(--scrimCredit); }
+/* line scrims are opaque ink inside one group at 55%, so overlapping lines never double-darken */
+.scrimGroup { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: var(--scrim); }
+.lineScrim { position: absolute; left: -24px; background: var(--ink); transform-origin: 0 0; }
+.lines > .scrim { display: none; }
 .txt { position: relative; }
 .qa-notext .txt { visibility: hidden; }
 
 .head { font: 800 132px/0.95 'Inter Tight', sans-serif; letter-spacing: -0.02em; text-transform: uppercase; color: var(--paper); }
 .head.gold { color: var(--gold); }
+#hl1, #hl2 { width: max-content; transform-origin: 0 50%; }
+#hs2 { transform-origin: 24px 50%; }
 .cap { font: 600 64px/1.1 'Inter Tight', sans-serif; color: var(--paper); }
 .w { position: relative; display: inline-block; opacity: 0; }
 .w .g { position: absolute; left: 0; top: 0; color: var(--gold); opacity: 0; }
@@ -69,20 +77,23 @@ html, body { margin: 0; padding: 0; background: var(--ink); width: 1080px; heigh
   <svg id="diagram" viewBox="0 0 1080 1920" width="1080" height="1920"></svg>
 
   <!-- Shot 1 headline -->
-  <div class="blk onPhoto" id="hl1" style="top:300px"><div class="scrim"></div><div class="txt head">18 mirrors.</div></div>
-  <div class="blk onPhoto" id="hl2" style="top:425px"><div class="scrim"></div><div class="txt head gold">One eye.</div></div>
+  <div class="blk onPhoto" id="head" style="top:300px">
+    <div class="scrimGroup"><div class="lineScrim" id="hs1"></div><div class="lineScrim" id="hs2"></div></div>
+    <div class="txt head" id="hl1">18 mirrors.</div>
+    <div class="txt head gold" id="hl2">One eye.</div>
+  </div>
 
   <!-- Captions (words filled in by script) -->
   <div class="blk" id="cap2a" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
   <div class="blk" id="cap2b" style="top:446px"><div class="scrim"></div><div class="txt cap"></div></div>
   <div class="blk" id="cap3" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
   <div class="blk" id="cap4" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
-  <div class="blk onPhoto" id="cap5" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
+  <div class="blk onPhoto lines" id="cap5" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
 
   <!-- Number readouts -->
   <div class="blk" id="n13" style="top:1358px"><div class="scrim"></div><div class="txt num"></div></div>
   <div class="blk" id="n40" style="top:1342px"><div class="scrim"></div><div class="txt num"></div></div>
-  <div class="blk" id="n65" style="top:1252px"><div class="scrim"></div><div class="txt big"></div></div>
+  <div class="blk" id="n65" style="top:1234px"><div class="scrim"></div><div class="txt big"></div></div>
 
   <!-- Credit: every frame, bottom-left of the text safe zone -->
   <div class="blk onPhoto" id="credit" style="top:1462px; opacity:1"><div class="scrim"></div><div class="txt credit">Photo: NASA/Goddard/Chris Gunn</div></div>
@@ -130,7 +141,7 @@ const FULL = { s: STAGE.h / IMG.h, focus: { x: 835, y: 985 } };   // focus = cen
 const BAND = { s: STAGE.w / IMG.w };
 // One real segment, traced from the photo (image pixels): the inner-ring segment directly below the central hole
 const SEGMENT = [[800, 1046], [1058, 1002], [1300, 1030], [1400, 1125], [1057, 1200], [732, 1140]];
-const HEX = { cx: 540, cy: 900, R: 80, spread: 1.25 };   // spread layout is 760 px wide
+const HEX = { cx: 540, cy: 900, cyMerged: 850, R: 80, spread: 1.25 };   // spread layout is 760 px wide; the merge lifts the cluster 50 px
 const OUTLINE_PX = 4;
 
 /* ---------- MATH ---------- */
@@ -183,7 +194,7 @@ function buildCaption(id, text) {
       const w = document.createElement('span'); w.className = 'w';
       w.textContent = word;
       const g = document.createElement('span'); g.className = 'g'; g.textContent = word;
-      w.appendChild(g); el.appendChild(w); words.push(w);
+      w.appendChild(g); el.appendChild(w); w.dataset.line = li; words.push(w);
     });
   });
   return words;
@@ -257,7 +268,7 @@ cells.forEach((c, i) => {
   window.__union = g;
 })();
 // Hero travel of shot 4 = how far the outermost hex moves while the rings close up
-const heroTravel = Math.max(...cells.map((c) => Math.hypot(c.x, c.y))) * (HEX.spread - 1);
+const heroTravel = Math.max(...cells.map((c) => Math.hypot(c.x * (1 - HEX.spread), c.y * (1 - HEX.spread) + HEX.cyMerged - HEX.cy)));
 const secondaryTravel = heroTravel * MOTION.secondaryRatio;
 
 /* ---------- RENDER ---------- */
@@ -268,6 +279,39 @@ function placePhoto(img, extra, s, base, focus) {
   const k = extra;
   const tx = focus.x + k * (base.x - focus.x), ty = focus.y + k * (base.y - focus.y);
   img.style.transform = `translate(${tx}px, ${ty}px) scale(${k * s})`;
+}
+
+function setupLineScrims() {
+  // headline: one scrim per line inside a single 55% group (no darker stripe where the lines meet)
+  [['hl1', 'hs1'], ['hl2', 'hs2']].forEach(([t, sc]) => {
+    const line = $(t), el = $(sc), pad = 14, side = 24;
+    el.style.top = (line.offsetTop - pad) + 'px';
+    el.style.height = (line.offsetHeight + 2 * pad) + 'px';
+    el.style.width = (line.offsetWidth + 2 * side) + 'px';
+  });
+  Object.values(CAPS).forEach((c) => {
+    const blk = c.words[0].closest('.blk');
+    if (!blk.classList.contains('lines')) return;
+    const pad = 14, side = 24;
+    const lines = [];
+    const group = document.createElement('div'); group.className = 'scrimGroup';
+    blk.insertBefore(group, blk.firstChild);
+    c.words.forEach((w) => {
+      const li = Number(w.dataset.line);
+      const L = lines[li] || (lines[li] = { top: Infinity, bottom: -Infinity, right: 0, words: [] });
+      L.top = Math.min(L.top, w.offsetTop); L.bottom = Math.max(L.bottom, w.offsetTop + w.offsetHeight);
+      L.right = Math.max(L.right, w.offsetLeft + w.offsetWidth); L.words.push(w);
+    });
+    lines.forEach((L, i) => {
+      const top = L.top - pad, bottom = L.bottom + pad;
+      const el = document.createElement('div'); el.className = 'lineScrim';
+      el.style.top = top + 'px'; el.style.height = (bottom - top) + 'px';
+      el.style.width = (L.right + 2 * side) + 'px';
+      group.appendChild(el);
+      L.el = el; L.full = L.right + 2 * side; L.side = side;
+    });
+    c.lines = lines;
+  });
 }
 
 function renderCaption(c, F) {
@@ -282,6 +326,14 @@ function renderCaption(c, F) {
     w.style.opacity = on ? 1 : 0;
     const current = on && F < at + MOTION.wordGap - 1e-6;   // the word being "spoken"
     w.firstElementChild.style.opacity = current ? 1 : 0;
+  });
+  if (c.lines) c.lines.forEach((L) => {
+    // the scrim grows in hard steps with the words, so no empty slab is ever on screen
+    const shown = L.words.filter((w) => w.style.opacity === '1');
+    if (!shown.length) { L.el.style.opacity = 0; return; }
+    const right = Math.max(...shown.map((w) => w.offsetLeft + w.offsetWidth)) + 2 * L.side;
+    L.el.style.opacity = '';
+    L.el.style.transform = `scaleX(${right / L.full})`;
   });
   return true;
 }
@@ -319,10 +371,9 @@ function renderAt(t) {
   } else show(winBand, false);
 
   /* shot 1 headline */
-  show($('hl1'), inRange(F, ...SHOT.hook));
-  const hl2 = $('hl2');
-  show(hl2, inRange(F, CUE.line2, SHOT.hook[1]));
-  hl2.style.transform = `scale(${pop(F, CUE.line2)})`;
+  show($('head'), inRange(F, ...SHOT.hook));
+  const line2On = inRange(F, CUE.line2, SHOT.hook[1]), p2 = `scale(${pop(F, CUE.line2)})`;
+  [$('hl2'), $('hs2')].forEach((el) => { el.style.opacity = line2On ? 1 : 0; el.style.transform = p2; });
 
   /* captions */
   renderCaption(CAPS.cap2a, F);
@@ -357,15 +408,16 @@ function renderAt(t) {
   /* diagram */
   const mp = ease.move(clamp01((F - CUE.merge.start) / CUE.merge.dur));
   const spread = HEX.spread + (1 - HEX.spread) * mp;
+  const cy = HEX.cy + (HEX.cyMerged - HEX.cy) * mp;
   cells.forEach((c) => {
     const on = F >= c.appear - 1e-6 && F < CUE.union - 1e-6;
     c.el.style.opacity = on ? 1 : 0;
     const s = pop(F, c.appear);
-    c.el.style.transform = `translate(${HEX.cx + c.x * spread}px, ${HEX.cy + c.y * spread}px) scale(${s})`;
+    c.el.style.transform = `translate(${HEX.cx + c.x * spread}px, ${cy + c.y * spread}px) scale(${s})`;
   });
   const u = window.__union;
   u.style.opacity = inRange(F, CUE.union, SHOT.payoff[1]) ? 1 : 0;
-  u.style.transform = `scale(${pop(F, CUE.union)})`;
+  u.style.transform = `translate(0px, ${HEX.cyMerged - HEX.cy}px) scale(${pop(F, CUE.union)})`;
 }
 
 window.renderAt = renderAt;
@@ -376,7 +428,7 @@ window.__ready = Promise.all([
 ]).then(() => document.fonts.load("800 132px 'Inter Tight'"))
   .then(() => document.fonts.load("600 64px 'Inter Tight'"))
   .then(() => document.fonts.load("500 96px 'JetBrains Mono'"))
-  .then(() => renderAt(0));
+  .then(() => { setupLineScrims(); renderAt(0); });
 
 const params = new URLSearchParams(location.search);
 if (params.has('t')) {
