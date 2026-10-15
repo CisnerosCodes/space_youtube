@@ -117,7 +117,7 @@ export function draw(p = {}, opt = {}) {
       const k = clamp(pr.board), dir = pr.boardDir >= 0 ? 1 : -1;
       g += `<g transform="translate(0 556) scale(${n(k * 100) / 100}) translate(0 -556)">`;
       if (mode === 'fill' && pr.thrust > 0.02) {
-        const L = 40 + 150 * pr.thrust, x0 = dir * 196;
+        const L = 70 + 280 * pr.thrust, x0 = dir * 196;
         g += el('path', { d: `M${n(x0)},542 L${n(x0 + dir * L)},556 L${n(x0)},570 Z`, fill: PAL.amber })
           + el('path', { d: `M${n(x0)},550 L${n(x0 + dir * L * 0.55)},556 L${n(x0)},562 Z`, fill: paper });
       }
@@ -166,8 +166,8 @@ export function draw(p = {}, opt = {}) {
       if (mode === 'fill') {
         q += el('line', { x1: x - 24, y1: 20 + shY, x2: x + 24, y2: 20 + shY, stroke: ink, 'stroke-width': LW.line * 0.8 });
         if (pr.flame > 0.02) {
-          const L = 30 + 170 * pr.flame, y0 = 126 + shY;
-          q = el('path', { d: `M${x - 18},${n(y0)} L${x},${n(y0 + L)} L${x + 18},${n(y0)} Z`, fill: PAL.amber })
+          const L = 60 + 240 * pr.flame, y0 = 126 + shY;
+          q = el('path', { d: `M${x - 22},${n(y0)} L${x},${n(y0 + L)} L${x + 22},${n(y0)} Z`, fill: PAL.amber })
             + el('path', { d: `M${x - 9},${n(y0)} L${x},${n(y0 + L * 0.55)} L${x + 9},${n(y0)} Z`, fill: paper }) + q;
         }
       }
@@ -189,12 +189,13 @@ export function draw(p = {}, opt = {}) {
   // sign on a stick, held in the viewer-right paw
   const card = (mode) => {
     if (!(pr.card > 0.01) || !pr.cardText) return '';
-    const W = arms.R.W, k = clamp(pr.card), tl = 14;
-    const len = 210 * k, top = [W[0] + Math.sin((tl * Math.PI) / 180) * len, W[1] - Math.cos((tl * Math.PI) / 180) * len];
+    const W = arms.R.W, k = clamp(pr.card), tl = 24;
+    const cs = pr.cardScale ?? 1.5;
+    const len = 190 * k, top = [W[0] + Math.sin((tl * Math.PI) / 180) * len, W[1] - Math.cos((tl * Math.PI) / 180) * len];
     const txt = String(pr.cardText), w = Math.max(230, txt.length * 52 + 70), h = pr.cardSub ? 190 : 150;
     let g = passShape(mode, 'path', { d: `M${P([W[0], W[1] + 10])} L${P(top)}`, fill: 'none', stroke: ink, 'stroke-width': 16 });
     if (mode === 'fill') g += el('path', { d: `M${P([W[0], W[1] + 10])} L${P(top)}`, fill: 'none', stroke: paper, 'stroke-width': 6 });
-    const T = `translate(${P([top[0], top[1] - h / 2 + 10])}) rotate(${n(-4 + (1 - k) * 30)}) scale(${n(k * 100) / 100})`;
+    const T = `translate(${P(top)}) rotate(${n(-4 + (1 - k) * 30 + (pr.cardRot ?? 0))}) scale(${n(k * cs * 100) / 100}) translate(0 ${n(-h / 2 + 10)})`;
     let b = outlined(mode, 'rect', { x: -w / 2, y: -h / 2, width: w, height: h, fill: paper });
     if (mode === 'fill') {
       b += `<text x="0" y="${pr.cardSub ? -2 : 26}" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="78" style="font-variation-settings:'wdth' 112" fill="${ink}">${txt}</text>`;
@@ -210,7 +211,7 @@ export function draw(p = {}, opt = {}) {
     const ua = Math.atan2(E[1] - S[1], E[0] - S[0]);
     const cuff = [E[0] - Math.cos(ua) * 6, E[1] - Math.sin(ua) * 6];
     const fore = [['path', { d: `M${P(E)} L${P(W)}`, fill: 'none', stroke: ink, 'stroke-width': 28, 'stroke-linecap': 'round' }]];
-    const upright = J.paw === 'thumb';
+    const upright = J.paw === 'thumb' || J.paw === 'grip';
     const pawT = upright ? `translate(${n(W[0])} ${n(W[1])})` : `translate(${n(W[0])} ${n(W[1])}) rotate(${n(J.pa - 90)})`;
     const pawList = pawShapes(J.paw, (J.paw === 'point' || J.paw === 'grip') ? 1 : th).map(([t, at]) => [t, at.detail ? at : { ...at, fill: ink }]);
     const sleeveD = `M${P(S)} L${P(cuff)}`;

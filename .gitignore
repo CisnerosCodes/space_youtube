@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 lab/sound/beds/*.wav
 lab/sound/beds/raw/*.wav
+**/*_out/frames/
+**/talkout/frames/

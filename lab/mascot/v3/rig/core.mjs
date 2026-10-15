@@ -82,6 +82,7 @@ export const PROPS0 = {
   board: 0, boardDir: 1, thrust: 0,   // thruster skid board under the feet; boardDir = side of the nozzle (-1 left, 1 right)
   jet: 0, flame: 0,                   // jet pack canisters behind the shoulders, flame length 0..1
   card: 0, cardText: '', cardSub: '', // sign on a stick in the right paw (0..1 = pops up)
+  cardRot: 0, cardScale: 1.5,         // board rotation (deg, the actor counter-rotates it to stay upright) and size
   scoot: 0,                           // the amber-dot scooter (deck, stem, handlebar, wheel)
 };
 export const DEFAULT = {
