@@ -1,0 +1,689 @@
+{
+ "generated": "2026-10-15",
+ "script": "script.md",
+ "timing": "voice.words.json",
+ "audio": "voice.mp3",
+ "audioPath": "voice.mp3",
+ "duration": 30.288,
+ "transcriptDuration": 30.24,
+ "words": [
+  {
+   "i": 0,
+   "text": "A",
+   "start": 0.09,
+   "end": 0.21,
+   "matched": true,
+   "src": 0
+  },
+  {
+   "i": 1,
+   "text": "flash",
+   "start": 0.21,
+   "end": 0.47,
+   "matched": true,
+   "src": 1
+  },
+  {
+   "i": 2,
+   "text": "lasting",
+   "start": 0.47,
+   "end": 0.91,
+   "matched": true,
+   "src": 2
+  },
+  {
+   "i": 3,
+   "text": "one",
+   "start": 0.91,
+   "end": 1.25,
+   "matched": true,
+   "src": 3
+  },
+  {
+   "i": 4,
+   "text": "thousandth",
+   "start": 1.25,
+   "end": 2.15,
+   "matched": true,
+   "src": 4
+  },
+  {
+   "i": 5,
+   "text": "of",
+   "start": 2.15,
+   "end": 2.23,
+   "matched": true,
+   "src": 5
+  },
+  {
+   "i": 6,
+   "text": "a",
+   "start": 2.23,
+   "end": 2.33,
+   "matched": true,
+   "src": 6
+  },
+  {
+   "i": 7,
+   "text": "second",
+   "start": 2.33,
+   "end": 2.65,
+   "matched": true,
+   "src": 7
+  },
+  {
+   "i": 8,
+   "text": "left",
+   "start": 2.65,
+   "end": 2.93,
+   "matched": true,
+   "src": 8
+  },
+  {
+   "i": 9,
+   "text": "when",
+   "start": 2.93,
+   "end": 3.09,
+   "matched": true,
+   "src": 9
+  },
+  {
+   "i": 10,
+   "text": "the",
+   "start": 3.09,
+   "end": 3.17,
+   "matched": true,
+   "src": 10
+  },
+  {
+   "i": 11,
+   "text": "universe",
+   "start": 3.17,
+   "end": 3.45,
+   "matched": true,
+   "src": 11
+  },
+  {
+   "i": 12,
+   "text": "was",
+   "start": 3.45,
+   "end": 3.67,
+   "matched": true,
+   "src": 12
+  },
+  {
+   "i": 13,
+   "text": "only",
+   "start": 3.67,
+   "end": 3.91,
+   "matched": true,
+   "src": 13
+  },
+  {
+   "i": 14,
+   "text": "three",
+   "start": 3.91,
+   "end": 4.31,
+   "matched": true,
+   "src": 14
+  },
+  {
+   "i": 15,
+   "text": "billion",
+   "start": 4.31,
+   "end": 4.83,
+   "matched": true,
+   "src": 15
+  },
+  {
+   "i": 16,
+   "text": "years",
+   "start": 4.83,
+   "end": 5.19,
+   "matched": true,
+   "src": 16
+  },
+  {
+   "i": 17,
+   "text": "old.",
+   "start": 5.19,
+   "end": 5.73,
+   "matched": true,
+   "src": 17
+  },
+  {
+   "i": 18,
+   "text": "Astronomers",
+   "start": 5.73,
+   "end": 6.55,
+   "matched": true,
+   "src": 18
+  },
+  {
+   "i": 19,
+   "text": "just",
+   "start": 6.55,
+   "end": 6.77,
+   "matched": true,
+   "src": 19
+  },
+  {
+   "i": 20,
+   "text": "confirmed",
+   "start": 6.77,
+   "end": 7.23,
+   "matched": true,
+   "src": 20
+  },
+  {
+   "i": 21,
+   "text": "the",
+   "start": 7.23,
+   "end": 7.55,
+   "matched": true,
+   "src": 21
+  },
+  {
+   "i": 22,
+   "text": "farthest",
+   "start": 7.55,
+   "end": 8.19,
+   "matched": true,
+   "src": 22
+  },
+  {
+   "i": 23,
+   "text": "fast",
+   "start": 8.19,
+   "end": 8.53,
+   "matched": true,
+   "src": 23
+  },
+  {
+   "i": 24,
+   "text": "radio",
+   "start": 8.53,
+   "end": 8.95,
+   "matched": true,
+   "src": 24
+  },
+  {
+   "i": 25,
+   "text": "burst",
+   "start": 8.95,
+   "end": 9.25,
+   "matched": true,
+   "src": 25
+  },
+  {
+   "i": 26,
+   "text": "ever",
+   "start": 9.25,
+   "end": 9.67,
+   "matched": true,
+   "src": 26
+  },
+  {
+   "i": 27,
+   "text": "seen.",
+   "start": 9.67,
+   "end": 10.11,
+   "matched": true,
+   "src": 27
+  },
+  {
+   "i": 28,
+   "text": "Nobody",
+   "start": 10.11,
+   "end": 10.65,
+   "matched": true,
+   "src": 28
+  },
+  {
+   "i": 29,
+   "text": "knows",
+   "start": 10.65,
+   "end": 10.91,
+   "matched": true,
+   "src": 29
+  },
+  {
+   "i": 30,
+   "text": "what",
+   "start": 10.91,
+   "end": 11.09,
+   "matched": true,
+   "src": 30
+  },
+  {
+   "i": 31,
+   "text": "makes",
+   "start": 11.09,
+   "end": 11.35,
+   "matched": true,
+   "src": 31
+  },
+  {
+   "i": 32,
+   "text": "these",
+   "start": 11.35,
+   "end": 11.53,
+   "matched": true,
+   "src": 32
+  },
+  {
+   "i": 33,
+   "text": "bursts.",
+   "start": 11.53,
+   "end": 11.91,
+   "matched": true,
+   "src": 33
+  },
+  {
+   "i": 34,
+   "text": "So",
+   "start": 11.91,
+   "end": 12.21,
+   "matched": true,
+   "src": 34
+  },
+  {
+   "i": 35,
+   "text": "what",
+   "start": 12.21,
+   "end": 12.59,
+   "matched": true,
+   "src": 35
+  },
+  {
+   "i": 36,
+   "text": "was",
+   "start": 12.59,
+   "end": 12.71,
+   "matched": true,
+   "src": 36
+  },
+  {
+   "i": 37,
+   "text": "out",
+   "start": 12.71,
+   "end": 12.85,
+   "matched": true,
+   "src": 37
+  },
+  {
+   "i": 38,
+   "text": "there?",
+   "start": 12.85,
+   "end": 13.29,
+   "matched": true,
+   "src": 38
+  },
+  {
+   "i": 39,
+   "text": "Ground",
+   "start": 13.29,
+   "end": 13.91,
+   "matched": true,
+   "src": 39
+  },
+  {
+   "i": 40,
+   "text": "telescopes",
+   "start": 13.91,
+   "end": 14.29,
+   "matched": true,
+   "src": 40
+  },
+  {
+   "i": 41,
+   "text": "saw",
+   "start": 14.29,
+   "end": 14.69,
+   "matched": true,
+   "src": 41
+  },
+  {
+   "i": 42,
+   "text": "nothing",
+   "start": 14.69,
+   "end": 15.35,
+   "matched": true,
+   "src": 42
+  },
+  {
+   "i": 43,
+   "text": "at",
+   "start": 15.35,
+   "end": 15.71,
+   "matched": true,
+   "src": 43
+  },
+  {
+   "i": 44,
+   "text": "that",
+   "start": 15.71,
+   "end": 15.87,
+   "matched": true,
+   "src": 44
+  },
+  {
+   "i": 45,
+   "text": "spot.",
+   "start": 15.87,
+   "end": 16.29,
+   "matched": true,
+   "src": 45
+  },
+  {
+   "i": 46,
+   "text": "Webb",
+   "start": 16.29,
+   "end": 16.75,
+   "matched": true,
+   "src": 46
+  },
+  {
+   "i": 47,
+   "text": "found",
+   "start": 16.75,
+   "end": 17.19,
+   "matched": true,
+   "src": 47
+  },
+  {
+   "i": 48,
+   "text": "a",
+   "start": 17.19,
+   "end": 17.35,
+   "matched": true,
+   "src": 48
+  },
+  {
+   "i": 49,
+   "text": "galaxy.",
+   "start": 17.35,
+   "end": 17.99,
+   "matched": true,
+   "src": 49
+  },
+  {
+   "i": 50,
+   "text": "A",
+   "start": 17.99,
+   "end": 18.49,
+   "matched": true,
+   "src": 50
+  },
+  {
+   "i": 51,
+   "text": "dwarf,",
+   "start": 18.49,
+   "end": 18.75,
+   "matched": true,
+   "src": 51
+  },
+  {
+   "i": 52,
+   "text": "one",
+   "start": 18.75,
+   "end": 19.13,
+   "matched": true,
+   "src": 52
+  },
+  {
+   "i": 53,
+   "text": "thousand",
+   "start": 19.13,
+   "end": 19.91,
+   "matched": true,
+   "src": 53
+  },
+  {
+   "i": 54,
+   "text": "times",
+   "start": 19.91,
+   "end": 20.11,
+   "matched": true,
+   "src": 54
+  },
+  {
+   "i": 55,
+   "text": "less",
+   "start": 20.11,
+   "end": 20.49,
+   "matched": true,
+   "src": 55
+  },
+  {
+   "i": 56,
+   "text": "massive",
+   "start": 20.49,
+   "end": 20.93,
+   "matched": true,
+   "src": 56
+  },
+  {
+   "i": 57,
+   "text": "than",
+   "start": 20.93,
+   "end": 21.07,
+   "matched": true,
+   "src": 57
+  },
+  {
+   "i": 58,
+   "text": "expected.",
+   "start": 21.07,
+   "end": 21.65,
+   "matched": true,
+   "src": 58
+  },
+  {
+   "i": 59,
+   "text": "That",
+   "start": 21.65,
+   "end": 22.11,
+   "matched": true,
+   "src": 59
+  },
+  {
+   "i": 60,
+   "text": "makes",
+   "start": 22.11,
+   "end": 22.31,
+   "matched": true,
+   "src": 60
+  },
+  {
+   "i": 61,
+   "text": "a",
+   "start": 22.31,
+   "end": 22.53,
+   "matched": true,
+   "src": 61
+  },
+  {
+   "i": 62,
+   "text": "neutron",
+   "start": 22.53,
+   "end": 22.77,
+   "matched": true,
+   "src": 62
+  },
+  {
+   "i": 63,
+   "text": "star",
+   "start": 22.77,
+   "end": 23.13,
+   "matched": true,
+   "src": 63
+  },
+  {
+   "i": 64,
+   "text": "merger",
+   "start": 23.13,
+   "end": 23.43,
+   "matched": true,
+   "src": 64
+  },
+  {
+   "i": 65,
+   "text": "very",
+   "start": 23.43,
+   "end": 24.03,
+   "matched": true,
+   "src": 65
+  },
+  {
+   "i": 66,
+   "text": "unlikely,",
+   "start": 24.03,
+   "end": 24.73,
+   "matched": true,
+   "src": 66
+  },
+  {
+   "i": 67,
+   "text": "the",
+   "start": 24.73,
+   "end": 24.85,
+   "matched": true,
+   "src": 67
+  },
+  {
+   "i": 68,
+   "text": "team",
+   "start": 24.85,
+   "end": 25.01,
+   "matched": true,
+   "src": 68
+  },
+  {
+   "i": 69,
+   "text": "says.",
+   "start": 25.01,
+   "end": 25.61,
+   "matched": true,
+   "src": 69
+  },
+  {
+   "i": 70,
+   "text": "MeerKAT",
+   "start": 25.61,
+   "end": 26.23,
+   "matched": false,
+   "src": null
+  },
+  {
+   "i": 71,
+   "text": "may",
+   "start": 26.23,
+   "end": 26.43,
+   "matched": true,
+   "src": 71
+  },
+  {
+   "i": 72,
+   "text": "find",
+   "start": 26.43,
+   "end": 26.67,
+   "matched": true,
+   "src": 72
+  },
+  {
+   "i": 73,
+   "text": "several",
+   "start": 26.67,
+   "end": 27.09,
+   "matched": true,
+   "src": 73
+  },
+  {
+   "i": 74,
+   "text": "more",
+   "start": 27.09,
+   "end": 27.27,
+   "matched": true,
+   "src": 74
+  },
+  {
+   "i": 75,
+   "text": "every",
+   "start": 27.27,
+   "end": 27.65,
+   "matched": true,
+   "src": 75
+  },
+  {
+   "i": 76,
+   "text": "year.",
+   "start": 27.65,
+   "end": 28.19,
+   "matched": true,
+   "src": 76
+  },
+  {
+   "i": 77,
+   "text": "Follow",
+   "start": 28.19,
+   "end": 28.59,
+   "matched": true,
+   "src": 77
+  },
+  {
+   "i": 78,
+   "text": "Signal",
+   "start": 28.59,
+   "end": 28.89,
+   "matched": true,
+   "src": 78
+  },
+  {
+   "i": 79,
+   "text": "Delay",
+   "start": 28.89,
+   "end": 29.19,
+   "matched": true,
+   "src": 79
+  },
+  {
+   "i": 80,
+   "text": "for",
+   "start": 29.19,
+   "end": 29.31,
+   "matched": true,
+   "src": 80
+  },
+  {
+   "i": 81,
+   "text": "the",
+   "start": 29.31,
+   "end": 29.43,
+   "matched": true,
+   "src": 81
+  },
+  {
+   "i": 82,
+   "text": "next",
+   "start": 29.43,
+   "end": 29.57,
+   "matched": true,
+   "src": 82
+  },
+  {
+   "i": 83,
+   "text": "one.",
+   "start": 29.57,
+   "end": 29.83,
+   "matched": true,
+   "src": 83
+  }
+ ],
+ "interpolated": [
+  "MeerKAT"
+ ],
+ "transcriptOnly": [
+  "Miracat"
+ ]
+}

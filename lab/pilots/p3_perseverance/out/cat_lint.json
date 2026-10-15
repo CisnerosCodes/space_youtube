@@ -1,0 +1,2351 @@
+{
+ "windows": [
+  [
+   10,
+   115
+  ],
+  [
+   150,
+   383
+  ],
+  [
+   522,
+   690
+  ],
+  [
+   859,
+   1106
+  ]
+ ],
+ "framesOn": 756,
+ "share": 0.684,
+ "hits": [
+  {
+   "frame": 10,
+   "rect": 1,
+   "overlap": [
+    16,
+    348
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 11,
+   "rect": 1,
+   "overlap": [
+    14,
+    366
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 12,
+   "rect": 1,
+   "overlap": [
+    11,
+    369
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 13,
+   "rect": 1,
+   "overlap": [
+    76,
+    371
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 14,
+   "rect": 1,
+   "overlap": [
+    76,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 15,
+   "rect": 1,
+   "overlap": [
+    77,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 16,
+   "rect": 1,
+   "overlap": [
+    77,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 17,
+   "rect": 1,
+   "overlap": [
+    76,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 18,
+   "rect": 1,
+   "overlap": [
+    76,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 19,
+   "rect": 1,
+   "overlap": [
+    76,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 20,
+   "rect": 1,
+   "overlap": [
+    50,
+    369
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 21,
+   "rect": 1,
+   "overlap": [
+    11,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 22,
+   "rect": 1,
+   "overlap": [
+    11,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 23,
+   "rect": 1,
+   "overlap": [
+    11,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 24,
+   "rect": 1,
+   "overlap": [
+    11,
+    370
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 25,
+   "rect": 1,
+   "overlap": [
+    8,
+    371
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 27,
+   "rect": 1,
+   "overlap": [
+    14,
+    375
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 28,
+   "rect": 1,
+   "overlap": [
+    76,
+    375
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 29,
+   "rect": 1,
+   "overlap": [
+    35,
+    374
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 30,
+   "rect": 1,
+   "overlap": [
+    34,
+    374
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 31,
+   "rect": 0,
+   "overlap": [
+    200,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 31,
+   "rect": 1,
+   "overlap": [
+    200,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 31,
+   "rect": 2,
+   "overlap": [
+    32,
+    374
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 32,
+   "rect": 0,
+   "overlap": [
+    197,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 32,
+   "rect": 1,
+   "overlap": [
+    197,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 32,
+   "rect": 2,
+   "overlap": [
+    29,
+    373
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 33,
+   "rect": 0,
+   "overlap": [
+    195,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 33,
+   "rect": 1,
+   "overlap": [
+    195,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 33,
+   "rect": 2,
+   "overlap": [
+    27,
+    373
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 34,
+   "rect": 0,
+   "overlap": [
+    188,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 34,
+   "rect": 1,
+   "overlap": [
+    188,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 34,
+   "rect": 2,
+   "overlap": [
+    24,
+    371
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 35,
+   "rect": 0,
+   "overlap": [
+    182,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 35,
+   "rect": 1,
+   "overlap": [
+    182,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 35,
+   "rect": 2,
+   "overlap": [
+    21,
+    368
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 36,
+   "rect": 0,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 36,
+   "rect": 1,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 36,
+   "rect": 2,
+   "overlap": [
+    19,
+    366
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 37,
+   "rect": 0,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 37,
+   "rect": 1,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 37,
+   "rect": 2,
+   "overlap": [
+    21,
+    365
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 38,
+   "rect": 0,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 38,
+   "rect": 1,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 38,
+   "rect": 2,
+   "overlap": [
+    21,
+    364
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 39,
+   "rect": 0,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 39,
+   "rect": 1,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 39,
+   "rect": 2,
+   "overlap": [
+    21,
+    363
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 40,
+   "rect": 0,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 40,
+   "rect": 1,
+   "overlap": [
+    178,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 40,
+   "rect": 2,
+   "overlap": [
+    25,
+    365
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 41,
+   "rect": 0,
+   "overlap": [
+    186,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 41,
+   "rect": 1,
+   "overlap": [
+    186,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 41,
+   "rect": 2,
+   "overlap": [
+    30,
+    344
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 42,
+   "rect": 0,
+   "overlap": [
+    191,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 42,
+   "rect": 1,
+   "overlap": [
+    191,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 42,
+   "rect": 2,
+   "overlap": [
+    32,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 43,
+   "rect": 0,
+   "overlap": [
+    190,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 43,
+   "rect": 1,
+   "overlap": [
+    190,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 43,
+   "rect": 2,
+   "overlap": [
+    32,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 44,
+   "rect": 0,
+   "overlap": [
+    177,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 44,
+   "rect": 1,
+   "overlap": [
+    177,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 44,
+   "rect": 2,
+   "overlap": [
+    20,
+    388
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 45,
+   "rect": 0,
+   "overlap": [
+    222,
+    112
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 45,
+   "rect": 1,
+   "overlap": [
+    222,
+    20
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 45,
+   "rect": 2,
+   "overlap": [
+    26,
+    407
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 46,
+   "rect": 0,
+   "overlap": [
+    183,
+    64
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 53,
+   "rect": 0,
+   "overlap": [
+    208,
+    7
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 53,
+   "rect": 2,
+   "overlap": [
+    12,
+    298
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 54,
+   "rect": 0,
+   "overlap": [
+    206,
+    8
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 54,
+   "rect": 2,
+   "overlap": [
+    206,
+    256
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 55,
+   "rect": 0,
+   "overlap": [
+    202,
+    7
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 55,
+   "rect": 2,
+   "overlap": [
+    202,
+    271
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 56,
+   "rect": 2,
+   "overlap": [
+    233,
+    300
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 57,
+   "rect": 0,
+   "overlap": [
+    226,
+    6
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 57,
+   "rect": 2,
+   "overlap": [
+    226,
+    326
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 58,
+   "rect": 0,
+   "overlap": [
+    222,
+    7
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 58,
+   "rect": 2,
+   "overlap": [
+    222,
+    343
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 59,
+   "rect": 0,
+   "overlap": [
+    218,
+    6
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 59,
+   "rect": 2,
+   "overlap": [
+    218,
+    349
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 60,
+   "rect": 2,
+   "overlap": [
+    216,
+    349
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 61,
+   "rect": 0,
+   "overlap": [
+    218,
+    6
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 61,
+   "rect": 2,
+   "overlap": [
+    218,
+    344
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 62,
+   "rect": 0,
+   "overlap": [
+    219,
+    7
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 62,
+   "rect": 2,
+   "overlap": [
+    219,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 63,
+   "rect": 2,
+   "overlap": [
+    219,
+    328
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 64,
+   "rect": 2,
+   "overlap": [
+    215,
+    322
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 65,
+   "rect": 2,
+   "overlap": [
+    229,
+    327
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 66,
+   "rect": 2,
+   "overlap": [
+    200,
+    330
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 67,
+   "rect": 2,
+   "overlap": [
+    199,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 68,
+   "rect": 2,
+   "overlap": [
+    200,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 69,
+   "rect": 2,
+   "overlap": [
+    201,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 70,
+   "rect": 2,
+   "overlap": [
+    202,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 71,
+   "rect": 2,
+   "overlap": [
+    202,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 72,
+   "rect": 2,
+   "overlap": [
+    203,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 73,
+   "rect": 2,
+   "overlap": [
+    202,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 74,
+   "rect": 2,
+   "overlap": [
+    202,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 75,
+   "rect": 2,
+   "overlap": [
+    201,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 76,
+   "rect": 2,
+   "overlap": [
+    199,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 77,
+   "rect": 2,
+   "overlap": [
+    197,
+    337
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 78,
+   "rect": 2,
+   "overlap": [
+    195,
+    337
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 79,
+   "rect": 2,
+   "overlap": [
+    191,
+    338
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 80,
+   "rect": 2,
+   "overlap": [
+    188,
+    338
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 81,
+   "rect": 2,
+   "overlap": [
+    184,
+    338
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 82,
+   "rect": 2,
+   "overlap": [
+    181,
+    339
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 83,
+   "rect": 2,
+   "overlap": [
+    181,
+    339
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 84,
+   "rect": 2,
+   "overlap": [
+    180,
+    339
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 85,
+   "rect": 2,
+   "overlap": [
+    180,
+    339
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 86,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 87,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 88,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 89,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 90,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 91,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 92,
+   "rect": 2,
+   "overlap": [
+    180,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 93,
+   "rect": 2,
+   "overlap": [
+    184,
+    337
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 94,
+   "rect": 2,
+   "overlap": [
+    194,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 95,
+   "rect": 2,
+   "overlap": [
+    211,
+    334
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 96,
+   "rect": 2,
+   "overlap": [
+    225,
+    331
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 97,
+   "rect": 2,
+   "overlap": [
+    220,
+    330
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 98,
+   "rect": 2,
+   "overlap": [
+    212,
+    329
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 99,
+   "rect": 2,
+   "overlap": [
+    240,
+    328
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 100,
+   "rect": 2,
+   "overlap": [
+    251,
+    328
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 101,
+   "rect": 2,
+   "overlap": [
+    239,
+    327
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 102,
+   "rect": 2,
+   "overlap": [
+    239,
+    327
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 103,
+   "rect": 2,
+   "overlap": [
+    239,
+    327
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 104,
+   "rect": 0,
+   "overlap": [
+    221,
+    6
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 104,
+   "rect": 2,
+   "overlap": [
+    221,
+    372
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 105,
+   "rect": 2,
+   "overlap": [
+    223,
+    374
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 106,
+   "rect": 2,
+   "overlap": [
+    223,
+    378
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 107,
+   "rect": 2,
+   "overlap": [
+    222,
+    384
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 108,
+   "rect": 2,
+   "overlap": [
+    219,
+    397
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 109,
+   "rect": 2,
+   "overlap": [
+    216,
+    416
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 110,
+   "rect": 2,
+   "overlap": [
+    213,
+    420
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 111,
+   "rect": 2,
+   "overlap": [
+    212,
+    421
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 112,
+   "rect": 2,
+   "overlap": [
+    214,
+    419
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 113,
+   "rect": 2,
+   "overlap": [
+    217,
+    315
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 115,
+   "rect": "safe",
+   "box": [
+    130,
+    -1086,
+    224,
+    416
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 252,
+   "rect": 2,
+   "overlap": [
+    23,
+    373
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 366,
+   "rect": 0,
+   "overlap": [
+    92,
+    34
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 367,
+   "rect": 0,
+   "overlap": [
+    79,
+    8
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 368,
+   "rect": 3,
+   "overlap": [
+    129,
+    156
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 369,
+   "rect": 3,
+   "overlap": [
+    127,
+    300
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 371,
+   "rect": "safe",
+   "box": [
+    706,
+    -1215,
+    127,
+    706
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 372,
+   "rect": "safe",
+   "box": [
+    706,
+    -1212,
+    127,
+    702
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 373,
+   "rect": "safe",
+   "box": [
+    706,
+    -1197,
+    127,
+    687
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 374,
+   "rect": "safe",
+   "box": [
+    707,
+    -1197,
+    126,
+    687
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 375,
+   "rect": "safe",
+   "box": [
+    710,
+    -1198,
+    121,
+    677
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 376,
+   "rect": "safe",
+   "box": [
+    714,
+    -1198,
+    124,
+    629
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 377,
+   "rect": "safe",
+   "box": [
+    715,
+    -1198,
+    141,
+    615
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 378,
+   "rect": "safe",
+   "box": [
+    715,
+    -1198,
+    141,
+    615
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 379,
+   "rect": "safe",
+   "box": [
+    715,
+    -1198,
+    130,
+    615
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 380,
+   "rect": "safe",
+   "box": [
+    715,
+    -1212,
+    122,
+    629
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 381,
+   "rect": "safe",
+   "box": [
+    715,
+    -1212,
+    120,
+    629
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 382,
+   "rect": "safe",
+   "box": [
+    715,
+    -1212,
+    117,
+    629
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 383,
+   "rect": "safe",
+   "box": [
+    715,
+    -1212,
+    115,
+    629
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 578,
+   "rect": 1,
+   "overlap": [
+    193,
+    272
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 579,
+   "rect": 1,
+   "overlap": [
+    194,
+    264
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 580,
+   "rect": 1,
+   "overlap": [
+    159,
+    407
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 581,
+   "rect": 1,
+   "overlap": [
+    162,
+    415
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 582,
+   "rect": 1,
+   "overlap": [
+    164,
+    408
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 583,
+   "rect": 1,
+   "overlap": [
+    190,
+    400
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 584,
+   "rect": 1,
+   "overlap": [
+    194,
+    381
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 585,
+   "rect": 1,
+   "overlap": [
+    197,
+    366
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 586,
+   "rect": 1,
+   "overlap": [
+    198,
+    356
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 587,
+   "rect": 1,
+   "overlap": [
+    233,
+    351
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 588,
+   "rect": 1,
+   "overlap": [
+    238,
+    347
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 589,
+   "rect": 1,
+   "overlap": [
+    221,
+    345
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 590,
+   "rect": 1,
+   "overlap": [
+    207,
+    343
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 591,
+   "rect": 1,
+   "overlap": [
+    197,
+    343
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 592,
+   "rect": 1,
+   "overlap": [
+    175,
+    345
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 593,
+   "rect": 1,
+   "overlap": [
+    151,
+    351
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 594,
+   "rect": 1,
+   "overlap": [
+    130,
+    362
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 595,
+   "rect": 1,
+   "overlap": [
+    114,
+    373
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 596,
+   "rect": 1,
+   "overlap": [
+    100,
+    380
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 597,
+   "rect": 1,
+   "overlap": [
+    83,
+    384
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 598,
+   "rect": 1,
+   "overlap": [
+    60,
+    378
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 599,
+   "rect": 1,
+   "overlap": [
+    71,
+    245
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 600,
+   "rect": 1,
+   "overlap": [
+    76,
+    245
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 600,
+   "rect": "safe",
+   "box": [
+    634,
+    915,
+    316,
+    281
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 601,
+   "rect": 1,
+   "overlap": [
+    76,
+    256
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 601,
+   "rect": "safe",
+   "box": [
+    634,
+    904,
+    313,
+    292
+   ],
+   "kind": "safe"
+  },
+  {
+   "frame": 602,
+   "rect": 1,
+   "overlap": [
+    70,
+    286
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 603,
+   "rect": 1,
+   "overlap": [
+    63,
+    314
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 604,
+   "rect": 1,
+   "overlap": [
+    58,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 605,
+   "rect": 1,
+   "overlap": [
+    56,
+    346
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 606,
+   "rect": 1,
+   "overlap": [
+    54,
+    350
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 607,
+   "rect": 1,
+   "overlap": [
+    50,
+    348
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 608,
+   "rect": 1,
+   "overlap": [
+    43,
+    343
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 609,
+   "rect": 1,
+   "overlap": [
+    35,
+    338
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 610,
+   "rect": 2,
+   "overlap": [
+    24,
+    337
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 611,
+   "rect": 2,
+   "overlap": [
+    21,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 612,
+   "rect": 2,
+   "overlap": [
+    21,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 613,
+   "rect": 2,
+   "overlap": [
+    22,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 614,
+   "rect": 2,
+   "overlap": [
+    22,
+    334
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 615,
+   "rect": 2,
+   "overlap": [
+    22,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 616,
+   "rect": 2,
+   "overlap": [
+    21,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 617,
+   "rect": 2,
+   "overlap": [
+    21,
+    331
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 618,
+   "rect": 2,
+   "overlap": [
+    20,
+    329
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 619,
+   "rect": 2,
+   "overlap": [
+    20,
+    328
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 620,
+   "rect": 2,
+   "overlap": [
+    22,
+    329
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 621,
+   "rect": 2,
+   "overlap": [
+    26,
+    330
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 622,
+   "rect": 2,
+   "overlap": [
+    49,
+    331
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 623,
+   "rect": 2,
+   "overlap": [
+    59,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 624,
+   "rect": 2,
+   "overlap": [
+    63,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 625,
+   "rect": 2,
+   "overlap": [
+    66,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 626,
+   "rect": 2,
+   "overlap": [
+    67,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 627,
+   "rect": 2,
+   "overlap": [
+    67,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 628,
+   "rect": 2,
+   "overlap": [
+    66,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 629,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 630,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 631,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 632,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 633,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 634,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 635,
+   "rect": 2,
+   "overlap": [
+    65,
+    332
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 636,
+   "rect": 2,
+   "overlap": [
+    65,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 637,
+   "rect": 2,
+   "overlap": [
+    65,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 638,
+   "rect": 2,
+   "overlap": [
+    65,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 639,
+   "rect": 2,
+   "overlap": [
+    65,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 640,
+   "rect": 2,
+   "overlap": [
+    65,
+    333
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 641,
+   "rect": 2,
+   "overlap": [
+    65,
+    334
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 642,
+   "rect": 2,
+   "overlap": [
+    65,
+    334
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 643,
+   "rect": 2,
+   "overlap": [
+    65,
+    334
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 644,
+   "rect": 2,
+   "overlap": [
+    65,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 645,
+   "rect": 2,
+   "overlap": [
+    65,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 646,
+   "rect": 2,
+   "overlap": [
+    65,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 647,
+   "rect": 2,
+   "overlap": [
+    65,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 648,
+   "rect": 2,
+   "overlap": [
+    65,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 649,
+   "rect": 2,
+   "overlap": [
+    65,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 650,
+   "rect": 2,
+   "overlap": [
+    64,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 651,
+   "rect": 2,
+   "overlap": [
+    62,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 652,
+   "rect": 2,
+   "overlap": [
+    60,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 653,
+   "rect": 2,
+   "overlap": [
+    47,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 654,
+   "rect": 2,
+   "overlap": [
+    31,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 655,
+   "rect": 2,
+   "overlap": [
+    27,
+    335
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 656,
+   "rect": 2,
+   "overlap": [
+    24,
+    336
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 657,
+   "rect": 2,
+   "overlap": [
+    19,
+    337
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 658,
+   "rect": 2,
+   "overlap": [
+    15,
+    340
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 659,
+   "rect": 2,
+   "overlap": [
+    52,
+    343
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 660,
+   "rect": 2,
+   "overlap": [
+    47,
+    347
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 661,
+   "rect": 2,
+   "overlap": [
+    42,
+    352
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 662,
+   "rect": 2,
+   "overlap": [
+    36,
+    357
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 663,
+   "rect": 2,
+   "overlap": [
+    29,
+    362
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 664,
+   "rect": 2,
+   "overlap": [
+    21,
+    364
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 665,
+   "rect": 2,
+   "overlap": [
+    11,
+    367
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 976,
+   "rect": 2,
+   "overlap": [
+    163,
+    6
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 977,
+   "rect": 2,
+   "overlap": [
+    153,
+    28
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 978,
+   "rect": 2,
+   "overlap": [
+    171,
+    34
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 979,
+   "rect": 2,
+   "overlap": [
+    195,
+    29
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 980,
+   "rect": 2,
+   "overlap": [
+    137,
+    14
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 986,
+   "rect": 2,
+   "overlap": [
+    203,
+    6
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 987,
+   "rect": 2,
+   "overlap": [
+    197,
+    24
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 988,
+   "rect": 2,
+   "overlap": [
+    199,
+    33
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 989,
+   "rect": 2,
+   "overlap": [
+    184,
+    30
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 990,
+   "rect": 2,
+   "overlap": [
+    144,
+    18
+   ],
+   "kind": "subject"
+  }
+ ]
+}

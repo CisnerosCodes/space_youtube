@@ -1,0 +1,99 @@
+{
+ "hits": [],
+ "onFrames": 563,
+ "share": 0.595,
+ "moves": [
+  {
+   "frame": 10,
+   "move": "enter float"
+  },
+  {
+   "frame": 44,
+   "move": "point"
+  },
+  {
+   "frame": 72,
+   "move": "exit zip"
+  },
+  {
+   "frame": 299,
+   "move": "enter skid"
+  },
+  {
+   "frame": 318,
+   "move": "shrug"
+  },
+  {
+   "frame": 364,
+   "move": "what"
+  },
+  {
+   "frame": 405,
+   "move": "hop"
+  },
+  {
+   "frame": 439,
+   "move": "gasp"
+  },
+  {
+   "frame": 474,
+   "move": "point"
+  },
+  {
+   "frame": 493,
+   "move": "exit zip"
+  },
+  {
+   "frame": 595,
+   "move": "enter pop"
+  },
+  {
+   "frame": 630,
+   "move": "sign"
+  },
+  {
+   "frame": 699,
+   "move": "listen"
+  },
+  {
+   "frame": 734,
+   "move": "nod"
+  },
+  {
+   "frame": 748,
+   "move": "exit zip"
+  },
+  {
+   "frame": 830,
+   "move": "enter skid"
+  },
+  {
+   "frame": 848,
+   "move": "thumbs"
+  },
+  {
+   "frame": 877,
+   "move": "point"
+  },
+  {
+   "frame": 902,
+   "move": "wave"
+  }
+ ],
+ "distinct": [
+  "enter float",
+  "point",
+  "exit zip",
+  "enter skid",
+  "shrug",
+  "what",
+  "hop",
+  "gasp",
+  "enter pop",
+  "sign",
+  "listen",
+  "nod",
+  "thumbs",
+  "wave"
+ ]
+}

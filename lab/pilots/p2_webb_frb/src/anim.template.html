@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signal Delay pilot 2 Webb FRB</title>
+<!-- build: __BUILDINFO__ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  :root { --ink: #0B0B0C; --paper: #F2EFE8; --amber: #F5B83D; --muted: #8C8A85; }
+  html, body { margin: 0; background: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); color: var(--paper); font-family: 'Archivo', sans-serif; }
+  canvas, .layer { position: absolute; left: 0; top: 0; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+  .box { background: var(--ink); white-space: nowrap; }
+  .giant { position: absolute; left: 40px; display: none; font-weight: 800; font-stretch: 112%; text-transform: uppercase; white-space: nowrap;
+           transform-origin: 0 50%; color: var(--amber); font-variant-numeric: tabular-nums; line-height: 0.88; }
+  .gdata { position: absolute; left: 80px; display: none; font-size: 28px; line-height: 36px; color: var(--paper); white-space: nowrap; padding: 6px 12px; }
+  .gdata .u { color: var(--muted); }
+  #caps { position: absolute; left: 80px; top: 1196px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { padding: 8px 16px; background: rgba(11,11,12,0.88); font-weight: 700; font-stretch: 100%; font-size: 90px; line-height: 96px; white-space: nowrap; }
+  .w { color: var(--paper); }
+  .w.on { color: var(--amber); }
+  .lab { position: absolute; display: none; padding: 4px 10px; font-size: 28px; line-height: 36px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .lab .a { color: var(--amber); }
+  #next > * { position: absolute; display: none; }
+  #catWrap { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; isolation: isolate; pointer-events: none; }
+  #catWrap svg { position: absolute; left: 0; top: 0; overflow: hidden; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="pic" width="1080" height="1920"></canvas>
+  <svg class="layer" width="0" height="0" aria-hidden="true"><defs id="fdefs"></defs></svg>
+
+  <!-- giant numbers (amber on ink) and their data lines -->
+  <div class="giant" id="gMs" style="top: 314px; font-size: 340px">1/1000</div>
+  <div class="gdata mono box" id="gMsd" style="top: 600px">OF A SECOND</div>
+  <div class="giant" id="g3" style="top: 392px; font-size: 340px">3</div>
+  <div class="gdata mono box" id="g3d" style="top: 412px; left: 300px">BILLION YEARS<br>AFTER THE BIG BANG</div>
+  <div class="giant" id="gK" style="top: 314px; font-size: 340px">1,000&times;</div>
+
+  <!-- diagram and photo labels (mono, uppercase, at least 1.5 s on screen) -->
+  <div class="lab mono box" id="labSec">1 second</div>
+  <div class="lab mono box" id="labEarth">Earth</div>
+  <div class="lab mono box" id="labFrb">FRB 20240304B</div>
+  <div class="lab mono box" id="labNone">No galaxy seen</div>
+  <div class="lab mono box" id="labMost">Most FRB galaxies</div>
+  <div class="lab mono box" id="labThis">This one</div>
+  <div class="lab mono box" id="labMerge">Neutron star merger<span id="labMergeU"> <span style="color: var(--muted)">&middot;</span> <span class="a">very unlikely</span></span></div>
+
+  <!-- NEXT card text (its line art lives on the canvas) -->
+  <div id="next" class="layer" style="width: 1080px; height: 1920px">
+    <div id="nHead" style="left: 80px; top: 330px; width: 820px; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; color: var(--paper)">More distant<br>bursts are<br>coming</div>
+    <div id="nData" class="mono" style="left: 80px; top: 604px; font-size: 44px; line-height: 48px; color: var(--amber); white-space: nowrap">MeerKAT: several a year</div>
+    <div id="nPoint" class="mono" style="left: 80px; top: 952px; padding: 10px 18px 10px 14px; border: 2px solid var(--amber); font-size: 28px; line-height: 38px; white-space: nowrap; color: var(--paper)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
+        <span><span style="color: var(--amber)">Follow</span> for the next one</span>
+      </div>
+    </div>
+    <div id="nMark" style="left: 80px; top: 1064px; align-items: center; gap: 24px">
+      <svg width="104" height="44" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+        <circle id="nDot" cx="22" cy="22" r="22" fill="#F5B83D" style="transform-box: fill-box; transform-origin: center"></circle>
+        <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+      </svg>
+      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)"><span id="nW1">Signal</span> <span id="nW2" style="color: var(--amber)">Delay</span></div>
+    </div>
+  </div>
+
+  <!-- series kicker: identical on every frame; reads NEXT ON JUST DISCOVERED on the NEXT card -->
+  <div class="mono box" id="kicker" style="position: absolute; left: 80px; top: 246px; display: flex; align-items: center; gap: 12px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; text-transform: uppercase">
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 1 L27 14 L14 27 L1 14 Z" fill="#F5B83D"></path></svg>
+    <span id="kText">Just discovered</span>
+  </div>
+
+  <!-- signal delay chip: the burst's light-travel time. NASA: it left "just 3 billion years after the big bang";
+       Live Science: it traveled more than 10 billion years (light-years). -->
+  <div class="mono box" id="chip" style="position: absolute; left: 80px; top: 302px; display: none; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px">
+    <svg width="47.27" height="20" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+      <circle cx="22" cy="22" r="22" fill="#F5B83D"></circle>
+      <circle id="chipRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+    <span>SIGNAL DELAY <span style="color: var(--muted)">&middot;</span> <span style="color: var(--amber)">MORE THAN 10 BILLION YEARS</span></span>
+  </div>
+
+  <div id="caps"></div>
+
+  <!-- mascot (v3 actor), drawn per frame in frame pixels; sub-frame samples add up exactly (plus-lighter in an isolated group) -->
+  <div id="catWrap"></div>
+
+  <!-- credit slot: the photo credit (two lines for the Webb image), or the source of the facts on line art -->
+  <div class="mono box" id="credit" style="position: absolute; left: 80px; display: none; padding: 5px 12px; font-size: 24px; line-height: 28px"></div>
+</div>
+
+<script>
+const SCHEDULE = /*__CAPTIONS__*/null;
+const IMAGES = /*__IMAGES__*/null;
+/*__RIG__*/
+(() => {
+  // ================================================================ constants
+  const FPS = 30;
+  const HOLD_FRAMES = 38;    // after the narration: the wordmark dot and ring land with the sonic logo, which then rings out
+  const NF = Math.ceil(SCHEDULE.duration * FPS - 1e-6) + HOLD_FRAMES;
+  const LAST = NF - 1;
+  const C = { ink: '#0B0B0C', paper: '#F2EFE8', amber: '#F5B83D', muted: '#8C8A85' };
+  const CR = {
+    webb: ['Image: NASA, ESA, CSA, STScI, Themiya Nanayakkara (USYD);', 'Image Processing: Joseph DePasquale (STScI)'],
+    nasa: ['Source: NASA'],
+    nasaLs: ['Source: NASA, Live Science'],
+  };
+
+  // ================================================================ easing, springs
+  function bezier(x1, y1, x2, y2) {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t, sy = (t) => ((ay * t + by) * t + cy) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) { const e = sx(t) - x, d = dx(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+      let lo = 0, hi = 1;
+      for (let i = 0; i < 30 && Math.abs(sx(t) - x) > 1e-6; i++) { if (sx(t) < x) lo = t; else hi = t; t = (lo + hi) / 2; }
+      return sy(t);
+    };
+  }
+  const enter = bezier(0.16, 1, 0.3, 1), move = bezier(0.76, 0, 0.24, 1), exitE = bezier(0.7, 0, 0.84, 0);
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const elerp = (a, b, t) => a * Math.pow(b / a, t);
+  const k = (f, a, d, e = (x) => x) => e(clamp01((f - a) / d));
+  function spring(t, zeta, fr) {
+    if (t <= 0) return 0;
+    const w = 2 * Math.PI * fr, wd = w * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+  }
+  const sp = (df, zeta = 0.7, fr = 4) => (df <= 0 ? 0 : spring(df / FPS, zeta, fr));
+  const punch = (f, list, amt = 0.04) => list.reduce((p, pf) => p * (1 + amt * sp(f - pf)), 1);
+
+  // ================================================================ timing from the caption schedule
+  const W = SCHEDULE.words.map((w) => ({ ...w, f: Math.round(w.start * FPS), fe: Math.round(w.end * FPS), key: w.text.toLowerCase().replace(/[^a-z0-9]/g, '') }));
+  function at(re, from = 0) {
+    for (let i = Math.max(0, from); i < W.length; i++) if (re.test(W[i].key)) return i;
+    throw new Error('anchor not found: ' + re + ' after word ' + from);
+  }
+  const I = {};
+  I.flash = at(/^flash$/);
+  I.one1 = at(/^one$/, I.flash);
+  I.thousandth = at(/^thousandth$/, I.one1);
+  I.second = at(/^second$/, I.thousandth);
+  I.left = at(/^left$/, I.second);
+  I.universe = at(/^universe$/, I.left);
+  I.three = at(/^three$/, I.left);
+  I.billion = at(/^billion$/, I.three);
+  I.old = at(/^old$/, I.three);
+  I.astronomers = at(/^astronomers$/, I.old);
+  I.confirmed = at(/^confirmed$/, I.astronomers);
+  I.farthest = at(/^farthest$/, I.confirmed);
+  I.burst = at(/^burst$/, I.farthest);
+  I.seen = at(/^seen$/, I.burst);
+  I.nobody = at(/^nobody$/, I.seen);
+  I.knows = at(/^knows$/, I.nobody);
+  I.these = at(/^these$/, I.knows);
+  I.so = at(/^so$/, I.these);
+  I.what2 = at(/^what$/, I.so);
+  I.there = at(/^there$/, I.what2);
+  I.ground = at(/^ground$/, I.there);
+  I.saw = at(/^saw$/, I.ground);
+  I.nothing = at(/^nothing$/, I.saw);
+  I.spot = at(/^spot$/, I.nothing);
+  I.webb = at(/^webb$/, I.spot);
+  I.found = at(/^found$/, I.webb);
+  I.galaxy = at(/^galaxy$/, I.found);
+  I.a3 = I.galaxy + 1;
+  I.dwarf = at(/^dwarf$/, I.a3);
+  I.one2 = at(/^(one|1)$/, I.dwarf);
+  I.times = at(/^times$/, I.one2);
+  I.massive = at(/^massive$/, I.times);
+  I.expected = at(/^expected$/, I.massive);
+  I.that2 = at(/^that$/, I.expected);
+  I.neutron = at(/^neutron$/, I.that2);
+  I.merger = at(/^merger$/, I.neutron);
+  I.very = at(/^very$/, I.merger);
+  I.unlikely = at(/^unlikely$/, I.very);
+  I.team = at(/^team$/, I.unlikely);
+  I.says = at(/^says$/, I.team);
+  I.meerkat = at(/^meerkat$/, I.says);
+  I.several = at(/^several$/, I.meerkat);
+  I.year = at(/^year$/, I.several);
+  I.follow = at(/^follow$/, I.year);
+  I.signal = at(/^signal$/, I.follow);
+  I.delay = at(/^delay$/, I.signal);
+  I.lastOne = W.length - 1;
+  const F = {};
+  for (const [name, i] of Object.entries(I)) F[name] = W[i].f;
+  const FE = (name) => W[I[name]].fe;
+  F.end = LAST;
+  F.mark = FE('lastOne') + 3;             // wordmark dot lands with the sonic logo, after the last word
+  F.ring = F.mark + 12;                    // echo ring: 12 frames later (0.40 s, the logo's echo)
+
+  // ================================================================ the Webb field and its parallax layers
+  // Image: NASA, ESA, CSA, STScI, Themiya Nanayakkara (USYD); Image Processing: Joseph DePasquale (STScI)
+  // Measured in the 4353 x 3792 original: white cross (3490, 1730); host galaxy (3470, 1810) and its faint
+  // lower part to y 1990; inset box x 2994 to 3980, y 1403 to 2389.
+  const CROSS = [3490, 1730], GAL = [3478, 1850];   // GAL: centre of the ring around the cross and the galaxy
+  const FIELD = {
+    ax: CROSS[0], ay: CROSS[1],
+    // the bright foreground stars sit nearer than the galaxies: soft-masked copies that move a little more on a push
+    layers: [[1755, 2748, 900, 0.22], [226, 715, 620, 0.18], [1795, 362, 380, 0.15]],
+  };
+  const imgPromises = [];
+  {
+    const im = new Image(); im.src = IMAGES.field; FIELD.img = im;
+    imgPromises.push(im.decode().then(() => {
+      FIELD.w = im.naturalWidth; FIELD.h = im.naturalHeight;
+      FIELD.lay = FIELD.layers.map(([mx, my, R, d]) => {
+        const x0 = Math.max(0, Math.floor(mx - R)), y0 = Math.max(0, Math.floor(my - R));
+        const x1 = Math.min(FIELD.w, Math.ceil(mx + R)), y1 = Math.min(FIELD.h, Math.ceil(my + R));
+        const c = document.createElement('canvas'); c.width = x1 - x0; c.height = y1 - y0;
+        const g = c.getContext('2d'); g.drawImage(im, -x0, -y0);
+        g.globalCompositeOperation = 'destination-in';
+        const gr = g.createRadialGradient(mx - x0, my - y0, R * 0.35, mx - x0, my - y0, R);
+        gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+        g.fillStyle = gr; g.fillRect(0, 0, c.width, c.height);
+        return { c, d, x0, y0 };
+      });
+    }));
+  }
+
+  // ================================================================ canvas helpers
+  const pic = document.getElementById('pic'), pctx = pic.getContext('2d');
+  const mk = () => { const c = document.createElement('canvas'); c.width = 1080; c.height = 1920; return c; };
+  const tmp = mk(), tctx = tmp.getContext('2d'), acc = mk(), actx = acc.getContext('2d');
+  for (const g of [pctx, tctx, actx]) { g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high'; }
+  let PROBE = null;
+  const track = (...pts) => { if (PROBE) for (let i = 0; i < pts.length; i += 2) PROBE.push(pts[i], pts[i + 1]); return !!PROBE; };
+
+  // the field: anchor (the white cross) at screen (x, y), scale s (screen px per image px), push = parallax amount
+  function field(g, o) {
+    if (track(o.x, o.y, o.x + 1000 * o.s, o.y)) return;
+    const push = o.push || 0;
+    g.save(); g.globalAlpha = o.alpha ?? 1;
+    g.translate(o.x, o.y); g.scale(o.s, o.s);
+    g.drawImage(FIELD.img, -FIELD.ax, -FIELD.ay);
+    if (FIELD.lay && push > 0) for (const L of FIELD.lay) {
+      const ss = 1 + push * L.d;
+      g.save(); g.scale(ss, ss); g.drawImage(L.c, L.x0 - FIELD.ax, L.y0 - FIELD.ay); g.restore();
+    }
+    g.restore();
+  }
+  const fpt = (o, X, Y) => [o.x + (X - FIELD.ax) * o.s, o.y + (Y - FIELD.ay) * o.s];
+
+  function dot(g, x, y, r = 11, color = C.amber, alpha = 1) {
+    if (track(x, y)) return;
+    g.save(); g.globalAlpha = alpha; g.fillStyle = color; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.restore();
+  }
+  function ring(g, x, y, r, w = 4, alpha = 1, dash = null, color = C.amber) {
+    if (track(x, y, x + r, y)) return;
+    g.save(); g.globalAlpha = alpha; g.strokeStyle = color; g.lineWidth = w; if (dash) g.setLineDash(dash);
+    g.beginPath(); g.arc(x, y, Math.max(0.1, r), 0, Math.PI * 2); g.stroke(); g.restore();
+  }
+  // flat line art primitives that draw on by length: P = polyline, A = ellipse arc
+  const Lp = (x1, y1, x2, y2) => ({ t: 'P', pts: [[x1, y1], [x2, y2]] });
+  const Pp = (...pts) => ({ t: 'P', pts });
+  const Ap = (cx, cy, rx, ry, a0, a1, rot = 0) => ({ t: 'A', cx, cy, rx, ry, a0, a1, rot });
+  function plen(p) {
+    if (p.t === 'P') { let s = 0; for (let i = 1; i < p.pts.length; i++) s += Math.hypot(p.pts[i][0] - p.pts[i - 1][0], p.pts[i][1] - p.pts[i - 1][1]); return s; }
+    return Math.abs(p.a1 - p.a0) * (p.rx + p.ry) / 2;
+  }
+  function pdraw(g, p, u) {
+    if (u <= 0) return;
+    g.beginPath();
+    if (p.t === 'A') { g.ellipse(p.cx, p.cy, p.rx, p.ry, p.rot || 0, p.a0, p.a0 + (p.a1 - p.a0) * Math.min(1, u)); g.stroke(); return; }
+    const L = p.len ?? (p.len = plen(p)); let left = L * Math.min(1, u);
+    g.moveTo(p.pts[0][0], p.pts[0][1]);
+    for (let i = 1; i < p.pts.length && left > 0; i++) {
+      const [x0, y0] = p.pts[i - 1], [x1, y1] = p.pts[i], d = Math.hypot(x1 - x0, y1 - y0);
+      if (d <= left) { g.lineTo(x1, y1); left -= d; } else { g.lineTo(x0 + ((x1 - x0) * left) / d, y0 + ((y1 - y0) * left) / d); left = 0; }
+    }
+    g.stroke();
+  }
+  // items = [[prim, startFrame, durFrames], ...]; xf = {x, y, s, rot}; the stroke stays 4 px on screen
+  function art(g, items, f, xf, opt = {}) {
+    if (track(xf.x, xf.y, xf.x + 100 * xf.s, xf.y)) return;
+    g.save(); g.globalAlpha = opt.alpha ?? 1; g.translate(xf.x, xf.y); g.rotate(((xf.rot || 0) * Math.PI) / 180); g.scale(xf.s, xf.s);
+    g.strokeStyle = opt.color || C.amber; g.lineWidth = (opt.w || 4) / xf.s; g.lineCap = 'butt'; g.lineJoin = 'miter';
+    if (opt.dash) g.setLineDash(opt.dash.map((v) => v / xf.s));
+    for (const [p, a, d] of items) pdraw(g, p, a == null ? 1 : k(f, a, d, enter));
+    g.restore();
+  }
+  // a closed curve through points (Catmull-Rom), drawn as a polyline
+  function blob(cx, cy, r, seed, n = 9, wob = 0.22) {
+    const pts = [];
+    for (let i = 0; i <= 72; i++) {
+      const a = (i / 72) * Math.PI * 2;
+      const q = 1 + wob * Math.sin(3 * a + seed) + (wob / 2) * Math.sin(5 * a + 2 * seed);
+      pts.push([cx + r * q * Math.cos(a), cy + r * q * 0.82 * Math.sin(a)]);
+    }
+    return Pp(...pts);
+  }
+
+  // ================================================================ scenes (float frame f)
+  const SC = [];
+  const scene = (a, b, draw) => SC.push({ a, b, draw });
+
+  // ---- 1. hook: the burst (the amber dot) flashes; a one-second line with a hairline spike; then it leaves
+  //         and its pulse travels toward us across the frame
+  const H0 = [540, 840];                     // the burst on the hook
+  const O = [640, 800];                      // where it came from (matches the white cross on the wide Webb shot)
+  const TRACE_Y = 1080;
+  const PULSES = [-16, F.flash, F.flash + 9];
+  const dep = (f) => k(f, F.left, 18, move); // departure: H0 -> O, shrinking (going far away)
+  const burstAt = (f) => [lerp(H0[0], O[0], dep(f)), lerp(H0[1], O[1], dep(f)) + 3 * Math.sin(f / 9) * (1 - dep(f))];
+  const EARTH = [640, 1120], EARTH_R = 22;
+  const JOURNEY = 70;                        // frames the pulse takes down the line (starts slow, far away)
+  const journey = (f) => k(f, F.left + 6, JOURNEY, (x) => x * x * x);
+  const IRIS1 = F.astronomers - 4;
+  scene(0, IRIS1 + 16, (g, f) => {
+    const [bx, by] = burstAt(f);
+    // the one-second line: draws in on "one", a hairline spike for the flash; leaves downward as the burst departs
+    const tOff = 1200 * k(f, F.left, 14, exitE);
+    if (tOff < 1100) {
+      const y = TRACE_Y + tOff;
+      art(g, [[Lp(80, 0, 900, 0), null, 0], [Lp(80, -16, 80, 16), null, 0], [Lp(900, -16, 900, 16), null, 0]], f, { x: 0, y, s: 1 });
+      // the flash: one thousandth of the line, 0.8 px at true scale, drawn at the 4 px minimum stroke
+      const h = 190 * sp(f - F.flash, 0.55, 3) * punch(f, [F.thousandth], 0.12);
+      if (h > 0.5 && !track(bx, y)) { g.save(); g.strokeStyle = C.amber; g.lineWidth = 4; g.beginPath(); g.moveTo(540, y); g.lineTo(540, y - h); g.stroke(); g.restore(); }
+    }
+    // radio pulse rings around the burst (the burst itself is invisible: this is line art)
+    for (const e of PULSES) {
+      const age = f - e;
+      if (age >= 0 && age < 40) {
+        ring(g, H0[0], H0[1], 18 + 360 * enter(age / 40), 4, 1 - age / 40);
+        if (age > 5) ring(g, H0[0], H0[1], 18 + 240 * enter((age - 5) / 35), 3, 0.7 * (1 - age / 40));
+      }
+    }
+    // the journey: the pulse travels down the dashed line toward us (Earth), its wavefront widening as it nears
+    if (f >= F.left + 6 && f < IRIS1 + 2) {
+      const u = k(f, F.left + 6, 26, enter);
+      if (!PROBE) { g.save(); g.strokeStyle = C.amber; g.lineWidth = 4; g.setLineDash([10, 12]); g.beginPath(); g.moveTo(O[0], O[1] + 22); g.lineTo(O[0], O[1] + 22 + (EARTH[1] - EARTH_R - 10 - O[1] - 22) * u); g.stroke(); g.restore(); }
+      // Earth: a small paper outline at the bottom of the line
+      if (!PROBE && u > 0.6) { g.save(); g.strokeStyle = C.paper; g.lineWidth = 4; g.beginPath(); g.arc(EARTH[0], EARTH[1], EARTH_R * sp(f - F.left - 20, 0.6, 3), 0, Math.PI * 2); g.stroke(); g.restore(); }
+      const v = journey(f);
+      if (v > 0 && v < 1) {
+        const R = 24 + (EARTH[1] - O[1] - 24) * v, half = lerp(0.25, 0.75, v);
+        for (const [dr, w, a] of [[0, 4, 1], [-26, 3, 0.6], [-50, 2, 0.35]]) {
+          if (R + dr < 10 || PROBE) continue;
+          g.save(); g.strokeStyle = C.amber; g.lineWidth = w; g.globalAlpha = a; g.beginPath(); g.arc(O[0], O[1], R + dr, Math.PI / 2 - half, Math.PI / 2 + half); g.stroke(); g.restore();
+        }
+        track(O[0], O[1] + R);
+      }
+      // arrival: a ring springs out of Earth
+      const ar = f - (F.left + 6 + JOURNEY);
+      if (ar >= 0 && ar < 20) ring(g, EARTH[0], EARTH[1], EARTH_R + 70 * enter(ar / 20), 4, 1 - ar / 20);
+    }
+    const r = lerp(20, 11, dep(f)) * (1 + 0.25 * sp(f - F.flash, 0.5, 3) - 0.25 * sp(f - F.flash - 4, 0.5, 3));
+    dot(g, bx, by, r);
+  });
+
+  // ---- 2. the Webb field: an iris from the source opens onto the white cross; slow push with parallax
+  const S0 = 0.58, S1 = 0.82;
+  // push in slowly; on "Nobody knows" drift left across the field; on "So what was out there?" push in to the ring
+  const KEYS = () => [[IRIS1, O[0], O[1], 0.58], [F.nobody - 6, 600, 780, 0.68], [F.so - 4, 800, 760, 0.64], [F.ground, 560, 720, 0.95]];
+  const wideCam = (f) => {
+    const K = KEYS(); let i = 0; while (i < K.length - 2 && f >= K[i + 1][0]) i++;
+    const [a, x0, y0, s0] = K[i], [b, x1, y1, s1] = K[i + 1];
+    const u = k(f, a, b - a, i === 0 ? (x) => x * (2 - x) : move);
+    const s = elerp(s0, s1, u) * punch(f, [F.farthest, F.there], 0.035);
+    const tot = k(f, IRIS1, F.ground - IRIS1);
+    return { x: lerp(x0, x1, u), y: lerp(y0, y1, u), s, push: 0.07 * tot };
+  };
+  const RING2 = 196;                         // image px: the ring around the cross and the galaxy
+  const GR = (f) => GAL;
+  const IRIS3 = F.ground;                    // the photo closes into the ring
+  const RC3 = [640, 600], R3 = 175;          // the empty spot on the ground-telescope diagram
+  scene(IRIS1, IRIS3 + 24, (g, f) => {
+    const cam = wideCam(Math.min(f, IRIS3));
+    const ringC = fpt(cam, GAL[0], GAL[1]), ringR = RING2 * cam.s;
+    if (f < IRIS1 + 16) {
+      // iris open from the source dot
+      const r = 14 + 2300 * k(f, IRIS1, 16, move);
+      if (!track(O[0], O[1], O[0] + r, O[1])) {
+        g.save(); g.beginPath(); g.arc(O[0], O[1], r, 0, Math.PI * 2); g.clip(); field(g, cam); g.restore();
+        ring(g, O[0], O[1], r);
+      }
+    } else if (f < IRIS3) field(g, cam);
+    else {
+      // iris close into the ring; the inside empties ("saw nothing") as the ring moves to the diagram
+      const u = k(f, IRIS3, 12, move), m = k(f, IRIS3 + 8, 16, move);
+      const cx = lerp(ringC[0], RC3[0], m), cy = lerp(ringC[1], RC3[1], m), rr = lerp(ringR, R3, m);
+      const r = lerp(1700, rr, u);
+      if (!track(cx, cy, cx + r, cy)) {
+        const a = 1 - k(f, IRIS3 + 6, 10);
+        if (a > 0) { g.save(); g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.clip(); field(g, { ...cam, x: cam.x + (cx - ringC[0]), y: cam.y + (cy - ringC[1]), alpha: a }); g.restore(); }
+      }
+      ring(g, cx, cy, Math.max(r, rr));
+      return;
+    }
+    // the dot lands on the cross and opens into a ring around the cross and the galaxy
+    const land = k(f, IRIS1 + 10, 14, enter);
+    if (f >= IRIS1 + 4) {
+      if (land < 1) dot(g, lerp(O[0], ringC[0], land), lerp(O[1], ringC[1], land), 11 * (1 - land) + 0.1);
+      if (land > 0) ring(g, ringC[0], ringC[1], ringR * (0.4 + 0.6 * sp(f - IRIS1 - 10, 0.6, 3)), 4, clamp01(land * 3));
+    }
+  });
+
+  // ---- 3. "Ground telescopes saw nothing": the empty ring, an observatory dome looking at it
+  const DOME = { x: 270, y: 1060, r: 116 };   // left of the frame; its telescope leans right, toward the spot
+  const domeItems = (a) => [
+    [Pp([DOME.x - 140, DOME.y], [DOME.x + 140, DOME.y], [DOME.x + 140, DOME.y + 96], [DOME.x - 140, DOME.y + 96], [DOME.x - 140, DOME.y]), a, 10],
+    [Ap(DOME.x, DOME.y, DOME.r, DOME.r, Math.PI, 2 * Math.PI), a + 4, 12],
+    [Lp(DOME.x + 70, DOME.y + 96, DOME.x + 70, DOME.y + 40), a + 8, 4], [Lp(DOME.x + 40, DOME.y + 96, DOME.x + 40, DOME.y + 40), a + 8, 4],
+    [Lp(DOME.x + 70, DOME.y + 40, DOME.x + 40, DOME.y + 40), a + 10, 3],
+    // the telescope tube leans out of the slit toward the spot
+    [Pp([DOME.x + 52, DOME.y - 72], [DOME.x + 132, DOME.y - 148], [DOME.x + 112, DOME.y - 168], [DOME.x + 32, DOME.y - 92]), a + 10, 8],
+  ];
+  const domeOff = (f) => 900 * (1 - k(f, IRIS3 + 6, 18, enter)) + 1100 * k(f, F.webb + 10, 12, exitE);
+  scene(IRIS3 + 6, F.webb + 24, (g, f) => {
+    const off = domeOff(f);
+    art(g, domeItems(IRIS3 + 2), f, { x: 0, y: off, s: 1 });
+    // the dashed sight line from the tube to the spot, drawn on "saw"
+    if (!PROBE && f < F.webb + 2) {
+      const u = k(f, F.saw, 12, enter), p0 = [DOME.x + 122, DOME.y - 158 + off], p1 = [RC3[0] - R3 * 0.62, RC3[1] + R3 * 0.78];
+      g.save(); g.strokeStyle = C.amber; g.lineWidth = 4; g.setLineDash([10, 12]); g.beginPath(); g.moveTo(p0[0], p0[1]); g.lineTo(lerp(p0[0], p1[0], u), lerp(p0[1], p1[1], u)); g.stroke(); g.restore();
+    }
+    if (f >= IRIS3 + 24 && f < F.webb) {
+      // the empty spot; it gives a small punch on "nothing"
+      const p = punch(f, [F.nothing], 0.08);
+      ring(g, RC3[0], RC3[1], R3 * p);
+    }
+  });
+
+  // ---- 4. "Webb found a galaxy": the ring fills with the Webb image and the camera zooms to the white cross
+  const ZS0 = (2 * R3 * 0.92) / 988 * 1.0;   // the inset (988 px) just fits the ring at the start
+  const ZEND = { x: 550, y: 505, s: 2.15 };
+  const zoomCam = (f) => {
+    const u = k(f, F.webb, F.galaxy + 6 - F.webb, move);
+    const push = k(f, F.galaxy + 6, F.a3 + 4 - F.galaxy - 6);
+    return { x: lerp(RC3[0], ZEND.x, u), y: lerp(RC3[1], ZEND.y, u), s: elerp(ZS0, ZEND.s, u) * (1 + 0.03 * push), push: 0.04 * push };
+  };
+  const GRING = 196;                         // image px: the ring around the host galaxy
+  const galRing = (f) => { const c = zoomCam(f); const p = fpt(c, GAL[0], GAL[1]); return { x: p[0], y: p[1], r: GRING * c.s }; };
+  const PH_EXIT = F.a3;                      // the photo leaves upward; the galaxy ring stays (it becomes the dwarf)
+  scene(F.webb, PH_EXIT + 16, (g, f) => {
+    const cam = zoomCam(f);
+    const oy = -2300 * k(f, PH_EXIT, 14, exitE);
+    const r = lerp(R3, 1500, k(f, F.webb, 16, move));
+    if (!track(RC3[0], RC3[1], RC3[0] + r, RC3[1])) {
+      g.save(); g.beginPath(); g.arc(RC3[0], RC3[1], r, 0, Math.PI * 2); g.clip();
+      field(g, { ...cam, y: cam.y + oy }); g.restore();
+      if (r < 1400) ring(g, RC3[0], RC3[1], r);
+    }
+    // on "galaxy" a ring marks the host galaxy (under the white cross); it stays when the photo leaves
+    if (f >= F.galaxy + 2) { const gr = galRing(Math.min(f, PH_EXIT)); ring(g, gr.x, gr.y, gr.r * (0.4 + 0.6 * sp(f - F.galaxy - 2, 0.6, 3))); }
+  });
+
+  // ---- 5. "A dwarf, one thousand times less massive than expected": size comparison in line art
+  const D = { x: 815, y: 770, r: 30 };       // the dwarf host
+  const G = { x: 430, y: 850, rx: 290, ry: 132, rot: -12 };   // a typical, massive FRB host
+  const galaxyItems = (a) => {
+    const c = Math.cos((G.rot * Math.PI) / 180), s = Math.sin((G.rot * Math.PI) / 180);
+    const R = (x, y) => [G.x + x * c - y * s, G.y + x * s + y * c];
+    const arm = (sgn) => { const pts = []; for (let i = 0; i <= 40; i++) { const th = 0.4 + i * 0.11, rr = 18 + i * 5.6; pts.push(R(sgn * rr * Math.cos(th) * 1.0, sgn * rr * Math.sin(th) * 0.42)); } return Pp(...pts); };
+    return [[Ap(G.x, G.y, G.rx, G.ry, 0, 2 * Math.PI, (G.rot * Math.PI) / 180), a, 16], [arm(1), a + 6, 12], [arm(-1), a + 9, 12],
+      [Ap(G.x, G.y, 34, 16, 0, 2 * Math.PI, (G.rot * Math.PI) / 180), a + 4, 8]];
+  };
+  const G_OUT = F.expected - 2;              // the big outline leaves to the left before the cat's sign
+  const DIVE = F.that2;                      // the camera dives into the dwarf
+  const MC = { x: 580, y: 790, r: 230 };     // the dwarf, filling the frame, on the merger beat
+  const dwarfAt = (f) => {
+    // from the galaxy ring (end of the Webb shot) to the small dwarf, then up into the merger frame
+    const gr = galRing(PH_EXIT);
+    const u = k(f, PH_EXIT + 2, 18, move), v = k(f, DIVE, 18, move);
+    const x = lerp(lerp(gr.x, D.x, u), MC.x, v), y = lerp(lerp(gr.y, D.y, u), MC.y, v);
+    const r = elerp(elerp(gr.r, D.r, u), MC.r, v);
+    return { x, y, r, u, v };
+  };
+  scene(PH_EXIT + 2, F.meerkat, (g, f) => {
+    const d = dwarfAt(f);
+    // the dwarf: a ring that turns into a lumpy outline as it shrinks
+    if (f < PH_EXIT + 2) return;
+    if (d.u < 0.6) ring(g, d.x, d.y, d.r * punch(f, [F.dwarf], 0.1));
+    else art(g, [[blob(0, 0, 1, 2.1, 9, 0.11), null, 0]], f, { x: d.x, y: d.y, s: d.r * punch(f, [F.dwarf], 0.12) });
+    // the big host outline draws in on "dwarf" and leaves left
+    const gx = -1100 * k(f, G_OUT, 12, exitE);
+    if (f >= F.dwarf - 4 && f < G_OUT + 14) art(g, galaxyItems(F.dwarf - 4), f, { x: gx, y: 0, s: 1 });
+    // merger: two neutron stars spiral in inside the dwarf; on "unlikely" the drawing turns muted and dashed
+    if (f >= F.neutron - 4) {
+      const ul = f >= F.unlikely;
+      const tt = Math.min(f, F.unlikely) - F.neutron + 4;
+      const rad = lerp(150, 44, clamp01(tt / 60)), th = 0.1 * tt + 0.0016 * tt * tt;
+      const col = ul ? C.muted : C.amber;
+      const a = [MC.x + rad * Math.cos(th), MC.y + rad * 0.6 * Math.sin(th)], b = [MC.x - rad * Math.cos(th), MC.y - rad * 0.6 * Math.sin(th)];
+      if (!PROBE) {
+        g.save(); g.strokeStyle = col; g.lineWidth = 4; g.setLineDash([10, 12]);
+        g.beginPath(); g.ellipse(MC.x, MC.y, rad, rad * 0.6, 0, 0, Math.PI * 2); g.stroke(); g.restore();
+      }
+      const grow = sp(f - F.neutron + 4, 0.6, 3);
+      if (ul) { ring(g, a[0], a[1], 16 * grow, 4, 1, null, C.muted); ring(g, b[0], b[1], 16 * grow, 4, 1, null, C.muted); }
+      else { dot(g, a[0], a[1], 16 * grow); dot(g, b[0], b[1], 16 * grow); }
+    }
+  });
+
+  // ---- 7. NEXT card: a MeerKAT-style dish (simplified line art) catching bursts, several of them
+  // a radio dish seen from the side (simplified, not a drawing of a MeerKAT antenna): a parabola facing the
+  // upper right, a feed at its focus on a strut, a neck and a tapered pedestal on the ground
+  const DISH = { x: 720, y: 820, base: 948 };
+  const DROT = (-40 * Math.PI) / 180;
+  const dR = (x, y) => [DISH.x + x * Math.cos(DROT) - y * Math.sin(DROT), DISH.y + x * Math.sin(DROT) + y * Math.cos(DROT)];
+  const DISH_F = 80;                         // focal length (px)
+  const dishFocus = () => dR(0, -DISH_F);
+  const dishItems = (a) => {
+    const par = []; for (let i = 0; i <= 38; i++) { const x = -190 + i * 10; par.push(dR(x, -(x * x) / (4 * DISH_F * 1.9) + 0 + 0)); }
+    const rimL = par[0], rimR = par[par.length - 1];
+    return [
+      [Pp(...par.map(([x, y]) => [x, y])), a, 12],
+      [Pp(rimL, rimR), a + 6, 8],
+      [Pp(dR(-80, -(6400) / (4 * DISH_F * 1.9)), dR(0, -DISH_F - 30)), a + 8, 8],                // feed strut
+      [Ap(...dR(0, -DISH_F - 34), 12, 12, 0, 2 * Math.PI), a + 12, 6],                            // feed
+      [Pp(dR(0, 0), dR(0, 36)), a + 8, 4],                                                         // neck
+      [Pp([DISH.x - 18, DISH.y + 40], [DISH.x - 34, DISH.base], [DISH.x + 34, DISH.base], [DISH.x + 18, DISH.y + 40], [DISH.x - 18, DISH.y + 40]), a + 10, 10],
+      [Lp(DISH.x - 110, DISH.base, DISH.x + 120, DISH.base), a + 14, 6],
+    ];
+  };
+  const ARRIVE = (f0) => [f0, f0 + 16, f0 + 34];
+  scene(F.meerkat, LAST + 1, (g, f) => {
+    const rise = 0;
+    art(g, dishItems(F.meerkat - 6), f, { x: 0, y: rise, s: 1 });
+    const fp = dR(0, -DISH_F - 34), focus = [fp[0], fp[1] + rise];
+    for (const a of ARRIVE(F.several - 8)) {
+      const u = k(f, a - 16, 16, (x) => x * x);
+      if (f >= a - 16 && f < a) dot(g, lerp(890, focus[0], u), lerp(640, focus[1], u), 10);
+      const age = f - a;
+      if (age >= 0 && age < 22) ring(g, focus[0], focus[1], 12 + 60 * enter(age / 22), 4, 1 - age / 22);
+    }
+  });
+
+  // ================================================================ picture with motion blur
+  function drawPicture(g, f) {
+    if (!PROBE) { g.globalAlpha = 1; g.fillStyle = C.ink; g.fillRect(0, 0, 1080, 1920); }
+    for (const s of SC) if (f >= s.a && f < s.b) s.draw(g, f);
+  }
+  const SHUTTER = 0.5;
+  function blurSamples(f) {
+    PROBE = []; drawPicture(null, f); const a = PROBE;
+    PROBE = []; drawPicture(null, f - SHUTTER); const b = PROBE; PROBE = null;
+    if (a.length !== b.length || f - SHUTTER < 0) return 1;
+    let mx = 0; for (let i = 0; i < a.length; i += 2) mx = Math.max(mx, Math.hypot(a[i] - b[i], a[i + 1] - b[i + 1]));
+    return Math.max(1, Math.min(16, Math.ceil(mx / 2.5)));
+  }
+  function renderPicture(f) {
+    const N = blurSamples(f);
+    if (N <= 1) { drawPicture(pctx, f); return 1; }
+    actx.clearRect(0, 0, 1080, 1920);
+    for (let i = 0; i < N; i++) {
+      drawPicture(tctx, f - (SHUTTER * i) / (N - 1));
+      actx.globalAlpha = 1 / (i + 1); actx.drawImage(tmp, 0, 0);
+    }
+    actx.globalAlpha = 1; pctx.drawImage(acc, 0, 0);
+    return N;
+  }
+
+  // ================================================================ DOM layers
+  const $ = (id) => document.getElementById(id);
+  const show = (el, on, disp = 'block') => { el.style.display = on ? disp : 'none'; };
+  const fdefs = $('fdefs');
+  function blurFilter(el) {
+    const id = 'mb_' + el.id;
+    if (!$(id)) fdefs.insertAdjacentHTML('beforeend', `<filter id="${id}" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur id="${id}_g" stdDeviation="0 0"/></filter>`);
+    return $(id + '_g');
+  }
+  function setBlur(el, vx, vy) {
+    const fe = blurFilter(el), sx = Math.min(40, Math.abs(vx) * 0.35), sy = Math.min(60, Math.abs(vy) * 0.35);
+    if (sx < 0.3 && sy < 0.3) { el.style.filter = 'none'; return; }
+    fe.setAttribute('stdDeviation', `${sx.toFixed(2)} ${sy.toFixed(2)}`); el.style.filter = `url(#mb_${el.id})`;
+  }
+  const slam = (df) => 1.12 - 0.12 * enter(clamp01(df / 5));
+  function giant(id, f, a, b, exitDir = -1, exitLen = 8) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    const ex = (q) => exitDir * 1100 * k(q, b, exitLen, exitE);
+    const dy = ex(f), vy = dy - ex(f - 1);
+    el.style.transform = `translateY(${dy.toFixed(1)}px) scale(${slam(f - a).toFixed(4)})`;
+    setBlur(el, 0, vy);
+  }
+  function gdata(id, f, a, b, exitDir = -1, exitLen = 8) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    const ex = (q) => exitDir * 1100 * k(q, b, exitLen, exitE);
+    const dy = ex(f); el.style.transform = `translateY(${dy.toFixed(1)}px)`; setBlur(el, 0, dy - ex(f - 1));
+  }
+  function label(id, f, a, b, x, y, dy = 0) {
+    const el = $(id), on = f >= a && f < b; show(el, on); if (!on) return;
+    el.style.left = x + 'px'; el.style.top = (y + dy).toFixed(1) + 'px';
+  }
+  const ringEl = (el, df) => {
+    el.style.opacity = df < 0 ? 0 : clamp01((df + 1) / 3);
+    el.style.transform = `scale(${(0.4 + 0.6 * sp(Math.max(0, df))).toFixed(4)})`;
+  };
+  function countUp(el, f, a, val, fmt) {
+    let peak = 0; for (let q = a; q <= f; q++) peak = Math.max(peak, spring((q - a + 1) / FPS, 0.8, 2));
+    el.textContent = fmt(Math.max(1, Math.min(val, Math.floor(val * peak + 1e-6))));
+  }
+
+  // ---- captions: chunks from the schedule, measured with the real font
+  let CHUNKS = [];
+  const GLUE = /^(a|an|the|to|of|on|in|into|and|or|is|its|it|from|that|these|one|three|neutron|very|several|for|at)$/i;
+  const NOSPLIT = new Set(['one thousand', 'signal delay', 'neutron star', 'fast radio', 'three billion', 'ground telescopes', 'radio burst']);
+  let MEAS = null;
+  const textW = (s) => { if (!MEAS) { MEAS = document.createElement('canvas').getContext('2d'); MEAS.font = "700 90px 'Archivo'"; } return MEAS.measureText(s).width; };
+  function buildChunks() {
+    const wid = (ws) => textW(ws.map((w) => w.text).join(' '));
+    const MAXW = 820 - 32;
+    const segs = []; let cur = [];
+    W.forEach((w, i) => {
+      const prev = W[i - 1];
+      if (cur.length && ((prev && /[.?!:]$/.test(prev.text)) || (prev && w.start - prev.end > 0.45))) { segs.push(cur); cur = []; }
+      cur.push(w);
+    });
+    if (cur.length) segs.push(cur);
+    const chunks = [];
+    for (const sg of segs) {
+      const n = sg.length, best = new Array(n + 1).fill(Infinity), from = new Array(n + 1).fill(-1); best[0] = 0;
+      for (let i = 1; i <= n; i++) for (let j = Math.max(0, i - 4); j < i; j++) {
+        const ws = sg.slice(j, i), w = wid(ws); if (w > MAXW || best[j] === Infinity) continue;
+        let c = i === n ? 0.3 * ((MAXW - w) / 100) ** 2 : ((MAXW - w) / 100) ** 2;
+        if (ws.length === 1 && n > 1) c += 40;
+        if (i < n && /,$/.test(sg[i - 1].text)) c -= 12;
+        if (ws.slice(0, -1).some((x) => /,$/.test(x.text))) c += 18;
+        if (i < n && GLUE.test(sg[i - 1].text)) c += 30;
+        if (i < n && NOSPLIT.has(sg[i - 1].key + ' ' + sg[i].key)) c += 120;
+        if (best[j] + c < best[i]) { best[i] = best[j] + c; from[i] = j; }
+      }
+      const lines = []; for (let i = n; i > 0; i = from[i]) lines.unshift(sg.slice(from[i], i));
+      const L = lines.length, cb = new Array(L + 1).fill(Infinity), cf = new Array(L + 1).fill(-1); cb[0] = 0;
+      for (let i = 1; i <= L; i++) for (let j = Math.max(0, i - 2); j < i; j++) {
+        let c = i - j === 1 ? (L === 1 ? 0 : 10 + (lines[j].length === 1 ? 30 : 0)) : 0;
+        if (cb[j] + c < cb[i]) { cb[i] = cb[j] + c; cf[i] = j; }
+      }
+      const grp = []; for (let i = L; i > 0; i = cf[i]) grp.unshift(lines.slice(cf[i], i));
+      for (const g of grp) chunks.push({ lines: g });
+    }
+    chunks.forEach((c) => { c.f0 = c.lines[0][0].f; c.lastW = c.lines[c.lines.length - 1].slice(-1)[0]; });
+    chunks.forEach((c, j) => {
+      const nxt = chunks[j + 1];
+      c.f1 = !nxt ? LAST + 1 : nxt.f0 - c.lastW.fe > 30 ? c.lastW.fe + 24 : nxt.f0;
+      // line boxes in frame pixels (for the cat: standing on, popping up from, never covering)
+      c.rects = c.lines.map((ln, li) => [80, 1196 + li * 120, Math.ceil(wid(ln)) + 32, 112]);
+      c.el = document.createElement('div'); c.el.style.cssText = 'display:none;flex-direction:column;align-items:flex-start;gap:8px';
+      c.lineEls = c.lines.map((ln) => {
+        const le = document.createElement('div'); le.className = 'line';
+        ln.forEach((w, q) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = (q ? ' ' : '') + w.text; le.appendChild(s); w.el = s; });
+        c.el.appendChild(le); return le;
+      });
+      $('caps').appendChild(c.el);
+    });
+    CHUNKS = chunks;
+  }
+  const chunkAt = (f) => CHUNKS.find((c) => f >= c.f0 && f < c.f1) || null;
+  // the caption line rectangles on screen at frame f (only lines that already show a word)
+  function capRects(f) {
+    const c = chunkAt(f); if (!c) return [];
+    return c.lines.map((ln, li) => (f >= ln[0].f ? c.rects[li] : null)).filter(Boolean);
+  }
+  function renderCaptions(f) {
+    for (const c of CHUNKS) {
+      const on = f >= c.f0 && f < c.f1; show(c.el, on, 'flex'); if (!on) continue;
+      let lastW = null;
+      c.lines.forEach((ln, li) => {
+        let any = false;
+        ln.forEach((w) => { const v = f >= w.f; w.el.style.display = v ? 'inline' : 'none'; w.el.classList.remove('on'); if (v) { lastW = w; any = true; } });
+        c.lineEls[li].style.display = any ? 'block' : 'none';
+      });
+      if (lastW) lastW.el.classList.add('on');
+    }
+  }
+
+  // ---- the cat (v3 actor): guide and reaction, never the source of facts
+  const { Actor, standOn, motionBlur } = M_actor;
+  let cat = null, CAT_ON = [];
+  const STRESS = /^(thousandth|three|billion|farthest|nothing|webb|dwarf|one|thousand|unlikely)$/;
+  const sayWords = (f0, f1) => W.filter((w) => w.f >= f0 && w.f < f1).map((w) => ({ w: w.text, s: w.start, e: w.end, stress: STRESS.test(w.key) }));
+  function buildCat() {
+    const t = (fr) => fr / FPS;
+    const capAt = (fr, li = 0) => { const c = chunkAt(fr); return c ? c.rects[li] : [80, 1196, 600, 112]; };
+    cat = new Actor({ scale: 0.3, seed: 11, safe: [80, 200, 820, 1300], start: [-400, 1196] });
+    const cB = capAt(F.nobody + 2);
+    const chC = chunkAt(F.times + 2), cC = [80, 1196, Math.max(...chC.rects.map((r) => r[2])), chC.rects.length * 120 - 8];
+    const TL = [
+      // A. hook: floats in onto the one-second line, points at the flash, zips off after the burst
+      { t: t(10), do: 'enter', how: 'float', from: 'right', to: [770, TRACE_Y], dur: 1.15, spin: -0.6 },
+      { t: t(10), do: 'expr', expr: 'wow' },
+      { t: t(F.thousandth + 6), do: 'point', at: [540, TRACE_Y - 120], dur: 1.0 },
+      { t: t(F.second + 2), do: 'exit', how: 'zip', to: 'up' },
+      // B. skids in on "Nobody", shrugs, WHAT, hops onto the dome, gasps at "nothing", points as Webb's image opens
+      { t: t(F.nobody - 4), do: 'enter', how: 'skid', from: 'left', to: standOn(cB, 0.2) },
+      { t: t(F.nobody - 4), do: 'expr', expr: 'curious' },
+      { t: t(F.knows - 2), do: 'shrug', dur: 1.0 },
+      { t: t(F.what2 - 2), do: 'what', dur: 1.0 },
+      { t: t(F.ground + 6), do: 'hop', to: [DOME.x - 14, DOME.y - DOME.r], height: 60 },
+      { t: t(F.nothing - 2), do: 'gasp', at: RC3, dur: 1.2 },
+      { t: t(F.spot - 2), do: 'point', at: [RC3[0], RC3[1] + 40], dur: 0.6 },
+      { t: t(F.webb + 4), do: 'exit', how: 'zip', to: 'left' },
+      // C. pops up from behind the caption box, holds up a sign, rides the amber dot along the box, nods, is yanked out
+      { t: t(F.times - 2), do: 'enter', how: 'pop', box: cC, at: 0.16 },
+      { t: t(F.times - 2), do: 'expr', expr: 'keen' },
+      { t: t(F.expected - 2), do: 'sign', text: '1,000x', sub: 'LIGHTER', dur: 1.5, size: 2.0 },
+      { t: t(F.very - 4), do: 'listen', dur: 0.9 },
+      { t: t(F.team - 12), do: 'nod', count: 2, dur: 0.7 },
+      { t: t(F.says - 2), do: 'exit', how: 'zip', to: 'up' },
+      // D. NEXT card: drops in on a tether onto the pointer box, thumbs up on "Follow", points at the dish, waves
+      { t: t(F.year), do: 'enter', how: 'skid', from: 'left', to: [300, 952], scale: 0.26 },
+      { t: t(F.year), do: 'expr', expr: 'happy' },
+      { t: t(F.follow + 2), do: 'thumbs', dur: 0.9 },
+      { t: t(F.delay + 10), do: 'point', at: dR(0, -DISH_F - 34), dur: 0.9 },
+      { t: t(F.mark + 4), do: 'wave', dur: 1.0 },
+    ];
+    // talk on every line where he is on screen
+    CAT_ON = [[10, F.second + 18], [F.nobody - 4, F.webb + 20], [F.times - 2, F.meerkat], [F.year, LAST + 1]];
+    for (const [a, b] of CAT_ON) { const words = sayWords(a, b); if (words.length) TL.push({ t: words[0].s, do: 'say', words }); }
+    cat.timeline(TL);
+  }
+  // pool of sample layers; samples of a fast move add up exactly (each at 1/N, plus-lighter, isolated group)
+  const catWrap = () => $('catWrap');
+  const catSvgs = [];
+  function catSvg(i) {
+    while (catSvgs.length <= i) {
+      const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      s.setAttribute('width', 1080); s.setAttribute('height', 1920); s.setAttribute('viewBox', '0 0 1080 1920');
+      catWrap().appendChild(s); catSvgs.push(s);
+    }
+    return catSvgs[i];
+  }
+  let catN = 1;
+  function renderCat(f) {
+    const t = f / FPS;
+    const on = CAT_ON.some(([a, b]) => f >= a - 2 && f < b + 2);
+    const bl = on ? cat.blur(t) : { n: 1, shutter: 0.5 };
+    const N = bl.n <= 1 ? 1 : bl.n <= 4 ? 4 : bl.n <= 8 ? 8 : bl.n <= 12 ? 12 : 16;
+    catN = N;
+    for (let i = 0; i < Math.max(N, catSvgs.length); i++) {
+      const s = catSvg(i);
+      if (!on || i >= N) { s.style.display = 'none'; continue; }
+      const tt = N === 1 ? t : t - ((bl.shutter / FPS) * i) / (N - 1);
+      s.style.display = 'block';
+      s.style.opacity = N === 1 ? 1 : (1 / N).toFixed(5);
+      s.style.mixBlendMode = N === 1 ? 'normal' : 'plus-lighter';
+      s.innerHTML = cat.render(tt);
+    }
+  }
+
+  // ---- credit slot (fixed bottom edge at y 1498; the two-line Webb credit grows upward, still inside the safe zone)
+  function creditAt(f) {
+    if (f < IRIS1 + 6) return f >= F.left + 4 ? CR.nasaLs : CR.nasa;
+    if (f < IRIS3 + 8) return CR.webb;
+    if (f < F.webb + 4) return CR.nasa;
+    if (f < PH_EXIT + 8) return CR.webb;
+    return CR.nasa;
+  }
+  let lastCredit = null;
+  function renderCredit(f) {
+    const cr = creditAt(f), ce = $('credit');
+    if (cr !== lastCredit) { ce.innerHTML = cr.map((s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')).join('<br>'); lastCredit = cr; }
+    show(ce, true);
+    ce.style.top = (1498 - ce.offsetHeight) + 'px';
+  }
+
+  // ================================================================ frame
+  let lastN = 1;
+  function renderAt(t) {
+    const f = Math.min(LAST, Math.max(0, Math.round(t * FPS)));
+    lastN = renderPicture(f);
+    const next = f >= F.meerkat;
+
+    // giant type
+    giant('gMs', f, F.thousandth, F.left - 4);
+    gdata('gMsd', f, F.thousandth + 6, F.left - 4);
+    giant('g3', f, F.three, F.astronomers - 8);
+    gdata('g3d', f, F.billion, F.astronomers - 8);
+    if (f >= F.three) countUp($('g3'), f, F.three, 3, String);
+    giant('gK', f, F.one2, F.expected - 2);
+    if (f >= F.one2) countUp($('gK'), f, F.one2, 1000, (v) => v.toLocaleString('en-US') + '×');
+
+    // labels (each at least 1.5 s)
+    label('labEarth', f, F.left + 26, IRIS1 + 2, EARTH[0] + EARTH_R + 14, EARTH[1] - 22);
+    label('labSec', f, 0, F.left + 4, 80, TRACE_Y + 18, 1200 * k(f, F.left, 14, exitE));
+    { const c = wideCam(Math.min(f, IRIS3)), p = fpt(c, CROSS[0], CROSS[1]); label('labFrb', f, F.farthest, F.nobody, 80, p[1] - 140); }
+    label('labNone', f, F.nothing, F.webb, RC3[0] - 128, RC3[1] - 22);
+    label('labMost', f, F.dwarf + 4, G_OUT, 120 - 1100 * k(f, G_OUT, 12, exitE), 650);
+    label('labThis', f, F.dwarf + 10, DIVE, D.x - 110, D.y - 92);
+    label('labMerge', f, F.neutron, F.meerkat, 80, 460);
+    $('labMergeU').style.display = f >= F.unlikely ? 'inline' : 'none';
+
+    // kicker
+    $('kText').textContent = next ? 'Next on Just discovered' : 'Just discovered';
+
+    // chip: on the journey beat; the echo ring lands one musical beat (15 frames) after the chip (the real delay is
+    // more than 10 billion years)
+    const chipA = F.left + 4, chipB = F.nobody;
+    show($('chip'), f >= chipA && f < chipB, 'flex');
+    if (f >= chipA && f < chipB) ringEl($('chipRing'), f - (chipA + 15));
+
+    // NEXT card
+    $('next').style.display = next ? 'block' : 'none';
+    if (next) {
+      show($('nHead'), f >= F.meerkat + 2);
+      show($('nData'), f >= F.meerkat + 17);
+      show($('nPoint'), f >= F.follow);
+      show($('nMark'), f >= F.signal, 'flex');
+      $('nW1').style.visibility = f >= F.signal ? 'visible' : 'hidden';
+      $('nW2').style.visibility = f >= F.delay ? 'visible' : 'hidden';
+      const de = sp(f - F.mark, 0.7, 4);
+      $('nDot').style.opacity = f >= F.mark ? 1 : 0;
+      $('nDot').style.transform = `scale(${(0.4 + 0.6 * de).toFixed(4)})`;
+      ringEl($('nRing'), f - F.ring);
+    }
+
+    renderCredit(f);
+    renderCaptions(f);
+    renderCat(f);
+  }
+
+  // ================================================================ cue list for the sound mixer (curated: 12 to 18)
+  function cues() {
+    const L = [];
+    const c = (frame, type, note, extra = {}) => L.push({ frame: Math.round(frame), fps: FPS, t: +(Math.round(frame) / FPS).toFixed(3), type, note, ...extra });
+    c(F.flash, 'impact', 'the burst flashes: a radio pulse ring');
+    c(F.thousandth, 'number_slam', '1/1000 slams in');
+    c(F.left + 4, 'chip_in', 'SIGNAL DELAY chip');
+    c(F.left + 4 + 15, 'echo_land', 'chip echo ring lands one beat later');
+    c(IRIS1, 'scene_move', 'the pulse reaches us; iris onto the Webb field');
+    c(F.nobody - 4, 'cat_in', 'cat skids in');
+    c(IRIS3, 'hard_cut', 'the photo closes into the empty ring', { sfx: 'whoosh_short' });
+    c(F.nothing, 'cat_chirp', 'cat gasps at "nothing"');
+    c(F.webb, 'riser', 'riser ends on "Webb": the ring fills with the Webb image');
+    c(PH_EXIT, 'hard_cut', 'the photo leaves upward; the galaxy ring becomes the dwarf', { sfx: 'whoosh_short' });
+    c(F.one2, 'number_slam', '1,000x count-up');
+    c(F.times - 2 + 12, 'cat_in', 'cat pops up from behind the caption box');
+    c(F.unlikely, 'glitch', 'the merger drawing turns muted on "unlikely"');
+    c(F.meerkat, 'next_card_in', 'hard cut to the NEXT card on "MeerKAT"');
+    c(F.several - 8, 'impact', 'first burst reaches the dish', { gain_db: -4 });
+    c(F.mark, 'wordmark_echo', 'wordmark dot, sonic logo (its echo lands with the ring 12 frames later)');
+    return L.sort((a, b) => a.frame - b.frame);
+  }
+
+  // ================================================================ checks run in the page
+  // the cat against the caption words (line boxes minus their top padding), the photo subject and the safe zone
+  function lintCat() {
+    const hits = [];
+    for (let f = 0; f <= LAST; f++) {
+      if (!CAT_ON.some(([a, b]) => f >= a && f < b)) continue;
+      const t = f / FPS, e = cat._rootEntry(t);
+      { const bb = cat.box(t); if (bb[0] > 1080 || bb[1] > 1920 || bb[0] + bb[2] < 0 || bb[1] + bb[3] < 0 || !cat.render(t)) continue; }
+      const moving = e && (e.a.do === 'enter' || e.a.do === 'exit') && t - e.t0 < e.dur;
+      const b = cat.box(t);
+      const rects = capRects(f).map((r) => [r[0] + 16, r[1] + 14, r[2] - 32, r[3] - 22]);
+      // the photo subject while the Webb image is on screen: the cross and the galaxy
+      if (f >= F.webb && f < PH_EXIT) { const g = galRing(f); rects.push([g.x - g.r, g.y - g.r - 60, 2 * g.r, 2 * g.r + 60]); }
+      if (f >= IRIS1 && f < IRIS3) { const c = wideCam(f), p = fpt(c, GAL[0], GAL[1]); rects.push([p[0] - RING2 * c.s, p[1] - RING2 * c.s, 2 * RING2 * c.s, 2 * RING2 * c.s]); }
+      const clip = e && e.m.clip && t - e.t0 <= e.dur ? e.m.clip(t - e.t0) : null;
+      rects.forEach((r, i) => {
+        if (clip) return;
+        const ox = Math.min(b[0] + b[2], r[0] + r[2]) - Math.max(b[0], r[0]);
+        const oy = Math.min(b[1] + b[3], r[1] + r[3]) - Math.max(b[1], r[1]);
+        if (ox > 6 && oy > 6) hits.push({ frame: f, what: i < capRects(f).length ? 'caption' : 'subject', overlap: [Math.round(ox), Math.round(oy)] });
+      });
+      if (!moving) {
+        const s = [80, 200, 820, 1300];
+        if (b[0] < s[0] - 6 || b[1] < s[1] - 6 || b[0] + b[2] > s[0] + s[2] + 6 || b[1] + b[3] > s[1] + s[3] + 6) hits.push({ frame: f, what: 'safe', box: b.map(Math.round) });
+      }
+    }
+    // frames where the cat is drawn inside the frame (behind the caption box during a pop counts as on screen)
+    const onFrames = Array.from({ length: NF }, (_, f) => {
+      if (!CAT_ON.some(([a, b]) => f >= a && f < b)) return false;
+      const bb = cat.box(f / FPS); return !(bb[0] > 1080 || bb[1] > 1920 || bb[0] + bb[2] < 0 || bb[1] + bb[3] < 0);
+    }).filter(Boolean).length;
+    return { hits, onFrames, share: +(onFrames / NF).toFixed(3) };
+  }
+
+  window.renderAt = renderAt;
+  window.SD = { F, I, NF, LAST, FPS, W, get CHUNKS() { return CHUNKS; }, cues, lastSamples: () => lastN, catSamples: () => catN, captionsAt: renderCaptions, lintCat, get cat() { return cat; } };
+  window.__ready = (async () => {
+    await Promise.all([document.fonts.load("800 100px 'Archivo'"), document.fonts.load("700 90px 'Archivo'"), document.fonts.load("500 28px 'IBM Plex Mono'")]);
+    await document.fonts.ready;
+    await Promise.all(imgPromises);
+    buildChunks();
+    buildCat();
+    // giant type that must fit inside x 40 to 900
+    for (const id of ['gMs', 'gK']) {
+      const el = $(id); el.style.display = 'block'; el.style.visibility = 'hidden';
+      let fs = 340; el.style.fontSize = fs + 'px';
+      if (id === 'gK') el.textContent = '1,000×';
+      while (el.getBoundingClientRect().width > 860 && fs > 200) { fs -= 4; el.style.fontSize = fs + 'px'; }
+      el.style.display = 'none'; el.style.visibility = 'visible';
+    }
+    window.CUES = cues();
+  })();
+
+  const params = new URLSearchParams(location.search);
+  window.__ready.then(() => {
+    if (params.has('t')) renderAt(Number(params.get('t')) || 0);
+    else {
+      let t0 = null;
+      const loop = (ts) => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % (NF / FPS)); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    }
+  });
+})();
+</script>
+</body>
+</html>
