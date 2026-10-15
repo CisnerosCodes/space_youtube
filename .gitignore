@@ -3,3 +3,7 @@ node_modules/
 **/out/stills/
 .DS_Store
 .env
+__pycache__/
+*.pyc
+lab/sound/beds/*.wav
+lab/sound/beds/raw/*.wav
