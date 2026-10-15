@@ -39,7 +39,7 @@ art0001e002083 (Dec. 5, 2022) On the 20th day of the Artemis I mission, Orion ca
 Phobos from 6,800 Kilometers Color. The High Resolution Imaging Science Experiment HiRISE camera on NASA Mars Reconnaissance Orbiter took two images of the larger of Mars two moons, Phobos, within 10 minutes of each other on March 23, 2008. This is the first.
 Source: https://images.nasa.gov/details/PIA10368 (also https://photojournal.jpl.nasa.gov/catalog/PIA10368)
 License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
-Use in Signal Delay motion v2: Phobos, color, from 6,800 km (HiRISE, MRO). Used: hook, plan beat (orbit, land, sample).
+Use in Signal Delay motion v2 (MMX, script v3): hook ("Mars has a moon that is falling"), the Phobos lens on the two-moons beat, and the close-up for "That sample could finally tell us".
 Credit on screen: NASA/JPL-Caltech/University of Arizona
 Fetched 2026-10-15.
 
@@ -49,7 +49,7 @@ Fetched 2026-10-15.
 Phobos from 5,800 Kilometers Color. Phobos from 5,800 Kilometers Color
 Source: https://images.nasa.gov/details/PIA10369 (also https://photojournal.jpl.nasa.gov/catalog/PIA10369)
 License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
-Use in Signal Delay motion v2: Phobos, color, from 5,800 km (HiRISE, MRO). Used: "A sample could crack that."
+Use in Signal Delay motion v2 (MMX, script v3): "go grab a piece of it" (the amber ring marks a piece; it is not the landing site).
 Credit on screen: NASA/JPL-Caltech/University of Arizona
 Fetched 2026-10-15.
 
@@ -59,7 +59,7 @@ Fetched 2026-10-15.
 Martian Moon Deimos in High Resolution. Martian Moon Deimos in High Resolution
 Source: https://images.nasa.gov/details/PIA11826 (also https://photojournal.jpl.nasa.gov/catalog/PIA11826)
 License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
-Use in Signal Delay motion v2: Deimos, two color views (HiRISE, MRO); left view used. Used: "two moons".
+Use in Signal Delay motion v2 (MMX, script v3): Deimos lens on "from Mars or its moons" and "these moons" (left view only).
 Credit on screen: NASA/JPL-Caltech/University of Arizona
 Fetched 2026-10-15.
 
@@ -69,7 +69,7 @@ Fetched 2026-10-15.
 Global Color Views of Mars. Global Color Views of Mars
 Source: https://images.nasa.gov/details/PIA00407 (also https://photojournal.jpl.nasa.gov/catalog/PIA00407)
 License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
-Use in Signal Delay motion v2: Mars, global color view (Viking Orbiter mosaic). Used: "Mars system", "two moons".
+Use in Signal Delay motion v2 (MMX, script v3): "No mission has ever brought back a sample from Mars or its moons" through "these moons came from".
 Credit on screen: NASA/JPL/USGS
 Fetched 2026-10-15.
 
@@ -79,7 +79,7 @@ Fetched 2026-10-15.
 Earth and Moon as Seen from Mars. The High Resolution Imaging Science Experiment HiRISE camera would make a great backyard telescope for viewing Mars, and we can also use it at Mars to view other planets. This is an image of Earth and the moon, acquired on October 3, 2007.
 Source: https://images.nasa.gov/details/PIA10244 (also https://photojournal.jpl.nasa.gov/catalog/PIA10244)
 License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
-Use in Signal Delay motion v2: Earth and Moon as seen from Mars (HiRISE, MRO, Oct. 3, 2007). Used: "fly it back to Earth".
+Use in Signal Delay motion v2: downloaded for a "fly it back to Earth" beat in script v2; NOT used in the final v3 cut.
 Credit on screen: NASA/JPL-Caltech/University of Arizona
 Fetched 2026-10-15.
 

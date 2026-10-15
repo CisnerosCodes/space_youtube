@@ -1,0 +1,86 @@
+[
+  {
+    "time": "2026-10-15T03:09:27",
+    "name": "bedA_pluck",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033750-L4ZXOQuFNvuDyDADsVcD",
+    "usd": 0.04,
+    "seconds": 17.4,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Playful synth pluck and soft kick, 120 BPM, curious and upbeat nerdy electronic, short staccato plucks, round sub bass, soft four-on-the-floor kick, gentle hi-hats.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:09:58",
+    "name": "bedB_lofi",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033774-l9IXCyflUn0MKvZt8ySa",
+    "usd": 0.04,
+    "seconds": 24.4,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Lofi electronic with warm bass, 115 BPM, mellow but upbeat, dusty soft drums, warm rounded bassline, airy pad, subtle vinyl texture, curious late-night science vibe.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:10:13",
+    "name": "bedC_chip",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033798-crtQRqlw1yGjzGbgdMtO",
+    "usd": 0.04,
+    "seconds": 15.4,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Bright chiptune-tinged electronic pop, 122 BPM, excited and nerdy, soft square-wave arpeggios kept quiet and high, punchy kick, bouncy bass, cheerful but not busy.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:10:30",
+    "name": "bedD_tense",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033813-t4TRcqVRvwr3fGTgxyra",
+    "usd": 0.04,
+    "seconds": 16.4,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Tense pulsing electronic bed for big science reveals, 120 BPM, driving eighth-note sub bass pulse, muted ticking percussion, low dark pad, suspenseful but not scary, steady tension without a drop.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:10:57",
+    "name": "bedE_arp",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033830-MiiDAhNjiSLQdLWneIn3",
+    "usd": 0.04,
+    "seconds": 26.9,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Spacey synth arpeggio, 118 BPM, sense of wonder about outer space, gentle sparkling arpeggio in the high register, deep soft bass, light electronic drums, wide airy reverb.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:11:23",
+    "name": "bedF_house",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033857-cS7dbzW63ctoTVGyb3O5",
+    "usd": 0.04,
+    "seconds": 26.0,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Bouncy minimal house, 124 BPM, upbeat and playful, tight kick and clap, rubbery bassline, minimal percussion, very few chords, clean and modern.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-15T03:13:27",
+    "name": "bedA_pluck",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792033991-nWav9nWPiVvrHPxFzIsc",
+    "usd": 0.04,
+    "seconds": 16.4,
+    "bytes": 744655,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Playful synth pluck and soft kick, 120 BPM, curious and upbeat nerdy electronic, short staccato plucks, round sub bass, soft four-on-the-floor kick, gentle hi-hats. Steady groove the whole time: no breakdown, no stops, no silence, drums never drop out.",
+    "native_tokens_completion": 4
+  }
+]

@@ -1,0 +1,199 @@
+{
+ "video": "out/short_v2.mp4",
+ "fps": 30,
+ "frames": 1117,
+ "duration": 37.2333,
+ "narration": "../../voice/out_v3/puck_creator_high.mp3",
+ "types": {
+  "hard_cut": "a hard cut",
+  "slam": "a giant number or word slams in",
+  "cat_in": "mascot appears",
+  "cat_out": "mascot leaves",
+  "chip_in": "signal delay chip appears",
+  "echo_ring": "the chip echo ring lands",
+  "next_card_in": "NEXT card starts",
+  "wordmark_echo": "wordmark dot, then its echo ring",
+  "whoosh": "fast motion-blurred move or transition (optional sound)",
+  "impact": "line-art impact",
+  "shatter": "line-art break-up",
+  "ring_pulse": "a small ring pulse",
+  "touchdown": "line-art landing",
+  "punch_in": "small punch-in"
+ },
+ "cues": [
+  {
+   "frame": 14,
+   "t": 0.467,
+   "type": "cat_in",
+   "note": "hook (excited)"
+  },
+  {
+   "frame": 60,
+   "t": 2,
+   "type": "cat_out",
+   "note": "hook"
+  },
+  {
+   "frame": 117,
+   "t": 3.9,
+   "type": "whoosh",
+   "note": "Phobos photo shrinks into the orbit dot"
+  },
+  {
+   "frame": 151,
+   "t": 5.033,
+   "type": "slam",
+   "note": "6 FT"
+  },
+  {
+   "frame": 250,
+   "t": 8.333,
+   "type": "slam",
+   "note": "50 (count-up to 50)"
+  },
+  {
+   "frame": 315,
+   "t": 10.5,
+   "type": "impact",
+   "note": "Phobos dot hits Mars (line art)"
+  },
+  {
+   "frame": 339,
+   "t": 11.3,
+   "type": "whoosh",
+   "note": "rewind of the crash"
+  },
+  {
+   "frame": 357,
+   "t": 11.9,
+   "type": "shatter",
+   "note": "dot breaks into a ring of fragments"
+  },
+  {
+   "frame": 414,
+   "t": 13.8,
+   "type": "whoosh",
+   "note": "diagram leaves upward, H3 rises in"
+  },
+  {
+   "frame": 423,
+   "t": 14.1,
+   "type": "slam",
+   "note": "MON"
+  },
+  {
+   "frame": 470,
+   "t": 15.667,
+   "type": "whoosh",
+   "note": "camera tilts up from the rocket to Phobos"
+  },
+  {
+   "frame": 491,
+   "t": 16.367,
+   "type": "ring_pulse",
+   "note": "ring marks a piece of Phobos"
+  },
+  {
+   "frame": 518,
+   "t": 17.267,
+   "type": "whoosh",
+   "note": "iris from the Phobos ring into the MMX drawing"
+  },
+  {
+   "frame": 541,
+   "t": 18.033,
+   "type": "slam",
+   "note": "MMX"
+  },
+  {
+   "frame": 581,
+   "t": 19.367,
+   "type": "touchdown",
+   "note": "MMX lands (line art)"
+  },
+  {
+   "frame": 629,
+   "t": 20.967,
+   "type": "whoosh",
+   "note": "capsule flies home, camera follows to Mars"
+  },
+  {
+   "frame": 729,
+   "t": 24.3,
+   "type": "chip_in",
+   "note": "SIGNAL DELAY MARS 12 min 43 s"
+  },
+  {
+   "frame": 740,
+   "t": 24.667,
+   "type": "ring_pulse",
+   "note": "two moons pop out of Mars"
+  },
+  {
+   "frame": 753,
+   "t": 25.1,
+   "type": "echo_ring",
+   "note": "chip echo ring lands"
+  },
+  {
+   "frame": 788,
+   "t": 26.267,
+   "type": "cat_in",
+   "note": "why (skeptical)"
+  },
+  {
+   "frame": 836,
+   "t": 27.867,
+   "type": "cat_out",
+   "note": "why"
+  },
+  {
+   "frame": 882,
+   "t": 29.4,
+   "type": "whoosh",
+   "note": "Phobos lens opens into the close-up"
+  },
+  {
+   "frame": 921,
+   "t": 30.7,
+   "type": "punch_in",
+   "note": "punch-in on the sample spot"
+  },
+  {
+   "frame": 975,
+   "t": 32.5,
+   "type": "hard_cut",
+   "note": "hard cut on \"Liftoff\" to the NEXT card"
+  },
+  {
+   "frame": 975,
+   "t": 32.5,
+   "type": "next_card_in",
+   "note": "NEXT ON LAUNCH DAY"
+  },
+  {
+   "frame": 1003,
+   "t": 33.433,
+   "type": "cat_in",
+   "note": "next (excited)"
+  },
+  {
+   "frame": 1076,
+   "t": 35.867,
+   "type": "whoosh",
+   "note": "H3 lifts off (line art)"
+  },
+  {
+   "frame": 1088,
+   "t": 36.267,
+   "type": "wordmark_echo",
+   "note": "wordmark dot lands"
+  },
+  {
+   "frame": 1108,
+   "t": 36.933,
+   "type": "wordmark_echo",
+   "note": "wordmark echo ring lands"
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+  "out": "demo/demo_mix.mp3",
+  "voice": "../voice/out_v3/puck_creator_high.mp3",
+  "bed": "beds/bedE_arp.wav",
+  "cues_file": "demo/cues_demo.json",
+  "duration_s": 38.616,
+  "final": {
+    "integrated_lufs": -13.9,
+    "true_peak_dbtp": -2.2,
+    "lra": 2.2,
+    "loudnorm_mode": "linear",
+    "limiter": {
+      "max_gr_db": 5.35,
+      "at_s": 28.86,
+      "median_gr_while_talking_db": 0.0,
+      "pct_time_over_1db": 4.15,
+      "pct_time_over_3db": 0.25
+    },
+    "voice_compressor": {
+      "max_gr_db": 10.07,
+      "at_s": 4.23,
+      "median_gr_while_talking_db": 2.88,
+      "pct_time_over_1db": 63.45,
+      "pct_time_over_3db": 39.27
+    },
+    "loudnorm_pass1": {
+      "input_i": "-22.43",
+      "input_tp": "-10.66",
+      "input_lra": "2.50"
+    },
+    "attempts": 1
+  },
+  "voice_vs_bed": {
+    "voice_lufs_while_talking": -24.73,
+    "bed_lufs_while_talking": -44.73,
+    "difference_while_talking_lu": 20.0,
+    "bed_lufs_in_gaps": -42.28,
+    "difference_voice_vs_bed_in_gaps_lu": 17.56,
+    "gap_rise_lu": 2.44,
+    "duck_depth_db": 6.0,
+    "note": "measured on the stems before the shared final gain, so the differences hold in the final file"
+  },
+  "bed_meta": {
+    "id": "bedE_arp",
+    "bpm": 120.0,
+    "start_offset_s": 0.0833
+  },
+  "logo_start_s": 37.016,
+  "voice_end_s": 36.907,
+  "cues": [
+    {
+      "frame": 0,
+      "fps": 30,
+      "type": "number_slam",
+      "sfx": "impact_soft",
+      "t_cue": 0.0,
+      "t_peak": 0.033,
+      "start": 0.022,
+      "base_db": -8.0,
+      "auto": false,
+      "gain_db": -21.4,
+      "on_speech": false
+    },
+    {
+      "frame": 120,
+      "fps": 30,
+      "type": "hard_cut",
+      "sfx": "whoosh_short",
+      "t_cue": 4.0,
+      "t_peak": 4.033,
+      "start": 3.769,
+      "base_db": -15.0,
+      "auto": false,
+      "gain_db": -28.0,
+      "on_speech": true
+    },
+    {
+      "frame": 249,
+      "fps": 30,
+      "type": "number_slam",
+      "sfx": "impact_big",
+      "t_cue": 8.3,
+      "t_peak": 8.333,
+      "start": 8.296,
+      "base_db": -8.0,
+      "auto": false,
+      "gain_db": -24.8,
+      "on_speech": true
+    },
+    {
+      "frame": 384,
+      "fps": 30,
+      "type": "echo_land",
+      "sfx": "ping_echo",
+      "t_cue": 12.8,
+      "t_peak": 12.833,
+      "start": 12.814,
+      "base_db": -13.0,
+      "auto": false,
+      "gain_db": -33.2,
+      "on_speech": true
+    },
+    {
+      "frame": 477,
+      "fps": 30,
+      "type": "cat_in",
+      "sfx": "pop",
+      "t_cue": 15.9,
+      "t_peak": 15.933,
+      "start": 15.93,
+      "base_db": -13.0,
+      "auto": false,
+      "gain_db": -25.3,
+      "on_speech": true
+    },
+    {
+      "frame": 541,
+      "fps": 30,
+      "type": "chip_in",
+      "sfx": "tick",
+      "t_cue": 18.033,
+      "t_peak": 18.067,
+      "start": 18.064,
+      "base_db": -12.0,
+      "auto": false,
+      "gain_db": -15.7,
+      "on_speech": true
+    },
+    {
+      "frame": 666,
+      "fps": 30,
+      "type": "impact",
+      "sfx": "impact_soft",
+      "t_cue": 22.2,
+      "t_peak": 22.233,
+      "start": 22.222,
+      "base_db": -11.0,
+      "auto": false,
+      "gain_db": -27.4,
+      "on_speech": true
+    },
+    {
+      "frame": 806,
+      "fps": 30,
+      "type": "cat_chirp",
+      "sfx": "cat_mrrp",
+      "t_cue": 26.867,
+      "t_peak": 26.9,
+      "start": 26.632,
+      "base_db": -14.0,
+      "auto": false,
+      "gain_db": -31.8,
+      "on_speech": false
+    },
+    {
+      "frame": 921,
+      "fps": 30,
+      "type": "reveal",
+      "sfx": "swell_reveal",
+      "t_cue": 30.7,
+      "t_peak": 30.733,
+      "start": 29.644,
+      "base_db": -14.0,
+      "auto": false,
+      "gain_db": -26.7,
+      "on_speech": true
+    },
+    {
+      "frame": 975,
+      "fps": 30,
+      "type": "next_card_in",
+      "sfx": "page_turn_air",
+      "t_cue": 32.5,
+      "t_peak": 32.533,
+      "start": 32.396,
+      "base_db": -13.0,
+      "auto": false,
+      "gain_db": -24.6,
+      "on_speech": true
+    },
+    {
+      "frame": 1110,
+      "fps": 30,
+      "type": "wordmark_echo",
+      "sfx": "logo",
+      "t_cue": 37.0,
+      "t_peak": 37.033,
+      "start": 37.016,
+      "base_db": -4.0,
+      "auto": false,
+      "gain_db": -18.1,
+      "on_speech": false
+    }
+  ],
+  "warnings": []
+}
