@@ -56,7 +56,7 @@
     <div id="nHead2" style="left: 80px; top: 414px; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; white-space: nowrap; color: var(--amber)">Idubi</div>
     <div id="nLine1" class="mono" style="left: 80px; top: 528px; font-size: 28px; line-height: 36px; white-space: nowrap; color: var(--paper)">HUNTING ANCIENT HOT WATER</div>
     <div id="nLine2" class="mono" style="left: 80px; top: 572px; font-size: 28px; line-height: 36px; white-space: nowrap; color: var(--muted)">EXTENDED MISSION: <span style="color: var(--amber)">ABOUT THROUGH 2028</span></div>
-    <div id="nIdubi" class="mono" style="left: 712px; top: 968px; font-size: 24px; line-height: 28px; letter-spacing: 0.05em; white-space: nowrap; color: var(--paper)">IDUBI</div>
+    <div id="nIdubi" class="mono" style="left: 724px; top: 1002px; font-size: 24px; line-height: 28px; letter-spacing: 0.05em; white-space: nowrap; color: var(--paper)">IDUBI</div>
     <div id="nPoint" class="mono" style="left: 80px; top: 1020px; padding: 10px 18px 10px 14px; border: 2px solid var(--amber); font-size: 28px; line-height: 38px; white-space: nowrap; color: var(--paper); background: var(--ink)">
       <div style="display: flex; align-items: center; gap: 14px">
         <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
@@ -317,7 +317,7 @@ const META = /*__META__*/null;
   // ---- 1. hook: Perseverance's selfie (sol 1,500), slow push; punch-in on "out-drove"
   const hookCam = (f) => {
     const p = k(f, 0, 90);
-    return { x: 700, y: 980, s: 0.84 * (1 + 0.035 * p) * punch(f, [F.outdrove]), push: 0.05 * p };
+    return { x: 800, y: 980, s: 0.84 * (1 + 0.035 * p) * punch(f, [F.outdrove]), push: 0.05 * p };
   };
   // ---- 2. every vehicle: the photo shrinks into the Perseverance icon at the start of its track,
   // then every vehicle's track races in at one speed (the infographic's own distance scale)
@@ -330,7 +330,7 @@ const META = /*__META__*/null;
   const chartCam = (f) => {
     const out = k(f, raceA + 4, 24, move), back = k(f, F.world - 14, 16, move);
     const u = out * (1 - back);
-    return { z: lerp(1, 0.47, u), x: lerp(R0.x, 60, u), y: lerp(R0.y, 340, u) };
+    return { z: lerp(1, 0.62, u), x: lerp(R0.x, 70, u), y: lerp(R0.y, 352, u) };
   };
   const rowXf = (f, i, extra = 0) => { const c = chartCam(f), z = RZ * c.z; return { x: c.x, y: c.y + i * RSP * z + extra, z }; };
   const persevStart = () => { const xf = rowXf(raceA, 0); const R = ROW.persev, d = R.iconX1 - 700; return [xf.x + (R.iconX0 - d) * xf.z, xf.y, xf.z]; };
@@ -357,7 +357,8 @@ const META = /*__META__*/null;
     ROWS.forEach((name, i) => {
       const xf = rowXf(f, i, exitY);
       if (xf.y - 140 > 1920 || xf.y < -200) return;
-      const a = i === 0 ? show : k(f, raceA + i, 6);
+      const a = (i === 0 ? show : k(f, raceA + i, 6)) * clamp01((1200 - (xf.y - exitY)) / 50);
+      if (a <= 0) return;
       row(g, name, xf, f < raceA ? 700 : fr, a);
     });
     // ring on Perseverance at "world"
@@ -383,7 +384,7 @@ const META = /*__META__*/null;
   });
 
   // ---- 4. the old record: Opportunity's self-portrait in a lens; 28.06 slams
-  const LENS_O = { x: 360, y: 880, r: 260 };
+  const LENS_O = { x: 360, y: 915, r: 240 };
   const S5a = F.opp2 - 2;
   const lensO = (f) => {
     const inE = k(f, S4a + 4, 20, enter);
@@ -403,13 +404,17 @@ const META = /*__META__*/null;
 
   // ---- 5. time: two bars on one scale of years, each rover icon riding its bar's front
   const BAR = { x0: 80, perYear: 54, y1: 672, y2: 1112, zO: 0.5, zP: 0.3 };
-  const yrsO = (f) => 15 * countU(f, F.almost);
-  const yrsP = (f) => 5.5 * countU(f, F.five);
+  // both bars grow at the same speed (years per frame), so the shorter one stops first
+  const BO0 = F.opp2 + 8, BO1 = F.fifteen + 6, PER_F = 15 / (BO1 - BO0);
+  const BP0 = F.five - 4, BP1 = BP0 + 5.5 / PER_F;
+  const EA = 0.15, ease = (x) => (x < EA ? (x * x) / (2 * EA * (1 - EA)) : x > 1 - EA ? 1 - ((1 - x) * (1 - x)) / (2 * EA * (1 - EA)) : (x - EA / 2) / (1 - EA));
+  const yrsO = (f) => 15 * ease(clamp01((f - BO0) / (BO1 - BO0)));
+  const yrsP = (f) => 5.5 * ease(clamp01((f - BP0) / (BP1 - BP0)));
   const S5out = F.how - 2;                       // everything leaves left on "How?"
   const outX = (f) => -1200 * k(f, S5out, 12, exitE);
   function barIconPos(f, which) {
     if (which === 'oppy') return [BAR.x0 + yrsO(f) * BAR.perYear + outX(f), BAR.y1];
-    const inE = k(f, F.persev1 - 2, 14, enter);
+    const inE = k(f, F.years1 + 4, 16, enter);
     return [BAR.x0 + yrsP(f) * BAR.perYear - 700 * (1 - inE), BAR.y2];
   }
   function bar(g, f, y, yrs, total, ox) {
@@ -422,7 +427,7 @@ const META = /*__META__*/null;
     const ox = outX(f);
     bar(g, f, BAR.y1, yrsO(f), 15, ox);
     if (f >= S5a + 14) { const [x, y] = barIconPos(f, 'oppy'); icon(g, 'oppy', x, y + 4, BAR.zO, k(f, S5a + 10, 6)); }
-    if (f >= F.persev1 - 2) {
+    if (f >= F.years1 + 4) {
       bar(g, f, BAR.y2, yrsP(f), 5.5, ox);
       const [x, y] = barIconPos(f, 'persev');
       if (f < S5out) icon(g, 'persev', x + ox, y + 4, BAR.zP);
@@ -431,20 +436,20 @@ const META = /*__META__*/null;
 
   // ---- 6+7. "How?": the Perseverance icon shrinks into the amber dot (the rover from here on);
   // it drives itself up a field of hazards, a view fan maps each rock as it comes into range
-  const D0 = { x: 380, y: 1000 };
+  const D0 = { x: 610, y: 1000 };
   const driveA = F.drives - 2, driveB = F.sojourner + 6;
   const AV = (() => {
     const r = rng(611), rocks = [];
-    for (let yy = 820, i = 0; yy > -1900; yy -= 92 + r() * 40, i++) {
-      const side = i % 2 ? 1 : -1, px = pathX(yy);
-      rocks.push({ x: px + side * (95 + r() * 120), y: yy, rx: 16 + r() * 30, ry: 0, rot: r() * 0.6 - 0.3 });
+    for (let yy = 900, i = 0; yy > -2000; yy -= 52 + r() * 30, i++) {
+      const side = r() < 0.5 ? 1 : -1, px = pathX(yy);
+      rocks.push({ x: px + side * (70 + r() * 260), y: yy, rx: 12 + r() * 34, ry: 0, rot: r() * 0.6 - 0.3 });
     }
     rocks.forEach((q) => (q.ry = q.rx * (0.55 + 0.2 * Math.sin(q.x))));
-    return rocks.filter((q) => q.x > 110 && q.x < 700);
+    return rocks.filter((q) => q.x > 340 && q.x < 1010 && Math.abs(q.x - pathX(q.y)) > q.rx + 40);
   })();
   function pathX(wy) { return D0.x + 120 * Math.sin((D0.y - wy) / 210) + 40 * Math.sin((D0.y - wy) / 77); }
   const dotWY = (f) => D0.y - 1750 * k(f, driveA, driveB - driveA, (x) => (x < 0.12 ? 0.5 * x * x / 0.12 : x - 0.06) / 0.94);
-  const camS = (f) => { const d = 780 - dotWY(f); return d > 0 ? d : 0; };
+  const camS = (f) => { const d = 900 - dotWY(f); return d > 0 ? d : 0; };
   const dotPos = (f) => { const wy = dotWY(f); return [pathX(wy), wy + camS(f)]; };
   const S7out = F.sojourner - 6;
   const avOff = (f) => 1920 * k(f, S7out, 16, exitE);     // the diagram leaves downward as the camera moves up
@@ -459,10 +464,11 @@ const META = /*__META__*/null;
       if (m > 0.3) dot(g, cx, cy, 11, C.amber, k(m, 0.3, 0.2));
       return;
     }
+    if (!PROBE) { g.save(); g.beginPath(); g.rect(0, 220, 1080, 960); g.clip(); }
     const wy = dotWY(f), [dx, dy] = [pathX(wy), wy + cs + off];
     // heading from the path tangent
     const ahead = 40, hx = pathX(wy - ahead) - pathX(wy), hy = -ahead, hl = Math.hypot(hx, hy), ux = hx / hl, uy = hy / hl;
-    const fanOn = k(f, F.drives, 8, enter), RANGE = 330 * fanOn, HALF = 0.5;
+    const fanOn = k(f, F.drives, 8, enter), RANGE = 420 * fanOn, HALF = 0.55;
     // rocks: mapped (drawn) when the fan first reaches them, then they stay
     if (!PROBE) {
       g.save(); g.strokeStyle = C.amber; g.lineWidth = 4;
@@ -472,8 +478,7 @@ const META = /*__META__*/null;
         for (let qf = driveA; qf <= f; qf += 2) {
           const wy2 = dotWY(qf), px = pathX(wy2), vx = q.x - px, vy = q.y - wy2, dd = Math.hypot(vx, vy);
           if (qf < F.drives) continue;
-          const a = Math.acos(clamp01(((vx * ux + vy * uy) / (dd || 1) + 1) / 2) * 2 - 1);
-          if (dd < 330 && (vy < 0 && Math.abs(vx) / Math.max(1, -vy) < 1.2)) { first = qf; break; }
+          if (dd < 420 && (vy < 0 && Math.abs(vx) / Math.max(1, -vy) < 1.3)) { first = qf; break; }
         }
         if (first === null) continue;
         const u = k(f, first, 8, enter), sy = q.y + cs + off;
@@ -498,40 +503,45 @@ const META = /*__META__*/null;
       g.beginPath(); g.moveTo(dx, dy); g.lineTo(dx + RANGE * Math.cos(a0 - HALF), dy + RANGE * Math.sin(a0 - HALF));
       g.arc(dx, dy, RANGE, a0 - HALF, a0 + HALF); g.lineTo(dx, dy); g.stroke(); g.restore();
     }
+    if (!PROBE) g.restore();
     dot(g, dx, dy, 11);
   });
 
   // ---- 8. Sojourner checked 20 points; Perseverance checks 600,000 (all 600,000 are drawn)
   const S8a = S7out;
-  const soCam = (f) => { const p = k(f, S8a, 60); return { x: 540, y: 1000 - 1920 * (1 - k(f, S8a, 18, enter)), s: 1.17 * (1 + 0.04 * p), push: 0.05 * p }; };
+  const soCam = (f) => { const p = k(f, S8a, 60); return { x: 540, y: 760 - 1500 * (1 - k(f, S8a, 18, enter)), s: 0.66 * (1 + 0.05 * p), push: 0.05 * p }; };
   const LENS_S = { x: 800, y: 470, r: 160 };
   const IRIS = F.twenty - 2;
   const lensS = (f) => {
     const u = k(f, IRIS, 14, move), out = k(f, F.n600 - 8, 12, move);
-    return { x: lerp(lerp(540, LENS_S.x, u), VIEW.x, out), y: lerp(lerp(960, LENS_S.y, u), VIEW.y, out), r: lerp(lerp(1150, LENS_S.r, u), 6, out), u, out };
+    const c = soCam(f);
+    return { x: lerp(lerp(540, LENS_S.x, u), VIEW.x, out), y: lerp(lerp(c.y, LENS_S.y, u), VIEW.y, out), r: lerp(lerp(420, LENS_S.r, u), 6, out), u, out };
   };
   // ground ahead in perspective: depth z in [1, 6], lateral l in [-1, 1]
   const VIEW = { x: 540, y: 1140 };
-  const proj = (l, z) => { const hy = 690, ny = 1110; const y = hy + (ny - hy) / z; const half = 470 / z + 70; return [540 + l * half, y]; };
-  const P20 = (() => { const out = []; for (let rI = 0; rI < 4; rI++) for (let c = 0; c < 5; c++) out.push(proj(-0.8 + c * 0.4, 1.15 + rI * 0.55)); return out; })();
+  // terrain ahead (schematic): a ground plane with a few rock bumps, seen in perspective
+  const BUMPS = (() => { const r = rng(2006), b = []; for (let i = 0; i < 70; i++) { const z = 1.2 + r() * 6; b.push({ l: (r() * 2 - 1) * 0.9 * z, z, a: 0.03 + r() * 0.1, rr: 0.06 + r() * 0.16 }); } return b; })();
+  const hgt = (l, z) => { let h = 0; for (const b of BUMPS) { const d2 = (l - b.l) ** 2 + ((z - b.z) / 2.2) ** 2; h += b.a * Math.exp(-d2 / (b.rr * b.rr)); } return h; };
+  const proj = (l, z) => { const hy = 640, ny = 1150, h = hgt(l, z); return [540 + (l * 560) / z, hy + (ny - hy - h * 420) / z]; };
+  const P20 = (() => { const out = []; for (let rI = 0; rI < 4; rI++) for (let c = 0; c < 5; c++) out.push(proj(-0.7 + c * 0.35, 1.25 + rI * 0.55)); return out; })();
   const NPTS = 600000;
   let PTS = null;          // Float32Array [tx, ty, parent] built once
   function buildPoints() {
     const r = rng(600000); PTS = new Float32Array(NPTS * 3);
     for (let i = 0; i < NPTS; i++) {
-      const l = r() * 2 - 1, z = 1 / (1 / 1.0 - r() * (1 / 1.0 - 1 / 7.5));   // uniform on the ground in 1/z
+      const z = 1 + r() * 6.5, l = (r() * 2 - 1) * 0.93 * z;                 // uniform on the ground, all inside the frame
       const [x, y] = proj(l, z);
       // nearest of the 20 parents
       let best = 0, bd = 1e9; for (let j = 0; j < 20; j++) { const d = (P20[j][0] - x) ** 2 + (P20[j][1] - y) ** 2; if (d < bd) { bd = d; best = j; } }
       PTS[i * 3] = x; PTS[i * 3 + 1] = y; PTS[i * 3 + 2] = best;
     }
   }
-  const FIELD = { y0: 600, h: 620 };
+  const FIELD = { y0: 520, h: 680 };
   const fieldC = document.createElement('canvas'); fieldC.width = 1080; fieldC.height = FIELD.h;
   const fctx = fieldC.getContext('2d'); const fImg = fctx.createImageData(1080, FIELD.h); const fBuf = new Uint32Array(fImg.data.buffer);
   const cnt = new Uint16Array(1080 * FIELD.h);
   const AMBER32 = (() => { const a = new Uint8Array([245, 184, 61, 255]); return new Uint32Array(a.buffer)[0]; })();
-  const ALPHA = (() => { const t = new Uint32Array(64); for (let c = 0; c < 64; c++) { const al = Math.round(255 * (1 - Math.exp(-0.55 * c))); const a = new Uint8Array([245, 184, 61, al]); t[c] = new Uint32Array(a.buffer)[0]; } return t; })();
+  const ALPHA = (() => { const t = new Uint32Array(64); for (let c = 0; c < 64; c++) { const al = Math.round(255 * (1 - Math.exp(-0.32 * c))); const a = new Uint8Array([245, 184, 61, al]); t[c] = new Uint32Array(a.buffer)[0]; } return t; })();
   const n600 = (f) => (f < F.n600 ? 0 : Math.max(20, Math.min(NPTS, Math.floor(20 + (NPTS - 20) * countU(f, F.n600)))));
   const IMP = F.next - 10;                     // implosion into the route dot
   function field(g, f) {
@@ -559,9 +569,8 @@ const META = /*__META__*/null;
     const isP = f >= F.persev2;
     const P = isP ? PH.persev : PH.sojourner;
     const inner = isP ? { x: L.x, y: L.y + L.r * 0.05, s: (L.r * 2.1) / (0.372 * PH.persev.w) }
-      : { x: lerp(cam.x, L.x, L.u), y: lerp(cam.y, L.y + L.r * 0.15, L.u), s: lerp(cam.s, (L.r * 2.3) / (0.73 * PH.sojourner.w), L.u), push: cam.push * (1 - L.u) };
-    if (L.u <= 0) photo(g, P, inner);
-    else if (L.r > 7) lens(g, P, L, inner);
+      : { x: L.x, y: L.y + L.r * 0.12, s: (L.r * 2.25) / (0.73 * PH.sojourner.w) * (1 + 0.05 * k(f, S8a, 60)), push: cam.push * (1 - L.u) };
+    if (L.r > 7) lens(g, P, L, inner);
     if (isP && f - F.persev2 < 16) { const d = f - F.persev2; ring(g, L.x, L.y, L.r + 50 * enter(d / 16), 4, 1 - d / 16); }
     // the 20 points ahead (they pop in with the count), and the viewpoint dot
     if (f >= F.twenty) {
@@ -581,7 +590,7 @@ const META = /*__META__*/null;
   });
 
   // ---- 9. NEXT card: hard cut on "Next". Route line art: the dot drives on to Idubi; the line keeps growing
-  const ROUTE = { start: [300, 930], idubi: [760, 930], y: 930 };
+  const ROUTE = { start: [300, 965], idubi: [760, 965], y: 965 };
   const routeY = (x) => ROUTE.y + (x > 560 ? -14 * Math.sin(((x - 560) / 520) * Math.PI) : 0);
   const driveToIdubi = (f) => lerp(ROUTE.start[0], ROUTE.idubi[0] - 34, k(f, F.idubi, F.hot - F.idubi, move));
   const dotX = (f) => driveToIdubi(f) + 150 * k(f, F.keep - 4, 40, move);
@@ -705,7 +714,7 @@ const META = /*__META__*/null;
         if (i < n && /,$/.test(sg[i - 1].text)) c -= 12;
         if (ws.slice(0, -1).some((x) => /,$/.test(x.text))) c += 18;
         if (i < n && GLUE.test(sg[i - 1].text)) c += 30;
-        if (i < n && /^(\d[\d.,]*)$/.test(sg[i - 1].text)) c += 60;
+        if (i < n && /^(\d[\d.,]*)$/.test(sg[i - 1].text) && /^(miles|years|points)/i.test(sg[i].text)) c += 60;
         if (best[j] + c < best[i]) { best[i] = best[j] + c; from[i] = j; }
       }
       const lines = []; for (let i = n; i > 0; i = from[i]) lines.unshift(sg.slice(from[i], i));
@@ -754,34 +763,35 @@ const META = /*__META__*/null;
     const ts = (fr) => fr / FPS;
     const cap0 = chunkAt(14).rects[0];
     const capAt = (fr) => chunkAt(fr).rects[0];
-    const K = 0.34, KN = 0.27;
+    const K = 0.34, KN = 0.25;
     cat = new Actor({ scale: K, seed: 9, safe: [40, 200, 900, 1300] });
     const TL = [
-      // hook: pops up from behind the first caption box, gasps at the rover, points as the chart arrives
-      { t: ts(10), do: 'enter', how: 'pop', box: cap0, at: Math.min(0.24, 150 / cap0[2]) },
-      { t: ts(F.outdrove - 2), do: 'gasp', at: [700, 700], dur: 0.9 },
-      { t: ts(F.every + 6), do: 'point', at: [560, 560], dur: 1.0 },
-      { t: ts(F.every + 40), do: 'exit', how: 'tether', dur: 0.7 },
+      // hook: pops up from behind the first caption box, gasps at the rover, hops right, points at the chart
+      { t: ts(4), do: 'enter', how: 'pop', box: cap0, at: Math.min(0.13, 100 / cap0[2]) },
+      { t: ts(F.outdrove - 2), do: 'gasp', at: [700, 700], dur: 0.5 },
+      { t: ts(F.every - 4), do: 'hop', to: [800, 1196] },
+      { t: ts(F.every + 12), do: 'point', at: [420, 700], dur: 1.0 },
+      { t: ts(F.every + 44), do: 'exit', how: 'tether', dur: 0.7 },
       // record day: drops in on a line at the left, thumbs up on the record, hops right, holds the sign
       { t: ts(F.october - 10), do: 'enter', how: 'drop', to: [185, 1196] },
       { t: ts(F.october + 6), do: 'look', at: [500, 470] },
-      { t: ts(F.n2810), do: 'thumbs', dur: 1.15 },
-      { t: ts(F.miles - 6), do: 'hop', to: [770, 1196] },
-      { t: ts(F.miles + 10), do: 'sign', text: '28.10', sub: 'MILES', dur: (F.n2806 - F.miles - 4) / FPS, size: 1.45 },
-      { t: ts(F.n2806 + 4), do: 'point', at: [300, 450], dur: 0.9 },
-      { t: ts(F.n2806 + 34), do: 'exit', how: 'zip', to: 'up' },
+      { t: ts(F.n2810), do: 'thumbs', dur: 0.55 },
+      { t: ts(F.n2810 + 16), do: 'hop', to: [770, 1196] },
+      { t: ts(F.miles + 8), do: 'sign', text: '28.10', sub: 'MILES', dur: (F.n2806 - F.miles - 12) / FPS, size: 2.1 },
+      { t: ts(F.n2806 + 2), do: 'point', at: [300, 450], dur: 0.6 },
+      { t: ts(F.n2806 + 16), do: 'exit', how: 'zip', to: 'right' },
       // "How?": drops onto the short caption box, WHAT, hops right, nods, points at the rover dot, floats off
-      { t: ts(F.how - 12), do: 'enter', how: 'drop', to: [250, 1196] },
-      { t: ts(F.how + 2), do: 'what', dur: 0.95 },
-      { t: ts(F.drives - 4), do: 'hop', to: [785, 1196] },
-      { t: ts(F.itself + 2), do: 'nod', count: 2, dur: 0.9 },
-      { t: ts(F.mapping + 6), do: 'point', at: [380, 760], dur: 1.1 },
-      { t: ts(F.rolling + 2), do: 'exit', how: 'float', to: [1250, 380], dur: 1.2 },
+      { t: ts(F.how - 6), do: 'enter', how: 'drop', to: [250, 1196] },
+      { t: ts(F.how + 10), do: 'what', dur: 0.9 },
+      { t: ts(F.drives - 2), do: 'listen', dur: 0.9 },
+      { t: ts(F.itself + 2), do: 'nod', count: 2, dur: 0.8 },
+      { t: ts(F.mapping + 4), do: 'point', at: [610, 900], dur: 0.8 },
+      { t: ts(F.rolling - 10), do: 'exit', how: 'zip', to: 'left' },
       // NEXT card: skids onto the route, walks after the rover dot, points at Idubi, bounces, points at the pointer
-      { t: ts(F.idubi + 6), do: 'enter', how: 'skid', from: 'left', to: [175, ROUTE.y], scale: KN },
-      { t: ts(F.ancient), do: 'walk', to: [420, ROUTE.y], scale: KN },
-      { t: ts(F.hot + 8), do: 'point', at: [ROUTE.idubi[0], ROUTE.y - 10], dur: 1.1 },
-      { t: ts(F.keep - 4), do: 'bounce', count: 2, period: 0.34 },
+      { t: ts(F.hot), do: 'enter', how: 'skid', from: 'left', to: [175, ROUTE.y], scale: KN },
+      { t: ts(F.nasa - 6), do: 'walk', to: [430, ROUTE.y], scale: KN },
+      { t: ts(F.nasa + 30), do: 'point', at: [ROUTE.idubi[0], ROUTE.y - 10], dur: 0.9 },
+      { t: ts(F.keep - 2), do: 'bounce', count: 2, period: 0.34 },
       { t: ts(F.follow - 2), do: 'point', at: [240, 1050], dur: 1.2 },
       { t: ts(F.watch - 2), do: 'thumbs', dur: 1.5 },
       { t: 0, do: 'say', words: W.map((w) => ({ w: w.text, s: w.start, e: w.end, stress: STRESS.test(w.key) })) },
@@ -791,32 +801,36 @@ const META = /*__META__*/null;
       { t: ts(F.next), do: 'expr', expr: 'happy' },
     ];
     cat.timeline(TL);
-    // on-screen windows (between an entrance and the end of its exit)
-    const E = TL.filter((a) => a.do === 'enter' || a.do === 'exit').sort((a, b) => a.t - b.t);
+    // on-screen windows: from each entrance until he is fully out of frame after the next exit
+    const E = TL.filter((q) => q.do === 'enter' || q.do === 'exit').sort((p, q) => p.t - q.t);
+    const gone = (fr) => { const t = fr / FPS; if (!cat.render(t)) return true; const b = cat.box(t); return b[0] > 1080 || b[0] + b[2] < 0 || b[1] > 1920 || b[1] + b[3] < 0; };
     CAT_ON = [];
     for (let i = 0; i < E.length; i++) if (E[i].do === 'enter') {
-      const ex = E[i + 1] && E[i + 1].do === 'exit' ? E[i + 1] : null;
-      CAT_ON.push([Math.round(E[i].t * FPS), ex ? Math.round((ex.t + (ex.dur || 0.9)) * FPS) : LAST + 1]);
+      let a0 = Math.round(E[i].t * FPS); while (a0 < LAST && gone(a0)) a0++;
+      let b0 = LAST;
+      if (E[i + 1] && E[i + 1].do === 'exit') { b0 = Math.round(E[i + 1].t * FPS); while (b0 < LAST && !gone(b0)) b0++; b0--; }
+      CAT_ON.push([a0, b0]);
     }
   }
-  const catOn = (f) => CAT_ON.some(([a, b]) => f >= a - 1 && f <= b + 2);
+  const catOn = (f) => CAT_ON.some(([a, b]) => f >= a - 1 && f <= b + 1);
   function renderCat(f) {
     const svg = $('cat');
     if (!catOn(f)) { show(svg, false); return 1; }
     const t = f / FPS, bl = cat.blur(t);
-    const g = motionBlur((tt) => cat.render(tt), t, bl.n, bl.shutter, FPS);
+    const g = motionBlur((tt) => cat.render(tt), t, bl.n, bl.shutter * 0.5, FPS);
     show(svg, !!g); svg.innerHTML = g;
     return bl.n;
   }
   // subject rectangles the cat must never cover, per frame (captions are added per chunk)
   function subjects(f) {
     const R = [];
-    if (f < F.every) R.push([300, 330, 760, 1260]);                      // the rover in the selfie
-    if (f >= F.every && f < F.on) R.push([40, 300, 1000, 860]);          // the vehicle chart
+    if (f < F.every - 4) R.push([370, 330, 710, 1260]);                  // the rover in the selfie
+    if (f >= F.every && f < F.world - 14) R.push([60, 250, 620, 930]);   // the vehicle chart, zoomed out
+    if (f >= F.world - 14 && f < F.on) R.push([40, 300, 1000, 330]);     // the top two rows
     if (f >= F.passed && f < F.the) R.push([40, 300, 900, 300]);         // odometer
     if (f >= F.the && f < F.opp2) R.push([LENS_O.x - LENS_O.r, LENS_O.y - LENS_O.r, 2 * LENS_O.r, 2 * LENS_O.r]);
     if (f >= F.n2806 && f < F.opp2) R.push([40, 300, 820, 300]);         // 28.06
-    if (f >= F.drives && f < F.sojourner) R.push([110, 300, 600, 860]);  // the drive diagram
+    if (f >= F.drives && f < F.sojourner) R.push([400, 300, 600, 860]);  // the drive diagram
     if (f >= F.next) R.push([80, 320, 760, 300], [ROUTE.idubi[0] - 40, ROUTE.y - 40, 80, 80], [80, 1020, 420, 160]);
     return R;
   }
@@ -856,26 +870,26 @@ const META = /*__META__*/null;
     if (f >= F.passed && f < F.miles + 20) {
       odometer(f);
       // on "miles" the number flies down into the cat's sign (it leaves fast, shrinking)
-      const u = k(f, F.miles + 4, 10, exitE);
-      $('odo').style.transform = `translate(${(560 * u).toFixed(1)}px, ${(360 * u).toFixed(1)}px) scale(${(slam(f - F.passed) * (1 - 0.8 * u)).toFixed(4)})`;
-      $('odo').style.opacity = 1 - k(f, F.miles + 10, 4);
+      const u = k(f, F.miles + 8, 8, exitE);
+      $('odo').style.transform = `translate(${(754 * u).toFixed(1)}px, ${(400 * u).toFixed(1)}px) scale(${(slam(f - F.passed) * (1 - 0.8 * u)).toFixed(4)})`;
+      $('odo').style.opacity = 1 - k(f, F.miles + 14, 3);
       setBlur($('odo'), 0, 0);
     }
     gdata('odoDate', f, F.october, F.passed - 1, [0, -1], 1, [80, 632]);
     gdata('odoUnit', f, F.miles, S4a, [0, -1], 10, [80, 632]);
     // 4. 28.06
     giant('g2806', f, F.n2806, S5a, [0, -1], 8);
-    gdata('g2806d', f, F.n2806 + 4, S5a, [0, -1], 8, [80, 600]);
+    gdata('g2806d', f, F.n2806 + 4, S5a, [0, -1], 8, [80, 612]);
     // 5. years
-    giant('g15', f, F.almost, S5out, [-1, 0], 12);
-    if (f >= F.almost) $('g15').textContent = String(Math.max(1, Math.floor(yrsO(f) + 1e-6)));
-    giant('g55', f, F.five, S5out, [-1, 0], 12);
-    if (f >= F.five) { const v = Math.max(0.5, Math.floor(yrsP(f) * 2 + 1e-6) / 2); $('g55').textContent = v % 1 ? v.toFixed(1) : String(v); }
+    giant('g15', f, BO0 + 2, S5out, [-1, 0], 12);
+    if (f >= BO0 + 2) $('g15').textContent = String(Math.max(1, Math.floor(yrsO(f) + 1e-6)));
+    giant('g55', f, BP0 + 3, S5out, [-1, 0], 12);
+    if (f >= BP0 + 3) { const v = Math.max(1, Math.floor(yrsP(f) * 2 + 1e-6) / 2); $('g55').textContent = v % 1 ? v.toFixed(1) : String(v); }
     gdata('g15d', f, F.fifteen, S5out, [-1, 0], 12, [Math.round(G15W + 24), 300 + 150]);
     gdata('g55d', f, F.half, S5out, [-1, 0], 12, [Math.round(G55W + 24), 740 + 150]);
     const ox = outX(f);
     show($('labO'), f >= S5a + 14 && f < S5out + 12); $('labO').style.left = (80 + ox) + 'px'; $('labO').style.top = (BAR.y1 + 30) + 'px';
-    show($('labP'), f >= F.persev1 + 10 && f < S5out + 12); $('labP').style.left = (80 + ox) + 'px'; $('labP').style.top = (BAR.y2 + 30) + 'px';
+    show($('labP'), f >= F.years1 + 16 && f < S5out + 12); $('labP').style.left = (80 + ox) + 'px'; $('labP').style.top = (BAR.y2 + 30) + 'px';
     // 8. points
     giant('g20', f, F.twenty, F.persev2 + 2, [0, -1], 8);
     if (f >= F.twenty) $('g20').textContent = String(Math.max(1, Math.min(20, Math.floor(20 * countU(f, F.twenty)))));
@@ -925,7 +939,7 @@ const META = /*__META__*/null;
     c(M0, 'scene_move', 'selfie shrinks into the Perseverance icon; the tracks race in', { gain_db: -1 });
     c(S3a, 'hard_cut', 'chart leaves up, the record-day NAVCAM image rises in', { sfx: 'whoosh_short' });
     c(F.n2810, 'number_slam', 'odometer rolls 28.06 to 28.10', { gain_db: -2 });
-    c(F.miles + 10, 'cat_chirp', 'the number lands on the cat\'s sign');
+    c(F.miles + 14, 'cat_chirp', 'the number lands on the cat\'s sign');
     c(F.n2806, 'number_slam', '28.06, the old record', { sfx: 'impact_soft' });
     c(F.fifteen, 'number_slam', '15 years (count-up)', { gain_db: -3 });
     c(F.five, 'number_slam', '5.5 years (count-up)', { gain_db: -3 });

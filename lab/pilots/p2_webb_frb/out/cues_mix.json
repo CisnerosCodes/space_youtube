@@ -1,0 +1,101 @@
+[
+ {
+  "frame": 6,
+  "fps": 30,
+  "type": "impact",
+  "note": "the burst flashes: a radio pulse ring"
+ },
+ {
+  "frame": 38,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "1/1000 slams in"
+ },
+ {
+  "frame": 84,
+  "fps": 30,
+  "type": "chip_in",
+  "note": "SIGNAL DELAY chip"
+ },
+ {
+  "frame": 99,
+  "fps": 30,
+  "type": "echo_land",
+  "note": "chip echo ring lands one beat later"
+ },
+ {
+  "frame": 168,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "the pulse reaches us; iris onto the Webb field"
+ },
+ {
+  "frame": 299,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "cat skids in"
+ },
+ {
+  "frame": 399,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "the photo closes into the empty ring",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 441,
+  "fps": 30,
+  "type": "cat_chirp",
+  "note": "cat gasps at \"nothing\""
+ },
+ {
+  "frame": 489,
+  "fps": 30,
+  "type": "riser",
+  "note": "riser ends on \"Webb\": the ring fills with the Webb image"
+ },
+ {
+  "frame": 540,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "the photo leaves upward; the galaxy ring becomes the dwarf",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 563,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "1,000x count-up"
+ },
+ {
+  "frame": 607,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "cat pops up from behind the caption box"
+ },
+ {
+  "frame": 721,
+  "fps": 30,
+  "type": "glitch",
+  "note": "the merger drawing turns muted on \"unlikely\""
+ },
+ {
+  "frame": 768,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "hard cut to the NEXT card on \"MeerKAT\""
+ },
+ {
+  "frame": 792,
+  "fps": 30,
+  "type": "impact",
+  "note": "first burst reaches the dish",
+  "gain_db": -4
+ },
+ {
+  "frame": 898,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "wordmark dot, sonic logo (its echo lands with the ring 12 frames later)"
+ }
+]

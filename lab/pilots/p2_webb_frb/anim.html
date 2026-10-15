@@ -2572,10 +2572,11 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
 
   // ---- credit slot (fixed bottom edge at y 1498; the two-line Webb credit grows upward, still inside the safe zone)
   function creditAt(f) {
-    if (f < IRIS1 + 6) return f >= F.left + 4 ? CR.nasaLs : CR.nasa;
-    if (f < IRIS3 + 8) return CR.webb;
-    if (f < F.webb + 4) return CR.nasa;
-    if (f < PH_EXIT + 8) return CR.webb;
+    // the photo credit stays on every frame where any part of the Webb image shows (inside an iris, fading, leaving)
+    if (f < IRIS1) return f >= F.left + 4 ? CR.nasaLs : CR.nasa;
+    if (f < IRIS3 + 16) return CR.webb;
+    if (f < F.webb) return CR.nasa;
+    if (f < PH_EXIT + 15) return CR.webb;
     return CR.nasa;
   }
   let lastCredit = null;
@@ -2650,13 +2651,13 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
     c(F.left + 4, 'chip_in', 'SIGNAL DELAY chip');
     c(F.left + 4 + 15, 'echo_land', 'chip echo ring lands one beat later');
     c(IRIS1, 'scene_move', 'the pulse reaches us; iris onto the Webb field');
-    c(F.nobody - 8, 'cat_in', 'cat skids in');
+    c(F.nobody - 4, 'cat_in', 'cat skids in');
     c(IRIS3, 'hard_cut', 'the photo closes into the empty ring', { sfx: 'whoosh_short' });
     c(F.nothing, 'cat_chirp', 'cat gasps at "nothing"');
     c(F.webb, 'riser', 'riser ends on "Webb": the ring fills with the Webb image');
     c(PH_EXIT, 'hard_cut', 'the photo leaves upward; the galaxy ring becomes the dwarf', { sfx: 'whoosh_short' });
     c(F.one2, 'number_slam', '1,000x count-up');
-    c(F.times - 8 + 12, 'cat_in', 'cat pops up from behind the caption box');
+    c(F.times - 2 + 12, 'cat_in', 'cat pops up from behind the caption box');
     c(F.unlikely, 'glitch', 'the merger drawing turns muted on "unlikely"');
     c(F.meerkat, 'next_card_in', 'hard cut to the NEXT card on "MeerKAT"');
     c(F.several - 8, 'impact', 'first burst reaches the dish', { gain_db: -4 });

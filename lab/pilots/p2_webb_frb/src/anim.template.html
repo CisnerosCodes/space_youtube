@@ -752,10 +752,11 @@ const IMAGES = /*__IMAGES__*/null;
 
   // ---- credit slot (fixed bottom edge at y 1498; the two-line Webb credit grows upward, still inside the safe zone)
   function creditAt(f) {
-    if (f < IRIS1 + 6) return f >= F.left + 4 ? CR.nasaLs : CR.nasa;
-    if (f < IRIS3 + 8) return CR.webb;
-    if (f < F.webb + 4) return CR.nasa;
-    if (f < PH_EXIT + 8) return CR.webb;
+    // the photo credit stays on every frame where any part of the Webb image shows (inside an iris, fading, leaving)
+    if (f < IRIS1) return f >= F.left + 4 ? CR.nasaLs : CR.nasa;
+    if (f < IRIS3 + 16) return CR.webb;
+    if (f < F.webb) return CR.nasa;
+    if (f < PH_EXIT + 15) return CR.webb;
     return CR.nasa;
   }
   let lastCredit = null;

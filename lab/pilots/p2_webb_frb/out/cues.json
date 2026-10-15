@@ -59,9 +59,9 @@
    "note": "the pulse reaches us; iris onto the Webb field"
   },
   {
-   "frame": 295,
+   "frame": 299,
    "fps": 30,
-   "t": 9.833,
+   "t": 9.967,
    "type": "cat_in",
    "note": "cat skids in"
   },
@@ -103,9 +103,9 @@
    "note": "1,000x count-up"
   },
   {
-   "frame": 601,
+   "frame": 607,
    "fps": 30,
-   "t": 20.033,
+   "t": 20.233,
    "type": "cat_in",
    "note": "cat pops up from behind the caption box"
   },
