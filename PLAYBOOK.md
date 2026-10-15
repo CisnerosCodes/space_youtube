@@ -44,6 +44,13 @@ The rules every script, video, title and upload must follow. The pipeline reads 
 
 If any target is missed, change the format before adding volume.
 
+## Upload path (verified Oct 15, 2026)
+- Uploads use the "Channel Ops" OAuth client (project playtest-channel, In production, unverified) on latentdrives@gmail.com, minted per channel with Hermes' `ytmint.py`. No Google Cloud work is needed for a Brand Account on latentdrives.
+- No unaudited-client lock: all 13 Gambitss API uploads are public, including 8 uploaded private with `publishAt`, which YouTube published on schedule to the second.
+- Approved videos upload as private with a `publishAt` time, so a post can still be pulled before it goes live.
+- Signal Delay has no token yet; mint it in Phase 5 (one consent click by the owner).
+- Shared-account watch item: MAGNETIC VALENTINE's "Love at First Taste" carries an "Other notices" flag in Studio. A strike on any channel of this Google account puts every channel on it at risk, Signal Delay included.
+
 ## Spending
 - Voice is the only planned spend (budget ceiling about $4 per week; expected well under $1 per week with Fish Drama 3, about $1 per week with Eleven v4 Turbo).
 - Do not buy paid layers (video SaaS, scheduling SaaS) until the free or cheap stack has cleared the review gate.
