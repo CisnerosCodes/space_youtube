@@ -9,3 +9,6 @@ lab/sound/beds/*.wav
 lab/sound/beds/raw/*.wav
 **/*_out/frames/
 **/talkout/frames/
+lab/pilots/*/out/qa/
+lab/pilots/*/out/frames/
+lab/pilots/*/out/stills/
