@@ -28,7 +28,7 @@ Script `script.md`, voice `voice.mp3` (Gemini Puck, 30.288 s), timing `voice.wor
 | 489 to 539 | Webb found a galaxy. | On "Webb" the ring fills with the Webb image and the camera zooms through the field into the inset, to the white cross (motion-blurred). On "galaxy" a ring marks the cross and the host galaxy. Cat zips off left (493). | Webb credit |
 | 540 to 649 | A dwarf, one thousand times less massive than expected. | The photo leaves upward; the ring stays and shrinks into a small lumpy outline (THIS ONE); a big spiral outline draws in (MOST FRB GALAXIES). "1,000x" counts up on "one". The big outline leaves left before the sign. Cat pops up from behind the caption box (595) and holds up "1,000x / LIGHTER" (630). | Source: NASA |
 | 650 to 767 | That makes a neutron star merger very unlikely, the team says. | The camera dives into the dwarf outline: two neutron stars spiral in (NEUTRON STAR MERGER). On "unlikely" the drawing turns muted and dashed and the label adds VERY UNLIKELY. Cat listens (699), nods (734), zips up (748). | Source: NASA |
-| 768 to 946 | MeerKAT may find several more every year. Follow Signal Delay for the next one. | Hard cut on "MeerKAT" to the NEXT card: NEXT ON JUST DISCOVERED, "More distant bursts are coming", "MeerKAT: several a year" (no date), a radio dish drawing that catches three bursts. Cat skids in (830) and stands on the pointer box, which appears on "Follow" (846); thumbs up (848), points at the dish (877), waves (902). SIGNAL appears on "Signal" (858), DELAY on "Delay" (867); the echo-mark dot lands at 898 with the sonic logo and the ring at 910 with its echo. The last frame is the finished wordmark. | Source: NASA |
+| 768 to 946 | MeerKAT may find several more every year. Follow Signal Delay for the next one. | Hard cut on "MeerKAT" to the NEXT card: NEXT ON JUST DISCOVERED, "MeerKAT: several a year" (no date), "Expect more bursts from far away" (changed by the lead from "More distant bursts are coming"), a radio dish drawing that catches three bursts. Cat skids in (830) and stands on the pointer box, which appears on "Follow" (846); thumbs up (848), points at the dish (877), waves (902). SIGNAL appears on "Signal" (858), DELAY on "Delay" (867); the echo-mark dot lands at 898 with the sonic logo and the ring at 910 with its echo. The last frame is the finished wordmark. | Source: NASA |
 
 ## QA rounds (stills read at every beat boundary and cat move)
 
@@ -72,12 +72,16 @@ Round 3 (r3, r4, r5, 66 stills):
 
 ## Unresolved
 
-- "More distant bursts are coming" (the lead's line) can be read as "even farther bursts". NASA says MeerKAT may find several FRBs per year at redshift greater than 1.0, which is closer than this one (2.148), and the research notes say not to imply more record breakers. Safer alternatives: "More far-off bursts are coming" or "Expect more bursts from far away". It is one string (`#nHead`) in `src/anim.template.html`.
 - The radio dish on the NEXT card is a simplified dish, not a drawing of a MeerKAT antenna (MeerKAT dishes are offset Gregorian). The observatory dome and the neutron star pair are schematic too.
 - The galaxy outlines compare a typical FRB host with this dwarf by drawn size; the 1,000 is a mass ratio and the outlines are not to scale (no "not to scale" label, per the owner's v1 note).
 - The cat did not hold a radio dish (the rig has no dish prop, and a hand-attached prop was left out to keep the rig untouched). He rides no amber dot in this Short; the scooter is still unused here.
 - The compass version of the image (Manisha Caleb credit) was downloaded and reviewed but not shown; its header text and compass would have competed with the kicker.
 - The spectrum graphic was not used.
-- `metadata.json` lists Live Science in Sources because the chip value comes from it; `script.md` lists only NASA, the paper and ESA/Webb.
 - Not yet checked under the real YouTube Shorts overlay. Text and the cat stay inside x 80 to 900, y 246 to 1498; the field photo and the zoom extend to the frame edges by design.
 - `anim.html` and `out/cues.json` were rebuilt after the full render only to move two cue frames (cat entrances) and to extend the credit coverage (the 44 re-rendered frames above); the rest of the render matches the current `anim.html`.
+
+## Lead decisions after delivery (2026-10-15)
+
+1. NEXT card headline changed to "Expect more bursts from far away" (the first wording could be read as "even farther bursts"; NASA's MeerKAT estimate is for redshift greater than 1.0). Only frames 770 to 946 change. They were re-rendered; frames 0 to 769 were decoded from the previous `out/video.mp4` (one extra decode and re-encode generation at CRF 18 for those frames) and the video was re-encoded. `out/final.mp4` was re-mixed with the same bed (`bedD_tense`), the same cues (`out/cues.json` re-exported, byte-identical) and `--bed-under 18`: -14.0 LUFS integrated, -2.0 dBTP true peak measured on the file, bed 18.0 LU under the voice, 947 video frames. `out/contact_full.png` was rebuilt.
+2. The chip stays "MORE THAN 10 BILLION YEARS" with "Source: NASA, Live Science". The Live Science URL was appended to `script.md` (narration unchanged).
+3. The echo-ring timing, the two-line credit, the schematic line art and the cat without a dish or scooter are accepted as built.
