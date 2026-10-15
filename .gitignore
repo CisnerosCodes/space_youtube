@@ -12,3 +12,4 @@ lab/sound/beds/raw/*.wav
 lab/pilots/*/out/qa/
 lab/pilots/*/out/frames/
 lab/pilots/*/out/stills/
+lab/pilots/*/out/rerender.log
