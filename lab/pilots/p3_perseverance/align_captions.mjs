@@ -28,7 +28,7 @@ const NUM = {
   hundred: 100, thousand: 1000, million: 1000000,
   first: '1st', second: '2nd', third: '3rd', nineteenth: '19th',
 };
-// pilot 3: the narrator said "checked" where the script says "checks"; timing only, the caption keeps "checks"
+// pilot 3: the script now reads "checked" (what the narrator said); the alias is kept harmless
 const ALIAS = { checked: 'checks' };
 export function norm(w) {
   let s = String(w).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]/g, '');

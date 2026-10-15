@@ -49,6 +49,8 @@ If any target is missed, change the format before adding volume.
 - No unaudited-client lock: all 13 Gambitss API uploads are public, including 8 uploaded private with `publishAt`, which YouTube published on schedule to the second.
 - Approved videos upload as private with a `publishAt` time, so a post can still be pulled before it goes live.
 - Signal Delay has no token yet; mint it in Phase 5 (one consent click by the owner).
+- AI disclosure (checked Oct 15, 2026 against YouTube help answer 14328491): every upload sets `containsSyntheticMedia: true` (Studio "AI use: Yes") because the music is AI-generated; YouTube says disclosure alone does not limit reach or earning.
+- Uploader: `pipeline/youtube_upload.py` (private + `publishAt`, credentials from `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`). Pilot schedule: `lab/pilots/PUBLISH.md`.
 - Shared-account watch item: MAGNETIC VALENTINE's "Love at First Taste" carries an "Other notices" flag in Studio. A strike on any channel of this Google account puts every channel on it at risk, Signal Delay included.
 
 ## Spending

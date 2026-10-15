@@ -4,7 +4,7 @@
 > On October 11 it passed 28.10 miles. The old record, set by Opportunity, was 28.06.
 > Opportunity needed almost fifteen years. Perseverance took five and a half.
 > How? It drives itself, mapping hazards while rolling.
-> Sojourner checked 20 points ahead. Perseverance checks 600,000.
+> Sojourner checked 20 points ahead. Perseverance checked 600,000.
 > Next stop, Idubi, to look for ancient hot water systems.
 > NASA expects the record to keep growing. Follow Signal Delay to watch.
 
