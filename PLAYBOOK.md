@@ -3,7 +3,7 @@
 The rules every script, video, title and upload must follow. The pipeline reads this file; change it here, not in code.
 
 ## Identity
-- Name: Signal Delay. Handle: @signaldelayhq. Google account: Brand Account under latentdrives@gmail.com.
+- Name: Signal Delay. Handle: @signaldelayhq. Channel ID: UC30o4V9vQ6ReBOpbCY2_7lg (created Oct 14, 2026). Google account: Brand Account under latentdrives@gmail.com.
 - Positioning: one real space story a day, explained in under a minute, with the source on screen.
 - Output: one 30 to 45 second Short per day, plus one 8 to 10 minute "This week in space" long-form video per week, built from the same week's research.
 - Voice: one anonymous AI narrator, never a clone of a real person, on a plan that allows commercial use. Chosen in Phase 3.
