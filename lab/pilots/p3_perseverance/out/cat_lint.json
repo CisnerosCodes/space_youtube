@@ -6,19 +6,19 @@
   ],
   [
    152,
-   351
+   345
   ],
   [
-   530,
-   655
+   536,
+   651
   ],
   [
-   905,
+   860,
    1105
   ]
  ],
- "framesOn": 642,
- "share": 0.58,
+ "framesOn": 671,
+ "share": 0.607,
  "hits": [
   {
    "frame": 31,
@@ -747,19 +747,55 @@
    "kind": "subject"
   },
   {
-   "frame": 340,
+   "frame": 334,
    "rect": 0,
    "overlap": [
-    150,
-    8
+    151,
+    7
    ],
    "kind": "caption"
   },
   {
-   "frame": 341,
+   "frame": 335,
    "rect": 0,
    "overlap": [
-    160,
+    163,
+    9
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 336,
+   "rect": 0,
+   "overlap": [
+    166,
+    10
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 337,
+   "rect": 0,
+   "overlap": [
+    161,
+    9
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 338,
+   "rect": 0,
+   "overlap": [
+    149,
+    7
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 339,
+   "rect": 0,
+   "overlap": [
+    123,
     9
    ],
    "kind": "caption"
@@ -768,58 +804,13 @@
    "frame": 342,
    "rect": 0,
    "overlap": [
-    162,
-    10
+    71,
+    21
    ],
    "kind": "caption"
   },
   {
-   "frame": 343,
-   "rect": 0,
-   "overlap": [
-    157,
-    9
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 344,
-   "rect": 0,
-   "overlap": [
-    145,
-    7
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 345,
-   "rect": 0,
-   "overlap": [
-    117,
-    9
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 348,
-   "rect": 0,
-   "overlap": [
-    54,
-    34
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 349,
-   "rect": 0,
-   "overlap": [
-    32,
-    6
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 643,
+   "frame": 639,
    "rect": 2,
    "overlap": [
     11,
@@ -828,11 +819,83 @@
    "kind": "subject"
   },
   {
+   "frame": 640,
+   "rect": 0,
+   "overlap": [
+    230,
+    8
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 640,
+   "rect": 2,
+   "overlap": [
+    23,
+    293
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 641,
+   "rect": 0,
+   "overlap": [
+    234,
+    9
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 641,
+   "rect": 2,
+   "overlap": [
+    28,
+    281
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 642,
+   "rect": 0,
+   "overlap": [
+    235,
+    10
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 642,
+   "rect": 2,
+   "overlap": [
+    29,
+    277
+   ],
+   "kind": "subject"
+  },
+  {
+   "frame": 643,
+   "rect": 0,
+   "overlap": [
+    240,
+    9
+   ],
+   "kind": "caption"
+  },
+  {
+   "frame": 643,
+   "rect": 2,
+   "overlap": [
+    26,
+    281
+   ],
+   "kind": "subject"
+  },
+  {
    "frame": 644,
    "rect": 0,
    "overlap": [
-    222,
-    7
+    244,
+    6
    ],
    "kind": "caption"
   },
@@ -840,26 +903,17 @@
    "frame": 644,
    "rect": 2,
    "overlap": [
-    13,
-    294
+    20,
+    292
    ],
    "kind": "subject"
-  },
-  {
-   "frame": 645,
-   "rect": 0,
-   "overlap": [
-    205,
-    8
-   ],
-   "kind": "caption"
   },
   {
    "frame": 646,
    "rect": 0,
    "overlap": [
-    216,
-    8
+    232,
+    7
    ],
    "kind": "caption"
   },
@@ -867,35 +921,26 @@
    "frame": 647,
    "rect": 0,
    "overlap": [
-    235,
-    7
-   ],
-   "kind": "caption"
-  },
-  {
-   "frame": 650,
-   "rect": 0,
-   "overlap": [
-    226,
+    229,
     8
    ],
    "kind": "caption"
   },
   {
-   "frame": 651,
+   "frame": 648,
    "rect": 0,
    "overlap": [
     233,
-    8
+    29
    ],
    "kind": "caption"
   },
   {
-   "frame": 652,
+   "frame": 649,
    "rect": 0,
    "overlap": [
-    232,
-    28
+    240,
+    9
    ],
    "kind": "caption"
   }

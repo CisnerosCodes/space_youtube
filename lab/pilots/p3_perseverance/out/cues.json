@@ -22,9 +22,9 @@
   "gain_db": -2
  },
  {
-  "frame": 54,
+  "frame": 60,
   "fps": 30,
-  "t": 1.8,
+  "t": 2,
   "type": "scene_move",
   "note": "selfie shrinks into the Perseverance icon; the tracks race in",
   "gain_db": -1
@@ -61,27 +61,27 @@
   "sfx": "impact_soft"
  },
  {
-  "frame": 421,
+  "frame": 427,
   "fps": 30,
-  "t": 14.033,
+  "t": 14.233,
   "type": "number_slam",
-  "note": "15 years (count-up)",
+  "note": "the years count lands on 15",
   "gain_db": -3
  },
  {
-  "frame": 502,
+  "frame": 515,
   "fps": 30,
-  "t": 16.733,
+  "t": 17.167,
   "type": "number_slam",
-  "note": "5.5 years (count-up)",
+  "note": "the years count lands on 5.5",
   "gain_db": -3
  },
  {
-  "frame": 532,
+  "frame": 526,
   "fps": 30,
-  "t": 17.733,
+  "t": 17.533,
   "type": "scene_move",
-  "note": "everything leaves left; the cat drops in for \"How?\"",
+  "note": "everything leaves left before the cat drops in for \"How?\"",
   "sfx": "whoosh_short",
   "gain_db": -1
  },

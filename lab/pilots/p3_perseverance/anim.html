@@ -34,7 +34,7 @@
   <svg class="layer" width="0" height="0" aria-hidden="true"><defs id="fdefs"></defs></svg>
 
   <!-- giant numbers (paper on a scrimmed photo, amber on ink) -->
-  <div class="giant" id="odo" style="top: 314px; font-size: 300px; color: var(--paper); line-height: 0.9">2<span>8</span>.<span class="dig" id="odoT"><span class="strip"></span></span><span class="dig" id="odoH"><span class="strip"></span></span></div>
+  <div class="giant" id="odo" style="top: 314px; font-size: 280px; color: var(--amber); line-height: 0.9; background: var(--ink); padding: 6px 16px 10px 16px">2<span>8</span>.<span class="dig" id="odoT"><span class="strip"></span></span><span class="dig" id="odoH"><span class="strip"></span></span></div>
   <div class="gdata mono box" id="odoDate">SUN 11 OCT</div>
   <div class="gdata mono box" id="odoUnit">MILES <span class="u">·</span> 45.22 KM</div>
   <div class="giant" id="g2806" style="top: 314px; font-size: 300px">28.06</div>
@@ -2200,7 +2200,6 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
   scene(S3a, S4a + 18, (g, f) => {
     const cam = navCam(f), ex = -1920 * k(f, S4a, 16, exitE);
     photo(g, PH.navcam, { ...cam, y: cam.y + ex });
-    if (f >= F.october - 2) scrim(g, 0.3);
   });
 
   // ---- 4. the old record: Opportunity's self-portrait in a lens; 28.06 slams
@@ -2230,7 +2229,7 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
   const EA = 0.15, ease = (x) => (x < EA ? (x * x) / (2 * EA * (1 - EA)) : x > 1 - EA ? 1 - ((1 - x) * (1 - x)) / (2 * EA * (1 - EA)) : (x - EA / 2) / (1 - EA));
   const yrsO = (f) => 15 * ease(clamp01((f - BO0) / (BO1 - BO0)));
   const yrsP = (f) => 5.5 * ease(clamp01((f - BP0) / (BP1 - BP0)));
-  const S5out = F.how - 2;                       // everything leaves left on "How?"
+  const S5out = F.how - 8;                       // everything leaves left just before "How?"
   const outX = (f) => -1200 * k(f, S5out, 12, exitE);
   function barIconPos(f, which) {
     if (which === 'oppy') return [BAR.x0 + yrsO(f) * BAR.perYear + outX(f), BAR.y1];
@@ -2599,16 +2598,16 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
       { t: ts(F.n2810 + 16), do: 'hop', to: [770, 1196] },
       { t: ts(F.miles + 8), do: 'sign', text: '28.10', sub: 'MILES', dur: (F.n2806 - F.miles - 12) / FPS, size: 2.1 },
       { t: ts(F.n2806 + 2), do: 'point', at: [300, 450], dur: 0.6 },
-      { t: ts(F.n2806 + 16), do: 'exit', how: 'zip', to: 'right' },
+      { t: ts(F.n2806 + 10), do: 'exit', how: 'zip', to: 'right' },
       // "How?": drops onto the short caption box, WHAT, hops right, nods, points at the rover dot, floats off
-      { t: ts(F.how - 6), do: 'enter', how: 'drop', to: [250, 1196] },
-      { t: ts(F.how + 10), do: 'what', dur: 0.9 },
+      { t: ts(F.how), do: 'enter', how: 'drop', to: [250, 1196] },
+      { t: ts(F.how + 17), do: 'what', dur: 0.8 },
       { t: ts(F.drives - 2), do: 'listen', dur: 0.9 },
       { t: ts(F.itself + 2), do: 'nod', count: 2, dur: 0.8 },
       { t: ts(F.mapping + 4), do: 'point', at: [610, 900], dur: 0.8 },
-      { t: ts(F.rolling - 10), do: 'exit', how: 'zip', to: 'left' },
+      { t: ts(F.rolling - 14), do: 'exit', how: 'zip', to: 'left' },
       // NEXT card: skids onto the route, walks after the rover dot, points at Idubi, bounces, points at the pointer
-      { t: ts(F.hot), do: 'enter', how: 'skid', from: 'left', to: [175, ROUTE.y], scale: KN },
+      { t: ts(F.idubi + 4), do: 'enter', how: 'skid', from: 'left', to: [175, ROUTE.y], scale: KN },
       { t: ts(F.nasa - 6), do: 'walk', to: [430, ROUTE.y], scale: KN },
       { t: ts(F.nasa + 30), do: 'point', at: [ROUTE.idubi[0], ROUTE.y - 10], dur: 0.9 },
       { t: ts(F.keep - 2), do: 'bounce', count: 2, period: 0.34 },
@@ -2757,14 +2756,14 @@ return { FPS, EASE, spring, impact, bump, ramp, rnd, rootPt, Actor, standOn, onC
     c(10, 'cat_in', 'cat pops up behind the caption box');
     c(F.mars + 4, 'chip_in', 'SIGNAL DELAY MARS 12 min 59 s');
     c(F.mars + 28, 'echo_land', 'chip echo ring lands', { gain_db: -2 });
-    c(M0, 'scene_move', 'selfie shrinks into the Perseverance icon; the tracks race in', { gain_db: -1 });
+    c(M0 + 6, 'scene_move', 'selfie shrinks into the Perseverance icon; the tracks race in', { gain_db: -1 });
     c(S3a, 'hard_cut', 'chart leaves up, the record-day NAVCAM image rises in', { sfx: 'whoosh_short' });
     c(F.n2810, 'number_slam', 'odometer rolls 28.06 to 28.10', { gain_db: -2 });
     c(F.miles + 14, 'cat_chirp', 'the number lands on the cat\'s sign');
     c(F.n2806, 'number_slam', '28.06, the old record', { sfx: 'impact_soft' });
-    c(F.fifteen, 'number_slam', '15 years (count-up)', { gain_db: -3 });
-    c(F.five, 'number_slam', '5.5 years (count-up)', { gain_db: -3 });
-    c(F.how - 2, 'scene_move', 'everything leaves left; the cat drops in for "How?"', { sfx: 'whoosh_short', gain_db: -1 });
+    c(BO1, 'number_slam', 'the years count lands on 15', { gain_db: -3 });
+    c(Math.round(BP1), 'number_slam', 'the years count lands on 5.5', { gain_db: -3 });
+    c(S5out, 'scene_move', 'everything leaves left before the cat drops in for "How?"', { sfx: 'whoosh_short', gain_db: -1 });
     c(S7out, 'hard_cut', 'Sojourner photo drops in from above', { sfx: 'whoosh_short' });
     c(F.twenty, 'impact', '20 points pop in');
     c(F.n600, 'reveal', '600,000 points burst out', { sfx: 'swell_reveal', gain_db: -2 });
