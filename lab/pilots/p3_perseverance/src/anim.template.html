@@ -873,7 +873,8 @@ const META = /*__META__*/null;
       const u = k(f, F.miles + 8, 8, exitE);
       $('odo').style.transform = `translate(${(754 * u).toFixed(1)}px, ${(400 * u).toFixed(1)}px) scale(${(slam(f - F.passed) * (1 - 0.8 * u)).toFixed(4)})`;
       $('odo').style.opacity = 1 - k(f, F.miles + 14, 3);
-      setBlur($('odo'), 0, 0);
+      const du = u - k(f - 1, F.miles + 8, 8, exitE);
+      setBlur($('odo'), 754 * du, 400 * du);
     }
     gdata('odoDate', f, F.october, F.passed - 1, [0, -1], 1, [80, 632]);
     gdata('odoUnit', f, F.miles, S4a, [0, -1], 10, [80, 632]);
