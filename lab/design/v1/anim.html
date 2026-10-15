@@ -27,12 +27,14 @@
 
   <!-- DIAGRAM WORLD (beats 6 and 7): flat line art, amber 4 px strokes, paper labels, on ink -->
   <svg id="diag" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="position: absolute; left: 0; top: 0; visibility: hidden">
-    <g id="cam">
-      <circle cx="250" cy="940" r="130" fill="none" stroke="#F5B83D" stroke-width="4" vector-effect="non-scaling-stroke"></circle>
-      <circle cx="830" cy="940" r="80" fill="none" stroke="#F5B83D" stroke-width="4" vector-effect="non-scaling-stroke"></circle>
-      <path id="pOut" d="M 372 890 C 480 760 700 760 870 846" fill="none" stroke="#F5B83D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path>
-      <path id="pFly" d="M 870 846 C 920 870 940 900 936 935" fill="none" stroke="#F5B83D" stroke-width="4" vector-effect="non-scaling-stroke"></path>
-      <path id="pRet" d="M 936 935 C 930 1000 860 1060 700 1070 C 560 1078 440 1040 372 990" fill="none" stroke="#F5B83D" stroke-width="4" vector-effect="non-scaling-stroke"></path>
+    <defs><clipPath id="zone"><rect id="zoneRect" x="0" y="700" width="1080" height="480"></rect></clipPath></defs>
+    <g clip-path="url(#zone)">
+    <g id="cam" fill="none" stroke="#F5B83D" stroke-width="4">
+      <circle cx="250" cy="940" r="130"></circle>
+      <circle cx="830" cy="940" r="80"></circle>
+      <path id="pOut" d="M 372 890 C 480 760 700 760 870 846" stroke-dasharray="10 12"></path>
+      <path id="pFly" d="M 870 846 C 920 870 940 900 936 935"></path>
+      <path id="pRet" d="M 936 935 C 930 1000 860 1060 700 1070 C 560 1078 440 1040 372 990"></path>
     </g>
     <!-- markers and labels live outside the camera so they keep a fixed size -->
     <circle id="mBurn" r="11" fill="#F5B83D"></circle>
@@ -44,6 +46,7 @@
       <text id="lBurn">BURN</text>
       <text id="lOrion">ORION</text>
       <text id="lSplash">PACIFIC OCEAN</text>
+    </g>
     </g>
   </svg>
 
@@ -70,7 +73,7 @@
       <rect id="nProbe" x="551" y="1031" width="18" height="18" fill="#F2EFE8"></rect>
       <g font-family="IBM Plex Mono" font-weight="500" font-size="24" fill="#F2EFE8" letter-spacing="1.2">
         <text id="nLMars" x="760" y="1129" text-anchor="middle">MARS</text>
-        <text id="nLProbe" x="536" y="1012" text-anchor="end">MMX</text>
+        <text id="nLProbe" x="560" y="1010" text-anchor="middle">MMX</text>
       </g>
     </svg>
     <div id="nDiagLabel" class="mono" style="position: absolute; left: 560px; top: 1240px; font-size: 24px; line-height: 28px; color: #8C8A85; white-space: nowrap">DIAGRAM · NOT TO SCALE</div>
@@ -87,10 +90,10 @@
   <div class="giant ui" id="g147" style="left: 40px; top: 314px; font-size: 340px; line-height: 300px">1:47</div>
   <div class="giant ui" id="gAM" style="left: 40px; top: 624px; font-size: 260px; line-height: 230px">A.M.</div>
   <div class="ui mono box" id="hData" style="position: absolute; left: 80px; top: 878px; display: none; padding: 8px 16px; font-size: 28px; line-height: 36px">WED 16 NOV 2022 · EST</div>
-  <div class="giant ui" id="gDay" style="left: 40px; top: 366px; font-size: 300px; line-height: 260px">Day</div>
-  <div class="giant ui" id="g20" style="left: 40px; top: 636px; font-size: 300px; line-height: 260px">20</div>
+  <div class="giant ui" id="gDay" style="left: 40px; top: 356px; font-size: 300px; line-height: 260px">Day</div>
+  <div class="giant ui" id="g20" style="left: 40px; top: 616px; font-size: 300px; line-height: 260px">20</div>
   <div class="ui" id="numBlock" style="position: absolute; left: 40px; top: 312px; display: none">
-    <div class="giant" id="g327" style="position: relative; display: block; font-size: 340px; line-height: 300px; color: #F5B83D; font-variant-numeric: tabular-nums">3:27</div>
+    <div class="giant" id="g327" style="position: relative; display: block; font-size: 310px; line-height: 280px; color: #F5B83D; font-variant-numeric: tabular-nums">3:27</div>
     <div class="mono" style="margin: 14px 0 0 40px; font-size: 28px; line-height: 36px; color: #F2EFE8; white-space: nowrap">RETURN POWERED FLYBY BURN</div>
     <div class="mono" style="margin: 4px 0 0 40px; font-size: 24px; line-height: 32px; color: #8C8A85; white-space: nowrap">MIN : SEC</div>
   </div>
@@ -147,7 +150,7 @@
     { a: 105, b: 134, img: '012',  S: 1.0,  ox: 137,  oy: 0,   punch: [120], A: [563, 420],  credit: BI },
     { a: 135, b: 149, img: '014',  S: 1920 / 1387, ox: 810, oy: 0, punch: [], A: [540, 500], credit: BI },
     { a: 150, b: 179, img: '019',  S: 1920 / 1919, ox: 210, oy: 0, punch: [165], A: [850, 290], credit: JK },
-    { a: 180, b: 209, img: '2083', S: 4 / 3, ox: 1480, oy: 0,   punch: [195], A: [653, 1053], credit: NA, scrim: 0.30 },
+    { a: 180, b: 209, img: '2083', S: 1.5,  ox: 1800, oy: 100, punch: [195], A: [600, 1085], credit: NA, scrim: 0.30 },
     { a: 210, b: 239, img: '2083', S: 2.0,  ox: 2490, oy: 760, punch: [225], A: [710, 820],  credit: NA },
   ];
 
@@ -156,8 +159,8 @@
     { a: 240, b: 269, s: 1.6, wx: 840, wy: 930, sx: 540, sy: 960, punch: [255] },
     { a: 270, b: 284, s: 2.6, wx: 900, wy: 935, sx: 540, sy: 960, punch: [] },
     { a: 285, b: 314, s: 0.95, wx: 590, wy: 950, sx: 540, sy: 960, punch: [300] },
-    { a: 315, b: 344, s: 1.6, wx: 300, wy: 950, sx: 540, sy: 880, punch: [330] },
-    { a: 345, b: 359, s: 2.6, wx: 372, wy: 985, sx: 540, sy: 880, punch: [] },
+    { a: 315, b: 344, s: 1.5, wx: 420, wy: 975, sx: 540, sy: 860, punch: [330] },
+    { a: 345, b: 359, s: 2.4, wx: 400, wy: 990, sx: 540, sy: 860, punch: [] },
   ];
 
   // Story beats for the 7 ticks. The NEXT card (360 to 449) shows all seven complete.
@@ -288,6 +291,10 @@
       const W = (x, y) => [ax + (cam.sx - ax + (x - cam.wx) * cam.s) * (k / cam.s), ay + (cam.sy - ay + (y - cam.wy) * cam.s) * (k / cam.s)];
       const [tx, ty] = W(0, 0);
       $('cam').setAttribute('transform', `translate(${tx} ${ty}) scale(${k})`);
+      $('cam').setAttribute('stroke-width', (4 / k).toFixed(4));
+      $('pOut').setAttribute('stroke-dasharray', `${(10 / k).toFixed(3)} ${(12 / k).toFixed(3)}`);
+      const zTop = f < 315 ? 730 : 540;
+      $('zoneRect').setAttribute('y', zTop); $('zoneRect').setAttribute('height', 1180 - zTop);
       draw('pFly', 1);
       // the return leg draws during "sends Orion home." and stays drawn
       const pr = f < 285 ? 0 : move(clamp01((f - 285) / 29));
@@ -305,7 +312,7 @@
       const orionOn = f >= 285 && f < 315;
       $('mOrion').style.display = orionOn ? 'inline' : 'none';
       place('mOrion', o[0], o[1]);
-      lab('lOrion', o[0], o[1] - 26, orionOn, 'middle');
+      lab('lOrion', o[0], o[1] + 44, orionOn && f >= 300, 'middle');
       const splashOn = f >= 319;
       $('mSplash').style.display = splashOn ? 'inline' : 'none';
       place('mSplash', splash[0], splash[1]);
