@@ -34,3 +34,53 @@ art001e001712 (Nov. 29, 2022) Orion’s solar arrays split the difference betwee
 art0001e002083 (Dec. 5, 2022) On the 20th day of the Artemis I mission, Orion captured the Earth rising behind the Moon following the return powered flyby. The 3 minute, 27 second, return powered flyby burn, committed the spacecraft to a Dec. 11 splashdown in the Pacific Ocean.
 
 1920x1440
+
+## PIA10368 | NASA/JPL-Caltech/University of Arizona | 2008-04-09
+Phobos from 6,800 Kilometers Color. The High Resolution Imaging Science Experiment HiRISE camera on NASA Mars Reconnaissance Orbiter took two images of the larger of Mars two moons, Phobos, within 10 minutes of each other on March 23, 2008. This is the first.
+Source: https://images.nasa.gov/details/PIA10368 (also https://photojournal.jpl.nasa.gov/catalog/PIA10368)
+License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
+Use in Signal Delay motion v2: Phobos, color, from 6,800 km (HiRISE, MRO). Used: hook, plan beat (orbit, land, sample).
+Credit on screen: NASA/JPL-Caltech/University of Arizona
+Fetched 2026-10-15.
+
+3374x3300
+
+## PIA10369 | NASA/JPL-Caltech/University of Arizona | 2008-04-09
+Phobos from 5,800 Kilometers Color. Phobos from 5,800 Kilometers Color
+Source: https://images.nasa.gov/details/PIA10369 (also https://photojournal.jpl.nasa.gov/catalog/PIA10369)
+License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
+Use in Signal Delay motion v2: Phobos, color, from 5,800 km (HiRISE, MRO). Used: "A sample could crack that."
+Credit on screen: NASA/JPL-Caltech/University of Arizona
+Fetched 2026-10-15.
+
+3515x3474
+
+## PIA11826 | NASA/JPL-Caltech/University of Arizona | 2009-03-09
+Martian Moon Deimos in High Resolution. Martian Moon Deimos in High Resolution
+Source: https://images.nasa.gov/details/PIA11826 (also https://photojournal.jpl.nasa.gov/catalog/PIA11826)
+License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
+Use in Signal Delay motion v2: Deimos, two color views (HiRISE, MRO); left view used. Used: "two moons".
+Credit on screen: NASA/JPL-Caltech/University of Arizona
+Fetched 2026-10-15.
+
+1505x772
+
+## PIA00407 | NASA/JPL/USGS | 1998-06-08
+Global Color Views of Mars. Global Color Views of Mars
+Source: https://images.nasa.gov/details/PIA00407 (also https://photojournal.jpl.nasa.gov/catalog/PIA00407)
+License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
+Use in Signal Delay motion v2: Mars, global color view (Viking Orbiter mosaic). Used: "Mars system", "two moons".
+Credit on screen: NASA/JPL/USGS
+Fetched 2026-10-15.
+
+6787x6787
+
+## PIA10244 | NASA/JPL-Caltech/University of Arizona | 2008-03-03
+Earth and Moon as Seen from Mars. The High Resolution Imaging Science Experiment HiRISE camera would make a great backyard telescope for viewing Mars, and we can also use it at Mars to view other planets. This is an image of Earth and the moon, acquired on October 3, 2007.
+Source: https://images.nasa.gov/details/PIA10244 (also https://photojournal.jpl.nasa.gov/catalog/PIA10244)
+License: NASA media, not subject to US copyright (NASA Images and Media Usage Guidelines). HiRISE images are public domain per https://uahirise.org/media/usage.php. Viking/USGS mosaic is a US government work.
+Use in Signal Delay motion v2: Earth and Moon as seen from Mars (HiRISE, MRO, Oct. 3, 2007). Used: "fly it back to Earth".
+Credit on screen: NASA/JPL-Caltech/University of Arizona
+Fetched 2026-10-15.
+
+800x800
