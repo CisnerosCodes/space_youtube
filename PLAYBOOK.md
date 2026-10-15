@@ -55,3 +55,4 @@ If any target is missed, change the format before adding volume.
 - Voice is the only planned spend (budget ceiling about $4 per week; expected well under $1 per week with Fish Drama 3, about $1 per week with Eleven v4 Turbo).
 - Do not buy paid layers (video SaaS, scheduling SaaS) until the free or cheap stack has cleared the review gate.
 - Log the cost of every run.
+- Voice licensing (decided Oct 15, 2026): during testing we publish with voices bought through OpenRouter without a separate written commercial-use confirmation. Fish's own terms grant commercial use to users of its Paid Services; whether OpenRouter billing counts is unconfirmed. Revisit before the channel earns money (or when switching voice models).
