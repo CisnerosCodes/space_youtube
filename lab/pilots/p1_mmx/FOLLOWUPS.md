@@ -64,3 +64,14 @@ Round 3 (stills 113, 114, 855, 1000, 1040, 1056, 1070; crops of both zip exits; 
 - Cat motion blur uses `mix-blend-mode: plus-lighter`; a test showed blurred areas about 5% brighter than an exact average (8-bit compositing). It is only on fast moves and reads as blur.
 - The cat appears in the first second (pop-up behind the caption): this Short is the "cat in the first 2 seconds" arm of the research A/B idea.
 - `out/qa/` holds the QA stills and sheets (about 50 MB); delete before committing if not wanted.
+
+## Rename to Downlink Cat (Oct 16, 2026)
+
+The channel name "Signal Delay" is taken by another space channel, so the Short now carries "Downlink Cat". Visual change only: the narration never says the channel name.
+
+- `src/anim.template.html`: the NEXT card wordmark reads DOWNLINK (paper, `var(--paper)`) CAT (amber, `var(--amber)`), same font, size (64 px), position and reveal timing, with the echo mark still leading it. Measured on the last frame: x 208 to 847 (inside x 80 to 900), so the font size is unchanged. Page title "Downlink Cat P1 MMX". The chip label SIGNAL DELAY (one-way light time to Mars) is the science term and stays.
+- `metadata.json`: the line art credit now reads "simplified line drawings by Downlink Cat". The "Signal delay (one-way light time ...)" source line stays (science term). Title unchanged.
+- Rebuilt (`node build.mjs`: 1094 frames = 36.4667 s, unchanged), full render with `render.mjs anim.html 36.4667 30 out`, cues re-exported (byte-identical, 16 cues), re-mixed with the README command (bed bedE_arp, `--bed-under 18`). `out/frames/` deleted after the mux.
+- Duration: 36.467 s, 1094 video frames in `out/final.mp4` (ffprobe count).
+- Voice cost: none (no new voice).
+- Checks: stills 1036, 1041, 1045, 1050, 1060, 1093 looked at (DOWNLINK CAT, CAT in amber, the H3 pad line clear of the word). Caption sync 105 words, max 0.5 frames, none outside 2 frames. Cat lint: the same 3 documented hits (zip crouch, frames 113, 114, 855). Mix report: -13.9 LUFS integrated, true peak -2.1 dBTP (ffmpeg remeasure of `out/final.mp4`: -13.9 LUFS, -2.1 dBTP); sonic logo 34.62 to 36.07 s, inside the 36.47 s video; no mixer warnings. No "Signal Delay" channel name left on screen; only the chip label.

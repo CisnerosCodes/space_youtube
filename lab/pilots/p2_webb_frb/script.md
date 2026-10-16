@@ -6,7 +6,7 @@
 > Ground telescopes saw nothing at that spot. Webb found a galaxy.
 > A dwarf, one thousand times less massive than expected.
 > That makes a neutron star merger very unlikely, the team says.
-> MeerKAT may find several more every year. Follow Signal Delay for the next one.
+> MeerKAT may find several more every year. Follow Downlink Cat for the next one.
 
 Emphasis words: thousandth, three billion, farthest, nothing, Webb, dwarf, one thousand, unlikely.
 Sources (verified 2026-10-15 against the live page, every quote matched): NASA Science, "Webb Measures Distance to Farthest Fast Radio Burst, Suggesting Origin", Oct 8, 2026, https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/ ; paper: Caleb et al., Science, DOI 10.1126/science.adz2675 ; ESA/Webb weic2621. Full quote table: lab/research/2026-10-15_pilot_candidates.md (Script A).

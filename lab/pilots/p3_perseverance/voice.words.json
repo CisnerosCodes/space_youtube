@@ -1,7 +1,7 @@
 {
  "audio": "voice.mp3",
- "duration": 35.92,
- "text": "A robot on Mars just outdrove every vehicle ever sent to another world.  On October 11th, it passed 28.10 miles.  The old record, set by Opportunity, was 28.06.  Opportunity needed almost 15 years.  Perseverance took five and a half.  How?  It drives itself, mapping hazards while rolling.  Sojourner checked 20 points ahead.  Perseverance checked 600,000.  hot water systems. NASA expects the record to keep growing.  Follow signal delay to watch.",
+ "duration": 35.85,
+ "text": "A robot on Mars just outdrove every vehicle ever sent to another world. On October 11th, it passed 28 .10 miles. The old record, set by Opportunity, was 28 .06. Opportunity needed almost 15 years. Perseverance took five and a half. How? It drives itself, mapping hazards while rolling. Sojourner checked 20 points ahead. Perseverance checked 600 ,000. hot water systems. NASA expects the record to keep growing. Follow Downlink Cat to watch.",
  "words": [
   {
    "w": "A",
@@ -345,28 +345,37 @@
   },
   {
    "w": "Follow",
-   "start": 33.78,
-   "end": 34.26
+   "start": 34.089,
+   "end": 34.309,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
-   "w": "signal",
-   "start": 34.26,
-   "end": 34.6
+   "w": "Downlink",
+   "start": 34.369,
+   "end": 34.67,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
-   "w": "delay",
-   "start": 34.6,
-   "end": 34.88
+   "w": "Cat",
+   "start": 34.7,
+   "end": 34.889,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "to",
-   "start": 34.88,
-   "end": 35.18
+   "start": 34.949,
+   "end": 35.029,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "watch.",
-   "start": 35.18,
-   "end": 35.6
+   "start": 35.129,
+   "end": 35.41,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   }
- ]
+ ],
+ "spliced": {
+  "original": "voice.words.orig.json (words before \"Follow\" kept as they were)",
+  "splice_at_s": 33.801
+ }
 }

@@ -1,8 +1,8 @@
 {
  "video": "out/final.mp4",
  "fps": 30,
- "frames": 947,
- "duration": 31.5667,
+ "frames": 949,
+ "duration": 31.6333,
  "narration": "voice.mp3",
  "types": {
   "hard_cut": "a hard cut",
@@ -132,9 +132,9 @@
    "gain_db": -4
   },
   {
-   "frame": 898,
+   "frame": 903,
    "fps": 30,
-   "t": 29.933,
+   "t": 30.1,
    "type": "wordmark_echo",
    "note": "wordmark dot, sonic logo (its echo lands with the ring 12 frames later)"
   }

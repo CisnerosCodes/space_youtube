@@ -93,7 +93,7 @@
   "gain_db": -4
  },
  {
-  "frame": 898,
+  "frame": 903,
   "fps": 30,
   "type": "wordmark_echo",
   "note": "wordmark dot, sonic logo (its echo lands with the ring 12 frames later)"

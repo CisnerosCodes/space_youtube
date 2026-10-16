@@ -125,9 +125,9 @@
   "sfx": "tick"
  },
  {
-  "frame": 1058,
+  "frame": 1057,
   "fps": 30,
-  "t": 35.267,
+  "t": 35.233,
   "type": "wordmark_echo",
   "note": "wordmark dot, then its echo ring 12 frames later (sonic logo)"
  }

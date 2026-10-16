@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Signal Delay pilot 2 Webb FRB</title>
+<title>Downlink Cat pilot 2 Webb FRB</title>
 <!-- build: __BUILDINFO__ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
@@ -64,7 +64,7 @@
         <circle id="nDot" cx="22" cy="22" r="22" fill="#F5B83D" style="transform-box: fill-box; transform-origin: center"></circle>
         <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
       </svg>
-      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)"><span id="nW1">Signal</span> <span id="nW2" style="color: var(--amber)">Delay</span></div>
+      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)"><span id="nW1">Downlink</span> <span id="nW2" style="color: var(--amber)">Cat</span></div>
     </div>
   </div>
 
@@ -189,8 +189,9 @@ const IMAGES = /*__IMAGES__*/null;
   I.several = at(/^several$/, I.meerkat);
   I.year = at(/^year$/, I.several);
   I.follow = at(/^follow$/, I.year);
-  I.signal = at(/^signal$/, I.follow);
-  I.delay = at(/^delay$/, I.signal);
+  // channel name (renamed Oct 16, 2026 from Signal Delay); "down" covers a script that splits it as "down link"
+  I.downlink = at(/^(downlink|down)$/, I.follow);
+  I.catWord = at(/^cat$/, I.downlink);
   I.lastOne = W.length - 1;
   const F = {};
   for (const [name, i] of Object.entries(I)) F[name] = W[i].f;
@@ -606,7 +607,7 @@ const IMAGES = /*__IMAGES__*/null;
   // ---- captions: chunks from the schedule, measured with the real font
   let CHUNKS = [];
   const GLUE = /^(a|an|the|to|of|on|in|into|and|or|is|its|it|from|that|these|one|three|neutron|very|several|for|at)$/i;
-  const NOSPLIT = new Set(['one thousand', 'signal delay', 'neutron star', 'fast radio', 'three billion', 'ground telescopes', 'radio burst']);
+  const NOSPLIT = new Set(['one thousand', 'signal delay', 'downlink cat', 'neutron star', 'fast radio', 'three billion', 'ground telescopes', 'radio burst']);
   let MEAS = null;
   const textW = (s) => { if (!MEAS) { MEAS = document.createElement('canvas').getContext('2d'); MEAS.font = "700 90px 'Archivo'"; } return MEAS.measureText(s).width; };
   function buildChunks() {
@@ -713,7 +714,7 @@ const IMAGES = /*__IMAGES__*/null;
       { t: t(F.year), do: 'enter', how: 'skid', from: 'left', to: [300, 952], scale: 0.26 },
       { t: t(F.year), do: 'expr', expr: 'happy' },
       { t: t(F.follow + 2), do: 'thumbs', dur: 0.9 },
-      { t: t(F.delay + 10), do: 'point', at: dR(0, -DISH_F - 34), dur: 0.9 },
+      { t: t(F.catWord + 10), do: 'point', at: dR(0, -DISH_F - 34), dur: 0.9 },
       { t: t(F.mark + 4), do: 'wave', dur: 1.0 },
     ];
     // talk on every line where he is on screen
@@ -808,9 +809,9 @@ const IMAGES = /*__IMAGES__*/null;
       show($('nHead'), f >= F.meerkat + 2);
       show($('nData'), f >= F.meerkat + 17);
       show($('nPoint'), f >= F.follow);
-      show($('nMark'), f >= F.signal, 'flex');
-      $('nW1').style.visibility = f >= F.signal ? 'visible' : 'hidden';
-      $('nW2').style.visibility = f >= F.delay ? 'visible' : 'hidden';
+      show($('nMark'), f >= F.downlink, 'flex');
+      $('nW1').style.visibility = f >= F.downlink ? 'visible' : 'hidden';
+      $('nW2').style.visibility = f >= F.catWord ? 'visible' : 'hidden';
       const de = sp(f - F.mark, 0.7, 4);
       $('nDot').style.opacity = f >= F.mark ? 1 : 0;
       $('nDot').style.transform = `scale(${(0.4 + 0.6 * de).toFixed(4)})`;

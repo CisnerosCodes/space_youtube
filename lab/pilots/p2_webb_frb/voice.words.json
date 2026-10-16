@@ -1,7 +1,7 @@
 {
  "audio": "voice.mp3",
- "duration": 30.24,
- "text": "A flash lasting one thousandth of a second left when the universe was only three billion years old.  Astronomers just confirmed the farthest fast radio burst ever seen.  Nobody knows what makes these bursts.  So what was out there?  Ground telescopes saw nothing at that spot.  Webb found a galaxy.  A dwarf 1,000 times less massive than expected.  That makes a neutron star merger very unlikely, the team says.  Miracat may find several more every year.  Follow Signal Delay for the next one.",
+ "duration": 30.275,
+ "text": "A flash lasting one thousandth of a second left when the universe was only three billion years old. Astronomers just confirmed the farthest fast radio burst ever seen. Nobody knows what makes these bursts. So what was out there? Ground telescopes saw nothing at that spot. Webb found a galaxy. A dwarf 1 ,000 times less massive than expected. That makes a neutron star merger very unlikely, the team says. Miracat may find several more every year. Follow Downlink Cat for the next one.",
  "words": [
   {
    "w": "A",
@@ -390,38 +390,49 @@
   },
   {
    "w": "Follow",
-   "start": 28.19,
-   "end": 28.59
+   "start": 28.613,
+   "end": 28.853,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
-   "w": "Signal",
-   "start": 28.59,
-   "end": 28.89
+   "w": "Downlink",
+   "start": 28.873,
+   "end": 29.22,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
-   "w": "Delay",
-   "start": 28.89,
-   "end": 29.19
+   "w": "Cat",
+   "start": 29.24,
+   "end": 29.434,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "for",
-   "start": 29.19,
-   "end": 29.31
+   "start": 29.474,
+   "end": 29.554,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "the",
-   "start": 29.31,
-   "end": 29.43
+   "start": 29.574,
+   "end": 29.654,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "next",
-   "start": 29.43,
-   "end": 29.57
+   "start": 29.654,
+   "end": 29.855,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   },
   {
    "w": "one.",
-   "start": 29.57,
-   "end": 29.83
+   "start": 29.915,
+   "end": 30.015,
+   "from": "rename splice 2026-10-16: re-transcription of the spliced voice.mp3 (work/rename/voice_new.words.json); split of Downlink/Cat from the waveform"
   }
- ]
+ ],
+ "spliced": {
+  "original": "voice.words.orig.json (words before \"Follow\" kept as they were)",
+  "splice_at_s": 28.356
+ }
 }

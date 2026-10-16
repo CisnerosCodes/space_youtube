@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-15",
+ "generated": "2026-10-16",
  "script": "script.md",
  "timing": "voice.words.merged.json",
  "audio": "voice.mp3",
  "audioPath": "voice.mp3",
- "duration": 35.976,
- "transcriptDuration": 35.92,
+ "duration": 35.904,
+ "transcriptDuration": 35.85,
  "words": [
   {
    "i": 0,
@@ -586,40 +586,40 @@
   {
    "i": 72,
    "text": "Follow",
-   "start": 33.78,
-   "end": 34.26,
+   "start": 34.089,
+   "end": 34.309,
    "matched": true,
    "src": 72
   },
   {
    "i": 73,
-   "text": "Signal",
-   "start": 34.26,
-   "end": 34.6,
+   "text": "Downlink",
+   "start": 34.369,
+   "end": 34.67,
    "matched": true,
    "src": 73
   },
   {
    "i": 74,
-   "text": "Delay",
-   "start": 34.6,
-   "end": 34.88,
+   "text": "Cat",
+   "start": 34.7,
+   "end": 34.889,
    "matched": true,
    "src": 74
   },
   {
    "i": 75,
    "text": "to",
-   "start": 34.88,
-   "end": 35.18,
+   "start": 34.949,
+   "end": 35.029,
    "matched": true,
    "src": 75
   },
   {
    "i": 76,
    "text": "watch.",
-   "start": 35.18,
-   "end": 35.6,
+   "start": 35.129,
+   "end": 35.41,
    "matched": true,
    "src": 76
   }

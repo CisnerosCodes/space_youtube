@@ -1,0 +1,10 @@
+{
+ "model": "google/gemini-3.8-flash-tts",
+ "voice": "Puck",
+ "seconds": 4.72,
+ "usd": null,
+ "generation": "gen-tts-1792130223-MXysAiYuWjELtDKrTmpg",
+ "text": "MeerKAT may find several more every year. Follow Downlink Cat for the next one.",
+ "direction": "You are a young, nerdy science creator in your early twenties, a little scrawny, filming a vertical video for your followers. Talk like a popular creator on TikTok or YouTube Shorts, not a narrator: conversational, a grin in your voice, genuinely hyped. Hit the hook hard, take a tiny beat before each reveal, punch the key words (thousandth, three billion, farthest, nothing, Webb, dwarf, one thousand, unlikely), speed up through setup lines and slow down on the payoff. Energy: high. A little more cat: a playful purr on a few r sounds and a small 'mrr'-like rise on the question line. Still natural, never a meow.",
+ "usd_note": "cost lookup failed (generation id 404, key usage counter unchanged); estimate about 0.001 USD (original 30 s take cost 0.006854, scaled by audio length)"
+}

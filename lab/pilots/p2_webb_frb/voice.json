@@ -4,5 +4,17 @@
  "seconds": 30.24,
  "usd": 0.006854,
  "direction": "You are a young, nerdy science creator in your early twenties, a little scrawny, filming a vertical video for your followers. Talk like a popular creator on TikTok or YouTube Shorts, not a narrator: conversational, a grin in your voice, genuinely hyped. Hit the hook hard, take a tiny beat before each reveal, punch the key words (thousandth, three billion, farthest, nothing, Webb, dwarf, one thousand, unlikely), speed up through setup lines and slow down on the payoff. Energy: high. A little more cat: a playful purr on a few r sounds and a small 'mrr'-like rise on the question line. Still natural, never a meow.",
- "text": "A flash lasting one thousandth of a second left when the universe was only three billion years old. Astronomers just confirmed the farthest fast radio burst ever seen. Nobody knows what makes these bursts. So what was out there? Ground telescopes saw nothing at that spot. Webb found a galaxy. A dwarf, one thousand times less massive than expected. That makes a neutron star merger very unlikely, the team says. MeerKAT may find several more every year. Follow Signal Delay for the next one."
+ "text": "A flash lasting one thousandth of a second left when the universe was only three billion years old. Astronomers just confirmed the farthest fast radio burst ever seen. Nobody knows what makes these bursts. So what was out there? Ground telescopes saw nothing at that spot. Webb found a galaxy. A dwarf, one thousand times less massive than expected. That makes a neutron star merger very unlikely, the team says. MeerKAT may find several more every year. Follow Signal Delay for the next one.",
+ "rename_splice_2026_10_16": {
+  "why": "channel renamed from Signal Delay to Downlink Cat; only the last line was re-voiced",
+  "take": "work/rename/take1.wav (same model, voice Puck and direction as above), text: MeerKAT may find several more every year. Follow Downlink Cat for the next one.",
+  "original": "voice.orig.mp3",
+  "cut_s": 28.356,
+  "follow_onset_s": 28.47,
+  "take_gain_db": -2.0,
+  "method": "take aligned so its \"Follow\" onset lands on the original one; cut in silence (both sides below -65 dB) at a zero crossing with a 10 ms crossfade; take gain set so the tail matches the original tail loudness",
+  "seconds": 30.275,
+  "usd": null,
+  "usd_estimate": 0.001
+ }
 }

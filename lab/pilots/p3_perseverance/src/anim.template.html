@@ -60,7 +60,7 @@
     <div id="nPoint" class="mono" style="left: 80px; top: 1020px; padding: 10px 18px 10px 14px; border: 2px solid var(--amber); font-size: 28px; line-height: 38px; white-space: nowrap; color: var(--paper); background: var(--ink)">
       <div style="display: flex; align-items: center; gap: 14px">
         <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
-        <span><span style="color: var(--amber)">Follow</span> Signal Delay</span>
+        <span><span style="color: var(--amber)">Follow</span> Downlink Cat</span>
       </div>
     </div>
     <div id="nMark" style="left: 80px; top: 1112px; align-items: center; gap: 24px">
@@ -68,7 +68,7 @@
         <circle id="nDot" cx="22" cy="22" r="22" fill="#F5B83D" style="transform-box: fill-box; transform-origin: center"></circle>
         <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
       </svg>
-      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">Signal <span style="color: var(--amber)">Delay</span></div>
+      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">Downlink <span style="color: var(--amber)">Cat</span></div>
     </div>
   </div>
 
@@ -714,6 +714,7 @@ const META = /*__META__*/null;
         if (ws.slice(0, -1).some((x) => /,$/.test(x.text))) c += 18;
         if (i < n && GLUE.test(sg[i - 1].text)) c += 30;
         if (i < n && /^(\d[\d.,]*)$/.test(sg[i - 1].text) && /^(miles|years|points)/i.test(sg[i].text)) c += 60;
+        if (i < n && /^downlink$/i.test(sg[i - 1].text) && /^cat\b/i.test(sg[i].text)) c += 120;   // keep the channel name on one line
         if (best[j] + c < best[i]) { best[i] = best[j] + c; from[i] = j; }
       }
       const lines = []; for (let i = n; i > 0; i = from[i]) lines.unshift(sg.slice(from[i], i));

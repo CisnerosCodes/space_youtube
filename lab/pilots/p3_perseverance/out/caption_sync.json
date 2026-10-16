@@ -1,5 +1,5 @@
 {
- "maxAbsDiffFrames": 0.4,
+ "maxAbsDiffFrames": 0.5,
  "outsideTwoFrames": [],
  "rows": [
   {
@@ -428,7 +428,7 @@
   },
   {
    "i": 53,
-   "text": "checks",
+   "text": "checked",
    "timedFrom": "transcript \"checked\"",
    "spokenFrame": 762,
    "shownFrame": 762,
@@ -582,41 +582,41 @@
    "i": 72,
    "text": "Follow",
    "timedFrom": "transcript \"Follow\"",
-   "spokenFrame": 1013.4,
-   "shownFrame": 1013,
-   "diff": -0.4
+   "spokenFrame": 1022.7,
+   "shownFrame": 1023,
+   "diff": 0.3
   },
   {
    "i": 73,
-   "text": "Signal",
-   "timedFrom": "transcript \"signal\"",
-   "spokenFrame": 1027.8,
-   "shownFrame": 1028,
-   "diff": 0.2
+   "text": "Downlink",
+   "timedFrom": "transcript \"Downlink\"",
+   "spokenFrame": 1031.1,
+   "shownFrame": 1031,
+   "diff": -0.1
   },
   {
    "i": 74,
-   "text": "Delay",
-   "timedFrom": "transcript \"delay\"",
-   "spokenFrame": 1038,
-   "shownFrame": 1038,
+   "text": "Cat",
+   "timedFrom": "transcript \"Cat\"",
+   "spokenFrame": 1041,
+   "shownFrame": 1041,
    "diff": 0
   },
   {
    "i": 75,
    "text": "to",
    "timedFrom": "transcript \"to\"",
-   "spokenFrame": 1046.4,
-   "shownFrame": 1046,
-   "diff": -0.4
+   "spokenFrame": 1048.5,
+   "shownFrame": 1048,
+   "diff": -0.5
   },
   {
    "i": 76,
    "text": "watch.",
    "timedFrom": "transcript \"watch.\"",
-   "spokenFrame": 1055.4,
-   "shownFrame": 1055,
-   "diff": -0.4
+   "spokenFrame": 1053.9,
+   "shownFrame": 1054,
+   "diff": 0.1
   }
  ]
 }

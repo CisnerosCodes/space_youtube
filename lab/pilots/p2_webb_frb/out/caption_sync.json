@@ -622,57 +622,57 @@
    "i": 77,
    "text": "Follow",
    "timedFrom": "transcript \"Follow\"",
-   "spokenFrame": 845.7,
-   "shownFrame": 846,
-   "diff": 0.3
+   "spokenFrame": 858.4,
+   "shownFrame": 858,
+   "diff": -0.4
   },
   {
    "i": 78,
-   "text": "Signal",
-   "timedFrom": "transcript \"Signal\"",
-   "spokenFrame": 857.7,
-   "shownFrame": 858,
-   "diff": 0.3
+   "text": "Downlink",
+   "timedFrom": "transcript \"Downlink\"",
+   "spokenFrame": 866.2,
+   "shownFrame": 866,
+   "diff": -0.2
   },
   {
    "i": 79,
-   "text": "Delay",
-   "timedFrom": "transcript \"Delay\"",
-   "spokenFrame": 866.7,
-   "shownFrame": 867,
-   "diff": 0.3
+   "text": "Cat",
+   "timedFrom": "transcript \"Cat\"",
+   "spokenFrame": 877.2,
+   "shownFrame": 877,
+   "diff": -0.2
   },
   {
    "i": 80,
    "text": "for",
    "timedFrom": "transcript \"for\"",
-   "spokenFrame": 875.7,
-   "shownFrame": 876,
-   "diff": 0.3
+   "spokenFrame": 884.2,
+   "shownFrame": 884,
+   "diff": -0.2
   },
   {
    "i": 81,
    "text": "the",
    "timedFrom": "transcript \"the\"",
-   "spokenFrame": 879.3,
-   "shownFrame": 879,
-   "diff": -0.3
+   "spokenFrame": 887.2,
+   "shownFrame": 887,
+   "diff": -0.2
   },
   {
    "i": 82,
    "text": "next",
    "timedFrom": "transcript \"next\"",
-   "spokenFrame": 882.9,
-   "shownFrame": 883,
-   "diff": 0.1
+   "spokenFrame": 889.6,
+   "shownFrame": 890,
+   "diff": 0.4
   },
   {
    "i": 83,
    "text": "one.",
    "timedFrom": "transcript \"one.\"",
-   "spokenFrame": 887.1,
-   "shownFrame": 887,
-   "diff": -0.1
+   "spokenFrame": 897.4,
+   "shownFrame": 897,
+   "diff": -0.4
   }
  ]
 }

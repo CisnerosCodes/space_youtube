@@ -1,6 +1,6 @@
 {
  "hits": [],
- "onFrames": 563,
+ "onFrames": 565,
  "share": 0.595,
  "moves": [
   {
@@ -68,15 +68,15 @@
    "move": "enter skid"
   },
   {
-   "frame": 848,
+   "frame": 860,
    "move": "thumbs"
   },
   {
-   "frame": 877,
+   "frame": 887,
    "move": "point"
   },
   {
-   "frame": 902,
+   "frame": 907,
    "move": "wave"
   }
  ],
