@@ -1,4 +1,4 @@
-Signal Delay is a faceless daily space-news channel: one real space story a day, explained in under a minute, with the source on screen. This system governs every Short (1080 x 1920, 9:16), the weekly long-form video, thumbnails, and channel art. The frame is photo-first and fast; the type is calm and precise; amber is the only accent.
+Downlink Cat (named Signal Delay until Oct 16, 2026) is a faceless daily space-news channel: one real space story a day, explained in under a minute, with the source on screen. This system governs every Short (1080 x 1920, 9:16), the weekly long-form video, thumbnails, and channel art. The frame is photo-first and fast; the type is calm and precise; amber is the only accent.
 
 ## Content fundamentals
 
@@ -13,7 +13,7 @@ Signal Delay is a faceless daily space-news channel: one real space story a day,
 
 ### Color
 - Set every text box, diagram and the NEXT card on `ink`.
-- Set all text in `paper`. Use `amber` only for: the newest caption word, series marks, the chip value and echo mark, diagram strokes, key numbers on `ink`, and DELAY in the wordmark.
+- Set all text in `paper`. Use `amber` only for: the newest caption word, series marks, the chip value and echo mark, diagram strokes, key numbers on `ink`, and CAT in the wordmark.
 - Put `muted` on `ink` only, for units and secondary labels; never on a photo.
 - Put each caption line on `caption-box`. When giant `paper` type sits directly on a photo, add a flat `photo-scrim` between 25% and 35% and measure: the worst pixel under the type must reach 4.5:1. Never a gradient.
 
@@ -22,7 +22,7 @@ Signal Delay is a faceless daily space-news channel: one real space story a day,
 - `giant-number` (Archivo 800, width 112, 300 to 400px, uppercase, tabular numerals) for hooks, count-ups and dates; it may start at x 40.
 - `caption` (Archivo 700, width 100, 90px, sentence case) for narration.
 - `headline` (Archivo 800, width 112, 88px, uppercase) for the NEXT card line.
-- `wordmark` (Archivo 800, width 125): SIGNAL in `paper`, DELAY in `amber`, always after the echo mark.
+- `wordmark` (Archivo 800, width 125): DOWNLINK in `paper`, CAT in `amber`, always after the echo mark.
 - `kicker`, `chip`, `data`, `credit`, `diagram-label`: IBM Plex Mono 500. Every number, label, credit and unit is mono.
 
 ### Layout (Shorts, 1080 x 1920)

@@ -1,4 +1,4 @@
-# Signal Delay narrator voice (locked Oct 15, 2026)
+# Downlink Cat narrator voice (locked Oct 15, 2026)
 
 - Model: `google/gemini-3.8-flash-tts` through OpenRouter `/api/v1/audio/speech`
 - Voice: `Puck`

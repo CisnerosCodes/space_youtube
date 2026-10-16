@@ -1,13 +1,15 @@
-# Signal Delay: channel playbook
+# Downlink Cat: channel playbook
 
 The rules every script, video, title and upload must follow. The pipeline reads this file; change it here, not in code.
 
 ## Identity
-- Name: Signal Delay. Handle: @signaldelayhq. Channel ID: UC30o4V9vQ6ReBOpbCY2_7lg (created Oct 14, 2026). Google account: Brand Account under latentdrives@gmail.com.
+- Name: Downlink Cat (renamed from Signal Delay on Oct 16, 2026). Handle: @downlinkcat (fallback @downlinkcathq if taken). Channel ID: UC30o4V9vQ6ReBOpbCY2_7lg (created Oct 14, 2026).
+- Why the rename: another space channel, "Signal Delay" (@SignalDelay-22, UCKmS_6B0Ip8dmGbfHjfcTsA, joined Oct 6, 2026), was first in the same niche, with a weekly show. Before naming anything again, search YouTube channels, handles, TikTok, Instagram and X for the exact name, not only handle availability.
+- "Signal delay" stays as a science label on screen (the one-way light time chip); it never names the channel. Google account: Brand Account under latentdrives@gmail.com.
 - Positioning: one real space story a day, explained in under a minute, with the source on screen.
 - Output: one 30 to 45 second Short per day, plus one 8 to 10 minute "This week in space" long-form video per week, built from the same week's research.
 - Voice: one anonymous AI narrator, never a clone of a real person, on a plan that allows commercial use. Chosen in Phase 3.
-- Visual identity: the Signal Delay v1 design system (Full Bleed base with Telemetry type, amber accent and labeled diagrams).
+- Visual identity: the v1 design system (made as Signal Delay, renamed Downlink Cat) (Full Bleed base with Telemetry type, amber accent and labeled diagrams).
 
 ## Named series (rotate; never post two of the same series in a row)
 | Series | What it is |
@@ -48,10 +50,10 @@ If any target is missed, change the format before adding volume.
 - Uploads use the "Channel Ops" OAuth client (project playtest-channel, In production, unverified) on latentdrives@gmail.com, minted per channel with Hermes' `ytmint.py`. No Google Cloud work is needed for a Brand Account on latentdrives.
 - No unaudited-client lock: all 13 Gambitss API uploads are public, including 8 uploaded private with `publishAt`, which YouTube published on schedule to the second.
 - Approved videos upload as private with a `publishAt` time, so a post can still be pulled before it goes live.
-- Signal Delay has no token yet; mint it in Phase 5 (one consent click by the owner).
+- The channel token was minted by Hermes on Oct 15, 2026 (scopes youtube.upload, youtube, yt-analytics.readonly); it lives in the gitignored `.env` on the owner's computer. A rename does not change the channel ID or the token.
 - AI disclosure (checked Oct 15, 2026 against YouTube help answer 14328491): every upload sets `containsSyntheticMedia: true` (Studio "AI use: Yes") because the music is AI-generated; YouTube says disclosure alone does not limit reach or earning.
 - Uploader: `pipeline/youtube_upload.py` (private + `publishAt`, credentials from `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`). Pilot schedule: `lab/pilots/PUBLISH.md`.
-- Shared-account watch item: MAGNETIC VALENTINE's "Love at First Taste" carries an "Other notices" flag in Studio. A strike on any channel of this Google account puts every channel on it at risk, Signal Delay included.
+- Shared-account watch item: MAGNETIC VALENTINE's "Love at First Taste" carries an "Other notices" flag in Studio. A strike on any channel of this Google account puts every channel on it at risk, Downlink Cat included.
 
 ## Spending
 - Voice is the only planned spend (budget ceiling about $4 per week; expected well under $1 per week with Fish Drama 3, about $1 per week with Eleven v4 Turbo).
