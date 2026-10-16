@@ -4,7 +4,7 @@ Status: READY (Downlink Cat renders pushed Oct 16, 2026)
 
 Approved by the owner on Oct 15, 2026. On Oct 16 the channel was renamed from Signal Delay to Downlink Cat (see PLAYBOOK.md, Identity), so the three Signal Delay uploads from Oct 15 (cUT2N21Rd4c, 8q_GOVc-QAw, Tk6iehSEEVg) are replaced by new renders. Each Short uploads **private** with a `publishAt` time, so any one can still be pulled in Studio before it goes live.
 
-Times shifted one day on Oct 16 (the Oct 16 slot passed before the renames were done). The channel name and handle are changed by hand in Studio (Customization, Profile); the API does not change a channel's name.
+Times shifted one day on Oct 16 (the Oct 16 slot passed before the renames were done). The channel name and handle are changed by hand in Studio (Customization, Profile); on Oct 16 the API update changed the description but not the public name.
 
 | Order | Short | Publish at (UTC) | Local (ET) | Why this slot |
 |---|---|---|---|---|
