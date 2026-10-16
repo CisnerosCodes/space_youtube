@@ -1,0 +1,13 @@
+[
+  {"frame": 0,    "fps": 30, "type": "number_slam",  "sfx": "impact_soft", "note": "hook: kicker + giant number on frame 0, voice 'Mars has a moon' at 0.36 s"},
+  {"frame": 120,  "fps": 30, "type": "hard_cut",     "note": "cut to Phobos photo on 'Phobos' (4.00 s)"},
+  {"frame": 249,  "fps": 30, "type": "number_slam",  "note": "'fifty million' slams with the word (8.33 s)"},
+  {"frame": 384,  "fps": 30, "type": "echo_land",    "note": "'shatters into a ring' (ring at 12.81 s): dot then ring"},
+  {"frame": 477,  "fps": 30, "type": "cat_in",       "note": "cat swipes in on 'grab' (15.90 s)"},
+  {"frame": 541,  "fps": 30, "type": "chip_in",      "note": "MMX chip on 'MMX' (18.04 s)"},
+  {"frame": 666,  "fps": 30, "type": "impact",       "note": "'No mission' (22.20 s): firm stop, hard cut"},
+  {"frame": 806,  "fps": 30, "type": "cat_chirp",    "note": "cat tilts its head after 'Why bother?' (ends 26.67 s), before 'Because' (27.13 s); the only chirp"},
+  {"frame": 921,  "fps": 30, "type": "reveal",       "note": "swell peaks on 'finally' (30.71 s), the outcome beat"},
+  {"frame": 975,  "fps": 30, "type": "next_card_in", "note": "NEXT card on 'Liftoff is Monday' (32.50 s)"},
+  {"frame": 1110, "fps": 30, "type": "wordmark_echo","note": "wordmark + sonic logo after 'launch.' (ends 36.82 s)"}
+]

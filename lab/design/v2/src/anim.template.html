@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signal Delay v2 MMX</title>
+<!-- build: __BUILDINFO__ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  :root { --ink: #0B0B0C; --paper: #F2EFE8; --amber: #F5B83D; --muted: #8C8A85; }
+  html, body { margin: 0; background: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); color: var(--paper); font-family: 'Archivo', sans-serif; }
+  canvas, .layer { position: absolute; left: 0; top: 0; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+  .box { background: var(--ink); white-space: nowrap; }
+  .giant { position: absolute; left: 40px; display: none; font-weight: 800; font-stretch: 112%; text-transform: uppercase; white-space: nowrap;
+           transform-origin: 0 50%; color: var(--amber); font-variant-numeric: tabular-nums; line-height: 0.88; }
+  .gdata { position: absolute; left: 80px; display: none; font-size: 28px; line-height: 36px; color: var(--paper); white-space: nowrap; }
+  .gdata .u { color: var(--muted); }
+  #caps { position: absolute; left: 80px; top: 1196px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { padding: 8px 16px; background: rgba(11,11,12,0.88); font-weight: 700; font-stretch: 100%; font-size: 90px; line-height: 96px; white-space: nowrap; }
+  .w { color: var(--paper); }
+  .w.on { color: var(--amber); }
+  .lab { position: absolute; display: none; padding: 4px 10px; font-size: 28px; line-height: 36px; letter-spacing: 0.05em; }
+  #next > * { position: absolute; display: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="pic" width="1080" height="1920"></canvas>
+  <svg class="layer" width="0" height="0" aria-hidden="true"><defs id="fdefs"></defs></svg>
+
+  <!-- giant numbers and words (amber on ink) -->
+  <div class="giant" id="g6" style="top: 314px; font-size: 340px">6 FT</div>
+  <div class="gdata mono box" id="g6d" style="top: 632px; padding: 6px 12px">1.8 M <span class="u">·</span> EVERY 100 YEARS</div>
+  <div class="giant" id="g50" style="top: 314px; font-size: 340px">50</div>
+  <div class="gdata mono box" id="g50d" style="top: 632px; padding: 6px 12px">MILLION YEARS</div>
+  <div class="giant" id="gMon" style="top: 314px; font-size: 340px">MON</div>
+  <div class="gdata mono box" id="gMond" style="top: 632px; padding: 6px 12px">19 OCT</div>
+  <div class="giant" id="gMmx" style="top: 314px; font-size: 340px">MMX</div>
+
+  <!-- moon labels on the two-moons beat -->
+  <div class="lab mono box" id="labP">PHOBOS</div>
+  <div class="lab mono box" id="labD">DEIMOS</div>
+
+  <!-- NEXT card text (the line art lives on the canvas) -->
+  <div id="next" class="layer" style="width: 1080px; height: 1920px">
+    <div id="nHead" style="left: 80px; top: 330px; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">MMX lifts off</div>
+    <div id="nDate" class="mono" style="left: 80px; top: 446px; font-size: 64px; line-height: 64px; color: var(--amber); white-space: nowrap">MON 19 OCT</div>
+    <div id="nData" class="mono" style="left: 80px; top: 528px; font-size: 28px; line-height: 36px; white-space: nowrap; color: var(--paper)">H3 ROCKET <span style="color: var(--muted)">·</span> TANEGASHIMA</div>
+    <div id="nPoint" class="mono" style="left: 80px; top: 952px; padding: 10px 18px 10px 14px; border: 2px solid var(--amber); font-size: 28px; line-height: 38px; white-space: nowrap; color: var(--paper)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
+        <span><span style="color: var(--amber)">Follow</span> for the launch</span>
+      </div>
+    </div>
+    <div id="nMark" style="left: 80px; top: 1064px; align-items: center; gap: 24px">
+      <svg width="104" height="44" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+        <circle id="nDot" cx="22" cy="22" r="22" fill="#F5B83D" style="transform-box: fill-box; transform-origin: center"></circle>
+        <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+      </svg>
+      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">Signal <span style="color: var(--amber)">Delay</span></div>
+    </div>
+  </div>
+
+  <!-- series kicker: identical on every frame; reads NEXT ON LAUNCH DAY on the NEXT card -->
+  <div class="mono box" id="kicker" style="position: absolute; left: 80px; top: 246px; display: flex; align-items: center; gap: 12px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; text-transform: uppercase">
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 L26 25 H2 Z" fill="#F5B83D"></path></svg>
+    <span id="kText">Launch day</span>
+  </div>
+
+  <!-- signal delay chip: Mars, Oct. 19, 2026, JPL Horizons one-way light time 12.71 to 12.77 min -->
+  <div class="mono box" id="chip" style="position: absolute; left: 80px; top: 302px; display: none; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px">
+    <svg width="47.27" height="20" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+      <circle cx="22" cy="22" r="22" fill="#F5B83D"></circle>
+      <circle id="chipRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+    <span>SIGNAL DELAY</span><span style="color: var(--amber)">MARS 12 min 43 s</span>
+  </div>
+
+  <div id="caps"></div>
+
+  <!-- mascot (catA v2 rig), drawn per frame; never over captions or a photo's subject -->
+  <svg id="cat" class="layer" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="display: none; overflow: hidden">
+    <defs><clipPath id="catClip"><rect id="catClipR" x="0" y="0" width="1080" height="1920"></rect></clipPath></defs>
+    <g clip-path="url(#catClip)"><g id="catG"></g></g>
+  </svg>
+
+  <!-- credit slot: the photo credit, or the source of the facts on a line-art beat -->
+  <div class="mono box" id="credit" style="position: absolute; left: 80px; top: 1458px; display: none; padding: 6px 12px; font-size: 24px; line-height: 28px"></div>
+</div>
+
+<script>
+const SCHEDULE = /*__CAPTIONS__*/null;
+const IMAGES = /*__IMAGES__*/null;
+/*__RIG__*/
+(() => {
+  // ================================================================ constants
+  const FPS = 30;
+  const NF = Math.ceil(SCHEDULE.duration * FPS - 1e-6);      // narration length rounded up to whole frames
+  const LAST = NF - 1;
+  const C = { ink: '#0B0B0C', paper: '#F2EFE8', amber: '#F5B83D', muted: '#8C8A85' };
+  const CR = {
+    hirise: 'NASA/JPL-Caltech/University of Arizona',
+    viking: 'NASA/JPL/USGS',
+    marsMoons: 'NASA/JPL/USGS, NASA/JPL-Caltech/University of Arizona',
+    nasa: 'Source: NASA',
+    jaxa: 'Source: JAXA',
+    ll2: 'Source: Launch Library 2',
+  };
+
+  // ================================================================ easing, springs, noise
+  function bezier(x1, y1, x2, y2) {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t, sy = (t) => ((ay * t + by) * t + cy) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) { const e = sx(t) - x, d = dx(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+      let lo = 0, hi = 1;
+      for (let i = 0; i < 30 && Math.abs(sx(t) - x) > 1e-6; i++) { if (sx(t) < x) lo = t; else hi = t; t = (lo + hi) / 2; }
+      return sy(t);
+    };
+  }
+  const enter = bezier(0.16, 1, 0.3, 1), move = bezier(0.76, 0, 0.24, 1), exitE = bezier(0.7, 0, 0.84, 0);
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const elerp = (a, b, t) => a * Math.pow(b / a, t);          // for scales
+  const k = (f, a, d, e = (x) => x) => e(clamp01((f - a) / d));
+  function spring(t, zeta, fr) {
+    if (t <= 0) return 0;
+    const w = 2 * Math.PI * fr, wd = w * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+  }
+  const sp = (df, zeta = 0.7, fr = 4) => (df <= 0 ? 0 : spring(df / FPS, zeta, fr));
+  // punch-in: 4% on a spring that settles in about 6 frames
+  const punch = (f, list, amt = 0.04) => list.reduce((p, pf) => p * (1 + amt * sp(f - pf)), 1);
+  function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+  // ================================================================ timing from the caption schedule
+  const W = SCHEDULE.words.map((w) => ({ ...w, f: Math.round(w.start * FPS), fe: Math.round(w.end * FPS), key: w.text.toLowerCase().replace(/[^a-z0-9]/g, '') }));
+  function at(re, from = 0) {
+    for (let i = Math.max(0, from); i < W.length; i++) if (re.test(W[i].key)) return i;
+    throw new Error('anchor not found: ' + re + ' after word ' + from);
+  }
+  const I = {};
+  I.slowly = at(/^slowly$/);
+  I.phobos1 = at(/^phobos$/, I.slowly);
+  I.drops = at(/^drops$/, I.phobos1);
+  I.six = at(/^(six|6)$/, I.drops);
+  I.closer = at(/^closer$/, I.six);
+  I.years1 = at(/^years$/, I.closer);
+  I.in = I.years1 + 1;
+  I.fifty = at(/^(fifty|50)$/, I.in);
+  I.million = at(/^million$/, I.fifty);
+  I.crashes = at(/^crash/, I.million);
+  I.mars3 = at(/^mars$/, I.crashes);
+  I.or = at(/^or$/, I.mars3);
+  I.shatters = at(/^shatter/, I.or);
+  I.ring = at(/^ring$/, I.shatters);
+  I.and1 = I.ring + 1;
+  I.monday1 = at(/^monday$/, I.and1);
+  I.go = at(/^go$/, I.monday1);
+  I.piece = at(/^piece$/, I.go);
+  I.it2 = at(/^called$/, I.piece) - 2;          // "It is called MMX"
+  I.mmx = at(/^mmx$/, I.it2);
+  I.land = at(/^land$/, I.mmx);
+  I.phobos2 = at(/^phobos$/, I.land);
+  I.scoop = at(/^scoop$/, I.phobos2);
+  I.sample1 = at(/^sample$/, I.scoop);
+  I.fly = at(/^fly$/, I.sample1);
+  I.home = at(/^home$/, I.fly);
+  I.no = I.home + 1;
+  I.mars4 = at(/^mars$/, I.no);
+  I.or2 = at(/^or$/, I.mars4);
+  I.moons1 = at(/^moons$/, I.or2);
+  I.why = at(/^why$/, I.moons1);
+  I.these = at(/^these$/, I.why);
+  I.moons2 = at(/^moons$/, I.these);
+  I.that2 = at(/^that$/, I.moons2);
+  I.sample2 = at(/^sample$/, I.that2);
+  I.finally = at(/^finally$/, I.sample2);
+  I.tell = at(/^tell$/, I.finally);
+  I.liftoff = at(/^liftoff$/, I.tell);
+  I.monday2 = at(/^monday$/, I.liftoff);
+  I.h3 = at(/^h3$/, I.monday2);
+  I.follow = at(/^follow$/, I.h3);
+  I.we = at(/^we$/, I.follow);
+  I.show = at(/^show$/, I.we);
+  const F = {};
+  for (const [name, i] of Object.entries(I)) F[name] = W[i].f;
+  F.end = LAST;
+  const FE = (name) => W[I[name]].fe;
+
+  // ================================================================ images and parallax layers
+  // Each photo = the image plus soft-masked copies of regions that sit "nearer"; on a push the
+  // near layers scale and drift more, so a flat photo gains depth without visible seams.
+  const PH = {
+    phobosA: { cx: 0.522, cy: 0.501, body: 0.94, layers: [[0.53, 0.5, 0.34, 1.0], [0.62, 0.42, 0.14, 1.7]] },
+    phobosB: { cx: 0.519, cy: 0.561, body: 0.962, layers: [[0.55, 0.62, 0.34, 1.0], [0.5, 0.48, 0.14, 1.6]] },
+    deimos: { cx: 0.486, cy: 0.498, body: 0.886, layers: [] },
+    mars: { cx: 0.5, cy: 0.5, body: 1.0, layers: [[0.5, 0.5, 0.34, 1.0], [0.45, 0.58, 0.14, 1.5]] },
+  };
+  const imgPromises = [];
+  for (const [name, P] of Object.entries(PH)) {
+    const im = new Image(); im.src = IMAGES[name]; P.img = im;
+    imgPromises.push(im.decode().then(() => {
+      P.w = im.naturalWidth; P.h = im.naturalHeight; P.bodyPx = P.body * P.w;
+      P.lay = P.layers.map(([mx, my, r, d]) => {
+        const c = document.createElement('canvas'); c.width = P.w; c.height = P.h;
+        const g = c.getContext('2d'); g.drawImage(im, 0, 0);
+        g.globalCompositeOperation = 'destination-in';
+        const R = r * P.w, gr = g.createRadialGradient(mx * P.w, my * P.h, R * 0.35, mx * P.w, my * P.h, R);
+        gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+        g.fillStyle = gr; g.fillRect(0, 0, P.w, P.h);
+        return { c, d };
+      });
+    }));
+  }
+
+  // ================================================================ canvas drawing helpers
+  const pic = document.getElementById('pic'), pctx = pic.getContext('2d');
+  const mk = () => { const c = document.createElement('canvas'); c.width = 1080; c.height = 1920; return c; };
+  const tmp = mk(), tctx = tmp.getContext('2d'), acc = mk(), actx = acc.getContext('2d');
+  let PROBE = null;              // when an array, helpers record tracked points instead of drawing
+  const track = (...pts) => { if (PROBE) for (let i = 0; i < pts.length; i += 2) PROBE.push(pts[i], pts[i + 1]); return !!PROBE; };
+
+  // photo: anchor its body centre at (x, y); s = scale of the prepared image; push = parallax amount
+  function photo(g, P, o) {
+    const s = o.s, x = o.x, y = o.y;
+    if (track(x, y, x + (P.w * s) / 2, y)) return;
+    const rot = ((o.rot || 0) * Math.PI) / 180, push = o.push || 0, [dx, dy] = o.drift || [0, 0];
+    g.save(); g.globalAlpha = o.alpha ?? 1;
+    const ax = P.cx * P.w, ay = P.cy * P.h;
+    const one = (src, d) => {
+      g.save(); g.translate(x + dx * d, y + dy * d); g.rotate(rot); const ss = s * (1 + push * d); g.scale(ss, ss);
+      g.drawImage(src, -ax, -ay); g.restore();
+    };
+    one(P.img, 0);
+    if (P.lay) for (const L of P.lay) one(L.c, L.d);
+    g.restore();
+  }
+  // screen point of an image-normalised point (nx, ny) for a given photo framing (base layer)
+  function photoPt(P, o, nx, ny) {
+    const rot = ((o.rot || 0) * Math.PI) / 180, s = o.s;
+    const px = (nx - P.cx) * P.w * s, py = (ny - P.cy) * P.h * s;
+    return [o.x + px * Math.cos(rot) - py * Math.sin(rot), o.y + px * Math.sin(rot) + py * Math.cos(rot)];
+  }
+  function dot(g, x, y, r = 11, color = C.amber, alpha = 1) {
+    if (track(x, y)) return;
+    g.save(); g.globalAlpha = alpha; g.fillStyle = color; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.restore();
+  }
+  function ring(g, x, y, r, w = 4, alpha = 1, dash = null) {
+    if (track(x, y, x + r, y)) return;
+    g.save(); g.globalAlpha = alpha; g.strokeStyle = C.amber; g.lineWidth = w; if (dash) g.setLineDash(dash);
+    g.beginPath(); g.arc(x, y, Math.max(0.1, r), 0, Math.PI * 2); g.stroke(); g.restore();
+  }
+
+  // ---- flat line art: lists of primitives that draw on by length
+  // L = line, P = polyline, A = ellipse arc (cx, cy, rx, ry, a0, a1), D = filled dot
+  const Lp = (x1, y1, x2, y2) => ({ t: 'P', pts: [[x1, y1], [x2, y2]] });
+  const Pp = (...pts) => ({ t: 'P', pts });
+  const Ap = (cx, cy, rx, ry, a0, a1) => ({ t: 'A', cx, cy, rx, ry, a0, a1 });
+  function plen(p) {
+    if (p.t === 'P') { let s = 0; for (let i = 1; i < p.pts.length; i++) s += Math.hypot(p.pts[i][0] - p.pts[i - 1][0], p.pts[i][1] - p.pts[i - 1][1]); return s; }
+    let s = 0, px, py; for (let i = 0; i <= 32; i++) { const a = p.a0 + (p.a1 - p.a0) * (i / 32), x = p.cx + p.rx * Math.cos(a), y = p.cy + p.ry * Math.sin(a); if (i) s += Math.hypot(x - px, y - py); px = x; py = y; } return s;
+  }
+  function pdraw(g, p, u) {
+    if (u <= 0) return;
+    g.beginPath();
+    if (p.t === 'A') { g.ellipse(p.cx, p.cy, p.rx, p.ry, 0, p.a0, p.a0 + (p.a1 - p.a0) * Math.min(1, u)); g.stroke(); return; }
+    const L = p.len ?? (p.len = plen(p)); let left = L * Math.min(1, u);
+    g.moveTo(p.pts[0][0], p.pts[0][1]);
+    for (let i = 1; i < p.pts.length && left > 0; i++) {
+      const [x0, y0] = p.pts[i - 1], [x1, y1] = p.pts[i], d = Math.hypot(x1 - x0, y1 - y0);
+      if (d <= left) { g.lineTo(x1, y1); left -= d; } else { g.lineTo(x0 + ((x1 - x0) * left) / d, y0 + ((y1 - y0) * left) / d); left = 0; }
+    }
+    g.stroke();
+  }
+  // art: items = [[prim, startFrame, durFrames], ...]; xf = {x, y, s, rot}; stroke stays 4 px on screen
+  function art(g, items, f, xf, opt = {}) {
+    if (track(xf.x, xf.y, xf.x + 100 * xf.s, xf.y)) return;
+    g.save(); g.translate(xf.x, xf.y); g.rotate(((xf.rot || 0) * Math.PI) / 180); g.scale(xf.s, xf.s);
+    g.strokeStyle = opt.color || C.amber; g.lineWidth = (opt.w || 4) / xf.s; g.lineCap = 'butt'; g.lineJoin = 'miter';
+    if (opt.dash) g.setLineDash(opt.dash.map((v) => v / xf.s));
+    for (const [p, a, d] of items) pdraw(g, p, a == null ? 1 : k(f, a, d, enter));
+    g.restore();
+  }
+  // a closed outline filled with ink (so it hides what is behind it), then stroked amber
+  function inkCircle(g, x, y, r, u = 1) {
+    if (track(x, y, x + r, y)) return;
+    g.save(); g.fillStyle = C.ink; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = C.amber; g.lineWidth = 4; g.beginPath(); g.arc(x, y, r, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * u); g.stroke(); g.restore();
+  }
+
+  // ================================================================ drawings
+  // MMX spacecraft (simplified, not to any published drawing): bus, two solar wings, a dish,
+  // four legs, the return capsule on top (the amber dot, drawn separately) and a sampler arm.
+  function mmxItems(a) {
+    return [
+      [Pp([-70, -60], [70, -60], [70, 60], [-70, 60], [-70, -60]), a, 10],
+      [Lp(-70, -18, 70, -18), a + 5, 6],
+      [Lp(-70, 0, -112, 0), a + 6, 4], [Lp(70, 0, 112, 0), a + 7, 4],
+      [Pp([-112, -36], [-332, -36], [-332, 36], [-112, 36], [-112, -36]), a + 8, 10],
+      [Pp([112, -36], [332, -36], [332, 36], [112, 36], [112, -36]), a + 11, 10],
+      [Lp(-185, -36, -185, 36), a + 13, 4], [Lp(-258, -36, -258, 36), a + 14, 4],
+      [Lp(185, -36, 185, 36), a + 15, 4], [Lp(258, -36, 258, 36), a + 16, 4],
+      [Lp(-62, 60, -114, 150), a + 14, 6], [Lp(-130, 150, -98, 150), a + 18, 3],
+      [Lp(62, 60, 114, 150), a + 15, 6], [Lp(98, 150, 130, 150), a + 19, 3],
+      [Lp(-24, 60, -34, 132), a + 16, 5], [Lp(24, 60, 34, 132), a + 17, 5],
+      [Lp(-40, -60, -40, -70), a + 16, 2], [Ap(-40, -78, 28, 11, 0, Math.PI), a + 17, 6],
+    ];
+  }
+  // H3-24 (simplified): core stage, fairing, four SRB-3 boosters (two show on each side), two LE-9 bells
+  function ogive(x0, y0, x1, y1, tipY) { const pts = []; for (let i = 0; i <= 12; i++) { const u = i / 12, x = lerp(x0, x1, u); pts.push([x, y0 - (y0 - tipY) * Math.sin(Math.PI * u)]); } return pts; }
+  function h3Items(a) {
+    return [
+      [Pp([-34, 0], [-34, -440], [34, -440], [34, 0], [-34, 0]), a, 12],
+      [Lp(-34, -300, 34, -300), a + 6, 4],
+      [Pp([-37, -440], [-37, -520]), a + 6, 4], [Pp([37, -440], [37, -520]), a + 6, 4],
+      [Pp(...ogive(-37, -520, 37, -520, -598)), a + 8, 8],
+      [Pp([-34, -8], [-62, -8], [-62, -176], ...ogive(-62, -176, -34, -176, -214).slice(0, 13), [-34, -176]), a + 9, 9],
+      [Pp([34, -8], [62, -8], [62, -176], ...ogive(62, -176, 34, -176, -214).slice(0, 13), [34, -176]), a + 10, 9],
+      [Pp([-62, -22], [-80, -22], [-80, -158], ...ogive(-80, -158, -62, -158, -188)), a + 12, 8],
+      [Pp([62, -22], [80, -22], [80, -158], ...ogive(80, -158, 62, -158, -188)), a + 13, 8],
+      [Pp([-26, 0], [-30, 24], [-8, 24], [-12, 0]), a + 14, 4], [Pp([26, 0], [30, 24], [8, 24], [12, 0]), a + 15, 4],
+    ];
+  }
+  const padItems = (a) => [[Lp(-170, 30, 170, 30), a, 8]];
+
+  // ================================================================ scene geometry
+  // Orbit diagram: Mars as a line circle, Phobos as the amber dot on a tilted orbit.
+  const M = { x: 540, y: 900, R: 150 }, ORB = { rx: 380, ry: 118, tilt: (-7 * Math.PI) / 180 };
+  function orbPt(th, kk, off) {
+    const x = ORB.rx * kk * Math.cos(th), y = ORB.ry * kk * Math.sin(th);
+    return [M.x + x * Math.cos(ORB.tilt) - y * Math.sin(ORB.tilt), M.y + off + x * Math.sin(ORB.tilt) + y * Math.cos(ORB.tilt)];
+  }
+  const TH0 = 2.62, OMEGA = (2 * Math.PI) / 170;
+  const orbK = (f) => 1 - 0.16 * k(f, F.closer, Math.max(12, F.years1 + 6 - F.closer), move);
+  const orbTh = (f) => TH0 + OMEGA * (f - F.phobos1);
+  // impact point on the visible lower-left limb of Mars
+  const IMP_A = 2.35;
+  const impPt = (off) => [M.x + M.R * Math.cos(IMP_A), M.y + off + M.R * Math.sin(IMP_A)];
+  // the dot's position through the fate beat (orbit, crash, rewind, shatter)
+  function fateDot(f, off) {
+    const th = orbTh(f), kk = orbK(f);
+    const fc = F.crashes, fm = Math.max(F.mars3, fc + 10);
+    if (f < fc) return { p: orbPt(th, kk, off), th, vis: true };
+    const S = orbPt(orbTh(fc), orbK(fc), off), Cp = orbPt(orbTh(fc) + 0.55, kk * 0.92, off), E = impPt(off);
+    const bz = (u) => [(1 - u) * (1 - u) * S[0] + 2 * (1 - u) * u * Cp[0] + u * u * E[0], (1 - u) * (1 - u) * S[1] + 2 * (1 - u) * u * Cp[1] + u * u * E[1]];
+    if (f < fm) return { p: bz(exitE(clamp01((f - fc) / (fm - fc)))), th: orbTh(fc), vis: true };
+    if (f < F.or) return { p: E, vis: false };
+    const fr = F.or + 12;
+    if (f < fr) return { p: bz(1 - move(clamp01((f - F.or) / 12))), th: orbTh(fc), vis: true };
+    return { p: S, th: orbTh(fc), vis: f < F.shatters };
+  }
+  // thin dashed orbit, split into the half behind Mars and the half in front
+  function orbitPath(g, kk, a0, a1, front, off, dash = [10, 12], w = 4, alpha = 1) {
+    if (PROBE) return;
+    g.save(); g.strokeStyle = C.amber; g.lineWidth = w; g.globalAlpha = alpha; if (dash) g.setLineDash(dash);
+    g.beginPath(); let pen = false;
+    const N = Math.max(8, Math.ceil(((a1 - a0) / (2 * Math.PI)) * 160));
+    for (let i = 0; i <= N; i++) {
+      const th = a0 + ((a1 - a0) * i) / N, isFront = Math.sin(th) > 0;
+      const [x, y] = orbPt(th, kk, off);
+      if (isFront === front) { if (!pen) { g.moveTo(x, y); pen = true; } else g.lineTo(x, y); } else pen = false;
+    }
+    g.stroke(); g.restore();
+  }
+  // fragments for "shatters into a ring"
+  const FRAG = (() => { const r = rng(1919); return Array.from({ length: 64 }, (_, j) => ({ d: ((j + 0.5) / 64) * 2 * Math.PI + (r() - 0.5) * 0.08, kk: 0.84 * (1 + (r() - 0.5) * 0.1), r: 2.5 + r() * 3.5, sp: 0.6 + r() * 0.8 })); })();
+
+  // ================================================================ scenes (float frame f)
+  const SC = [];
+  const scene = (a, b, draw) => SC.push({ a, b, draw });
+
+  // ---- 1. hook: Phobos, drifting down ("falling. Slowly."), then shrinking into the orbit dot
+  const hookCam = (f) => {
+    const fall = k(f, 0, F.slowly + 30, enter);
+    return { x: 620, y: 600 + 44 * fall, s: (760 / PH.phobosA.bodyPx) * (1 + 0.03 * fall) * punch(f, [F.slowly]), rot: -2 + 3 * fall, push: 0.07 * fall };
+  };
+  const M0 = F.phobos1 - 3, MD = 16;   // photo -> dot morph
+  scene(0, M0 + MD, (g, f) => {
+    const cam = hookCam(Math.min(f, M0));
+    const m = k(f, M0, MD, move);
+    const target = orbPt(orbTh(M0 + MD), 1, 0);
+    const sDot = 22 / PH.phobosA.bodyPx;
+    const o = { ...cam, x: lerp(cam.x, target[0], m), y: lerp(cam.y, target[1], m), s: elerp(cam.s, sDot, m) };
+    const r = (o.s * PH.phobosA.bodyPx) / 2;
+    if (r > 12) photo(g, PH.phobosA, { ...o, alpha: clamp01((r - 12) / 26) });
+    if (m > 0 && r < 40) dot(g, o.x, o.y, Math.max(11, Math.min(r, 11)), C.amber, clamp01((40 - r) / 26));
+  });
+
+  // ---- 2+3. orbit diagram: drop closer, crash or shatter into a ring; exits upward on "And"
+  const DX0 = F.and1 - 2;     // camera tilt-down: the diagram leaves upward
+  scene(M0 + MD - 1, DX0 + 16, (g, f) => {
+    const off = -1300 * k(f, DX0, 14, exitE);
+    const kk = orbK(f), th = orbTh(f);
+    const marsU = k(f, M0 + 8, 16, enter);
+    const orbU = k(f, M0 + MD, 26, enter);
+    const fd = fateDot(f, off);
+    const shatter = f >= F.shatters;
+    // trail of the last ~90 frames: shows the orbit tightening into a spiral
+    const trail = (front) => {
+      if (PROBE || f < F.drops || f >= F.crashes) return;
+      g.save(); g.strokeStyle = C.amber; g.lineWidth = 4; g.globalAlpha = 1; g.setLineDash([2, 10]); g.lineCap = 'round';
+      g.beginPath(); let pen = false;
+      for (let q = Math.max(F.drops, f - 90); q <= f; q += 1) {
+        const t2 = orbTh(q), [x, y] = orbPt(t2, orbK(q), off), isF = Math.sin(t2) > 0;
+        if (isF === front) { if (!pen) { g.moveTo(x, y); pen = true; } else g.lineTo(x, y); } else pen = false;
+      }
+      g.stroke(); g.restore();
+    };
+    // back
+    if (orbU > 0) orbitPath(g, kk, TH0, TH0 + 2 * Math.PI * orbU, false, off, [10, 12], 4, 0.55);
+    trail(false);
+    if (!shatter && fd.vis && Math.sin(fd.th ?? th) <= 0 && f < F.crashes) dot(g, fd.p[0], fd.p[1]);
+    if (shatter) fragments(g, f, off, false);
+    // Mars
+    const mp = punch(f, [F.mars3 + 0], 0.05);
+    if (marsU > 0) inkCircle(g, M.x, M.y + off, M.R * mp, marsU);
+    // front
+    if (orbU > 0) orbitPath(g, kk, TH0, TH0 + 2 * Math.PI * orbU, true, off, [10, 12], 4, 0.55);
+    trail(true);
+    if (!shatter && fd.vis && (Math.sin(fd.th ?? th) > 0 || f >= F.crashes)) dot(g, fd.p[0], fd.p[1]);
+    if (shatter) fragments(g, f, off, true);
+    // impact: one ring springs out of the limb and fades (no flash)
+    const di = f - Math.max(F.mars3, F.crashes + 10);
+    if (di >= 0 && di < 16 && f < F.or) { const [ix, iy] = impPt(off); ring(g, ix, iy, 11 + 60 * enter(di / 16), 4, 1 - di / 16); }
+    if (f >= F.ring) orbitPath(g, 0.84, 0, 2 * Math.PI * k(f, F.ring, 10, enter), true, off, null, 2, 0.9), orbitPath(g, 0.84, 0, 2 * Math.PI * k(f, F.ring, 10, enter), false, off, null, 2, 0.5);
+  });
+  function fragments(g, f, off, front) {
+    const fs = F.shatters, S = orbTh(F.crashes), e = k(f, fs, 30, enter);
+    for (const q of FRAG) {
+      const th = S + q.d * e + 0.006 * q.sp * (f - fs);
+      if ((Math.sin(th) > 0) !== front) continue;
+      const [x, y] = orbPt(th, lerp(orbK(F.crashes), q.kk, e), off);
+      dot(g, x, y, lerp(8, q.r, e));
+    }
+  }
+
+  // ---- 4. Monday: the H3 on the pad rises in; on "go" the dot leaves the fairing and the camera tilts up to Phobos
+  const RK = { x: 790, y: 1150, s: 0.78 };
+  const goA = F.go - 2;
+  const pieceCam = (f) => {
+    const e = k(f, goA + 2, 22, enter), push = k(f, goA + 24, 60, (x) => x);
+    return { x: 560, y: 930 - 1700 * (1 - e), s: 0.6 * (1 + 0.04 * push), push: 0.05 * push, rot: 0 };
+  };
+  const PIECE = [0.62, 0.5];
+  scene(DX0 - 2, F.it2 - 3, (g, f) => {
+    const rise = 1300 * (1 - k(f, DX0 - 2, 22, enter)) + 1500 * k(f, goA, 14, exitE);
+    if (f < goA + 16) {
+      art(g, padItems(DX0 - 40), f, { x: RK.x, y: RK.y + rise, s: RK.s });
+      art(g, h3Items(DX0 - 40), f, { x: RK.x, y: RK.y + rise, s: RK.s });
+    }
+    if (f >= goA + 1) photo(g, PH.phobosB, pieceCam(f));
+    // the dot: from the fairing tip up to the piece of Phobos
+    const tip = [RK.x, RK.y + rise - 598 * RK.s];
+    const cam = pieceCam(f), spot = photoPt(PH.phobosB, cam, PIECE[0], PIECE[1]);
+    if (f >= DX0 + 14 && f < goA) dot(g, tip[0], tip[1] - 14);
+    if (f >= goA) {
+      const u = k(f, goA, F.piece - goA, enter);
+      const p0 = [RK.x, RK.y - 598 * RK.s - 14];
+      dot(g, lerp(p0[0], spot[0], u), lerp(p0[1], spot[1], u));
+    }
+    if (f >= F.piece && f < F.it2 - 3) { const e = sp(f - F.piece); ring(g, spot[0], spot[1], 34 * (0.4 + 0.6 * e)); }
+  });
+
+  // ---- 5. MMX: the ring opens into ink (iris), the spacecraft draws itself, lands, scoops, sends the capsule home
+  const IR0 = F.it2 - 3;
+  const SC_C = { x: 540, y: 850, s: 1.3 };
+  const SURF_Y = 1080;
+  const craftY = (f) => {
+    const land = k(f, F.land, Math.max(8, F.phobos2 + 2 - F.land), enter);
+    const touch = F.phobos2 + 2;
+    const dip = f >= touch ? 7 * Math.sin(Math.min(1, (f - touch) / 8) * Math.PI) * Math.exp(-(f - touch) / 10) : 0;
+    return lerp(SC_C.y + 6 * Math.sin((f - F.it2) / 18), SURF_Y - 150 * SC_C.s + 6, land) + dip;
+  };
+  const camOff = (f) => { const e = k(f, FE('home') + 1, 16, exitE); return [-700 * e, 1300 * e]; };
+  scene(IR0, FE('home') + 18, (g, f) => {
+    const [ox, oy] = camOff(f);
+    const x = SC_C.x + ox, y = craftY(f) + oy;
+    // surface of Phobos as one big line arc, rising in on "Land"
+    const surfY = SURF_Y + 700 * (1 - k(f, F.land - 2, 16, enter)) + oy;
+    if (f >= F.land - 2) art(g, [[Ap(0, 1400, 1400, 1400, -Math.PI / 2 - 0.5, -Math.PI / 2 + 0.5), null, 0], [Ap(-250, 22, 46, 10, 0, Math.PI), F.land + 4, 8], [Ap(250, 28, 64, 12, 0, Math.PI), F.land + 7, 8]], f, { x: 540 + ox, y: surfY, s: 1 });
+    art(g, mmxItems(IR0 + 9), f, { x, y, s: SC_C.s });
+    // sampler arm and the sample
+    const out = k(f, F.scoop, 8, enter) * (1 - k(f, F.sample1, 10, move));
+    if (out > 0.001) {
+      const tipx = 30 + 72 * out, tipy = 60 + 92 * out;
+      art(g, [[Lp(30, 60, tipx, tipy), null, 0]], f, { x, y, s: SC_C.s });
+      if (f >= F.scoop + 8) dot(g, x + tipx * SC_C.s, y + (tipy - 4) * SC_C.s, 6);
+    }
+    // the capsule (the persistent amber dot)
+    const cap = [x, y - 78 * SC_C.s - 8];
+    const fromSpot = (() => { const cam = pieceCam(IR0), s0 = photoPt(PH.phobosB, cam, PIECE[0], PIECE[1]); return s0; })();
+    const arrive = k(f, IR0, 14, enter);
+    let dp = [lerp(fromSpot[0], cap[0], arrive), lerp(fromSpot[1], cap[1], arrive)];
+    if (f >= F.fly) {
+      const u = k(f, F.fly, 18, exitE), end = [1300, -260];
+      const p = [lerp(cap[0], end[0], u), lerp(cap[1], end[1], u)];
+      if (!PROBE) { g.save(); g.strokeStyle = C.amber; g.lineWidth = 4; g.setLineDash([10, 12]); g.beginPath(); g.moveTo(cap[0], cap[1]); g.lineTo(p[0], p[1]); g.stroke(); g.restore(); }
+      dp = p;
+    }
+    // iris out of the Phobos photo
+    if (f < IR0 + 14) {
+      const cam = pieceCam(f), spot = photoPt(PH.phobosB, cam, PIECE[0], PIECE[1]);
+      const r = 34 + 2300 * k(f, IR0, 14, move);
+      if (!track(spot[0], spot[1], spot[0] + r, spot[1])) {
+        g.save(); g.beginPath(); g.rect(0, 0, 1080, 1920); g.arc(spot[0], spot[1], r, 0, Math.PI * 2, true); g.clip();
+        photo(g, PH.phobosB, { ...cam, s: cam.s * (1 + 0.12 * k(f, IR0, 14, move)) }); g.restore();
+        ring(g, spot[0], spot[1], r);
+      }
+    }
+    dot(g, dp[0], dp[1]);
+  });
+
+  // ---- 6. Mars arrives from the upper right (the camera keeps following the capsule), pulls back, two moons appear
+  const MA0 = FE('home') + 4;
+  const marsCam = (f) => {
+    const e = k(f, MA0, 30, enter), pb = k(f, F.mars4, 30, move), push = k(f, MA0 + 20, 80);
+    return {
+      x: lerp(lerp(1500, 560, e), 540, pb), y: lerp(lerp(-800, 820, e), 660, pb),
+      s: elerp(900 / 2200, 500 / 2200, pb) * (1 + 0.03 * push), push: 0.06 * push * (1 - pb) + 0.03 * pb, rot: 6 * (1 - e),
+    };
+  };
+  const LENS = { P: { x: 178, y: 478, r: 110, from: -1 }, D: { x: 912, y: 770, r: 80, from: 1 } };
+  const lensState = (f, which) => {
+    const L = LENS[which], t0 = F.or2 + (which === 'P' ? 0 : 4);
+    const cam = marsCam(f), mr = (cam.s * 2200) / 2;
+    const start = [cam.x + L.from * mr * 0.96, cam.y + 30];
+    const travel = k(f, t0, 12, enter), grow = k(f, t0 + 8, 14, enter);
+    const bob = 3 * Math.sin((f - t0) / 22 + (which === 'P' ? 0 : 2));
+    const hit = which === 'P' ? punch(f, [F.these], 0.06) : punch(f, [F.moons2], 0.06);
+    return { x: lerp(start[0], L.x, travel), y: lerp(start[1], L.y, travel) + bob * grow, r: lerp(11, L.r, grow) * hit, on: f >= t0, grow };
+  };
+  function lens(g, P, st, extra = {}) {
+    if (track(st.x, st.y, st.x + st.r, st.y)) return;
+    if (st.r < 22) { dot(g, st.x, st.y, Math.min(st.r, 22)); return; }
+    g.save(); g.beginPath(); g.arc(st.x, st.y, st.r, 0, Math.PI * 2); g.fillStyle = C.ink; g.fill(); g.clip();
+    const s = extra.s ?? ((st.r * 2 * 0.92) / P.bodyPx);
+    photo(g, P, { x: extra.x ?? st.x, y: extra.y ?? st.y, s, push: extra.push || 0 });
+    g.restore();
+    ring(g, st.x, st.y, st.r);
+  }
+  const IRIS2 = F.that2;
+  const closeCam = (f) => {
+    const push = k(f, IRIS2 + 14, F.liftoff - IRIS2 - 14);
+    return { x: 600, y: 940, s: 0.95 * (1 + 0.05 * push) * punch(f, [F.finally]), push: 0.06 * push, rot: 0 };
+  };
+  const SPOT2 = [0.4, 0.43];
+  scene(MA0, F.liftoff - 1, (g, f) => {
+    if (f < IRIS2 + 16) photo(g, PH.mars, marsCam(f));
+    const P = lensState(f, 'P'), D = lensState(f, 'D');
+    if (D.on && f < IRIS2 + 16) lens(g, PH.deimos, D);
+    if (P.on && f < IRIS2) lens(g, PH.phobosA, P);
+    if (f >= IRIS2) {
+      // the Phobos lens opens past the frame into the close-up
+      const u = k(f, IRIS2, 14, move);
+      const cc = closeCam(f);
+      const r = lerp(P.r, 1300, u), cx = lerp(P.x, 540, u), cy = lerp(P.y, 960, u);
+      const sFit = (P.r * 2 * 0.92) / PH.phobosA.bodyPx;
+      const st = { x: cx, y: cy, r };
+      lens(g, PH.phobosA, st, { x: lerp(P.x, cc.x, u), y: lerp(P.y, cc.y, u), s: Math.min(cc.s, (sFit * r) / P.r), push: cc.push });
+      if (f >= F.sample2) {
+        const p = photoPt(PH.phobosA, cc, SPOT2[0], SPOT2[1]);
+        ring(g, p[0], p[1], 34 * (0.4 + 0.6 * sp(f - F.sample2)));
+        dot(g, p[0], p[1], 11);
+        const de = f - F.tell;
+        if (de >= 0 && de < 20) ring(g, p[0], p[1], 34 + 70 * enter(de / 20), 4, 1 - de / 20);
+      }
+    }
+  });
+
+  // ---- 7. NEXT card: hard cut on "Liftoff". H3 on the pad at right; it lifts off on "we".
+  const NK = { x: 870, y: 1000, s: 0.78 };
+  scene(F.liftoff, LAST + 1, (g, f) => {
+    const arrive = 900 * (1 - k(f, F.liftoff, 18, enter));
+    const lift = -1800 * k(f, F.we, 24, exitE);
+    art(g, padItems(F.liftoff - 30), f, { x: NK.x, y: NK.y + arrive, s: NK.s });
+    const y = NK.y + arrive + lift;
+    if (f >= F.we && !PROBE) {
+      // exhaust as straight lines, and the climb as a dashed path
+      const fl = 40 + 50 * k(f, F.we, 6, enter);
+      g.save(); g.strokeStyle = C.amber; g.lineWidth = 4;
+      g.beginPath(); g.moveTo(NK.x - 26 * NK.s, y + 24 * NK.s); g.lineTo(NK.x - 17 * NK.s, y + (24 + fl) * NK.s); g.lineTo(NK.x - 8 * NK.s, y + 24 * NK.s);
+      g.moveTo(NK.x + 26 * NK.s, y + 24 * NK.s); g.lineTo(NK.x + 17 * NK.s, y + (24 + fl) * NK.s); g.lineTo(NK.x + 8 * NK.s, y + 24 * NK.s); g.stroke();
+      g.setLineDash([10, 12]); g.beginPath(); g.moveTo(NK.x, NK.y + 30 * NK.s); g.lineTo(NK.x, Math.max(-50, y + (24 + fl) * NK.s)); g.stroke(); g.restore();
+    }
+    art(g, h3Items(F.liftoff - 40), f, { x: NK.x, y, s: NK.s });
+  });
+
+  // ================================================================ picture with motion blur
+  function drawPicture(g, f) {
+    if (!PROBE) { g.globalAlpha = 1; g.fillStyle = C.ink; g.fillRect(0, 0, 1080, 1920); }
+    for (const s of SC) if (f >= s.a && f < s.b) s.draw(g, f);
+  }
+  const SHUTTER = 0.5; // frames (180 degrees)
+  function blurSamples(f) {
+    PROBE = []; drawPicture(null, f); const a = PROBE;
+    PROBE = []; drawPicture(null, f - SHUTTER); const b = PROBE; PROBE = null;
+    if (a.length !== b.length || f - SHUTTER < 0) return 1;
+    let mx = 0; for (let i = 0; i < a.length; i += 2) mx = Math.max(mx, Math.hypot(a[i] - b[i], a[i + 1] - b[i + 1]));
+    return Math.max(1, Math.min(16, Math.ceil(mx / 2.5)));
+  }
+  function renderPicture(f) {
+    const N = blurSamples(f);
+    if (N <= 1) { drawPicture(pctx, f); return 1; }
+    actx.clearRect(0, 0, 1080, 1920);
+    for (let i = 0; i < N; i++) {
+      drawPicture(tctx, f - (SHUTTER * i) / (N - 1));
+      actx.globalAlpha = 1 / (i + 1); actx.drawImage(tmp, 0, 0);
+    }
+    actx.globalAlpha = 1; pctx.drawImage(acc, 0, 0);
+    return N;
+  }
+
+  // ================================================================ DOM layers
+  const $ = (id) => document.getElementById(id);
+  const show = (el, on, disp = 'block') => { el.style.display = on ? disp : 'none'; };
+  // directional blur for DOM elements (giant type exits): one SVG filter per element
+  const fdefs = $('fdefs');
+  function blurFilter(el) {
+    const id = 'mb_' + el.id;
+    if (!$(id)) fdefs.insertAdjacentHTML('beforeend', `<filter id="${id}" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur id="${id}_g" stdDeviation="0 0"/></filter>`);
+    return $(id + '_g');
+  }
+  function setBlur(el, vx, vy) {
+    const fe = blurFilter(el), sx = Math.min(40, Math.abs(vx) * 0.35), sy = Math.min(60, Math.abs(vy) * 0.35);
+    if (sx < 0.3 && sy < 0.3) { el.style.filter = 'none'; return; }
+    fe.setAttribute('stdDeviation', `${sx.toFixed(2)} ${sy.toFixed(2)}`); el.style.filter = `url(#mb_${el.id})`;
+  }
+  // giant type: slam in (1.12 -> 1.0 over 5 frames), leave fast with blur
+  const slam = (df) => 1.12 - 0.12 * enter(clamp01(df / 5));
+  function giant(id, f, a, b, exitDir = -1, exitLen = 8, opts = {}) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    const ex = (q) => exitDir * 1100 * k(q, b, exitLen, exitE);
+    const dy = ex(f), vy = dy - ex(f - 1);
+    el.style.transform = `translateY(${dy.toFixed(1)}px) scale(${slam(f - a).toFixed(4)})`;
+    setBlur(el, 0, vy);
+  }
+  function gdata(id, f, a, b, exitDir = -1, exitLen = 8) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    const ex = (q) => exitDir * 1100 * k(q, b, exitLen, exitE);
+    const dy = ex(f); el.style.transform = `translateY(${dy.toFixed(1)}px)`; setBlur(el, 0, dy - ex(f - 1));
+  }
+  const ringEl = (el, df) => {
+    el.style.opacity = df < 0 ? 0 : clamp01((df + 1) / 3);
+    el.style.transform = `scale(${(0.4 + 0.6 * sp(Math.max(0, df))).toFixed(4)})`;
+  };
+
+  // ---- captions: chunks from the schedule, measured with the real font
+  let CHUNKS = [];
+  const GLUE = /^(a|an|the|to|of|on|in|into|and|or|is|its|it|from|that|these|six|fifty|hundred|go|up)$/i;
+  function buildChunks() {
+    const m = document.createElement('canvas').getContext('2d');
+    m.font = "700 90px 'Archivo'";
+    const wid = (ws) => m.measureText(ws.map((w) => w.text).join(' ')).width;
+    const MAXW = 820 - 32;                       // a line box must end by x 900
+    // 1. segments: a sentence, or a part of one after a pause longer than 0.45 s
+    const segs = []; let cur = [];
+    W.forEach((w, i) => {
+      const prev = W[i - 1];
+      if (cur.length && ((prev && /[.?!:]$/.test(prev.text)) || (prev && w.start - prev.end > 0.45))) { segs.push(cur); cur = []; }
+      cur.push(w);
+    });
+    if (cur.length) segs.push(cur);
+    const chunks = [];
+    for (const sg of segs) {
+      // 2. line breaks by dynamic programming: even lines, breaks after commas, no one-word lines
+      const n = sg.length, best = new Array(n + 1).fill(Infinity), from = new Array(n + 1).fill(-1); best[0] = 0;
+      for (let i = 1; i <= n; i++) for (let j = Math.max(0, i - 4); j < i; j++) {
+        const ws = sg.slice(j, i), w = wid(ws); if (w > MAXW || best[j] === Infinity) continue;
+        let c = i === n ? 0.3 * ((MAXW - w) / 100) ** 2 : ((MAXW - w) / 100) ** 2;
+        if (ws.length === 1 && n > 1) c += 40;
+        if (i < n && /,$/.test(sg[i - 1].text)) c -= 12;
+        if (ws.slice(0, -1).some((x) => /,$/.test(x.text))) c += 18;
+        if (i < n && GLUE.test(sg[i - 1].text)) c += 30;
+        if (i < n && /^(six|fifty|hundred|\d+)$/i.test(sg[i - 1].text)) c += 60;   // never split a number from its unit      // keep "six feet", "a sample" together
+        if (best[j] + c < best[i]) { best[i] = best[j] + c; from[i] = j; }
+      }
+      const lines = []; for (let i = n; i > 0; i = from[i]) lines.unshift(sg.slice(from[i], i));
+      // 3. chunks of one or two lines; a lone one-word line is the last resort
+      const L = lines.length, cb = new Array(L + 1).fill(Infinity), cf = new Array(L + 1).fill(-1); cb[0] = 0;
+      for (let i = 1; i <= L; i++) for (let j = Math.max(0, i - 2); j < i; j++) {
+        let c = i - j === 1 ? (L === 1 ? 0 : 10 + (lines[j].length === 1 ? 30 : 0)) : 0;
+        if (cb[j] + c < cb[i]) { cb[i] = cb[j] + c; cf[i] = j; }
+      }
+      const grp = []; for (let i = L; i > 0; i = cf[i]) grp.unshift(lines.slice(cf[i], i));
+      for (const g of grp) chunks.push({ lines: g });
+    }
+    chunks.forEach((c) => { c.f0 = c.lines[0][0].f; c.lastW = c.lines[c.lines.length - 1].slice(-1)[0]; });
+    chunks.forEach((c, j) => {
+      const nxt = chunks[j + 1];
+      // hold until the next chunk starts; clear only across a pause longer than 1 s
+      c.f1 = !nxt ? LAST + 1 : nxt.f0 - c.lastW.fe > 30 ? c.lastW.fe + 24 : nxt.f0;
+      c.el = document.createElement('div'); c.el.style.cssText = 'display:none;flex-direction:column;align-items:flex-start;gap:8px';
+      c.lineEls = c.lines.map((ln) => {
+        const le = document.createElement('div'); le.className = 'line';
+        ln.forEach((w, q) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = (q ? ' ' : '') + w.text; le.appendChild(s); w.el = s; });
+        c.el.appendChild(le); return le;
+      });
+      $('caps').appendChild(c.el);
+    });
+    CHUNKS = chunks;
+  }
+  function renderCaptions(f) {
+    for (const c of CHUNKS) {
+      const on = f >= c.f0 && f < c.f1; show(c.el, on, 'flex'); if (!on) continue;
+      let lastW = null;
+      c.lines.forEach((ln, li) => {
+        let any = false;
+        ln.forEach((w) => { const v = f >= w.f; w.el.style.display = v ? 'inline' : 'none'; w.el.classList.remove('on'); if (v) { lastW = w; any = true; } });
+        c.lineEls[li].style.display = any ? 'block' : 'none';
+      });
+      if (lastW) lastW.el.classList.add('on');
+    }
+  }
+
+  // ---- mascot
+  // mouth follows the narration's words: one open-close per syllable, light (max 0.7)
+  const syl = (s) => Math.max(1, (s.toLowerCase().match(/[aeiouy]+/g) || []).length);
+  function talk(t) {
+    for (const w of W) {
+      if (t >= w.start && t < w.end) {
+        const n = syl(w.text), ph = ((t - w.start) / Math.max(0.05, w.end - w.start)) * n;
+        return 0.12 + 0.58 * Math.pow(Math.sin(Math.PI * (ph % 1)), 0.8);
+      }
+    }
+    return 0;
+  }
+  const CATS = [
+    { id: 'hook', a: 14, b: 14 + 46, expr: 'excited', pose: 'peek', x: 190, edge: 1192, s: 0.5, look: [0.7, -0.75] },
+    { id: 'why', a: F.why + 1, b: F.why + 1 + 48, expr: 'skeptical', pose: 'peek', x: 200, edge: 1192, s: 0.55, look: [0.6, -0.55] },
+    { id: 'next', a: F.monday2 + 10, b: LAST + 30, expr: 'excited', pose: 'point', x: 652, y: 690, s: 0.42, look: [-0.7, -0.6], pointAngle: -134, state: { fx: null } },
+  ];
+  function renderCat(f) {
+    const c = CATS.find((q) => f >= q.a && f < q.b + 8);
+    const svg = $('cat'); show(svg, !!c);
+    if (!c) return;
+    const t = f / FPS;
+    const inE = sp(f - c.a, 0.62, 2.6);                  // arrival: slow, slight overshoot
+    const outE = k(f, c.b, 7, exitE);                     // exit: fast
+    const blink = (() => { const q = (f - c.a) % 62; return q > 40 && q < 46 ? Math.sin(((q - 40) / 6) * Math.PI) : 0; })();
+    const p = {
+      expression: c.expr, pose: c.pose, lookX: c.look[0], lookY: c.look[1], blink,
+      mouthOpen: talk(t), earTwitch: f - c.a < 10 ? Math.sin(((f - c.a) / 10) * Math.PI) : 0,
+      tail: Math.sin(f / 9) * 0.6,
+    };
+    if (c.pose === 'point') p.pointAngle = c.pointAngle;
+    if (c.state) p.state = c.state;
+    const g = CatRig.draw(p, {});
+    let tf;
+    if (c.pose === 'peek') {
+      // rig y = edgeY (-40) sits on the top edge of the first caption line; rises from behind it
+      const dy = 300 * (1 - inE) + 300 * outE;
+      tf = `translate(${c.x} ${(c.edge + 40 * c.s + dy).toFixed(1)}) scale(${c.s})`;
+      // paws may overhang the box top by 18 px (its padding), never the words
+      const r = $('catClipR'); r.setAttribute('y', 0); r.setAttribute('height', c.edge + 18);
+    } else {
+      const dy = 520 * (1 - inE) + 900 * outE;
+      tf = `translate(${c.x} ${(c.y + dy).toFixed(1)}) scale(${c.s})`;
+      const r = $('catClipR'); r.setAttribute('y', 0); r.setAttribute('height', 1150);
+    }
+    $('catG').innerHTML = `<g transform="${tf}">${g}</g>`;
+  }
+
+  // ---- credit slot
+  function creditAt(f) {
+    if (f < M0 + 8) return CR.hirise;
+    if (f < DX0) return CR.nasa;
+    if (f < goA + 8) return CR.ll2;
+    if (f < IR0 + 8) return CR.hirise;
+    if (f < MA0 + 4) return CR.jaxa;
+    if (f < F.or2 + 6) return CR.viking;
+    if (f < IRIS2 + 10) return CR.marsMoons;
+    if (f < F.liftoff) return CR.hirise;
+    return CR.ll2;
+  }
+
+  // ================================================================ frame
+  let lastN = 1;
+  function renderAt(t) {
+    const f = Math.min(LAST, Math.max(0, Math.round(t * FPS)));
+    lastN = renderPicture(f);
+    const next = f >= F.liftoff;
+
+    // giant type (amber on ink)
+    giant('g6', f, F.six, F.in - 3);
+    gdata('g6d', f, F.six + 5, F.in - 3);
+    giant('g50', f, F.fifty, DX0);
+    gdata('g50d', f, F.million, DX0);
+    giant('gMon', f, F.monday1, goA, 1, 12);
+    gdata('gMond', f, F.monday1 + 6, goA, 1, 12);
+    giant('gMmx', f, F.mmx, F.land - 2);
+    if (f >= F.fifty && f < DX0 + 8) {
+      // count-up on the spring (zeta 0.8, f 2): monotonic, capped at 50, first frame already nonzero
+      let peak = 0; for (let q = F.fifty; q <= f; q++) peak = Math.max(peak, spring((q - F.fifty + 1) / FPS, 0.8, 2));
+      $('g50').textContent = String(Math.max(1, Math.min(50, Math.floor(50 * peak + 1e-6))));
+    }
+
+    // moon labels
+    const lp = lensState(f, 'P'), ld = lensState(f, 'D');
+    const labOn = (st) => st.grow >= 1 && f < IRIS2;
+    const lP = $('labP'), lD = $('labD');
+    show(lP, labOn(lp) && f >= F.moons1 + 8); show(lD, labOn(ld) && f >= F.moons1 + 11);
+    lP.style.left = (LENS.P.x - LENS.P.r) + 'px'; lP.style.top = (lp.y + lp.r + 14).toFixed(1) + 'px';
+    lD.style.left = (LENS.D.x - LENS.D.r) + 'px'; lD.style.top = (ld.y + ld.r + 14).toFixed(1) + 'px';
+
+    // kicker
+    $('kText').textContent = next ? 'Next on Launch day' : 'Launch day';
+
+    // chip: on the Mars beat; the echo ring lands 24 frames after the dot (the real 12 min 43 s cannot be waited out)
+    const chipA = F.mars4 + 4, chipB = IRIS2 + 8;
+    show($('chip'), f >= chipA && f < chipB, 'flex');
+    if (f >= chipA && f < chipB) ringEl($('chipRing'), f - (chipA + 24));
+
+    // NEXT card
+    $('next').style.display = next ? 'block' : 'none';
+    if (next) {
+      show($('nHead'), f >= F.liftoff + 2);
+      show($('nDate'), f >= F.monday2);
+      show($('nData'), f >= F.h3);
+      show($('nPoint'), f >= F.follow);
+      const md = F.show + 3;
+      show($('nMark'), f >= md, 'flex');
+      const de = sp(f - md, 0.7, 4);
+      $('nDot').style.transform = `scale(${(0.4 + 0.6 * de).toFixed(4)})`;
+      ringEl($('nRing'), f - (md + 20));
+      $('nWord').style.visibility = f >= md + 4 ? 'visible' : 'hidden';
+    }
+
+    // credit
+    const cr = creditAt(f), ce = $('credit');
+    ce.textContent = cr; show(ce, !!cr);
+
+    renderCaptions(f);
+    renderCat(f);
+  }
+
+  // ================================================================ cue list for the sound mixer
+  function cues() {
+    const L = [];
+    const c = (frame, type, note) => L.push({ frame: Math.round(frame), t: +(Math.round(frame) / FPS).toFixed(3), type, note });
+    c(M0, 'whoosh', 'Phobos photo shrinks into the orbit dot');
+    c(F.six, 'slam', '6 FT');
+    c(F.fifty, 'slam', '50 (count-up to 50)');
+    c(Math.max(F.mars3, F.crashes + 10), 'impact', 'Phobos dot hits Mars (line art)');
+    c(F.or, 'whoosh', 'rewind of the crash');
+    c(F.shatters, 'shatter', 'dot breaks into a ring of fragments');
+    c(DX0, 'whoosh', 'diagram leaves upward, H3 rises in');
+    c(F.monday1, 'slam', 'MON');
+    c(goA, 'whoosh', 'camera tilts up from the rocket to Phobos');
+    c(F.piece, 'ring_pulse', 'ring marks a piece of Phobos');
+    c(IR0, 'whoosh', 'iris from the Phobos ring into the MMX drawing');
+    c(F.mmx, 'slam', 'MMX');
+    c(F.phobos2 + 2, 'touchdown', 'MMX lands (line art)');
+    c(F.fly, 'whoosh', 'capsule flies home, camera follows to Mars');
+    c(F.or2, 'ring_pulse', 'two moons pop out of Mars');
+    c(IRIS2, 'whoosh', 'Phobos lens opens into the close-up');
+    c(F.finally, 'punch_in', 'punch-in on the sample spot');
+    c(F.liftoff, 'hard_cut', 'hard cut on "Liftoff" to the NEXT card');
+    c(F.liftoff, 'next_card_in', 'NEXT ON LAUNCH DAY');
+    c(F.we, 'whoosh', 'H3 lifts off (line art)');
+    for (const q of CATS) { c(q.a, 'cat_in', q.id + ' (' + q.expr + ')'); if (q.b <= LAST) c(q.b, 'cat_out', q.id); }
+    c(F.mars4 + 4, 'chip_in', 'SIGNAL DELAY MARS 12 min 43 s');
+    c(F.mars4 + 4 + 24, 'echo_ring', 'chip echo ring lands');
+    c(F.show + 3, 'wordmark_echo', 'wordmark dot lands');
+    c(F.show + 3 + 20, 'wordmark_echo', 'wordmark echo ring lands');
+    return L.sort((a, b) => a.frame - b.frame);
+  }
+
+  window.renderAt = renderAt;
+  window.SD = { F, I, NF, LAST, FPS, W, get CHUNKS() { return CHUNKS; }, cues, lastSamples: () => lastN, captionsAt: renderCaptions };
+  window.__ready = (async () => {
+    await Promise.all([document.fonts.load("800 100px 'Archivo'"), document.fonts.load("700 90px 'Archivo'"), document.fonts.load("500 28px 'IBM Plex Mono'")]);
+    await document.fonts.ready;
+    await Promise.all(imgPromises);
+    buildChunks();
+    window.CUES = cues();
+  })();
+
+  const params = new URLSearchParams(location.search);
+  window.__ready.then(() => {
+    if (params.has('t')) renderAt(Number(params.get('t')) || 0);
+    else {
+      // live preview only (no ?t=): the renderer always passes ?t and calls renderAt itself
+      let t0 = null;
+      const loop = (ts) => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % (NF / FPS)); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    }
+  });
+})();
+</script>
+</body>
+</html>

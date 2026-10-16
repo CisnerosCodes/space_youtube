@@ -1,0 +1,1 @@
+The echo mark and the avatar. The mark is single-ink `amber` (#F5B83D): a solid dot and a hollow ring offset to its right. Use `echo-mark-amber.svg` on `ink` only; it leads the wordmark and the chip. `avatar-800.png` is the channel avatar (800 x 800, mark on `ink`), readable at 98px in YouTube's circle crop.

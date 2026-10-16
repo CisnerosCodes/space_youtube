@@ -1,0 +1,62 @@
+[
+  {
+    "take": "fish_ethan",
+    "model": "fish-audio/drama-3",
+    "voice": "536d3a5e000945adb7038665781a4aca",
+    "chars": 639,
+    "seconds": 50.4,
+    "usd": 0.001502,
+    "provider": "Fish Audio",
+    "generation": "gen-tts-1792031054-HhJGFgRbAeOtKfemuiJM"
+  },
+  {
+    "take": "fish_jordan",
+    "model": "fish-audio/drama-3",
+    "voice": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+    "chars": 639,
+    "seconds": 56.2,
+    "usd": 0.001502,
+    "provider": "Fish Audio",
+    "generation": "gen-tts-1792031070-wnimXGvh55iwskRrdWd9"
+  },
+  {
+    "take": "fish_hannah",
+    "model": "fish-audio/drama-3",
+    "voice": "9a9cf47702da476aa4629e2506d4a857",
+    "chars": 639,
+    "seconds": 49.6,
+    "usd": 0.001502,
+    "provider": "Fish Audio",
+    "generation": "gen-tts-1792031084-xWzoBvlN1xSzRH8Ljbhk"
+  },
+  {
+    "take": "eleven_george",
+    "model": "elevenlabs/eleven-v4-turbo",
+    "voice": "george",
+    "chars": 639,
+    "seconds": 48.0,
+    "usd": 0.01278,
+    "provider": "ElevenLabs",
+    "generation": "gen-tts-1792031099-jFaxX9Ba2DrHQiTXGU5p"
+  },
+  {
+    "take": "eleven_will",
+    "model": "elevenlabs/eleven-v4-turbo",
+    "voice": "will",
+    "chars": 639,
+    "seconds": 45.7,
+    "usd": 0.01278,
+    "provider": "ElevenLabs",
+    "generation": "gen-tts-1792031116-tPQFlHFMfVlAJ3bRzeGm"
+  },
+  {
+    "take": "eleven_jessica",
+    "model": "elevenlabs/eleven-v4-turbo",
+    "voice": "jessica",
+    "chars": 639,
+    "seconds": 45.5,
+    "usd": 0.01278,
+    "provider": "ElevenLabs",
+    "generation": "gen-tts-1792031133-RkyIWZ2RdHZYmhDSpO8h"
+  }
+]

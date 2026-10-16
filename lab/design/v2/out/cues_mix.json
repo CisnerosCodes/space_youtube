@@ -1,0 +1,20 @@
+[
+ {"frame": 14,   "fps": 30, "type": "cat_in"},
+ {"frame": 117,  "fps": 30, "type": "hard_cut", "sfx": "whoosh_short"},
+ {"frame": 151,  "fps": 30, "type": "number_slam"},
+ {"frame": 250,  "fps": 30, "type": "number_slam", "gain_db": -2},
+ {"frame": 315,  "fps": 30, "type": "number_slam", "sfx": "impact_soft"},
+ {"frame": 357,  "fps": 30, "type": "hard_cut", "sfx": "glitch_short", "gain_db": -2},
+ {"frame": 423,  "fps": 30, "type": "number_slam", "gain_db": -2},
+ {"frame": 541,  "fps": 30, "type": "number_slam", "gain_db": -2},
+ {"frame": 581,  "fps": 30, "type": "number_slam", "sfx": "impact_soft", "gain_db": -3},
+ {"frame": 629,  "fps": 30, "type": "hard_cut", "sfx": "whoosh_long"},
+ {"frame": 729,  "fps": 30, "type": "chip_in"},
+ {"frame": 753,  "fps": 30, "type": "echo_land"},
+ {"frame": 788,  "fps": 30, "type": "cat_in"},
+ {"frame": 806,  "fps": 30, "type": "cat_in", "sfx": "cat_mrrp", "gain_db": -2},
+ {"frame": 870,  "fps": 30, "type": "hard_cut", "sfx": "swell_reveal", "gain_db": -3},
+ {"frame": 975,  "fps": 30, "type": "next_card_in"},
+ {"frame": 1003, "fps": 30, "type": "cat_in"},
+ {"frame": 1088, "fps": 30, "type": "wordmark_echo"}
+]

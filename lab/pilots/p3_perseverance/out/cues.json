@@ -1,0 +1,134 @@
+[
+ {
+  "frame": 10,
+  "fps": 30,
+  "t": 0.333,
+  "type": "cat_in",
+  "note": "cat pops up behind the caption box"
+ },
+ {
+  "frame": 26,
+  "fps": 30,
+  "t": 0.867,
+  "type": "chip_in",
+  "note": "SIGNAL DELAY MARS 12 min 59 s"
+ },
+ {
+  "frame": 50,
+  "fps": 30,
+  "t": 1.667,
+  "type": "echo_land",
+  "note": "chip echo ring lands",
+  "gain_db": -2
+ },
+ {
+  "frame": 60,
+  "fps": 30,
+  "t": 2,
+  "type": "scene_move",
+  "note": "selfie shrinks into the Perseverance icon; the tracks race in",
+  "gain_db": -1
+ },
+ {
+  "frame": 141,
+  "fps": 30,
+  "t": 4.7,
+  "type": "hard_cut",
+  "note": "chart leaves up, the record-day NAVCAM image rises in",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 199,
+  "fps": 30,
+  "t": 6.633,
+  "type": "number_slam",
+  "note": "odometer rolls 28.06 to 28.10",
+  "gain_db": -2
+ },
+ {
+  "frame": 250,
+  "fps": 30,
+  "t": 8.333,
+  "type": "cat_chirp",
+  "note": "the number lands on the cat's sign"
+ },
+ {
+  "frame": 322,
+  "fps": 30,
+  "t": 10.733,
+  "type": "number_slam",
+  "note": "28.06, the old record",
+  "sfx": "impact_soft"
+ },
+ {
+  "frame": 427,
+  "fps": 30,
+  "t": 14.233,
+  "type": "number_slam",
+  "note": "the years count lands on 15",
+  "gain_db": -3
+ },
+ {
+  "frame": 515,
+  "fps": 30,
+  "t": 17.167,
+  "type": "number_slam",
+  "note": "the years count lands on 5.5",
+  "gain_db": -3
+ },
+ {
+  "frame": 526,
+  "fps": 30,
+  "t": 17.533,
+  "type": "scene_move",
+  "note": "everything leaves left before the cat drops in for \"How?\"",
+  "sfx": "whoosh_short",
+  "gain_db": -1
+ },
+ {
+  "frame": 673,
+  "fps": 30,
+  "t": 22.433,
+  "type": "hard_cut",
+  "note": "Sojourner photo drops in from above",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 706,
+  "fps": 30,
+  "t": 23.533,
+  "type": "impact",
+  "note": "20 points pop in"
+ },
+ {
+  "frame": 772,
+  "fps": 30,
+  "t": 25.733,
+  "type": "reveal",
+  "note": "600,000 points burst out",
+  "sfx": "swell_reveal",
+  "gain_db": -2
+ },
+ {
+  "frame": 836,
+  "fps": 30,
+  "t": 27.867,
+  "type": "next_card_in",
+  "note": "hard cut on \"Next\" to the NEXT card"
+ },
+ {
+  "frame": 902,
+  "fps": 30,
+  "t": 30.067,
+  "type": "impact",
+  "note": "the rover dot reaches Idubi",
+  "sfx": "tick"
+ },
+ {
+  "frame": 1057,
+  "fps": 30,
+  "t": 35.233,
+  "type": "wordmark_echo",
+  "note": "wordmark dot, then its echo ring 12 frames later (sonic logo)"
+ }
+]

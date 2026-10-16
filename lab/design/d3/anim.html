@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signal Delay / D3 Full Bleed / motion test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;family=Big+Shoulders+Text:wght@800&amp;family=JetBrains+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #000000; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000000; color: #FFFFFF; font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  .shot { position: absolute; inset: 0; overflow: hidden; display: none; }
+  .shot img { position: absolute; left: 0; top: 0; max-width: none; transform-origin: 0 0; }
+  .ui { position: absolute; }
+  .giant { position: absolute; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; white-space: nowrap; display: none; }
+  .box { background: #000000; white-space: nowrap; }
+  #ticks { left: 80px; top: 220px; width: 920px; height: 6px; display: flex; gap: 8px; }
+  .tick { flex: 1; position: relative; background: rgba(255,255,255,0.35); }
+  .tick i { position: absolute; inset: 0; background: #3DFF8F; transform-origin: 0 50%; transform: scaleX(0); }
+  .kick { left: 80px; top: 268px; display: none; align-items: center; gap: 14px; padding: 10px 16px; font-size: 28px; line-height: 28px; letter-spacing: 0.04em; }
+  .kick .sq { width: 10px; height: 10px; background: #3DFF8F; }
+  #chip { left: 80px; top: 268px; display: none; align-items: center; gap: 16px; padding: 10px 16px; font-size: 28px; line-height: 28px; }
+  #credit { left: 80px; top: 1450px; padding: 8px 12px; font-size: 24px; line-height: 24px; display: none; }
+  #caps { left: 80px; top: 1200px; }
+  .chunk { display: none; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { display: none; padding: 8px 16px; background: rgba(0,0,0,0.88); font-family: 'Big Shoulders Text', sans-serif; font-weight: 800; font-size: 90px; line-height: 90px; letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap; }
+  .w { display: none; color: #FFFFFF; }
+  .w.on { color: #3DFF8F; }
+  .slot { display: inline-block; text-align: center; }
+  body.bg .ui, body.bg .giant { visibility: hidden !important; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="shots"></div>
+
+  <div class="ui" id="ticks"></div>
+
+  <div class="ui box kick" id="kicker"><div class="sq"></div><div>LAUNCHING TODAY</div></div>
+  <div class="ui box kick" id="handle"><div class="sq"></div><div>@SIGNALDELAYHQ</div></div>
+
+  <div class="ui box" id="chip">
+    <svg width="33" height="16" viewBox="0 0 33 16" aria-hidden="true" style="overflow: visible">
+      <circle cx="7" cy="8" r="7" fill="#3DFF8F"></circle>
+      <circle id="chipRing" cx="25.9" cy="8" r="5.67" fill="none" stroke="#3DFF8F" stroke-width="2.66" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+    <div>SIGNAL DELAY</div>
+    <div style="color: #3DFF8F">MOON 1.3 s</div>
+  </div>
+
+  <!-- giant type -->
+  <div class="giant" id="g147" style="left: 40px; top: 316px; font-size: 400px; line-height: 400px">1:47</div>
+  <div class="giant" id="gAM" style="left: 40px; top: 674px; font-size: 300px; line-height: 300px">A.M.</div>
+  <div class="giant" id="gDay" style="left: 40px; top: 324.5px; font-size: 300px; line-height: 300px">DAY</div>
+  <div class="giant" id="g20" style="left: 514px; top: 324.5px; font-size: 300px; line-height: 300px">20</div>
+  <div class="giant" id="g327" style="left: 40px; top: 329.4px; font-size: 360px; line-height: 360px"><span class="slot" id="cM" style="width: 0.51em">0</span><span class="slot" style="width: 0.25em">:</span><span class="slot" id="cS1" style="width: 0.51em">0</span><span class="slot" id="cS2" style="width: 0.51em">0</span></div>
+  <div class="giant" id="gDec" style="left: 40px; top: 321px; font-size: 340px; line-height: 340px">DEC. 11</div>
+  <div class="giant" id="gEnd" style="left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 360px 545px">
+    <div style="position: absolute; left: 40px; top: 329.6px; font-size: 240px; line-height: 240px">SIGNAL</div>
+    <div style="position: absolute; left: 40px; top: 549.6px; font-size: 240px; line-height: 240px">DELAY</div>
+    <svg style="position: absolute; left: 596px; top: 642px; overflow: visible" width="117" height="48" viewBox="0 0 117 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="24" fill="#3DFF8F"></circle>
+      <circle id="endRing" cx="88.8" cy="24" r="19.45" fill="none" stroke="#3DFF8F" stroke-width="9.1" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+  </div>
+
+  <div class="ui" id="caps"></div>
+  <div class="ui box" id="credit"></div>
+</div>
+
+<script>
+(() => {
+  const FPS = 30;
+  const P = '../../assets/nasa/';
+  const IMG = {
+    '030': ['NHQ202211160030.jpg', 1920, 1920],
+    '200': ['NHQ202211160200.jpg', 1920, 1596],
+    '022': ['NHQ202211160022.jpg', 1686, 1920],
+    '003': ['NHQ202211160003.jpg', 1163, 1920],
+    '012': ['NHQ202211160012.jpg', 1354, 1920],
+    '014': ['NHQ202211160014.jpg', 1920, 1387],
+    '019': ['NHQ202211160019.jpg', 1610, 1919],
+    '1712': ['art001e001712.jpg', 1920, 1440],
+    '2083': ['art001e002083.jpg', 1920, 1440],
+  };
+  const JK = 'NASA / JOEL KOWSKY', BI = 'NASA / BILL INGALLS', NA = 'NASA';
+
+  // End card = hook framing pulled back 4% about the rocket, so the replay cut to frame 0 reads as one more punch-in.
+  const hook = { S: 1.35, ox: 166, oy: 150 };
+  const k = 1 / 1.04, A0 = [860, 500];
+  const endCrop = { S: hook.S * k, ox: k * hook.ox - A0[0] * (1 - k), oy: k * hook.oy - A0[1] * (1 - k) };
+
+  // Shots: a..b frames inclusive. Every cut lands on a multiple of 15.
+  const SHOTS = [
+    { a: 0,   b: 29,  img: '030',  S: hook.S, ox: hook.ox, oy: hook.oy, punch: [15],  A: [860, 500], credit: JK, scrim: 0.25 },
+    { a: 30,  b: 59,  img: '200',  S: 1.3,    ox: 870,  oy: 100, punch: [45],  A: [540, 700], credit: BI },
+    { a: 60,  b: 74,  img: '022',  S: 1.3,    ox: 656,  oy: 576, punch: [],    A: [540, 1200], credit: JK },
+    { a: 75,  b: 104, img: '003',  S: 1.0,    ox: 80,   oy: 0,   punch: [90],  A: [540, 800], credit: JK },
+    { a: 105, b: 134, img: '012',  S: 1.0,    ox: 157,  oy: 0,   punch: [120], A: [540, 420], credit: BI },
+    { a: 135, b: 149, img: '014',  S: 1920 / 1387, ox: 810, oy: 0, punch: [], A: [540, 500], credit: BI },
+    { a: 150, b: 179, img: '019',  S: 1920 / 1919, ox: 210, oy: 0, punch: [165], A: [850, 290], credit: JK },
+    { a: 180, b: 209, img: '2083', S: 4 / 3,  ox: 1480, oy: 0,   punch: [195], A: [660, 1053], credit: NA, scrim: 0.25 },
+    { a: 210, b: 239, img: '2083', S: 2.0,    ox: 2490, oy: 760, punch: [225], A: [720, 820], credit: NA },
+    { a: 240, b: 269, img: '1712', S: 1.6,    ox: 848,  oy: 0,   punch: [255], A: [880, 304], credit: NA },
+    { a: 270, b: 299, img: '2083', S: 4 / 3,  ox: 500,  oy: 0,   punch: [285], A: [433, 673], credit: NA },
+    { a: 300, b: 314, img: '1712', S: 1.7,    ox: 2083, oy: 528, punch: [],    A: [600, 926], credit: NA },
+    { a: 315, b: 329, img: null,   credit: null },
+    { a: 330, b: 359, img: '030',  S: endCrop.S, ox: endCrop.ox, oy: endCrop.oy, punch: [], A: A0, credit: JK, scrim: 0.25 },
+  ];
+
+  const BEATS = [0, 30, 60, 105, 180, 240, 315];
+
+  const CHUNKS = [
+    { a: 30,  b: 59,  lines: [[['LAUNCH', 30], ['PAD', 38]], [['39B.', 46]]] },
+    { a: 60,  b: 104, lines: [[['ARTEMIS', 60], ['I', 67]], [['LIFTS', 75], ['OFF.', 83]]] },
+    { a: 105, b: 134, lines: [[['SLS', 105], ['AND', 113]], [['ORION', 120]]] },
+    { a: 135, b: 149, lines: [[['FLY', 135]], [['TOGETHER', 142]]] },
+    { a: 150, b: 179, lines: [[['FOR', 150], ['THE', 157]], [['FIRST', 165], ['TIME.', 172]]] },
+    { a: 195, b: 209, lines: [[['EARTH', 195], ['RISES', 203]]] },
+    { a: 210, b: 239, lines: [[['BEHIND', 210], ['THE', 217]], [['MOON.', 225]]] },
+    { a: 244, b: 284, lines: [[['A', 244], ['3-MINUTE,', 250]], [['27-SECOND', 255], ['BURN', 262]]] },
+    { a: 285, b: 314, lines: [[['SENDS', 285], ['ORION', 292]], [['HOME.', 300]]] },
+    { a: 315, b: 329, lines: [[['SPLASHDOWN:', 315]]] },
+  ];
+
+  // ---------- easing + spring ----------
+  function bezier(x1, y1, x2, y2) {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t;
+    const sy = (t) => ((ay * t + by) * t + cy) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) { const e = sx(t) - x; const d = dx(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+      let lo = 0, hi = 1;
+      if (Math.abs(sx(t) - x) > 1e-5) { t = x; for (let i = 0; i < 30; i++) { const v = sx(t); if (v < x) lo = t; else hi = t; t = (lo + hi) / 2; } }
+      return sy(t);
+    };
+  }
+  const enter = bezier(0.16, 1, 0.3, 1);
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  function spring(t, zeta, f) {
+    if (t <= 0) return 0;
+    const w = 2 * Math.PI * f, wd = w * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+  }
+  // Punch-in step: spring zeta 0.7 that settles inside 6 frames, then holds exactly.
+  const punchStep = (df) => (df < 0 ? 0 : df >= 6 ? 1 : spring(df / FPS, 0.7, 4));
+  // Giant type slam: 1.12 -> 1.0 over 5 frames on the enter curve.
+  const slam = (df) => 1.12 - 0.12 * enter(clamp01(df / 5));
+
+  // ---------- build DOM ----------
+  const $ = (id) => document.getElementById(id);
+  const shotsEl = $('shots');
+  const imgPromises = [];
+  SHOTS.forEach((s) => {
+    const d = document.createElement('div');
+    d.className = 'shot';
+    if (s.img) {
+      const [file, w, h] = IMG[s.img];
+      const im = document.createElement('img');
+      im.src = P + file; im.alt = ''; im.width = w; im.height = h;
+      im.style.width = w + 'px'; im.style.height = h + 'px';
+      d.appendChild(im); s.im = im;
+      // flat scrim (no gradient) under giant type so white stays above 4.5:1
+      if (s.scrim) { const sc = document.createElement('div'); sc.style.cssText = `position:absolute;inset:0;background:rgba(0,0,0,${s.scrim})`; d.appendChild(sc); }
+      imgPromises.push(im.decode().catch(() => {}));
+    }
+    shotsEl.appendChild(d); s.el = d;
+  });
+
+  const tickFills = [];
+  for (let i = 0; i < 7; i++) {
+    const t = document.createElement('div'); t.className = 'tick';
+    const f = document.createElement('i'); t.appendChild(f); $('ticks').appendChild(t); tickFills.push(f);
+  }
+
+  const capsEl = $('caps');
+  CHUNKS.forEach((c) => {
+    const el = document.createElement('div'); el.className = 'chunk';
+    c.lineEls = []; c.words = [];
+    c.lines.forEach((ln) => {
+      const le = document.createElement('div'); le.className = 'line';
+      ln.forEach(([txt, f], i) => {
+        const w = document.createElement('span'); w.className = 'w';
+        w.textContent = (i ? ' ' : '') + txt;
+        le.appendChild(w); c.words.push({ el: w, f });
+      });
+      el.appendChild(le); c.lineEls.push({ el: le, f: ln[0][1] });
+    });
+    capsEl.appendChild(el); c.el = el;
+  });
+
+  const show = (el, on, disp = 'block') => { el.style.display = on ? disp : 'none'; };
+
+  // ---------- frame function ----------
+  function renderAt(t) {
+    const f = Math.min(359, Math.max(0, Math.floor(t * FPS + 1e-6)));
+
+    // photo
+    let credit = null;
+    SHOTS.forEach((s) => {
+      const on = f >= s.a && f <= s.b;
+      show(s.el, on);
+      if (!on) return;
+      credit = s.credit;
+      if (!s.im) return;
+      let p = 1;
+      s.punch.forEach((pf) => { p *= 1 + 0.04 * punchStep(f - pf); });
+      const [ax, ay] = s.A;
+      s.im.style.transform = `translate(${ax}px, ${ay}px) scale(${p}) translate(${-ax}px, ${-ay}px) translate(${-s.ox}px, ${-s.oy}px) scale(${s.S})`;
+    });
+
+    // credit lower third
+    const cr = $('credit');
+    if (credit) { cr.textContent = credit; show(cr, true); } else show(cr, false);
+
+    // progress ticks: tick 1 is full on frame 0; each later tick fills 4 frames after its beat cut
+    tickFills.forEach((el, i) => {
+      const v = i === 0 ? 1 : enter(clamp01((f - (BEATS[i] + 4)) / 6));
+      el.style.transform = `scaleX(${v})`;
+    });
+
+    // kicker (hook) and handle (end card)
+    show($('kicker'), f <= 29, 'flex');
+    show($('handle'), f >= 334, 'flex');
+
+    // signal delay chip: in 4 frames after the Day 20 cut; the echo ring lands 1.3 s (39 frames) after the dot
+    const chipOn = f >= 184 && f <= 239;
+    show($('chip'), chipOn, 'flex');
+    if (chipOn) {
+      const df = f - (184 + 39);
+      const ring = $('chipRing');
+      ring.style.opacity = clamp01((df + 1) / 3);
+      ring.style.transform = `scale(${0.4 + 0.6 * spring(Math.max(0, df) / FPS, 0.7, 4)})`;
+    }
+
+    // giant type
+    const g = (id, a, b, slamAt) => {
+      const el = $(id); const on = f >= a && f <= b; show(el, on);
+      if (on) el.style.transform = slamAt == null ? 'none' : `scale(${slam(f - slamAt)})`;
+      return on;
+    };
+    g('g147', 0, 29, null);
+    g('gAM', 0, 29, null);
+    g('gDay', 180, 209, 180);
+    g('g20', 188, 209, 188);
+    if (g('g327', 240, 269, 240)) {
+      const v = Math.min(207, 207 * spring((f - 240) / FPS, 0.8, 2));
+      const n = Math.floor(v + 1e-6), m = Math.floor(n / 60), s = n % 60;
+      $('cM').textContent = m; $('cS1').textContent = Math.floor(s / 10); $('cS2').textContent = s % 10;
+    }
+    g('gDec', 322, 329, 322);
+    if (g('gEnd', 330, 359, 330)) {
+      const df = f - 345, ring = $('endRing');
+      ring.style.opacity = clamp01((df + 1) / 3);
+      ring.style.transform = `scale(${0.4 + 0.6 * spring(Math.max(0, df) / FPS, 0.7, 4)})`;
+    }
+
+    // captions: word-by-word hard cut-ins, newest word in the accent
+    CHUNKS.forEach((c) => {
+      const on = f >= c.a && f <= c.b;
+      show(c.el, on, 'flex');
+      if (!on) return;
+      let last = null;
+      c.words.forEach((w) => { const v = f >= w.f; show(w.el, v, 'inline'); w.el.classList.remove('on'); if (v) last = w; });
+      if (last) last.el.classList.add('on');
+      c.lineEls.forEach((l) => show(l.el, f >= l.f));
+    });
+  }
+
+  window.renderAt = renderAt;
+  window.__ready = (async () => {
+    await Promise.all([
+      document.fonts.load("900 100px 'Big Shoulders Display'"),
+      document.fonts.load("800 90px 'Big Shoulders Text'"),
+      document.fonts.load("500 28px 'JetBrains Mono'"),
+    ]);
+    await document.fonts.ready;
+    await Promise.all(imgPromises);
+  })();
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('bg') === '1') document.body.classList.add('bg');
+  if (params.has('t')) {
+    renderAt(Number(params.get('t')) || 0);
+  } else {
+    renderAt(0);
+    window.__ready.then(() => {
+      let t0 = null;
+      const loop = (ts) => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % 12); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signal Delay v1 motion test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #0B0B0C; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0B0B0C; color: #F2EFE8; font-family: 'Archivo', sans-serif; }
+  .shot { position: absolute; inset: 0; overflow: hidden; display: none; }
+  .shot img { position: absolute; left: 0; top: 0; max-width: none; transform-origin: 0 0; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+  .giant { position: absolute; display: none; font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: 112%; text-transform: uppercase; white-space: nowrap; transform-origin: 0 50%; }
+  .box { background: #0B0B0C; white-space: nowrap; }
+  #caps { position: absolute; left: 80px; top: 1196px; }
+  .chunk { display: none; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { display: none; padding: 8px 16px; background: rgba(11,11,12,0.88); font-weight: 700; font-stretch: 100%; font-size: 90px; line-height: 96px; white-space: nowrap; }
+  .w { display: none; color: #F2EFE8; }
+  .w.on { color: #F5B83D; }
+  body.bg .ui { visibility: hidden !important; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="shots"></div>
+
+  <!-- DIAGRAM WORLD (beats 6 and 7): flat line art, amber 4 px strokes, paper labels, on ink -->
+  <svg id="diag" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="position: absolute; left: 0; top: 0; visibility: hidden">
+    <defs><clipPath id="zone"><rect id="zoneRect" x="0" y="700" width="1080" height="480"></rect></clipPath></defs>
+    <g clip-path="url(#zone)">
+    <g id="cam" fill="none" stroke="#F5B83D" stroke-width="4">
+      <circle cx="250" cy="940" r="130"></circle>
+      <circle cx="830" cy="940" r="80"></circle>
+      <path id="pOut" d="M 372 890 C 480 760 700 760 870 846" stroke-dasharray="10 12"></path>
+      <path id="pFly" d="M 870 846 C 920 870 940 900 936 935"></path>
+      <path id="pRet" d="M 936 935 C 930 1000 860 1060 700 1070 C 560 1078 440 1040 372 990"></path>
+    </g>
+    <!-- markers and labels live outside the camera so they keep a fixed size -->
+    <circle id="mBurn" r="11" fill="#F5B83D"></circle>
+    <rect id="mOrion" x="-9" y="-9" width="18" height="18" fill="#F2EFE8"></rect>
+    <circle id="mSplash" r="11" fill="#F5B83D"></circle>
+    <g font-family="IBM Plex Mono" font-weight="500" font-size="24" fill="#F2EFE8" letter-spacing="1.2">
+      <text id="lEarth">EARTH</text>
+      <text id="lMoon">MOON</text>
+      <text id="lBurn">BURN</text>
+      <text id="lOrion">ORION</text>
+      <text id="lSplash">PACIFIC OCEAN</text>
+    </g>
+    </g>
+  </svg>
+
+  <!-- NEXT CARD (beat 8) -->
+  <div id="next" style="position: absolute; inset: 0; visibility: hidden; background: #0B0B0C">
+    <div id="nHead" style="position: absolute; left: 80px; top: 330px; font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; white-space: nowrap; color: #F2EFE8">
+      <div>Japan's MMX</div>
+      <div>launches for</div>
+      <div>the moons</div>
+      <div>of Mars.</div>
+    </div>
+    <div id="nDate" class="mono" style="position: absolute; left: 80px; top: 698px; font-size: 64px; line-height: 64px; color: #F5B83D; white-space: nowrap">MON 19 OCT</div>
+    <div id="nPoint" class="mono" style="position: absolute; left: 80px; top: 800px; display: flex; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; border: 2px solid #F5B83D; font-size: 28px; line-height: 36px; white-space: nowrap; color: #F2EFE8">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
+      <span>This week in space · Sunday</span>
+    </div>
+    <svg id="nDiag" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+      <ellipse id="nO2" cx="760" cy="1120" rx="210" ry="96" fill="none" stroke="#F5B83D" stroke-width="4"></ellipse>
+      <ellipse id="nO1" cx="760" cy="1120" rx="140" ry="62" fill="none" stroke="#F5B83D" stroke-width="4"></ellipse>
+      <circle id="nMars" cx="760" cy="1120" r="72" fill="#0B0B0C" stroke="#F5B83D" stroke-width="4"></circle>
+      <circle id="nM1" cx="886" cy="1093" r="9" fill="#F5B83D"></circle>
+      <circle id="nM2" cx="560" cy="1149" r="7" fill="#F5B83D"></circle>
+      <path id="nPath" d="M 120 1000 C 260 960 420 980 560 1040" fill="none" stroke="#F5B83D" stroke-width="4" stroke-dasharray="10 12"></path>
+      <rect id="nProbe" x="551" y="1031" width="18" height="18" fill="#F2EFE8"></rect>
+      <g font-family="IBM Plex Mono" font-weight="500" font-size="24" fill="#F2EFE8" letter-spacing="1.2">
+        <text id="nLMars" x="760" y="1129" text-anchor="middle">MARS</text>
+        <text id="nLProbe" x="560" y="1010" text-anchor="middle">MMX</text>
+      </g>
+    </svg>
+    <div id="nDiagLabel" class="mono" style="position: absolute; left: 560px; top: 1240px; font-size: 24px; line-height: 28px; color: #8C8A85; white-space: nowrap">DIAGRAM · NOT TO SCALE</div>
+    <div id="nMark" style="position: absolute; left: 80px; top: 1404px; display: flex; align-items: center; gap: 24px">
+      <svg width="104" height="44" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+        <circle cx="22" cy="22" r="22" fill="#F5B83D"></circle>
+        <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+      </svg>
+      <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: #F2EFE8">Signal <span style="color: #F5B83D">Delay</span></div>
+    </div>
+  </div>
+
+  <!-- GIANT TYPE -->
+  <div class="giant ui" id="g147" style="left: 40px; top: 314px; font-size: 340px; line-height: 300px">1:47</div>
+  <div class="giant ui" id="gAM" style="left: 40px; top: 624px; font-size: 260px; line-height: 230px">A.M.</div>
+  <div class="ui mono box" id="hData" style="position: absolute; left: 80px; top: 878px; display: none; padding: 8px 16px; font-size: 28px; line-height: 36px">WED 16 NOV 2022 · EST</div>
+  <div class="giant ui" id="gDay" style="left: 40px; top: 356px; font-size: 300px; line-height: 260px">Day</div>
+  <div class="giant ui" id="g20" style="left: 40px; top: 616px; font-size: 300px; line-height: 260px">20</div>
+  <div class="ui" id="numBlock" style="position: absolute; left: 40px; top: 312px; display: none">
+    <div class="giant" id="g327" style="position: relative; display: block; font-size: 310px; line-height: 280px; color: #F5B83D; font-variant-numeric: tabular-nums">3:27</div>
+    <div class="mono" style="margin: 14px 0 0 40px; font-size: 28px; line-height: 36px; color: #F2EFE8; white-space: nowrap">RETURN POWERED FLYBY BURN</div>
+    <div class="mono" style="margin: 4px 0 0 40px; font-size: 24px; line-height: 32px; color: #8C8A85; white-space: nowrap">MIN : SEC</div>
+  </div>
+  <div class="giant ui" id="gDec" style="left: 40px; top: 312px; font-size: 190px; line-height: 180px; color: #F5B83D">Dec. 11</div>
+
+  <!-- PROGRESS TICKS -->
+  <div class="ui" id="ticks" style="position: absolute; left: 80px; top: 220px; width: 920px; height: 6px; display: flex; gap: 8px"></div>
+
+  <!-- KICKER with the series mark -->
+  <div class="ui mono box" id="kicker" style="position: absolute; left: 80px; top: 246px; display: flex; align-items: center; gap: 12px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; text-transform: uppercase">
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 L26 25 H2 Z" fill="#F5B83D"></path></svg>
+    <span id="kText">Launch day</span>
+  </div>
+
+  <!-- SIGNAL DELAY CHIP -->
+  <div class="ui mono box" id="chip" style="position: absolute; left: 80px; top: 302px; display: none; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px">
+    <svg width="47.27" height="20" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+      <circle cx="22" cy="22" r="22" fill="#F5B83D"></circle>
+      <circle id="chipRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+    <span>SIGNAL DELAY</span>
+    <span style="color: #F5B83D">MOON 1.3 s</span>
+  </div>
+
+  <div class="ui" id="caps"></div>
+
+  <!-- CREDIT SLOT: photo credit, or the diagram label -->
+  <div class="ui mono box" id="credit" style="position: absolute; left: 80px; top: 1458px; display: none; padding: 6px 12px; font-size: 24px; line-height: 28px"></div>
+</div>
+
+<script>
+(() => {
+  const FPS = 30, LAST = 449;
+  const P = '../../assets/nasa/';
+  const IMG = {
+    '030': ['NHQ202211160030.jpg', 1920, 1920],
+    '200': ['NHQ202211160200.jpg', 1920, 1596],
+    '022': ['NHQ202211160022.jpg', 1686, 1920],
+    '003': ['NHQ202211160003.jpg', 1163, 1920],
+    '012': ['NHQ202211160012.jpg', 1354, 1920],
+    '014': ['NHQ202211160014.jpg', 1920, 1387],
+    '019': ['NHQ202211160019.jpg', 1610, 1919],
+    '2083': ['art001e002083.jpg', 1920, 1440],
+  };
+  const JK = 'NASA/Joel Kowsky', BI = 'NASA/Bill Ingalls', NA = 'NASA';
+  const DIAGRAM = 'DIAGRAM · NOT TO SCALE';
+
+  // Photo shots: a..b inclusive. Every cut lands on a multiple of 15; 30-frame shots punch in 4% on their middle beat.
+  const SHOTS = [
+    { a: 0,   b: 29,  img: '030',  S: 1.35, ox: 96,   oy: 0,   punch: [15],  A: [930, 700],  credit: JK, scrim: 0.30 },
+    { a: 30,  b: 59,  img: '200',  S: 1.25, ox: 950,  oy: 40,  punch: [45],  A: [406, 700],  credit: BI },
+    { a: 60,  b: 74,  img: '022',  S: 1.4,  ox: 748,  oy: 720, punch: [],    A: [540, 1200], credit: JK },
+    { a: 75,  b: 104, img: '003',  S: 1.0,  ox: 41,   oy: 0,   punch: [90],  A: [540, 800],  credit: JK },
+    { a: 105, b: 134, img: '012',  S: 1.0,  ox: 137,  oy: 0,   punch: [120], A: [563, 420],  credit: BI },
+    { a: 135, b: 149, img: '014',  S: 1920 / 1387, ox: 810, oy: 0, punch: [], A: [540, 500], credit: BI },
+    { a: 150, b: 179, img: '019',  S: 1920 / 1919, ox: 210, oy: 0, punch: [165], A: [850, 290], credit: JK },
+    { a: 180, b: 209, img: '2083', S: 1.5,  ox: 1800, oy: 100, punch: [195], A: [600, 1085], credit: NA, scrim: 0.30 },
+    { a: 210, b: 239, img: '2083', S: 2.0,  ox: 2490, oy: 760, punch: [225], A: [710, 820],  credit: NA },
+  ];
+
+  // Diagram cameras: world point (wx, wy) lands on screen (sx, sy) at scale s. Cuts land on multiples of 15.
+  const CAMS = [
+    { a: 240, b: 269, s: 1.6, wx: 840, wy: 930, sx: 540, sy: 960, punch: [255] },
+    { a: 270, b: 284, s: 2.6, wx: 900, wy: 935, sx: 540, sy: 960, punch: [] },
+    { a: 285, b: 314, s: 0.95, wx: 590, wy: 950, sx: 540, sy: 960, punch: [300] },
+    { a: 315, b: 344, s: 1.5, wx: 420, wy: 975, sx: 540, sy: 860, punch: [330] },
+    { a: 345, b: 359, s: 2.4, wx: 400, wy: 990, sx: 540, sy: 860, punch: [] },
+  ];
+
+  // Story beats for the 7 ticks. The NEXT card (360 to 449) shows all seven complete.
+  const BEATS = [0, 30, 60, 105, 180, 240, 315];
+
+  // Captions: 1 to 4 words per line, max 2 lines, each word a hard cut-in about 8 frames apart.
+  const CHUNKS = [
+    { a: 30,  b: 59,  lines: [[['Launch', 30], ['Pad', 38], ['39B.', 46]]] },
+    { a: 60,  b: 104, lines: [[['Artemis', 60], ['I', 68]], [['lifts', 75], ['off.', 83]]] },
+    { a: 105, b: 149, lines: [[['SLS', 105], ['and', 113], ['Orion', 120]], [['fly', 135], ['together', 143]]] },
+    { a: 150, b: 179, lines: [[['for', 150], ['the', 158]], [['first', 165], ['time.', 173]]] },
+    { a: 195, b: 239, lines: [[['Earth', 195], ['rises', 203]], [['behind', 210], ['the', 217], ['Moon.', 225]]] },
+    { a: 244, b: 284, lines: [[['A', 244], ['3-minute,', 250]], [['27-second', 255], ['burn', 262]]] },
+    { a: 285, b: 314, lines: [[['sends', 285], ['Orion', 292]], [['home.', 300]]] },
+    { a: 315, b: 359, lines: [[['Splashdown:', 315]]] },
+  ];
+
+  // ---------- easing + spring (motion tokens) ----------
+  function bezier(x1, y1, x2, y2) {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t;
+    const sy = (t) => ((ay * t + by) * t + cy) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) { const e = sx(t) - x, d = dx(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+      let lo = 0, hi = 1;
+      for (let i = 0; i < 30 && Math.abs(sx(t) - x) > 1e-6; i++) { if (sx(t) < x) lo = t; else hi = t; t = (lo + hi) / 2; }
+      return sy(t);
+    };
+  }
+  const enter = bezier(0.16, 1, 0.3, 1);
+  const move = bezier(0.76, 0, 0.24, 1);
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  function spring(t, zeta, f) {
+    if (t <= 0) return 0;
+    const w = 2 * Math.PI * f, wd = w * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+  }
+  // Punch-in: 4% on a spring that settles inside 6 frames, then holds.
+  const punchStep = (df) => (df < 0 ? 0 : df >= 6 ? 1 : spring(df / FPS, 0.7, 4));
+  const punchScale = (f, list) => list.reduce((p, pf) => p * (1 + 0.04 * punchStep(f - pf)), 1);
+  // Giant type slam: 1.12 to 1.0 over 5 frames on the enter curve.
+  const slam = (df) => 1.12 - 0.12 * enter(clamp01(df / 5));
+  // Echo ring: lands with a small spring in scale; opacity never overshoots.
+  const ring = (el, df) => {
+    el.style.opacity = df < 0 ? 0 : clamp01((df + 1) / 3);
+    el.style.transform = `scale(${0.4 + 0.6 * spring(Math.max(0, df) / FPS, 0.7, 4)})`;
+  };
+
+  // ---------- build DOM ----------
+  const $ = (id) => document.getElementById(id);
+  const show = (el, on, disp = 'block') => { el.style.display = on ? disp : 'none'; };
+  const imgPromises = [];
+  SHOTS.forEach((s) => {
+    const d = document.createElement('div'); d.className = 'shot';
+    const [file, w, h] = IMG[s.img];
+    const im = document.createElement('img');
+    im.src = P + file; im.alt = ''; im.width = w; im.height = h;
+    im.style.width = w + 'px'; im.style.height = h + 'px';
+    d.appendChild(im); s.im = im;
+    if (s.scrim) { const sc = document.createElement('div'); sc.style.cssText = `position:absolute;inset:0;background:rgba(11,11,12,${s.scrim})`; d.appendChild(sc); }
+    imgPromises.push(im.decode().catch(() => {}));
+    $('shots').appendChild(d); s.el = d;
+  });
+
+  const tickFills = [];
+  for (let i = 0; i < 7; i++) {
+    const t = document.createElement('div'); t.style.cssText = 'flex:1;position:relative;background:rgba(242,239,232,0.30)';
+    const f = document.createElement('div'); f.style.cssText = 'position:absolute;inset:0;background:#F5B83D;transform-origin:0 50%;transform:scaleX(0)';
+    t.appendChild(f); $('ticks').appendChild(t); tickFills.push(f);
+  }
+
+  CHUNKS.forEach((c) => {
+    const el = document.createElement('div'); el.className = 'chunk';
+    c.lineEls = []; c.words = [];
+    c.lines.forEach((ln) => {
+      const le = document.createElement('div'); le.className = 'line';
+      ln.forEach(([txt, f], i) => {
+        const w = document.createElement('span'); w.className = 'w';
+        w.textContent = (i ? ' ' : '') + txt;
+        le.appendChild(w); c.words.push({ el: w, f });
+      });
+      el.appendChild(le); c.lineEls.push({ el: le, f: ln[0][1] });
+    });
+    $('caps').appendChild(el); c.el = el;
+  });
+
+  const paths = ['pFly', 'pRet', 'nPath', 'nO1', 'nO2'].reduce((o, id) => { const el = $(id); o[id] = { el, L: el.getTotalLength() }; return o; }, {});
+  const draw = (id, p, dash) => {
+    const { el, L } = paths[id];
+    if (dash) { // dashed lines draw by clipping, so the dash pattern stays put
+      el.style.clipPath = `inset(0 ${(100 * (1 - p)).toFixed(2)}% 0 0)`;
+    } else {
+      el.style.strokeDasharray = `${L} ${L}`;
+      el.style.strokeDashoffset = (L * (1 - p)).toFixed(2);
+    }
+  };
+  const ptAt = (id, p) => { const { el, L } = paths[id]; return el.getPointAtLength(L * clamp01(p)); };
+
+  // ---------- frame function ----------
+  function renderAt(t) {
+    const f = Math.min(LAST, Math.max(0, Math.round(t * FPS)));
+    const next = f >= 360;
+
+    // photos
+    let credit = null;
+    SHOTS.forEach((s) => {
+      const on = f >= s.a && f <= s.b;
+      show(s.el, on);
+      if (!on) return;
+      credit = s.credit;
+      const p = punchScale(f, s.punch);
+      const [ax, ay] = s.A;
+      s.im.style.transform = `translate(${ax}px, ${ay}px) scale(${p}) translate(${-ax}px, ${-ay}px) translate(${-s.ox}px, ${-s.oy}px) scale(${s.S})`;
+    });
+
+    // diagram world (beats 6 and 7)
+    const cam = CAMS.find((c) => f >= c.a && f <= c.b);
+    $('diag').style.visibility = cam ? 'visible' : 'hidden';
+    if (cam) {
+      credit = DIAGRAM;
+      const k = cam.s * punchScale(f, cam.punch);
+      const ax = 540, ay = cam.sy;
+      // world -> screen
+      const W = (x, y) => [ax + (cam.sx - ax + (x - cam.wx) * cam.s) * (k / cam.s), ay + (cam.sy - ay + (y - cam.wy) * cam.s) * (k / cam.s)];
+      const [tx, ty] = W(0, 0);
+      $('cam').setAttribute('transform', `translate(${tx} ${ty}) scale(${k})`);
+      $('cam').setAttribute('stroke-width', (4 / k).toFixed(4));
+      $('pOut').setAttribute('stroke-dasharray', `${(10 / k).toFixed(3)} ${(12 / k).toFixed(3)}`);
+      const zTop = f < 315 ? 730 : 540;
+      $('zoneRect').setAttribute('y', zTop); $('zoneRect').setAttribute('height', 1180 - zTop);
+      draw('pFly', 1);
+      // the return leg draws during "sends Orion home." and stays drawn
+      const pr = f < 285 ? 0 : move(clamp01((f - 285) / 29));
+      draw('pRet', pr);
+      const place = (id, x, y) => { const el = $(id); el.setAttribute('transform', `translate(${x} ${y})`); };
+      const lab = (id, x, y, on, anchor = 'start') => { const el = $(id); el.setAttribute('x', x); el.setAttribute('y', y); el.setAttribute('text-anchor', anchor); el.style.display = on ? 'inline' : 'none'; };
+      const burn = W(936, 935), moon = W(830, 940), earth = W(250, 940), splash = W(372, 990);
+      place('mBurn', burn[0], burn[1]);
+      lab('lBurn', burn[0] + 26, burn[1] + 8, f < 285);
+      lab('lMoon', moon[0], moon[1] + 8, f < 315, 'middle');
+      lab('lEarth', earth[0], earth[1] + 8, f >= 285, 'middle');
+      // Orion rides the head of the return leg while it draws
+      const head = f < 285 ? { x: 936, y: 935 } : ptAt('pRet', pr);
+      const o = W(head.x, head.y);
+      const orionOn = f >= 285 && f < 315;
+      $('mOrion').style.display = orionOn ? 'inline' : 'none';
+      place('mOrion', o[0], o[1]);
+      lab('lOrion', o[0], o[1] + 44, orionOn && f >= 300, 'middle');
+      const splashOn = f >= 319;
+      $('mSplash').style.display = splashOn ? 'inline' : 'none';
+      place('mSplash', splash[0], splash[1]);
+      lab('lSplash', splash[0] + 26, splash[1] + 8, splashOn);
+      $('mBurn').style.display = f < 315 ? 'inline' : 'none';
+    }
+
+    // NEXT card (360 to 449)
+    $('next').style.visibility = next ? 'visible' : 'hidden';
+    if (next) {
+      show($('nDate'), f >= 375);
+      show($('nPoint'), f >= 390, 'flex');
+      const pd = enter(clamp01((f - 394) / 10));
+      ['nMars', 'nLMars', 'nM1', 'nM2'].forEach((id) => { $(id).style.display = f >= 394 ? 'inline' : 'none'; });
+      draw('nO1', pd); draw('nO2', enter(clamp01((f - 398) / 10)));
+      $('nO1').style.display = f >= 394 ? 'inline' : 'none';
+      $('nO2').style.display = f >= 398 ? 'inline' : 'none';
+      show($('nDiagLabel'), f >= 394);
+      draw('nPath', move(clamp01((f - 420) / 15)), true);
+      $('nPath').style.display = f >= 420 ? 'inline' : 'none';
+      const arrived = f >= 435;
+      $('nProbe').style.display = arrived ? 'inline' : 'none';
+      $('nLProbe').style.display = arrived ? 'inline' : 'none';
+      show($('nMark'), f >= 405, 'flex');
+      ring($('nRing'), f - (405 + 39));
+    }
+
+    // background: ink unless a photo is up
+    credit = next ? null : credit;
+    const cr = $('credit');
+    if (credit) { cr.textContent = credit; show(cr, true); } else show(cr, false);
+
+    // ticks: tick 1 is full on frame 0; each later tick fills 4 frames after its beat cut (secondary move)
+    tickFills.forEach((el, i) => {
+      const v = i === 0 ? 1 : enter(clamp01((f - (BEATS[i] + 4)) / 6));
+      el.style.transform = `scaleX(${v})`;
+    });
+
+    // kicker: identical every day; on the NEXT card it names the series again
+    $('kText').textContent = next ? 'Next on Launch day' : 'Launch day';
+
+    // signal delay chip: in 4 frames after the Day 20 cut; the echo ring lands 1.3 s (39 frames) after the dot
+    const chipOn = f >= 184 && f <= 239;
+    show($('chip'), chipOn, 'flex');
+    if (chipOn) ring($('chipRing'), f - (184 + 39));
+
+    // giant type
+    const g = (id, a, b, slamAt) => {
+      const el = $(id); const on = f >= a && f <= b; show(el, on);
+      if (on) el.style.transform = slamAt == null ? 'none' : `scale(${slam(f - slamAt)})`;
+      return on;
+    };
+    g('g147', 0, 29, null);
+    g('gAM', 0, 29, null);
+    show($('hData'), f >= 19 && f <= 29);
+    g('gDay', 180, 209, 180);
+    g('g20', 188, 209, 188);
+    const nb = f >= 240 && f <= 314;
+    show($('numBlock'), nb);
+    if (nb) {
+      const el = $('g327');
+      el.style.transform = `scale(${slam(f - 240)})`;
+      // count-up on the spring (zeta 0.8, f 2); the first frame already shows a nonzero step,
+      // the display never counts backward and is capped at the true value (207 s = 3:27)
+      let peak = 0;
+      for (let k = 240; k <= f; k++) peak = Math.max(peak, spring((k - 240 + 1) / FPS, 0.8, 2));
+      const n = Math.max(1, Math.min(207, Math.floor(207 * peak + 1e-6)));
+      el.textContent = Math.floor(n / 60) + ':' + String(n % 60).padStart(2, '0');
+    }
+    g('gDec', 323, 359, 323);
+
+    // captions: word-by-word hard cut-ins, newest word in amber
+    CHUNKS.forEach((c) => {
+      const on = f >= c.a && f <= c.b;
+      show(c.el, on, 'flex');
+      if (!on) return;
+      let last = null;
+      c.words.forEach((w) => { const v = f >= w.f; show(w.el, v, 'inline'); w.el.classList.remove('on'); if (v) last = w; });
+      if (last) last.el.classList.add('on');
+      c.lineEls.forEach((l) => show(l.el, f >= l.f));
+    });
+  }
+
+  window.renderAt = renderAt;
+  window.__ready = (async () => {
+    await Promise.all([
+      document.fonts.load("800 100px 'Archivo'"),
+      document.fonts.load("700 90px 'Archivo'"),
+      document.fonts.load("500 28px 'IBM Plex Mono'"),
+    ]);
+    await document.fonts.ready;
+    await Promise.all(imgPromises);
+  })();
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('bg') === '1') document.body.classList.add('bg');
+  if (params.has('t')) {
+    renderAt(Number(params.get('t')) || 0);
+  } else {
+    renderAt(0);
+    window.__ready.then(() => {
+      let t0 = null;
+      const loop = (ts) => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % 15); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    });
+  }
+})();
+</script>
+</body>
+</html>

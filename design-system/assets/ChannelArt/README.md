@@ -1,0 +1,1 @@
+Final channel art. `banner-2560x1440.png`: the YouTube banner, all text inside the centered 1546 x 423 safe area (photo: NASA/Bill Ingalls). `thumbnail-template-1280x720.png`: the long-form "This week in space" thumbnail, episode 01 example, readable at 320 x 180.

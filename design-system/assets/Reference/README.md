@@ -1,0 +1,1 @@
+NASA reference photos (public domain) used by the component previews. `earthrise-art001e002083.jpg`: Earth rising behind the Moon, Artemis I flight day 20, credit `NASA`. `artemis1-liftoff-NHQ202211160003.jpg`: Artemis I liftoff, Nov. 16, 2022, credit `NASA/Joel Kowsky`. Always show the credit with the photo.
