@@ -15,3 +15,4 @@ lab/pilots/*/out/stills/
 lab/pilots/*/out/rerender.log
 OPENROUTER_API_*.txt
 *_API_*.txt
+lab/pilots/*/out/render.log
