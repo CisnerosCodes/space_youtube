@@ -1,0 +1,1808 @@
+{
+ "note": "SYNTHETIC numbers for testing pipeline/analytics.py; not real channel data. Shapes follow the YouTube Analytics API v2 and Data API v3 responses.",
+ "videos.list": {
+  "items": [
+   {
+    "id": "FIXTUREp1mmx",
+    "snippet": {
+     "title": "Japan's MMX launches Mon. Oct. 19 to grab a piece of Phobos",
+     "publishedAt": "2026-10-17T16:00:00Z"
+    },
+    "contentDetails": {
+     "duration": "PT36S"
+    },
+    "statistics": {
+     "viewCount": "3330",
+     "likeCount": "40"
+    }
+   },
+   {
+    "id": "FIXTUREp3per",
+    "snippet": {
+     "title": "Perseverance Sets the Off-World Driving Record (Oct. 11, 2026)",
+     "publishedAt": "2026-10-18T16:00:00Z"
+    },
+    "contentDetails": {
+     "duration": "PT37S"
+    },
+    "statistics": {
+     "viewCount": "5250",
+     "likeCount": "40"
+    }
+   },
+   {
+    "id": "FIXTUREp2frb",
+    "snippet": {
+     "title": "Webb finds the dwarf galaxy behind the farthest fast radio burst",
+     "publishedAt": "2026-10-19T16:00:00Z"
+    },
+    "contentDetails": {
+     "duration": "PT32S"
+    },
+    "statistics": {
+     "viewCount": "1020",
+     "likeCount": "40"
+    }
+   }
+  ]
+ },
+ "reports": {
+  "FIXTUREp1mmx": {
+   "daily": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "day",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "2026-10-17",
+      640,
+      396,
+      242,
+      22.7,
+      63.1,
+      1,
+      0,
+      19,
+      1,
+      2
+     ],
+     [
+      "2026-10-18",
+      1210,
+      750,
+      518,
+      25.7,
+      71.4,
+      2,
+      0,
+      36,
+      2,
+      4
+     ],
+     [
+      "2026-10-19",
+      820,
+      508,
+      336,
+      24.6,
+      68.3,
+      2,
+      0,
+      24,
+      1,
+      3
+     ],
+     [
+      "2026-10-20",
+      400,
+      248,
+      135,
+      20.3,
+      56.4,
+      1,
+      0,
+      12,
+      0,
+      1
+     ],
+     [
+      "2026-10-21",
+      260,
+      161,
+      87,
+      20.1,
+      55.8,
+      0,
+      0,
+      7,
+      0,
+      1
+     ]
+    ]
+   },
+   "totals": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     }
+    ],
+    "rows": [
+     [
+      3330,
+      2063,
+      1318,
+      23.8,
+      66.0,
+      6,
+      0,
+      98,
+      4,
+      11
+     ]
+    ]
+   },
+   "traffic": {
+    "columnHeaders": [
+     {
+      "name": "insightTrafficSourceType",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "SHORTS",
+      2863,
+      1718
+     ],
+     [
+      "SUBSCRIBER",
+      166,
+      133
+     ],
+     [
+      "YT_CHANNEL",
+      199,
+      139
+     ],
+     [
+      "NO_LINK_OTHER",
+      102,
+      3
+     ]
+    ]
+   },
+   "retention": {
+    "columnHeaders": [
+     {
+      "name": "elapsedVideoTimeRatio",
+      "columnType": "DIMENSION",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "audienceWatchRatio",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "relativeRetentionPerformance",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     }
+    ],
+    "rows": [
+     [
+      0.01,
+      1.1591,
+      0.548
+     ],
+     [
+      0.02,
+      1.1483,
+      0.546
+     ],
+     [
+      0.03,
+      1.1377,
+      0.544
+     ],
+     [
+      0.04,
+      1.1271,
+      0.542
+     ],
+     [
+      0.05,
+      1.1167,
+      0.54
+     ],
+     [
+      0.06,
+      1.1064,
+      0.538
+     ],
+     [
+      0.07,
+      1.0961,
+      0.536
+     ],
+     [
+      0.08,
+      1.086,
+      0.534
+     ],
+     [
+      0.09,
+      1.076,
+      0.532
+     ],
+     [
+      0.1,
+      1.0661,
+      0.53
+     ],
+     [
+      0.11,
+      1.0563,
+      0.528
+     ],
+     [
+      0.12,
+      1.0466,
+      0.526
+     ],
+     [
+      0.13,
+      1.037,
+      0.524
+     ],
+     [
+      0.14,
+      1.0275,
+      0.522
+     ],
+     [
+      0.15,
+      1.0181,
+      0.52
+     ],
+     [
+      0.16,
+      1.0088,
+      0.518
+     ],
+     [
+      0.17,
+      0.9996,
+      0.516
+     ],
+     [
+      0.18,
+      0.9904,
+      0.514
+     ],
+     [
+      0.19,
+      0.9814,
+      0.512
+     ],
+     [
+      0.2,
+      0.9725,
+      0.51
+     ],
+     [
+      0.21,
+      0.9637,
+      0.508
+     ],
+     [
+      0.22,
+      0.9549,
+      0.506
+     ],
+     [
+      0.23,
+      0.9463,
+      0.504
+     ],
+     [
+      0.24,
+      0.9377,
+      0.502
+     ],
+     [
+      0.25,
+      0.9292,
+      0.5
+     ],
+     [
+      0.26,
+      0.9208,
+      0.498
+     ],
+     [
+      0.27,
+      0.9125,
+      0.496
+     ],
+     [
+      0.28,
+      0.9043,
+      0.494
+     ],
+     [
+      0.29,
+      0.8962,
+      0.492
+     ],
+     [
+      0.3,
+      0.8881,
+      0.49
+     ],
+     [
+      0.31,
+      0.8802,
+      0.488
+     ],
+     [
+      0.32,
+      0.8723,
+      0.486
+     ],
+     [
+      0.33,
+      0.8645,
+      0.484
+     ],
+     [
+      0.34,
+      0.8568,
+      0.482
+     ],
+     [
+      0.35,
+      0.8491,
+      0.48
+     ],
+     [
+      0.36,
+      0.8416,
+      0.478
+     ],
+     [
+      0.37,
+      0.8341,
+      0.476
+     ],
+     [
+      0.38,
+      0.8267,
+      0.474
+     ],
+     [
+      0.39,
+      0.8194,
+      0.472
+     ],
+     [
+      0.4,
+      0.8121,
+      0.47
+     ],
+     [
+      0.41,
+      0.805,
+      0.468
+     ],
+     [
+      0.42,
+      0.7979,
+      0.466
+     ],
+     [
+      0.43,
+      0.7908,
+      0.464
+     ],
+     [
+      0.44,
+      0.7839,
+      0.462
+     ],
+     [
+      0.45,
+      0.777,
+      0.46
+     ],
+     [
+      0.46,
+      0.7702,
+      0.458
+     ],
+     [
+      0.47,
+      0.7635,
+      0.456
+     ],
+     [
+      0.48,
+      0.7568,
+      0.454
+     ],
+     [
+      0.49,
+      0.7502,
+      0.452
+     ],
+     [
+      0.5,
+      0.7436,
+      0.45
+     ],
+     [
+      0.51,
+      0.7372,
+      0.448
+     ],
+     [
+      0.52,
+      0.7308,
+      0.446
+     ],
+     [
+      0.53,
+      0.7245,
+      0.444
+     ],
+     [
+      0.54,
+      0.7182,
+      0.442
+     ],
+     [
+      0.55,
+      0.712,
+      0.44
+     ],
+     [
+      0.56,
+      0.7059,
+      0.438
+     ],
+     [
+      0.57,
+      0.6998,
+      0.436
+     ],
+     [
+      0.58,
+      0.6938,
+      0.434
+     ],
+     [
+      0.59,
+      0.6878,
+      0.432
+     ],
+     [
+      0.6,
+      0.6819,
+      0.43
+     ],
+     [
+      0.61,
+      0.6761,
+      0.428
+     ],
+     [
+      0.62,
+      0.6704,
+      0.426
+     ],
+     [
+      0.63,
+      0.6646,
+      0.424
+     ],
+     [
+      0.64,
+      0.659,
+      0.422
+     ],
+     [
+      0.65,
+      0.6534,
+      0.42
+     ],
+     [
+      0.66,
+      0.6479,
+      0.418
+     ],
+     [
+      0.67,
+      0.6424,
+      0.416
+     ],
+     [
+      0.68,
+      0.637,
+      0.414
+     ],
+     [
+      0.69,
+      0.6316,
+      0.412
+     ],
+     [
+      0.7,
+      0.6263,
+      0.41
+     ],
+     [
+      0.71,
+      0.6211,
+      0.408
+     ],
+     [
+      0.72,
+      0.6159,
+      0.406
+     ],
+     [
+      0.73,
+      0.6108,
+      0.404
+     ],
+     [
+      0.74,
+      0.6057,
+      0.402
+     ],
+     [
+      0.75,
+      0.6006,
+      0.4
+     ],
+     [
+      0.76,
+      0.5957,
+      0.398
+     ],
+     [
+      0.77,
+      0.5907,
+      0.396
+     ],
+     [
+      0.78,
+      0.5858,
+      0.394
+     ],
+     [
+      0.79,
+      0.581,
+      0.392
+     ],
+     [
+      0.8,
+      0.5762,
+      0.39
+     ],
+     [
+      0.81,
+      0.5715,
+      0.388
+     ],
+     [
+      0.82,
+      0.5668,
+      0.386
+     ],
+     [
+      0.83,
+      0.5622,
+      0.384
+     ],
+     [
+      0.84,
+      0.5576,
+      0.382
+     ],
+     [
+      0.85,
+      0.5531,
+      0.38
+     ],
+     [
+      0.86,
+      0.5486,
+      0.378
+     ],
+     [
+      0.87,
+      0.5441,
+      0.376
+     ],
+     [
+      0.88,
+      0.5398,
+      0.374
+     ],
+     [
+      0.89,
+      0.5354,
+      0.372
+     ],
+     [
+      0.9,
+      0.5311,
+      0.37
+     ],
+     [
+      0.91,
+      0.5268,
+      0.368
+     ],
+     [
+      0.92,
+      0.5226,
+      0.366
+     ],
+     [
+      0.93,
+      0.5184,
+      0.364
+     ],
+     [
+      0.94,
+      0.5143,
+      0.362
+     ],
+     [
+      0.95,
+      0.5102,
+      0.36
+     ],
+     [
+      0.96,
+      0.6062,
+      0.358
+     ],
+     [
+      0.97,
+      0.6022,
+      0.356
+     ],
+     [
+      0.98,
+      0.5982,
+      0.354
+     ],
+     [
+      0.99,
+      0.5943,
+      0.352
+     ],
+     [
+      1.0,
+      0.5904,
+      0.35
+     ]
+    ]
+   }
+  },
+  "FIXTUREp3per": {
+   "daily": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "day",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "2026-10-18",
+      2300,
+      1426,
+      813,
+      21.2,
+      57.3,
+      8,
+      1,
+      69,
+      4,
+      9
+     ],
+     [
+      "2026-10-19",
+      1900,
+      1178,
+      887,
+      28.0,
+      75.7,
+      4,
+      0,
+      57,
+      3,
+      7
+     ],
+     [
+      "2026-10-20",
+      700,
+      434,
+      261,
+      22.4,
+      60.5,
+      3,
+      0,
+      21,
+      1,
+      2
+     ],
+     [
+      "2026-10-21",
+      350,
+      217,
+      170,
+      29.1,
+      78.6,
+      1,
+      0,
+      10,
+      0,
+      1
+     ]
+    ]
+   },
+   "totals": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     }
+    ],
+    "rows": [
+     [
+      5250,
+      3255,
+      2131,
+      24.3,
+      65.8,
+      16,
+      1,
+      157,
+      8,
+      19
+     ]
+    ]
+   },
+   "traffic": {
+    "columnHeaders": [
+     {
+      "name": "insightTrafficSourceType",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "SHORTS",
+      4515,
+      2709
+     ],
+     [
+      "SUBSCRIBER",
+      262,
+      210
+     ],
+     [
+      "YT_CHANNEL",
+      315,
+      220
+     ],
+     [
+      "NO_LINK_OTHER",
+      158,
+      3
+     ]
+    ]
+   },
+   "retention": {
+    "columnHeaders": [
+     {
+      "name": "elapsedVideoTimeRatio",
+      "columnType": "DIMENSION",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "audienceWatchRatio",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "relativeRetentionPerformance",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     }
+    ],
+    "rows": [
+     [
+      0.01,
+      1.1571,
+      0.548
+     ],
+     [
+      0.02,
+      1.1443,
+      0.546
+     ],
+     [
+      0.03,
+      1.1317,
+      0.544
+     ],
+     [
+      0.04,
+      1.1193,
+      0.542
+     ],
+     [
+      0.05,
+      1.107,
+      0.54
+     ],
+     [
+      0.06,
+      1.0948,
+      0.538
+     ],
+     [
+      0.07,
+      1.0828,
+      0.536
+     ],
+     [
+      0.08,
+      1.071,
+      0.534
+     ],
+     [
+      0.09,
+      1.0593,
+      0.532
+     ],
+     [
+      0.1,
+      1.0477,
+      0.53
+     ],
+     [
+      0.11,
+      1.0363,
+      0.528
+     ],
+     [
+      0.12,
+      1.025,
+      0.526
+     ],
+     [
+      0.13,
+      1.0139,
+      0.524
+     ],
+     [
+      0.14,
+      1.0029,
+      0.522
+     ],
+     [
+      0.15,
+      0.992,
+      0.52
+     ],
+     [
+      0.16,
+      0.9813,
+      0.518
+     ],
+     [
+      0.17,
+      0.9707,
+      0.516
+     ],
+     [
+      0.18,
+      0.9603,
+      0.514
+     ],
+     [
+      0.19,
+      0.9499,
+      0.512
+     ],
+     [
+      0.2,
+      0.9397,
+      0.51
+     ],
+     [
+      0.21,
+      0.9296,
+      0.508
+     ],
+     [
+      0.22,
+      0.9197,
+      0.506
+     ],
+     [
+      0.23,
+      0.9098,
+      0.504
+     ],
+     [
+      0.24,
+      0.9001,
+      0.502
+     ],
+     [
+      0.25,
+      0.8905,
+      0.5
+     ],
+     [
+      0.26,
+      0.881,
+      0.498
+     ],
+     [
+      0.27,
+      0.8717,
+      0.496
+     ],
+     [
+      0.28,
+      0.8624,
+      0.494
+     ],
+     [
+      0.29,
+      0.8533,
+      0.492
+     ],
+     [
+      0.3,
+      0.8443,
+      0.49
+     ],
+     [
+      0.31,
+      0.8353,
+      0.488
+     ],
+     [
+      0.32,
+      0.8265,
+      0.486
+     ],
+     [
+      0.33,
+      0.8178,
+      0.484
+     ],
+     [
+      0.34,
+      0.8093,
+      0.482
+     ],
+     [
+      0.35,
+      0.8008,
+      0.48
+     ],
+     [
+      0.36,
+      0.7924,
+      0.478
+     ],
+     [
+      0.37,
+      0.7841,
+      0.476
+     ],
+     [
+      0.38,
+      0.776,
+      0.474
+     ],
+     [
+      0.39,
+      0.7679,
+      0.472
+     ],
+     [
+      0.4,
+      0.7599,
+      0.47
+     ],
+     [
+      0.41,
+      0.752,
+      0.468
+     ],
+     [
+      0.42,
+      0.7443,
+      0.466
+     ],
+     [
+      0.43,
+      0.7366,
+      0.464
+     ],
+     [
+      0.44,
+      0.729,
+      0.462
+     ],
+     [
+      0.45,
+      0.7215,
+      0.46
+     ],
+     [
+      0.46,
+      0.7141,
+      0.458
+     ],
+     [
+      0.47,
+      0.7068,
+      0.456
+     ],
+     [
+      0.48,
+      0.6996,
+      0.454
+     ],
+     [
+      0.49,
+      0.6924,
+      0.452
+     ],
+     [
+      0.5,
+      0.6854,
+      0.45
+     ],
+     [
+      0.51,
+      0.6784,
+      0.448
+     ],
+     [
+      0.52,
+      0.6716,
+      0.446
+     ],
+     [
+      0.53,
+      0.6648,
+      0.444
+     ],
+     [
+      0.54,
+      0.6581,
+      0.442
+     ],
+     [
+      0.55,
+      0.6515,
+      0.44
+     ],
+     [
+      0.56,
+      0.6449,
+      0.438
+     ],
+     [
+      0.57,
+      0.6385,
+      0.436
+     ],
+     [
+      0.58,
+      0.6321,
+      0.434
+     ],
+     [
+      0.59,
+      0.6258,
+      0.432
+     ],
+     [
+      0.6,
+      0.6196,
+      0.43
+     ],
+     [
+      0.61,
+      0.6134,
+      0.428
+     ],
+     [
+      0.62,
+      0.6073,
+      0.426
+     ],
+     [
+      0.63,
+      0.6014,
+      0.424
+     ],
+     [
+      0.64,
+      0.5954,
+      0.422
+     ],
+     [
+      0.65,
+      0.5896,
+      0.42
+     ],
+     [
+      0.66,
+      0.5838,
+      0.418
+     ],
+     [
+      0.67,
+      0.5781,
+      0.416
+     ],
+     [
+      0.68,
+      0.5725,
+      0.414
+     ],
+     [
+      0.69,
+      0.5669,
+      0.412
+     ],
+     [
+      0.7,
+      0.5614,
+      0.41
+     ],
+     [
+      0.71,
+      0.556,
+      0.408
+     ],
+     [
+      0.72,
+      0.5506,
+      0.406
+     ],
+     [
+      0.73,
+      0.5453,
+      0.404
+     ],
+     [
+      0.74,
+      0.5401,
+      0.402
+     ],
+     [
+      0.75,
+      0.5349,
+      0.4
+     ],
+     [
+      0.76,
+      0.5298,
+      0.398
+     ],
+     [
+      0.77,
+      0.5248,
+      0.396
+     ],
+     [
+      0.78,
+      0.5198,
+      0.394
+     ],
+     [
+      0.79,
+      0.5149,
+      0.392
+     ],
+     [
+      0.8,
+      0.51,
+      0.39
+     ],
+     [
+      0.81,
+      0.5052,
+      0.388
+     ],
+     [
+      0.82,
+      0.5005,
+      0.386
+     ],
+     [
+      0.83,
+      0.4958,
+      0.384
+     ],
+     [
+      0.84,
+      0.4912,
+      0.382
+     ],
+     [
+      0.85,
+      0.4866,
+      0.38
+     ],
+     [
+      0.86,
+      0.4821,
+      0.378
+     ],
+     [
+      0.87,
+      0.4776,
+      0.376
+     ],
+     [
+      0.88,
+      0.4732,
+      0.374
+     ],
+     [
+      0.89,
+      0.4689,
+      0.372
+     ],
+     [
+      0.9,
+      0.4646,
+      0.37
+     ],
+     [
+      0.91,
+      0.4603,
+      0.368
+     ],
+     [
+      0.92,
+      0.4562,
+      0.366
+     ],
+     [
+      0.93,
+      0.452,
+      0.364
+     ],
+     [
+      0.94,
+      0.4479,
+      0.362
+     ],
+     [
+      0.95,
+      0.4439,
+      0.36
+     ],
+     [
+      0.96,
+      0.5399,
+      0.358
+     ],
+     [
+      0.97,
+      0.536,
+      0.356
+     ],
+     [
+      0.98,
+      0.5321,
+      0.354
+     ],
+     [
+      0.99,
+      0.5283,
+      0.352
+     ],
+     [
+      1.0,
+      0.5245,
+      0.35
+     ]
+    ]
+   }
+  },
+  "FIXTUREp2frb": {
+   "daily": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "day",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "2026-10-19",
+      480,
+      297,
+      203,
+      25.4,
+      79.4,
+      1,
+      0,
+      14,
+      0,
+      1
+     ],
+     [
+      "2026-10-20",
+      390,
+      241,
+      159,
+      24.5,
+      76.6,
+      1,
+      0,
+      11,
+      0,
+      1
+     ],
+     [
+      "2026-10-21",
+      150,
+      93,
+      47,
+      18.8,
+      58.8,
+      0,
+      0,
+      4,
+      0,
+      0
+     ]
+    ]
+   },
+   "totals": {
+    "kind": "youtubeAnalytics#resultTable",
+    "columnHeaders": [
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "estimatedMinutesWatched",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewDuration",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "averageViewPercentage",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersGained",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "subscribersLost",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "likes",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "comments",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     },
+     {
+      "name": "shares",
+      "columnType": "METRIC",
+      "dataType": "FLOAT"
+     }
+    ],
+    "rows": [
+     [
+      1020,
+      631,
+      409,
+      24.1,
+      75.3,
+      2,
+      0,
+      29,
+      0,
+      2
+     ]
+    ]
+   },
+   "traffic": {
+    "columnHeaders": [
+     {
+      "name": "insightTrafficSourceType",
+      "columnType": "DIMENSION",
+      "dataType": "STRING"
+     },
+     {
+      "name": "views",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     },
+     {
+      "name": "engagedViews",
+      "columnType": "METRIC",
+      "dataType": "INTEGER"
+     }
+    ],
+    "rows": [
+     [
+      "SHORTS",
+      877,
+      526
+     ],
+     [
+      "SUBSCRIBER",
+      51,
+      40
+     ],
+     [
+      "YT_CHANNEL",
+      61,
+      42
+     ],
+     [
+      "NO_LINK_OTHER",
+      31,
+      3
+     ]
+    ]
+   }
+  }
+ },
+ "reporting.jobs": {
+  "jobs": [
+   {
+    "id": "job-fixture",
+    "reportTypeId": "channel_reach_basic_a1",
+    "name": "downlink-cat-reach"
+   }
+  ]
+ },
+ "reporting.reports": {
+  "reports": [
+   {
+    "id": "r1",
+    "downloadUrl": "fixture://reach-1.csv"
+   }
+  ]
+ },
+ "reporting.csv": {
+  "fixture://reach-1.csv": "date,channel_id,video_id,video_thumbnail_impressions,video_thumbnail_impressions_ctr\n20261018,UC30o4V9vQ6ReBOpbCY2_7lg,FIXTUREp1mmx,900,0.031\n20261019,UC30o4V9vQ6ReBOpbCY2_7lg,FIXTUREp1mmx,500,0.022\n20261019,UC30o4V9vQ6ReBOpbCY2_7lg,FIXTUREp3per,1500,0.040\n"
+ },
+ "published": [
+  {
+   "video_id": "FIXTUREp1mmx",
+   "series": "Launch Day",
+   "publish_at": "2026-10-17T16:00:00Z"
+  },
+  {
+   "video_id": "FIXTUREp3per",
+   "series": "By the Numbers",
+   "publish_at": "2026-10-18T16:00:00Z"
+  },
+  {
+   "video_id": "FIXTUREp2frb",
+   "series": "Just Discovered",
+   "publish_at": "2026-10-19T16:00:00Z"
+  }
+ ]
+}

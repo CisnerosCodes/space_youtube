@@ -16,3 +16,7 @@ lab/pilots/*/out/rerender.log
 OPENROUTER_API_*.txt
 *_API_*.txt
 lab/pilots/*/out/render.log
+
+# pipeline: Launch Library 2 response cache, fixture-mode analytics output
+research/*/raw/
+pipeline/log/fixture/

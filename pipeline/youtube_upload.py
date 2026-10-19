@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
-"""Upload one approved Short to Signal Delay as private with a scheduled publish time.
+"""Upload one approved Short to Downlink Cat as private with a scheduled publish time.
 
 usage:
   python3 pipeline/youtube_upload.py <short_dir> --publish-at 2026-10-16T15:00:00Z [--dry-run]
+  python3 pipeline/youtube_upload.py <short_dir> --log-only
 
 <short_dir> holds out/final.mp4 and metadata.json (title, description, tags, ai_disclosure,
 made_for_kids). Credentials come from the environment, never from the repo:
-  YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN   (the Signal Delay token from Hermes' ytmint.py)
+  YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN   (the channel token from Hermes' ytmint.py)
 The script never prints them. --dry-run prints the request body and uploads nothing.
-On success it writes upload.json in <short_dir> with the video ID and the schedule.
+On success it writes upload.json in <short_dir> with the video ID and the schedule, and appends one line to
+pipeline/log/published.jsonl (pipeline/log.py; series from metadata.json), which series_rotation.py reads.
+--log-only appends that line from an existing upload.json (for Shorts uploaded before the log existed).
 """
 import argparse, json, os, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import log as runlog  # noqa: E402  pipeline/log.py
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 UPLOAD_URL = "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status"
@@ -86,11 +92,20 @@ def upload(video, body, token):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("short_dir")
-    ap.add_argument("--publish-at", required=True, help="RFC 3339 UTC, e.g. 2026-10-16T15:00:00Z")
+    ap.add_argument("--publish-at", help="RFC 3339 UTC, e.g. 2026-10-16T15:00:00Z (required unless --log-only)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--log-only", action="store_true", help="only append published.jsonl from an existing upload.json")
     a = ap.parse_args()
     d = Path(a.short_dir)
     meta = json.loads((d / "metadata.json").read_text())
+    if a.log_only:
+        if not (d / "upload.json").exists():
+            sys.exit(f"{d / 'upload.json'} not found")
+        rec = runlog.append_published(d, meta=meta)
+        print(json.dumps(rec, indent=2, ensure_ascii=False) if rec else "already in published.jsonl")
+        return
+    if not a.publish_at:
+        ap.error("--publish-at is required")
     video = d / "out" / "final.mp4"
     body = body_for(meta, a.publish_at)
     errs = check(meta, video, a.publish_at)
@@ -108,6 +123,10 @@ def main():
            "privacy": res["status"]["privacyStatus"]}
     (d / "upload.json").write_text(json.dumps(rec, indent=2) + "\n")
     print(json.dumps(rec, indent=2))
+    try:
+        runlog.append_published(d, rec, meta)
+    except Exception as e:  # the upload succeeded; a log problem must not hide that
+        print(f"warning: published.jsonl not written ({e}); run: python3 pipeline/youtube_upload.py {d} --log-only", file=sys.stderr)
 
 
 if __name__ == "__main__":
