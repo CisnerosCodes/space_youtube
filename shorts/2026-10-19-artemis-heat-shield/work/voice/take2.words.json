@@ -1,0 +1,458 @@
+{
+ "audio": "take2.mp3",
+ "duration": 32.4,
+ "text": "Orion came home at 39 times the speed of sound, and the cabin stayed in the mid-70s.  Outside, it passed 4,000 degrees Fahrenheit.  The heat shield took it.  186 blocks of AVCODE.  After Artemis 1, NASA changed the path home.  How?  It capped how far Orion could fly through the atmosphere,  so less time in the temperature range that damaged Artemis 1.  The result?  Nine spots of char loss.  Artemis 1 had 103.  NASA updates its moon plans on Friday, October 23rd.  Follow Downlink Cat for the update.",
+ "words": [
+  {
+   "w": "Orion",
+   "start": 0.18,
+   "end": 0.46
+  },
+  {
+   "w": "came",
+   "start": 0.46,
+   "end": 0.78
+  },
+  {
+   "w": "home",
+   "start": 0.78,
+   "end": 1.1
+  },
+  {
+   "w": "at",
+   "start": 1.1,
+   "end": 1.28
+  },
+  {
+   "w": "39",
+   "start": 1.28,
+   "end": 1.72
+  },
+  {
+   "w": "times",
+   "start": 1.72,
+   "end": 2.16
+  },
+  {
+   "w": "the",
+   "start": 2.16,
+   "end": 2.4
+  },
+  {
+   "w": "speed",
+   "start": 2.4,
+   "end": 2.68
+  },
+  {
+   "w": "of",
+   "start": 2.68,
+   "end": 2.8
+  },
+  {
+   "w": "sound,",
+   "start": 2.8,
+   "end": 3.2
+  },
+  {
+   "w": "and",
+   "start": 3.2,
+   "end": 3.46
+  },
+  {
+   "w": "the",
+   "start": 3.46,
+   "end": 3.54
+  },
+  {
+   "w": "cabin",
+   "start": 3.54,
+   "end": 3.9
+  },
+  {
+   "w": "stayed",
+   "start": 3.9,
+   "end": 4.22
+  },
+  {
+   "w": "in",
+   "start": 4.22,
+   "end": 4.42
+  },
+  {
+   "w": "the",
+   "start": 4.42,
+   "end": 4.46
+  },
+  {
+   "w": "mid",
+   "start": 4.46,
+   "end": 4.66
+  },
+  {
+   "w": "-70s.",
+   "start": 4.66,
+   "end": 5.22
+  },
+  {
+   "w": "Outside,",
+   "start": 5.44,
+   "end": 6.14
+  },
+  {
+   "w": "it",
+   "start": 6.14,
+   "end": 6.26
+  },
+  {
+   "w": "passed",
+   "start": 6.26,
+   "end": 6.48
+  },
+  {
+   "w": "4",
+   "start": 6.48,
+   "end": 6.78
+  },
+  {
+   "w": ",000",
+   "start": 6.78,
+   "end": 7.34
+  },
+  {
+   "w": "degrees",
+   "start": 7.34,
+   "end": 7.52
+  },
+  {
+   "w": "Fahrenheit.",
+   "start": 7.52,
+   "end": 8.12
+  },
+  {
+   "w": "The",
+   "start": 8.67,
+   "end": 8.81
+  },
+  {
+   "w": "heat",
+   "start": 8.81,
+   "end": 8.99
+  },
+  {
+   "w": "shield",
+   "start": 8.99,
+   "end": 9.23
+  },
+  {
+   "w": "took",
+   "start": 9.23,
+   "end": 9.73
+  },
+  {
+   "w": "it.",
+   "start": 9.73,
+   "end": 10.07
+  },
+  {
+   "w": "186",
+   "start": 10.68,
+   "end": 11.15
+  },
+  {
+   "w": "blocks",
+   "start": 11.15,
+   "end": 11.49
+  },
+  {
+   "w": "of",
+   "start": 11.49,
+   "end": 11.79
+  },
+  {
+   "w": "AVCODE.",
+   "start": 11.79,
+   "end": 12.39
+  },
+  {
+   "w": "After",
+   "start": 12.93,
+   "end": 13.19
+  },
+  {
+   "w": "Artemis",
+   "start": 13.19,
+   "end": 13.59
+  },
+  {
+   "w": "1,",
+   "start": 13.59,
+   "end": 13.91
+  },
+  {
+   "w": "NASA",
+   "start": 13.91,
+   "end": 14.17
+  },
+  {
+   "w": "changed",
+   "start": 14.17,
+   "end": 14.45
+  },
+  {
+   "w": "the",
+   "start": 14.45,
+   "end": 14.69
+  },
+  {
+   "w": "path",
+   "start": 14.69,
+   "end": 14.83
+  },
+  {
+   "w": "home.",
+   "start": 14.83,
+   "end": 15.29
+  },
+  {
+   "w": "How?",
+   "start": 15.29,
+   "end": 15.99
+  },
+  {
+   "w": "It",
+   "start": 15.99,
+   "end": 16.39
+  },
+  {
+   "w": "capped",
+   "start": 16.39,
+   "end": 16.77
+  },
+  {
+   "w": "how",
+   "start": 16.77,
+   "end": 16.89
+  },
+  {
+   "w": "far",
+   "start": 16.89,
+   "end": 17.19
+  },
+  {
+   "w": "Orion",
+   "start": 17.19,
+   "end": 17.45
+  },
+  {
+   "w": "could",
+   "start": 17.45,
+   "end": 17.65
+  },
+  {
+   "w": "fly",
+   "start": 17.65,
+   "end": 17.87
+  },
+  {
+   "w": "through",
+   "start": 17.87,
+   "end": 18.19
+  },
+  {
+   "w": "the",
+   "start": 18.19,
+   "end": 18.37
+  },
+  {
+   "w": "atmosphere,",
+   "start": 18.37,
+   "end": 18.93
+  },
+  {
+   "w": "so",
+   "start": 18.93,
+   "end": 19.29
+  },
+  {
+   "w": "less",
+   "start": 19.29,
+   "end": 19.67
+  },
+  {
+   "w": "time",
+   "start": 19.67,
+   "end": 19.89
+  },
+  {
+   "w": "in",
+   "start": 19.89,
+   "end": 20.07
+  },
+  {
+   "w": "the",
+   "start": 20.07,
+   "end": 20.13
+  },
+  {
+   "w": "temperature",
+   "start": 20.13,
+   "end": 20.41
+  },
+  {
+   "w": "range",
+   "start": 20.41,
+   "end": 20.71
+  },
+  {
+   "w": "that",
+   "start": 20.71,
+   "end": 20.93
+  },
+  {
+   "w": "damaged",
+   "start": 20.93,
+   "end": 21.27
+  },
+  {
+   "w": "Artemis",
+   "start": 21.27,
+   "end": 21.73
+  },
+  {
+   "w": "1.",
+   "start": 21.73,
+   "end": 22.07
+  },
+  {
+   "w": "The",
+   "start": 22.07,
+   "end": 22.49
+  },
+  {
+   "w": "result?",
+   "start": 22.49,
+   "end": 22.93
+  },
+  {
+   "w": "Nine",
+   "start": 22.93,
+   "end": 23.47
+  },
+  {
+   "w": "spots",
+   "start": 23.47,
+   "end": 23.81
+  },
+  {
+   "w": "of",
+   "start": 23.81,
+   "end": 24.09
+  },
+  {
+   "w": "char",
+   "start": 24.09,
+   "end": 24.25
+  },
+  {
+   "w": "loss.",
+   "start": 24.25,
+   "end": 24.69
+  },
+  {
+   "w": "Artemis",
+   "start": 24.69,
+   "end": 25.17
+  },
+  {
+   "w": "1",
+   "start": 25.17,
+   "end": 25.33
+  },
+  {
+   "w": "had",
+   "start": 25.33,
+   "end": 25.63
+  },
+  {
+   "w": "103.",
+   "start": 25.63,
+   "end": 26.41
+  },
+  {
+   "w": "NASA",
+   "start": 27.05,
+   "end": 27.61
+  },
+  {
+   "w": "updates",
+   "start": 27.61,
+   "end": 27.93
+  },
+  {
+   "w": "its",
+   "start": 27.93,
+   "end": 28.19
+  },
+  {
+   "w": "moon",
+   "start": 28.19,
+   "end": 28.37
+  },
+  {
+   "w": "plans",
+   "start": 28.37,
+   "end": 28.61
+  },
+  {
+   "w": "on",
+   "start": 28.61,
+   "end": 28.89
+  },
+  {
+   "w": "Friday,",
+   "start": 28.89,
+   "end": 29.33
+  },
+  {
+   "w": "October",
+   "start": 29.33,
+   "end": 29.55
+  },
+  {
+   "w": "23rd.",
+   "start": 29.55,
+   "end": 30.11
+  },
+  {
+   "w": "Follow",
+   "start": 30.35,
+   "end": 30.79
+  },
+  {
+   "w": "Downlink",
+   "start": 30.79,
+   "end": 31.21
+  },
+  {
+   "w": "Cat",
+   "start": 31.21,
+   "end": 31.41
+  },
+  {
+   "w": "for",
+   "start": 31.41,
+   "end": 31.61
+  },
+  {
+   "w": "the",
+   "start": 31.61,
+   "end": 31.73
+  },
+  {
+   "w": "update.",
+   "start": 31.73,
+   "end": 32.17
+  }
+ ],
+ "text_script": "Orion came home at 39 times the speed of sound, and the cabin stayed in the mid-70s. Outside, it passed 4,000 degrees Fahrenheit. The heat shield took it: 186 blocks of Avcoat. After Artemis I, NASA changed the path home. How? It capped how far Orion could fly through the atmosphere, so less time in the temperature range that damaged Artemis I. The result: nine spots of char loss. Artemis I had 103. NASA updates its Moon plans on Friday, October 23. Follow Downlink Cat for the update."
+}

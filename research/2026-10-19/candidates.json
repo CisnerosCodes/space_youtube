@@ -1,31 +1,31 @@
 {
- "generated": "2026-10-19T16:09:05Z",
+ "generated": "2026-10-19T17:00:18Z",
  "date": "2026-10-19",
  "window": {
   "from": "2026-10-12T00:00:00Z",
   "to": "2026-10-20T00:00:00Z"
  },
  "launch_window": {
-  "from": "2026-10-19T16:08:34Z",
-  "to": "2026-10-29T16:08:34Z"
+  "from": "2026-10-19T16:59:30Z",
+  "to": "2026-10-29T16:59:30Z"
  },
  "sources": [
   {
    "name": "Launch Library 2 upcoming",
-   "url": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?net__gte=2026-10-19T16%3A08%3A34Z&net__lte=2026-10-29T16%3A08%3A34Z&limit=50&mode=normal&ordering=net",
-   "fetched": "2026-10-19T16:06:13Z",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?net__gte=2026-10-19T16%3A59%3A30Z&net__lte=2026-10-29T16%3A59%3A30Z&limit=50&mode=normal&ordering=net",
+   "fetched": "2026-10-19T16:58:32Z",
    "items": 11
   },
   {
    "name": "Launch Library 2 recent",
-   "url": "https://ll.thespacedevs.com/2.3.0/launches/previous/?net__gte=2026-10-12T00%3A00%3A00Z&net__lte=2026-10-19T16%3A08%3A34Z&limit=50&mode=normal&ordering=-net",
-   "fetched": "2026-10-19T16:06:14Z",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/previous/?net__gte=2026-10-12T00%3A00%3A00Z&net__lte=2026-10-19T16%3A59%3A30Z&limit=50&mode=normal&ordering=-net",
+   "fetched": "2026-10-19T16:58:32Z",
    "items": 4
   },
   {
    "name": "NASA",
    "url": "https://www.nasa.gov/feed/",
-   "fetched": "2026-10-19T16:08:39Z",
+   "fetched": "2026-10-19T16:59:31Z",
    "pages": [
     "page 1: 10 items",
     "page 2: 10 items",
@@ -33,12 +33,12 @@
     "page 4: 10 items",
     "page 5: 10 items"
    ],
-   "in_window": 32
+   "in_window": 33
   },
   {
    "name": "NASA Science",
    "url": "https://science.nasa.gov/feed/",
-   "fetched": "2026-10-19T16:08:40Z",
+   "fetched": "2026-10-19T16:59:35Z",
    "pages": [
     "page 1: 10 items",
     "page 2: 10 items",
@@ -52,7 +52,7 @@
   {
    "name": "ESA Space Science",
    "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
-   "fetched": "2026-10-19T16:08:41Z",
+   "fetched": "2026-10-19T16:59:35Z",
    "pages": [
     "page 1: 15 items"
    ],
@@ -61,7 +61,7 @@
   {
    "name": "ESA Exploration",
    "url": "https://www.esa.int/rssfeed/Our_Activities/Human_and_Robotic_Exploration",
-   "fetched": "2026-10-19T16:08:41Z",
+   "fetched": "2026-10-19T16:59:36Z",
    "pages": [
     "page 1: 15 items"
    ],
@@ -70,7 +70,7 @@
   {
    "name": "ESA Transportation",
    "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Transportation",
-   "fetched": "2026-10-19T16:08:42Z",
+   "fetched": "2026-10-19T16:59:36Z",
    "pages": [
     "page 1: 15 items"
    ],
@@ -79,16 +79,16 @@
   {
    "name": "ESA Operations",
    "url": "https://www.esa.int/rssfeed/Our_Activities/Operations",
-   "fetched": "2026-10-19T16:08:42Z",
+   "fetched": "2026-10-19T16:59:37Z",
    "pages": [
     "page 1: 15 items"
    ],
-   "in_window": 1
+   "in_window": 2
   },
   {
    "name": "ESA/Webb",
    "url": "https://esawebb.org/news/feed/",
-   "fetched": "2026-10-19T16:08:43Z",
+   "fetched": "2026-10-19T16:59:37Z",
    "pages": [
     "page 1: 10 items"
    ],
@@ -97,7 +97,7 @@
   {
    "name": "JPL",
    "url": "https://www.jpl.nasa.gov/feeds/news",
-   "fetched": "2026-10-19T16:08:43Z",
+   "fetched": "2026-10-19T16:59:37Z",
    "pages": [
     "page 1: 100 items"
    ],
@@ -107,8 +107,8 @@
  "skipped_not_news": 54,
  "counts": {
   "Launch Day": 11,
-  "Just Discovered": 29,
-  "How Does That Work": 22,
+  "Just Discovered": 30,
+  "How Does That Work": 23,
   "By the Numbers": 4
  },
  "note": "Candidates only. Every fact must still be checked against the source page before a script uses it (see lab/research/2026-10-15_pilot_candidates.md for the quote-table method).",
@@ -142,10 +142,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Martian Moons eXploration (MMX)",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Martian Moons eXploration",
+    "total_hits": 298,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA26573",
+      "title": "Perseverance Rover Says Goodbye to 'Witch Hazel Hill'",
+      "date_created": "2025-05-19",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26573/PIA26573~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26573"
+     },
+     {
+      "nasa_id": "PIA26572",
+      "title": "Dust Devil Whirls by Perseverance Coring Operation",
+      "date_created": "2025-05-14",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26572/PIA26572~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26572"
+     },
+     {
+      "nasa_id": "PIA26514",
+      "title": "View of Rover Driving Software During a Slippery Drive",
+      "date_created": "2024-12-12",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26514/PIA26514~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26514"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -179,10 +213,16 @@
    },
    "images": {
     "query": "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
-    "total_hits": 0,
+    "tried": [
+     "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
+     "Bandwagon 5 (Dedicated Mid-Inclination",
+     "Bandwagon 5 (Dedicated",
+     "Bandwagon 5",
+     "Bandwagon"
+    ],
     "usable": false,
     "top": [],
-    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+    "total_hits": 0
    }
   },
   {
@@ -214,10 +254,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Starlink Group 15-15",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Starlink",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0054",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0054/KSC-20220421-PH-KLS01_0054~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0054"
+     },
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0042",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0042/KSC-20220421-PH-KLS01_0042~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0042"
+     },
+     {
+      "nasa_id": "ARC-1996-AC96-0339-1",
+      "title": "ARC-1996-AC96-0339-1",
+      "date_created": "1996-08-22",
+      "center": "ARC",
+      "credit": "ER-2",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ARC-1996-AC96-0339-1/ARC-1996-AC96-0339-1~medium.jpg",
+      "page": "https://images.nasa.gov/details/ARC-1996-AC96-0339-1"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -299,10 +373,18 @@
    },
    "images": {
     "query": "We're Not Hawking Around (3x HawkEye 360)",
-    "total_hits": 0,
+    "tried": [
+     "We're Not Hawking Around (3x HawkEye 360)",
+     "We're Not Hawking Around (3x HawkEye",
+     "We're Not Hawking Around (3x",
+     "We're Not Hawking Around",
+     "We're Not Hawking",
+     "We're Not",
+     "We're"
+    ],
     "usable": false,
     "top": [],
-    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+    "total_hits": 0
    }
   },
   {
@@ -478,10 +560,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Starlink Group 15-16",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Starlink",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0054",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0054/KSC-20220421-PH-KLS01_0054~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0054"
+     },
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0042",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0042/KSC-20220421-PH-KLS01_0042~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0042"
+     },
+     {
+      "nasa_id": "ARC-1996-AC96-0339-1",
+      "title": "ARC-1996-AC96-0339-1",
+      "date_created": "1996-08-22",
+      "center": "ARC",
+      "credit": "ER-2",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ARC-1996-AC96-0339-1/ARC-1996-AC96-0339-1~medium.jpg",
+      "page": "https://images.nasa.gov/details/ARC-1996-AC96-0339-1"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -514,10 +630,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Starlink Group 15-18",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Starlink",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0054",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0054/KSC-20220421-PH-KLS01_0054~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0054"
+     },
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0042",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0042/KSC-20220421-PH-KLS01_0042~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0042"
+     },
+     {
+      "nasa_id": "ARC-1996-AC96-0339-1",
+      "title": "ARC-1996-AC96-0339-1",
+      "date_created": "1996-08-22",
+      "center": "ARC",
+      "credit": "ER-2",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ARC-1996-AC96-0339-1/ARC-1996-AC96-0339-1~medium.jpg",
+      "page": "https://images.nasa.gov/details/ARC-1996-AC96-0339-1"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -550,10 +700,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Amazon Leo (LV-01)",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Amazon",
+    "total_hits": 85,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss074e0492148",
+      "title": "The Ucayali River in the lowland Amazon rainforest of central Peru",
+      "date_created": "2026-04-15",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0492148/iss074e0492148~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0492148"
+     },
+     {
+      "nasa_id": "PIA26417",
+      "title": "NASA's EMIT Scans the Amazon River in Northern Brazil",
+      "date_created": "2024-11-14",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26417/PIA26417~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26417"
+     },
+     {
+      "nasa_id": "iss071e665075",
+      "title": "Two Roscosmos Soyuz crew ships",
+      "date_created": "2024-09-16",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e665075/iss071e665075~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e665075"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -587,10 +771,12 @@
    },
    "images": {
     "query": "USSF-481",
-    "total_hits": 0,
+    "tried": [
+     "USSF-481"
+    ],
     "usable": false,
     "top": [],
-    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+    "total_hits": 0
    }
   },
   {
@@ -692,10 +878,44 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Dragon CRS-2 SpX-35",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Dragon CRS-2",
+    "total_hits": 221,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20201206-PH-AWG04_0027",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kenny Allen",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG04_0027/KSC-20201206-PH-AWG04_0027~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG04_0027"
+     },
+     {
+      "nasa_id": "KSC-20201206-PH-AWG06_0025",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kenny Allen",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG06_0025/KSC-20201206-PH-AWG06_0025~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG06_0025"
+     },
+     {
+      "nasa_id": "KSC-20201206-PH-AWG03_0010",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kevin O'Conne",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG03_0010/KSC-20201206-PH-AWG03_0010~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG03_0010"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -728,10 +948,107 @@
     "Launch Day": 3
    },
    "images": {
-    "query": "Starlink Group 15-25",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Starlink",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0054",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0054/KSC-20220421-PH-KLS01_0054~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0054"
+     },
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0042",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0042/KSC-20220421-PH-KLS01_0042~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0042"
+     },
+     {
+      "nasa_id": "ARC-1996-AC96-0339-1",
+      "title": "ARC-1996-AC96-0339-1",
+      "date_created": "1996-08-22",
+      "center": "ARC",
+      "credit": "ER-2",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ARC-1996-AC96-0339-1/ARC-1996-AC96-0339-1~medium.jpg",
+      "page": "https://images.nasa.gov/details/ARC-1996-AC96-0339-1"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-centers-and-facilities-glenn-acoustics-instrumentation",
+   "title": "Instrumentation",
+   "url": "https://www.nasa.gov/centers-and-facilities/glenn/acoustics-instrumentation/",
+   "published": "2026-10-19T16:37:45Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Glenn Research Center",
+    "Aeronautics",
+    "Aeronautics Research"
+   ],
+   "summary": "To measure airflow and sound, research teams at the NASA Glenn Research Center use special instrumentation like particle image velocimetry, hot wire anemometry, Raman spectroscopy, microphones in phased arrays or continuously rotating rakes. The global aviation noise reduction community relies on data from NASA GRC experiments to validate theory and noise prediction software. Rotating Rake […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 1,
+    "How Does That Work": 4,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Instrumentation",
+    "total_hits": 11163,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA23594",
+      "title": "Juno's JIRAM Instrument",
+      "date_created": "2019-12-12",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/SwRI/ASI/INAF/JIRAM",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23594/PIA23594~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23594"
+     },
+     {
+      "nasa_id": "LRC-1944-B701_P-36318",
+      "title": "Instrumentation in Full Scale Tunnel ",
+      "date_created": "2019-03-07",
+      "center": "LRC",
+      "credit": "NACA",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/LRC-1944-B701_P-36318/LRC-1944-B701_P-36318~medium.jpg",
+      "page": "https://images.nasa.gov/details/LRC-1944-B701_P-36318"
+     },
+     {
+      "nasa_id": "PIA22915",
+      "title": "Voyager 2 Spacecraft Instruments",
+      "date_created": "2018-12-10",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22915/PIA22915~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22915"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -819,10 +1136,22 @@
     "earth science"
    ],
    "images": {
-    "query": "Autumn Paints Poland Bieszczady",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Autumn Paints",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2022e060871_B",
+      "title": "Elements of the Dream",
+      "date_created": "2023-06-29",
+      "center": "JSC",
+      "credit": "Raul Tijerina",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2022e060871_B/jsc2022e060871_B~medium.jpg",
+      "page": "https://images.nasa.gov/details/jsc2022e060871_B"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -850,10 +1179,22 @@
     "leadership or staff news"
    ],
    "images": {
-    "query": "Names Stephen Cash Marshall",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Stephen Cash",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "1200075",
+      "title": "1200075",
+      "date_created": "2012-02-07",
+      "center": "MSFC",
+      "credit": "EMMETT GIVEN",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/1200075/1200075~medium.jpg",
+      "page": "https://images.nasa.gov/details/1200075"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -943,10 +1284,44 @@
    },
    "flags": [],
    "images": {
-    "query": "I Am Artemis Allison",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "I Am Artemis",
+    "total_hits": 6,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "ACD25-0159-015",
+      "title": "BioSentinel - 3 Year Mission Milestone",
+      "date_created": "2025-11-17",
+      "center": "ARC",
+      "credit": "Don Richey",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ACD25-0159-015/ACD25-0159-015~large.jpg",
+      "page": "https://images.nasa.gov/details/ACD25-0159-015"
+     },
+     {
+      "nasa_id": "ACD25-0159-018",
+      "title": "BioSentinel - 3 Year Mission Milestone",
+      "date_created": "2025-11-17",
+      "center": "ARC",
+      "credit": "Don Richey",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ACD25-0159-018/ACD25-0159-018~large.jpg",
+      "page": "https://images.nasa.gov/details/ACD25-0159-018"
+     },
+     {
+      "nasa_id": "ACD25-0159-016",
+      "title": "BioSentinel - 3 Year Mission Milestone",
+      "date_created": "2025-11-17",
+      "center": "ARC",
+      "credit": "Don Richey",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ACD25-0159-016/ACD25-0159-016~large.jpg",
+      "page": "https://images.nasa.gov/details/ACD25-0159-016"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -975,10 +1350,33 @@
    },
    "flags": [],
    "images": {
-    "query": "Hubble Spies Spiral Edge",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Hubble Spies Spiral",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000877",
+      "title": "Hubble Spies Charming Spiral Galaxy Bursting with Stars",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000877/GSFC_20171208_Archive_e000877~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000877"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000158",
+      "title": "Hubble Spies Spiral Galaxy",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": false,
+      "note": "credit or text names a third party or a copyright; check before use",
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000158/GSFC_20171208_Archive_e000158~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000158"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1009,10 +1407,15 @@
    ],
    "images": {
     "query": "Isaias Dims Gulf Coast",
-    "total_hits": 0,
+    "tried": [
+     "Isaias Dims Gulf Coast",
+     "Isaias Dims Gulf",
+     "Isaias Dims",
+     "Isaias"
+    ],
     "usable": false,
     "top": [],
-    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+    "total_hits": 0
    }
   },
   {
@@ -1040,10 +1443,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Help Unlock Mysteries Mars",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Unlock Mysteries",
+    "total_hits": 6,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA26069",
+      "title": "Uranus Magnetosphere Mystery Unlocked (Artist's Concept)",
+      "date_created": "2024-11-11",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26069/PIA26069~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26069"
+     },
+     {
+      "nasa_id": "PIA22350",
+      "title": "Kepler Beyond Planets: Finding Exploding Stars (Core Collapse Supernova)",
+      "date_created": "2018-03-26",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22350/PIA22350~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22350"
+     },
+     {
+      "nasa_id": "PIA22351",
+      "title": "Kepler Beyond Planets: Finding Exploding Stars (Type Felt Supernova)",
+      "date_created": "2018-03-26",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22351/PIA22351~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22351"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1074,10 +1511,44 @@
     "earth science"
    ],
    "images": {
-    "query": "Satellites Observe Historic 2026",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Satellites Observe Historic",
+    "total_hits": 7,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20240123-PH-ILW01_0027",
+      "title": "GOES-U Graphic on Countdown Clock",
+      "date_created": "2024-01-23",
+      "center": "KSC",
+      "credit": "NASA/Isaac Watson",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20240123-PH-ILW01_0027/KSC-20240123-PH-ILW01_0027~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20240123-PH-ILW01_0027"
+     },
+     {
+      "nasa_id": "PIA25562",
+      "title": "NASA's AIRS Instrument Tracks Volcanic Sulfur Dioxide Plume from Mauna Loa Eruption",
+      "date_created": "2022-12-05",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA25562/PIA25562~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA25562"
+     },
+     {
+      "nasa_id": "iss013e66488",
+      "title": "Earth Observations taken by the Expedition 13 crew",
+      "date_created": "2006-08-14",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss013e66488/iss013e66488~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss013e66488"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1231,10 +1702,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Welcomes All Ages Experience",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "All Ages Experience",
+    "total_hits": 13,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-2012-1551",
+      "title": "KSC-2012-1551",
+      "date_created": "2012-02-23",
+      "center": "KSC",
+      "credit": "NASA/KSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-2012-1551/KSC-2012-1551~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-2012-1551"
+     },
+     {
+      "nasa_id": "KSC-2012-1558",
+      "title": "KSC-2012-1558",
+      "date_created": "2012-02-23",
+      "center": "KSC",
+      "credit": "NASA/KSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-2012-1558/KSC-2012-1558~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-2012-1558"
+     },
+     {
+      "nasa_id": "KSC-2012-1557",
+      "title": "KSC-2012-1557",
+      "date_created": "2012-02-23",
+      "center": "KSC",
+      "credit": "NASA/KSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-2012-1557/KSC-2012-1557~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-2012-1557"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1263,10 +1768,22 @@
    },
    "flags": [],
    "images": {
-    "query": "Rigorous Analysis Confirms Artemis",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Rigorous Analysis",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA25857",
+      "title": "Mars Samples: Proposed Containment and Transport",
+      "date_created": "2023-03-30",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA25857/PIA25857~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA25857"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1288,10 +1805,22 @@
    },
    "flags": [],
    "images": {
-    "query": "Chandra Finds Possible Origin",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Chandra Possible Origin",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "0300729",
+      "title": "History of Chandra X-Ray Observatory",
+      "date_created": "2002-12-18",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/0300729/0300729~medium.jpg",
+      "page": "https://images.nasa.gov/details/0300729"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1320,10 +1849,44 @@
     "earth science"
    ],
    "images": {
-    "query": "Fires Arrive Amazon Rainforest",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Fires Arrive",
+    "total_hits": 71,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss073e1128946",
+      "title": "The Progress 93 cargo craft fires its engines to raise the International Space Station's orbit",
+      "date_created": "2025-11-19",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e1128946/iss073e1128946~large.jpg",
+      "page": "https://images.nasa.gov/details/iss073e1128946"
+     },
+     {
+      "nasa_id": "iss073e0429326",
+      "title": " The Progress 91 resupply ship fires its thrusters to reboost the International Space Station",
+      "date_created": "2025-08-14",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e0429326/iss073e0429326~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss073e0429326"
+     },
+     {
+      "nasa_id": "NHQ202101170001",
+      "title": "Hot Fire Test of SLS Rocket Core Stage",
+      "date_created": "2021-01-17",
+      "center": "HQ",
+      "credit": "NASA/Robert Markowitz",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ202101170001/NHQ202101170001~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ202101170001"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1352,10 +1915,44 @@
     "media advisory (an event to cover, not a story yet)"
    ],
    "images": {
-    "query": "Host News Conference Previewing",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Host News Conference",
+    "total_hits": 74,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20260928-PH-KLS01_0133",
+      "title": " NASA Boeing Starliner Update",
+      "date_created": "2026-09-28",
+      "center": "KSC",
+      "credit": "NASA/ Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20260928-PH-KLS01_0133/KSC-20260928-PH-KLS01_0133~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20260928-PH-KLS01_0133"
+     },
+     {
+      "nasa_id": "KSC-20220427-PH-KLS04_0040",
+      "title": "NASA Hosts Post Launch News Conference for the agency’s SpaceX",
+      "date_created": "2022-04-27",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220427-PH-KLS04_0040/KSC-20220427-PH-KLS04_0040~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220427-PH-KLS04_0040"
+     },
+     {
+      "nasa_id": "KSC-20220427-PH-KLS04_0031",
+      "title": "NASA Hosts Post Launch News Conference for the agency’s SpaceX",
+      "date_created": "2022-04-27",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220427-PH-KLS04_0031/KSC-20220427-PH-KLS04_0031~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220427-PH-KLS04_0031"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1384,10 +1981,33 @@
    },
    "flags": [],
    "images": {
-    "query": "Chandra Breaks Down Treble",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Chandra Breaks",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "sts093-s-012",
+      "title": "sts093-s-012",
+      "date_created": "1999-06-24",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/sts093-s-012/sts093-s-012~medium.jpg",
+      "page": "https://images.nasa.gov/details/sts093-s-012"
+     },
+     {
+      "nasa_id": "KSC-99pp0744",
+      "title": "KSC-99pp0744",
+      "date_created": "1999-06-23",
+      "center": "KSC",
+      "credit": "NASA/KSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-99pp0744/KSC-99pp0744~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-99pp0744"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1409,10 +2029,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Space X CRS 35",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Space X CRS",
+    "total_hits": 24,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20190319-PH_JBS01_0075",
+      "title": "CRS-17 Payload STP-H6 move to SpaceX",
+      "date_created": "2019-03-19",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20190319-PH_JBS01_0075/KSC-20190319-PH_JBS01_0075~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20190319-PH_JBS01_0075"
+     },
+     {
+      "nasa_id": "KSC-20190319-PH_JBS01_0084",
+      "title": "CRS-17 Payload STP-H6 move to SpaceX",
+      "date_created": "2019-03-19",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20190319-PH_JBS01_0084/KSC-20190319-PH_JBS01_0084~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20190319-PH_JBS01_0084"
+     },
+     {
+      "nasa_id": "KSC-20190319-PH_JBS01_0104",
+      "title": "CRS-17 Payload STP-H6 move to SpaceX",
+      "date_created": "2019-03-19",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20190319-PH_JBS01_0104/KSC-20190319-PH_JBS01_0104~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20190319-PH_JBS01_0104"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1505,10 +2159,22 @@
     "media advisory (an event to cover, not a story yet)"
    ],
    "images": {
-    "query": "Discuss Artemis Acceleration Status",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Discuss Artemis Acceleration",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2026e019958",
+      "title": "Artemis II lunar science team members discuss lunar geography  -- jsc2026e019958",
+      "date_created": "2026-04-02",
+      "center": "JSC",
+      "credit": "Luna Posadas Nava - NASA - JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e019958/jsc2026e019958~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e019958"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1537,10 +2203,22 @@
     "earth science"
    ],
    "images": {
-    "query": "Hurricane Simon Lurks Off",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Hurricane Simon",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "201008160004HQ",
+      "title": "GRIP Experiment 2010",
+      "date_created": "2010-08-15",
+      "center": "HQ",
+      "credit": "NASA/Paul E. Alers",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/201008160004HQ/201008160004HQ~medium.jpg",
+      "page": "https://images.nasa.gov/details/201008160004HQ"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1569,42 +2247,42 @@
     "leadership or staff news"
    ],
    "images": {
-    "query": "Names Astronaut Christina Koch",
-    "total_hits": 6,
+    "query": "Astronaut Christina Koch Acting",
+    "total_hits": 26,
     "usable": true,
     "top": [
      {
-      "nasa_id": "KSC-20260330-PH-KLS01_0055",
-      "title": " Artemis II Crew Zap The Wall and Patch at Walkout",
-      "date_created": "2026-03-30",
-      "center": "KSC",
-      "credit": "NASA/Kim Shiflett",
+      "nasa_id": "NHQ202604110047",
+      "title": "Artemis II Recovery",
+      "date_created": "2026-04-11",
+      "center": "HQ",
+      "credit": "NASA/Joel Kowsky",
       "public_domain_likely": true,
       "note": null,
-      "preview": "https://images-assets.nasa.gov/image/KSC-20260330-PH-KLS01_0055/KSC-20260330-PH-KLS01_0055~large.jpg",
-      "page": "https://images.nasa.gov/details/KSC-20260330-PH-KLS01_0055"
+      "preview": "https://images-assets.nasa.gov/image/NHQ202604110047/NHQ202604110047~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ202604110047"
      },
      {
-      "nasa_id": "KSC-20260330-PH-KLS01_0017",
-      "title": " Artemis II Crew Zap The Wall and Patch at Walkout",
-      "date_created": "2026-03-30",
-      "center": "KSC",
-      "credit": "NASA/Kim Shiflett",
+      "nasa_id": "NHQ202604110048",
+      "title": "Artemis II Recovery",
+      "date_created": "2026-04-11",
+      "center": "HQ",
+      "credit": "NASA/Joel Kowsky",
       "public_domain_likely": true,
       "note": null,
-      "preview": "https://images-assets.nasa.gov/image/KSC-20260330-PH-KLS01_0017/KSC-20260330-PH-KLS01_0017~large.jpg",
-      "page": "https://images.nasa.gov/details/KSC-20260330-PH-KLS01_0017"
+      "preview": "https://images-assets.nasa.gov/image/NHQ202604110048/NHQ202604110048~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ202604110048"
      },
      {
-      "nasa_id": "KSC-20260330-PH-KLS01_0015",
-      "title": " Artemis II Crew Zap The Wall and Patch at Walkout",
-      "date_created": "2026-03-30",
-      "center": "KSC",
-      "credit": "NASA/Kim Shiflett",
+      "nasa_id": "NHQ202604110049",
+      "title": "Artemis II Recovery",
+      "date_created": "2026-04-11",
+      "center": "HQ",
+      "credit": "NASA/Joel Kowsky",
       "public_domain_likely": true,
       "note": null,
-      "preview": "https://images-assets.nasa.gov/image/KSC-20260330-PH-KLS01_0015/KSC-20260330-PH-KLS01_0015~large.jpg",
-      "page": "https://images.nasa.gov/details/KSC-20260330-PH-KLS01_0015"
+      "preview": "https://images-assets.nasa.gov/image/NHQ202604110049/NHQ202604110049~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ202604110049"
      }
     ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
@@ -1630,10 +2308,33 @@
    },
    "flags": [],
    "images": {
-    "query": "Comparing Off World Rover",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Comparing Off World",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA17171",
+      "title": "The Day the Earth Smiled: Sneak Preview",
+      "date_created": "2013-07-22",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/Space Science Institute",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA17171/PIA17171~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA17171"
+     },
+     {
+      "nasa_id": "GRC-1946-C-15675",
+      "title": "General Electric I-40 Engine at the Lewis Flight Propulsion Laboratory",
+      "date_created": "1946-08-23",
+      "center": "GRC",
+      "credit": "NASA/GRC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GRC-1946-C-15675/GRC-1946-C-15675~medium.jpg",
+      "page": "https://images.nasa.gov/details/GRC-1946-C-15675"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1709,10 +2410,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Perseverance Navcam Image Marks",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Perseverance Navcam Record",
+    "total_hits": 3,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA26078",
+      "title": " Two Views of Ingenuity's 59th Flight",
+      "date_created": "2023-11-22",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/ASU/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26078/PIA26078~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26078"
+     },
+     {
+      "nasa_id": "PIA24586",
+      "title": "Perseverance's Navcam View of Ingenuity's First Flight",
+      "date_created": "2021-04-19",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA24586/PIA24586~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA24586"
+     },
+     {
+      "nasa_id": "PIA22071",
+      "title": "Opportunity's View Downhill Catches Martian Shadows",
+      "date_created": "2017-12-06",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22071/PIA22071~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22071"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1734,10 +2469,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Transporter 18 SmallSats Encapsulation",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Transporter 18",
+    "total_hits": 553,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20221118-PH-CNO01_0005",
+      "title": "SWOT Spacecraft Move Into Transport Container",
+      "date_created": "2022-11-18",
+      "center": "KSC",
+      "credit": "USSF 30th Space Wing/Chris Okula",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20221118-PH-CNO01_0005/KSC-20221118-PH-CNO01_0005~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20221118-PH-CNO01_0005"
+     },
+     {
+      "nasa_id": "KSC-20221118-PH-CNO01_0012",
+      "title": "SWOT Spacecraft Move Into Transport Container",
+      "date_created": "2022-11-18",
+      "center": "KSC",
+      "credit": "USSF 30th Space Wing/Chris Okula",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20221118-PH-CNO01_0012/KSC-20221118-PH-CNO01_0012~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20221118-PH-CNO01_0012"
+     },
+     {
+      "nasa_id": "KSC-20221118-PH-CNO01_0025",
+      "title": "SWOT Spacecraft Move Into Transport Container",
+      "date_created": "2022-11-18",
+      "center": "KSC",
+      "credit": "USSF 30th Space Wing/Chris Okula",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20221118-PH-CNO01_0025/KSC-20221118-PH-CNO01_0025~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20221118-PH-CNO01_0025"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1761,10 +2530,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Voyager Technologies Griffin 1",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Voyager Technologies",
+    "total_hits": 18,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss073e0815288",
+      "title": "NASA astronaut Mike Fincke shows off the Voyager Flytrap technology demonstration",
+      "date_created": "2025-09-29",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e0815288/iss073e0815288~large.jpg",
+      "page": "https://images.nasa.gov/details/iss073e0815288"
+     },
+     {
+      "nasa_id": "PIA26459",
+      "title": "Lunar Trailblazer's Looping Lunar Voyage",
+      "date_created": "2025-02-13",
+      "center": "JPL",
+      "credit": "Lockheed Martin Space",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26459/PIA26459~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA26459"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002105",
+      "title": "NASA's Hubble Universe in 3-D",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002105/GSFC_20171208_Archive_e002105~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002105"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1792,10 +2595,44 @@
    },
    "flags": [],
    "images": {
-    "query": "JPL Testing Readies Voyager",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "JPL Testing Voyager",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA23519",
+      "title": "High Bay 1 in JPL's Spacecraft Assembly Facility",
+      "date_created": "2019-12-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23519/PIA23519~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23519"
+     },
+     {
+      "nasa_id": "PIA23262",
+      "title": "The Mars 2020 Spacecraft Readies for Testing",
+      "date_created": "2019-05-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23262/PIA23262~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23262"
+     },
+     {
+      "nasa_id": "PIA23228",
+      "title": "Mars 2020 Is Coming Together",
+      "date_created": "2019-05-17",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23228/PIA23228~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23228"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1824,10 +2661,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Science Cargo Launch 35th",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Science Cargo Launch",
+    "total_hits": 1452,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20201206-PH-AWG04_0027",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kenny Allen",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG04_0027/KSC-20201206-PH-AWG04_0027~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG04_0027"
+     },
+     {
+      "nasa_id": "KSC-20201206-PH-AWG06_0025",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kenny Allen",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG06_0025/KSC-20201206-PH-AWG06_0025~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG06_0025"
+     },
+     {
+      "nasa_id": "KSC-20201206-PH-AWG03_0010",
+      "title": "SpaceX CRS-21 Live Launch Coverage",
+      "date_created": "2020-12-06",
+      "center": "KSC",
+      "credit": "NASA/Tony Gray and Kevin O'Conne",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20201206-PH-AWG03_0010/KSC-20201206-PH-AWG03_0010~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20201206-PH-AWG03_0010"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -1855,10 +2726,44 @@
     "earth science"
    ],
    "images": {
-    "query": "Impact Structure Legs",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Impact Structure",
+    "total_hits": 811,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA23700",
+      "title": "An Impact Structure in Brain Terrain",
+      "date_created": "2024-01-31",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/University of Arizona",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23700/PIA23700~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23700"
+     },
+     {
+      "nasa_id": "LRC-2021-B701_P-00295",
+      "title": "LRC-2021-B701_P-00295.tif",
+      "date_created": "2021-03-23",
+      "center": "LRC",
+      "credit": "NASA Mark Knopp",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/LRC-2021-B701_P-00295/LRC-2021-B701_P-00295~medium.jpg",
+      "page": "https://images.nasa.gov/details/LRC-2021-B701_P-00295"
+     },
+     {
+      "nasa_id": "PIA21576",
+      "title": "Is that an Impact Crater?",
+      "date_created": "2017-04-04",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/Univ. of Arizona",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA21576/PIA21576~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA21576"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2016,10 +2921,22 @@
    },
    "flags": [],
    "images": {
-    "query": "Crew Unpacks Dragon Begins",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Crew Unpacks Dragon",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss072e782440",
+      "title": "JAXA astronaut Takuya Onishi unpacks cargo stowed inside Dragon",
+      "date_created": "2025-03-16",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss072e782440/iss072e782440~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss072e782440"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2048,10 +2965,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Diving Maintenance X 59",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Diving",
+    "total_hits": 402,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "AFRC2018-0287-219",
+      "title": "Quiet Supersonic Dive Maneuver Seen from NASA F/A-18",
+      "date_created": "2018-11-05",
+      "center": "AFRC",
+      "credit": "NASA/Carla Thomas",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2018-0287-219/AFRC2018-0287-219~medium.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2018-0287-219"
+     },
+     {
+      "nasa_id": "AFRC2018-0287-206",
+      "title": "Quiet Supersonic Dive Maneuver Seen from NASA F/A-18",
+      "date_created": "2018-11-05",
+      "center": "AFRC",
+      "credit": "NASA/Carla Thomas",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2018-0287-206/AFRC2018-0287-206~medium.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2018-0287-206"
+     },
+     {
+      "nasa_id": "AFRC2018-0287-195",
+      "title": "Quiet Supersonic Dive Maneuver Seen from NASA F/A-18",
+      "date_created": "2018-11-05",
+      "center": "AFRC",
+      "credit": "NASA/Carla Thomas",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2018-0287-195/AFRC2018-0287-195~medium.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2018-0287-195"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2076,10 +3027,12 @@
    ],
    "images": {
     "query": "Water2Coasts",
-    "total_hits": 0,
+    "tried": [
+     "Water2Coasts"
+    ],
     "usable": false,
     "top": [],
-    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+    "total_hits": 0
    }
   },
   {
@@ -2164,10 +3117,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Euclid discovers comet",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Euclid",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "STS073-S-001",
+      "title": "STS-73 crew insignia",
+      "date_created": "1996-03-04",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/STS073-S-001/STS073-S-001~medium.jpg",
+      "page": "https://images.nasa.gov/details/STS073-S-001"
+     },
+     {
+      "nasa_id": "9507232",
+      "title": "Space Shuttle Projects",
+      "date_created": "1995-06-06",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/9507232/9507232~medium.jpg",
+      "page": "https://images.nasa.gov/details/9507232"
+     },
+     {
+      "nasa_id": "PIA25783",
+      "title": "Euclid Spacecraft in Cleanroom",
+      "date_created": "2023-07-01",
+      "center": "JPL",
+      "credit": "ESA",
+      "public_domain_likely": false,
+      "note": "credit or text names a third party or a copyright; check before use",
+      "preview": "https://images-assets.nasa.gov/image/PIA25783/PIA25783~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA25783"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2427,10 +3414,44 @@
     "multimedia page (check the article it belongs to)"
    ],
    "images": {
-    "query": "Trace Gas Orbiter Facts",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Trace Gas Orbiter",
+    "total_hits": 28,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA26632",
+      "title": "Curiosity Captures Mars Landscape While Talking to an Orbiter",
+      "date_created": "2025-08-04",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26632/PIA26632~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26632"
+     },
+     {
+      "nasa_id": "PIA22682",
+      "title": "Pitted Cones: Possible Methane Sources?",
+      "date_created": "2018-09-04",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/Univ. of Arizona",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22682/PIA22682~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA22682"
+     },
+     {
+      "nasa_id": "PIA21135",
+      "title": "Schiaparelli Impact Site on Mars, Stereo",
+      "date_created": "2016-11-15",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/Univ. of Arizona",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA21135/PIA21135~thumb.jpg",
+      "page": "https://images.nasa.gov/details/PIA21135"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2563,10 +3584,44 @@
     "multimedia page (check the article it belongs to)"
    ],
    "images": {
-    "query": "Welcome home Sophie Adenot",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Welcome home",
+    "total_hits": 177,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "AFRC2021-0032-33",
+      "title": "SOFIA Returns to NASA’s Armstrong Flight Research Center Building 703",
+      "date_created": "2021-03-16",
+      "center": "AFRC",
+      "credit": "NASA/Ken Ulbrich",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2021-0032-33/AFRC2021-0032-33~medium.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2021-0032-33"
+     },
+     {
+      "nasa_id": "201305140037HQ",
+      "title": "Expedition 35 Landing",
+      "date_created": "2013-05-14",
+      "center": "HQ",
+      "credit": "NASA/Carla Cioffi",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/201305140037HQ/201305140037HQ~medium.jpg",
+      "page": "https://images.nasa.gov/details/201305140037HQ"
+     },
+     {
+      "nasa_id": "201211190024HQ",
+      "title": "Expedition 33 Soyuz Landing",
+      "date_created": "2012-11-19",
+      "center": "HQ",
+      "credit": "NASA/Bill Ingalls",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/201211190024HQ/201211190024HQ~medium.jpg",
+      "page": "https://images.nasa.gov/details/201211190024HQ"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2588,10 +3643,22 @@
    },
    "flags": [],
    "images": {
-    "query": "ExoMars rover twin rehearses",
-    "total_hits": 0,
+    "query": "ExoMars rover twin",
+    "total_hits": 1,
     "usable": false,
-    "top": [],
+    "top": [
+     {
+      "nasa_id": "PIA21139",
+      "title": "Strengthening the Mars Telecommunications Network",
+      "date_created": "2016-11-29",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/ESA",
+      "public_domain_likely": false,
+      "note": "credit or text names a third party or a copyright; check before use",
+      "preview": "https://images-assets.nasa.gov/image/PIA21139/PIA21139~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA21139"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2714,6 +3781,65 @@
    }
   },
   {
+   "id": "esa-operations-enabling-support-operations-a-mars-velous-decade-celebrating-ten-years-of-tgo",
+   "title": "A Mars-velous decade: Celebrating ten years of TGO",
+   "url": "https://www.esa.int/Enabling_Support/Operations/A_Mars-velous_decade_Celebrating_ten_years_of_TGO",
+   "published": "2026-10-19T13:08:00Z",
+   "source": "ESA Operations",
+   "news_release": false,
+   "categories": [],
+   "summary": "Ten years after arriving at Mars, ESA’s ExoMars Trace Gas Orbiter (TGO) has grown far beyond its original ambitions. From revealing the martian atmosphere to becoming a vital communications link with the surface, the mission’s story is also one of adaptability, resilience and the people behind it.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 2,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Mars",
+    "total_hits": 26895,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ201906010007",
+      "title": "Mars Celebration",
+      "date_created": "2019-06-01",
+      "center": "HQ",
+      "credit": "NASA/Bill Ingalls",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201906010007/NHQ201906010007~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201906010007"
+     },
+     {
+      "nasa_id": "NHQ201906010004",
+      "title": "Mars Celebration",
+      "date_created": "2019-06-01",
+      "center": "HQ",
+      "credit": "NASA/Bill Ingalls",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201906010004/NHQ201906010004~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201906010004"
+     },
+     {
+      "nasa_id": "NHQ201906010008",
+      "title": "Mars Celebration",
+      "date_created": "2019-06-01",
+      "center": "HQ",
+      "credit": "NASA/Bill Ingalls",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201906010008/NHQ201906010008~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201906010008"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
    "id": "esa-operations-erations-earth-today-jupiter-tomorrow-an-insight-into-juice-s-recent-earth-flyby",
    "title": "Earth today, Jupiter tomorrow: An insight into Juice’s recent Earth flyby",
    "url": "https://www.esa.int/Enabling_Support/Operations/Earth_today_Jupiter_tomorrow_An_insight_into_Juice_s_recent_Earth_flyby",
@@ -2731,10 +3857,44 @@
    },
    "flags": [],
    "images": {
-    "query": "Earth today Jupiter tomorrow",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "Earth today Jupiter",
+    "total_hits": 3,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA24893",
+      "title": "Psyche's Magnetometer Integration",
+      "date_created": "2021-10-04",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA24893/PIA24893~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA24893"
+     },
+     {
+      "nasa_id": "KSC-2012-1867",
+      "title": "KSC-2012-1867",
+      "date_created": "2012-02-17",
+      "center": "KSC",
+      "credit": "NASA/KSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-2012-1867/KSC-2012-1867~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-2012-1867"
+     },
+     {
+      "nasa_id": "JPL-PIA23436",
+      "title": "A Storm of Change",
+      "date_created": "2019-07-01",
+      "center": "JPL",
+      "credit": "NASA/JPL",
+      "public_domain_likely": false,
+      "note": "credit or text names a third party or a copyright; check before use",
+      "preview": "https://images-assets.nasa.gov/image/JPL-PIA23436/JPL-PIA23436~medium.jpg",
+      "page": "https://images.nasa.gov/details/JPL-PIA23436"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2756,10 +3916,44 @@
    },
    "flags": [],
    "images": {
-    "query": "JPL Testing Readies Voyager",
-    "total_hits": 0,
-    "usable": false,
-    "top": [],
+    "query": "JPL Testing Voyager",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA23519",
+      "title": "High Bay 1 in JPL's Spacecraft Assembly Facility",
+      "date_created": "2019-12-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23519/PIA23519~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23519"
+     },
+     {
+      "nasa_id": "PIA23262",
+      "title": "The Mars 2020 Spacecraft Readies for Testing",
+      "date_created": "2019-05-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23262/PIA23262~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23262"
+     },
+     {
+      "nasa_id": "PIA23228",
+      "title": "Mars 2020 Is Coming Together",
+      "date_created": "2019-05-17",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA23228/PIA23228~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA23228"
+     }
+    ],
     "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
    }
   },
@@ -2781,7 +3975,7 @@
    },
    "flags": [],
    "images": {
-    "query": "Perseverance Sets Off World",
+    "query": "Perseverance Off World",
     "total_hits": 2,
     "usable": true,
     "top": [

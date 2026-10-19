@@ -20,3 +20,8 @@ lab/pilots/*/out/render.log
 # pipeline: Launch Library 2 response cache, fixture-mode analytics output
 research/*/raw/
 pipeline/log/fixture/
+shorts/*/out/video.mp4
+shorts/*/out/build/
+shorts/*/out/contact.png
+shorts/*/out/mix.m4a
+shorts/*/out/render.log

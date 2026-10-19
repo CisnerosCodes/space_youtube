@@ -1,0 +1,114 @@
+[
+ {
+  "line": "1",
+  "claim": "Orion came home at 39 times the speed of sound",
+  "quote": "Orion reached a maximum velocity of 39 times the speed of sound",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "1",
+  "claim": "The cabin stayed in the mid-70s (Fahrenheit)",
+  "quote": "the four astronauts inside Orion stayed relatively cool with a cabin temperature in the mid-70 degree Fahrenheit range during their return to Earth from the Moon",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "2",
+  "claim": "Outside, it passed 4,000 degrees Fahrenheit",
+  "quote": "experienced external temperatures exceeding 4,000 degrees Fahrenheit at its peak",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "2",
+  "claim": "The heat shield took it",
+  "quote": "found it performed as expected",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "2",
+  "claim": "186 blocks of Avcoat",
+  "quote": "the heat shield, made of 186 unique blocks of an ablative material called Avcoat",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "3",
+  "claim": "After Artemis I, NASA changed the path home",
+  "quote": "After NASA’s thorough analysis of Artemis I heat shield findings",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "3",
+  "claim": "(same)",
+  "quote": "the agency modified Orion’s reentry trajectory for Artemis II",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "4",
+  "claim": "It capped how far Orion could fly through the atmosphere",
+  "quote": "by shortening the maximum downrange distance the spacecraft could fly between when it entered Earth’s atmosphere and splashed down in the Pacific Ocean",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "4",
+  "claim": "So less time in the temperature range that damaged Artemis I",
+  "quote": "limiting downrange distance would limit how long the spacecraft’s heat shield spent in the temperature range at which the Artemis I heat shield phenomenon occurred",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "5",
+  "claim": "Nine spots of char loss; Artemis I had 103",
+  "quote": "Engineers found only nine spots of char loss of varying sizes on the Artemis II heat shield dish, compared to 103 during Artemis I.",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "6",
+  "claim": "NASA updates its Moon plans on Friday, October 23",
+  "quote": "NASA will provide an update on its plans to return American astronauts to the surface of the Moon by 2028 at 2 p.m. EDT, Friday, Oct. 23",
+  "url": "https://www.nasa.gov/news-release/nasa-to-discuss-artemis-acceleration-status-of-upcoming-moon-missions/",
+  "match": true,
+  "page_file": "source2.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The underwater photo shows the Artemis II heat shield after splashdown, taken by U.S. Navy divers",
+  "quote": "Shortly after NASA’s Artemis II mission splashed down on April 10, 2026, U.S. Navy divers captured underwater imagery of the Orion spacecraft’s heat shield.",
+  "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+  "match": true,
+  "page_file": "source3.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "Underwater photo credit",
+  "quote": "Image credit: US Navy",
+  "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+  "match": true,
+  "page_file": "source3.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The side-by-side photo shows the Artemis I (left) and Artemis II (right) heat shields",
+  "quote": "A post‑mission comparison of the Orion spacecraft heat shields from Artemis I (left) and Artemis II (right) are shown after removal from their crew modules.",
+  "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+  "match": true,
+  "page_file": "source1.txt"
+ }
+]
