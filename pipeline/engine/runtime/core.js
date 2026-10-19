@@ -270,8 +270,8 @@ const E = (() => {
     if (cover) {
       // keep the image edges outside the frame
       const left = x - ax * P.w * s, top = y - ay * P.h * s;
-      x += Math.max(0, left) - Math.max(0, -(left + P.w * s - coverW));
-      y += Math.max(0, top) - Math.max(0, -(top + P.h * s - coverH));
+      x += -Math.max(0, left) + Math.max(0, coverW - (left + P.w * s));
+      y += -Math.max(0, top) + Math.max(0, coverH - (top + P.h * s));
     }
     return { x, y, ax, ay, s };
   }
@@ -390,9 +390,8 @@ const E = (() => {
   const SHUTTER = 0.5;
   let BLUR_CAP = (f) => 16;
   function blurSamples(f) {
-    if (f - SHUTTER < 0) return 1;
     PROBE = []; drawPicture(probeCtx, f); const a = PROBE;
-    PROBE = []; drawPicture(probeCtx, f - SHUTTER); const b = PROBE; PROBE = null;
+    PROBE = []; drawPicture(probeCtx, f + SHUTTER); const b = PROBE; PROBE = null;
     if (a.length !== b.length) return 4;
     let mx = 0; for (let i = 0; i < a.length; i += 2) mx = Math.max(mx, Math.hypot(a[i] - b[i], a[i + 1] - b[i + 1]));
     return Math.max(1, Math.min(BLUR_CAP(f), 16, Math.ceil(mx / 2.5)));
@@ -402,7 +401,7 @@ const E = (() => {
     if (N <= 1) { drawPicture(pctx, f); return 1; }
     actx.setTransform(1, 0, 0, 1, 0, 0); actx.clearRect(0, 0, WID, HEI);
     for (let i = 0; i < N; i++) {
-      drawPicture(tctx, f - (SHUTTER * i) / (N - 1));
+      drawPicture(tctx, f + (SHUTTER * i) / (N - 1));
       actx.globalAlpha = 1 / (i + 1); actx.drawImage(tmp, 0, 0);
     }
     actx.globalAlpha = 1; pctx.setTransform(1, 0, 0, 1, 0, 0); pctx.drawImage(acc, 0, 0);
@@ -451,7 +450,11 @@ const E = (() => {
     // photo credits first; line-art sources only when they fit in two lines with them
     let txt = parts.join(' · ');
     if (txt.length > 64 * 2) txt = parts.filter((s) => !/^Source:/.test(s)).join(' · ') || parts[0];
-    ce.textContent = txt; show(ce, !!txt);
+    // wrap between credits, never inside a short one (a long credit such as Webb's may wrap inside)
+    const esc = (x) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    const html = txt.split(' · ').map((q) => (q.length <= 52 ? `<span style="white-space: nowrap">${esc(q)}</span>` : esc(q))).join(' · ');
+    if (ce.__html !== html) { ce.innerHTML = html; ce.__html = html; }
+    show(ce, !!txt);
   }
 
   // ================================================================ captions
@@ -561,12 +564,13 @@ const E = (() => {
       return mode === 'stand' ? fitStand([x, L.floor], f, scale) : [x, 900];
     }
     if (s.startsWith('el:')) {
-      let nm = s.slice(3), bid = null;
+      let nm = s.slice(3), bid = null, frac = 0.5;
+      if (nm.includes(':')) { frac = Number(nm.split(':')[1]); nm = nm.split(':')[0]; }
       if (nm.includes('.')) [bid, nm] = nm.split('.');
       const { a } = anchorsAt(f, bid);
       const r = a[nm];
       if (!r) throw new Error(`engine: cat target "${s}" at frame ${f}: the shot on screen has no element "${nm}" (it has: ${Object.keys(a).join(', ') || 'none'})`);
-      if (mode === 'stand') return r.length === 2 ? r : [r[0] + r[2] / 2, r[1]];
+      if (mode === 'stand') return r.length === 2 ? r : [r[0] + r[2] * frac, r[1]];
       return centerOf(r);
     }
     throw new Error('engine: unknown cat target ' + s);
@@ -588,7 +592,7 @@ const E = (() => {
       const { at: _a, target: tg, to, box, along, do: d, ...rest } = m;
       const e = { t, do: d, ...rest };
       const sc = m.scale ?? K;
-      if (to != null) e.to = target(to, f, 'stand', sc);
+      if (to != null) e.to = d === 'exit' ? to : target(to, f, 'stand', sc);
       if (tg !== undefined) e.at = target(tg, f, 'look', sc);
       if (d === 'enter' && m.how === 'pop') {
         const r = typeof box === 'string' && box.startsWith('el:') ? null : (chunkAt(f + 2) ?? chunkAt(f) ?? CHUNKS[0]).rects[0];
@@ -632,9 +636,10 @@ const E = (() => {
       const t = f / FPS;
       const e = A2._rootEntry(t);
       const moving = e && (e.a.do === 'enter' || e.a.do === 'exit') && t - e.t0 < e.dur;
+      const transit = e && ['hop', 'walk', 'scoot', 'swing', 'fly', 'float', 'skid'].includes(e.a.do) && t - e.t0 < e.dur;
       for (const h of A2.lint(t, t, [...caps, ...subj], { tol: 8 })) {
         const kind = h.rect === 'safe' ? 'safe' : h.rect < caps.length ? 'caption' : 'subject';
-        hits.push({ frame: f, kind, during: e ? (e.a.do + (e.a.how ? ' ' + e.a.how : '')) : null, exempt: !!moving, overlap: h.overlap ?? null });
+        hits.push({ frame: f, kind, during: e ? (e.a.do + (e.a.how ? ' ' + e.a.how : '')) : null, exempt: !!moving, transit: !!transit && kind === 'subject', overlap: h.overlap ?? null });
       }
     }
     const on = CAT.on.reduce((s, [a, b]) => s + Math.min(b, LAST) - a + 1, 0);
@@ -663,7 +668,7 @@ const E = (() => {
     }
     c(WM, 'wordmark_echo', 'wordmark dot, then its echo ring 12 frames later (sonic logo)');
     // curate: 12 to 18 cues per 35 s, at least 0.3 s apart, by priority
-    const maxN = Math.max(6, Math.floor((18 * NF) / (35 * FPS))), minGap = 9;
+    const maxN = Math.min(18, Math.max(6, Math.floor((18 * NF) / (35 * FPS)))), minGap = 9;
     const sorted = raw.map((q) => ({ ...q, p: q.pri ?? PRI[q.type] ?? 30 })).sort((a, b) => b.p - a.p || a.frame - b.frame);
     const keep = [];
     for (const q of sorted) {
@@ -691,27 +696,32 @@ const E = (() => {
       drawPicture(tctx, f);
       for (const r of TXT.list) {
         if (r.moving) continue;
-        const x0 = r.kind === 'giant' ? 40 : 80;
+        const x0 = r.kind === 'giant' || r.kind === 'headline' ? 40 : 80;
         if (r.x < x0 - 2 || r.x1 > L.textX1 + 2 || r.y < 240 || r.y1 > 1160) problems.push({ frame: f, beat: b.id, kind: r.kind, rect: [r.x, r.y, r.x1, r.y1].map(Math.round) });
       }
     }
     TXT.on = false;
     return problems;
   }
-  // fill check: share of the band y 640 to 1150 that is plain ink (no picture) on settled frames, with the cat counted
+  // fill check (the owner's "empty bottom half"): split the band y 640 to 1150 into 24 px rows; a row is
+  // used when anything but plain ink is drawn in it (line art counts) or the cat stands in it.
   function checkFill() {
     const out = [];
     for (const { f, b } of settledFrames()) {
       drawPicture(tctx, f);
       const d = tctx.getImageData(0, 640, WID, 510).data;
-      let ink = 0, n = 0;
       const cb = CAT.actor && catOn(f) ? CAT.actor.box(f / FPS) : null;
-      for (let y = 0; y < 510; y += 6) for (let x = 0; x < WID; x += 6) {
-        const i = (y * WID + x) * 4; n++;
-        if (cb && x >= cb[0] && x <= cb[0] + cb[2] && y + 640 >= cb[1] && y + 640 <= cb[1] + cb[3]) continue;
-        if (Math.abs(d[i] - 11) < 6 && Math.abs(d[i + 1] - 11) < 6 && Math.abs(d[i + 2] - 12) < 6) ink++;
+      let rows = 0, empty = 0;
+      for (let y0 = 0; y0 < 510; y0 += 24) {
+        rows++;
+        let used = cb && y0 + 640 + 24 >= cb[1] && y0 + 640 <= cb[1] + cb[3];
+        for (let y = y0; y < Math.min(510, y0 + 24) && !used; y += 3) for (let x = 0; x < WID; x += 3) {
+          const i = (y * WID + x) * 4;
+          if (Math.abs(d[i] - 11) > 10 || Math.abs(d[i + 1] - 11) > 10 || Math.abs(d[i + 2] - 12) > 10) { used = true; break; }
+        }
+        if (!used) empty++;
       }
-      out.push({ frame: f, beat: b.id, emptyShare: +(ink / n).toFixed(3) });
+      out.push({ frame: f, beat: b.id, emptyShare: +(empty / rows).toFixed(3) });
     }
     return out;
   }

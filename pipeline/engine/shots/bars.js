@@ -23,10 +23,10 @@ E.SHOTS.bars = (spec, b) => {
     const hasChip = !!b.spec.chip;
     st.top = hasChip ? L.giantTopChip : L.contentTop - 16;
     st.rowH = (st.bottom - st.top) / rows.length;
-    if (race) { st.iconH = Math.min(96, st.rowH * 0.72); }
+    if (race) { st.iconH = Math.min(110, st.rowH * 0.9); }
     else {
-      st.px = Math.min(240, Math.floor(st.rowH * 0.42));
-      st.iconH = Math.min(120, st.rowH * 0.26);
+      st.px = Math.min(280, Math.floor(st.rowH * 0.5));
+      st.iconH = Math.min(150, st.rowH * 0.34);
     }
     const wMax = Math.max(...rows.map(iconW));
     st.scale = (1040 - st.x0 - wMax) / max;
@@ -76,7 +76,7 @@ E.SHOTS.bars = (spec, b) => {
     credit: () => {
       const cr = [...new Set(rows.map((r) => icon(r)?.credit).filter(Boolean))];
       const src = b.spec.source ? `Source: ${b.spec.source}` : null;
-      return [src, ...cr.map((c) => (src ? `icons ${c}` : c))].filter(Boolean).join(' · ');
+      return [src, ...cr.map((c) => (src ? `icons ${c}` : c))].filter(Boolean);
     },
     subjects: (f) => rows.filter((r) => f >= r.f0).map((r) => {
       const top = race ? barY(r.i) - st.iconH - 4 : st.top + st.rowH * r.i;

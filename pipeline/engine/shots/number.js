@@ -37,7 +37,7 @@ const NumberBlock = (spec, b, opt = {}) => {
     const v = Math.floor((spec.value * u) / first + 1e-6) * first;
     return Math.max(first, Math.min(spec.value, v));
   }
-  const visible = (f) => f >= at || (opt.frame0 && at <= 0);
+  const visible = (f) => f >= at || (opt.frame0 && at <= 6);
   const exitY = (f) => (exitAt == null ? 0 : -1300 * k(f, exitAt, 8, exitE));
   // odometer digits: each place rolls when every place to its right passes 9
   function drawRoll(g, f, x, top, px) {
@@ -65,9 +65,12 @@ const NumberBlock = (spec, b, opt = {}) => {
     E.regText(g, x, top, giantWidth(finalText, px), h, 'giant');
   }
   function draw(g, f) {
-    if (!visible(f)) return;
     const ey = exitY(f); if (ey < -1200) return;
-    const sc = opt.frame0 && at <= 0 ? 1 : slam(f - at);
+    if (visible(f)) drawNumber(g, f, ey);
+    drawData(g, f, ey);
+  }
+  function drawNumber(g, f, ey) {
+    const sc = opt.frame0 && at <= 6 ? 1 : slam(f - at);
     g.save();
     const cy = st.top + st.h / 2;
     g.translate(0, ey); g.translate(st.x, cy); g.scale(sc, sc); g.translate(-st.x, -cy);
@@ -76,6 +79,8 @@ const NumberBlock = (spec, b, opt = {}) => {
     else drawGiant(g, fmt(valueAt(f)), st.x, st.top, st.px, opt.color ?? C.amber, { box });
     g.__moving = prevMoving;
     g.restore();
+  }
+  function drawData(g, f, ey) {
     // data line: the newest one whose word has been said
     let di = -1; data.forEach((d, i) => { if (f >= dataAt[i]) di = i; });
     if (di >= 0) {
@@ -87,7 +92,7 @@ const NumberBlock = (spec, b, opt = {}) => {
   const rect = () => [st.x - 16, st.top - 16, st.w + 32, st.bottom - st.top + 16];
   return {
     st, layout, draw, rect, at, land, valueAt, finalText,
-    on: (f) => visible(f) && exitY(f) > -1200,
+    on: (f) => (visible(f) || (dataAt.length && f >= Math.min(...dataAt))) && exitY(f) > -1200,
     cues: () => [{ frame: style === 'roll' && land != null ? land : at, type: 'number_slam', note: `${finalText} ${style === 'count' ? 'counts up' : style === 'roll' ? 'rolls in' : 'slams in'}`, ...(style === 'count' ? { gain_db: -2 } : {}) }],
   };
 };

@@ -98,7 +98,7 @@ E.SHOTS.next = (spec, b) => {
     drawPointer(g, f);
     drawWordmark(g, f);
   }
-  const headRect = () => [80, st.top - 10, L.textX1 - 80, st.artTop - st.top - 20];
+  const headRect = () => [80, st.top - 10, L.textX1 - 80, st.linesY + lines.length * 46 - st.top + 10];
   const ptrRect = () => [80, st.ptrY, monoWidth(spec.pointer?.text ?? '', 28) + 88, 62];
   const wmRect = () => [80, st.wmY, 660, 50];
   return {

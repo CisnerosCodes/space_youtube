@@ -52,11 +52,16 @@ E.SHOTS.photo = (spec, b) => {
       const [x, y] = photoPt(P, c, m.point[0], m.point[1]);
       const r = (m.r ?? 70) * (0.4 + 0.6 * sp(f - m.f));
       ring(g, x, y, r, 4);
-      if (m.label) drawMono(g, m.label, Math.min(E.L.textX1 - 260, x + r + 16), y - 20, { px: 24, kind: 'label' });
+      if (m.label) {
+        // beside the ring when it fits, else under it
+        const w = E.monoWidth(m.label, 24, 'label') + 24, R = (m.r ?? 70);
+        const side = x + R + 16 + w <= E.L.textX1;
+        drawMono(g, m.label, side ? x + R + 16 : Math.max(E.L.textX0, Math.min(E.L.textX1 - w, x - w / 2)), side ? y - 20 : y + R + 14, { px: 24, kind: 'label' });
+      }
     }
     heads.forEach((h, i) => {
       if (f < h.f) return;
-      const sc = isHook && h.f <= 0 ? 1 : slam(f - h.f), top = headTop(i), cy = top + (CAP.headline * hPx) / 2;
+      const sc = isHook && h.f <= 6 ? 1 : slam(f - h.f), top = headTop(i), cy = top + (CAP.headline * hPx) / 2;
       g.save(); g.translate(L.giantX + 14, cy); g.scale(sc, sc); g.translate(-(L.giantX + 14), -cy);
       const pm = g.__moving; if (sc > 1.0001) g.__moving = true;
       drawHeadline(g, h.t, L.giantX + 14, top, { px: hPx, box: true });
@@ -100,7 +105,7 @@ E.SHOTS.lens = (spec, b) => {
   const { A, Ao, C, L, IMG, k, lerp, elerp, move, enter, photo, frameCam, ring, dot, inkDisc, clamp01, sp } = E;
   const P = IMG[spec.image];
   const hasChip = !!b.spec.chip;
-  const num = spec.number ? NumberBlock(spec.number, b, { top: hasChip ? L.giantTopChip : L.giantTop, frame0: b.i === 0 }) : null;
+  const num = spec.number ? NumberBlock({ exit_at: b.next ? b.T1 : null, ...spec.number }, b, { top: hasChip ? L.giantTopChip : L.giantTop, frame0: b.i === 0 }) : null;
   const st = { x: 540, y: 760, r: 300 };
   function layout() {
     const top = num ? num.st.bottom + 40 : L.contentTop + 20, bot = L.contentBottom - 10;

@@ -103,8 +103,10 @@ E.SHOTS.diagram = (spec, b) => {
         break;
       }
       case 'dish': {
-        const dish = []; for (let i = 0; i <= 24; i++) { const x = -0.5 + i / 24; dish.push([x, -0.15 + 1.1 * x * x - 0.28]); }
-        Lns.push(dish, [[-0.5, -0.155], [0, -0.62], [0.5, -0.155]], [[0, -0.43], [0, 0.12]], [[-0.22, 0.45], [0, 0.12], [0.22, 0.45]], [[-0.42, 0.45], [0.42, 0.45]]);
+        // a radio dish: the bowl and its rim, the feed on a strut at the focus, a mount and an A-frame
+        const dish = []; for (let i = 0; i <= 24; i++) { const x = -0.5 + i / 24; dish.push([x, 0.05 - 0.9 * x * x]); }
+        Lns.push(dish, [[-0.5, -0.175], [0.5, -0.175]], [[0, 0.05], [0, -0.45]], [[-0.045, -0.5], [0.045, -0.5], [0.045, -0.41], [-0.045, -0.41], [-0.045, -0.5]],
+          [[0, 0.05], [0, 0.22]], [[-0.22, 0.5], [0, 0.22], [0.22, 0.5]], [[-0.4, 0.5], [0.4, 0.5]]);
         break;
       }
       case 'dome': Lns.push(arc(0, 0.05, 0.36, Math.PI, 2 * Math.PI, 32), [[-0.42, 0.05], [0.42, 0.05], [0.42, 0.42], [-0.42, 0.42], [-0.42, 0.05]], [[0.05, -0.12], [0.36, -0.42]], [[-0.5, 0.42], [0.5, 0.42]]); break;
@@ -128,12 +130,12 @@ E.SHOTS.diagram = (spec, b) => {
   function draw(g, f) {
     CAM = cam(f);
     const clip = follow || camKeys.length;
-    if (clip && !g.__probe) { g.save(); g.beginPath(); g.rect(0, Z.y - 60, 1080, Z.h + 100); g.clip(); }
+    if (clip && !g.__probe) { g.save(); g.beginPath(); g.rect(0, Z.y - 8, 1080, Z.h + 16); g.clip(); }
     const D = dotUnits(f);
     for (const e of els) {
-      if (f < e.f0 && !(isHook && e.f0 <= 0)) continue;
+      if (f < e.f0 && !(isHook && e.f0 <= 6)) continue;
       if (e.fu != null && f >= e.fu) continue;
-      const u = isHook && e.f0 <= 0 ? 1 : k(f, e.f0, e.d, enter);
+      const u = isHook && e.f0 <= 6 ? 1 : k(f, e.f0, e.d, enter);
       const st = strokeStyle(e, f);
       if (e.path) {
         let pts = e.pts.map((p) => S(p[0], p[1]));
@@ -153,9 +155,9 @@ E.SHOTS.diagram = (spec, b) => {
         if (!g.__probe) { g.save(); g.strokeStyle = st.color; g.lineWidth = st.w; if (st.dash) g.setLineDash(st.dash); g.beginPath(); g.ellipse(cx, cy, SL(e.ellipse[2]), SL(e.ellipse[3]), ((e.ellipse[4] ?? 0) * Math.PI) / 180, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * u); g.stroke(); g.restore(); }
         E.track(g, cx, cy);
       } else if (e.marker) {
-        const [x, y] = S(e.marker[0], e.marker[1]); dot(g, x, y, (e.r ?? 11) * (0.4 + 0.6 * (isHook && e.f0 <= 0 ? 1 : sp(f - e.f0))), st.color);
+        const [x, y] = S(e.marker[0], e.marker[1]); dot(g, x, y, (e.r ?? 11) * (0.4 + 0.6 * (isHook && e.f0 <= 6 ? 1 : sp(f - e.f0))), st.color);
       } else if (e.ring) {
-        const [x, y] = S(e.ring[0], e.ring[1]), r = SL(e.ring[2]) * (0.4 + 0.6 * (isHook && e.f0 <= 0 ? 1 : sp(f - e.f0)));
+        const [x, y] = S(e.ring[0], e.ring[1]), r = SL(e.ring[2]) * (0.4 + 0.6 * (isHook && e.f0 <= 6 ? 1 : sp(f - e.f0)));
         if (e.ink) inkDisc(g, x, y, r);
         ring(g, x, y, r, 4, 1, st.dash, st.color);
         for (const pw of (e.pulse ?? []).map(A)) { const d = f - pw; if (d >= 0 && d < 18) ring(g, x, y, r + 60 * enter(d / 18), 4, 1 - d / 18); }
@@ -200,23 +202,38 @@ E.SHOTS.diagram = (spec, b) => {
     if (clip && !g.__probe) g.restore();
     num?.draw(g, f);
   }
-  function subjectRect(f) {
-    CAM = cam(f);
-    if (spec.subject === 'none') return null;
-    if (Array.isArray(spec.subject)) { const [x0, y0] = S(spec.subject[0], spec.subject[1]), [x1, y1] = S(spec.subject[0] + spec.subject[2], spec.subject[1] + spec.subject[3]); return [x0, y0, x1 - x0, y1 - y0]; }
-    const pts = [];
-    for (const e of els) {
-      if (f < e.f0 || (e.fu != null && f >= e.fu)) continue;
-      if (e.circle) pts.push([e.circle[0] - e.circle[2], e.circle[1] - e.circle[2]], [e.circle[0] + e.circle[2], e.circle[1] + e.circle[2]]);
-      else if (e.ellipse) pts.push([e.ellipse[0] - e.ellipse[2], e.ellipse[1] - e.ellipse[3]], [e.ellipse[0] + e.ellipse[2], e.ellipse[1] + e.ellipse[3]]);
-      else if (e.glyph) { const h = (e.size ?? 300) / 2; pts.push([e.pos[0] - h, e.pos[1] - h], [e.pos[0] + h, e.pos[1] + h]); }
-      else if (e.ring) pts.push([e.ring[0] - e.ring[2], e.ring[1] - e.ring[2]], [e.ring[0] + e.ring[2], e.ring[1] + e.ring[2]]);
-      else if (e.marker) pts.push(e.marker);
+  // screen bounds of one element (null for elements the cat may cross: hazards, fans, thin lines)
+  function elRect(e, f) {
+    let pts = [];
+    if (e.circle) pts = [[e.circle[0] - e.circle[2], e.circle[1] - e.circle[2]], [e.circle[0] + e.circle[2], e.circle[1] + e.circle[2]]];
+    else if (e.ellipse) pts = [[e.ellipse[0] - e.ellipse[2], e.ellipse[1] - e.ellipse[3]], [e.ellipse[0] + e.ellipse[2], e.ellipse[1] + e.ellipse[3]]];
+    else if (e.ring) pts = [[e.ring[0] - e.ring[2], e.ring[1] - e.ring[2]], [e.ring[0] + e.ring[2], e.ring[1] + e.ring[2]]];
+    else if (e.marker || e.craft) { const q = e.marker ?? e.craft; pts = [[q[0] - 14, q[1] - 14], [q[0] + 14, q[1] + 14]]; }
+    else if (e.glyph) {
+      const sz = e.size ?? 300, rot = ((e.rot ?? 0) * Math.PI) / 180, cr = Math.cos(rot), sr = Math.sin(rot);
+      pts = glyphLines(e, f).flat().map(([lx, ly]) => [e.pos[0] + (lx * cr - ly * sr) * sz, e.pos[1] + (lx * sr + ly * cr) * sz]);
+    } else if (e.path && e.style !== 'thin') pts = e.pts;
+    else if (e.label) {
+      const [x, y] = S(e.pos[0], e.pos[1]), w = monoWidth(e.label, 24, 'label') + 16, an = e.anchor ?? 'right';
+      const lx = an === 'right' ? x + 18 : an === 'left' ? x - 18 - w : x - w / 2, ly = an === 'above' ? y - 54 : an === 'below' ? y + 18 : y - 18;
+      return [lx, ly, w, 36];
     }
     if (!pts.length) return null;
     const sp2 = pts.map((p) => S(p[0], p[1])), xs = sp2.map((p) => p[0]), ys = sp2.map((p) => p[1]);
-    const x0 = Math.max(0, Math.min(...xs)), y0 = Math.max(0, Math.min(...ys));
-    return [x0, y0, Math.min(1080, Math.max(...xs)) - x0, Math.min(1920, Math.max(...ys)) - y0];
+    const x0 = Math.min(...xs), y0 = Math.min(...ys);
+    return [x0, y0, Math.max(...xs) - x0, Math.max(...ys) - y0];
+  }
+  // what the cat must not cover: the director's subject box, or every drawn element on its own
+  function subjectRects(f) {
+    CAM = cam(f);
+    if (spec.subject === 'none') return [];
+    if (Array.isArray(spec.subject)) { const [x0, y0] = S(spec.subject[0], spec.subject[1]), [x1, y1] = S(spec.subject[0] + spec.subject[2], spec.subject[1] + spec.subject[3]); return [[x0, y0, x1 - x0, y1 - y0]]; }
+    return els.filter((e) => f >= e.f0 && !(e.fu != null && f >= e.fu)).map((e) => elRect(e, f)).filter(Boolean);
+  }
+  function subjectRect(f) {
+    const R = subjectRects(f); if (!R.length) return null;
+    const x0 = Math.max(0, Math.min(...R.map((r) => r[0]))), y0 = Math.max(0, Math.min(...R.map((r) => r[1])));
+    return [x0, y0, Math.min(1080, Math.max(...R.map((r) => r[0] + r[2]))) - x0, Math.min(1920, Math.max(...R.map((r) => r[1] + r[3]))) - y0];
   }
   const dotScreen = (f) => { const d = dotUnits(f); if (!d) return null; CAM = cam(f); return S(d[0], d[1]); };
   const zoneCenter = () => [Z.cx, Z.cy];
@@ -226,7 +243,7 @@ E.SHOTS.diagram = (spec, b) => {
     dotOut: (f) => dotScreen(f) ?? zoneCenter(),
     dot: (f) => dotScreen(f),
     credit: () => (b.spec.source ? `Source: ${b.spec.source}` : null),
-    subjects: (f) => [subjectRect(f), ...(num && num.on(f) ? [num.rect()] : [])].filter(Boolean),
+    subjects: (f) => [...subjectRects(f), ...(num && num.on(f) ? [num.rect()] : [])],
     anchors: (f) => {
       CAM = cam(f);
       const a = { zone: [Z.x, Z.y, Z.w, Z.h] };
@@ -237,7 +254,7 @@ E.SHOTS.diagram = (spec, b) => {
       for (const e of els) if (e.id) {
         if (e.ring) { const [x, y] = S(e.ring[0], e.ring[1]), r = SL(e.ring[2]); a[e.id] = [x - r, y - r, 2 * r, 2 * r]; }
         else if (e.circle) { const [x, y] = S(e.circle[0], e.circle[1]), r = SL(e.circle[2]); a[e.id] = [x - r, y - r, 2 * r, 2 * r]; }
-        else if (e.glyph) { const [x, y] = S(e.pos[0], e.pos[1]), h = SL(e.size ?? 300) / 2; a[e.id] = [x - h, y - h, 2 * h, 2 * h]; }
+        else if (e.glyph) a[e.id] = elRect(e, f);
         else if (e.marker || e.craft) a[e.id] = S(...(e.marker ?? e.craft));
         else if (e.path) { const p = e.pts.map((q) => S(q[0], q[1])); const xs = p.map((q) => q[0]), ys = p.map((q) => q[1]); a[e.id] = [Math.min(...xs), Math.min(...ys), Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)]; }
         else if (e.pos) a[e.id] = S(e.pos[0], e.pos[1]);

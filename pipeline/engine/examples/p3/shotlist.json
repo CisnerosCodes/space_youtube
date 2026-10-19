@@ -1,0 +1,813 @@
+{
+ "version": 1,
+ "series": "BY THE NUMBERS",
+ "title": "Perseverance Driving Record",
+ "bed": "bedF_house",
+ "stress": [
+  "out-drove",
+  "every",
+  "28.10",
+  "28.06",
+  "fifteen",
+  "five",
+  "half",
+  "itself",
+  "20",
+  "600,000",
+  "Idubi"
+ ],
+ "assets": {
+  "persev": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/persev.webp",
+   "credit": "NASA/JPL-Caltech/MSSS",
+   "focus": [
+    0.45,
+    0.18,
+    0.39,
+    0.64
+   ],
+   "note": "PIA26574, Perseverance selfie, sol 1,500"
+  },
+  "navcam": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/navcam.webp",
+   "credit": "NASA/JPL-Caltech",
+   "focus": [
+    0.55,
+    0.55,
+    0.2,
+    0.2
+   ],
+   "note": "PIA26812, NAVCAM on the record sol"
+  },
+  "oppy": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/oppy.webp",
+   "credit": "NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.",
+   "focus": [
+    0.28,
+    0.16,
+    0.46,
+    0.66
+   ],
+   "note": "PIA17759, Opportunity self-portrait"
+  },
+  "sojourner": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/sojourner.webp",
+   "credit": "NASA/JPL",
+   "focus": [
+    0.15,
+    0.32,
+    0.75,
+    0.6
+   ],
+   "note": "PIA01122, Sojourner"
+  },
+  "row_persev": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_persev.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    2957,
+    0,
+    686,
+    425
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_oppy": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_oppy.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    3302,
+    0,
+    206,
+    266
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_lunokhod2": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_lunokhod2.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    2515,
+    0,
+    548,
+    452
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_curiosity": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_curiosity.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    2561,
+    0,
+    418,
+    360
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_apollo17": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_apollo17.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    2376,
+    0,
+    483,
+    309
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_apollo15": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_apollo15.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    1809,
+    0,
+    482,
+    341
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_apollo16": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_apollo16.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    1771,
+    0,
+    484,
+    307
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_lunokhod1": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_lunokhod1.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    480,
+    0,
+    548,
+    426
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_spirit": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_spirit.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    575,
+    0,
+    206,
+    262
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_sojourner": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_sojourner.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    239,
+    0,
+    104,
+    142
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_yutu2": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_yutu2.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    199,
+    0,
+    189,
+    224
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  },
+  "row_yutu": {
+   "file": "../../../../lab/pilots/p3_perseverance/img/row_yutu.webp",
+   "credit": "NASA/JPL-Caltech",
+   "kind": "graphic",
+   "crop": [
+    199,
+    0,
+    189,
+    224
+   ],
+   "note": "icon from NASA's driving-record infographic (labels and numbers left out)"
+  }
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "start": "A#1",
+   "shot": {
+    "type": "hook",
+    "image": "persev",
+    "frame": "right",
+    "y": "bottom",
+    "push": 0.05,
+    "punch": [
+     "out-drove"
+    ],
+    "headline": [
+     "OFF-WORLD",
+     "*RECORD*"
+    ],
+    "headline_size": 110
+   },
+   "chip": {
+    "body": "MARS",
+    "value": "12 min 59 s",
+    "source": "JPL Horizons one-way light time, 2026-10-15 12:00 UT",
+    "at": "Mars",
+    "until": "vehicle"
+   }
+  },
+  {
+   "id": "every_vehicle",
+   "start": "every",
+   "transition": {
+    "type": "morph",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "bars",
+    "race": true,
+    "at": "every+4f",
+    "land": "world-6f",
+    "rows": [
+     {
+      "value": 3639,
+      "icon": "row_persev"
+     },
+     {
+      "value": 3504,
+      "icon": "row_oppy"
+     },
+     {
+      "value": 3059,
+      "icon": "row_lunokhod2"
+     },
+     {
+      "value": 2975,
+      "icon": "row_curiosity"
+     },
+     {
+      "value": 2855,
+      "icon": "row_apollo17"
+     },
+     {
+      "value": 2287,
+      "icon": "row_apollo15"
+     },
+     {
+      "value": 2251,
+      "icon": "row_apollo16"
+     },
+     {
+      "value": 1024,
+      "icon": "row_lunokhod1"
+     },
+     {
+      "value": 777,
+      "icon": "row_spirit"
+     },
+     {
+      "value": 339,
+      "icon": "row_sojourner"
+     },
+     {
+      "value": 384,
+      "icon": "row_yutu2"
+     },
+     {
+      "value": 384,
+      "icon": "row_yutu"
+     }
+    ],
+    "mark": {
+     "row": 0,
+     "at": "world"
+    },
+    "dot_row": 0
+   }
+  },
+  {
+   "id": "record_day",
+   "start": "On#2",
+   "transition": {
+    "type": "push",
+    "dir": "up",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "navcam",
+    "frame": "right",
+    "push": 0.06,
+    "drift": "up",
+    "number": {
+     "value": 28.1,
+     "decimals": 2,
+     "style": "roll",
+     "from": 28.06,
+     "at": "passed",
+     "land": "miles-4f",
+     "data": [
+      {
+       "at": "October",
+       "text": "SUN 11 OCT"
+      },
+      {
+       "at": "miles",
+       "text": "MILES _\u00b7_ 45.22 KM"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "old_record",
+   "start": "The#1",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "shot": {
+    "type": "count",
+    "image": "oppy",
+    "side": "right",
+    "number": {
+     "value": 28.06,
+     "decimals": 2,
+     "style": "slam",
+     "at": "28.06",
+     "data": "MILES _\u00b7_ 45.16 KM"
+    }
+   }
+  },
+  {
+   "id": "years",
+   "start": "Opportunity#2",
+   "transition": {
+    "type": "morph",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "bars",
+    "ticks": 1,
+    "max": 15,
+    "dot_row": 1,
+    "rows": [
+     {
+      "value": 15,
+      "at": "Opportunity#2+8f",
+      "land": "fifteen+6f",
+      "label": "Opportunity",
+      "data": "ALMOST 15 YEARS",
+      "data_at": "fifteen",
+      "icon": "row_oppy"
+     },
+     {
+      "value": 5.5,
+      "decimals": 1,
+      "at": "Perseverance#1",
+      "label": "Perseverance",
+      "data": "FIVE AND A HALF YEARS",
+      "data_at": "half",
+      "icon": "row_persev"
+     }
+    ]
+   }
+  },
+  {
+   "id": "drives_itself",
+   "start": "How?",
+   "transition": {
+    "type": "morph",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "region": "right",
+    "size": [
+     1000,
+     1260
+    ],
+    "camera": {
+     "follow": "dot",
+     "lead": 300
+    },
+    "elements": [
+     {
+      "path": [
+       [
+        520,
+        1180
+       ],
+       [
+        660,
+        980
+       ],
+       [
+        430,
+        780
+       ],
+       [
+        620,
+        560
+       ],
+       [
+        400,
+        330
+       ],
+       [
+        580,
+        90
+       ],
+       [
+        420,
+        -170
+       ],
+       [
+        600,
+        -450
+       ],
+       [
+        440,
+        -740
+       ],
+       [
+        560,
+        -1050
+       ]
+      ],
+      "id": "drive",
+      "style": "route",
+      "at": "How?",
+      "draw": 30
+     },
+     {
+      "hazards": [
+       60,
+       -1150,
+       880,
+       2300
+      ],
+      "count": 70,
+      "seed": 611,
+      "reveal": "fan"
+     },
+     {
+      "fan": 420,
+      "half": 32,
+      "at": "drives"
+     }
+    ],
+    "dot": {
+     "path": "drive",
+     "ease": "drive",
+     "keys": [
+      {
+       "at": "drives-2f",
+       "u": 0
+      },
+      {
+       "at": "Sojourner+6f",
+       "u": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "points",
+   "start": "Sojourner",
+   "transition": {
+    "type": "push",
+    "dir": "down",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "points",
+    "stages": [
+     {
+      "at": "20",
+      "value": 20,
+      "data": "POINTS AHEAD _\u00b7_ SOJOURNER",
+      "image": "sojourner"
+     },
+     {
+      "at": "600,000",
+      "value": 600000,
+      "data": "POINTS _\u00b7_ WITH EVERY LOOK",
+      "image": "persev",
+      "image_at": "Perseverance#2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "next",
+   "start": "Next",
+   "hit": true,
+   "transition": {
+    "type": "cut"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "next",
+    "headline": [
+     "Next stop:",
+     "*Idubi*"
+    ],
+    "headline_at": [
+     "Next",
+     "Idubi"
+    ],
+    "date": null,
+    "lines": [
+     {
+      "at": "ancient",
+      "text": "HUNTING ANCIENT HOT WATER"
+     },
+     {
+      "at": "NASA",
+      "text": "_EXTENDED MISSION:_ *ABOUT THROUGH 2028*"
+     }
+    ],
+    "pointer": {
+     "at": "Follow",
+     "text": "*Follow* Downlink Cat"
+    },
+    "art": {
+     "size": [
+      1000,
+      330
+     ],
+     "subject": [
+      640,
+      250,
+      180,
+      110
+     ],
+     "elements": [
+      {
+       "path": [
+        [
+         -120,
+         315
+        ],
+        [
+         300,
+         315
+        ],
+        [
+         560,
+         310
+        ],
+        [
+         720,
+         300
+        ],
+        [
+         860,
+         290
+        ]
+       ],
+       "id": "route",
+       "style": "route",
+       "smooth": false,
+       "grow": {
+        "at": "keep-2f",
+        "to": [
+         [
+          1000,
+          282
+         ],
+         [
+          1160,
+          276
+         ]
+        ]
+       }
+      },
+      {
+       "ring": [
+        720,
+        300,
+        40
+       ],
+       "id": "idubi",
+       "ink": true,
+       "at": "Idubi-2f",
+       "pulse": [
+        "hot"
+       ]
+      },
+      {
+       "label": "Idubi",
+       "pos": [
+        720,
+        300
+       ],
+       "anchor": "below",
+       "at": "Idubi+4f"
+      }
+     ],
+     "dot": {
+      "path": "route",
+      "keys": [
+       {
+        "at": "Next",
+        "u": 0.42
+       },
+       {
+        "at": "Idubi",
+        "u": 0.42
+       },
+       {
+        "at": "hot",
+        "u": 0.835
+       },
+       {
+        "at": "keep-4f",
+        "u": 0.835
+       },
+       {
+        "at": "growing+20f",
+        "u": 0.97
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "cat": {
+  "scale": 0.34,
+  "seed": 9,
+  "moves": [
+   {
+    "at": "A#1",
+    "do": "expr",
+    "expr": "curious"
+   },
+   {
+    "at": "A#1+2f",
+    "do": "enter",
+    "how": "pop",
+    "box": "caption",
+    "along": 0.06
+   },
+   {
+    "at": "out-drove-2f",
+    "do": "gasp",
+    "target": "el:subject",
+    "dur": 0.5
+   },
+   {
+    "at": "every",
+    "do": "exit",
+    "how": "tether",
+    "dur": 0.7
+   },
+   {
+    "at": "October-10f",
+    "do": "enter",
+    "how": "drop",
+    "to": "left"
+   },
+   {
+    "at": "October",
+    "do": "expr",
+    "expr": "excited"
+   },
+   {
+    "at": "October+6f",
+    "do": "look",
+    "target": "el:number"
+   },
+   {
+    "at": "28.10",
+    "do": "thumbs",
+    "dur": 0.55
+   },
+   {
+    "at": "miles+8f",
+    "do": "sign",
+    "text": "28.10",
+    "sub": "MILES",
+    "dur": 2.4,
+    "size": 1.8
+   },
+   {
+    "at": "28.06+2f",
+    "do": "point",
+    "target": "el:number",
+    "dur": 0.6
+   },
+   {
+    "at": "28.06+12f",
+    "do": "exit",
+    "how": "zip",
+    "to": "left"
+   },
+   {
+    "at": "How?",
+    "do": "enter",
+    "how": "drop",
+    "to": "caption:0.25"
+   },
+   {
+    "at": "How?",
+    "do": "expr",
+    "expr": "curious"
+   },
+   {
+    "at": "How?+17f",
+    "do": "what",
+    "dur": 0.8
+   },
+   {
+    "at": "drives-2f",
+    "do": "listen",
+    "dur": 0.9
+   },
+   {
+    "at": "itself+2f",
+    "do": "nod",
+    "count": 2,
+    "dur": 0.8
+   },
+   {
+    "at": "mapping+4f",
+    "do": "point",
+    "target": "dot",
+    "dur": 0.8
+   },
+   {
+    "at": "rolling-14f",
+    "do": "exit",
+    "how": "zip",
+    "to": "left"
+   },
+   {
+    "at": "ancient-4f",
+    "do": "enter",
+    "how": "skid",
+    "from": "left",
+    "to": "el:route:0.12",
+    "scale": 0.25
+   },
+   {
+    "at": "Idubi",
+    "do": "expr",
+    "expr": "happy"
+   },
+   {
+    "at": "NASA-6f",
+    "do": "walk",
+    "to": "el:route:0.3",
+    "scale": 0.25
+   },
+   {
+    "at": "NASA+30f",
+    "do": "point",
+    "target": "el:idubi",
+    "dur": 0.9
+   },
+   {
+    "at": "keep-2f",
+    "do": "bounce",
+    "count": 2,
+    "period": 0.34
+   },
+   {
+    "at": "Follow-2f",
+    "do": "point",
+    "target": "el:pointer",
+    "dur": 1.2
+   },
+   {
+    "at": "watch-2f",
+    "do": "thumbs",
+    "dur": 1.5
+   }
+  ]
+ }
+}
