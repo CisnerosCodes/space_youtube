@@ -31,3 +31,13 @@ Add `--dry-run` first to see the exact request. Each upload writes `upload.json`
 ## After upload (in Studio, by hand, about one minute each)
 - Check the scheduled time and the "AI use" setting show as expected.
 - Leave "Related video" empty until the first weekly long-form exists.
+
+## Approved after the pilots
+
+| Short | Publish at (UTC) | Local (ET) | Approved |
+|---|---|---|---|
+| `shorts/2026-10-19-artemis-heat-shield` (How Does That Work) | 2026-10-20T16:00:00Z | Tue Oct 20, 12:00 pm | Oct 19, 2026, by the owner |
+
+```
+python3 pipeline/youtube_upload.py shorts/2026-10-19-artemis-heat-shield --publish-at 2026-10-20T16:00:00Z
+```
