@@ -1,0 +1,122 @@
+[
+ {
+  "frame": 2,
+  "fps": 30,
+  "type": "impact",
+  "note": "press slam: the plates snap into register"
+ },
+ {
+  "frame": 92,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "ink roller pass into the H3 launch"
+ },
+ {
+  "frame": 140,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "Night Shift pops up behind the clouds"
+ },
+ {
+  "frame": 158,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "sheet slides in: Phobos to steal from"
+ },
+ {
+  "frame": 208,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "paper feed: step one"
+ },
+ {
+  "frame": 280,
+  "fps": 30,
+  "type": "impact",
+  "note": "AUG 2027 date stamp"
+ },
+ {
+  "frame": 310,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "paper feed: step two"
+ },
+ {
+  "frame": 404,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "25 KG"
+ },
+ {
+  "frame": 436,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "roller pass: on Phobos"
+ },
+ {
+  "frame": 496,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "15 g"
+ },
+ {
+  "frame": 558,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "paper feed: step three"
+ },
+ {
+  "frame": 653,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "nitrogen burst"
+ },
+ {
+  "frame": 723,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "10 g"
+ },
+ {
+  "frame": 756,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "paper feed: step four"
+ },
+ {
+  "frame": 802,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "the burn: MMX leaves Mars"
+ },
+ {
+  "frame": 886,
+  "fps": 30,
+  "type": "impact",
+  "note": "2031 postmark"
+ },
+ {
+  "frame": 949,
+  "fps": 30,
+  "type": "reveal",
+  "note": "FIRST rosette"
+ },
+ {
+  "frame": 1035,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "NEXT ticket"
+ },
+ {
+  "frame": 1157,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "roller pass into the end card"
+ },
+ {
+  "frame": 1208,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "echo mark lands: sonic logo"
+ }
+]

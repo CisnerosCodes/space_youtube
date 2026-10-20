@@ -32,3 +32,16 @@ lab/ultra/kit/assets/textures/
 lab/ultra/kit/work/
 lab/ultra/*/out/*.part*.mp4
 lab/ultra/*/frames/
+# ultra experiment: keep pages, notes, cues, contact sheets and the final videos; drop intermediates
+lab/ultra/*/out/*
+!lab/ultra/*/out/final.mp4
+!lab/ultra/*/out/contact*.png
+!lab/ultra/*/out/cues*.json
+!lab/ultra/*/out/mix.report.json
+lab/ultra/*/qa/
+lab/ultra/*/frames/
+lab/ultra/*/stills/
+lab/ultra/*/work/
+lab/ultra/*/tmp/
+lab/ultra/*/*.mp4
+lab/ultra/cinematic3d/page.html

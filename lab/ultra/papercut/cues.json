@@ -1,0 +1,21 @@
+[
+  {"frame": 10, "fps": 30, "type": "cat_in", "sfx": "pop", "note": "pointer pokes Pho"},
+  {"frame": 54, "fps": 30, "type": "impact", "note": "collision: impact frame, camera pulls back"},
+  {"frame": 99, "fps": 30, "type": "scene_move", "note": "night-sky flat drops, set change to Tanegashima"},
+  {"frame": 131, "fps": 30, "type": "number_slam", "sfx": "impact_big", "gain_db": -3, "note": "H3 ignition on launched (impact frame)"},
+  {"frame": 147, "fps": 30, "type": "hard_cut", "note": "heist: impact frame, rocket punches out of the top, photo card drops"},
+  {"frame": 250, "fps": 30, "type": "next_card_in", "sfx": "page_turn_air", "note": "calendar riffles from OCT 2026 to AUG 2027"},
+  {"frame": 259, "fps": 30, "type": "chip_in", "note": "Night Shift pins the STEP 1 card to the corner"},
+  {"frame": 396, "fps": 30, "type": "impact", "note": "rover bonks onto Pho's head (BONK!)"},
+  {"frame": 496, "fps": 30, "type": "next_card_in", "sfx": "page_turn_air", "note": "luggage tag flips 25 kg to 15 g"},
+  {"frame": 597, "fps": 30, "type": "impact", "note": "MMX lands on Pho (THUNK!)"},
+  {"frame": 606, "fps": 30, "type": "hard_cut", "note": "grab: whip push into Pho's eye"},
+  {"frame": 630, "fps": 30, "type": "scene_move", "note": "ground row rises, sky flat drops: the low-angle set"},
+  {"frame": 653, "fps": 30, "type": "hard_cut", "note": "nitrogen burst (FSSSH!), impact frame"},
+  {"frame": 723, "fps": 30, "type": "number_slam", "note": "AT LEAST 10 g label slaps on the jar Night Shift holds"},
+  {"frame": 802, "fps": 30, "type": "number_slam", "sfx": "impact_big", "gain_db": -3, "note": "one burn: MMX engine fires"},
+  {"frame": 870, "fps": 30, "type": "impact", "note": "capsule lands in Australia"},
+  {"frame": 949, "fps": 30, "type": "reveal", "note": "spotlight on the sample jar: First"},
+  {"frame": 1047, "fps": 30, "type": "next_card_in", "note": "NEXT set and date tag land on Next:"},
+  {"frame": 1212, "fps": 30, "type": "wordmark_echo", "note": "amber dot slams down (Pho jumps); ring lands 0.4 s later"}
+]
