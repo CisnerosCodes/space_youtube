@@ -11,6 +11,10 @@ The rules every script, video, title and upload must follow. The pipeline reads 
 - Voice: one anonymous AI narrator, never a clone of a real person, on a plan that allows commercial use. Chosen in Phase 3.
 - Visual identity: the v1 design system (made as Signal Delay, renamed Downlink Cat) (Full Bleed base with Telemetry type, amber accent and labeled diagrams).
 
+## House animation style (decided Oct 20, 2026)
+- Anime action is the house style from now on (the owner's pick after the seven-style experiment in `lab/ultra/`; it scored highest with all three judges and renders in about 2 minutes). Reference build: `lab/ultra/anime/` (page, NOTES.md, the polish and verify notes). Night Shift in his anime design, Pho the Phobos moon as a recurring character where it fits, kinetic captions, speed lines, impact frames (at most 3 flashes per second), katakana sound-effect lettering as flavor.
+- The truth rules do not change: facts only from the fact-check table, exact credits on real images, drawn spacecraft labeled "Illustration", captions verbatim and on time.
+
 ## Named series (rotate; never post two of the same series in a row)
 | Series | What it is |
 |---|---|
