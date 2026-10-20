@@ -1,0 +1,457 @@
+{
+ "audio": "voice.mp3",
+ "duration": 40.4,
+ "text": "This moon is on a slow-motion collision course with Mars.  Japan just launched a heist to steal a piece of it.  Step one, Mars, August 2027.  Step two, drop a lookout, a 25-kilo rover.  On Phobos, it weighs 15 grams.  Step 3.  The grab.  Coring arm, nitrogen blaster, target at least 10 grams.  Step 4: One burn to leave Mars.  Capsule lands in Australia, 2031.  The loot? First piece of Phobos ever brought home.  Next, Rocket Lab aims to launch three Hawkeye 360 satellites Wednesday. Follow downlink hat.",
+ "words": [
+  {
+   "w": "This",
+   "start": 0.15,
+   "end": 0.29
+  },
+  {
+   "w": "moon",
+   "start": 0.29,
+   "end": 0.63
+  },
+  {
+   "w": "is",
+   "start": 0.63,
+   "end": 0.81
+  },
+  {
+   "w": "on",
+   "start": 0.81,
+   "end": 0.97
+  },
+  {
+   "w": "a",
+   "start": 0.97,
+   "end": 1.07
+  },
+  {
+   "w": "slow",
+   "start": 1.07,
+   "end": 1.43
+  },
+  {
+   "w": "-motion",
+   "start": 1.43,
+   "end": 1.79
+  },
+  {
+   "w": "collision",
+   "start": 1.79,
+   "end": 2.19
+  },
+  {
+   "w": "course",
+   "start": 2.19,
+   "end": 2.59
+  },
+  {
+   "w": "with",
+   "start": 2.59,
+   "end": 2.85
+  },
+  {
+   "w": "Mars.",
+   "start": 2.85,
+   "end": 3.43
+  },
+  {
+   "w": "Japan",
+   "start": 3.43,
+   "end": 3.93
+  },
+  {
+   "w": "just",
+   "start": 3.93,
+   "end": 4.35
+  },
+  {
+   "w": "launched",
+   "start": 4.35,
+   "end": 4.73
+  },
+  {
+   "w": "a",
+   "start": 4.73,
+   "end": 4.91
+  },
+  {
+   "w": "heist",
+   "start": 4.91,
+   "end": 5.37
+  },
+  {
+   "w": "to",
+   "start": 5.37,
+   "end": 5.61
+  },
+  {
+   "w": "steal",
+   "start": 5.61,
+   "end": 6.03
+  },
+  {
+   "w": "a",
+   "start": 6.03,
+   "end": 6.27
+  },
+  {
+   "w": "piece",
+   "start": 6.27,
+   "end": 6.55
+  },
+  {
+   "w": "of",
+   "start": 6.55,
+   "end": 6.73
+  },
+  {
+   "w": "it.",
+   "start": 6.73,
+   "end": 7.33
+  },
+  {
+   "w": "Step",
+   "start": 7.33,
+   "end": 7.61
+  },
+  {
+   "w": "one,",
+   "start": 7.61,
+   "end": 8.01
+  },
+  {
+   "w": "Mars,",
+   "start": 8.01,
+   "end": 8.79
+  },
+  {
+   "w": "August",
+   "start": 8.79,
+   "end": 9.33
+  },
+  {
+   "w": "2027.",
+   "start": 9.33,
+   "end": 10.27
+  },
+  {
+   "w": "Step",
+   "start": 10.74,
+   "end": 11.28
+  },
+  {
+   "w": "two,",
+   "start": 11.28,
+   "end": 11.74
+  },
+  {
+   "w": "drop",
+   "start": 11.74,
+   "end": 12.22
+  },
+  {
+   "w": "a",
+   "start": 12.22,
+   "end": 12.5
+  },
+  {
+   "w": "lookout,",
+   "start": 12.5,
+   "end": 13.1
+  },
+  {
+   "w": "a",
+   "start": 13.1,
+   "end": 13.48
+  },
+  {
+   "w": "25",
+   "start": 13.48,
+   "end": 13.92
+  },
+  {
+   "w": "-kilo",
+   "start": 13.92,
+   "end": 14.38
+  },
+  {
+   "w": "rover.",
+   "start": 14.38,
+   "end": 14.86
+  },
+  {
+   "w": "On",
+   "start": 14.86,
+   "end": 15.34
+  },
+  {
+   "w": "Phobos,",
+   "start": 15.34,
+   "end": 15.92
+  },
+  {
+   "w": "it",
+   "start": 15.92,
+   "end": 16.12
+  },
+  {
+   "w": "weighs",
+   "start": 16.12,
+   "end": 16.52
+  },
+  {
+   "w": "15",
+   "start": 16.52,
+   "end": 17.44
+  },
+  {
+   "w": "grams.",
+   "start": 17.44,
+   "end": 18.14
+  },
+  {
+   "w": "Step",
+   "start": 18.99,
+   "end": 19.23
+  },
+  {
+   "w": "3.",
+   "start": 19.23,
+   "end": 19.63
+  },
+  {
+   "w": "The",
+   "start": 20.04,
+   "end": 20.14
+  },
+  {
+   "w": "grab.",
+   "start": 20.14,
+   "end": 20.6
+  },
+  {
+   "w": "Coring",
+   "start": 21,
+   "end": 21.38
+  },
+  {
+   "w": "arm,",
+   "start": 21.38,
+   "end": 21.78
+  },
+  {
+   "w": "nitrogen",
+   "start": 21.78,
+   "end": 22.18
+  },
+  {
+   "w": "blaster,",
+   "start": 22.18,
+   "end": 22.9
+  },
+  {
+   "w": "target",
+   "start": 22.9,
+   "end": 23.52
+  },
+  {
+   "w": "at",
+   "start": 23.52,
+   "end": 23.9
+  },
+  {
+   "w": "least",
+   "start": 23.9,
+   "end": 24.1
+  },
+  {
+   "w": "10",
+   "start": 24.1,
+   "end": 24.4
+  },
+  {
+   "w": "grams.",
+   "start": 24.4,
+   "end": 24.9
+  },
+  {
+   "w": "Step",
+   "start": 25.59,
+   "end": 25.81
+  },
+  {
+   "w": "4:",
+   "start": 25.81,
+   "end": 26.25
+  },
+  {
+   "w": "One",
+   "start": 26.25,
+   "end": 26.73
+  },
+  {
+   "w": "burn",
+   "start": 26.73,
+   "end": 27.01
+  },
+  {
+   "w": "to",
+   "start": 27.01,
+   "end": 27.25
+  },
+  {
+   "w": "leave",
+   "start": 27.25,
+   "end": 27.45
+  },
+  {
+   "w": "Mars.",
+   "start": 27.45,
+   "end": 27.89
+  },
+  {
+   "w": "Capsule",
+   "start": 28.2,
+   "end": 28.64
+  },
+  {
+   "w": "lands",
+   "start": 28.64,
+   "end": 28.78
+  },
+  {
+   "w": "in",
+   "start": 28.78,
+   "end": 28.96
+  },
+  {
+   "w": "Australia,",
+   "start": 28.96,
+   "end": 29.54
+  },
+  {
+   "w": "2031.",
+   "start": 29.54,
+   "end": 30.42
+  },
+  {
+   "w": "The",
+   "start": 30.92,
+   "end": 31.28
+  },
+  {
+   "w": "loot?",
+   "start": 31.28,
+   "end": 31.62
+  },
+  {
+   "w": "First",
+   "start": 31.62,
+   "end": 32.28
+  },
+  {
+   "w": "piece",
+   "start": 32.28,
+   "end": 32.66
+  },
+  {
+   "w": "of",
+   "start": 32.66,
+   "end": 32.94
+  },
+  {
+   "w": "Phobos",
+   "start": 32.94,
+   "end": 33.3
+  },
+  {
+   "w": "ever",
+   "start": 33.3,
+   "end": 33.66
+  },
+  {
+   "w": "brought",
+   "start": 33.66,
+   "end": 33.94
+  },
+  {
+   "w": "home.",
+   "start": 33.94,
+   "end": 34.38
+  },
+  {
+   "w": "Next,",
+   "start": 34.89,
+   "end": 35.35
+  },
+  {
+   "w": "Rocket",
+   "start": 35.35,
+   "end": 35.67
+  },
+  {
+   "w": "Lab",
+   "start": 35.67,
+   "end": 35.83
+  },
+  {
+   "w": "aims",
+   "start": 35.83,
+   "end": 36.07
+  },
+  {
+   "w": "to",
+   "start": 36.07,
+   "end": 36.27
+  },
+  {
+   "w": "launch",
+   "start": 36.27,
+   "end": 36.45
+  },
+  {
+   "w": "three",
+   "start": 36.45,
+   "end": 36.75
+  },
+  {
+   "w": "Hawkeye",
+   "start": 36.75,
+   "end": 37.25
+  },
+  {
+   "w": "360",
+   "start": 37.25,
+   "end": 37.49
+  },
+  {
+   "w": "satellites",
+   "start": 37.49,
+   "end": 38.03
+  },
+  {
+   "w": "Wednesday.",
+   "start": 38.03,
+   "end": 38.67
+  },
+  {
+   "w": "Follow",
+   "start": 38.87,
+   "end": 39.47
+  },
+  {
+   "w": "downlink",
+   "start": 39.47,
+   "end": 39.85
+  },
+  {
+   "w": "hat.",
+   "start": 39.85,
+   "end": 40.17
+  }
+ ]
+}

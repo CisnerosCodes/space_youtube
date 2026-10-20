@@ -1,0 +1,296 @@
+{
+ "images/phobos_color_hirise_6800km_PIA10368.jpg": {
+  "credit": "NASA/JPL-Caltech/University of Arizona",
+  "source_url": "https://science.nasa.gov/photojournal/phobos-from-6800-kilometers-color/ (also https://images.nasa.gov/details/PIA10368)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it. HiRISE (https://uahirise.org/media/usage.php): 'All of the images produced by HiRISE ... are within the public domain'.",
+  "title": "Phobos from 6,800 Kilometers (Color)",
+  "shows": "Phobos in color from about 6,800 km, MRO HiRISE, March 23, 2008. Stickney crater (9 km) at lower right. Hero image for the hook and the close-ups.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia10/pia10368/PIA10368.tif",
+  "bytes": 7338193,
+  "pixels": "3374x3300",
+  "notes": "JPEG q95 4:4:4 made from the lossless TIFF, full resolution."
+ },
+ "images/phobos_color_hirise_5800km_PIA10369.jpg": {
+  "credit": "NASA/JPL-Caltech/University of Arizona",
+  "source_url": "https://science.nasa.gov/photojournal/phobos-from-5800-kilometers-color/ (also https://images.nasa.gov/details/PIA10369)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it. HiRISE (https://uahirise.org/media/usage.php): 'All of the images produced by HiRISE ... are within the public domain'.",
+  "title": "Phobos from 5,800 Kilometers (Color)",
+  "shows": "Phobos in color from about 5,800 km, ten minutes after PIA10368 (a slightly different angle: the pair can fake a slow turn).",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia10/pia10369/PIA10369.tif",
+  "bytes": 7961872,
+  "pixels": "3515x3474",
+  "notes": "JPEG q95 4:4:4 made from the lossless TIFF, full resolution."
+ },
+ "images/deimos_color_hirise_PIA11826.png": {
+  "credit": "NASA/JPL-Caltech/University of Arizona",
+  "source_url": "https://science.nasa.gov/photojournal/martian-moon-deimos-in-high-resolution/ (also https://images.nasa.gov/details/PIA11826)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it. HiRISE (https://uahirise.org/media/usage.php): 'All of the images produced by HiRISE ... are within the public domain'.",
+  "title": "Martian Moon Deimos in High Resolution",
+  "shows": "Deimos twice, color-enhanced, HiRISE, Feb. 21, 2009. Has a burned-in '2 km' scale bar under the right view; crop to one view.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia11/pia11826/PIA11826.tif",
+  "bytes": 1211525,
+  "pixels": "1505x772",
+  "notes": "PNG from the lossless TIFF."
+ },
+ "images/mars_global_color_viking_PIA00407.jpg": {
+  "credit": "NASA/JPL/USGS",
+  "source_url": "https://science.nasa.gov/photojournal/global-color-views-of-mars/ (also https://images.nasa.gov/details/PIA00407)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it. Viking/USGS mosaic: US government work.",
+  "title": "Global Color Views of Mars",
+  "shows": "Full disk of Mars in color from Viking Orbiter mosaics (Valles Marineris across the middle). 6787 px square.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia00/pia00407/PIA00407.jpg",
+  "bytes": 3638446,
+  "pixels": "6787x6787",
+  "notes": "Original JPEG, unchanged (the TIFF is 138 MB)."
+ },
+ "images/earth_moon_from_mars_hirise_PIA10244.png": {
+  "credit": "NASA/JPL-Caltech/University of Arizona",
+  "source_url": "https://science.nasa.gov/photojournal/earth-and-moon-as-seen-from-mars/ (also https://images.nasa.gov/details/PIA10244)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it. HiRISE (https://uahirise.org/media/usage.php): 'All of the images produced by HiRISE ... are within the public domain'.",
+  "title": "Earth and Moon as Seen from Mars",
+  "shows": "Earth (crescent, about 90 px) and the Moon (about 24 px) seen by HiRISE from Mars orbit, Oct. 3, 2007. Fits the 'Capsule lands in Australia, 2031' beat. Low resolution: use small.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia10/pia10244/PIA10244.tif",
+  "bytes": 13300,
+  "pixels": "800x800",
+  "notes": "PNG from the lossless TIFF (800 x 800)."
+ },
+ "images/phobos_eclipse_perseverance_PIA25179.png": {
+  "credit": "NASA/JPL-Caltech/ASU/MSSS/SSI",
+  "source_url": "https://science.nasa.gov/photojournal/perseverances-mastcam-z-captures-a-phobos-solar-eclipse/ (also https://images.nasa.gov/details/PIA25179)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Perseverance's Mastcam-Z Captures a Phobos Solar Eclipse",
+  "shows": "Still: the potato-shaped silhouette of Phobos crossing the Sun, from the surface of Mars (released Apr. 20, 2022). The video is in video/.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia25/pia25179/PIA25179.tif",
+  "bytes": 169183,
+  "pixels": "720x720",
+  "notes": "PNG from the lossless TIFF (720 x 720)."
+ },
+ "images/phobos_transit_perseverance_2024_PIA26380.png": {
+  "credit": "NASA/JPL-Caltech/ASU/MSSS",
+  "source_url": "https://science.nasa.gov/photojournal/perseverance-captures-transit-of-phobos/ (also https://images.nasa.gov/details/PIA26380)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Perseverance Captures Transit of Phobos",
+  "shows": "Still: Phobos silhouette on the Sun, Sept. 30, 2024 (sol 1,285), Jezero Crater. 16:9 frame.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26380/PIA26380.tif",
+  "bytes": 172747,
+  "pixels": "1600x900",
+  "notes": "PNG from the lossless TIFF (1600 x 900)."
+ },
+ "images/earth_setting_phobos_rising_curiosity_PIA26362.jpg": {
+  "credit": "NASA/JPL-Caltech/MSSS",
+  "source_url": "https://science.nasa.gov/photojournal/curiosity-views-earth-setting-phobos-rising/ (also https://images.nasa.gov/details/PIA26362)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Curiosity Views Earth Setting, Phobos Rising",
+  "shows": "Portrait (1080 x 2100) Martian sky over a butte on Mount Sharp, Sept. 5, 2024, with an inset at top left showing Phobos (left) and Earth (right). First image of the two together from the surface of Mars. Native vertical: good full-frame background.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26362/PIA26362.tif",
+  "bytes": 600627,
+  "pixels": "1080x2100",
+  "notes": "JPEG q95 4:4:4 made from the lossless TIFF."
+ },
+ "images/phobos_deimos_two_moons_curiosity_PIA17350.png": {
+  "credit": "NASA/JPL-Caltech/Malin Space Science Systems/Texas A&M Univ.",
+  "source_url": "https://science.nasa.gov/photojournal/two-moons-of-mars-in-one-enhanced-view/ (also https://images.nasa.gov/details/PIA17350)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Two Moons of Mars in One Enhanced View",
+  "shows": "Phobos (large) about to pass in front of Deimos (small), seen by Curiosity, Aug. 1, 2013. Enhanced stack. Tiny (200 x 200): use small or inside a frame.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17350/PIA17350.tif",
+  "bytes": 5325,
+  "pixels": "200x200",
+  "notes": "PNG from the lossless TIFF."
+ },
+ "images/phobos_occults_deimos_curiosity_PIA17353.png": {
+  "credit": "NASA/JPL-Caltech/Malin Space Science Systems/Texas A&M Univ.",
+  "source_url": "https://science.nasa.gov/photojournal/before-and-after-occultation-of-deimos-by-phobos/ (also https://images.nasa.gov/details/PIA17353)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Before and After Occultation of Deimos by Phobos",
+  "shows": "Six Curiosity frames (two columns of three): Deimos just before (left) and after (right) Phobos passed in front of it, Aug. 1, 2013.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17353/PIA17353.tif",
+  "bytes": 40328,
+  "pixels": "512x768",
+  "notes": "PNG from the lossless TIFF (512 x 768)."
+ },
+ "images/phobos_annular_eclipse_curiosity_PIA17356.png": {
+  "credit": "NASA/JPL-Caltech/Malin Space Science Systems/Texas A&M Univ.",
+  "source_url": "https://science.nasa.gov/photojournal/annular-eclipse-of-the-sun-by-phobos-as-seen-by-curiosity/ (also https://images.nasa.gov/details/PIA17356)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Annular Eclipse of the Sun by Phobos, as Seen by Curiosity",
+  "shows": "Three frames three seconds apart: Phobos crossing the Sun as a ring eclipse, Aug. 20, 2013 (sol 369). 450 x 150: split into three 150 px frames for a flip-book.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17356/PIA17356.tif",
+  "bytes": 29575,
+  "pixels": "450x150",
+  "notes": "PNG from the lossless TIFF."
+ },
+ "images/mars_phobos_deimos_infrared_europa_clipper_PIA26567.png": {
+  "credit": "NASA/JPL-Caltech/ASU/SwRI",
+  "source_url": "https://science.nasa.gov/photojournal/europa-clipper-captures-mars-phobos-and-deimos/ (also https://images.nasa.gov/details/PIA26567)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Europa Clipper Captures Mars, Phobos, and Deimos",
+  "shows": "Infrared (heat) image: Mars, Phobos (closest to Mars) and Deimos (upper left) as points, Feb. 28, 2025, from about 900,000 km. Grayscale, 678 x 392.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26567/PIA26567.tif",
+  "bytes": 116044,
+  "pixels": "678x392",
+  "notes": "PNG from the lossless TIFF."
+ },
+ "images/phobos_thermal_six_views_odyssey_PIA23893.jpg": {
+  "credit": "NASA/JPL-Caltech/ASU/NAU",
+  "source_url": "https://science.nasa.gov/photojournal/odysseys-six-views-of-phobos/ (also https://images.nasa.gov/details/PIA23893)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Odyssey's Six Views of Phobos",
+  "shows": "Six THEMIS infrared views of Phobos in FALSE COLOR (temperature), 2019 to 2020. If used, label it as an infrared temperature view, not a photo.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia23/pia23893/PIA23893.jpg",
+  "bytes": 656622,
+  "pixels": "6729x4602",
+  "notes": "Original JPEG, unchanged."
+ },
+ "video/phobos_eclipse_perseverance_PIA25179.mp4": {
+  "credit": "NASA/JPL-Caltech/ASU/MSSS/SSI",
+  "source_url": "https://science.nasa.gov/photojournal/perseverances-mastcam-z-captures-a-phobos-solar-eclipse/ (also https://images.nasa.gov/details/PIA25179)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Perseverance's Mastcam-Z Captures a Phobos Solar Eclipse",
+  "shows": "Video: Phobos crossing the Sun from the surface of Mars. NASA: 'the most zoomed-in, highest-frame-rate observation of a Phobos solar eclipse ever taken from the Martian surface'. The playback speed is not stated on the page: do not call it real time.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia25/pia25179/PIA25179.mp4",
+  "bytes": 1396349,
+  "video": {
+   "pixels": "720x720",
+   "fps": "24/1",
+   "seconds": 50.0
+  },
+  "notes": "Original MP4, unchanged."
+ },
+ "video/phobos_transit_perseverance_2024_PIA26380.mp4": {
+  "credit": "NASA/JPL-Caltech/ASU/MSSS",
+  "source_url": "https://science.nasa.gov/photojournal/perseverance-captures-transit-of-phobos/ (also https://images.nasa.gov/details/PIA26380)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Perseverance Captures Transit of Phobos",
+  "shows": "Video: Phobos transit of the Sun, Sept. 30, 2024. Short loop.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26380/PIA26380.mp4",
+  "bytes": 38192,
+  "video": {
+   "pixels": "512x512",
+   "fps": "24/1",
+   "seconds": 8.33
+  },
+  "notes": "Original MP4, unchanged."
+ },
+ "video/phobos_transit_perseverance_2024_PIA26380_figA.mp4": {
+  "credit": "NASA/JPL-Caltech/ASU/MSSS",
+  "source_url": "https://science.nasa.gov/photojournal/perseverance-captures-transit-of-phobos/ (also https://images.nasa.gov/details/PIA26380)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Perseverance Captures Transit of Phobos (Figure A)",
+  "shows": "Video: the second (figure A) movie on the same page, 32 s. What differs from the main movie is not described on the page.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26380/PIA26380_figA.mp4",
+  "bytes": 111642,
+  "video": {
+   "pixels": "512x512",
+   "fps": "24/1",
+   "seconds": 32.0
+  },
+  "notes": "Original MP4, unchanged."
+ },
+ "video/phobos_passes_deimos_curiosity_PIA17352.gif": {
+  "credit": "NASA/JPL-Caltech/Malin Space Science Systems/Texas A&M Univ.",
+  "source_url": "https://science.nasa.gov/photojournal/smoothed-movie-of-phobos-passing-deimos-in-martian-sky/ (also https://images.nasa.gov/details/PIA17352)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Smoothed Movie of Phobos Passing Deimos in Martian Sky",
+  "shows": "Movie: Phobos passes in front of Deimos, Aug. 1, 2013, seen by Curiosity. Frames 1.4 s apart with interpolated frames, 10 fps, 20 s; NASA says the clip runs for 20 seconds, matching the actual elapsed time. 256 x 256.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17352/PIA17352.gif",
+  "bytes": 1606590,
+  "pixels": "256x256",
+  "video": {
+   "pixels": "256x256",
+   "fps": "10/1",
+   "seconds": 20.1
+  },
+  "notes": "Original GIF, unchanged. An MP4 copy is next to it."
+ },
+ "video/phobos_passes_deimos_curiosity_PIA17352.mp4": {
+  "credit": "NASA/JPL-Caltech/Malin Space Science Systems/Texas A&M Univ.",
+  "source_url": "https://science.nasa.gov/photojournal/smoothed-movie-of-phobos-passing-deimos-in-martian-sky/ (also https://images.nasa.gov/details/PIA17352)",
+  "license": "Public domain. NASA/JPL images are not subject to US copyright. NASA Images and Media Usage Guidelines (https://www.nasa.gov/nasa-brand-center/images-and-media/): commercial use allowed if it does not 'explicitly or implicitly convey NASA's endorsement'. JPL Image Use Policy (https://www.jpl.nasa.gov/jpl-image-use-policy/): 'may be used for any purpose without prior permission'. No third-party copyright is noted in the caption. Do not show NASA logos with it.",
+  "title": "Smoothed Movie of Phobos Passing Deimos in Martian Sky",
+  "shows": "MP4 (H.264 CRF 12) of the GIF next to it, same frames.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia17/pia17352/PIA17352.gif",
+  "bytes": 76441,
+  "video": {
+   "pixels": "256x256",
+   "fps": "10/1",
+   "seconds": 20.1
+  },
+  "notes": "Converted from the original GIF with ffmpeg; frames unchanged."
+ },
+ "models/phobos_nasa.glb": {
+  "credit": "NASA/JPL-Caltech",
+  "source_url": "https://science.nasa.gov/resource/phobos-mars-moon-3d-model/",
+  "license": "NASA 3D Resources (https://science.nasa.gov/3d-resources/): 'All of these assets are free to download and use. ... Refer to the NASA Images and Media Usage Guidelines.' Those guidelines: 'texture maps and polygon data in any format - generally are not subject to copyright in the United States.' Commercial use must not imply NASA endorsement.",
+  "title": "Phobos - Mars Moon, 3D Model",
+  "shows": "glTF 2.0 binary, one mesh, one material with an embedded texture atlas. Bounding box about 24.4 x 20.5 x 27.0 units (matches km). See README for vertex counts.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24878_Phobos_1_1000.glb",
+  "bytes": 3855016,
+  "notes": "Original GLB, unchanged. Do not imply NASA endorsement."
+ },
+ "models/deimos_nasa.glb": {
+  "credit": "NASA/JPL-Caltech",
+  "source_url": "https://science.nasa.gov/resource/deimos-mars-moon-3d-model/",
+  "license": "NASA 3D Resources (https://science.nasa.gov/3d-resources/): 'All of these assets are free to download and use. ... Refer to the NASA Images and Media Usage Guidelines.' Those guidelines: 'texture maps and polygon data in any format - generally are not subject to copyright in the United States.' Commercial use must not imply NASA endorsement.",
+  "title": "Deimos - Mars Moon, 3D Model",
+  "shows": "glTF 2.0 binary, one mesh, one material with an embedded texture atlas. Bounding box about 15.0 x 11.9 x 10.5 units (matches km). See README for vertex counts.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24879_Deimos_1_1000.glb",
+  "bytes": 1600012,
+  "notes": "Original GLB, unchanged. Do not imply NASA endorsement."
+ },
+ "textures/mars_viking_color_mosaic_usgs_8192x4096.jpg": {
+  "credit": "USGS Astrogeology Science Center/NASA Ames (Viking Orbiter)",
+  "source_url": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m",
+  "license": "Public domain. USGS Astropedia product page lists Access Constraints 'Public domain' and Use Constraints 'None' (https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m).",
+  "title": "Mars Viking Colorized Global Mosaic (MDIM 2.1), 1 km per pixel ancillary JPEG",
+  "shows": "Equirectangular (simple cylindrical) color map of Mars, longitude -180 to 180 (east positive), planetocentric latitude. Wraps a sphere for a 3D Mars.",
+  "original_file": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg (21339 x 10670)",
+  "bytes": 12406141,
+  "pixels": "8192x4096",
+  "notes": "Downscaled with Lanczos from the 21339 x 10670 USGS JPEG. USGS describes the colors as 'artistically colorized'. The USGS page gives no credit line; it lists Primary Authors 'USGS Astrogeology Science Center' and Originators 'NASA AMES', so the credit names both."
+ },
+ "textures/mars_viking_color_mosaic_usgs_4096x2048.jpg": {
+  "credit": "USGS Astrogeology Science Center/NASA Ames (Viking Orbiter)",
+  "source_url": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m",
+  "license": "Public domain. USGS Astropedia product page lists Access Constraints 'Public domain' and Use Constraints 'None' (https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m).",
+  "title": "Mars Viking Colorized Global Mosaic (MDIM 2.1), 1 km per pixel ancillary JPEG",
+  "shows": "Equirectangular (simple cylindrical) color map of Mars, longitude -180 to 180 (east positive), planetocentric latitude. Wraps a sphere for a 3D Mars.",
+  "original_file": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg (21339 x 10670)",
+  "bytes": 3350113,
+  "pixels": "4096x2048",
+  "notes": "Downscaled with Lanczos from the 21339 x 10670 USGS JPEG. USGS describes the colors as 'artistically colorized'. The USGS page gives no credit line; it lists Primary Authors 'USGS Astrogeology Science Center' and Originators 'NASA AMES', so the credit names both."
+ },
+ "textures/mars_texture_nasa3d_1440x720.png": {
+  "credit": "NASA/Jet Propulsion Laboratory & Caltech",
+  "source_url": "https://science.nasa.gov/3d-resources/mars/",
+  "license": "NASA 3D Resources (https://science.nasa.gov/3d-resources/): 'All of these assets are free to download and use. ... Refer to the NASA Images and Media Usage Guidelines.' Those guidelines: 'texture maps and polygon data in any format - generally are not subject to copyright in the United States.' Commercial use must not imply NASA endorsement.",
+  "title": "Mars Image Texture",
+  "shows": "Equirectangular image texture for 3D models, 'From Viking images processed at the USGS' (NASA 3D Resources). Grayscale for the moons.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.tif",
+  "bytes": 1513259,
+  "pixels": "1440x720",
+  "notes": "PNG from the original TIFF, same pixels."
+ },
+ "textures/phobos_texture_nasa3d_1440x720.png": {
+  "credit": "NASA/JPL/Solar System Simulator",
+  "source_url": "https://science.nasa.gov/3d-resources/mars-phobos/",
+  "license": "NASA 3D Resources (https://science.nasa.gov/3d-resources/): 'All of these assets are free to download and use. ... Refer to the NASA Images and Media Usage Guidelines.' Those guidelines: 'texture maps and polygon data in any format - generally are not subject to copyright in the United States.' Commercial use must not imply NASA endorsement.",
+  "title": "Mars - Phobos",
+  "shows": "Equirectangular image texture for 3D models, 'From Viking images processed at the USGS' (NASA 3D Resources). Grayscale for the moons.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars---phobos/Mars%20-%20Phobos.tif",
+  "bytes": 799582,
+  "pixels": "1440x720",
+  "notes": "PNG from the original TIFF, same pixels."
+ },
+ "textures/deimos_texture_nasa3d_1440x720.png": {
+  "credit": "NASA/JPL/Solar System Simulator",
+  "source_url": "https://science.nasa.gov/3d-resources/mars-deimos/",
+  "license": "NASA 3D Resources (https://science.nasa.gov/3d-resources/): 'All of these assets are free to download and use. ... Refer to the NASA Images and Media Usage Guidelines.' Those guidelines: 'texture maps and polygon data in any format - generally are not subject to copyright in the United States.' Commercial use must not imply NASA endorsement.",
+  "title": "Mars - Deimos",
+  "shows": "Equirectangular image texture for 3D models, 'From Viking images processed at the USGS' (NASA 3D Resources). Grayscale for the moons.",
+  "original_file": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars---deimos/Mars%20-%20Deimos.tif",
+  "bytes": 602656,
+  "pixels": "1440x720",
+  "notes": "PNG from the original TIFF, same pixels."
+ }
+}

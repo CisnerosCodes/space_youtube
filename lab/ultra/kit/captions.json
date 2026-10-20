@@ -1,0 +1,732 @@
+{
+ "generated": "2026-10-20",
+ "aligner": "pipeline/engine/align_captions.mjs",
+ "script": "script.md",
+ "timing": "voice.words.json",
+ "audio": "voice.mp3",
+ "audioPath": "voice.mp3",
+ "duration": 40.608,
+ "transcriptDuration": 40.54,
+ "words": [
+  {
+   "i": 0,
+   "text": "This",
+   "start": 0.15,
+   "end": 0.29,
+   "matched": true,
+   "src": 0
+  },
+  {
+   "i": 1,
+   "text": "moon",
+   "start": 0.29,
+   "end": 0.63,
+   "matched": true,
+   "src": 1
+  },
+  {
+   "i": 2,
+   "text": "is",
+   "start": 0.63,
+   "end": 0.81,
+   "matched": true,
+   "src": 2
+  },
+  {
+   "i": 3,
+   "text": "on",
+   "start": 0.81,
+   "end": 0.97,
+   "matched": true,
+   "src": 3
+  },
+  {
+   "i": 4,
+   "text": "a",
+   "start": 0.97,
+   "end": 1.07,
+   "matched": true,
+   "src": 4
+  },
+  {
+   "i": 5,
+   "text": "slow-motion",
+   "start": 1.07,
+   "end": 1.79,
+   "matched": true,
+   "src": 5,
+   "phrase": "slow -motion"
+  },
+  {
+   "i": 6,
+   "text": "collision",
+   "start": 1.79,
+   "end": 2.19,
+   "matched": true,
+   "src": 7
+  },
+  {
+   "i": 7,
+   "text": "course",
+   "start": 2.19,
+   "end": 2.59,
+   "matched": true,
+   "src": 8
+  },
+  {
+   "i": 8,
+   "text": "with",
+   "start": 2.59,
+   "end": 2.85,
+   "matched": true,
+   "src": 9
+  },
+  {
+   "i": 9,
+   "text": "Mars.",
+   "start": 2.85,
+   "end": 3.43,
+   "matched": true,
+   "src": 10
+  },
+  {
+   "i": 10,
+   "text": "Japan",
+   "start": 3.43,
+   "end": 3.93,
+   "matched": true,
+   "src": 11
+  },
+  {
+   "i": 11,
+   "text": "just",
+   "start": 3.93,
+   "end": 4.35,
+   "matched": true,
+   "src": 12
+  },
+  {
+   "i": 12,
+   "text": "launched",
+   "start": 4.35,
+   "end": 4.73,
+   "matched": true,
+   "src": 13
+  },
+  {
+   "i": 13,
+   "text": "a",
+   "start": 4.73,
+   "end": 4.91,
+   "matched": true,
+   "src": 14
+  },
+  {
+   "i": 14,
+   "text": "heist",
+   "start": 4.91,
+   "end": 5.37,
+   "matched": true,
+   "src": 15
+  },
+  {
+   "i": 15,
+   "text": "to",
+   "start": 5.37,
+   "end": 5.61,
+   "matched": true,
+   "src": 16
+  },
+  {
+   "i": 16,
+   "text": "steal",
+   "start": 5.61,
+   "end": 6.03,
+   "matched": true,
+   "src": 17
+  },
+  {
+   "i": 17,
+   "text": "a",
+   "start": 6.03,
+   "end": 6.27,
+   "matched": true,
+   "src": 18
+  },
+  {
+   "i": 18,
+   "text": "piece",
+   "start": 6.27,
+   "end": 6.55,
+   "matched": true,
+   "src": 19
+  },
+  {
+   "i": 19,
+   "text": "of",
+   "start": 6.55,
+   "end": 6.73,
+   "matched": true,
+   "src": 20
+  },
+  {
+   "i": 20,
+   "text": "it.",
+   "start": 6.73,
+   "end": 7.33,
+   "matched": true,
+   "src": 21
+  },
+  {
+   "i": 21,
+   "text": "Step",
+   "start": 7.33,
+   "end": 7.61,
+   "matched": true,
+   "src": 22
+  },
+  {
+   "i": 22,
+   "text": "one:",
+   "start": 7.61,
+   "end": 8.01,
+   "matched": true,
+   "src": 23
+  },
+  {
+   "i": 23,
+   "text": "Mars,",
+   "start": 8.01,
+   "end": 8.79,
+   "matched": true,
+   "src": 24
+  },
+  {
+   "i": 24,
+   "text": "August",
+   "start": 8.79,
+   "end": 9.33,
+   "matched": true,
+   "src": 25
+  },
+  {
+   "i": 25,
+   "text": "2027.",
+   "start": 9.33,
+   "end": 10.27,
+   "matched": true,
+   "src": 26
+  },
+  {
+   "i": 26,
+   "text": "Step",
+   "start": 10.74,
+   "end": 11.28,
+   "matched": true,
+   "src": 27
+  },
+  {
+   "i": 27,
+   "text": "two:",
+   "start": 11.28,
+   "end": 11.74,
+   "matched": true,
+   "src": 28
+  },
+  {
+   "i": 28,
+   "text": "drop",
+   "start": 11.74,
+   "end": 12.22,
+   "matched": true,
+   "src": 29
+  },
+  {
+   "i": 29,
+   "text": "a",
+   "start": 12.22,
+   "end": 12.5,
+   "matched": true,
+   "src": 30
+  },
+  {
+   "i": 30,
+   "text": "lookout.",
+   "start": 12.5,
+   "end": 13.1,
+   "matched": true,
+   "src": 31
+  },
+  {
+   "i": 31,
+   "text": "A",
+   "start": 13.1,
+   "end": 13.48,
+   "matched": true,
+   "src": 32
+  },
+  {
+   "i": 32,
+   "text": "25",
+   "start": 13.48,
+   "end": 13.92,
+   "matched": true,
+   "src": 33
+  },
+  {
+   "i": 33,
+   "text": "kilo",
+   "start": 13.92,
+   "end": 14.38,
+   "matched": true,
+   "src": 34
+  },
+  {
+   "i": 34,
+   "text": "rover.",
+   "start": 14.38,
+   "end": 14.86,
+   "matched": true,
+   "src": 35
+  },
+  {
+   "i": 35,
+   "text": "On",
+   "start": 14.86,
+   "end": 15.34,
+   "matched": true,
+   "src": 36
+  },
+  {
+   "i": 36,
+   "text": "Phobos,",
+   "start": 15.34,
+   "end": 15.96,
+   "matched": true,
+   "src": 37
+  },
+  {
+   "i": 37,
+   "text": "it",
+   "start": 15.96,
+   "end": 16.12,
+   "matched": true,
+   "src": 38
+  },
+  {
+   "i": 38,
+   "text": "weighs...",
+   "start": 16.12,
+   "end": 16.52,
+   "matched": true,
+   "src": 39
+  },
+  {
+   "i": 39,
+   "text": "15",
+   "start": 16.52,
+   "end": 17.44,
+   "matched": true,
+   "src": 40
+  },
+  {
+   "i": 40,
+   "text": "grams.",
+   "start": 17.44,
+   "end": 18.14,
+   "matched": true,
+   "src": 41
+  },
+  {
+   "i": 41,
+   "text": "Step",
+   "start": 18.99,
+   "end": 19.23,
+   "matched": true,
+   "src": 42
+  },
+  {
+   "i": 42,
+   "text": "three:",
+   "start": 19.23,
+   "end": 19.63,
+   "matched": true,
+   "src": 43
+  },
+  {
+   "i": 43,
+   "text": "the",
+   "start": 20.04,
+   "end": 20.14,
+   "matched": true,
+   "src": 44
+  },
+  {
+   "i": 44,
+   "text": "grab.",
+   "start": 20.14,
+   "end": 20.6,
+   "matched": true,
+   "src": 45
+  },
+  {
+   "i": 45,
+   "text": "Coring",
+   "start": 21,
+   "end": 21.38,
+   "matched": true,
+   "src": 46
+  },
+  {
+   "i": 46,
+   "text": "arm,",
+   "start": 21.38,
+   "end": 21.78,
+   "matched": true,
+   "src": 47
+  },
+  {
+   "i": 47,
+   "text": "nitrogen",
+   "start": 21.78,
+   "end": 22.18,
+   "matched": true,
+   "src": 48
+  },
+  {
+   "i": 48,
+   "text": "blaster.",
+   "start": 22.18,
+   "end": 22.9,
+   "matched": true,
+   "src": 49
+  },
+  {
+   "i": 49,
+   "text": "Target:",
+   "start": 22.9,
+   "end": 23.52,
+   "matched": true,
+   "src": 50
+  },
+  {
+   "i": 50,
+   "text": "at",
+   "start": 23.52,
+   "end": 23.9,
+   "matched": true,
+   "src": 51
+  },
+  {
+   "i": 51,
+   "text": "least",
+   "start": 23.9,
+   "end": 24.1,
+   "matched": true,
+   "src": 52
+  },
+  {
+   "i": 52,
+   "text": "10",
+   "start": 24.1,
+   "end": 24.4,
+   "matched": true,
+   "src": 53
+  },
+  {
+   "i": 53,
+   "text": "grams.",
+   "start": 24.4,
+   "end": 24.9,
+   "matched": true,
+   "src": 54
+  },
+  {
+   "i": 54,
+   "text": "Step",
+   "start": 25.59,
+   "end": 25.81,
+   "matched": true,
+   "src": 55
+  },
+  {
+   "i": 55,
+   "text": "four:",
+   "start": 25.81,
+   "end": 26.25,
+   "matched": true,
+   "src": 56
+  },
+  {
+   "i": 56,
+   "text": "one",
+   "start": 26.25,
+   "end": 26.73,
+   "matched": true,
+   "src": 57
+  },
+  {
+   "i": 57,
+   "text": "burn",
+   "start": 26.73,
+   "end": 27.01,
+   "matched": true,
+   "src": 58
+  },
+  {
+   "i": 58,
+   "text": "to",
+   "start": 27.01,
+   "end": 27.25,
+   "matched": true,
+   "src": 59
+  },
+  {
+   "i": 59,
+   "text": "leave",
+   "start": 27.25,
+   "end": 27.45,
+   "matched": true,
+   "src": 60
+  },
+  {
+   "i": 60,
+   "text": "Mars.",
+   "start": 27.45,
+   "end": 27.89,
+   "matched": true,
+   "src": 61
+  },
+  {
+   "i": 61,
+   "text": "Capsule",
+   "start": 28.2,
+   "end": 28.64,
+   "matched": true,
+   "src": 62
+  },
+  {
+   "i": 62,
+   "text": "lands",
+   "start": 28.64,
+   "end": 28.78,
+   "matched": true,
+   "src": 63
+  },
+  {
+   "i": 63,
+   "text": "in",
+   "start": 28.78,
+   "end": 28.96,
+   "matched": true,
+   "src": 64
+  },
+  {
+   "i": 64,
+   "text": "Australia,",
+   "start": 28.96,
+   "end": 29.54,
+   "matched": true,
+   "src": 65
+  },
+  {
+   "i": 65,
+   "text": "2031.",
+   "start": 29.54,
+   "end": 30.42,
+   "matched": true,
+   "src": 66
+  },
+  {
+   "i": 66,
+   "text": "The",
+   "start": 30.92,
+   "end": 31.28,
+   "matched": true,
+   "src": 67
+  },
+  {
+   "i": 67,
+   "text": "loot?",
+   "start": 31.28,
+   "end": 31.62,
+   "matched": true,
+   "src": 68
+  },
+  {
+   "i": 68,
+   "text": "First",
+   "start": 31.62,
+   "end": 32.28,
+   "matched": true,
+   "src": 69
+  },
+  {
+   "i": 69,
+   "text": "piece",
+   "start": 32.28,
+   "end": 32.66,
+   "matched": true,
+   "src": 70
+  },
+  {
+   "i": 70,
+   "text": "of",
+   "start": 32.66,
+   "end": 32.94,
+   "matched": true,
+   "src": 71
+  },
+  {
+   "i": 71,
+   "text": "Phobos",
+   "start": 32.94,
+   "end": 33.3,
+   "matched": true,
+   "src": 72
+  },
+  {
+   "i": 72,
+   "text": "ever",
+   "start": 33.3,
+   "end": 33.66,
+   "matched": true,
+   "src": 73
+  },
+  {
+   "i": 73,
+   "text": "brought",
+   "start": 33.66,
+   "end": 33.94,
+   "matched": true,
+   "src": 74
+  },
+  {
+   "i": 74,
+   "text": "home.",
+   "start": 33.94,
+   "end": 34.34,
+   "matched": true,
+   "src": 75
+  },
+  {
+   "i": 75,
+   "text": "Next:",
+   "start": 34.89,
+   "end": 35.35,
+   "matched": true,
+   "src": 76
+  },
+  {
+   "i": 76,
+   "text": "Rocket",
+   "start": 35.35,
+   "end": 35.67,
+   "matched": true,
+   "src": 77
+  },
+  {
+   "i": 77,
+   "text": "Lab",
+   "start": 35.67,
+   "end": 35.83,
+   "matched": true,
+   "src": 78
+  },
+  {
+   "i": 78,
+   "text": "aims",
+   "start": 35.83,
+   "end": 36.07,
+   "matched": true,
+   "src": 79
+  },
+  {
+   "i": 79,
+   "text": "to",
+   "start": 36.07,
+   "end": 36.27,
+   "matched": true,
+   "src": 80
+  },
+  {
+   "i": 80,
+   "text": "launch",
+   "start": 36.27,
+   "end": 36.45,
+   "matched": true,
+   "src": 81
+  },
+  {
+   "i": 81,
+   "text": "three",
+   "start": 36.45,
+   "end": 36.75,
+   "matched": true,
+   "src": 82
+  },
+  {
+   "i": 82,
+   "text": "HawkEye",
+   "start": 36.75,
+   "end": 37.25,
+   "matched": true,
+   "src": 83
+  },
+  {
+   "i": 83,
+   "text": "360",
+   "start": 37.25,
+   "end": 37.49,
+   "matched": true,
+   "src": 84
+  },
+  {
+   "i": 84,
+   "text": "satellites,",
+   "start": 37.49,
+   "end": 38.03,
+   "matched": true,
+   "src": 85
+  },
+  {
+   "i": 85,
+   "text": "Wednesday.",
+   "start": 38.03,
+   "end": 38.73,
+   "matched": true,
+   "src": 86
+  },
+  {
+   "i": 86,
+   "text": "Follow",
+   "start": 38.89,
+   "end": 39.47,
+   "matched": true,
+   "src": 87
+  },
+  {
+   "i": 87,
+   "text": "Downlink",
+   "start": 39.47,
+   "end": 39.91,
+   "matched": true,
+   "src": 88,
+   "keep_with_next": true
+  },
+  {
+   "i": 88,
+   "text": "Cat.",
+   "start": 39.91,
+   "end": 40.29,
+   "matched": true,
+   "src": 89
+  }
+ ],
+ "names": [
+  "Downlink Cat"
+ ],
+ "interpolated": [],
+ "substituted": [],
+ "warnings": []
+}

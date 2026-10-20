@@ -25,3 +25,10 @@ shorts/*/out/build/
 shorts/*/out/contact.png
 shorts/*/out/mix.m4a
 shorts/*/out/render.log
+lab/ultra/kit/assets/images/
+lab/ultra/kit/assets/video/
+lab/ultra/kit/assets/models/
+lab/ultra/kit/assets/textures/
+lab/ultra/kit/work/
+lab/ultra/*/out/*.part*.mp4
+lab/ultra/*/frames/

@@ -11,9 +11,11 @@ For each bed:
   5. normalize to BED_LUFS integrated and write beds/<id>.wav (24-bit) and beds/<id>.mp3;
   6. write beds/beds.json (file, prompt, bpm, duration, mood, cost, loop points, measurements).
 
-Usage: python3 prep_beds.py
+Usage: python3 prep_beds.py                 (every bed in SPEC; rewrites beds.json)
+       python3 prep_beds.py <bed_id> ...    (only these beds; their entries in beds.json are
+                                             replaced or added, every other entry is kept as is)
 """
-import json, os, subprocess, tempfile
+import json, os, subprocess, sys, tempfile
 import numpy as np, soundfile as sf, librosa, pyloudnorm as pyln
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -34,6 +36,11 @@ SPEC = {
     "bedD_tense": dict(body_start=0.0, use="big reveals, impacts, countdowns, risky missions"),
     "bedE_arp":   dict(body_start=15.0, use="wonder: images of deep space, Just Discovered"),
     "bedF_house": dict(body_start=0.0, use="energetic Launch Day, fast lists"),
+    # Oct 20, 2026 (lab/ultra/kit). body_start from the spectrograms and 0.5 s RMS of the raw clips:
+    # bedH plays a lighter half first and the full groove from 15 s; bedI builds for about 3.5 s.
+    "bedG_cinepulse": dict(body_start=0.0, use="cinematic missions, launches, big journeys (orchestral-hybrid pulse)"),
+    "bedH_caper":     dict(body_start=15.0, use="playful heists, step-by-step plans, quirky facts (chiptune-adjacent)"),
+    "bedI_darkpulse": dict(body_start=3.5, use="dark, tense hooks: collisions, danger, countdowns (cold electronic pulse)"),
 }
 
 
@@ -180,7 +187,13 @@ def main():
         cost_by[c["name"]] = (c.get("usd") or 0, c["prompt"], c["generation_id"])
     meter = pyln.Meter(SR)
     out_meta = []
+    only = sys.argv[1:]
+    unknown = [b for b in only if b not in SPEC]
+    if unknown:
+        sys.exit(f"unknown bed ids: {unknown}")
     for bid, spec in SPEC.items():
+        if only and bid not in only:
+            continue
         raw = os.path.join(BEDS, "raw", f"{bid}_raw.mp3")
         y0, sr0 = librosa.load(raw, sr=SR, mono=True)
         coarse, _, _ = beat_fit(y0, SR, t0=spec["body_start"])
@@ -254,9 +267,16 @@ def main():
               f"{lufs_out:.1f} LUFS")
     moods = {"bedA_pluck": "playful, curious", "bedB_lofi": "warm, relaxed-curious",
              "bedC_chip": "bright, excited", "bedD_tense": "tense, building",
-             "bedE_arp": "spacey, wonder", "bedF_house": "bouncy, upbeat"}
+             "bedE_arp": "spacey, wonder", "bedF_house": "bouncy, upbeat",
+             "bedG_cinepulse": "cinematic, adventurous, driving", "bedH_caper": "playful, sneaky, mischievous",
+             "bedI_darkpulse": "dark, tense, cold"}
     for m in out_meta:
         m["mood"] = moods[m["id"]]
+    if only:  # keep every other entry of the existing beds.json untouched, in SPEC order
+        old = json.load(open(os.path.join(BEDS, "beds.json")))["beds"]
+        by_id = {m["id"]: m for m in old}
+        by_id.update({m["id"]: m for m in out_meta})
+        out_meta = [by_id[b] for b in SPEC if b in by_id] + [m for b, m in by_id.items() if b not in SPEC]
     json.dump(dict(
         note=("All beds are conformed to exactly 120 BPM (Motion.md grid, 1 beat = 15 frames at 30 fps) "
               "with rubberband, resampled to 48 kHz stereo, extended to 64 s by repeating loop_start..loop_end "

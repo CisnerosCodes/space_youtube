@@ -45,6 +45,23 @@ BEDS = {
     "bedF_house": dict(mood="bouncy, upbeat", bpm=124,
         prompt="Bouncy minimal house, 124 BPM, upbeat and playful, tight kick and clap, rubbery "
                "bassline, minimal percussion, very few chords, clean and modern."),
+    # Oct 20, 2026: three more beds for the ultra animation lab (lab/ultra/kit)
+    "bedG_cinepulse": dict(mood="cinematic, adventurous, driving", bpm=120,
+        # first prompt (in paid_calls.json) came back empty, Google finish reason OTHER; rewritten 2026-10-20
+        prompt="Cinematic hybrid score bed, 120 BPM: soft pulsing synth bass in steady eighth notes, light "
+               "orchestral strings playing short repeated notes, low warm horns holding long notes, steady soft "
+               "percussion on every beat, curious and adventurous mood for a spacecraft documentary, modern and "
+               "clean. Steady pulse the whole time: no breakdown, no stops, no silence."),
+    "bedH_caper": dict(mood="playful, sneaky, mischievous", bpm=120,
+        prompt="Playful synth caper groove, 120 BPM, chiptune-adjacent and nerdy: soft square-wave and "
+               "triangle bleeps kept quiet and high, sneaky staccato synth bassline, tight snappy kick and "
+               "finger-snap backbeat, mischievous heist mood, light and bouncy. Steady groove the whole time: "
+               "no breakdown, no stops, no silence, drums never drop out."),
+    "bedI_darkpulse": dict(mood="dark, tense, cold", bpm=120,
+        # first prompt (in paid_calls.json) came back empty, Google finish reason OTHER; rewritten 2026-10-20
+        prompt="Dark minimal electronic bed, 120 BPM: steady eighth-note sub bass pulse, soft muted hi-hat ticks, "
+               "low airy drone, slowly opening filter, cool and tense mood for a science countdown. Steady the "
+               "whole time: no drop, no breakdown, no silence."),
 }
 
 

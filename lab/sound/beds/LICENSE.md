@@ -58,3 +58,9 @@ Our beds are background music, not "the main focus". Even so, the example list n
 
 ## Cost
 Seven Lyria 3 Clip calls at $0.04 each, $0.28 in total, as reported by `GET https://openrouter.ai/api/v1/generation?id=<id>`. Six of the beds are in use; the seventh call is the rejected take of bedA. See `paid_calls.json`.
+
+## Added Oct 20, 2026: three more beds (bedG, bedH, bedI)
+- `bedG_cinepulse` (cinematic orchestral-hybrid with a synth pulse), `bedH_caper` (playful chiptune-adjacent caper) and `bedI_darkpulse` (dark, tense electronic pulse), made for the ultra animation lab (`lab/ultra/kit/`). Same model (`google/lyria-3-clip-preview`), same instrumental-only `COMMON` prompt, no artist, song or label named. Every kept call returned the text tag `<instrumental>`.
+- Five calls in all. The first prompts for bedG and bedI came back with no audio: OpenRouter's `/generation` record shows Google's `native_finish_reason` `OTHER` and `total_cost` 0, so they were blocked and not billed. Both prompts were rewritten in plainer words and retried once each. Three paid calls at $0.04, $0.12 for the three beds; the log total is now $0.40. Prompts, generation IDs and costs: `paid_calls.json`.
+- Conformed by `prep_beds.py bedG_cinepulse bedH_caper bedI_darkpulse` (the new id arguments process only those beds and leave the other `beds.json` entries unchanged; the six older WAVs were checked unchanged by md5). All three are 120 BPM on the grid, 64 s, -16 LUFS.
+- The same terms, SynthID watermark, disclosure answer (**Yes** to "AI use") and claim-dispute notes above apply to them.

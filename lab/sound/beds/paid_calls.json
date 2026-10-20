@@ -82,5 +82,67 @@
     "text": "<instrumental>",
     "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Playful synth pluck and soft kick, 120 BPM, curious and upbeat nerdy electronic, short staccato plucks, round sub bass, soft four-on-the-floor kick, gentle hi-hats. Steady groove the whole time: no breakdown, no stops, no silence, drums never drop out.",
     "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-20T07:08:14",
+    "name": "bedG_cinepulse",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792480071-h5FUrtsTHRL1S9ryQYnn",
+    "usd": 0,
+    "seconds": 24.0,
+    "bytes": 0,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Cinematic orchestral-hybrid bed with a pulse, 120 BPM, a daring space mission underway: low staccato string ostinato in steady sixteenth notes kept soft, pulsing synth bass on every eighth note, deep low drums on every beat, warm low brass swells in the background, heroic but restrained. Steady pulse the whole time: no breakdown, no stops, no silence, drums never drop out.",
+    "native_tokens_completion": 4,
+    "note": "no audio returned: Google native_finish_reason OTHER (blocked), total_cost 0 per /generation lookup on 2026-10-20; prompt rewritten and retried"
+  },
+  {
+    "time": "2026-10-20T07:08:49",
+    "name": "bedH_caper",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792480094-ftUGt6mkXxdogk3vwNng",
+    "usd": 0.04,
+    "seconds": 34.4,
+    "bytes": 744660,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Playful synth caper groove, 120 BPM, chiptune-adjacent and nerdy: soft square-wave and triangle bleeps kept quiet and high, sneaky staccato synth bassline, tight snappy kick and finger-snap backbeat, mischievous heist mood, light and bouncy. Steady groove the whole time: no breakdown, no stops, no silence, drums never drop out.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-20T07:10:22",
+    "name": "bedI_darkpulse",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792480129-BklMRZES8om3ltS9PvZO",
+    "usd": 0,
+    "seconds": 93.5,
+    "bytes": 0,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Dark tense electronic bed, 120 BPM, deep space danger: low pulsing analog-style sub bass on every eighth note, muted ticking hi-hat like a clock, distant metallic percussion, deep ominous drone pad with slow filter movement, cold and suspenseful but not horror. Steady tension the whole time: no drop, no breakdown, no silence, the pulse never stops.",
+    "native_tokens_completion": null,
+    "note": "no audio returned: Google native_finish_reason OTHER (blocked), total_cost 0 per /generation lookup on 2026-10-20; prompt rewritten and retried"
+  },
+  {
+    "time": "2026-10-20T07:14:35",
+    "name": "bedG_cinepulse",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792480376-EqtK0dsDyyZcHs2YN1kT",
+    "usd": 0.04,
+    "seconds": 99.6,
+    "bytes": 744660,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Cinematic hybrid score bed, 120 BPM: soft pulsing synth bass in steady eighth notes, light orchestral strings playing short repeated notes, low warm horns holding long notes, steady soft percussion on every beat, curious and adventurous mood for a spacecraft documentary, modern and clean. Steady pulse the whole time: no breakdown, no stops, no silence.",
+    "native_tokens_completion": 4
+  },
+  {
+    "time": "2026-10-20T07:16:05",
+    "name": "bedI_darkpulse",
+    "model": "google/lyria-3-clip-preview",
+    "generation_id": "gen-1792480475-x9KvMjcnHmUbdMeAep3Y",
+    "usd": 0.04,
+    "seconds": 90.6,
+    "bytes": 744660,
+    "text": "<instrumental>",
+    "prompt": "Instrumental only, no vocals, no singing, no spoken words, no choir. Background music for a fast science explainer with a voice-over on top: keep the 1 to 4 kHz midrange sparse and uncluttered, no lead melody fighting a voice, light and modern, consistent energy from start to end with no big intro or outro so it can loop. Dark minimal electronic bed, 120 BPM: steady eighth-note sub bass pulse, soft muted hi-hat ticks, low airy drone, slowly opening filter, cool and tense mood for a science countdown. Steady the whole time: no drop, no breakdown, no silence.",
+    "native_tokens_completion": 4
   }
 ]
