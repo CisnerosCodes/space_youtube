@@ -1,0 +1,1607 @@
+{
+ "windows": [
+  [
+   4,
+   74
+  ],
+  [
+   152,
+   347
+  ],
+  [
+   536,
+   651
+  ],
+  [
+   887,
+   1112
+  ]
+ ],
+ "framesOn": 609,
+ "share": 0.547,
+ "hits": [
+  {
+   "frame": 4,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    113,
+    57
+   ]
+  },
+  {
+   "frame": 5,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    110,
+    96
+   ]
+  },
+  {
+   "frame": 6,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    108,
+    96
+   ]
+  },
+  {
+   "frame": 7,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    168,
+    96
+   ]
+  },
+  {
+   "frame": 8,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    169,
+    96
+   ]
+  },
+  {
+   "frame": 9,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    170,
+    96
+   ]
+  },
+  {
+   "frame": 10,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    170,
+    96
+   ]
+  },
+  {
+   "frame": 11,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    171,
+    96
+   ]
+  },
+  {
+   "frame": 12,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    172,
+    96
+   ]
+  },
+  {
+   "frame": 13,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    172,
+    96
+   ]
+  },
+  {
+   "frame": 14,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    154,
+    96
+   ]
+  },
+  {
+   "frame": 15,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    96
+   ]
+  },
+  {
+   "frame": 16,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    96
+   ]
+  },
+  {
+   "frame": 17,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    96
+   ]
+  },
+  {
+   "frame": 18,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    96
+   ]
+  },
+  {
+   "frame": 19,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    96
+   ]
+  },
+  {
+   "frame": 20,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    105,
+    96
+   ]
+  },
+  {
+   "frame": 21,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    113,
+    96
+   ]
+  },
+  {
+   "frame": 22,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    172,
+    96
+   ]
+  },
+  {
+   "frame": 23,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    132,
+    96
+   ]
+  },
+  {
+   "frame": 24,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 25,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 26,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 27,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 28,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    132,
+    96
+   ]
+  },
+  {
+   "frame": 29,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    131,
+    96
+   ]
+  },
+  {
+   "frame": 30,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    130,
+    96
+   ]
+  },
+  {
+   "frame": 31,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    128,
+    96
+   ]
+  },
+  {
+   "frame": 32,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    96
+   ]
+  },
+  {
+   "frame": 33,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    123,
+    96
+   ]
+  },
+  {
+   "frame": 34,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 35,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    96
+   ]
+  },
+  {
+   "frame": 36,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    128,
+    96
+   ]
+  },
+  {
+   "frame": 37,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    96
+   ]
+  },
+  {
+   "frame": 38,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    118,
+    96
+   ]
+  },
+  {
+   "frame": 39,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    111,
+    96
+   ]
+  },
+  {
+   "frame": 40,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    109,
+    51
+   ]
+  },
+  {
+   "frame": 58,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    80,
+    39
+   ]
+  },
+  {
+   "frame": 58,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    49,
+    90
+   ]
+  },
+  {
+   "frame": 58,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    45,
+    90
+   ]
+  },
+  {
+   "frame": 58,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    52,
+    90
+   ]
+  },
+  {
+   "frame": 58,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    52,
+    90
+   ]
+  },
+  {
+   "frame": 59,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    83,
+    37
+   ]
+  },
+  {
+   "frame": 59,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    53,
+    90
+   ]
+  },
+  {
+   "frame": 59,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    54,
+    90
+   ]
+  },
+  {
+   "frame": 59,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    60,
+    90
+   ]
+  },
+  {
+   "frame": 59,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    60,
+    90
+   ]
+  },
+  {
+   "frame": 60,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    92,
+    36
+   ]
+  },
+  {
+   "frame": 60,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    65,
+    90
+   ]
+  },
+  {
+   "frame": 60,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    70,
+    90
+   ]
+  },
+  {
+   "frame": 60,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    76,
+    90
+   ]
+  },
+  {
+   "frame": 60,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    76,
+    90
+   ]
+  },
+  {
+   "frame": 61,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    107,
+    35
+   ]
+  },
+  {
+   "frame": 61,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    81,
+    90
+   ]
+  },
+  {
+   "frame": 61,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    86,
+    90
+   ]
+  },
+  {
+   "frame": 61,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    92,
+    90
+   ]
+  },
+  {
+   "frame": 61,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    92,
+    90
+   ]
+  },
+  {
+   "frame": 62,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    123,
+    34
+   ]
+  },
+  {
+   "frame": 62,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    97,
+    90
+   ]
+  },
+  {
+   "frame": 62,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    103,
+    90
+   ]
+  },
+  {
+   "frame": 62,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    109,
+    90
+   ]
+  },
+  {
+   "frame": 62,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    109,
+    90
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    132,
+    9
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    139,
+    78
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    113,
+    90
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    119,
+    90
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 63,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    12
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    155,
+    81
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    129,
+    90
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    140,
+    90
+   ]
+  },
+  {
+   "frame": 64,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    140,
+    90
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    163,
+    14
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    168,
+    83
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    145,
+    90
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 65,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    169,
+    17
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    169,
+    86
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    161,
+    90
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 66,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    164,
+    24
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    164,
+    90
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    164,
+    90
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 67,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    159,
+    38
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    159,
+    90
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    159,
+    90
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 68,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    153,
+    67
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    153,
+    90
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    153,
+    90
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 69,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    48
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    90
+   ]
+  },
+  {
+   "frame": 70,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    46
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    63
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    90
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    90
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    90
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    90
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    125,
+    90
+   ]
+  },
+  {
+   "frame": 71,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    33
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    69
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    90
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    90
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    90
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    90
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    90
+   ]
+  },
+  {
+   "frame": 72,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    151,
+    25
+   ]
+  },
+  {
+   "frame": 73,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    90
+   ]
+  },
+  {
+   "frame": 73,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    90
+   ]
+  },
+  {
+   "frame": 73,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    90
+   ]
+  },
+  {
+   "frame": 73,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    90
+   ]
+  },
+  {
+   "frame": 73,
+   "kind": "subject",
+   "during": "exit tether",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    38
+   ]
+  },
+  {
+   "frame": 344,
+   "kind": "caption",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    161,
+    22
+   ]
+  },
+  {
+   "frame": 345,
+   "kind": "caption",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    10
+   ]
+  },
+  {
+   "frame": 577,
+   "kind": "safe",
+   "during": "enter drop",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 578,
+   "kind": "safe",
+   "during": "enter drop",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 579,
+   "kind": "safe",
+   "during": "enter drop",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 580,
+   "kind": "safe",
+   "during": "enter drop",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 648,
+   "kind": "caption",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    144,
+    22
+   ]
+  },
+  {
+   "frame": 923,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 924,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 925,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 926,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 927,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 928,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 929,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 930,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 931,
+   "kind": "safe",
+   "during": "walk",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  }
+ ],
+ "moves": [
+  "enter pop",
+  "gasp",
+  "exit tether",
+  "enter drop",
+  "thumbs",
+  "sign",
+  "point",
+  "exit zip",
+  "what",
+  "listen",
+  "nod",
+  "enter skid",
+  "walk",
+  "bounce"
+ ]
+}

@@ -1,0 +1,716 @@
+{
+ "version": 1,
+ "style": "classic",
+ "series": "JUST DISCOVERED",
+ "title": "Farthest Radio Burst",
+ "bed": "bedD_tense",
+ "stress": [
+  "thousandth",
+  "three",
+  "billion",
+  "farthest",
+  "nothing",
+  "Webb",
+  "dwarf",
+  "thousand",
+  "unlikely"
+ ],
+ "assets": {
+  "field": {
+   "file": "../../../../lab/pilots/p2_webb_frb/img/field.webp",
+   "credit": "Image: NASA, ESA, CSA, STScI, Themiya Nanayakkara (USYD); Image Processing: Joseph DePasquale (STScI)",
+   "focus": [
+    0.688,
+    0.37,
+    0.226,
+    0.26
+   ],
+   "note": "NIRCam field of FRB 20240304B; inset box x 2994-3980, y 1403-2389; cross (3490,1730); the burst's square near (3237,3270)"
+  }
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "start": "A#1",
+   "source": "NASA",
+   "shot": {
+    "type": "hook",
+    "size": [
+     1000,
+     700
+    ],
+    "number": {
+     "text": "1/1000",
+     "at": "A#1",
+     "data": "OF A SECOND"
+    },
+    "elements": [
+     {
+      "path": [
+       [
+        60,
+        560
+       ],
+       [
+        940,
+        560
+       ]
+      ],
+      "id": "second",
+      "smooth": false
+     },
+     {
+      "label": "1 second",
+      "pos": [
+       60,
+       560
+      ],
+      "anchor": "below"
+     },
+     {
+      "path": [
+       [
+        500,
+        560
+       ],
+       [
+        500,
+        300
+       ]
+      ],
+      "id": "spike",
+      "at": "flash",
+      "draw": 4,
+      "smooth": false
+     },
+     {
+      "ring": [
+       500,
+       300,
+       46
+      ],
+      "id": "burst",
+      "pulse": [
+       "flash",
+       "thousandth"
+      ]
+     }
+    ],
+    "dot": {
+     "keys": [
+      {
+       "at": "A#1",
+       "pos": [
+        500,
+        300
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "travel",
+   "start": "left",
+   "transition": {
+    "type": "morph",
+    "frames": 12
+   },
+   "source": "NASA",
+   "chip": {
+    "body": "FRB",
+    "value": "MORE THAN 10 BILLION YEARS",
+    "source": "Live Science, Oct 8, 2026",
+    "at": "left",
+    "until": "farthest",
+    "echo_frames": 15
+   },
+   "shot": {
+    "type": "count",
+    "number": {
+     "value": 3,
+     "at": "three",
+     "data": "BILLION YEARS AFTER THE BIG BANG"
+    },
+    "diagram": {
+     "size": [
+      1000,
+      460
+     ],
+     "elements": [
+      {
+       "path": [
+        [
+         500,
+         30
+        ],
+        [
+         500,
+         400
+        ]
+       ],
+       "style": "dashed",
+       "id": "light",
+       "smooth": false
+      },
+      {
+       "ring": [
+        500,
+        410,
+        24
+       ],
+       "id": "earth",
+       "at": "universe",
+       "pulse": [
+        "old."
+       ]
+      },
+      {
+       "label": "Earth",
+       "pos": [
+        500,
+        410
+       ],
+       "anchor": "right",
+       "at": "universe"
+      }
+     ],
+     "dot": {
+      "keys": [
+       {
+        "at": "left",
+        "pos": [
+         500,
+         30
+        ]
+       },
+       {
+        "at": "old.",
+        "pos": [
+         500,
+         386
+        ]
+       }
+      ],
+      "ease": "linear"
+     }
+    }
+   }
+  },
+  {
+   "id": "webb_field",
+   "start": "Astronomers",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "field",
+    "frame": "right",
+    "y": "center",
+    "push": 0.05,
+    "drift": "left",
+    "marks": [
+     {
+      "at": "farthest",
+      "point": [
+       0.8017,
+       0.4562
+      ],
+      "r": 90,
+      "label": "FRB 20240304B"
+     }
+    ],
+    "camera": [
+     {
+      "at": "So",
+      "focus": [
+       0.74,
+       0.4,
+       0.12,
+       0.14
+      ],
+      "fill": 0.5,
+      "frames": 24
+     }
+    ],
+    "zoom": 1.25
+   }
+  },
+  {
+   "id": "ground",
+   "start": "Ground",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "size": [
+     1000,
+     800
+    ],
+    "elements": [
+     {
+      "glyph": "dome",
+      "pos": [
+       230,
+       600
+      ],
+      "size": 300,
+      "id": "dome",
+      "draw": 20
+     },
+     {
+      "path": [
+       [
+        290,
+        520
+       ],
+       [
+        690,
+        250
+       ]
+      ],
+      "style": "dashed",
+      "at": "telescopes",
+      "smooth": false
+     },
+     {
+      "ring": [
+       740,
+       220,
+       95
+      ],
+      "id": "spot",
+      "at": "Ground+4f",
+      "ink": true,
+      "pulse": [
+       "nothing"
+      ]
+     },
+     {
+      "label": "No galaxy seen",
+      "pos": [
+       740,
+       320
+      ],
+      "anchor": "below",
+      "at": "nothing"
+     }
+    ],
+    "dot": {
+     "keys": [
+      {
+       "at": "Ground",
+       "pos": [
+        740,
+        220
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "webb_galaxy",
+   "start": "Webb",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "field",
+    "frame": "center",
+    "push": 0.04,
+    "camera": [
+     {
+      "at": "Webb",
+      "focus": [
+       0.74,
+       0.4,
+       0.12,
+       0.14
+      ],
+      "fill": 0.6,
+      "frames": 1
+     },
+     {
+      "at": "found",
+      "focus": [
+       0.75,
+       0.41,
+       0.11,
+       0.13
+      ],
+      "fill": 1.2,
+      "frames": 18
+     }
+    ],
+    "marks": [
+     {
+      "at": "galaxy.",
+      "point": [
+       0.7994,
+       0.4681
+      ],
+      "r": 170
+     }
+    ]
+   }
+  },
+  {
+   "id": "dwarf",
+   "start": "A#4",
+   "transition": {
+    "type": "morph",
+    "frames": 12
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "count",
+    "number": {
+     "value": 1000,
+     "suffix": "x",
+     "at": "one#2",
+     "data": "LESS MASSIVE THAN EXPECTED"
+    },
+    "diagram": {
+     "size": [
+      1000,
+      900
+     ],
+     "elements": [
+      {
+       "glyph": "spiral",
+       "pos": [
+        480,
+        330
+       ],
+       "size": 900,
+       "id": "big",
+       "at": "one#2",
+       "draw": 24
+      },
+      {
+       "label": "Most FRB galaxies",
+       "pos": [
+        480,
+        110
+       ],
+       "anchor": "above",
+       "at": "thousand"
+      },
+      {
+       "glyph": "blob",
+       "pos": [
+        640,
+        720
+       ],
+       "size": 170,
+       "id": "dwarf",
+       "at": "dwarf,",
+       "seed": 5
+      },
+      {
+       "label": "This one",
+       "pos": [
+        640,
+        800
+       ],
+       "anchor": "below",
+       "at": "dwarf,"
+      }
+     ],
+     "region": "right"
+    }
+   }
+  },
+  {
+   "id": "merger",
+   "start": "That#2",
+   "transition": {
+    "type": "push",
+    "dir": "up",
+    "frames": 12
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "fact",
+    "lines": [
+     {
+      "at": "neutron",
+      "text": "Neutron star"
+     },
+     {
+      "at": "merger",
+      "text": "merger:"
+     },
+     {
+      "at": "unlikely,",
+      "text": "*very unlikely*"
+     }
+    ],
+    "by": "THE TEAM _\u00b7_ SCIENCE, 2026",
+    "by_at": "team",
+    "art": {
+     "size": [
+      1000,
+      520
+     ],
+     "elements": [
+      {
+       "glyph": "binary",
+       "pos": [
+        500,
+        260
+       ],
+       "size": 520,
+       "id": "pair",
+       "at": "That#2",
+       "mute_at": "unlikely,"
+      }
+     ]
+    },
+    "size": 120
+   }
+  },
+  {
+   "id": "next",
+   "start": "MeerKAT",
+   "hit": true,
+   "transition": {
+    "type": "cut"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "next",
+    "headline": [
+     "Expect more",
+     "bursts from",
+     "far away"
+    ],
+    "date": null,
+    "lines": [
+     {
+      "at": "MeerKAT",
+      "text": "*MEERKAT: SEVERAL A YEAR*"
+     }
+    ],
+    "pointer": {
+     "at": "Follow",
+     "text": "*Follow* for the next one"
+    },
+    "art": {
+     "size": [
+      1000,
+      330
+     ],
+     "subject": [
+      620,
+      40,
+      340,
+      290
+     ],
+     "elements": [
+      {
+       "glyph": "dish",
+       "pos": [
+        790,
+        180
+       ],
+       "size": 280,
+       "rot": -18,
+       "id": "dish",
+       "draw": 20
+      },
+      {
+       "path": [
+        [
+         1000,
+         0
+        ],
+        [
+         751,
+         60
+        ]
+       ],
+       "style": "dashed",
+       "at": "several",
+       "smooth": false
+      }
+     ],
+     "dot": {
+      "keys": [
+       {
+        "at": "MeerKAT",
+        "pos": [
+         1060,
+         -10
+        ]
+       },
+       {
+        "at": "several",
+        "pos": [
+         1060,
+         -10
+        ]
+       },
+       {
+        "at": "more",
+        "pos": [
+         751,
+         60
+        ]
+       }
+      ],
+      "pulse": [
+       "year."
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "cat": {
+  "scale": 0.34,
+  "seed": 5,
+  "moves": [
+   {
+    "at": "A#1",
+    "do": "expr",
+    "expr": "curious"
+   },
+   {
+    "at": "A#1+2f",
+    "do": "enter",
+    "how": "float",
+    "to": "el:second:0.17"
+   },
+   {
+    "at": "thousandth",
+    "do": "point",
+    "target": "el:burst",
+    "dur": 0.9
+   },
+   {
+    "at": "left-4f",
+    "do": "exit",
+    "how": "zip",
+    "to": "up"
+   },
+   {
+    "at": "So-6f",
+    "do": "enter",
+    "how": "skid",
+    "from": "left",
+    "to": "left"
+   },
+   {
+    "at": "what#2",
+    "do": "shrug",
+    "dur": 1.0
+   },
+   {
+    "at": "there?",
+    "do": "what",
+    "dur": 0.8
+   },
+   {
+    "at": "Ground-3f",
+    "do": "hop",
+    "to": "el:dome:0.24"
+   },
+   {
+    "at": "nothing",
+    "do": "gasp",
+    "target": "el:spot",
+    "dur": 0.9
+   },
+   {
+    "at": "spot.",
+    "do": "point",
+    "target": "el:spot",
+    "dur": 0.6
+   },
+   {
+    "at": "Webb-4f",
+    "do": "exit",
+    "how": "zip",
+    "to": "left"
+   },
+   {
+    "at": "dwarf,",
+    "do": "enter",
+    "how": "pop",
+    "box": "caption",
+    "along": 0.1
+   },
+   {
+    "at": "times",
+    "do": "sign",
+    "text": "1,000x",
+    "sub": "LESS MASSIVE",
+    "dur": 1.4,
+    "size": 1.7
+   },
+   {
+    "at": "That#2",
+    "do": "expr",
+    "expr": "skeptical"
+   },
+   {
+    "at": "neutron",
+    "do": "listen",
+    "dur": 1.0
+   },
+   {
+    "at": "unlikely,",
+    "do": "nod",
+    "count": 2,
+    "dur": 0.9
+   },
+   {
+    "at": "unlikely,+24f",
+    "do": "exit",
+    "how": "zip",
+    "to": "up"
+   },
+   {
+    "at": "every",
+    "do": "enter",
+    "how": "skid",
+    "from": "left",
+    "to": [
+     230,
+     1000
+    ],
+    "scale": 0.26
+   },
+   {
+    "at": "several",
+    "do": "expr",
+    "expr": "happy"
+   },
+   {
+    "at": "year.",
+    "do": "point",
+    "target": "el:dish",
+    "dur": 0.9
+   },
+   {
+    "at": "Follow",
+    "do": "thumbs",
+    "dur": 0.8
+   },
+   {
+    "at": "next",
+    "do": "wave",
+    "dur": 1.2
+   }
+  ]
+ }
+}

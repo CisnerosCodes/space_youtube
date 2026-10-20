@@ -1,0 +1,19 @@
+[
+  {"frame": 54,   "fps": 30, "type": "impact",        "note": "collision: WARNING flashes red, screen shake"},
+  {"frame": 99,   "fps": 30, "type": "hard_cut",      "note": "SNES mosaic into the launch pad"},
+  {"frame": 130,  "fps": 30, "type": "impact",        "sfx": "impact_big", "gain_db": -2, "note": "H3 ignition and liftoff"},
+  {"frame": 147,  "fps": 30, "type": "reveal",        "note": "PHOBOS HEIST title slam on 'heist'"},
+  {"frame": 182,  "fps": 30, "type": "cat_chirp",     "note": "Night Shift's sly wink on the fairing reveal"},
+  {"frame": 280,  "fps": 30, "type": "number_slam",   "note": "AUG 2027"},
+  {"frame": 321,  "fps": 30, "type": "scene_move",    "note": "iris out on MMX, iris in at Phobos"},
+  {"frame": 405,  "fps": 30, "type": "impact",        "note": "IDEFIX hits the regolith (low-g bounce)"},
+  {"frame": 496,  "fps": 30, "type": "number_slam",   "note": "15 g"},
+  {"frame": 606,  "fps": 30, "type": "impact",        "note": "MMX touchdown"},
+  {"frame": 656,  "fps": 30, "type": "hard_cut",      "note": "nitrogen gas burst"},
+  {"frame": 802,  "fps": 30, "type": "scene_move",    "note": "one burn to leave Mars"},
+  {"frame": 886,  "fps": 30, "type": "number_slam",   "note": "2031"},
+  {"frame": 940,  "fps": 30, "type": "reveal",        "note": "the capsule opens like a treasure chest"},
+  {"frame": 1047, "fps": 30, "type": "next_card_in",  "note": "NEXT card (blinds wipe)"},
+  {"frame": 1141, "fps": 30, "type": "chip_in",       "note": "WED 21 OCT"},
+  {"frame": 1212, "fps": 30, "type": "wordmark_echo", "note": "echo ring lands on the end card: sonic logo"}
+]

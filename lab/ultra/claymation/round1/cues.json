@@ -1,0 +1,127 @@
+[
+ {
+  "frame": 62,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "hook: camera pulls back as the collision-course spiral rolls out"
+ },
+ {
+  "frame": 103,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "whip pan to the launch pad on \"Japan\""
+ },
+ {
+  "frame": 129,
+  "fps": 30,
+  "type": "number_slam",
+  "gain_db": -3,
+  "note": "H3 ignition, cotton smoke bursts"
+ },
+ {
+  "frame": 147,
+  "fps": 30,
+  "type": "cat_chirp",
+  "note": "Night Shift turns to camera, sly, on \"heist\""
+ },
+ {
+  "frame": 219,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "whip into the run, \"Step one\""
+ },
+ {
+  "frame": 280,
+  "fps": 30,
+  "type": "chip_in",
+  "note": "\"2027\""
+ },
+ {
+  "frame": 315,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "vertical whip from the table into the Phobos set"
+ },
+ {
+  "frame": 382,
+  "fps": 30,
+  "type": "impact",
+  "note": "rover lands on the kitchen scale"
+ },
+ {
+  "frame": 404,
+  "fps": 30,
+  "type": "number_slam",
+  "gain_db": -4,
+  "note": "\"25\": the needle slams"
+ },
+ {
+  "frame": 495,
+  "fps": 30,
+  "type": "reveal",
+  "note": "\"15\": dial flips to 15 g, rover floats"
+ },
+ {
+  "frame": 586,
+  "fps": 30,
+  "type": "impact",
+  "note": "MMX lands on Phobos"
+ },
+ {
+  "frame": 655,
+  "fps": 30,
+  "type": "hard_cut",
+  "gain_db": -2,
+  "note": "nitrogen blast puffs hit the cat"
+ },
+ {
+  "frame": 723,
+  "fps": 30,
+  "type": "number_slam",
+  "gain_db": -4,
+  "note": "\"10 grams\""
+ },
+ {
+  "frame": 750,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip back to the tabletop orrery"
+ },
+ {
+  "frame": 802,
+  "fps": 30,
+  "type": "impact",
+  "note": "\"burn\": main engine lights"
+ },
+ {
+  "frame": 875,
+  "fps": 30,
+  "type": "impact",
+  "gain_db": -2,
+  "note": "capsule lands on Australia"
+ },
+ {
+  "frame": 947,
+  "fps": 30,
+  "type": "reveal",
+  "note": "\"First\": the cat holds the jar up"
+ },
+ {
+  "frame": 1058,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "NEXT flag pops in"
+ },
+ {
+  "frame": 1162,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "cut to the end card"
+ },
+ {
+  "frame": 1212,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "echo ring pings on the wordmark (sonic logo)"
+ }
+]

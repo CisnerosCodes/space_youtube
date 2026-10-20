@@ -1,0 +1,312 @@
+{
+ "built": "2026-10-19T16:49:37.415Z",
+ "shortDir": "pipeline/engine/examples/p2",
+ "frames": 951,
+ "seconds": 31.7,
+ "buildSeconds": 8.4,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 3,
+   "T0": 0,
+   "T1": 74,
+   "end": 86,
+   "transition": {
+    "type": "none",
+    "N": 0
+   }
+  },
+  {
+   "i": 1,
+   "id": "travel",
+   "type": "count",
+   "word": 80,
+   "T0": 74,
+   "T1": 164,
+   "end": 178,
+   "transition": {
+    "type": "morph",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 2,
+   "id": "webb_field",
+   "type": "photo",
+   "word": 172,
+   "T0": 164,
+   "T1": 391,
+   "end": 405,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 3,
+   "id": "ground",
+   "type": "diagram",
+   "word": 399,
+   "T0": 391,
+   "T1": 481,
+   "end": 495,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 4,
+   "id": "webb_galaxy",
+   "type": "photo",
+   "word": 489,
+   "T0": 481,
+   "T1": 534,
+   "end": 546,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 5,
+   "id": "dwarf",
+   "type": "count",
+   "word": 540,
+   "T0": 534,
+   "T1": 644,
+   "end": 656,
+   "transition": {
+    "type": "morph",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 6,
+   "id": "merger",
+   "type": "fact",
+   "word": 650,
+   "T0": 644,
+   "T1": 770,
+   "end": 770,
+   "transition": {
+    "type": "push",
+    "dir": "up",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 7,
+   "id": "next",
+   "type": "next",
+   "word": 770,
+   "T0": 770,
+   "T1": 951,
+   "end": 951,
+   "transition": {
+    "type": "cut",
+    "N": 0
+   }
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 3,
+   "f1": 65,
+   "text": "A flash lasting / one thousandth"
+  },
+  {
+   "f0": 65,
+   "f1": 104,
+   "text": "of a second left / when the universe"
+  },
+  {
+   "f0": 104,
+   "f1": 172,
+   "text": "was only three / billion years old."
+  },
+  {
+   "f0": 172,
+   "f1": 227,
+   "text": "Astronomers just / confirmed the"
+  },
+  {
+   "f0": 227,
+   "f1": 303,
+   "text": "farthest fast radio / burst ever seen."
+  },
+  {
+   "f0": 303,
+   "f1": 327,
+   "text": "Nobody knows"
+  },
+  {
+   "f0": 327,
+   "f1": 357,
+   "text": "what makes / these bursts."
+  },
+  {
+   "f0": 357,
+   "f1": 399,
+   "text": "So what was / out there?"
+  },
+  {
+   "f0": 399,
+   "f1": 441,
+   "text": "Ground / telescopes saw"
+  },
+  {
+   "f0": 441,
+   "f1": 489,
+   "text": "nothing at / that spot."
+  },
+  {
+   "f0": 489,
+   "f1": 540,
+   "text": "Webb found / a galaxy."
+  },
+  {
+   "f0": 540,
+   "f1": 603,
+   "text": "A dwarf, one / thousand times"
+  },
+  {
+   "f0": 603,
+   "f1": 650,
+   "text": "less massive / than expected."
+  },
+  {
+   "f0": 650,
+   "f1": 669,
+   "text": "That makes"
+  },
+  {
+   "f0": 669,
+   "f1": 703,
+   "text": "a neutron / star merger"
+  },
+  {
+   "f0": 703,
+   "f1": 770,
+   "text": "very unlikely, / the team says."
+  },
+  {
+   "f0": 770,
+   "f1": 793,
+   "text": "MeerKAT may"
+  },
+  {
+   "f0": 793,
+   "f1": 858,
+   "text": "find several more / every year."
+  },
+  {
+   "f0": 858,
+   "f1": 884,
+   "text": "Follow / Downlink Cat"
+  },
+  {
+   "f0": 884,
+   "f1": 951,
+   "text": "for the next one."
+  }
+ ],
+ "cues": 16,
+ "cat": {
+  "share": 0.595,
+  "framesOn": 566,
+  "windows": [
+   [
+    6,
+    89
+   ],
+   [
+    353,
+    498
+   ],
+   [
+    555,
+    759
+   ],
+   [
+    820,
+    950
+   ]
+  ],
+  "moves": [
+   "enter float",
+   "point",
+   "exit zip",
+   "enter skid",
+   "shrug",
+   "what",
+   "hop",
+   "gasp",
+   "enter pop",
+   "sign",
+   "listen",
+   "nod",
+   "thumbs",
+   "wave"
+  ],
+  "hits": 91,
+  "hardHits": 0,
+  "exemptHits": 77
+ },
+ "problems": [],
+ "notes": [
+  "cat crosses a subject mid-travel (hop, walk, skid...) on 13 frames: 398-406, 418-421; look at these stills",
+  "cat leaves the safe zone on 1 frames outside entrances and exits: 685",
+  "beat ground: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 413 (fill the frame: a larger lens, a lower diagram, the cat)",
+  "beat dwarf: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 554, 559 (fill the frame: a larger lens, a lower diagram, the cat)",
+  "beat merger: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 759, 764 (fill the frame: a larger lens, a lower diagram, the cat)"
+ ],
+ "warnings": [],
+ "qaFrames": [
+  0,
+  3,
+  39,
+  73,
+  74,
+  80,
+  86,
+  122,
+  163,
+  164,
+  172,
+  178,
+  282,
+  390,
+  391,
+  399,
+  405,
+  440,
+  480,
+  481,
+  489,
+  495,
+  512,
+  533,
+  534,
+  540,
+  546,
+  592,
+  643,
+  644,
+  650,
+  656,
+  710,
+  769,
+  770,
+  861,
+  950
+ ]
+}

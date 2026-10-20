@@ -1,0 +1,77 @@
+{
+ "audio": "take1.mp3",
+ "duration": 4.72,
+ "text": "Meerkat may find several more every year.  Follow Downlink Cat for the next one.",
+ "words": [
+  {
+   "w": "Meerkat",
+   "start": 0.06,
+   "end": 0.56
+  },
+  {
+   "w": "may",
+   "start": 0.56,
+   "end": 0.76
+  },
+  {
+   "w": "find",
+   "start": 0.76,
+   "end": 0.96
+  },
+  {
+   "w": "several",
+   "start": 0.96,
+   "end": 1.42
+  },
+  {
+   "w": "more",
+   "start": 1.42,
+   "end": 1.64
+  },
+  {
+   "w": "every",
+   "start": 1.64,
+   "end": 2.08
+  },
+  {
+   "w": "year.",
+   "start": 2.08,
+   "end": 2.62
+  },
+  {
+   "w": "Follow",
+   "start": 2.62,
+   "end": 3.12
+  },
+  {
+   "w": "Downlink",
+   "start": 3.12,
+   "end": 3.56
+  },
+  {
+   "w": "Cat",
+   "start": 3.56,
+   "end": 3.74
+  },
+  {
+   "w": "for",
+   "start": 3.74,
+   "end": 3.9
+  },
+  {
+   "w": "the",
+   "start": 3.9,
+   "end": 4.02
+  },
+  {
+   "w": "next",
+   "start": 4.02,
+   "end": 4.14
+  },
+  {
+   "w": "one.",
+   "start": 4.14,
+   "end": 4.44
+  }
+ ]
+}

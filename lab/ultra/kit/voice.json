@@ -1,0 +1,258 @@
+{
+ "model": "google/gemini-3.8-flash-tts",
+ "voice": "Puck",
+ "stt_model": "openai/whisper-large-v3",
+ "created": "2026-10-20T07:08:55Z",
+ "seconds": 40.54,
+ "text": "This moon is on a slow-motion collision course with Mars. Japan just launched a heist to steal a piece of it. Step one: Mars, August 2027. Step two: drop a lookout. A 25 kilo rover. On Phobos, it weighs... 15 grams. Step three: the grab. Coring arm, nitrogen blaster. Target: at least 10 grams. Step four: one burn to leave Mars. Capsule lands in Australia, 2031. The loot? First piece of Phobos ever brought home. Next: Rocket Lab aims to launch three HawkEye 360 satellites, Wednesday. Follow Downlink Cat.",
+ "direction": "You are a young, nerdy science creator in your early twenties, a little scrawny, filming a vertical video for your followers. Talk like a popular creator on TikTok or YouTube Shorts, not a narrator: conversational, a grin in your voice, genuinely hyped. Hit the hook hard, take a tiny beat before each reveal, punch the key words (collision course, heist, steal, 2027, lookout, 25, 15 grams, grab, nitrogen, 10 grams, 2031, loot, First), speed up through setup lines and slow down on the payoff. Energy: high. A little more cat: a playful purr on a few r sounds and a small 'mrr'-like rise on the question line. Still natural, never a meow.",
+ "usd": 0.027915,
+ "cost": {
+  "tts_usd": 0.026995,
+  "stt_usd": 0.00092,
+  "total_usd": 0.027915,
+  "estimated": false,
+  "note": "tts cost from /generation (retried while 404); estimated at 0.000227 USD per audio second when it never answered"
+ },
+ "takes_tried": 3,
+ "chosen_take": 3,
+ "verified": true,
+ "diff": {
+  "ok": true,
+  "counts": {
+   "content": 0,
+   "spelling": 0,
+   "minor": 0,
+   "joined": 0
+  },
+  "script_tokens": 90,
+  "heard_tokens": 90,
+  "differences": [],
+  "joined": []
+ },
+ "gaps": [],
+ "takes": [
+  {
+   "take": 1,
+   "file": "work/voice/take1.mp3",
+   "seconds": 41.56,
+   "generation_id": "gen-tts-1792480052-bor5M1T5PPX4pvDv3AXL",
+   "stt_usd": 0.000324,
+   "gaps": [
+    {
+     "from": 18.62,
+     "to": 19.66,
+     "clip": "take1.gap_18.62.mp3",
+     "clip_text": "grams.",
+     "inserted": "grams.",
+     "kind": "dropped words"
+    }
+   ],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 2,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 90,
+    "heard_tokens": 91,
+    "differences": [
+     {
+      "script": "",
+      "heard": "grams.",
+      "script_index": null,
+      "heard_index": [
+       41
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "Cat.",
+      "heard": "at.",
+      "script_index": [
+       88
+      ],
+      "heard_index": [
+       90
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.0094215,
+   "tts_usd_estimated": false
+  },
+  {
+   "take": 2,
+   "file": "work/voice/take2.mp3",
+   "seconds": 37.08,
+   "generation_id": "gen-tts-1792480078-WMzIx1ErGjaNIDe6VKXG",
+   "stt_usd": 0.000293,
+   "gaps": [
+    {
+     "from": 35.37,
+     "to": 36.69,
+     "clip": "take2.gap_35.37.mp3",
+     "clip_text": "Wednesday, follow Downlink Hat.",
+     "inserted": "Wednesday, follow Downlink Hat.",
+     "kind": "dropped words"
+    }
+   ],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 2,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 90,
+    "heard_tokens": 92,
+    "differences": [
+     {
+      "script": "",
+      "heard": "Wednesday,",
+      "script_index": null,
+      "heard_index": [
+       87
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "Cat.",
+      "heard": "Hat. out.",
+      "script_index": [
+       88
+      ],
+      "heard_index": [
+       90
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.0084135,
+   "tts_usd_estimated": false
+  },
+  {
+   "take": 3,
+   "file": "work/voice/take3.mp3",
+   "seconds": 40.4,
+   "generation_id": "gen-tts-1792480100-lkLxrlcxaaq6W7JcfmAT",
+   "stt_usd": 0.000303,
+   "gaps": [],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 1,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 90,
+    "heard_tokens": 90,
+    "differences": [
+     {
+      "script": "Cat.",
+      "heard": "hat.",
+      "script_index": [
+       88
+      ],
+      "heard_index": [
+       89
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.0091605,
+   "tts_usd_estimated": false
+  }
+ ],
+ "elapsed_s": 84.6,
+ "splices": [
+  {
+   "when": "2026-10-20T07:10:57Z",
+   "why": "All three full takes ended with 'Downlink Cat' heard as 'hat' or 'at'; take 3 (kept) has every other word right, and a clip re-transcription of its tail still heard 'hat'.",
+   "text": "Next: Rocket Lab aims to launch three HawkEye 360 satellites, Wednesday. Follow Downlink Cat.",
+   "take": "work/splice/take1.wav",
+   "takes": [
+    {
+     "take": 1,
+     "generation_id": "gen-tts-1792480227-4Swxy17R4xMovIa6oUjN",
+     "seconds": 6.6,
+     "diff": {
+      "ok": true,
+      "counts": {
+       "content": 0,
+       "spelling": 0,
+       "minor": 0,
+       "joined": 0
+      },
+      "script_tokens": 14,
+      "heard_tokens": 14,
+      "differences": [],
+      "joined": []
+     },
+     "tts_usd": 0.001497,
+     "tts_usd_estimated": false
+    }
+   ],
+   "reused_take": false,
+   "cut_s": 38.950333,
+   "orig_onset_s": 39.175,
+   "take_onset_s": 5.235,
+   "offset_s": 33.94,
+   "take_gain_db": -3.2,
+   "orig_tail_lufs": -18.9,
+   "take_tail_lufs": -15.7,
+   "orig_rms_at_cut_db": -68.1,
+   "take_rms_at_cut_db": -68.6,
+   "max_step_at_cut": 0.000158,
+   "crossfade_ms": 10,
+   "seconds": 40.54,
+   "original": "voice.orig.mp3",
+   "lossless": "work/splice/splice_take1.wav",
+   "usd": 0.001851,
+   "usd_estimated": false,
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 1,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 90,
+    "heard_tokens": 89,
+    "differences": [
+     {
+      "script": "Follow",
+      "heard": "",
+      "script_index": [
+       86
+      ],
+      "heard_index": null,
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "method": "take aligned so its first word of the last sentence lands on the original onset (20 ms RMS); cut at the quietest point of the pause, at a zero crossing, 10 ms raised-cosine crossfade; take gain matches the tail loudness",
+   "elapsed_s": 31.3
+  }
+ ],
+ "verification": {
+  "when": "2026-10-20T07:12:03Z",
+  "how": "python3 pipeline/voice.py lab/ultra/kit --verify-only --alias Phobos=Fobos (default gap 1.0 s): content 0, spelling 0, minor 0.",
+  "why": "The splice re-transcription (in splices[0].diff) dropped 'Follow' in a 0.8 s pause, under the 1.0 s gap rule. The spliced take itself verified content 0 on 'Next: ... Follow Downlink Cat.' (work/splice/take1.words.json), and a fresh transcription of the spliced voice.mp3 hears every word. A --gap 0.5 run (work/voice/verify_gap0.5.json) re-transcribed the short pauses after '15 grams' and '10 grams' and inserted 'Rams.' twice: the clip window (gap +- 0.3 s) catches the tail of the word 'grams' before the pause, the same artifact as the 'grams.' duplicate in full take 1.",
+  "words_file": "voice.words.json = work/voice/verify.words.json (the previous file is work/voice/voice.words.after_splice.json)",
+  "stt_usd": 0.0006644999999999999
+ },
+ "usd_total_including_splice_and_checks": 0.03043
+}

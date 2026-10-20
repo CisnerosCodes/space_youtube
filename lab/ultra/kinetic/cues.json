@@ -1,0 +1,22 @@
+[
+  {"frame": 17, "fps": 60, "type": "echo_land", "note": "the ring eye's echo opens the lens on Phobos (moon)"},
+  {"frame": 145, "fps": 60, "type": "number_slam", "gain_db": -2, "note": "collision / course collide"},
+  {"frame": 205, "fps": 60, "type": "riser", "note": "amber field grows out of the period of Mars. (ends on Japan)"},
+  {"frame": 277, "fps": 60, "type": "scene_move", "note": "H3 leaves the frame"},
+  {"frame": 391, "fps": 60, "type": "impact", "sfx": "pop", "note": "the piece breaks off Phobos"},
+  {"frame": 435, "fps": 60, "type": "hard_cut", "note": "amber bar wipe to Step one"},
+  {"frame": 560, "fps": 60, "type": "number_slam", "note": "2027."},
+  {"frame": 630, "fps": 60, "type": "hard_cut", "note": "vertical whip to Step two"},
+  {"frame": 762, "fps": 60, "type": "cat_chirp", "note": "the eyes land in lookout"},
+  {"frame": 809, "fps": 60, "type": "number_slam", "note": "25"},
+  {"frame": 1046, "fps": 60, "type": "reveal", "note": "15 grams goes weightless (swell peaks on grams.)"},
+  {"frame": 1122, "fps": 60, "type": "hard_cut", "note": "horizontal whip to Step three"},
+  {"frame": 1207, "fps": 60, "type": "impact", "note": "lander touchdown on the grab"},
+  {"frame": 1446, "fps": 60, "type": "number_slam", "note": "10"},
+  {"frame": 1720, "fps": 60, "type": "impact", "note": "capsule lands"},
+  {"frame": 1773, "fps": 60, "type": "number_slam", "note": "2031."},
+  {"frame": 1853, "fps": 60, "type": "riser", "note": "zoom through the zero of 2031"},
+  {"frame": 2058, "fps": 60, "type": "echo_land", "note": "the piece arrives home"},
+  {"frame": 2083, "fps": 60, "type": "next_card_in", "note": "whip to the NEXT card"},
+  {"frame": 2427, "fps": 60, "type": "wordmark_echo", "note": "sonic logo: dot pulse now, ring pulse 0.40 s later"}
+]

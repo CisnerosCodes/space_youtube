@@ -1,0 +1,762 @@
+{
+ "version": 1,
+ "series": "HOW DOES THAT WORK",
+ "title": "Artemis II Heat Shield",
+ "bed": "bedA_pluck",
+ "stress": [
+  "39",
+  "mid-70s.",
+  "4,000",
+  "path",
+  "capped",
+  "nine",
+  "103."
+ ],
+ "assets": {
+  "splash": {
+   "file": "img/splash.jpg",
+   "credit": "NASA/Josh Valcarcel",
+   "focus": [
+    0.4,
+    0.16,
+    0.3,
+    0.66
+   ],
+   "note": "KSC-20260410-PH-JNV01_0001, Artemis II Orion under parachutes before splashdown, April 10, 2026"
+  },
+  "capsule": {
+   "file": "img/capsule.jpg",
+   "credit": "NASA/Kevin Davis",
+   "focus": [
+    0.2,
+    0.25,
+    0.55,
+    0.5
+   ],
+   "note": "KSC-20260418-KED03-0009, Artemis II crew module and heat shield lifted for inspection, April 18, 2026"
+  },
+  "underwater": {
+   "file": "img/underwater.jpg",
+   "credit": "US Navy",
+   "focus": [
+    0.45,
+    0.2,
+    0.3,
+    0.6
+   ],
+   "note": "KSC-20260411-NAVY01-0045, Navy diver image of the Artemis II heat shield after splashdown"
+  },
+  "artemis1": {
+   "file": "img/artemis1.jpg",
+   "credit": "NASA/Skip Williams",
+   "focus": [
+    0.32,
+    0.4,
+    0.42,
+    0.5
+   ],
+   "note": "KSC-20230102-PH-NAS01_0001, Artemis I Orion heat shield inspections, Jan 2, 2023"
+  },
+  "a2half": {
+   "file": "img/compare.jpg",
+   "credit": "NASA",
+   "focus": [
+    0.56,
+    0.06,
+    0.38,
+    0.88
+   ],
+   "note": "combineda1anda2-heatshield4k.jpg from the Oct 15 release: Artemis I (left) and Artemis II (right) heat shields; this asset frames the Artemis II half"
+  },
+  "a1half": {
+   "file": "img/compare.jpg",
+   "credit": "NASA",
+   "focus": [
+    0.06,
+    0.06,
+    0.38,
+    0.88
+   ],
+   "note": "same image, the Artemis I half"
+  }
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "start": "Orion#1",
+   "shot": {
+    "type": "hook",
+    "image": "splash",
+    "frame": "right",
+    "y": "center",
+    "push": 0.05,
+    "number": {
+     "value": 39,
+     "suffix": "x",
+     "style": "slam",
+     "at": "Orion#1",
+     "data": "THE SPEED OF SOUND"
+    }
+   }
+  },
+  {
+   "id": "cabin",
+   "start": "cabin",
+   "transition": {
+    "type": "morph",
+    "frames": 12
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "count",
+    "number": {
+     "text": "MID-70s",
+     "style": "slam",
+     "at": "cabin",
+     "data": "\u00b0F _\u00b7_ IN THE CABIN"
+    },
+    "diagram": {
+     "size": [
+      1000,
+      700
+     ],
+     "region": "full",
+     "elements": [
+      {
+       "path": [
+        [
+         380,
+         60
+        ],
+        [
+         620,
+         60
+        ],
+        [
+         800,
+         470
+        ],
+        [
+         200,
+         470
+        ],
+        [
+         380,
+         60
+        ]
+       ],
+       "id": "capsule",
+       "smooth": false,
+       "at": "cabin",
+       "draw": 18
+      },
+      {
+       "path": [
+        [
+         190,
+         495
+        ],
+        [
+         500,
+         545
+        ],
+        [
+         810,
+         495
+        ]
+       ],
+       "id": "shield",
+       "at": "cabin+6f",
+       "draw": 14
+      },
+      {
+       "ring": [
+        500,
+        300,
+        60
+       ],
+       "id": "crew",
+       "ink": true,
+       "at": "stayed",
+       "pulse": [
+        "mid-70s."
+       ]
+      },
+      {
+       "label": "Cabin",
+       "pos": [
+        500,
+        300
+       ],
+       "anchor": "below",
+       "at": "stayed+4f"
+      }
+     ],
+     "dot": {
+      "keys": [
+       {
+        "at": "cabin",
+        "pos": [
+         500,
+         300
+        ]
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "outside",
+   "start": "Outside,",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "capsule",
+    "frame": "center",
+    "push": 0.05,
+    "drift": "up",
+    "number": {
+     "value": 4000,
+     "suffix": "+",
+     "style": "count",
+     "at": "4,000",
+     "land": "Fahrenheit.",
+     "data": "\u00b0F _\u00b7_ OUTSIDE, AT ITS PEAK"
+    }
+   }
+  },
+  {
+   "id": "blocks",
+   "start": "heat",
+   "transition": {
+    "type": "push",
+    "dir": "down",
+    "frames": 12
+   },
+   "shot": {
+    "type": "photo",
+    "image": "underwater",
+    "frame": "right",
+    "push": 0.06,
+    "drift": "left",
+    "number": {
+     "value": 186,
+     "style": "count",
+     "at": "186",
+     "land": "blocks+4f",
+     "data": "BLOCKS OF *AVCOAT*"
+    },
+    "marks": [
+     {
+      "at": "Avcoat.",
+      "point": [
+       0.56,
+       0.42
+      ],
+      "r": 70
+     }
+    ]
+   }
+  },
+  {
+   "id": "artemis1",
+   "start": "Artemis#1",
+   "transition": {
+    "type": "iris",
+    "frames": 12
+   },
+   "shot": {
+    "type": "photo",
+    "image": "artemis1",
+    "frame": "right",
+    "push": 0.04,
+    "punch": [
+     "changed"
+    ],
+    "y": "bottom"
+   }
+  },
+  {
+   "id": "path",
+   "start": "How?#1",
+   "transition": {
+    "type": "morph",
+    "frames": 14
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "region": "full",
+    "size": [
+     1000,
+     1000
+    ],
+    "elements": [
+     {
+      "path": [
+       [
+        300,
+        300
+       ],
+       [
+        960,
+        300
+       ]
+      ],
+      "style": "thin",
+      "id": "air",
+      "smooth": false,
+      "at": "How?#1"
+     },
+     {
+      "label": "Top of the atmosphere",
+      "pos": [
+       960,
+       300
+      ],
+      "anchor": "above",
+      "at": "How?#1+4f"
+     },
+     {
+      "path": [
+       [
+        300,
+        920
+       ],
+       [
+        960,
+        920
+       ]
+      ],
+      "id": "sea",
+      "smooth": false,
+      "at": "How?#1+4f"
+     },
+     {
+      "label": "Pacific Ocean",
+      "pos": [
+       300,
+       920
+      ],
+      "anchor": "below",
+      "at": "How?#1+8f"
+     },
+     {
+      "marker": [
+       340,
+       300
+      ],
+      "id": "entry",
+      "at": "It#3"
+     },
+     {
+      "label": "Entry",
+      "pos": [
+       340,
+       300
+      ],
+      "anchor": "above",
+      "at": "It#3"
+     },
+     {
+      "path": [
+       [
+        340,
+        300
+       ],
+       [
+        600,
+        460
+       ],
+       [
+        820,
+        680
+       ],
+       [
+        950,
+        920
+       ]
+      ],
+      "style": "dashed",
+      "id": "long",
+      "at": "It#3",
+      "draw": 20,
+      "mute_at": "capped"
+     },
+     {
+      "path": [
+       [
+        340,
+        300
+       ],
+       [
+        520,
+        500
+       ],
+       [
+        640,
+        720
+       ],
+       [
+        680,
+        920
+       ]
+      ],
+      "style": "route",
+      "id": "short",
+      "at": "capped",
+      "draw": 18
+     },
+     {
+      "ring": [
+       680,
+       920,
+       30
+      ],
+      "id": "splash",
+      "at": "fly",
+      "pulse": [
+       "less"
+      ]
+     },
+     {
+      "label": "Splashdown",
+      "pos": [
+       680,
+       920
+      ],
+      "anchor": "below",
+      "at": "fly+4f"
+     },
+     {
+      "label": "Less time in the hot range",
+      "pos": [
+       960,
+       380
+      ],
+      "anchor": "below",
+      "at": "less"
+     }
+    ],
+    "dot": {
+     "path": "short",
+     "ease": "move",
+     "keys": [
+      {
+       "at": "How?#1",
+       "u": 0
+      },
+      {
+       "at": "capped",
+       "u": 0
+      },
+      {
+       "at": "atmosphere,",
+       "u": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "result",
+   "start": "result:",
+   "transition": {
+    "type": "iris",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "a2half",
+    "frame": "center",
+    "push": 0.05,
+    "number": {
+     "value": 9,
+     "style": "slam",
+     "at": "nine",
+     "data": "SPOTS OF CHAR LOSS _\u00b7_ ARTEMIS II"
+    }
+   }
+  },
+  {
+   "id": "artemis1_spots",
+   "start": "Artemis#3",
+   "transition": {
+    "type": "push",
+    "dir": "right",
+    "frames": 14
+   },
+   "shot": {
+    "type": "photo",
+    "image": "a1half",
+    "frame": "center",
+    "push": 0.05,
+    "number": {
+     "value": 103,
+     "style": "slam",
+     "at": "103.",
+     "data": "SPOTS OF CHAR LOSS _\u00b7_ ARTEMIS I"
+    }
+   }
+  },
+  {
+   "id": "next",
+   "start": "NASA#2",
+   "hit": true,
+   "transition": {
+    "type": "cut"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "next",
+    "headline": [
+     "NASA Moon",
+     "plans *update*"
+    ],
+    "headline_at": [
+     "NASA#2",
+     "plans"
+    ],
+    "date": "FRI 23 OCT",
+    "date_at": "Friday,",
+    "lines": [
+     {
+      "at": "October",
+      "text": "2 P.M. EDT _\u00b7_ *ARTEMIS III* INCLUDED"
+     }
+    ],
+    "pointer": {
+     "at": "Follow",
+     "text": "*Follow* Downlink Cat"
+    },
+    "art": {
+     "size": [
+      1000,
+      330
+     ],
+     "subject": [
+      620,
+      30,
+      300,
+      280
+     ],
+     "elements": [
+      {
+       "circle": [
+        770,
+        170,
+        120
+       ],
+       "id": "moon",
+       "draw": 20
+      },
+      {
+       "label": "Moon",
+       "pos": [
+        770,
+        290
+       ],
+       "anchor": "below",
+       "at": "Moon"
+      },
+      {
+       "path": [
+        [
+         120,
+         300
+        ],
+        [
+         420,
+         200
+        ],
+        [
+         650,
+         170
+        ]
+       ],
+       "style": "route",
+       "id": "route",
+       "at": "plans"
+      }
+     ],
+     "dot": {
+      "path": "route",
+      "keys": [
+       {
+        "at": "NASA#2",
+        "u": 0
+       },
+       {
+        "at": "plans",
+        "u": 0
+       },
+       {
+        "at": "October",
+        "u": 1
+       }
+      ],
+      "pulse": [
+       "23."
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "cat": {
+  "scale": 0.34,
+  "seed": 19,
+  "moves": [
+   {
+    "at": "Orion#1",
+    "do": "expr",
+    "expr": "curious"
+   },
+   {
+    "at": "Orion#1+2f",
+    "do": "enter",
+    "how": "pop",
+    "box": "caption",
+    "along": 0.08
+   },
+   {
+    "at": "39-2f",
+    "do": "gasp",
+    "target": "el:number",
+    "dur": 0.5
+   },
+   {
+    "at": "sound,",
+    "do": "look",
+    "target": "el:number"
+   },
+   {
+    "at": "cabin",
+    "do": "exit",
+    "how": "zip",
+    "to": "left"
+   },
+   {
+    "at": "heat-4f",
+    "do": "enter",
+    "how": "drop",
+    "to": [
+     130,
+     1190
+    ]
+   },
+   {
+    "at": "took",
+    "do": "expr",
+    "expr": "wow"
+   },
+   {
+    "at": "186",
+    "do": "point",
+    "target": "el:number",
+    "dur": 0.7
+   },
+   {
+    "at": "Avcoat.",
+    "do": "nod",
+    "count": 2,
+    "dur": 0.7
+   },
+   {
+    "at": "Artemis#1",
+    "do": "shrug",
+    "dur": 0.6
+   },
+   {
+    "at": "After",
+    "do": "exit",
+    "how": "tether",
+    "dur": 0.6
+   },
+   {
+    "at": "How?#1-4f",
+    "do": "enter",
+    "how": "skid",
+    "from": "left",
+    "to": "caption:0.12"
+   },
+   {
+    "at": "How?#1",
+    "do": "expr",
+    "expr": "curious"
+   },
+   {
+    "at": "How?#1+8f",
+    "do": "what",
+    "dur": 0.7
+   },
+   {
+    "at": "capped",
+    "do": "listen",
+    "dur": 0.9
+   },
+   {
+    "at": "fly",
+    "do": "point",
+    "target": "dot",
+    "dur": 0.8
+   },
+   {
+    "at": "less",
+    "do": "nod",
+    "count": 2,
+    "dur": 0.7
+   },
+   {
+    "at": "temperature",
+    "do": "exit",
+    "how": "zip",
+    "to": "left"
+   },
+   {
+    "at": "Friday,-6f",
+    "do": "enter",
+    "how": "float",
+    "to": [
+     820,
+     1190
+    ],
+    "scale": 0.26
+   },
+   {
+    "at": "Friday,",
+    "do": "expr",
+    "expr": "happy"
+   },
+   {
+    "at": "23.",
+    "do": "bounce",
+    "count": 2,
+    "period": 0.34
+   },
+   {
+    "at": "Follow-4f",
+    "do": "point",
+    "target": "el:pointer",
+    "dur": 0.45
+   },
+   {
+    "at": "Downlink",
+    "do": "hop",
+    "to": [
+     330,
+     1002
+    ]
+   },
+   {
+    "at": "update.",
+    "do": "wave",
+    "dur": 1.2
+   }
+  ]
+ }
+}

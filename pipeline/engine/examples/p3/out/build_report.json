@@ -1,0 +1,326 @@
+{
+ "built": "2026-10-19T16:44:04.283Z",
+ "shortDir": "pipeline/engine/examples/p3",
+ "frames": 1113,
+ "seconds": 37.1,
+ "buildSeconds": 10.1,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 2,
+   "T0": 0,
+   "T1": 47,
+   "end": 61,
+   "transition": {
+    "type": "none",
+    "N": 0
+   }
+  },
+  {
+   "i": 1,
+   "id": "every_vehicle",
+   "type": "bars",
+   "word": 54,
+   "T0": 47,
+   "T1": 138,
+   "end": 152,
+   "transition": {
+    "type": "morph",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 2,
+   "id": "record_day",
+   "type": "photo",
+   "word": 145,
+   "T0": 138,
+   "T1": 244,
+   "end": 258,
+   "transition": {
+    "type": "push",
+    "dir": "up",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 3,
+   "id": "old_record",
+   "type": "count",
+   "word": 252,
+   "T0": 244,
+   "T1": 367,
+   "end": 381,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 4,
+   "id": "years",
+   "type": "bars",
+   "word": 374,
+   "T0": 367,
+   "T1": 527,
+   "end": 541,
+   "transition": {
+    "type": "morph",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 5,
+   "id": "drives_itself",
+   "type": "diagram",
+   "word": 534,
+   "T0": 527,
+   "T1": 672,
+   "end": 686,
+   "transition": {
+    "type": "morph",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 6,
+   "id": "points",
+   "type": "points",
+   "word": 679,
+   "T0": 672,
+   "T1": 836,
+   "end": 836,
+   "transition": {
+    "type": "push",
+    "dir": "down",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 7,
+   "id": "next",
+   "type": "next",
+   "word": 836,
+   "T0": 836,
+   "T1": 1113,
+   "end": 1113,
+   "transition": {
+    "type": "cut",
+    "N": 0
+   }
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 2,
+   "f1": 31,
+   "text": "A robot on Mars"
+  },
+  {
+   "f0": 31,
+   "f1": 82,
+   "text": "just out-drove / every vehicle"
+  },
+  {
+   "f0": 82,
+   "f1": 145,
+   "text": "ever sent / to another world."
+  },
+  {
+   "f0": 145,
+   "f1": 169,
+   "text": "On October"
+  },
+  {
+   "f0": 169,
+   "f1": 252,
+   "text": "11 it passed / 28.10 miles."
+  },
+  {
+   "f0": 252,
+   "f1": 287,
+   "text": "The old / record, set"
+  },
+  {
+   "f0": 287,
+   "f1": 374,
+   "text": "by Opportunity, / was 28.06."
+  },
+  {
+   "f0": 374,
+   "f1": 421,
+   "text": "Opportunity / needed almost"
+  },
+  {
+   "f0": 421,
+   "f1": 470,
+   "text": "fifteen years."
+  },
+  {
+   "f0": 470,
+   "f1": 519,
+   "text": "Perseverance / took five and"
+  },
+  {
+   "f0": 519,
+   "f1": 534,
+   "text": "a half."
+  },
+  {
+   "f0": 534,
+   "f1": 560,
+   "text": "How?"
+  },
+  {
+   "f0": 560,
+   "f1": 610,
+   "text": "It drives itself,"
+  },
+  {
+   "f0": 610,
+   "f1": 679,
+   "text": "mapping hazards / while rolling."
+  },
+  {
+   "f0": 679,
+   "f1": 698,
+   "text": "Sojourner"
+  },
+  {
+   "f0": 698,
+   "f1": 740,
+   "text": "checked 20 points / ahead."
+  },
+  {
+   "f0": 740,
+   "f1": 836,
+   "text": "Perseverance / checked 600,000."
+  },
+  {
+   "f0": 836,
+   "f1": 880,
+   "text": "Next stop, / Idubi, to look"
+  },
+  {
+   "f0": 880,
+   "f1": 929,
+   "text": "for ancient hot / water systems."
+  },
+  {
+   "f0": 929,
+   "f1": 959,
+   "text": "NASA expects"
+  },
+  {
+   "f0": 959,
+   "f1": 1023,
+   "text": "the record / to keep growing."
+  },
+  {
+   "f0": 1023,
+   "f1": 1048,
+   "text": "Follow / Downlink Cat"
+  },
+  {
+   "f0": 1048,
+   "f1": 1113,
+   "text": "to watch."
+  }
+ ],
+ "cues": 18,
+ "cat": {
+  "share": 0.547,
+  "framesOn": 609,
+  "windows": [
+   [
+    4,
+    74
+   ],
+   [
+    152,
+    347
+   ],
+   [
+    536,
+    651
+   ],
+   [
+    887,
+    1112
+   ]
+  ],
+  "moves": [
+   "enter pop",
+   "gasp",
+   "exit tether",
+   "enter drop",
+   "thumbs",
+   "sign",
+   "point",
+   "exit zip",
+   "what",
+   "listen",
+   "nod",
+   "enter skid",
+   "walk",
+   "bounce"
+  ],
+  "hits": 146,
+  "hardHits": 0,
+  "exemptHits": 133
+ },
+ "problems": [],
+ "notes": [
+  "cat leaves the safe zone on 13 frames outside entrances and exits: 577-580, 923-931",
+  "beat years: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 389, 394, 399, 404, 409, 414, 419, 424, 429, 434, 439, 444, 449, 454, 459, 464, 469 (fill the frame: a larger lens, a lower diagram, the cat)",
+  "beat next: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 844, 849, 854, 859, 864, 869, 874, 879, 884, 984, 994 (fill the frame: a larger lens, a lower diagram, the cat)"
+ ],
+ "warnings": [],
+ "qaFrames": [
+  0,
+  2,
+  25,
+  46,
+  47,
+  54,
+  61,
+  96,
+  137,
+  138,
+  145,
+  152,
+  195,
+  243,
+  244,
+  252,
+  258,
+  310,
+  366,
+  367,
+  374,
+  381,
+  451,
+  526,
+  527,
+  534,
+  541,
+  603,
+  671,
+  672,
+  679,
+  686,
+  758,
+  835,
+  836,
+  975,
+  1112
+ ]
+}

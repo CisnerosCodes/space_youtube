@@ -1,0 +1,124 @@
+[
+ {
+  "frame": 54,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 103,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into launch"
+ },
+ {
+  "frame": 131,
+  "fps": 30,
+  "type": "impact",
+  "note": "liftoff",
+  "sfx": "impact_big",
+  "gain_db": -3
+ },
+ {
+  "frame": 147,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 168,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into target"
+ },
+ {
+  "frame": 214,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "step1 band wipes in"
+ },
+ {
+  "frame": 280,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 314,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "step2 band wipes in"
+ },
+ {
+  "frame": 496,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 564,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "step3 band wipes in"
+ },
+ {
+  "frame": 604,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 684,
+  "fps": 30,
+  "type": "reveal",
+  "note": "iris into ten"
+ },
+ {
+  "frame": 723,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 760,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "step4 band wipes in"
+ },
+ {
+  "frame": 802,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 886,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 949,
+  "fps": 30,
+  "type": "impact",
+  "note": "smash cut into first"
+ },
+ {
+  "frame": 996,
+  "fps": 30,
+  "type": "reveal",
+  "note": "iris into home"
+ },
+ {
+  "frame": 1041,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "nextband band wipes in"
+ },
+ {
+  "frame": 1211,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "wordmark echo mark, sonic logo"
+ }
+]

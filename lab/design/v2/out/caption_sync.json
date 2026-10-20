@@ -1,0 +1,846 @@
+{
+ "maxAbsDiffFrames": 0.5,
+ "outsideTwoFrames": [],
+ "rows": [
+  {
+   "i": 0,
+   "text": "Mars",
+   "timedFrom": "transcript \"Mars\"",
+   "spokenFrame": 10.8,
+   "shownFrame": 11,
+   "diff": 0.2
+  },
+  {
+   "i": 1,
+   "text": "has",
+   "timedFrom": "transcript \"has\"",
+   "spokenFrame": 23.4,
+   "shownFrame": 23,
+   "diff": -0.4
+  },
+  {
+   "i": 2,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 28.8,
+   "shownFrame": 29,
+   "diff": 0.2
+  },
+  {
+   "i": 3,
+   "text": "moon",
+   "timedFrom": "transcript \"moon\"",
+   "spokenFrame": 31.2,
+   "shownFrame": 31,
+   "diff": -0.2
+  },
+  {
+   "i": 4,
+   "text": "that",
+   "timedFrom": "transcript \"that\"",
+   "spokenFrame": 40.2,
+   "shownFrame": 40,
+   "diff": -0.2
+  },
+  {
+   "i": 5,
+   "text": "is",
+   "timedFrom": "transcript \"is\"",
+   "spokenFrame": 47.5,
+   "shownFrame": 47,
+   "diff": -0.5
+  },
+  {
+   "i": 6,
+   "text": "falling.",
+   "timedFrom": "transcript \"falling\"",
+   "spokenFrame": 60.7,
+   "shownFrame": 61,
+   "diff": 0.3
+  },
+  {
+   "i": 7,
+   "text": "Slowly.",
+   "timedFrom": "transcript \"slowly.\"",
+   "spokenFrame": 90.7,
+   "shownFrame": 91,
+   "diff": 0.3
+  },
+  {
+   "i": 8,
+   "text": "Phobos",
+   "timedFrom": "transcript \"Phobos\"",
+   "spokenFrame": 120.1,
+   "shownFrame": 120,
+   "diff": -0.1
+  },
+  {
+   "i": 9,
+   "text": "drops",
+   "timedFrom": "transcript \"drops\"",
+   "spokenFrame": 132.8,
+   "shownFrame": 133,
+   "diff": 0.3
+  },
+  {
+   "i": 10,
+   "text": "about",
+   "timedFrom": "transcript \"about\"",
+   "spokenFrame": 141.2,
+   "shownFrame": 141,
+   "diff": -0.2
+  },
+  {
+   "i": 11,
+   "text": "six",
+   "timedFrom": "transcript \"six\"",
+   "spokenFrame": 150.8,
+   "shownFrame": 151,
+   "diff": 0.3
+  },
+  {
+   "i": 12,
+   "text": "feet",
+   "timedFrom": "transcript \"feet\"",
+   "spokenFrame": 160.4,
+   "shownFrame": 160,
+   "diff": -0.4
+  },
+  {
+   "i": 13,
+   "text": "closer",
+   "timedFrom": "transcript \"closer\"",
+   "spokenFrame": 168.2,
+   "shownFrame": 168,
+   "diff": -0.2
+  },
+  {
+   "i": 14,
+   "text": "to",
+   "timedFrom": "transcript \"to\"",
+   "spokenFrame": 176.6,
+   "shownFrame": 177,
+   "diff": 0.4
+  },
+  {
+   "i": 15,
+   "text": "Mars",
+   "timedFrom": "transcript \"Mars\"",
+   "spokenFrame": 180.2,
+   "shownFrame": 180,
+   "diff": -0.2
+  },
+  {
+   "i": 16,
+   "text": "every",
+   "timedFrom": "transcript \"every\"",
+   "spokenFrame": 193.4,
+   "shownFrame": 193,
+   "diff": -0.4
+  },
+  {
+   "i": 17,
+   "text": "hundred",
+   "timedFrom": "transcript \"hundred\"",
+   "spokenFrame": 202.4,
+   "shownFrame": 202,
+   "diff": -0.4
+  },
+  {
+   "i": 18,
+   "text": "years.",
+   "timedFrom": "transcript \"years.\"",
+   "spokenFrame": 214.4,
+   "shownFrame": 214,
+   "diff": -0.4
+  },
+  {
+   "i": 19,
+   "text": "In",
+   "timedFrom": "transcript \"In\"",
+   "spokenFrame": 244.5,
+   "shownFrame": 244,
+   "diff": -0.5
+  },
+  {
+   "i": 20,
+   "text": "fifty",
+   "timedFrom": "transcript \"50\"",
+   "spokenFrame": 249.9,
+   "shownFrame": 250,
+   "diff": 0.1
+  },
+  {
+   "i": 21,
+   "text": "million",
+   "timedFrom": "transcript \"million\"",
+   "spokenFrame": 258.3,
+   "shownFrame": 258,
+   "diff": -0.3
+  },
+  {
+   "i": 22,
+   "text": "years,",
+   "timedFrom": "transcript \"years,\"",
+   "spokenFrame": 267.3,
+   "shownFrame": 267,
+   "diff": -0.3
+  },
+  {
+   "i": 23,
+   "text": "it",
+   "timedFrom": "transcript \"it\"",
+   "spokenFrame": 279.9,
+   "shownFrame": 280,
+   "diff": 0.1
+  },
+  {
+   "i": 24,
+   "text": "either",
+   "timedFrom": "transcript \"either\"",
+   "spokenFrame": 285.3,
+   "shownFrame": 285,
+   "diff": -0.3
+  },
+  {
+   "i": 25,
+   "text": "crashes",
+   "timedFrom": "transcript \"crashes\"",
+   "spokenFrame": 294.9,
+   "shownFrame": 295,
+   "diff": 0.1
+  },
+  {
+   "i": 26,
+   "text": "into",
+   "timedFrom": "transcript \"into\"",
+   "spokenFrame": 310.5,
+   "shownFrame": 311,
+   "diff": 0.5
+  },
+  {
+   "i": 27,
+   "text": "Mars,",
+   "timedFrom": "transcript \"Mars\"",
+   "spokenFrame": 315.3,
+   "shownFrame": 315,
+   "diff": -0.3
+  },
+  {
+   "i": 28,
+   "text": "or",
+   "timedFrom": "transcript \"or\"",
+   "spokenFrame": 338.8,
+   "shownFrame": 339,
+   "diff": 0.2
+  },
+  {
+   "i": 29,
+   "text": "shatters",
+   "timedFrom": "transcript \"shatters\"",
+   "spokenFrame": 356.8,
+   "shownFrame": 357,
+   "diff": 0.2
+  },
+  {
+   "i": 30,
+   "text": "into",
+   "timedFrom": "transcript \"into\"",
+   "spokenFrame": 370,
+   "shownFrame": 370,
+   "diff": 0
+  },
+  {
+   "i": 31,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 376.6,
+   "shownFrame": 377,
+   "diff": 0.4
+  },
+  {
+   "i": 32,
+   "text": "ring.",
+   "timedFrom": "transcript \"ring.\"",
+   "spokenFrame": 384.4,
+   "shownFrame": 384,
+   "diff": -0.4
+  },
+  {
+   "i": 33,
+   "text": "And",
+   "timedFrom": "transcript \"And\"",
+   "spokenFrame": 415.7,
+   "shownFrame": 416,
+   "diff": 0.3
+  },
+  {
+   "i": 34,
+   "text": "on",
+   "timedFrom": "transcript \"on\"",
+   "spokenFrame": 419.3,
+   "shownFrame": 419,
+   "diff": -0.3
+  },
+  {
+   "i": 35,
+   "text": "Monday,",
+   "timedFrom": "transcript \"Monday,\"",
+   "spokenFrame": 422.9,
+   "shownFrame": 423,
+   "diff": 0.1
+  },
+  {
+   "i": 36,
+   "text": "Japan",
+   "timedFrom": "transcript \"Japan\"",
+   "spokenFrame": 438.5,
+   "shownFrame": 438,
+   "diff": -0.5
+  },
+  {
+   "i": 37,
+   "text": "launches",
+   "timedFrom": "transcript \"launches\"",
+   "spokenFrame": 448.7,
+   "shownFrame": 449,
+   "diff": 0.3
+  },
+  {
+   "i": 38,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 457.1,
+   "shownFrame": 457,
+   "diff": -0.1
+  },
+  {
+   "i": 39,
+   "text": "mission",
+   "timedFrom": "transcript \"mission\"",
+   "spokenFrame": 458.9,
+   "shownFrame": 459,
+   "diff": 0.1
+  },
+  {
+   "i": 40,
+   "text": "to",
+   "timedFrom": "transcript \"to\"",
+   "spokenFrame": 467.3,
+   "shownFrame": 467,
+   "diff": -0.3
+  },
+  {
+   "i": 41,
+   "text": "go",
+   "timedFrom": "transcript \"go\"",
+   "spokenFrame": 471.5,
+   "shownFrame": 472,
+   "diff": 0.5
+  },
+  {
+   "i": 42,
+   "text": "grab",
+   "timedFrom": "transcript \"grab\"",
+   "spokenFrame": 476.9,
+   "shownFrame": 477,
+   "diff": 0.1
+  },
+  {
+   "i": 43,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 485.3,
+   "shownFrame": 485,
+   "diff": -0.3
+  },
+  {
+   "i": 44,
+   "text": "piece",
+   "timedFrom": "transcript \"piece\"",
+   "spokenFrame": 490.7,
+   "shownFrame": 491,
+   "diff": 0.3
+  },
+  {
+   "i": 45,
+   "text": "of",
+   "timedFrom": "transcript \"of\"",
+   "spokenFrame": 499.7,
+   "shownFrame": 500,
+   "diff": 0.3
+  },
+  {
+   "i": 46,
+   "text": "it.",
+   "timedFrom": "transcript \"it.\"",
+   "spokenFrame": 503.3,
+   "shownFrame": 503,
+   "diff": -0.3
+  },
+  {
+   "i": 47,
+   "text": "It",
+   "timedFrom": "transcript \"It\"",
+   "spokenFrame": 520.8,
+   "shownFrame": 521,
+   "diff": 0.2
+  },
+  {
+   "i": 48,
+   "text": "is",
+   "timedFrom": "transcript \"is\"",
+   "spokenFrame": 523.8,
+   "shownFrame": 524,
+   "diff": 0.2
+  },
+  {
+   "i": 49,
+   "text": "called",
+   "timedFrom": "transcript \"called\"",
+   "spokenFrame": 526.8,
+   "shownFrame": 527,
+   "diff": 0.2
+  },
+  {
+   "i": 50,
+   "text": "MMX.",
+   "timedFrom": "transcript \"MMX.\"",
+   "spokenFrame": 541.2,
+   "shownFrame": 541,
+   "diff": -0.2
+  },
+  {
+   "i": 51,
+   "text": "Land",
+   "timedFrom": "transcript \"Land\"",
+   "spokenFrame": 568.2,
+   "shownFrame": 568,
+   "diff": -0.2
+  },
+  {
+   "i": 52,
+   "text": "on",
+   "timedFrom": "transcript \"on\"",
+   "spokenFrame": 575.4,
+   "shownFrame": 575,
+   "diff": -0.4
+  },
+  {
+   "i": 53,
+   "text": "Phobos,",
+   "timedFrom": "transcript \"Phobos,\"",
+   "spokenFrame": 579,
+   "shownFrame": 579,
+   "diff": 0
+  },
+  {
+   "i": 54,
+   "text": "scoop",
+   "timedFrom": "transcript \"scoop\"",
+   "spokenFrame": 597,
+   "shownFrame": 597,
+   "diff": 0
+  },
+  {
+   "i": 55,
+   "text": "up",
+   "timedFrom": "transcript \"up\"",
+   "spokenFrame": 606.7,
+   "shownFrame": 607,
+   "diff": 0.3
+  },
+  {
+   "i": 56,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 609.7,
+   "shownFrame": 610,
+   "diff": 0.3
+  },
+  {
+   "i": 57,
+   "text": "sample,",
+   "timedFrom": "transcript \"sample,\"",
+   "spokenFrame": 611.5,
+   "shownFrame": 611,
+   "diff": -0.5
+  },
+  {
+   "i": 58,
+   "text": "fly",
+   "timedFrom": "transcript \"fly\"",
+   "spokenFrame": 628.9,
+   "shownFrame": 629,
+   "diff": 0.1
+  },
+  {
+   "i": 59,
+   "text": "it",
+   "timedFrom": "transcript \"it\"",
+   "spokenFrame": 637.3,
+   "shownFrame": 637,
+   "diff": -0.3
+  },
+  {
+   "i": 60,
+   "text": "home.",
+   "timedFrom": "transcript \"home.\"",
+   "spokenFrame": 639.7,
+   "shownFrame": 640,
+   "diff": 0.3
+  },
+  {
+   "i": 61,
+   "text": "No",
+   "timedFrom": "transcript \"No\"",
+   "spokenFrame": 666.1,
+   "shownFrame": 666,
+   "diff": -0.1
+  },
+  {
+   "i": 62,
+   "text": "mission",
+   "timedFrom": "transcript \"mission\"",
+   "spokenFrame": 671.5,
+   "shownFrame": 672,
+   "diff": 0.5
+  },
+  {
+   "i": 63,
+   "text": "has",
+   "timedFrom": "transcript \"has\"",
+   "spokenFrame": 679.9,
+   "shownFrame": 680,
+   "diff": 0.1
+  },
+  {
+   "i": 64,
+   "text": "ever",
+   "timedFrom": "transcript \"ever\"",
+   "spokenFrame": 690.1,
+   "shownFrame": 690,
+   "diff": -0.1
+  },
+  {
+   "i": 65,
+   "text": "brought",
+   "timedFrom": "transcript \"brought\"",
+   "spokenFrame": 696.8,
+   "shownFrame": 697,
+   "diff": 0.3
+  },
+  {
+   "i": 66,
+   "text": "back",
+   "timedFrom": "transcript \"back\"",
+   "spokenFrame": 703.4,
+   "shownFrame": 703,
+   "diff": -0.4
+  },
+  {
+   "i": 67,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 709.4,
+   "shownFrame": 709,
+   "diff": -0.4
+  },
+  {
+   "i": 68,
+   "text": "sample",
+   "timedFrom": "transcript \"sample\"",
+   "spokenFrame": 711.8,
+   "shownFrame": 712,
+   "diff": 0.2
+  },
+  {
+   "i": 69,
+   "text": "from",
+   "timedFrom": "transcript \"from\"",
+   "spokenFrame": 720.8,
+   "shownFrame": 721,
+   "diff": 0.2
+  },
+  {
+   "i": 70,
+   "text": "Mars",
+   "timedFrom": "transcript \"Mars\"",
+   "spokenFrame": 725,
+   "shownFrame": 725,
+   "diff": 0
+  },
+  {
+   "i": 71,
+   "text": "or",
+   "timedFrom": "transcript \"or\"",
+   "spokenFrame": 740,
+   "shownFrame": 740,
+   "diff": 0
+  },
+  {
+   "i": 72,
+   "text": "its",
+   "timedFrom": "transcript \"its\"",
+   "spokenFrame": 743,
+   "shownFrame": 743,
+   "diff": 0
+  },
+  {
+   "i": 73,
+   "text": "moons.",
+   "timedFrom": "transcript \"moons.\"",
+   "spokenFrame": 750.8,
+   "shownFrame": 751,
+   "diff": 0.2
+  },
+  {
+   "i": 74,
+   "text": "Why",
+   "timedFrom": "transcript \"Why\"",
+   "spokenFrame": 786.8,
+   "shownFrame": 787,
+   "diff": 0.2
+  },
+  {
+   "i": 75,
+   "text": "bother?",
+   "timedFrom": "transcript \"bother?\"",
+   "spokenFrame": 791,
+   "shownFrame": 791,
+   "diff": 0
+  },
+  {
+   "i": 76,
+   "text": "Because",
+   "timedFrom": "transcript \"Because\"",
+   "spokenFrame": 813.9,
+   "shownFrame": 814,
+   "diff": 0.1
+  },
+  {
+   "i": 77,
+   "text": "nobody",
+   "timedFrom": "transcript \"nobody\"",
+   "spokenFrame": 825.3,
+   "shownFrame": 825,
+   "diff": -0.3
+  },
+  {
+   "i": 78,
+   "text": "knows",
+   "timedFrom": "transcript \"knows\"",
+   "spokenFrame": 836.7,
+   "shownFrame": 837,
+   "diff": 0.3
+  },
+  {
+   "i": 79,
+   "text": "where",
+   "timedFrom": "transcript \"where\"",
+   "spokenFrame": 846.3,
+   "shownFrame": 846,
+   "diff": -0.3
+  },
+  {
+   "i": 80,
+   "text": "these",
+   "timedFrom": "transcript \"these\"",
+   "spokenFrame": 852.9,
+   "shownFrame": 853,
+   "diff": 0.1
+  },
+  {
+   "i": 81,
+   "text": "moons",
+   "timedFrom": "transcript \"moons\"",
+   "spokenFrame": 859.5,
+   "shownFrame": 860,
+   "diff": 0.5
+  },
+  {
+   "i": 82,
+   "text": "came",
+   "timedFrom": "transcript \"came\"",
+   "spokenFrame": 866.7,
+   "shownFrame": 867,
+   "diff": 0.3
+  },
+  {
+   "i": 83,
+   "text": "from.",
+   "timedFrom": "transcript \"from.\"",
+   "spokenFrame": 876.3,
+   "shownFrame": 876,
+   "diff": -0.3
+  },
+  {
+   "i": 84,
+   "text": "That",
+   "timedFrom": "interpolated",
+   "spokenFrame": 882.4,
+   "shownFrame": 882,
+   "diff": -0.4
+  },
+  {
+   "i": 85,
+   "text": "sample",
+   "timedFrom": "interpolated",
+   "spokenFrame": 894.6,
+   "shownFrame": 895,
+   "diff": 0.4
+  },
+  {
+   "i": 86,
+   "text": "could",
+   "timedFrom": "transcript \"could\"",
+   "spokenFrame": 913,
+   "shownFrame": 913,
+   "diff": 0
+  },
+  {
+   "i": 87,
+   "text": "finally",
+   "timedFrom": "transcript \"finally\"",
+   "spokenFrame": 921.4,
+   "shownFrame": 921,
+   "diff": -0.4
+  },
+  {
+   "i": 88,
+   "text": "tell",
+   "timedFrom": "transcript \"tell\"",
+   "spokenFrame": 938.8,
+   "shownFrame": 939,
+   "diff": 0.2
+  },
+  {
+   "i": 89,
+   "text": "us.",
+   "timedFrom": "transcript \"us.\"",
+   "spokenFrame": 947.2,
+   "shownFrame": 947,
+   "diff": -0.2
+  },
+  {
+   "i": 90,
+   "text": "Liftoff",
+   "timedFrom": "transcript \"Liftoff\"",
+   "spokenFrame": 974.8,
+   "shownFrame": 975,
+   "diff": 0.2
+  },
+  {
+   "i": 91,
+   "text": "is",
+   "timedFrom": "transcript \"is\"",
+   "spokenFrame": 988.6,
+   "shownFrame": 989,
+   "diff": 0.4
+  },
+  {
+   "i": 92,
+   "text": "Monday,",
+   "timedFrom": "transcript \"Monday\"",
+   "spokenFrame": 993.5,
+   "shownFrame": 993,
+   "diff": -0.5
+  },
+  {
+   "i": 93,
+   "text": "on",
+   "timedFrom": "transcript \"on\"",
+   "spokenFrame": 1002.5,
+   "shownFrame": 1002,
+   "diff": -0.5
+  },
+  {
+   "i": 94,
+   "text": "Japan's",
+   "timedFrom": "transcript \"Japan's\"",
+   "spokenFrame": 1009.1,
+   "shownFrame": 1009,
+   "diff": -0.1
+  },
+  {
+   "i": 95,
+   "text": "H3",
+   "timedFrom": "transcript \"H-3\"",
+   "spokenFrame": 1027.7,
+   "shownFrame": 1028,
+   "diff": 0.3
+  },
+  {
+   "i": 96,
+   "text": "rocket.",
+   "timedFrom": "transcript \"rocket.\"",
+   "spokenFrame": 1036.7,
+   "shownFrame": 1037,
+   "diff": 0.3
+  },
+  {
+   "i": 97,
+   "text": "Follow,",
+   "timedFrom": "transcript \"Follow\"",
+   "spokenFrame": 1057.1,
+   "shownFrame": 1057,
+   "diff": -0.1
+  },
+  {
+   "i": 98,
+   "text": "and",
+   "timedFrom": "transcript \"and\"",
+   "spokenFrame": 1066.7,
+   "shownFrame": 1067,
+   "diff": 0.3
+  },
+  {
+   "i": 99,
+   "text": "we",
+   "timedFrom": "transcript \"we\"",
+   "spokenFrame": 1076.4,
+   "shownFrame": 1076,
+   "diff": -0.4
+  },
+  {
+   "i": 100,
+   "text": "will",
+   "timedFrom": "transcript \"will\"",
+   "spokenFrame": 1078.8,
+   "shownFrame": 1079,
+   "diff": 0.2
+  },
+  {
+   "i": 101,
+   "text": "show",
+   "timedFrom": "transcript \"show\"",
+   "spokenFrame": 1084.8,
+   "shownFrame": 1085,
+   "diff": 0.2
+  },
+  {
+   "i": 102,
+   "text": "you",
+   "timedFrom": "transcript \"you\"",
+   "spokenFrame": 1090.8,
+   "shownFrame": 1091,
+   "diff": 0.2
+  },
+  {
+   "i": 103,
+   "text": "the",
+   "timedFrom": "transcript \"the\"",
+   "spokenFrame": 1094.4,
+   "shownFrame": 1094,
+   "diff": -0.4
+  },
+  {
+   "i": 104,
+   "text": "launch.",
+   "timedFrom": "transcript \"launch.\"",
+   "spokenFrame": 1097.4,
+   "shownFrame": 1097,
+   "diff": -0.4
+  }
+ ]
+}

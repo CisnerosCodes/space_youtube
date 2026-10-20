@@ -1,0 +1,18 @@
+[
+  {"frame": 0,    "fps": 30, "type": "impact",       "note": "cold open on Phobos"},
+  {"frame": 103,  "fps": 30, "type": "hard_cut",     "note": "cut to the H3 launch on 'Japan'"},
+  {"frame": 159,  "fps": 30, "type": "scene_move",   "note": "whip up and out to MMX in space"},
+  {"frame": 220,  "fps": 30, "type": "chip_in",      "note": "STEP 01 kicker"},
+  {"frame": 306,  "fps": 30, "type": "scene_move",   "note": "whip pan from Mars to Phobos"},
+  {"frame": 404,  "fps": 30, "type": "number_slam",  "note": "25 KG"},
+  {"frame": 468,  "fps": 30, "type": "impact",       "note": "IDEFIX first touches Phobos", "gain_db": -3},
+  {"frame": 496,  "fps": 30, "type": "number_slam",  "note": "15 GRAMS"},
+  {"frame": 604,  "fps": 30, "type": "impact",       "note": "MMX touchdown on 'grab'"},
+  {"frame": 654,  "fps": 30, "type": "hard_cut",     "note": "nitrogen gas burst", "gain_db": -2},
+  {"frame": 723,  "fps": 30, "type": "number_slam",  "note": "10 GRAMS"},
+  {"frame": 802,  "fps": 30, "type": "riser",        "note": "riser lands on the burn"},
+  {"frame": 846,  "fps": 30, "type": "impact",       "note": "cut to the capsule streak"},
+  {"frame": 928,  "fps": 30, "type": "reveal",       "note": "the loot: Phobos turns"},
+  {"frame": 1047, "fps": 30, "type": "next_card_in", "note": "NEXT card"},
+  {"frame": 1213, "fps": 30, "type": "wordmark_echo","note": "dot pulses with the note, ring 12 frames later with the echo"}
+]

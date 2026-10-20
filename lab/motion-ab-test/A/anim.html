@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>Webb Mirror Short</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+  :root{
+    --bg:#04060b; --gold:#f2c66b; --gold2:#ffe2a0; --ink:#f4f1ea; --mute:rgba(244,241,234,.66);
+  }
+  html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:var(--bg);}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--bg);
+    font-family:"Inter",system-ui,sans-serif;color:var(--ink);}
+  canvas{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+  .anim{position:absolute;left:80px;right:80px;will-change:transform,opacity,filter;}
+  .w{display:inline-block;will-change:transform,opacity,filter;}
+  .kicker{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:30px;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--gold);}
+  .head{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:112px;line-height:1.0;letter-spacing:-.035em;}
+  .head.md{font-size:92px;}
+  .sub{font-family:"Inter",sans-serif;font-weight:500;font-size:40px;line-height:1.3;color:var(--mute);}
+  .gold{background:linear-gradient(100deg,#c8902f 0%,#ffe6a6 45%,#e9b456 70%,#a8731f 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .center{text-align:center;}
+  .big{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:300px;line-height:.9;letter-spacing:-.05em;
+    font-variant-numeric:tabular-nums;}
+  .chip{display:flex;align-items:center;gap:28px;padding:30px 36px;border-radius:28px;
+    background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+    border:1.5px solid rgba(242,198,107,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);}
+  .chip .v{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:72px;letter-spacing:-.03em;white-space:nowrap;}
+  .chip .l{font-size:34px;line-height:1.25;color:var(--mute);font-weight:500;}
+  .chip .l b{color:var(--ink);font-weight:600;}
+  #credit{position:absolute;left:80px;bottom:120px;font-family:"Inter",sans-serif;font-size:24px;font-weight:500;
+    letter-spacing:.02em;color:rgba(244,241,234,.72);}
+  #credit:before{content:"";display:inline-block;width:28px;height:2px;background:var(--gold);vertical-align:middle;margin-right:14px;opacity:.8;}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1080" height="1920"></canvas>
+
+  <!-- Scene 0: hook -->
+  <div class="anim kicker" style="top:150px" data-in="0.15" data-out="2.35">James Webb Space Telescope</div>
+  <div class="anim head" style="top:1270px" data-in="0.35" data-out="2.35" data-st="0.09">One mirror.</div>
+  <div class="anim head" style="top:1390px" data-in="1.0" data-out="2.35" data-st="0.09"><span class="gold">Eighteen</span> pieces.</div>
+
+  <!-- Scene 1: assembly -->
+  <div class="anim kicker center" style="top:200px" data-in="2.8" data-out="5.55">Primary mirror</div>
+  <div class="anim center" style="top:1420px" data-in="2.8" data-out="5.55" data-nosplit="1">
+    <div class="big gold" id="cnt">00</div>
+  </div>
+  <div class="anim sub center" style="top:1700px;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.02em;font-size:46px" data-in="3.1" data-out="5.55">hexagonal segments</div>
+
+  <!-- Scene 2: one segment -->
+  <div class="anim kicker" style="top:150px" data-in="5.9" data-out="8.55">Each segment</div>
+  <div class="anim head md" style="top:210px" data-in="6.05" data-out="8.55" data-st="0.07">Just over <span class="gold">1.3&nbsp;m</span> across</div>
+  <div class="anim" style="top:1330px" data-in="6.8" data-out="8.55" data-nosplit="1">
+    <div class="chip"><div class="v gold">4.2 ft</div><div class="l">about the size of a <b>coffee table</b></div></div>
+  </div>
+  <div class="anim" style="top:1520px" data-in="7.4" data-out="8.55" data-nosplit="1">
+    <div class="chip"><div class="v gold">40 kg</div><div class="l"><b>88 lb</b> per segment</div></div>
+  </div>
+
+  <!-- Scene 3: one mirror -->
+  <div class="anim kicker" style="top:150px" data-in="8.9" data-out="99">Together, once deployed in space</div>
+  <div class="anim head md" style="top:210px" data-in="9.1" data-out="99" data-st="0.07">they work as <span class="gold">one mirror</span></div>
+  <div class="anim center" style="top:1440px" data-in="9.5" data-out="99" data-nosplit="1">
+    <div class="big gold" id="m65" style="font-size:250px">0.0 m</div>
+  </div>
+  <div class="anim sub center" style="top:1680px" data-in="9.9" data-out="99">21.3 feet</div>
+
+  <div id="credit">Photo: NASA/Goddard/Chris Gunn</div>
+</div>
+
+<script>
+(() => {
+  const W = 1080, H = 1920, CX = 540, CY = 900;
+  const cv = document.getElementById('c');
+  const ctx = cv.getContext('2d');
+
+  // ---------- math ----------
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const eOut = k => 1 - Math.pow(1 - k, 3);
+  const eInOut = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+  const eOutExpo = k => k >= 1 ? 1 : 1 - Math.pow(2, -10 * k);
+  const win = (t, a, b, f = eInOut) => f(clamp((t - a) / (b - a)));
+  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const rnd = mulberry32(20211);
+
+  // ---------- assets ----------
+  const img = new Image();
+  img.src = '../assets/webb_mirror_orig.jpg';
+  let blurC = null, grainC = null, imgOK = false;
+
+  function prep() {
+    blurC = document.createElement('canvas');
+    blurC.width = 1034; blurC.height = 775;
+    const b = blurC.getContext('2d');
+    b.filter = 'blur(9px)';
+    b.drawImage(img, -24, -24, 1034 + 48, 775 + 48);
+    grainC = document.createElement('canvas');
+    grainC.width = grainC.height = 512;
+    const g = grainC.getContext('2d');
+    const id = g.createImageData(512, 512);
+    const gr = mulberry32(777);
+    for (let i = 0; i < id.data.length; i += 4) {
+      const v = gr() * 255 | 0;
+      id.data[i] = id.data[i + 1] = id.data[i + 2] = v; id.data[i + 3] = 255;
+    }
+    g.putImageData(id, 0, 0);
+  }
+
+  // ---------- stars ----------
+  const stars = [];
+  for (let i = 0; i < 280; i++) stars.push({ x: rnd() * W, y: rnd() * H, r: .4 + Math.pow(rnd(), 3) * 2.2, d: .3 + rnd() * .7, f: .6 + rnd() * 2.2, p: rnd() * 6.283 });
+
+  // ---------- hex layout (flat-top, axial radius 2, no centre) ----------
+  const S = 100, SQ3 = Math.sqrt(3);
+  const hexes = [];
+  for (let q = -2; q <= 2; q++) for (let r = -2; r <= 2; r++) {
+    const s = -q - r;
+    if (Math.abs(s) > 2 || (q === 0 && r === 0)) continue;
+    const x = S * 1.5 * q, y = S * SQ3 * (r + q / 2);
+    const ring = Math.max(Math.abs(q), Math.abs(r), Math.abs(s));
+    hexes.push({ q, r, x, y, ring, ang: Math.atan2(y, x) });
+  }
+  hexes.sort((a, b) => a.ring - b.ring || ((a.ang + 7.85) % 6.283) - ((b.ang + 7.85) % 6.283));
+  hexes.forEach((h, i) => {
+    h.delay = 2.75 + i * 0.092;
+    const dir = Math.atan2(h.y, h.x) + (rnd() - .5) * .9;
+    const dist = 700 + rnd() * 500;
+    h.sx = h.x + Math.cos(dir) * dist; h.sy = h.y + Math.sin(dir) * dist;
+    h.srot = (rnd() - .5) * 2.4;
+    h.tone = rnd();
+    h.hl = (h.q === 0 && h.r === -2);
+  });
+
+  // ---------- drawing helpers ----------
+  function hexPath(cx, cy, R, rot) {
+    ctx.beginPath();
+    for (let k = 0; k < 6; k++) {
+      const a = rot + k * Math.PI / 3;
+      const px = cx + R * Math.cos(a), py = cy + R * Math.sin(a);
+      k ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+    }
+    ctx.closePath();
+  }
+
+  function drawPhoto(t) {
+    if (!imgOK) return;
+    const zoom = 1.0 + 0.16 * win(t, 0, 3.2, eOut) + 0.12 * win(t, 3.2, 10, eInOut);
+    const fx = lerp(980, 900, win(t, 0, 4)), fy = lerp(930, 1000, win(t, 0, 4));
+    const s = (H / 1550) * zoom;
+    const dw = 2068 * s, dh = 1550 * s;
+    let dx = W / 2 - fx * s, dy = H / 2 - fy * s;
+    dx = clamp(dx, W - dw, 0); dy = clamp(dy, H - dh, 0);
+    const fade = 1 - win(t, 8.6, 9.8);
+    const blurK = win(t, 2.2, 3.0);
+    const dim = lerp(1, 0.32, blurK);
+    if (fade <= 0) return;
+    ctx.globalAlpha = fade * dim * (1 - blurK * .85);
+    ctx.drawImage(img, dx, dy, dw, dh);
+    if (blurK > 0) { ctx.globalAlpha = fade * dim * blurK; ctx.drawImage(blurC, dx, dy, dw, dh); }
+    ctx.globalAlpha = 1;
+    // cinematic grade: cool shadows, legibility gradients
+    let g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, 'rgba(4,6,11,0.78)');
+    g.addColorStop(0.18, 'rgba(4,6,11,0.10)');
+    g.addColorStop(0.52, 'rgba(4,6,11,0.05)');
+    g.addColorStop(0.72, 'rgba(4,6,11,0.75)');
+    g.addColorStop(1, 'rgba(4,6,11,0.96)');
+    ctx.fillStyle = g; ctx.globalAlpha = fade; ctx.fillRect(0, 0, W, H);
+    ctx.globalAlpha = fade * 0.22; ctx.fillStyle = '#0a1a33';
+    ctx.globalCompositeOperation = 'multiply'; ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+  }
+
+  function drawStars(t) {
+    const a = 0.28 * win(t, 2.6, 3.8) + 0.72 * win(t, 8.6, 10.2);
+    if (a <= 0) return;
+    ctx.fillStyle = '#fff';
+    for (const s of stars) {
+      const tw = .55 + .45 * Math.sin(t * s.f + s.p);
+      ctx.globalAlpha = a * tw * (.35 + .65 * s.d);
+      const y = (s.y - t * 9 * s.d + H) % H;
+      ctx.beginPath(); ctx.arc(s.x, y, s.r, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function camera(t) {
+    const base = 0.94 + 0.06 * win(t, 2.6, 12, k => k);
+    const zIn = win(t, 5.75, 6.7) * (1 - win(t, 8.5, 9.4));
+    return { z: base * lerp(1, 1.38, zIn), fx: 0, fy: lerp(0, -190, zIn) };
+  }
+  const toScreen = (c, x, y) => [CX + (x - c.fx) * c.z, CY + (y - c.fy) * c.z];
+
+  function goldFill() {
+    const g = ctx.createLinearGradient(160, 420, 940, 1380);
+    g.addColorStop(0.00, '#5c3d0c');
+    g.addColorStop(0.22, '#b8852c');
+    g.addColorStop(0.42, '#f6d98c');
+    g.addColorStop(0.55, '#d9a547');
+    g.addColorStop(0.78, '#8a5d17');
+    g.addColorStop(1.00, '#4a300a');
+    return g;
+  }
+
+  function sheenAt(t) {
+    // returns band centre position (along diagonal axis) or null
+    const sweeps = [[4.95, 1.25], [9.35, 1.5], [11.0, 1.2]];
+    for (const [s0, d] of sweeps) if (t >= s0 && t <= s0 + d) return lerp(-900, 2100, eInOut((t - s0) / d));
+    return null;
+  }
+
+  function dimLine(x1, x2, y, prog, label, alpha, tickDown) {
+    if (alpha <= 0 || prog <= 0) return;
+    const mid = (x1 + x2) / 2, half = (x2 - x1) / 2 * prog;
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.strokeStyle = '#f2c66b'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(mid - half, y); ctx.lineTo(mid + half, y); ctx.stroke();
+    const tk = clamp((prog - .85) / .15);
+    if (tk > 0) {
+      ctx.globalAlpha = alpha * tk;
+      ctx.beginPath();
+      ctx.moveTo(x1, y - 16); ctx.lineTo(x1, y + 16);
+      ctx.moveTo(x2, y - 16); ctx.lineTo(x2, y + 16);
+      ctx.stroke();
+      ctx.setLineDash([4, 8]); ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(242,198,107,.6)';
+      ctx.beginPath();
+      ctx.moveTo(x1, y); ctx.lineTo(x1, y + tickDown);
+      ctx.moveTo(x2, y); ctx.lineTo(x2, y + tickDown);
+      ctx.stroke(); ctx.setLineDash([]);
+      // arrow heads
+      ctx.fillStyle = '#f2c66b';
+      ctx.beginPath(); ctx.moveTo(x1, y); ctx.lineTo(x1 + 16, y - 7); ctx.lineTo(x1 + 16, y + 7); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(x2, y); ctx.lineTo(x2 - 16, y - 7); ctx.lineTo(x2 - 16, y + 7); ctx.fill();
+    }
+    if (label) {
+      ctx.globalAlpha = alpha * clamp((prog - .5) / .5);
+      ctx.font = '600 34px "Space Grotesk", sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      const tw = ctx.measureText(label).width + 28;
+      ctx.fillStyle = '#04060b'; ctx.fillRect(mid - tw / 2, y - 22, tw, 44);
+      ctx.fillStyle = '#ffe2a0'; ctx.fillText(label, mid, y + 1);
+    }
+    ctx.restore();
+  }
+
+  function drawMirror(t) {
+    const c = camera(t);
+    const ghost = win(t, 2.25, 2.9) * (1 - win(t, 5.0, 5.6));
+    const hl = win(t, 5.8, 6.5) * (1 - win(t, 8.55, 9.2));
+    const unite = win(t, 8.8, 9.9);
+    const gap = lerp(9, 2.5, unite);
+    const R = S * c.z;
+    const fill = goldFill();
+    const band = sheenAt(t);
+
+    // back glow
+    const glowA = 0.18 * win(t, 4.6, 5.4) + 0.45 * unite;
+    if (glowA > 0) {
+      const [gx, gy] = toScreen(c, 0, 0);
+      const g = ctx.createRadialGradient(gx, gy, 50, gx, gy, 760 * c.z);
+      g.addColorStop(0, `rgba(255,196,96,${glowA * .55})`);
+      g.addColorStop(.45, `rgba(255,160,60,${glowA * .22})`);
+      g.addColorStop(1, 'rgba(255,150,50,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    }
+
+    // ghost targets
+    if (ghost > 0) {
+      ctx.lineWidth = 1.5;
+      for (const h of hexes) {
+        const [x, y] = toScreen(c, h.x, h.y);
+        const k = clamp((t - 2.25 - h.ring * .12) / .5);
+        hexPath(x, y, (R - gap / 2) * lerp(.6, 1, eOut(k)), 0);
+        ctx.strokeStyle = `rgba(242,198,107,${.55 * ghost * k})`;
+        ctx.stroke();
+      }
+    }
+
+    for (const h of hexes) {
+      const k = clamp((t - h.delay) / 0.75);
+      if (k <= 0) continue;
+      const e = eOutExpo(k);
+      const wx = lerp(h.sx, h.x, e), wy = lerp(h.sy, h.y, e);
+      let [x, y] = toScreen(c, wx, wy);
+      const rot = h.srot * (1 - e);
+      let sc = lerp(.35, 1, e);
+      if (h.hl) sc *= 1 + .1 * hl;
+      const rr = (R - gap / 2) * sc;
+      let a = clamp(k * 2.2) * (h.hl ? 1 : 1 - .8 * hl);
+
+      ctx.save();
+      ctx.globalAlpha = a;
+      if (unite > 0 || (h.hl && hl > 0)) {
+        ctx.shadowColor = 'rgba(255,200,100,.65)';
+        ctx.shadowBlur = 40 * Math.max(unite, h.hl ? hl : 0);
+      }
+      hexPath(x, y, rr, rot);
+      ctx.fillStyle = fill; ctx.fill();
+      ctx.shadowBlur = 0;
+      // per-segment tonal variation + inner bevel
+      ctx.fillStyle = `rgba(20,10,0,${.05 + h.tone * .2 * (1 - unite * .7)})`; ctx.fill();
+      const ig = ctx.createRadialGradient(x - rr * .3, y - rr * .4, 0, x, y, rr * 1.1);
+      ig.addColorStop(0, 'rgba(255,245,215,.22)'); ig.addColorStop(.6, 'rgba(255,245,215,0)'); ig.addColorStop(1, 'rgba(0,0,0,.28)');
+      ctx.fillStyle = ig; ctx.fill();
+      // landing flash
+      const flash = clamp(1 - (t - h.delay - .35) / .45) * (k > .45 ? 1 : 0);
+      if (flash > 0) { ctx.fillStyle = `rgba(255,240,200,${flash * .55})`; ctx.fill(); }
+      // sheen band
+      if (band !== null) {
+        const sg = ctx.createLinearGradient(band - 260, band * .55 - 143 + 300, band + 260, band * .55 + 143 + 300);
+        sg.addColorStop(0, 'rgba(255,255,255,0)'); sg.addColorStop(.5, 'rgba(255,250,230,.55)'); sg.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = sg; ctx.fill();
+        ctx.globalCompositeOperation = 'source-over';
+      }
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = h.hl && hl > 0 ? `rgba(255,236,180,${.6 + .4 * hl})` : 'rgba(255,226,160,.55)';
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // centre opening ring
+    const ca = win(t, 4.4, 5.0) * (1 - hl);
+    if (ca > 0) {
+      const [x, y] = toScreen(c, 0, 0);
+      hexPath(x, y, (R - gap / 2) * .92, 0);
+      ctx.strokeStyle = `rgba(242,198,107,${.25 * ca})`; ctx.lineWidth = 1.5;
+      ctx.setLineDash([6, 8]); ctx.stroke(); ctx.setLineDash([]);
+    }
+
+    // segment dimension
+    if (hl > 0) {
+      const h = hexes.find(h => h.hl);
+      const [x, y] = toScreen(c, h.x, h.y);
+      const rr = (R - gap / 2) * 1.1;
+      const top = y - rr * SQ3 / 2;
+      dimLine(x - rr, x + rr, top - 46, win(t, 6.3, 7.1, eOut), '1.3 m', hl, rr * SQ3 / 2 + 46);
+    }
+    // full mirror dimension
+    const fa = win(t, 9.3, 9.8);
+    if (fa > 0) {
+      const [lx] = toScreen(c, -4 * S, 0), [rx] = toScreen(c, 4 * S, 0);
+      const [, by] = toScreen(c, 0, 2 * S * SQ3 + S * SQ3 / 2);
+      const [, my] = toScreen(c, 0, 0);
+      dimLine(lx, rx, by + 50, win(t, 9.3, 10.4, eOut), '6.5 m', fa, -(by + 50 - my));
+    }
+  }
+
+  function drawHUD(t) {
+    const a = win(t, 0.1, 0.8) * .8;
+    if (a <= 0) return;
+    ctx.save();
+    ctx.globalAlpha = a; ctx.strokeStyle = 'rgba(244,241,234,.55)'; ctx.lineWidth = 2;
+    const m = 48, L = 44 * win(t, 0.1, 0.9, eOut);
+    const corners = [[m, m, 1, 1], [W - m, m, -1, 1], [m, H - m, 1, -1], [W - m, H - m, -1, -1]];
+    ctx.beginPath();
+    for (const [x, y, sx, sy] of corners) { ctx.moveTo(x + sx * L, y); ctx.lineTo(x, y); ctx.lineTo(x, y + sy * L); }
+    ctx.stroke();
+    // progress hairline
+    ctx.globalAlpha = a * .9;
+    ctx.fillStyle = 'rgba(244,241,234,.18)'; ctx.fillRect(80, H - 82, W - 160, 3);
+    ctx.fillStyle = '#f2c66b'; ctx.fillRect(80, H - 82, (W - 160) * clamp(t / 12), 3);
+    ctx.restore();
+  }
+
+  function drawGrain(t) {
+    if (!grainC) return;
+    const f = Math.floor(t * 30);
+    const ox = (f * 137) % 512, oy = (f * 251) % 512;
+    ctx.save();
+    ctx.globalAlpha = 0.045; ctx.globalCompositeOperation = 'overlay';
+    for (let x = -ox; x < W; x += 512) for (let y = -oy; y < H; y += 512) ctx.drawImage(grainC, x, y);
+    ctx.restore();
+    // vignette
+    const v = ctx.createRadialGradient(W / 2, H / 2, 500, W / 2, H / 2, 1200);
+    v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.55)');
+    ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  }
+
+  // ---------- DOM text ----------
+  const anims = [...document.querySelectorAll('.anim')].map(el => {
+    let parts = [el];
+    if (!el.dataset.nosplit) {
+      const nodes = [...el.childNodes];
+      el.textContent = '';
+      parts = [];
+      for (const n of nodes) {
+        if (n.nodeType === 3) {
+          n.textContent.split(/(\s+)/).forEach(tok => {
+            if (!tok) return;
+            if (/^\s+$/.test(tok)) { el.appendChild(document.createTextNode(' ')); return; }
+            const s = document.createElement('span'); s.className = 'w'; s.textContent = tok; el.appendChild(s); parts.push(s);
+          });
+        } else {
+          const s = document.createElement('span'); s.className = 'w'; s.appendChild(n); el.appendChild(s); parts.push(s);
+        }
+      }
+    }
+    return { el, parts, tin: +el.dataset.in, tout: +el.dataset.out, st: +(el.dataset.st || 0.06) };
+  });
+  const cnt = document.getElementById('cnt'), m65 = document.getElementById('m65');
+
+  function renderText(t) {
+    for (const A of anims) {
+      const q = eInOut(clamp((t - A.tout) / 0.35));
+      A.el.style.visibility = (t < A.tin - 0.01 || q >= 1) ? 'hidden' : 'visible';
+      A.parts.forEach((p, i) => {
+        const k = clamp((t - A.tin - i * A.st) / 0.7);
+        const e = eOutExpo(k);
+        const op = e * (1 - q);
+        const ty = (1 - e) * 60 - q * 30;
+        const bl = (1 - e) * 14 + q * 10;
+        p.style.opacity = op.toFixed(4);
+        p.style.transform = `translate3d(0,${ty.toFixed(2)}px,0)`;
+        p.style.filter = bl > .05 ? `blur(${bl.toFixed(2)}px)` : 'none';
+      });
+    }
+    let landed = 0;
+    for (const h of hexes) if (t - h.delay > 0.5) landed++;
+    cnt.textContent = String(landed).padStart(2, '0');
+    m65.textContent = (6.5 * win(t, 9.5, 10.8, eOut)).toFixed(1) + ' m';
+  }
+
+  function renderAt(t) {
+    t = clamp(t, 0, 12);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = '#04060b'; ctx.fillRect(0, 0, W, H);
+    drawStars(t);
+    drawPhoto(t);
+    drawMirror(t);
+    drawHUD(t);
+    drawGrain(t);
+    renderText(t);
+  }
+  window.renderAt = renderAt;
+
+  window.__ready = (async () => {
+    try { await img.decode(); imgOK = true; prep(); } catch (e) { imgOK = img.complete && img.naturalWidth > 0; if (imgOK) prep(); }
+    try { await document.fonts.ready; } catch (e) {}
+    const qp = new URLSearchParams(location.search);
+    renderAt(qp.has('t') ? parseFloat(qp.get('t')) || 0 : 0);
+  })();
+
+  const qp = new URLSearchParams(location.search);
+  if (!qp.has('t')) {
+    window.__ready.then(() => {
+      let t0 = null;
+      const loop = ts => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % 12); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    });
+  }
+})();
+</script>
+</body>
+</html>
