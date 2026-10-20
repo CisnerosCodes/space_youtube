@@ -1,0 +1,629 @@
+{
+ "maxAbsDiffFrames": 0,
+ "outsideTwoFrames": [],
+ "rows": [
+  {
+   "i": 0,
+   "text": "This",
+   "spoken": 5,
+   "shown": 5,
+   "delta": 0
+  },
+  {
+   "i": 1,
+   "text": "moon",
+   "spoken": 9,
+   "shown": 9,
+   "delta": 0
+  },
+  {
+   "i": 2,
+   "text": "is",
+   "spoken": 19,
+   "shown": 19,
+   "delta": 0
+  },
+  {
+   "i": 3,
+   "text": "on",
+   "spoken": 24,
+   "shown": 24,
+   "delta": 0
+  },
+  {
+   "i": 4,
+   "text": "a",
+   "spoken": 29,
+   "shown": 29,
+   "delta": 0
+  },
+  {
+   "i": 5,
+   "text": "slow-motion",
+   "spoken": 32,
+   "shown": 32,
+   "delta": 0
+  },
+  {
+   "i": 6,
+   "text": "collision",
+   "spoken": 54,
+   "shown": 54,
+   "delta": 0
+  },
+  {
+   "i": 7,
+   "text": "course",
+   "spoken": 66,
+   "shown": 66,
+   "delta": 0
+  },
+  {
+   "i": 8,
+   "text": "with",
+   "spoken": 78,
+   "shown": 78,
+   "delta": 0
+  },
+  {
+   "i": 9,
+   "text": "Mars.",
+   "spoken": 86,
+   "shown": 86,
+   "delta": 0
+  },
+  {
+   "i": 10,
+   "text": "Japan",
+   "spoken": 103,
+   "shown": 103,
+   "delta": 0
+  },
+  {
+   "i": 11,
+   "text": "just",
+   "spoken": 118,
+   "shown": 118,
+   "delta": 0
+  },
+  {
+   "i": 12,
+   "text": "launched",
+   "spoken": 131,
+   "shown": 131,
+   "delta": 0
+  },
+  {
+   "i": 13,
+   "text": "a",
+   "spoken": 142,
+   "shown": 142,
+   "delta": 0
+  },
+  {
+   "i": 14,
+   "text": "heist",
+   "spoken": 147,
+   "shown": 147,
+   "delta": 0
+  },
+  {
+   "i": 15,
+   "text": "to",
+   "spoken": 161,
+   "shown": 161,
+   "delta": 0
+  },
+  {
+   "i": 16,
+   "text": "steal",
+   "spoken": 168,
+   "shown": 168,
+   "delta": 0
+  },
+  {
+   "i": 17,
+   "text": "a",
+   "spoken": 181,
+   "shown": 181,
+   "delta": 0
+  },
+  {
+   "i": 18,
+   "text": "piece",
+   "spoken": 188,
+   "shown": 188,
+   "delta": 0
+  },
+  {
+   "i": 19,
+   "text": "of",
+   "spoken": 197,
+   "shown": 197,
+   "delta": 0
+  },
+  {
+   "i": 20,
+   "text": "it.",
+   "spoken": 202,
+   "shown": 202,
+   "delta": 0
+  },
+  {
+   "i": 21,
+   "text": "Step",
+   "spoken": 220,
+   "shown": 220,
+   "delta": 0
+  },
+  {
+   "i": 22,
+   "text": "one:",
+   "spoken": 228,
+   "shown": 228,
+   "delta": 0
+  },
+  {
+   "i": 23,
+   "text": "Mars,",
+   "spoken": 240,
+   "shown": 240,
+   "delta": 0
+  },
+  {
+   "i": 24,
+   "text": "August",
+   "spoken": 264,
+   "shown": 264,
+   "delta": 0
+  },
+  {
+   "i": 25,
+   "text": "2027.",
+   "spoken": 280,
+   "shown": 280,
+   "delta": 0
+  },
+  {
+   "i": 26,
+   "text": "Step",
+   "spoken": 322,
+   "shown": 322,
+   "delta": 0
+  },
+  {
+   "i": 27,
+   "text": "two:",
+   "spoken": 338,
+   "shown": 338,
+   "delta": 0
+  },
+  {
+   "i": 28,
+   "text": "drop",
+   "spoken": 352,
+   "shown": 352,
+   "delta": 0
+  },
+  {
+   "i": 29,
+   "text": "a",
+   "spoken": 367,
+   "shown": 367,
+   "delta": 0
+  },
+  {
+   "i": 30,
+   "text": "lookout.",
+   "spoken": 375,
+   "shown": 375,
+   "delta": 0
+  },
+  {
+   "i": 31,
+   "text": "A",
+   "spoken": 393,
+   "shown": 393,
+   "delta": 0
+  },
+  {
+   "i": 32,
+   "text": "25",
+   "spoken": 404,
+   "shown": 404,
+   "delta": 0
+  },
+  {
+   "i": 33,
+   "text": "kilo",
+   "spoken": 418,
+   "shown": 418,
+   "delta": 0
+  },
+  {
+   "i": 34,
+   "text": "rover.",
+   "spoken": 431,
+   "shown": 431,
+   "delta": 0
+  },
+  {
+   "i": 35,
+   "text": "On",
+   "spoken": 446,
+   "shown": 446,
+   "delta": 0
+  },
+  {
+   "i": 36,
+   "text": "Phobos,",
+   "spoken": 460,
+   "shown": 460,
+   "delta": 0
+  },
+  {
+   "i": 37,
+   "text": "it",
+   "spoken": 479,
+   "shown": 479,
+   "delta": 0
+  },
+  {
+   "i": 38,
+   "text": "weighs...",
+   "spoken": 484,
+   "shown": 484,
+   "delta": 0
+  },
+  {
+   "i": 39,
+   "text": "15",
+   "spoken": 496,
+   "shown": 496,
+   "delta": 0
+  },
+  {
+   "i": 40,
+   "text": "grams.",
+   "spoken": 523,
+   "shown": 523,
+   "delta": 0
+  },
+  {
+   "i": 41,
+   "text": "Step",
+   "spoken": 570,
+   "shown": 570,
+   "delta": 0
+  },
+  {
+   "i": 42,
+   "text": "three:",
+   "spoken": 577,
+   "shown": 577,
+   "delta": 0
+  },
+  {
+   "i": 43,
+   "text": "the",
+   "spoken": 601,
+   "shown": 601,
+   "delta": 0
+  },
+  {
+   "i": 44,
+   "text": "grab.",
+   "spoken": 604,
+   "shown": 604,
+   "delta": 0
+  },
+  {
+   "i": 45,
+   "text": "Coring",
+   "spoken": 630,
+   "shown": 630,
+   "delta": 0
+  },
+  {
+   "i": 46,
+   "text": "arm,",
+   "spoken": 641,
+   "shown": 641,
+   "delta": 0
+  },
+  {
+   "i": 47,
+   "text": "nitrogen",
+   "spoken": 653,
+   "shown": 653,
+   "delta": 0
+  },
+  {
+   "i": 48,
+   "text": "blaster.",
+   "spoken": 665,
+   "shown": 665,
+   "delta": 0
+  },
+  {
+   "i": 49,
+   "text": "Target:",
+   "spoken": 687,
+   "shown": 687,
+   "delta": 0
+  },
+  {
+   "i": 50,
+   "text": "at",
+   "spoken": 706,
+   "shown": 706,
+   "delta": 0
+  },
+  {
+   "i": 51,
+   "text": "least",
+   "spoken": 717,
+   "shown": 717,
+   "delta": 0
+  },
+  {
+   "i": 52,
+   "text": "10",
+   "spoken": 723,
+   "shown": 723,
+   "delta": 0
+  },
+  {
+   "i": 53,
+   "text": "grams.",
+   "spoken": 732,
+   "shown": 732,
+   "delta": 0
+  },
+  {
+   "i": 54,
+   "text": "Step",
+   "spoken": 768,
+   "shown": 768,
+   "delta": 0
+  },
+  {
+   "i": 55,
+   "text": "four:",
+   "spoken": 774,
+   "shown": 774,
+   "delta": 0
+  },
+  {
+   "i": 56,
+   "text": "one",
+   "spoken": 788,
+   "shown": 788,
+   "delta": 0
+  },
+  {
+   "i": 57,
+   "text": "burn",
+   "spoken": 802,
+   "shown": 802,
+   "delta": 0
+  },
+  {
+   "i": 58,
+   "text": "to",
+   "spoken": 810,
+   "shown": 810,
+   "delta": 0
+  },
+  {
+   "i": 59,
+   "text": "leave",
+   "spoken": 818,
+   "shown": 818,
+   "delta": 0
+  },
+  {
+   "i": 60,
+   "text": "Mars.",
+   "spoken": 824,
+   "shown": 824,
+   "delta": 0
+  },
+  {
+   "i": 61,
+   "text": "Capsule",
+   "spoken": 846,
+   "shown": 846,
+   "delta": 0
+  },
+  {
+   "i": 62,
+   "text": "lands",
+   "spoken": 859,
+   "shown": 859,
+   "delta": 0
+  },
+  {
+   "i": 63,
+   "text": "in",
+   "spoken": 863,
+   "shown": 863,
+   "delta": 0
+  },
+  {
+   "i": 64,
+   "text": "Australia,",
+   "spoken": 869,
+   "shown": 869,
+   "delta": 0
+  },
+  {
+   "i": 65,
+   "text": "2031.",
+   "spoken": 886,
+   "shown": 886,
+   "delta": 0
+  },
+  {
+   "i": 66,
+   "text": "The",
+   "spoken": 928,
+   "shown": 928,
+   "delta": 0
+  },
+  {
+   "i": 67,
+   "text": "loot?",
+   "spoken": 938,
+   "shown": 938,
+   "delta": 0
+  },
+  {
+   "i": 68,
+   "text": "First",
+   "spoken": 949,
+   "shown": 949,
+   "delta": 0
+  },
+  {
+   "i": 69,
+   "text": "piece",
+   "spoken": 968,
+   "shown": 968,
+   "delta": 0
+  },
+  {
+   "i": 70,
+   "text": "of",
+   "spoken": 980,
+   "shown": 980,
+   "delta": 0
+  },
+  {
+   "i": 71,
+   "text": "Phobos",
+   "spoken": 988,
+   "shown": 988,
+   "delta": 0
+  },
+  {
+   "i": 72,
+   "text": "ever",
+   "spoken": 999,
+   "shown": 999,
+   "delta": 0
+  },
+  {
+   "i": 73,
+   "text": "brought",
+   "spoken": 1010,
+   "shown": 1010,
+   "delta": 0
+  },
+  {
+   "i": 74,
+   "text": "home.",
+   "spoken": 1018,
+   "shown": 1018,
+   "delta": 0
+  },
+  {
+   "i": 75,
+   "text": "Next:",
+   "spoken": 1047,
+   "shown": 1047,
+   "delta": 0
+  },
+  {
+   "i": 76,
+   "text": "Rocket",
+   "spoken": 1061,
+   "shown": 1061,
+   "delta": 0
+  },
+  {
+   "i": 77,
+   "text": "Lab",
+   "spoken": 1070,
+   "shown": 1070,
+   "delta": 0
+  },
+  {
+   "i": 78,
+   "text": "aims",
+   "spoken": 1075,
+   "shown": 1075,
+   "delta": 0
+  },
+  {
+   "i": 79,
+   "text": "to",
+   "spoken": 1082,
+   "shown": 1082,
+   "delta": 0
+  },
+  {
+   "i": 80,
+   "text": "launch",
+   "spoken": 1088,
+   "shown": 1088,
+   "delta": 0
+  },
+  {
+   "i": 81,
+   "text": "three",
+   "spoken": 1094,
+   "shown": 1094,
+   "delta": 0
+  },
+  {
+   "i": 82,
+   "text": "HawkEye",
+   "spoken": 1103,
+   "shown": 1103,
+   "delta": 0
+  },
+  {
+   "i": 83,
+   "text": "360",
+   "spoken": 1118,
+   "shown": 1118,
+   "delta": 0
+  },
+  {
+   "i": 84,
+   "text": "satellites,",
+   "spoken": 1125,
+   "shown": 1125,
+   "delta": 0
+  },
+  {
+   "i": 85,
+   "text": "Wednesday.",
+   "spoken": 1141,
+   "shown": 1141,
+   "delta": 0
+  },
+  {
+   "i": 86,
+   "text": "Follow",
+   "spoken": 1167,
+   "shown": 1167,
+   "delta": 0
+  },
+  {
+   "i": 87,
+   "text": "Downlink",
+   "spoken": 1184,
+   "shown": 1184,
+   "delta": 0
+  },
+  {
+   "i": 88,
+   "text": "Cat.",
+   "spoken": 1197,
+   "shown": 1197,
+   "delta": 0
+  }
+ ]
+}

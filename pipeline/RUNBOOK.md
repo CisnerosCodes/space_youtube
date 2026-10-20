@@ -77,10 +77,18 @@ Failure: fewer than 2 real images that fit: line art carries the Short (as in pi
 
 ## 7. Director, build and QA (budget 20 minutes)
 
-1. The director (Opus subagent, or the session) reads `pipeline/engine/DIRECTOR.md` and follows it. Give it: `$S/script.md`, `$S/factcheck.md`, `$S/captions.json` (list the words with frames: `python3 -c "import json;[print(i,w['text'],round(w['start']*30)) for i,w in enumerate(json.load(open('$S/captions.json'))['words'])]"`), the image list with credits, focus boxes and what each shows, the NEXT event and its date (`DDD DD MMM`), and the bed to use.
+The house style is anime (PLAYBOOK.md, House animation style): the shot list says `"style": "anime"` and follows DIRECTOR.md part A. Classic (`"style": "classic"`) is only for rebuilding older Shorts.
+
+1. The director (Opus subagent, or the session) reads `pipeline/engine/DIRECTOR.md` (part A) and follows it. The shot list names the fact table: `"facts": "factcheck.md"` (the build refuses numbers on screen that are in neither the narration nor that table). Give it: `$S/script.md`, `$S/factcheck.md`, `$S/captions.json` (list the words with frames: `python3 -c "import json;[print(i,w['text'],round(w['start']*30)) for i,w in enumerate(json.load(open('$S/captions.json'))['words'])]"`), the image list with credits, focus boxes and what each shows, the NEXT event and its date (`DDD DD MMM`), and the bed to use.
 2. Bed: never the bed of the previous Short. Read the `bed` of the last line in `pipeline/log/queue.jsonl` (and, for the pilots, `lab/pilots/*/out/mix.report.json`); pick by `use` in `lab/sound/beds/beds.json` among the others.
 3. `node pipeline/engine/build.mjs $S`, fix every validation error it names, rebuild.
-4. QA rounds (at most 3): `pipeline/engine/tools/stills.sh $S <frames>` with the build's QA frames plus every cat entrance, exit and hop, then look at `$S/out/qa_sheet.png` with the Read tool and answer DIRECTOR.md section 6 for every still; `node pipeline/engine/tools/inspect.mjs $S <frames>` for what the cat touches. The build must end with `build OK`.
+4. QA rounds (at most 3): `pipeline/engine/tools/stills.sh $S <frames>` with the build's QA frames (beat and line boundaries) plus every Night Shift entrance and exit, then look at `$S/out/qa_sheet.png` with the Read tool and answer DIRECTOR.md A8 for every still. The anime build renders every frame headless and checks caption sync, caption bounds with the pop, text at rest in x 80 to 900 / y 260 to 1500, the credit audit on every frame and the flash limit; it must end with `build OK`. (Classic: DIRECTOR.md section 6 and `tools/inspect.mjs` for the cat.)
+
+Learned on 2026-10-20 (the anime proof, `pipeline/engine/examples/artemis_anime/`):
+- Anchors count every occurrence regardless of case and punctuation: "The" in "The heat shield" was `The#4`, "It" was `It#3` ("it" and "it:" came first).
+- Exit Night Shift about 12 frames before a whip; give a diagram camera keys every 1 to 1.5 s or its seconds go nearly still (check `pse.py`).
+- A diagram on the Earth's limb reads best with the limb top at y 1100 and the paths ending just above it; labels must stay inside x 900 (the engine shifts chips in, but not drawn markers).
+- Comparisons of round objects (heat shields, moons) work as `layout: "lens"`; panels crop them.
 
 Learned on 2026-10-19 (each cost a rebuild):
 - Anchors ignore case and punctuation when counting: "How?" and "how" are the same word, so the beat needed `How?#1`; "It" needed `It#3`.
@@ -96,12 +104,11 @@ Stop after round 3 and write what is left into `review.md` (step 9) instead of l
 ## 8. Render, mix, clean up (budget 15 minutes)
 
 1. Seconds: `python3 -c "import json;print(json.load(open('$S/out/build_report.json'))['seconds'])"`.
-2. Render (11 minutes for 34 s on 4 cores on 2026-10-19, longer than one 10-minute tool call: start it with `run_in_background` and wait for the notification; write the package files and `review.md` meanwhile):
-   `(cd lab/motion-ab-test && node render.mjs /home/user/space_youtube/$S/anim.html <seconds> 30 /home/user/space_youtube/$S/out > /home/user/space_youtube/$S/out/render.log 2>&1)`
-3. Contact sheet and motion proof while the frames exist: `python3 -I pipeline/engine/tools/sheet.py $S/out/frames $S/out/contact_full.png 8 216 every=30`; four mid-transition frames into `$S/out/motion_proof.png` (`montage` of `out/frames/<n>.png`, frames in the middle of transitions).
+2. Render. Anime: `node lab/ultra/render_fast.mjs $S/anim.html <seconds> 30 $S/out/video.mp4 --workers=3 > $S/out/render.log 2>&1` (about 65 s for 34 s; it streams frames into ffmpeg, no frame folder). Then `python3 lab/ultra/anime/tools/pse.py $S/out/video.mp4 --json $S/out/pse.json`: at most 3 flashes in any second (fail otherwise), and no second of per-second motion under about 2 (fix with camera keys or acting). Classic: `(cd lab/motion-ab-test && node render.mjs /home/user/space_youtube/$S/anim.html <seconds> 30 /home/user/space_youtube/$S/out > /home/user/space_youtube/$S/out/render.log 2>&1)` (11 minutes for 34 s; start it with `run_in_background`).
+3. Contact sheet and line-boundary stills from the video: `python3 lab/ultra/anime/tools/strip.py $S/out/video.mp4 $S/out/contact_full.png <0,30,60,...,last> 8 0.2` and `python3 lab/ultra/anime/tools/strip.py $S/out/final.mp4 $S/out/lines.png <for every narration line start: the frame before, the frame, and 6 after> 6 0.25` (the build report lists `lineStarts`); look at both with the Read tool. (Classic: `tools/sheet.py` on `out/frames` and a `motion_proof.png`.)
 4. Mix: `(cd lab/sound && python3 mix.py --voice ../../$S/voice.mp3 --bed beds/<bed>.wav --cues ../../$S/out/cues.json --out ../../$S/out/mix.m4a --video ../../$S/out/video.mp4 --mux ../../$S/out/final.mp4 --bed-under 18 --report ../../$S/out/mix.report.json)`. Check the report: integrated loudness -14 LUFS (plus or minus 1), true peak at or below -1.5 dBTP.
-5. `node pipeline/engine/tools/check_sync.mjs $S` (every caption word within 2 frames).
-6. `rm -rf $S/out/frames $S/out/stills $S/work/img_src $S/work/grid && rm -f $S/work/voice/*.wav` (frames about 1.2 GB; the downloaded originals about 90 MB; `img/` keeps the resized copies the page was built from).
+5. Caption sync: the anime build already wrote `$S/out/caption_sync.json` from every frame (every word within 2 frames). Classic: `node pipeline/engine/tools/check_sync.mjs $S`.
+6. `rm -rf $S/out/frames $S/out/stills $S/out/build $S/work/img_src $S/work/grid && rm -f $S/work/voice/*.wav` (frames about 1.2 GB; the downloaded originals about 90 MB; `img/` keeps the resized copies the page was built from).
 
 The mix report may warn that the video is about 0.01 s shorter than the mix; that is harmless when `logo_start_s` plus 1.4 s is inside the video (the build adds a 48-frame hold for the sonic logo).
 
@@ -145,7 +152,7 @@ python3 pipeline/log.py run $S --outcome rendered --series "<Series>" --date $D 
 | 5 Voice | 3 min | about 3 min (62 s for 3 takes, then a promotion) |
 | 6 Captions | 1 min | under 1 min |
 | 7 Director, build, QA | 20 min | about 12 min (5 builds, 4 still sets) |
-| 8 Render and mix | 15 min | about 13 min (render 11 min, mix 28 s) |
+| 8 Render and mix | 15 min (anime: about 3 min) | about 13 min (classic render 11 min, mix 28 s); anime proof Oct 20: render 65 s, mix 25 s |
 | 9 to 11 Package, queue, log | 7 min | about 6 min |
 | Total | about 75 min | about 35 min of pipeline time (plus the runbook writing done during the render) |
 

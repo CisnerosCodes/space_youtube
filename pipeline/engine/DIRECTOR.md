@@ -1,6 +1,93 @@
 # Director guide: writing a shot list
 
-You are the director of one Downlink Cat Short. You receive a fact-checked script, its source list, the images (with credits), and the word timings. You write `shotlist.json`; the engine (`pipeline/engine/build.mjs`) turns it into the video. You decide what the viewer sees on every word and how the cat moves. You never decide pixels the design system already fixes, and you never add a fact the script and its sources do not hold.
+You are the director of one Downlink Cat Short. You receive a fact-checked script, its source list, the images (with credits), and the word timings. You write `shotlist.json`; the engine (`pipeline/engine/build.mjs`) turns it into the video. You decide what the viewer sees on every word and how the cast acts. You never decide pixels the style already fixes, and you never add a fact the script and its sources do not hold.
+
+**Anime is the house style (Oct 20, 2026) and the engine's default.** Write `"style": "anime"` and follow part A. Part B (the flat "classic" look with the v3 cat) is kept only to rebuild older Shorts; write `"style": "classic"` for it.
+
+# Part A: anime (house style)
+
+Read first: `PLAYBOOK.md` (House animation style), `pipeline/engine/README.md` (the anime shot library), `pipeline/engine/schema_anime.json`, and the two worked examples: `pipeline/engine/examples/artemis_anime/shotlist.json` (an engineering story on real photos, a diagram and a comparison) and `examples/mmx_anime/shotlist.json` (the house reference, the MMX heist, rebuilt from a shot list with Pho). The hand-built reference itself is `lab/ultra/anime/` (look at `out/contact_full.png`). The inputs are the same as in Part B (script, fact table, captions, images with credits and focus boxes, the NEXT event, the bed); name the fact table in `"facts"`.
+
+## A1. Cut the script into beats
+
+- One beat per claim, usually one per sentence or half sentence: 10 to 16 beats in 30 to 40 s (the anime cuts faster than classic). A beat starts on the word that names its subject.
+- Beat 0 is the `hook` on a real photo, on the first word. The NEXT beat (a `band` with `"style": "next"`, then a `next` scene) comes before the `end` card, which starts on "Follow".
+- The picture changes at least every 1.5 s. A beat longer than 2 s needs inner moves: camera `keys`, a craft travelling (`keys`), a diagram `camera`, chips landing, Night Shift acting. The build warns at 5 s.
+- Words that occur more than once need `#n`; anchors ignore case and punctuation when counting ("The#8", "It#3", "Mars,#2"). The builder lists the occurrences when you forget.
+- Minimum beat length: 24 frames (16 after a band).
+
+## A2. Choose the shot for each beat
+
+| The narration says... | Shot | Notes |
+|---|---|---|
+| The first line | `hook` (a `photo` that slams in) | A real photo of the subject. `frame`: `full` (cover, with `overlay: "focus"` lines), `panel` (tilted cel frame), `circle` (lens), `cutout` (a PNG with alpha, such as a masked moon). A `keys` zoom onto the subject on the hit word. |
+| Something a real photo shows | `photo` | `marks` ring the exact thing named, on its word; `scan` sweeps a lens; `monitor` puts the photo on Night Shift's screen with him over the shoulder (`pull: true` continues from a full-frame shot). |
+| One number (speed, temperature, mass) | `number` | The number as it reads ("4,000°F"), slammed on its word over a drawn backdrop (`bg`) or an `art` craft, or a lens `image`. Units go on the chip. One per beat. |
+| A spacecraft, rocket, rover, capsule doing something | `craft` | Generic drawn craft: `capsule`, `crew-capsule`, `rocket`, `rocket-slim`, `probe`, `rover`, `satellite`; backdrops `limb`, `sky`, `sea`, `pad`, `earth`, `mars`, `moon`, `phobos`, `plasma`; actions `plasma` (reentry fireball), `chutes`, `splash`, `liftoff`, `burn`, `arm`; `keys` move it on words. It is credited "Illustration · facts: <source>" automatically. |
+| Two things compared (before and after, this mission and the last) | `compare` | `layout: "lens"` (two round lenses, the first starts big), `"stack"` or `"side"` panels; each item a photo (`image`, with its own `focus`) or a drawn `craft`; `value` lands as a manga burst on `value_at`; `tone: "bad"` makes it red. |
+| How something works, where something goes | `diagram` | Paths that draw in on words (`color`, `dash`), a craft riding a path (`keys` with `u`), `heat` segments (the hot part of a path), `stop` markers, labels (facts only), rings, drawn bodies; a backdrop (`limb` for reentry); `camera` keys to keep it moving. |
+| A surprising number, a twist | `react` | Night Shift close-up (`faces` with `expr`: `shock`, `grit`, `smirk`...) on `cyan`, `red`, `focus` or `rays`; `paw` thrusts a paw at the camera; or Pho (`who: "pho"`, with a `reticle` and the `piece` outline). |
+| "Step one:", "How?" (a numbered plan, a question turn) | `band` | The narration words drawn on an eyecatch band (`words`), `num`, `step`/`steps` pips; styles 1 to 4 enter differently (left slide, drop and bounce with binoculars, red slam with grit and fist, rising ink band with a zooming numeral). Never the same style twice in a row. |
+| The closing line | `band` style `next` (label "NEXT", `stamp` with the date) then `next` | The next event, drawn (`scene`: `moon`, `rocket`, `earth`, `mars`) or on a photo; a `chip` with its facts; the date slams on its word (`stamp`). Date format `DDD DD MMM` from the source; no dated event: no stamp. |
+| "Follow Downlink Cat" | `end` | The echo mark flies out of Night Shift's eyes; DOWNLINK lands on "Downlink", CAT on "Cat". |
+
+Beat-level extras on any beat: `chips` (mono fact tags, top-left from y 330, wipe in on `at`, out on `until`), `sfx` (katakana onomatopoeia: ドン, ゴゴゴ, ゴオッ, バシュッ, ズン, ガシッ, エッ!?; never Latin letters or numbers; the engine fits them inside the safe zone), `caption` (`y`, `size`, `maxY` when the picture needs the caption elsewhere, as on a monitor shot), `source` (the facts of every drawn beat), `impact` (an impact frame on a word).
+
+## A3. Transitions
+
+- `whip` (`dir`: up, down, left, right or a diagonal) for a change of place: both shots travel, speed lines, real motion blur. The default between unrelated shots.
+- `smash` (a cut with a 1.22x zoom punch and a shake) on a hit word or an impact.
+- `iris` (an amber ring opens the next shot from a point, `at`) when the next shot grows out of something on screen (into a screen, into a scope).
+- `band` beats are their own wipe; the beat after a band has no transition.
+- `cut` only with `"hit": true` or an impact frame on the start word.
+- Never three of the same in a row. A beat of about 30 frames between two whips reads best.
+
+## A4. Impact frames (photosensitivity)
+
+- `impacts` (top level) lists the words that get ONE impact frame (the whole frame turned to ink on red for one frame). Use them on the 5 to 8 biggest hits of the Short: the hook number, the record, the result, the date.
+- Hard limits the build enforces: at most 3 impact frames in any second, never two closer than 10 frames. Keep them about 2 s apart (the build warns under 1.5 s). After the render, `python3 lab/ultra/anime/tools/pse.py out/video.mp4` must report at most 3 flashes in any second (the reference reports 1).
+- Do not put an impact frame on a whip or a band (they already flash).
+
+## A5. Choreograph Night Shift (and Pho)
+
+Night Shift is the anime heist-leader design: echo-mark eyes, headset, oversized jacket. He mouths the narration (lip sync on twos), blinks, bobs. He is a guide and a reaction, never the source of a fact. He appears in three ways:
+
+1. **Shots that draw him**: `react` close-ups, band faces (styles 1, 2, 3, 4, next), the `monitor` over-the-shoulder, the `end` card.
+2. **The overlay rig** (`cast.ns.moves`), like the v3 actor: moves anchored to words.
+   - Visits: `enter` (`place`: `left`, `right`, `center`, `low-left`, `low-right`, `peek-right`, `peek-left`, `peek-right-low`, `peek-left-low`, `back`, or `[x, y, size]`; `how`: `pop`, `slide`, `drop`, `smear`) ... `exit` (`how`: `down`, `slide`, `zip`). `move` (`to` a place) travels between places.
+   - Gestures (hold 36 frames or until the next): `point` (`target`: `el:subject`, `el:<element id>`, `el:mark0`, `el:craft`, `el:cap`, `el:moon`, `el:rocket`, `el:face`, `camera` or `[x, y]`), `pump` (fist pump), `fist` (both fists, grit), `salute`, `wave`, `shrug`, `think` (paw to chin), `gasp` (shock face, open paws), `nod`, `lean` (toward a target), `hold` (a tag with a fact, or `"prop": "canister"`), `wink`.
+   - `expr` sets the face until the next: `neutral`, `smirk`, `grin`, `happy`, `proud`, `shock`, `grit`, `wink`, `curious`, `worried`, `focus`, `meh`. Gestures bring their own face when no `expr` comes after them.
+   - `look` aims his eyes and head.
+3. **Pho** (`cast.pho.moves`, optional): the grumpy drawn Phobos, only in stories about Phobos, Mars's moons or small bodies where a grumpy moon fits. Places `top-right`, `top-left`, `right`, `left`, `center`, `inset-right`, `inset-left` (a manga inset panel); `expr`: `grumpy`, `alarm`, `furious`, `flinch`; `shake`, `sweat`, `piece` (the dashed outline of the piece being taken). He is credited as an illustration. Do not invent other characters.
+
+Rules of thumb (the build reports them): Night Shift on screen about half the runtime or more (the MMX rebuild 57%, the Artemis proof 65%; the build notes under 30%); 6 or more different overlay moves; react on the words he reacts to (gasp on the surprising number, pump on the date or the record, point at the thing named, think on "How?"); exit about 10 frames before a whip so he does not cover the cut; never over a photo's subject (the build notes frames where an overlay covers more than a quarter of a subject); never mirrored; never holding a number that is not in the facts; at most one Night Shift on screen (do not put an overlay visit on a `react` Night Shift beat).
+
+## A6. Text, credits and truth
+
+- Captions are automatic: every narration word, verbatim, popping in on its frame; `stress` words and numbers become emphasis lettering; chunks break at sentences, pauses, commas and beat starts, and fit inside x 80 to 900, y 260 to 1398 (two credit lines under them). The pop is clamped (fitPop) so no word ever leaves the safe zone.
+- Credits are automatic: every real photo drawn on a frame puts its exact credit in the slot on that frame; every drawn craft, planet, diagram or Pho puts "Illustration · facts: <beat source>". You never write credits, only `assets.*.credit` exactly as the source gives it and `source` on drawn beats.
+- Every number on screen (chips, labels, slams, bursts, tags, stamps) must appear in the narration or in the fact table named by `"facts"` (`factcheck.md`); the build refuses others.
+- Labels are facts only. No "not to scale", no "DIAGRAM", no readouts or telemetry, no agency logos, no flags.
+
+## A7. Banned in anime
+
+- More than 3 flashes in any second; impact frames on a real photo for more than one frame; white full-frame flashes (use the amber stripe or a whip).
+- AI-generated images or photos run through a model; painting detail into real photos (crop, scale, mask, pan, rotate and overlay lines only).
+- A drawn craft that imitates a specific vehicle's markings, a logo or a flag (they are generic).
+- Katakana with Latin letters or numbers; katakana or chips over the caption block (move them up).
+- A photo that does not show what the narration says (use a `craft` or `diagram` beat instead).
+- Night Shift as a source of facts, two Night Shifts on one frame, a hard cut without a hit, an empty frame held for more than 1.5 s.
+
+## A8. QA (required, at most 3 fix rounds)
+
+1. `node pipeline/engine/build.mjs <short>`: fix every validation error and every failed check. The build renders every frame headless and checks caption sync (2 frames), caption bounds with the pop, text at rest in the safe zone, the credit audit on every frame, and the flash limit.
+2. Stills at every beat and line boundary: `pipeline/engine/tools/stills.sh <short> <the QA frames the build prints>` and look at the sheet with the Read tool. For each still: does the picture show what is said; is anything cut, crossing x 900, or under Night Shift; is the frame full and moving; is the credit right?
+3. Render: `node lab/ultra/render_fast.mjs <short>/anim.html <seconds> 30 <short>/out/video.mp4 --workers=3` (about 65 s for 34 s). Then `python3 lab/ultra/anime/tools/pse.py <short>/out/video.mp4 --json <short>/out/pse.json`: at most 3 flashes in any second; per-second motion should stay above about 2 (the reference averages 6.9; the Artemis proof 6.5). A second under 2 needs camera keys or acting.
+4. Mix with `lab/sound/mix.py --bed-under 18` and the build's `out/cues.json`; then look at the final MP4 at every line boundary (`python3 lab/ultra/anime/tools/strip.py out/final.mp4 out/lines.png <frames> 6 0.25`).
+
+# Part B: classic (kept for older Shorts)
+
+The rest of this guide is the classic style (`"style": "classic"`), unchanged.
 
 Read first: `PLAYBOOK.md`, `design-system/README.md`, `design-system/Motion.md`, `pipeline/engine/README.md` (the shot types), `pipeline/engine/schema.json`, and the two worked examples `pipeline/engine/examples/p3/shotlist.json` (a numbers story on photos) and `examples/p2/shotlist.json` (a discovery story told mostly in line art).
 

@@ -2,6 +2,7 @@
 // window.renderAt(t), a pure function of t, 30 fps, 1080 x 1920) and out/cues.json for lab/sound/mix.py.
 //
 // usage: node pipeline/engine/build.mjs <short_dir> [--no-check] [--allow-lint]
+//   "style": "anime" (default, lib/build_anime.mjs and anime/) or "classic" (this file, runtime/ and shots/)
 //   reads  <short_dir>/shotlist.json, <short_dir>/captions.json (pipeline/engine/align_captions.mjs output),
 //          the image files named in shotlist.assets (paths relative to <short_dir>)
 //   writes <short_dir>/anim.html, <short_dir>/out/cues.json, <short_dir>/out/build_report.json
@@ -39,6 +40,15 @@ const slPath = path.join(shortDir, 'shotlist.json');
 if (!existsSync(slPath)) fail('no shot list', [`${slPath} does not exist`]);
 let shotlist;
 try { shotlist = JSON.parse(readFileSync(slPath, 'utf8')); } catch (e) { fail('shotlist.json is not valid JSON', [e.message]); }
+// style: "anime" (the house style, the default) or "classic" (the flat v1 look with the v3 cat). A shot list
+// written before the style layer (it has "cat" and no "style") is classic.
+const style = shotlist.style ?? (shotlist.cat && !shotlist.cast ? 'classic' : 'anime');
+if (!['anime', 'classic'].includes(style)) fail('unknown style', [`style: must be "anime" or "classic" (got ${JSON.stringify(shotlist.style)})`]);
+if (style === 'anime') {
+  const { buildAnime } = await import('./lib/build_anime.mjs');
+  process.exit(await buildAnime(shortDir, { ...shotlist, style: 'anime' }, { noCheck, slPath }));
+}
+if (shotlist.style == null) console.warn('note: no "style" in the shot list; built as "classic" (it has a "cat" timeline). Add "style": "classic" to say so.');
 const capPath = path.resolve(shortDir, shotlist.captions ?? 'captions.json');
 if (!existsSync(capPath)) fail('no captions', [`${capPath} does not exist; run pipeline/engine/align_captions.mjs first`]);
 const captions = JSON.parse(readFileSync(capPath, 'utf8'));

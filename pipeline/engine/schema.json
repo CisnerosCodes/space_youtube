@@ -1,13 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://downlinkcat/pipeline/engine/schema.json",
-  "title": "Downlink Cat shot list (v1)",
+  "title": "Downlink Cat shot list (v1, classic style)",
   "description": "What a director model writes for one Short. The builder (pipeline/engine/build.mjs) checks it with lib/validate.mjs, which applies this schema plus the rules that depend on the narration (anchors, beat order, cat choreography) and reports each problem with its path. Word anchors: \"word\", \"word#2\" (second occurrence), \"word@end\" (end of the word), \"word+4f\" / \"word-6f\" (frame offset), or a frame number. A word that occurs more than once must carry #n.",
   "type": "object",
   "required": ["version", "series", "title", "bed", "assets", "beats", "cat"],
   "additionalProperties": false,
   "properties": {
     "version": { "const": 1 },
+    "style": { "const": "classic", "description": "This schema is the classic style. Anime (the house style and the default when \"style\" is missing and there is no \"cat\") is described in schema_anime.json." },
     "series": { "enum": ["LAUNCH DAY", "JUST DISCOVERED", "HOW DOES THAT WORK", "BY THE NUMBERS"] },
     "title": { "type": "string", "description": "Page title: a name of two to four words." },
     "bed": { "type": "string", "description": "Music bed id from lab/sound/beds/beds.json (rotate: never the same bed two Shorts in a row)." },

@@ -1,0 +1,932 @@
+{
+ "version": 1,
+ "style": "anime",
+ "series": "HOW DOES THAT WORK",
+ "title": "Artemis II Heat Shield",
+ "bed": "bedD_tense",
+ "captions": "../../../../shorts/2026-10-19-artemis-heat-shield/captions.json",
+ "voice": "../../../../shorts/2026-10-19-artemis-heat-shield/voice.mp3",
+ "facts": "../../../../shorts/2026-10-19-artemis-heat-shield/factcheck.md",
+ "stress": [
+  "39",
+  "mid-70s.",
+  "4,000",
+  "path",
+  "capped",
+  "nine",
+  "103."
+ ],
+ "assets": {
+  "splash": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/splash.jpg",
+   "credit": "NASA/Josh Valcarcel",
+   "focus": [
+    0.12,
+    0.12,
+    0.76,
+    0.72
+   ],
+   "note": "KSC-20260410-PH-JNV01_0001, Artemis II Orion under parachutes before splashdown"
+  },
+  "capsule": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/capsule.jpg",
+   "credit": "NASA/Kevin Davis",
+   "focus": [
+    0.24,
+    0.3,
+    0.52,
+    0.5
+   ],
+   "note": "KSC-20260418-KED03-0009, Artemis II crew module and heat shield lifted for inspection"
+  },
+  "underwater": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/underwater.jpg",
+   "credit": "US Navy",
+   "focus": [
+    0.22,
+    0.1,
+    0.66,
+    0.86
+   ],
+   "note": "KSC-20260411-NAVY01-0045, Navy diver image of the Artemis II heat shield after splashdown"
+  },
+  "artemis1": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/artemis1.jpg",
+   "credit": "NASA/Skip Williams",
+   "focus": [
+    0.16,
+    0.1,
+    0.72,
+    0.8
+   ],
+   "note": "KSC-20230102-PH-NAS01_0001, Artemis I Orion heat shield inspections"
+  },
+  "a2half": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/compare.jpg",
+   "credit": "NASA",
+   "focus": [
+    0.57,
+    0.08,
+    0.36,
+    0.84
+   ],
+   "note": "Oct 15 release comparison: the Artemis II heat shield (right half)"
+  },
+  "a1half": {
+   "file": "../../../../shorts/2026-10-19-artemis-heat-shield/img/compare.jpg",
+   "credit": "NASA",
+   "focus": [
+    0.07,
+    0.08,
+    0.36,
+    0.84
+   ],
+   "note": "same image, the Artemis I heat shield (left half)"
+  }
+ },
+ "impacts": [
+  "39",
+  "4,000",
+  "186",
+  "nine",
+  "103."
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "start": "Orion#1",
+   "shot": {
+    "type": "hook",
+    "image": "splash",
+    "frame": "full",
+    "push": 0.05,
+    "keys": [
+     {
+      "at": "39",
+      "zoom": 3.0,
+      "focus": [
+       0.4,
+       0.66,
+       0.2,
+       0.2
+      ],
+      "frames": 8
+     },
+     {
+      "at": "speed",
+      "zoom": 3.5,
+      "frames": 20
+     }
+    ],
+    "overlay": "focus",
+    "overlay_r": 300
+   },
+   "chips": [
+    {
+     "at": "39+6f",
+     "lines": [
+      "MAX VELOCITY:",
+      {
+       "t": "39 TIMES THE SPEED OF SOUND",
+       "c": "amber"
+      },
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ゴゴゴ",
+     "at": 0,
+     "for": 36,
+     "pos": [
+      690,
+      560
+     ],
+     "size": 92,
+     "rot": 0.08
+    }
+   ]
+  },
+  {
+   "id": "cabin",
+   "start": "and",
+   "transition": {
+    "type": "whip",
+    "dir": "up"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "craft",
+    "craft": "crew-capsule",
+    "bg": "limb",
+    "backdrop": {
+     "limbY": 3900,
+     "limbR": 2400
+    },
+    "pos": [
+     470,
+     900
+    ],
+    "scale": 1.0,
+    "rot": -0.5,
+    "plasma": {
+     "at": "and"
+    },
+    "window": "cool",
+    "push": 0.06,
+    "speed": -60,
+    "drift": [
+     0.3,
+     0.4
+    ]
+   },
+   "chips": [
+    {
+     "at": "stayed",
+     "lines": [
+      "CABIN:",
+      {
+       "t": "MID-70s °F",
+       "c": "amber"
+      },
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "outside",
+   "start": "Outside,",
+   "transition": {
+    "type": "whip",
+    "dir": "up-left"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "number",
+    "text": "4,000°F",
+    "at": "4,000",
+    "y": 640,
+    "bg": "plasma",
+    "art": {
+     "craft": "crew-capsule",
+     "bg": "plasma",
+     "pos": [
+      560,
+      1040
+     ],
+     "scale": 0.9,
+     "rot": -0.6,
+     "plasma": {
+      "at": "Outside,"
+     },
+     "drift": [
+      0.3,
+      0.4
+     ]
+    }
+   },
+   "chips": [
+    {
+     "at": "4,000+8f",
+     "y": 700,
+     "lines": [
+      "OUTSIDE, AT ITS PEAK",
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ゴオッ",
+     "at": "Outside,",
+     "for": 26,
+     "pos": [
+      560,
+      400
+     ],
+     "size": 110,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "id": "shock",
+   "start": "Fahrenheit.",
+   "hit": true,
+   "transition": {
+    "type": "smash"
+   },
+   "shot": {
+    "type": "react",
+    "who": "ns",
+    "bg": "cyan",
+    "rim": "cyan",
+    "faces": [
+     {
+      "at": "Fahrenheit.",
+      "expr": "shock"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "text": "エッ!?",
+     "at": "Fahrenheit.+2f",
+     "for": 30,
+     "pos": [
+      520,
+      1030
+     ],
+     "size": 110,
+     "color": "cyan"
+    }
+   ]
+  },
+  {
+   "id": "shield",
+   "start": "The#4",
+   "transition": {
+    "type": "whip",
+    "dir": "left"
+   },
+   "shot": {
+    "type": "photo",
+    "image": "capsule",
+    "frame": "panel",
+    "push": 0.06,
+    "bg": "speed",
+    "marks": [
+     {
+      "at": "heat",
+      "point": [
+       0.5,
+       0.64
+      ],
+      "r": 110
+     }
+    ]
+   }
+  },
+  {
+   "id": "blocks",
+   "start": "186",
+   "transition": {
+    "type": "smash"
+   },
+   "shot": {
+    "type": "photo",
+    "image": "underwater",
+    "frame": "circle",
+    "push": 0.04,
+    "bg": "focus",
+    "scan": {
+     "at": "blocks",
+     "until": "Avcoat.@end"
+    }
+   },
+   "chips": [
+    {
+     "at": "blocks",
+     "lines": [
+      {
+       "t": "186 UNIQUE BLOCKS",
+       "c": "amber"
+      },
+      "OF AN ABLATIVE MATERIAL",
+      "CALLED AVCOAT (NASA)"
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ドン",
+     "at": "186",
+     "for": 18,
+     "pos": [
+      650,
+      1120
+     ],
+     "size": 100
+    }
+   ]
+  },
+  {
+   "id": "artemis1",
+   "start": "After",
+   "transition": {
+    "type": "whip",
+    "dir": "down"
+   },
+   "shot": {
+    "type": "photo",
+    "image": "artemis1",
+    "frame": "monitor",
+    "pull": true,
+    "lean_at": "NASA#1"
+   },
+   "chips": [
+    {
+     "at": "Artemis#1",
+     "lines": [
+      "ARTEMIS I ORION,",
+      "INSPECTED AFTER FLIGHT"
+     ]
+    }
+   ],
+   "caption": {
+    "y": 1060
+   }
+  },
+  {
+   "id": "path",
+   "start": "changed",
+   "transition": {
+    "type": "iris",
+    "at": [
+     540,
+     700
+    ]
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "backdrop": {
+     "kind": "limb",
+     "y": 1100,
+     "r": 2600
+    },
+    "elements": [
+     {
+      "id": "a1",
+      "path": [
+       [
+        80,
+        150
+       ],
+       [
+        320,
+        360
+       ],
+       [
+        580,
+        560
+       ],
+       [
+        800,
+        710
+       ],
+       [
+        960,
+        800
+       ]
+      ],
+      "color": "muted",
+      "dash": true,
+      "at": "changed",
+      "draw": 12,
+      "width": 9
+     },
+     {
+      "label": "ARTEMIS I",
+      "pos": [
+       700,
+       500
+      ],
+      "color": "muted",
+      "at": "changed+8f"
+     },
+     {
+      "id": "a2",
+      "path": [
+       [
+        80,
+        150
+       ],
+       [
+        270,
+        380
+       ],
+       [
+        440,
+        620
+       ],
+       [
+        540,
+        830
+       ]
+      ],
+      "color": "amber",
+      "at": "path",
+      "draw": 12,
+      "width": 12
+     },
+     {
+      "label": "ARTEMIS II",
+      "pos": [
+       40,
+       580
+      ],
+      "color": "amber",
+      "at": "path+6f"
+     }
+    ],
+    "camera": [
+     {
+      "at": "path",
+      "zoom": 1.05,
+      "center": [
+       460,
+       520
+      ],
+      "frames": 14
+     }
+    ]
+   }
+  },
+  {
+   "id": "how",
+   "start": "How?#1",
+   "source": "NASA",
+   "shot": {
+    "type": "band",
+    "style": 1,
+    "words": [
+     "How?#1",
+     "How?#1"
+    ],
+    "expr": "curious",
+    "lead": 6
+   }
+  },
+  {
+   "id": "capped",
+   "start": "It#3",
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "backdrop": {
+     "kind": "limb",
+     "y": 1100,
+     "r": 2600
+    },
+    "camera": [
+     {
+      "at": "capped",
+      "zoom": 1.14,
+      "center": [
+       600,
+       640
+      ],
+      "frames": 8
+     },
+     {
+      "at": "fly",
+      "zoom": 1.2,
+      "center": [
+       380,
+       480
+      ],
+      "frames": 14
+     },
+     {
+      "at": "atmosphere,",
+      "zoom": 1.26,
+      "center": [
+       460,
+       640
+      ],
+      "frames": 12
+     },
+     {
+      "at": "so",
+      "zoom": 1.06,
+      "center": [
+       520,
+       560
+      ],
+      "frames": 14
+     },
+     {
+      "at": "temperature",
+      "zoom": 1.16,
+      "center": [
+       470,
+       620
+      ],
+      "frames": 12
+     },
+     {
+      "at": "damaged",
+      "zoom": 1.12,
+      "center": [
+       700,
+       620
+      ],
+      "frames": 10
+     }
+    ],
+    "elements": [
+     {
+      "id": "a1",
+      "path": [
+       [
+        80,
+        150
+       ],
+       [
+        320,
+        360
+       ],
+       [
+        580,
+        560
+       ],
+       [
+        800,
+        710
+       ],
+       [
+        960,
+        800
+       ]
+      ],
+      "color": "muted",
+      "dash": true,
+      "at": "changed",
+      "draw": 12,
+      "width": 9
+     },
+     {
+      "label": "ARTEMIS I",
+      "pos": [
+       700,
+       500
+      ],
+      "color": "muted",
+      "at": "changed+8f"
+     },
+     {
+      "id": "a2",
+      "path": [
+       [
+        80,
+        150
+       ],
+       [
+        270,
+        380
+       ],
+       [
+        440,
+        620
+       ],
+       [
+        540,
+        830
+       ]
+      ],
+      "color": "amber",
+      "at": "path",
+      "draw": 12,
+      "width": 12
+     },
+     {
+      "label": "ARTEMIS II",
+      "pos": [
+       40,
+       580
+      ],
+      "color": "amber",
+      "at": "path+6f"
+     },
+     {
+      "id": "cap",
+      "marker": "stop",
+      "pos": [
+       655,
+       780
+      ],
+      "at": "capped"
+     },
+     {
+      "label": "SHORTER MAX DOWNRANGE",
+      "pos": [
+       500,
+       300
+      ],
+      "color": "amber",
+      "at": "capped+6f"
+     },
+     {
+      "craft": "crew-capsule",
+      "id": "orion",
+      "path": "a2",
+      "size": 170,
+      "keys": [
+       {
+        "at": "It#3",
+        "u": 0
+       },
+       {
+        "at": "atmosphere,",
+        "u": 0.7
+       },
+       {
+        "at": "range",
+        "u": 1
+       }
+      ]
+     },
+     {
+      "heat": "a2",
+      "from": 0.32,
+      "to": 0.62,
+      "at": "temperature",
+      "draw": 10
+     },
+     {
+      "heat": "a1",
+      "from": 0.28,
+      "to": 0.84,
+      "at": "damaged",
+      "draw": 12
+     },
+     {
+      "id": "land",
+      "marker": "dot",
+      "pos": [
+       540,
+       830
+      ],
+      "at": "range"
+     }
+    ]
+   },
+   "chips": [
+    {
+     "at": "less",
+     "lines": [
+      "LESS TIME IN THE TEMPERATURE",
+      "RANGE THAT DAMAGED ARTEMIS I",
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "result",
+   "start": "The#8",
+   "transition": {
+    "type": "whip",
+    "dir": "left"
+   },
+   "shot": {
+    "type": "compare",
+    "layout": "lens",
+    "items": [
+     {
+      "image": "a2half",
+      "label": "ARTEMIS II",
+      "at": "The#8",
+      "value": "9",
+      "value_at": "nine",
+      "value_sub": "SPOTS OF CHAR LOSS"
+     },
+     {
+      "image": "a1half",
+      "label": "ARTEMIS I",
+      "at": "Artemis#3",
+      "value": "103",
+      "value_at": "103.",
+      "tone": "bad"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nextband",
+   "start": "NASA#2",
+   "source": "NASA",
+   "shot": {
+    "type": "band",
+    "style": "next",
+    "label": "NEXT",
+    "stamp": {
+     "text": "FRI 23 OCT",
+     "at": "updates"
+    },
+    "expr": "happy"
+   }
+  },
+  {
+   "id": "moonplans",
+   "start": "Moon",
+   "source": "NASA",
+   "shot": {
+    "type": "next",
+    "scene": "moon",
+    "chip": [
+     "NASA MOON PLANS UPDATE",
+     {
+      "t": "FRI 23 OCT, 2 P.M. EDT",
+      "c": "amber"
+     }
+    ],
+    "chip_at": "Moon",
+    "stamp": {
+     "text": "FRI 23 OCT",
+     "at": "Friday,",
+     "y": 1010,
+     "x": 410
+    }
+   }
+  },
+  {
+   "id": "end",
+   "start": "Follow",
+   "transition": {
+    "type": "whip",
+    "dir": "up"
+   },
+   "shot": {
+    "type": "end",
+    "downlink": "Downlink",
+    "cat": "Cat"
+   }
+  }
+ ],
+ "cast": {
+  "ns": {
+   "moves": [
+    {
+     "at": "cabin",
+     "do": "enter",
+     "place": "right",
+     "how": "pop"
+    },
+    {
+     "at": "cabin+4f",
+     "do": "look",
+     "target": "el:craft"
+    },
+    {
+     "at": "mid-70s.",
+     "do": "nod"
+    },
+    {
+     "at": "mid-70s.+6f",
+     "do": "expr",
+     "expr": "proud"
+    },
+    {
+     "at": "Outside,-14f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "The#4",
+     "do": "enter",
+     "place": "left",
+     "how": "slide"
+    },
+    {
+     "at": "heat",
+     "do": "point",
+     "target": "el:mark0"
+    },
+    {
+     "at": "took",
+     "do": "pump"
+    },
+    {
+     "at": "186-6f",
+     "do": "exit",
+     "how": "slide"
+    },
+    {
+     "at": "capped-4f",
+     "do": "enter",
+     "place": [
+      150,
+      1000,
+      100
+     ],
+     "how": "pop"
+    },
+    {
+     "at": "capped+2f",
+     "do": "point",
+     "target": "el:cap"
+    },
+    {
+     "at": "temperature",
+     "do": "think"
+    },
+    {
+     "at": "damaged",
+     "do": "expr",
+     "expr": "worried"
+    },
+    {
+     "at": "The#8-6f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "had",
+     "do": "enter",
+     "place": "peek-right-low",
+     "how": "smear"
+    },
+    {
+     "at": "103.",
+     "do": "expr",
+     "expr": "shock"
+    },
+    {
+     "at": "NASA#2-6f",
+     "do": "exit",
+     "how": "slide"
+    },
+    {
+     "at": "Moon",
+     "do": "enter",
+     "place": "low-right",
+     "how": "pop"
+    },
+    {
+     "at": "Moon+4f",
+     "do": "point",
+     "target": "el:moon"
+    },
+    {
+     "at": "Friday,",
+     "do": "pump"
+    },
+    {
+     "at": "23.",
+     "do": "wink"
+    },
+    {
+     "at": "Follow-8f",
+     "do": "exit",
+     "how": "zip"
+    }
+   ]
+  }
+ }
+}

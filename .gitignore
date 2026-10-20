@@ -45,3 +45,4 @@ lab/ultra/*/work/
 lab/ultra/*/tmp/
 lab/ultra/*/*.mp4
 lab/ultra/cinematic3d/page.html
+pipeline/engine/examples/artemis_anime/out/*.mp4

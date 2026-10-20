@@ -1,0 +1,433 @@
+{
+ "built": "2026-10-20T20:50:56.337Z",
+ "style": "anime",
+ "shortDir": "pipeline/engine/examples/artemis_anime",
+ "frames": 1016,
+ "seconds": 33.867,
+ "buildSeconds": 20.2,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 5,
+   "T0": 0,
+   "T1": 91,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 1,
+   "id": "cabin",
+   "type": "craft",
+   "word": 96,
+   "T0": 91,
+   "T1": 158,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 2,
+   "id": "outside",
+   "type": "number",
+   "word": 163,
+   "T0": 158,
+   "T1": 226,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 3,
+   "id": "shock",
+   "type": "react",
+   "word": 226,
+   "T0": 226,
+   "T1": 255,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 4,
+   "id": "shield",
+   "type": "photo",
+   "word": 260,
+   "T0": 255,
+   "T1": 320,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 5,
+   "id": "blocks",
+   "type": "photo",
+   "word": 320,
+   "T0": 320,
+   "T1": 383,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 6,
+   "id": "artemis1",
+   "type": "photo",
+   "word": 388,
+   "T0": 383,
+   "T1": 420,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 7,
+   "id": "path",
+   "type": "diagram",
+   "word": 425,
+   "T0": 420,
+   "T1": 453,
+   "transition": "iris",
+   "N": 10
+  },
+  {
+   "i": 8,
+   "id": "how",
+   "type": "band",
+   "word": 459,
+   "T0": 453,
+   "T1": 480,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 9,
+   "id": "capped",
+   "type": "diagram",
+   "word": 480,
+   "T0": 480,
+   "T1": 657,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 10,
+   "id": "result",
+   "type": "compare",
+   "word": 662,
+   "T0": 657,
+   "T1": 804,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 11,
+   "id": "nextband",
+   "type": "band",
+   "word": 812,
+   "T0": 804,
+   "T1": 846,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 12,
+   "id": "moonplans",
+   "type": "next",
+   "word": 846,
+   "T0": 846,
+   "T1": 906,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 13,
+   "id": "end",
+   "type": "end",
+   "word": 911,
+   "T0": 906,
+   "T1": 1016,
+   "transition": "whip",
+   "N": 10
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 5,
+   "f1": 52,
+   "text": "Orion came home at 39"
+  },
+  {
+   "f0": 52,
+   "f1": 96,
+   "text": "times the speed of sound,"
+  },
+  {
+   "f0": 96,
+   "f1": 127,
+   "text": "and the cabin stayed"
+  },
+  {
+   "f0": 127,
+   "f1": 158,
+   "text": "in the mid-70s."
+  },
+  {
+   "f0": 163,
+   "f1": 226,
+   "text": "Outside, it passed 4,000 degrees"
+  },
+  {
+   "f0": 226,
+   "f1": 255,
+   "text": "Fahrenheit."
+  },
+  {
+   "f0": 260,
+   "f1": 316,
+   "text": "The heat shield took it:"
+  },
+  {
+   "f0": 320,
+   "f1": 383,
+   "text": "186 blocks of Avcoat."
+  },
+  {
+   "f0": 388,
+   "f1": 425,
+   "text": "After Artemis I, NASA"
+  },
+  {
+   "f0": 425,
+   "f1": 459,
+   "text": "changed the path home."
+  },
+  {
+   "f0": 480,
+   "f1": 524,
+   "text": "It capped how far Orion"
+  },
+  {
+   "f0": 524,
+   "f1": 568,
+   "text": "could fly through the atmosphere,"
+  },
+  {
+   "f0": 568,
+   "f1": 602,
+   "text": "so less time in"
+  },
+  {
+   "f0": 602,
+   "f1": 628,
+   "text": "the temperature range that"
+  },
+  {
+   "f0": 628,
+   "f1": 662,
+   "text": "damaged Artemis I."
+  },
+  {
+   "f0": 662,
+   "f1": 688,
+   "text": "The result:"
+  },
+  {
+   "f0": 688,
+   "f1": 741,
+   "text": "nine spots of char loss."
+  },
+  {
+   "f0": 741,
+   "f1": 804,
+   "text": "Artemis I had 103."
+  },
+  {
+   "f0": 812,
+   "f1": 846,
+   "text": "NASA updates its"
+  },
+  {
+   "f0": 846,
+   "f1": 880,
+   "text": "Moon plans on Friday,"
+  },
+  {
+   "f0": 880,
+   "f1": 906,
+   "text": "October 23."
+  },
+  {
+   "f0": 911,
+   "f1": 942,
+   "text": "Follow Downlink Cat"
+  },
+  {
+   "f0": 942,
+   "f1": 1016,
+   "text": "for the update."
+  }
+ ],
+ "impacts": [
+  38,
+  194,
+  320,
+  688,
+  769
+ ],
+ "cues": 17,
+ "nightShift": {
+  "share": 0.642,
+  "frames": 652,
+  "overlay": {
+   "distinct": [
+    "enter pop",
+    "nod",
+    "exit down",
+    "enter slide",
+    "point",
+    "pump",
+    "exit slide",
+    "think",
+    "enter smear",
+    "wink",
+    "exit zip"
+   ],
+   "visits": [
+    [
+     106,
+     159
+    ],
+    [
+     260,
+     324
+    ],
+    [
+     488,
+     666
+    ],
+    [
+     760,
+     816
+    ],
+    [
+     846,
+     913
+    ]
+   ]
+  },
+  "pho": null
+ },
+ "captionSync": {
+  "maxAbsDelta": 0,
+  "late": 0,
+  "oobWordFrames": 0
+ },
+ "creditAudit": {
+  "photoMisses": 0,
+  "illustrationMisses": 0,
+  "framesWithPhoto": 420,
+  "framesWithIllustration": 437
+ },
+ "maxImpactsPerSecond": 1,
+ "lineStarts": [
+  5,
+  163,
+  260,
+  320,
+  388,
+  459,
+  480,
+  662,
+  688,
+  741,
+  812,
+  911
+ ],
+ "problems": [],
+ "notes": [],
+ "warnings": [
+  "beats[9] (id 'capped'): holds 6.1 s; give it inner moves (camera keys, a craft travelling, Night Shift acting) so the picture changes at least every 1.5 s"
+ ],
+ "qaFrames": [
+  0,
+  4,
+  5,
+  11,
+  48,
+  90,
+  91,
+  96,
+  101,
+  127,
+  157,
+  158,
+  162,
+  163,
+  168,
+  169,
+  195,
+  225,
+  226,
+  241,
+  254,
+  255,
+  259,
+  260,
+  265,
+  266,
+  290,
+  319,
+  320,
+  326,
+  352,
+  382,
+  383,
+  387,
+  388,
+  393,
+  394,
+  404,
+  419,
+  420,
+  425,
+  430,
+  439,
+  452,
+  453,
+  458,
+  459,
+  465,
+  470,
+  479,
+  480,
+  486,
+  569,
+  656,
+  657,
+  661,
+  662,
+  667,
+  668,
+  687,
+  688,
+  694,
+  733,
+  740,
+  741,
+  747,
+  803,
+  804,
+  811,
+  812,
+  818,
+  829,
+  845,
+  846,
+  876,
+  905,
+  906,
+  910,
+  911,
+  916,
+  917,
+  964,
+  1015
+ ]
+}

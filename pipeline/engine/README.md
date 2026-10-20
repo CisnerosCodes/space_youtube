@@ -1,6 +1,94 @@
 # Downlink Cat render engine
 
-The daily pipeline cannot hand-build a 1,000-line `anim.html` per Short. This engine turns a declarative shot list (written each day by a director model, see `DIRECTOR.md`) into one self-contained `anim.html` that keeps the pilots' bar: one continuous piece (a persistent amber dot carries across beats, motion carries through every transition), the cat moving through the Short, captions from word timings, the NEXT card, and the render contract (`window.renderAt(t)`, a pure function of t, 30 fps, 1080 x 1920).
+The daily pipeline cannot hand-build a 1,000-line page per Short. This engine turns a declarative shot list (written each day by a director model, see `DIRECTOR.md`) into one self-contained `anim.html` that keeps the render contract (`window.renderAt(t)`, a pure function of t, 30 fps, 1080 x 1920).
+
+## Styles
+
+| `"style"` | What it is | Code |
+|---|---|---|
+| `"anime"` (the house style since Oct 20, 2026, and the default) | The look of `lab/ultra/anime/`: cel-shaded Night Shift with expressions, poses and lip sync, Pho the grumpy Phobos, kinetic captions with emphasis lettering, STEP / NEXT bands, speed and focus lines, impact frames, whip pans with motion blur, photo lenses, panels and cutouts with credits, katakana SFX, the echo-mark end card. | `lib/build_anime.mjs`, `lib/validate_anime.mjs`, `anime/*.js`, `schema_anime.json` |
+| `"classic"` | The flat v1 look with the v3 cat (the pilots). Kept so older Shorts rebuild; a shot list with a `cat` timeline and no `style` builds as classic. | `build.mjs`, `lib/validate.mjs`, `runtime/`, `shots/`, `schema.json` |
+
+## Anime: daily use
+
+```sh
+node pipeline/engine/align_captions.mjs <short>/script.md <short>/voice.words.json <short>/captions.json [--alias heard=script]
+# the director writes <short>/shotlist.json with "style": "anime" (DIRECTOR.md part A), then:
+node pipeline/engine/build.mjs <short>                       # anim.html, out/cues.json, out/build_report.json, out/caption_sync.json
+pipeline/engine/tools/stills.sh <short> <QA frames>          # stills at beat and line boundaries + out/qa_sheet.png
+node lab/ultra/render_fast.mjs <short>/anim.html <seconds> 30 <short>/out/video.mp4 --workers=3
+python3 lab/ultra/anime/tools/pse.py <short>/out/video.mp4 --json <short>/out/pse.json   # flashes and motion per second
+python3 lab/sound/mix.py --voice <short>/voice.mp3 --bed lab/sound/beds/<bed>.wav --cues <short>/out/cues.json \
+  --out <short>/out/mix.m4a --video <short>/out/video.mp4 --mux <short>/out/final.mp4 --bed-under 18 --report <short>/out/mix.report.json
+python3 lab/ultra/anime/tools/strip.py <short>/out/final.mp4 <short>/out/lines.png <line-boundary frames> 6 0.25
+```
+
+`<seconds>` is the build report's `seconds` (the narration, then 48 frames for the sonic logo).
+
+A short example (from `examples/artemis_anime/shotlist.json`):
+
+```json
+{ "version": 1, "style": "anime", "series": "HOW DOES THAT WORK", "title": "Artemis II Heat Shield", "bed": "bedD_tense",
+  "facts": "factcheck.md", "stress": ["39", "4,000", "nine", "103."], "impacts": ["39", "4,000", "186", "nine", "103."],
+  "assets": { "splash": { "file": "img/splash.jpg", "credit": "NASA/Josh Valcarcel", "focus": [0.12, 0.12, 0.76, 0.72] } },
+  "beats": [
+    { "id": "hook", "start": "Orion#1", "shot": { "type": "hook", "image": "splash", "frame": "full", "overlay": "focus",
+        "keys": [{ "at": "39", "zoom": 3.0, "focus": [0.4, 0.66, 0.2, 0.2], "frames": 8 }] },
+      "chips": [{ "at": "39+6f", "lines": ["MAX VELOCITY:", { "t": "39 TIMES THE SPEED OF SOUND", "c": "amber" }] }],
+      "sfx": [{ "text": "ゴゴゴ", "at": 0, "for": 36, "pos": [690, 560] }] },
+    { "id": "cabin", "start": "and", "transition": { "type": "whip", "dir": "up" }, "source": "NASA",
+      "shot": { "type": "craft", "craft": "crew-capsule", "bg": "limb", "plasma": { "at": "and" }, "window": "cool", "rot": -0.5 } },
+    { "id": "shock", "start": "Fahrenheit.", "hit": true, "transition": { "type": "smash" },
+      "shot": { "type": "react", "who": "ns", "bg": "cyan", "faces": [{ "at": "Fahrenheit.", "expr": "shock" }] } },
+    { "id": "how", "start": "How?#1", "source": "NASA", "shot": { "type": "band", "style": 1, "words": ["How?#1", "How?#1"] } },
+    { "id": "nextband", "start": "NASA#2", "source": "NASA", "shot": { "type": "band", "style": "next", "label": "NEXT", "stamp": { "text": "FRI 23 OCT", "at": "updates" } } },
+    { "id": "moonplans", "start": "Moon", "source": "NASA", "shot": { "type": "next", "scene": "moon", "stamp": { "text": "FRI 23 OCT", "at": "Friday," } } },
+    { "id": "end", "start": "Follow", "transition": { "type": "whip", "dir": "up" }, "shot": { "type": "end", "downlink": "Downlink", "cat": "Cat" } } ],
+  "cast": { "ns": { "moves": [
+    { "at": "cabin", "do": "enter", "place": "right", "how": "pop" }, { "at": "mid-70s.", "do": "nod" },
+    { "at": "Outside,-14f", "do": "exit", "how": "down" } ] } } }
+```
+
+## Anime: files
+
+| Path | What it is |
+|---|---|
+| `lib/build_anime.mjs` | Validates, prepares images (WebP, at most 2400 px, alpha kept), inlines fonts and `anime/*.js` into `anim.html`, then renders every frame headless and runs the checks below. |
+| `lib/validate_anime.mjs` | Shot list checks with specific errors: anchors, beat order and lengths, hard cuts only on a hit or an impact, band words, sources for drawn beats, assets with credit and focus, numbers on screen against the narration and the fact table, filler labels, katakana only in SFX, dates as `DDD DD MMM`, impact frames (at most 3 per second, 10 frames apart), the cast's visits and moves. |
+| `anime/core.js`, `util.js` | From the hand-built entry: seeded noise, easing, line boil, cel fills, focus and speed lines, shake, stars; anchors, lip sync, blinks, and the per-frame registries (text boxes, photos drawn, illustrations drawn, caption boxes) the checks read. |
+| `anime/chars.js`, `actor.js` | Night Shift (anime design: head with expressions, bust, two-bone sleeve arms, paws, from behind) and Pho; the director rig (moves anchored to words, places, gestures, expressions, look, lip sync, travel with whip pans). |
+| `anime/props.js`, `props2.js`, `props3.js` | Generic drawn craft (rocket, slim rocket, probe, rover, satellite, capsule, crew capsule with heat shield, reentry fireball, parachutes), drawn Earth, Mars, Moon, Earth's limb, Phobos ground, sky, sea, clouds and flames, tags, canister, manga bursts. |
+| `anime/text.js` | Kinetic captions (automatic chunks, emphasis lettering, ink-exact fit, the fitPop clamp), bands, chips, the auto credit slot, kicker with step pips, katakana SFX with safe-zone fit, slam text, the wordmark. |
+| `anime/shots.js`, `shots2.js` | The shot library (below). |
+| `anime/runtime.js`, `boot.js`, `page.html` | Beats, transitions (whip with motion blur, smash, iris, cut, band wipes), shake, impact frames, actors, the UI layer, sound cues, QA hooks (`window.AQ`). |
+| `anime/fonts/` | Archivo (roman, italic), IBM Plex Mono 500/600, Dela Gothic One (Latin, kana and full-width slices from Google Fonts, SIL Open Font License). |
+| `examples/artemis_anime/` | Proof: the Artemis II heat shield Short rebuilt in anime from a shot list (`out/final.mp4`, `out/contact_full.png`). |
+| `examples/mmx_anime/` | The MMX kit (`lab/ultra/kit/`) rebuilt from a shot list (stills check; uses the hand-built entry's masked cutouts). |
+
+## Anime: shot library
+
+| Type | What it does |
+|---|---|
+| `hook` | Beat 0: a real photo that slams in (1.32x to 1x in 9 frames) with focus lines; `keys` zoom onto the subject on the hit word. |
+| `photo` | A real photo: `full` (cover, handheld sway), `panel` (tilted cel frame), `circle` (lens with amber ring, slow turn, optional `scan`), `cutout` (PNG alpha), `monitor` (on Night Shift's screen, him over the shoulder, optional pull-back). `marks` ring a point on a word. |
+| `number` | A giant number slams in on its word (Dela Gothic, paper and ink outline, red drop, shine; clamped inside the safe zone) over a backdrop, a drawn craft (`art`) or a lens photo. |
+| `craft` | A generic drawn spacecraft on a drawn backdrop with actions (reentry fireball, parachutes, splash, liftoff with cel billows, engine burn, coring arm) and `keys` moves; smears on fast moves. |
+| `compare` | Two photos or craft in lenses or panels; each value lands as a manga burst on its word (`tone: "bad"` in red). |
+| `diagram` | Paths drawing in on words, a craft riding a path (oriented along it, the fireball on hot segments), hot segments, stop markers, labels, rings, bodies, the Earth's limb backdrop (rotating), camera keys and drift. |
+| `react` | Night Shift close-up (expressions, a paw thrust at the camera) or Pho (expressions, reticle, the piece outline), on speed, focus, red, cyan or ray backgrounds. |
+| `band` | STEP / NEXT eyecatch band (four entry styles and NEXT) carrying the narration words or a label, numeral, step pips, date stamp, Night Shift's face. |
+| `next` | The NEXT scene (Moon, rocket on a pad, Earth, Mars, or a photo) with its chip and the date slam. |
+| `end` | The end card: salute, the echo mark from his eyes into the wordmark, DOWNLINK and CAT on their words, pulses on the sonic logo, a wink. |
+
+## Anime: checks the build runs (on every frame)
+
+Boot and render errors; caption sync (every word drawn within 2 frames of its spoken start, banded words included); caption bounds with the pop (x 80 to 900, y 260 to 1500); text at rest in the same box (chips, labels, slams, bursts, tags, stamps, band words, SFX, the wordmark, credits; text that is entering, leaving, popping or shaking is exempt); the credit audit (a real photo on screen without its exact credit, or a drawn illustration without an "Illustration" credit, fails); the flash limit (at most 3 impact frames per second). Notes: Night Shift's share of the runtime, his number of overlay moves, frames where an overlay covers a quarter of a photo subject, credits with 3 or more lines.
+
+## Anime: render time
+
+Build and every-frame checks: about 15 s for 34 s. Render with `lab/ultra/render_fast.mjs --workers=3`: about 65 s for the 34 s Artemis proof (1,016 frames); mix about 25 s. No frame folder on disk.
+
+# Classic style
 
 ## Daily use
 
