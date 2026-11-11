@@ -284,7 +284,16 @@ function creditLines() {
   const photos = [...new Set([...R.photos].map((n) => IMAGES[n].credit))];
   const lines = [];
   let cur = '';
-  for (const p of photos) { if (!cur) cur = p; else if ((cur + ' · ' + p).length <= 52) cur += ' · ' + p; else { lines.push(cur); cur = p; } }
+  for (const p of photos) {
+    if (p.length > 52) { // a long official credit (e.g. Chandra's X-ray; Optical; Image Processing) wraps at its "; " parts, never shortened
+      if (cur) { lines.push(cur); cur = ''; }
+      let w = '';
+      for (const part of p.split('; ')) { const add = w ? w + '; ' + part : part; if (w && add.length > 60) { lines.push(w + ';'); w = part; } else w = add; }
+      if (w) lines.push(w);
+      continue;
+    }
+    if (!cur) cur = p; else if ((cur + ' · ' + p).length <= 52) cur += ' · ' + p; else { lines.push(cur); cur = p; }
+  }
   if (cur) lines.push(cur);
   if (R.illus.size) lines.push('Illustration · facts: ' + [...R.illus].join(', '));
   return lines;
@@ -295,6 +304,7 @@ function drawCredit(lines) {
   ctx.font = '600 25px "Plex Mono"';
   let y = 1478 - (lines.length - 1) * 38;
   for (const s of lines) {
+    ctx.font = s.length > 52 ? '600 21px "Plex Mono"' : '600 25px "Plex Mono"'; // wrapped long credits use the smaller size to stay inside x 900
     const w = ctx.measureText(s).width;
     ctx.fillStyle = 'rgba(11,11,12,0.86)'; ctx.fillRect(80, y - 27, w + 34, 36);
     ctx.fillStyle = C.amber; ctx.fillRect(80, y - 27, 6, 36);
