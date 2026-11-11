@@ -1,6 +1,6 @@
 """Shared helpers for the Downlink Cat pipeline tools (standard library only).
 
-- openrouter_key(): the OpenRouter key from $OPENROUTER_API_KEY or ~/.config/signal-delay/.env (never printed).
+- openrouter_key(): the OpenRouter key from $OPENROUTER_API_KEY or ~/.config/signal-delay/.env (never printed); with neither, a placeholder that the cloud proxy replaces with the openrouter.ai network secret.
 - http(): urllib request with the house User-Agent, retries on 429 and 5xx.
 - generation_cost(): OpenRouter cost lookup by generation id, retried while it answers 404.
 """
@@ -27,7 +27,9 @@ def openrouter_key():
     if key:
         return key
     if not ENV_FILE.exists():
-        raise SystemExit(f"OPENROUTER_API_KEY is not set and {ENV_FILE} does not exist")
+        # Cloud runs: the key is a network secret for openrouter.ai, and the session's proxy
+        # replaces this placeholder in the Authorization header. A missing secret shows up as a 401.
+        return "proxy-injected"
     env = dict(l.strip().split("=", 1) for l in ENV_FILE.read_text().splitlines() if "=" in l and not l.lstrip().startswith("#"))
     if "OPENROUTER_API_KEY" not in env:
         raise SystemExit(f"OPENROUTER_API_KEY is missing from {ENV_FILE}")
