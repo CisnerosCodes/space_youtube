@@ -122,7 +122,8 @@ export async function buildAnime(shortDir, shotlist, { noCheck = false, slPath }
   const missPhoto = [], missIllus = [];
   for (const r of recs) {
     const txt = r.lines.join('\n');
-    for (const p of r.photos) if (!r.lines.some((l) => l.split(' · ').includes(p.credit))) missPhoto.push({ f: r.f, credit: p.credit });
+    // a photo's exact credit must be in the slot: as a ' · ' part of one line, or (a long credit wrapped at '; ') as consecutive lines
+    for (const p of r.photos) if (!r.lines.some((l) => l.split(' · ').includes(p.credit)) && !r.lines.join(' ').split(' · ').some((s) => s.includes(p.credit))) missPhoto.push({ f: r.f, credit: p.credit });
     if (r.illus.length && !r.lines.some((l) => l.startsWith('Illustration'))) missIllus.push(r.f);
     void txt;
   }
