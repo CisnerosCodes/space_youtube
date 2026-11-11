@@ -26,13 +26,13 @@ The rules every script, video, title and upload must follow. The pipeline reads 
 ## Hard rules (YouTube inauthentic content policy)
 - No two videos may feel interchangeable: vary hooks, pacing and visuals, not only the series.
 - Every script contains a real, sourced insight. Every video keeps a source list.
-- Every video waits in the approval queue; a human approves the script and the video before anything posts.
+- No video posts unless every automated gate passes (`pipeline/autopublish.py`: a fresh quote check of every source, credits on every frame, caption sync, flash limit, loudness, AI disclosure). Videos go up private with a scheduled publish time at least 2 hours later, so the owner can still pull one. (Until 2026-11-11 a human approved every video; the owner removed that step because it was the bottleneck.)
 - Visuals: NASA media first (follow NASA's media usage guidelines). ESA images only with the required credit. No SpaceX or other webcast footage unless its license is confirmed. AI images only as clearly labeled illustration, never passed off as real photos of real missions.
 - An image must show what the narration says. When no real image fits a beat, use a labeled line diagram ("DIAGRAM · NOT TO SCALE"), never an unrelated photo.
 - Every photo on screen carries its credit.
 - Audio: no copyrighted music.
 - Use YouTube's altered or synthetic content disclosure whenever a realistic AI visual could mislead.
-- Facts come only from the sources in the video's source list; the lead model checks every fact before the script reaches the approval queue.
+- Facts come only from the sources in the video's source list; the lead model checks every fact before anything is uploaded.
 
 ## Growth rules (design for subscribing, not only views)
 1. Recurring identity: the same narrator, the four named series, and the same visual signature every day.
