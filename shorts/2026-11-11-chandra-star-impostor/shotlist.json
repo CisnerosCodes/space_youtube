@@ -1,0 +1,946 @@
+{
+ "version": 1,
+ "style": "anime",
+ "series": "JUST DISCOVERED",
+ "title": "The Supernova Impostor",
+ "bed": "bedE_arp",
+ "captions": "captions.json",
+ "voice": "voice.mp3",
+ "facts": "factcheck.md",
+ "stress": [
+  "surviving.",
+  "27",
+  "100",
+  "hidden",
+  "113",
+  "first",
+  "Voyager"
+ ],
+ "assets": {
+  "galaxy": {
+   "file": "img/at2016blu.jpg",
+   "credit": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al.; Optical: SDSS; Image Processing: NASA/CXC/SAO/P. Edmonds",
+   "focus": [
+    0.42,
+    0.56,
+    0.24,
+    0.24
+   ],
+   "note": "Release image at2016blu.jpg: Chandra X-ray and SDSS optical composite of NGC 4559; AT 2016blu is in the small pink and blue group near (0.54, 0.69)"
+  },
+  "xray_before": {
+   "file": "img/xray_before.jpg",
+   "credit": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT",
+   "focus": [
+    0.12,
+    0.3,
+    0.6,
+    0.55
+   ],
+   "note": "Crop of the four-panel release image at2016blu_4panel.jpg, top-left: Chandra X-ray 2001 and 2002 (label printed on the image), AT 2016blu arrowed at (0.21, 0.31); star in the crop at (0.408, 0.614)"
+  },
+  "xray_during": {
+   "file": "img/xray_during.jpg",
+   "credit": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT",
+   "focus": [
+    0.12,
+    0.3,
+    0.6,
+    0.55
+   ],
+   "note": "Crop of the four-panel release image at2016blu_4panel.jpg, top-right: Chandra X-ray March 24-27, 2026 (label printed on the image), AT 2016blu arrowed at (0.70, 0.325); star in the crop at (0.406, 0.645)"
+  },
+  "opt_quiet": {
+   "file": "img/opt_quiet.jpg",
+   "credit": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT",
+   "focus": [
+    0.12,
+    0.3,
+    0.6,
+    0.55
+   ],
+   "note": "Crop of the four-panel release image at2016blu_4panel.jpg, bottom-left: KAIT optical, quiescence (label printed on the image); star in the crop at (0.408, 0.633)"
+  },
+  "opt_out": {
+   "file": "img/opt_out.jpg",
+   "credit": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT",
+   "focus": [
+    0.12,
+    0.3,
+    0.6,
+    0.55
+   ],
+   "note": "Crop of the four-panel release image at2016blu_4panel.jpg, bottom-right: KAIT optical, in outburst (label printed on the image); star in the crop at (0.416, 0.633)"
+  }
+ },
+ "impacts": [
+  "surviving.",
+  "27",
+  "100",
+  "hidden",
+  "113",
+  "first",
+  "18."
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "start": "A#1",
+   "shot": {
+    "type": "hook",
+    "image": "galaxy",
+    "frame": "full",
+    "push": 0.05,
+    "overlay": "focus",
+    "overlay_r": 300,
+    "keys": [
+     {
+      "at": "30",
+      "zoom": 2.2,
+      "focus": [
+       0.44,
+       0.58,
+       0.2,
+       0.2
+      ],
+      "frames": 10
+     },
+     {
+      "at": "away",
+      "zoom": 3.2,
+      "focus": [
+       0.49,
+       0.64,
+       0.1,
+       0.1
+      ],
+      "frames": 16
+     }
+    ]
+   },
+   "chips": [
+    {
+     "at": "light-years+4f",
+     "lines": [
+      "NGC 4559",
+      {
+       "t": "ABOUT 30 MILLION LIGHT-YEARS",
+       "c": "amber"
+      },
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ゴゴゴ",
+     "at": 0,
+     "for": 36,
+     "pos": [
+      690,
+      560
+     ],
+     "size": 92,
+     "rot": 0.08
+    }
+   ]
+  },
+  {
+   "id": "erupt",
+   "start": "erupting#1",
+   "transition": {
+    "type": "whip",
+    "dir": "up"
+   },
+   "shot": {
+    "type": "photo",
+    "image": "opt_out",
+    "frame": "circle",
+    "push": 0.05,
+    "bg": "focus",
+    "marks": [
+     {
+      "at": "supernova,#1",
+      "point": [
+       0.416,
+       0.633
+      ],
+      "r": 90
+     }
+    ]
+   },
+   "chips": [
+    {
+     "at": "like",
+     "lines": [
+      "AT 2016BLU",
+      {
+       "t": "IN OUTBURST",
+       "c": "amber"
+      },
+      {
+       "t": "SOURCE: NASA/KAIT",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ドン",
+     "at": "supernova,#1",
+     "for": 20,
+     "pos": [
+      700,
+      1100
+     ],
+     "size": 100
+    }
+   ]
+  },
+  {
+   "id": "survive",
+   "start": "surviving.",
+   "hit": true,
+   "transition": {
+    "type": "smash"
+   },
+   "shot": {
+    "type": "react",
+    "who": "ns",
+    "bg": "cyan",
+    "rim": "cyan",
+    "faces": [
+     {
+      "at": "surviving.",
+      "expr": "shock"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "text": "エッ!?",
+     "at": "surviving.+2f",
+     "for": 26,
+     "pos": [
+      520,
+      1030
+     ],
+     "size": 110,
+     "color": "cyan"
+    }
+   ]
+  },
+  {
+   "id": "count",
+   "start": "At#1",
+   "transition": {
+    "type": "whip",
+    "dir": "left"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "number",
+    "text": "27",
+    "at": "27",
+    "y": 640,
+    "bg": "space"
+   },
+   "chips": [
+    {
+     "at": "bursts+2f",
+     "y": 760,
+     "lines": [
+      {
+       "t": "AT LEAST 27 BURSTS",
+       "c": "amber"
+      },
+      "BETWEEN 2012 AND 2026",
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "バシュッ",
+     "at": "27",
+     "for": 22,
+     "pos": [
+      640,
+      470
+     ],
+     "size": 100,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "id": "quietloud",
+   "start": "between",
+   "transition": {
+    "type": "smash"
+   },
+   "shot": {
+    "type": "compare",
+    "layout": "lens",
+    "items": [
+     {
+      "image": "opt_quiet",
+      "label": "QUIET",
+      "at": "between"
+     },
+     {
+      "image": "opt_out",
+      "label": "IN OUTBURST",
+      "at": "2012",
+      "tone": "bad"
+     }
+    ]
+   }
+  },
+  {
+   "id": "impostor",
+   "start": "They",
+   "source": "NASA",
+   "shot": {
+    "type": "band",
+    "style": 2,
+    "expr": "smirk",
+    "lead": 6,
+    "label": "IMPOSTOR"
+   }
+  },
+  {
+   "id": "smirk",
+   "start": "impostor.",
+   "source": "NASA",
+   "shot": {
+    "type": "react",
+    "who": "ns",
+    "bg": "rays",
+    "rim": "red",
+    "faces": [
+     {
+      "at": "impostor.",
+      "expr": "smirk"
+     }
+    ],
+    "paw": {
+     "at": "impostor.+4f",
+     "close_at": "impostor.+20f"
+    }
+   },
+   "sfx": [
+    {
+     "text": "ズン",
+     "at": "impostor.+2f",
+     "for": 24,
+     "pos": [
+      640,
+      560
+     ],
+     "size": 104,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "start": "Why?",
+   "source": "NASA",
+   "shot": {
+    "type": "photo",
+    "image": "xray_during",
+    "frame": "monitor",
+    "lean_at": "caught",
+    "marks": [
+     {
+      "at": "caught",
+      "point": [
+       0.406,
+       0.645
+      ],
+      "r": 70
+     }
+    ]
+   },
+   "chips": [
+    {
+     "at": "Chandra",
+     "lines": [
+      "CHANDRA X-RAY",
+      {
+       "t": "MARCH 2026",
+       "c": "amber"
+      }
+     ]
+    }
+   ],
+   "caption": {
+    "y": 1060
+   },
+   "transition": {
+    "type": "whip",
+    "dir": "right"
+   }
+  },
+  {
+   "id": "brighter",
+   "start": "100",
+   "hit": true,
+   "transition": {
+    "type": "smash"
+   },
+   "shot": {
+    "type": "compare",
+    "layout": "lens",
+    "items": [
+     {
+      "image": "xray_before",
+      "label": "X-RAY 2001-2002",
+      "at": "100"
+     },
+     {
+      "image": "xray_during",
+      "label": "X-RAY MARCH 2026",
+      "at": "brighter",
+      "value": "100x",
+      "value_at": "X-rays",
+      "value_sub": "AT LEAST, BRIGHTER"
+     }
+    ]
+   }
+  },
+  {
+   "id": "partner",
+   "start": "explanation:",
+   "transition": {
+    "type": "iris",
+    "at": [
+     540,
+     700
+    ]
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "diagram",
+    "backdrop": {
+     "kind": "space"
+    },
+    "camera": [
+     {
+      "at": "explanation:",
+      "zoom": 1.04,
+      "center": [
+       500,
+       700
+      ],
+      "frames": 12
+     },
+     {
+      "at": "hidden",
+      "zoom": 1.16,
+      "center": [
+       640,
+       700
+      ],
+      "frames": 10
+     },
+     {
+      "at": "neutron",
+      "zoom": 1.08,
+      "center": [
+       540,
+       700
+      ],
+      "frames": 14
+     },
+     {
+      "at": "pulling",
+      "zoom": 1.2,
+      "center": [
+       600,
+       700
+      ],
+      "frames": 12
+     },
+     {
+      "at": "material",
+      "zoom": 1.28,
+      "center": [
+       640,
+       690
+      ],
+      "frames": 10
+     },
+     {
+      "at": "off",
+      "zoom": 1.16,
+      "center": [
+       560,
+       700
+      ],
+      "frames": 12
+     }
+    ],
+    "elements": [
+     {
+      "id": "orbit",
+      "path": [
+       [
+        400,
+        500
+       ],
+       [
+        640,
+        540
+       ],
+       [
+        760,
+        700
+       ],
+       [
+        640,
+        880
+       ],
+       [
+        400,
+        920
+       ],
+       [
+        230,
+        820
+       ],
+       [
+        230,
+        600
+       ],
+       [
+        400,
+        500
+       ]
+      ],
+      "color": "muted",
+      "dash": true,
+      "at": "explanation:",
+      "draw": 16,
+      "width": 6,
+      "arrow": false
+     },
+     {
+      "id": "star",
+      "ring": [
+       400,
+       710,
+       120
+      ],
+      "at": "explanation:"
+     },
+     {
+      "label": "AT 2016BLU",
+      "pos": [
+       300,
+       520
+      ],
+      "color": "amber",
+      "at": "explanation:+6f"
+     },
+     {
+      "id": "comp",
+      "ring": [
+       740,
+       700,
+       34
+      ],
+      "at": "hidden",
+      "pulse": [
+       "black",
+       "neutron"
+      ]
+     },
+     {
+      "marker": "dot",
+      "pos": [
+       740,
+       700
+      ],
+      "color": "red",
+      "at": "hidden"
+     },
+     {
+      "label": "BLACK HOLE OR NEUTRON STAR",
+      "pos": [
+       380,
+       400
+      ],
+      "color": "amber",
+      "at": "black"
+     },
+     {
+      "id": "stream",
+      "path": [
+       [
+        520,
+        690
+       ],
+       [
+        610,
+        670
+       ],
+       [
+        700,
+        690
+       ]
+      ],
+      "color": "amber",
+      "at": "pulling",
+      "draw": 12,
+      "width": 14
+     },
+     {
+      "label": "MATERIAL PULLED OFF THE STAR",
+      "pos": [
+       260,
+       1000
+      ],
+      "color": "amber",
+      "at": "material"
+     }
+    ]
+   }
+  },
+  {
+   "id": "period",
+   "start": "every",
+   "transition": {
+    "type": "whip",
+    "dir": "up-right"
+   },
+   "source": "NASA",
+   "shot": {
+    "type": "number",
+    "text": "113",
+    "at": "113",
+    "y": 640,
+    "bg": "space"
+   },
+   "chips": [
+    {
+     "at": "113+6f",
+     "y": 760,
+     "lines": [
+      {
+       "t": "EVERY 113 DAYS",
+       "c": "amber"
+      },
+      "AS THEY ORBIT",
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "text": "ドン",
+     "at": "113",
+     "for": 20,
+     "pos": [
+      700,
+      470
+     ],
+     "size": 100
+    }
+   ]
+  },
+  {
+   "id": "first",
+   "start": "It#4",
+   "transition": {
+    "type": "whip",
+    "dir": "left"
+   },
+   "shot": {
+    "type": "photo",
+    "image": "galaxy",
+    "frame": "panel",
+    "push": 0.05,
+    "bg": "speed",
+    "marks": [
+     {
+      "at": "first",
+      "point": [
+       0.537,
+       0.685
+      ],
+      "r": 80
+     }
+    ],
+    "keys": [
+     {
+      "at": "first",
+      "zoom": 1.15,
+      "focus": [
+       0.44,
+       0.6,
+       0.2,
+       0.2
+      ],
+      "frames": 14
+     },
+     {
+      "at": "class",
+      "zoom": 1.35,
+      "focus": [
+       0.47,
+       0.63,
+       0.14,
+       0.14
+      ],
+      "frames": 16
+     }
+    ]
+   },
+   "chips": [
+    {
+     "at": "first+4f",
+     "lines": [
+      {
+       "t": "FIRST X-RAY DETECTION",
+       "c": "amber"
+      },
+      "OF THIS CLASS OF ERUPTING STAR",
+      {
+       "t": "SOURCE: NASA",
+       "c": "muted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nextband",
+   "start": "Next:",
+   "source": "NASA JPL",
+   "shot": {
+    "type": "band",
+    "style": "next",
+    "label": "NEXT",
+    "stamp": {
+     "text": "WED 18 NOV",
+     "at": "Voyager"
+    },
+    "expr": "happy"
+   }
+  },
+  {
+   "id": "voyager",
+   "start": "reaches",
+   "source": "NASA JPL",
+   "shot": {
+    "type": "next",
+    "scene": "earth",
+    "chip": [
+     "VOYAGER 1: ONE LIGHT-DAY FROM EARTH",
+     "LIGHT FROM EARTH TAKES 24 HOURS",
+     {
+      "t": "WED 18 NOV",
+      "c": "amber"
+     }
+    ],
+    "chip_at": "reaches",
+    "stamp": {
+     "text": "WED 18 NOV",
+     "at": "Wednesday,",
+     "y": 760,
+     "x": 540
+    }
+   }
+  },
+  {
+   "id": "end",
+   "start": "Follow",
+   "transition": {
+    "type": "whip",
+    "dir": "up"
+   },
+   "shot": {
+    "type": "end",
+    "downlink": "Downlink",
+    "cat": "Cat"
+   }
+  }
+ ],
+ "cast": {
+  "ns": {
+   "moves": [
+    {
+     "at": "million",
+     "do": "enter",
+     "place": "low-left",
+     "how": "pop"
+    },
+    {
+     "at": "million+4f",
+     "do": "look",
+     "target": "el:subject"
+    },
+    {
+     "at": "away",
+     "do": "point",
+     "target": "el:subject"
+    },
+    {
+     "at": "erupting#1-10f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "least#1",
+     "do": "enter",
+     "place": "right",
+     "how": "slide"
+    },
+    {
+     "at": "27",
+     "do": "gasp"
+    },
+    {
+     "at": "bursts",
+     "do": "expr",
+     "expr": "curious"
+    },
+    {
+     "at": "between-8f",
+     "do": "exit",
+     "how": "slide"
+    },
+    {
+     "at": "times",
+     "do": "enter",
+     "place": "peek-right-low",
+     "how": "smear"
+    },
+    {
+     "at": "brighter",
+     "do": "expr",
+     "expr": "shock"
+    },
+    {
+     "at": "explanation:-10f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "hidden",
+     "do": "enter",
+     "place": "low-right",
+     "how": "pop"
+    },
+    {
+     "at": "black",
+     "do": "point",
+     "target": "el:comp"
+    },
+    {
+     "at": "neutron",
+     "do": "think"
+    },
+    {
+     "at": "pulling",
+     "do": "lean",
+     "target": "el:stream"
+    },
+    {
+     "at": "every-10f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "113",
+     "do": "enter",
+     "place": "low-right",
+     "how": "pop"
+    },
+    {
+     "at": "113+4f",
+     "do": "pump"
+    },
+    {
+     "at": "days.",
+     "do": "nod"
+    },
+    {
+     "at": "It#4-10f",
+     "do": "exit",
+     "how": "slide"
+    },
+    {
+     "at": "first",
+     "do": "enter",
+     "place": "low-right",
+     "how": "slide"
+    },
+    {
+     "at": "first+6f",
+     "do": "point",
+     "target": "el:mark0"
+    },
+    {
+     "at": "detection",
+     "do": "expr",
+     "expr": "proud"
+    },
+    {
+     "at": "Next:-10f",
+     "do": "exit",
+     "how": "down"
+    },
+    {
+     "at": "reaches+4f",
+     "do": "enter",
+     "place": "low-right",
+     "how": "pop"
+    },
+    {
+     "at": "one",
+     "do": "point",
+     "target": "camera"
+    },
+    {
+     "at": "light-day",
+     "do": "move",
+     "to": "low-left"
+    },
+    {
+     "at": "Earth,",
+     "do": "point",
+     "target": [
+      640,
+      1250
+     ]
+    },
+    {
+     "at": "Wednesday,",
+     "do": "pump"
+    },
+    {
+     "at": "18.",
+     "do": "wink"
+    },
+    {
+     "at": "Follow-8f",
+     "do": "exit",
+     "how": "zip"
+    }
+   ]
+  }
+ }
+}

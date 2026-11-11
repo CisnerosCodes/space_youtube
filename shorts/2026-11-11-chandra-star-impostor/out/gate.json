@@ -1,0 +1,14 @@
+{
+  "checked": "2026-11-11T16:51:44Z",
+  "publish_at": "2026-11-11T19:00:00Z",
+  "passed": true,
+  "fails": [],
+  "info": {
+    "style": "anime",
+    "lufs": -13.9,
+    "true_peak": -2.0,
+    "video": "1080x1920, 37.0 s",
+    "quotes": "quotecheck exit 0"
+  },
+  "dry_run": false
+}

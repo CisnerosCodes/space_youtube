@@ -1,0 +1,40 @@
+# Fact check: Chandra and the supernova impostor AT 2016blu (2026-11-11)
+
+Checked by the lead session against the live pages (`python3 pipeline/quotecheck.py`). Every narration claim has a row; quotes are copied from the page.
+
+| Line | Claim | Quote | Source |
+|---|---|---|---|
+| 1 | A star about 30 million light-years away | "The volatile star, known as AT 2016blu, is in the spiral galaxy NGC 4559, located about 30 million light-years from Earth." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 1 | It keeps erupting like a supernova, and surviving | "This star’s behavior was confusing at first because it kept acting like a supernova, but clearly it’s not because it keeps surviving these outbursts about three times a year" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 1 | (same) | "The spikes in brightness are so extreme that they resemble supernova explosions" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 2 | At least 27 bursts between 2012 and 2026 | "Between 2012 and 2026, astronomers detected at least 27 bursts of optical light" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 3 | They call it a supernova impostor | "AT 2016blu is also referred to as a “supernova impostor.”" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 4 | Chandra caught it at least 100 times brighter in X-rays than before its outbursts began | "Chandra data from March 2026 revealed that AT 2016blu was at least 100 times brighter in X-rays than in Chandra data from 2001 to 2002, which is before the outbursts began." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 4 | Chandra caught it during an outburst | "When these observations showed that the star was in outburst in early 2026, Chandra observations were triggered and obtained in March 2026" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 5 | The best explanation: a black hole or neutron star | "The best explanation for this is that material from the star is falling onto a neutron star or black hole" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 5 | A hidden partner pulling material off it every 113 days | "a previously hidden companion object that keeps pulling material away from the massive star every 113 days as they orbit one another" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 5 | The partner is a black hole or a neutron star | "This partner is either a stellar-mass black hole, or the dense collapsed core of a massive star called a neutron star." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 6 | First X-ray detection of this class of erupting star | "This is the first X-ray detection of one of this class of erupting stars." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| 7 | Voyager 1 reaches one light-day from Earth, Wednesday, November 18 | "NASA’s Voyager 1 on Wednesday, Nov. 18 will have traveled one light-day from Earth" | https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities |
+| visual | NEXT card fact: one light-day is more than 16 billion miles | "which is more than 16 billion miles (25.9 billion kilometers)" | https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities |
+| visual | NEXT card fact: light from Earth takes 24 hours to reach Voyager 1 | "any light from Earth would take 24 hours to reach the spacecraft" | https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities |
+| visual | The galaxy photo is a Chandra X-ray and SDSS optical composite of NGC 4559 | "A composite NASA Chandra X-ray and Sloan Digital Sky Survey (SDSS) optical image of the galaxy NGC 4559" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | The ring marks the small group of pink and blue dots near the frame center, where AT 2016blu is | "Sitting near the outer edge of the dense spiral, near the center of the frame, is a small group of pink and blue dots." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | (same) | "The smallest pink dot in the square is AT 2016blu" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | Galaxy photo credit | "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al.; Optical: SDSS; Image Processing: NASA/CXC/SAO/P. Edmonds" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | The four-panel image shows AT 2016blu quiet and in outburst (optical, top) and Chandra X-ray before and during (bottom) | "Images showing AT 2016blu in outburst and quiescence." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | Four-panel X-ray, before: Chandra data from 2001 and 2002 (label printed on the image: "Chandra X-ray: 2001 and 2002") | "Chandra X-ray data obtained in 2001 and 2002" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | Four-panel X-ray, during: Chandra data from March 24 to 27, 2026 (label printed on the image: "Chandra X-ray: March 24-27, 2026") | "the bottom-right image shows Chandra data obtained between March 24 and March 27, 2026" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | Four-panel credit | "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT" | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+| visual | The star is at least 33 times the mass of the Sun (chip) | "Astronomers estimate the mass of this star is at least 33 times that of the Sun." | https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/ |
+
+## Judgment calls
+- The Sonnet draft answered "Why?" with the brightness number and only then named the companion; the rewrite keeps one "Why?" turn and goes straight from the measurement to the explanation.
+- The draft's hook ("has burst at least 27 times, and survived") was replaced with the co-author's framing (it "kept acting like a supernova" and "keeps surviving"), and the 27 bursts moved to line 2 with the page's dates.
+- "about 30 million light-years": the hedge "about" is kept.
+- "The best explanation": the page applies it to material falling onto the compact object; the script keeps the hedge on that line and does not claim which of the two the partner is.
+- "first X-ray detection of this class of erupting star": the page's own claim, nearly word for word. The second "first" on the page (first with a black hole or neutron star companion) is not used, to keep one first.
+- "Credit: Univ. of Virgina" is the page's own spelling and is copied exactly, as the credit rules require.
+- The page is a single NASA release about one study; the narration claims nothing beyond it.
+- The page caption of the four-panel image says optical is on top and X-ray on the bottom; the image itself prints "Chandra X-ray" on the top row and "KAIT Optical" on the bottom row. The Short follows the labels printed on the image; the fact rows quote the caption only for the dates, not for the positions.
+- The full-size composite has no white square (the page mentions one in the web version). The ring marks the small group of pink and blue dots near the frame center that the page describes; the narration never claims a specific pixel is the star.

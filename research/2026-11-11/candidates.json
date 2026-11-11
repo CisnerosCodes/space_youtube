@@ -1,0 +1,3599 @@
+{
+ "generated": "2026-11-11T16:29:58Z",
+ "date": "2026-11-11",
+ "window": {
+  "from": "2026-11-04T00:00:00Z",
+  "to": "2026-11-12T00:00:00Z"
+ },
+ "launch_window": {
+  "from": "2026-11-11T16:29:06Z",
+  "to": "2026-11-21T16:29:06Z"
+ },
+ "sources": [
+  {
+   "name": "Launch Library 2 upcoming",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?net__gte=2026-11-11T16%3A29%3A06Z&net__lte=2026-11-21T16%3A29%3A06Z&limit=50&mode=normal&ordering=net",
+   "fetched": "2026-11-11T16:29:08Z",
+   "items": 9
+  },
+  {
+   "name": "Launch Library 2 recent",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/previous/?net__gte=2026-11-04T00%3A00%3A00Z&net__lte=2026-11-11T16%3A29%3A06Z&limit=50&mode=normal&ordering=-net",
+   "fetched": "2026-11-11T16:29:09Z",
+   "items": 6
+  },
+  {
+   "name": "NASA",
+   "url": "https://www.nasa.gov/feed/",
+   "fetched": "2026-11-11T16:29:13Z",
+   "pages": [
+    "page 1: 10 items",
+    "page 2: 10 items",
+    "page 3: 10 items",
+    "page 4: 10 items",
+    "page 5: 10 items"
+   ],
+   "in_window": 34
+  },
+  {
+   "name": "NASA Science",
+   "url": "https://science.nasa.gov/feed/",
+   "fetched": "2026-11-11T16:29:21Z",
+   "pages": [
+    "page 1: 10 items",
+    "page 2: 10 items",
+    "page 3: 10 items",
+    "page 4: 10 items",
+    "page 5: 10 items",
+    "page 6: 10 items"
+   ],
+   "in_window": 34
+  },
+  {
+   "name": "ESA Space Science",
+   "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+   "fetched": "2026-11-11T16:29:22Z",
+   "pages": [
+    "page 1: HTTP Error 404: Not Found"
+   ],
+   "in_window": 0
+  },
+  {
+   "name": "ESA Exploration",
+   "url": "https://www.esa.int/rssfeed/Our_Activities/Human_and_Robotic_Exploration",
+   "fetched": "2026-11-11T16:29:23Z",
+   "pages": [
+    "page 1: HTTP Error 404: Not Found"
+   ],
+   "in_window": 0
+  },
+  {
+   "name": "ESA Transportation",
+   "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Transportation",
+   "fetched": "2026-11-11T16:29:23Z",
+   "pages": [
+    "page 1: HTTP Error 404: Not Found"
+   ],
+   "in_window": 0
+  },
+  {
+   "name": "ESA Operations",
+   "url": "https://www.esa.int/rssfeed/Our_Activities/Operations",
+   "fetched": "2026-11-11T16:29:24Z",
+   "pages": [
+    "page 1: HTTP Error 404: Not Found"
+   ],
+   "in_window": 0
+  },
+  {
+   "name": "ESA/Webb",
+   "url": "https://esawebb.org/news/feed/",
+   "fetched": "2026-11-11T16:29:24Z",
+   "pages": [
+    "page 1: 10 items"
+   ],
+   "in_window": 0
+  },
+  {
+   "name": "JPL",
+   "url": "https://www.jpl.nasa.gov/feeds/news",
+   "fetched": "2026-11-11T16:29:25Z",
+   "pages": [
+    "page 1: 100 items"
+   ],
+   "in_window": 2
+  }
+ ],
+ "skipped_not_news": 36,
+ "counts": {
+  "Launch Day": 9,
+  "Just Discovered": 26,
+  "How Does That Work": 19,
+  "By the Numbers": 7
+ },
+ "note": "Candidates only. Every fact must still be checked against the source page before a script uses it (see lab/research/2026-10-15_pilot_candidates.md for the quote-table method).",
+ "candidates": [
+  {
+   "id": "ll2-falcon-9-block-5-ussf-627",
+   "title": "Falcon 9 Block 5 | USSF-627",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/6aa7b90b-e5ed-45d8-a52e-04fbf399d178/",
+   "published": "2026-11-12T02:36:18Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+   "launch": {
+    "net": "2026-11-12T02:36:18Z",
+    "net_precision": "Second",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "SpaceX",
+    "rocket": "Falcon 9 Block 5",
+    "mission": "USSF-627",
+    "mission_type": "Government/Top Secret",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+    "pad": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/6aa7b90b-e5ed-45d8-a52e-04fbf399d178/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "USSF-627",
+    "tried": [
+     "USSF-627"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-kuaizhou-11-unknown-payload",
+   "title": "Kuaizhou 11 | Unknown Payload",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/e2523821-9760-4cb4-ad1f-7ce2e30419bd/",
+   "published": "2026-11-12T19:50:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "Details TBD.",
+   "launch": {
+    "net": "2026-11-12T19:50:00Z",
+    "net_precision": "Hour",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "ExPace",
+    "rocket": "Kuaizhou 11",
+    "mission": "Unknown Payload",
+    "mission_type": "Unknown",
+    "orbit": "Unknown",
+    "mission_description": "Details TBD.",
+    "pad": "Launch Area 95A",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/e2523821-9760-4cb4-ad1f-7ce2e30419bd/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Unknown Payload",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e001367",
+      "title": "NASA Satellite Gives a Clear View for NASA's LADEE Launch",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001367/GSFC_20171208_Archive_e001367~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001367"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-mir-demo-flight",
+   "title": "Mir | Demo Flight",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/9e27a1ed-e81a-4918-b32b-0380cf3a9f8f/",
+   "published": "2026-11-13T05:00:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "Note: Launch vehicle name is provisional.\r\n\r\nFirst orbital full version launch of the South Korean military small satellite launch vehicle, after 2 sub-orbital tests of individual stages on 30 March and 30 December 2022, and 1 orbital test flight without the 2nd stage on 4 December 2023. Details TBD.",
+   "launch": {
+    "net": "2026-11-13T05:00:00Z",
+    "net_precision": "Hour",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "Agency for Defense Development",
+    "rocket": "Mir",
+    "mission": "Demo Flight",
+    "mission_type": "Test Flight",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "Note: Launch vehicle name is provisional.\r\n\r\nFirst orbital full version launch of the South Korean military small satellite launch vehicle, after 2 sub-orbital tests of individual stages on 30 March and 30 December 2022, and 1 orbital test flight without the 2nd stage on 4 December 2023. Details TBD.",
+    "pad": "ADD Offshore launch platform",
+    "location": "Sea Launch",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/9e27a1ed-e81a-4918-b32b-0380cf3a9f8f/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Demo Flight",
+    "total_hits": 779,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20200521-PH-KLS01_0144",
+      "title": "NASA Hosts Flight Readiness Review for the agency’s SpaceX Demo-2 Flight Test",
+      "date_created": "2020-05-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200521-PH-KLS01_0144/KSC-20200521-PH-KLS01_0144~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200521-PH-KLS01_0144"
+     },
+     {
+      "nasa_id": "KSC-20200521-PH-KLS01_0094",
+      "title": "NASA Hosts Flight Readiness Review for the agency’s SpaceX Demo-2 Flight Test",
+      "date_created": "2020-05-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200521-PH-KLS01_0094/KSC-20200521-PH-KLS01_0094~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200521-PH-KLS01_0094"
+     },
+     {
+      "nasa_id": "KSC-20200521-PH-KLS01_0138",
+      "title": "NASA Hosts Flight Readiness Review for the agency’s SpaceX Demo-2 Flight Test",
+      "date_created": "2020-05-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200521-PH-KLS01_0138/KSC-20200521-PH-KLS01_0138~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200521-PH-KLS01_0138"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-vulcan-vc6l-amazon-leo-lv-01",
+   "title": "Vulcan VC6L | Amazon Leo (LV-01)",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/ef9850ad-1096-425b-9d27-f7bbd186e61a/",
+   "published": "2026-11-13T17:54:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610",
+   "launch": {
+    "net": "2026-11-13T17:54:00Z",
+    "net_precision": "Minute",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "United Launch Alliance",
+    "rocket": "Vulcan VC6L",
+    "mission": "Amazon Leo (LV-01)",
+    "mission_type": "Communications",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
+    "pad": "Space Launch Complex 41",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/ef9850ad-1096-425b-9d27-f7bbd186e61a/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Amazon",
+    "total_hits": 85,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss074e0492148",
+      "title": "The Ucayali River in the lowland Amazon rainforest of central Peru",
+      "date_created": "2026-04-15",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0492148/iss074e0492148~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0492148"
+     },
+     {
+      "nasa_id": "PIA26417",
+      "title": "NASA's EMIT Scans the Amazon River in Northern Brazil",
+      "date_created": "2024-11-14",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26417/PIA26417~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA26417"
+     },
+     {
+      "nasa_id": "iss071e665075",
+      "title": "Two Roscosmos Soyuz crew ships",
+      "date_created": "2024-09-16",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e665075/iss071e665075~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e665075"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-starship-starlink-group-31-2-starship-flight-15",
+   "title": "Starship | Starlink Group 31-2 (Starship Flight 15)",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/0f867f0c-5422-4d44-93b8-d7faaae7019b/",
+   "published": "2026-11-13T22:45:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3. Second Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-2) into stable Low Earth Orbit and first ever to attempt returning the Starship 2nd stage back to the launch site.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete a",
+   "launch": {
+    "net": "2026-11-13T22:45:00Z",
+    "net_precision": "Minute",
+    "status": "TBC",
+    "status_name": "To Be Confirmed",
+    "provider": "SpaceX",
+    "rocket": "Starship V3",
+    "mission": "Starlink Group 31-2 (Starship Flight 15)",
+    "mission_type": "Communications",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3. Second Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-2) into stable Low Earth Orbit and first ever to attempt returning the Starship 2nd stage back to the launch site.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 14 orbits around the planet for more than 22 hours, with the ship expected to attempt returning back to Starbase, Texas on its launch pad by pad arms catching.\r\n\r\nThe booster’s primary test objective on Flight 15 will be executing a successful launch, ascent, stage separation, boostback burn, and landing by pad arms catching. This will also be the 1st Starship V3 booster to attempt returning to its launch site.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the second time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation. 3 of the satellites have been modified with a suite of cameras to scan Starship’s heatshield and transmit imagery down to operators.",
+    "pad": "Orbital Launch Pad 2",
+    "location": "SpaceX Starbase, TX, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/0f867f0c-5422-4d44-93b8-d7faaae7019b/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Starlink",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0054",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0054/KSC-20220421-PH-KLS01_0054~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0054"
+     },
+     {
+      "nasa_id": "KSC-20220421-PH-KLS01_0042",
+      "title": "Artemis I, Crew-4, & Starlink Rockets on the Pad",
+      "date_created": "2022-04-21",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220421-PH-KLS01_0042/KSC-20220421-PH-KLS01_0042~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220421-PH-KLS01_0042"
+     },
+     {
+      "nasa_id": "ARC-1996-AC96-0339-1",
+      "title": "ARC-1996-AC96-0339-1",
+      "date_created": "1996-08-22",
+      "center": "ARC",
+      "credit": "ER-2",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/ARC-1996-AC96-0339-1/ARC-1996-AC96-0339-1~medium.jpg",
+      "page": "https://images.nasa.gov/details/ARC-1996-AC96-0339-1"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-electron-the-mountain-god-rises-iqps-launch-10",
+   "title": "Electron | The Mountain God Rises (iQPS Launch 10)",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/db3500ac-965b-4ad8-b417-cb8d8d005586/",
+   "published": "2026-11-14T05:30:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
+   "launch": {
+    "net": "2026-11-14T05:30:00Z",
+    "net_precision": "Minute",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "Rocket Lab",
+    "rocket": "Electron",
+    "mission": "The Mountain God Rises (iQPS Launch 10)",
+    "mission_type": "Earth Science",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
+    "pad": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/db3500ac-965b-4ad8-b417-cb8d8d005586/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "The Mountain God",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA22090",
+      "title": "Collage of Features on Ceres",
+      "date_created": "2018-01-17",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22090/PIA22090~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22090"
+     },
+     {
+      "nasa_id": "PIA21907",
+      "title": "Xevioso Crater on Ceres",
+      "date_created": "2017-09-26",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA21907/PIA21907~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA21907"
+     },
+     {
+      "nasa_id": "PIA21944",
+      "title": "First Official Pluto Feature Names",
+      "date_created": "2017-09-06",
+      "center": "JPL",
+      "credit": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA21944/PIA21944~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA21944"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-falcon-9-block-5-ussf-317",
+   "title": "Falcon 9 Block 5 | USSF-317",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/76617033-4dc0-4448-b50c-e5b0d5a18539/",
+   "published": "2026-11-15T03:55:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+   "launch": {
+    "net": "2026-11-15T03:55:00Z",
+    "net_precision": "Minute",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "SpaceX",
+    "rocket": "Falcon 9 Block 5",
+    "mission": "USSF-317",
+    "mission_type": "Government/Top Secret",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+    "pad": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/76617033-4dc0-4448-b50c-e5b0d5a18539/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "USSF-317",
+    "tried": [
+     "USSF-317"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-falcon-9-block-5-ussf-266",
+   "title": "Falcon 9 Block 5 | USSF-266",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/460d9db7-eaf6-4cd9-b095-cff433534c09/",
+   "published": "2026-11-18T16:49:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of ascent rocket stage drop zones being fits with previous SDA Transport Layer launches.",
+   "launch": {
+    "net": "2026-11-18T16:49:00Z",
+    "net_precision": "Minute",
+    "status": "Go",
+    "status_name": "Go for Launch",
+    "provider": "SpaceX",
+    "rocket": "Falcon 9 Block 5",
+    "mission": "USSF-266",
+    "mission_type": "Government/Top Secret",
+    "orbit": "Polar Orbit",
+    "mission_description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of ascent rocket stage drop zones being fits with previous SDA Transport Layer launches.",
+    "pad": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/460d9db7-eaf6-4cd9-b095-cff433534c09/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "USSF-266",
+    "tried": [
+     "USSF-266"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-long-march-8a-satnet-leo-group-tbd",
+   "title": "Long March 8A | SatNet LEO Group TBD?",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/a2975167-7c6f-4403-99e1-b40df17c8140/",
+   "published": "2026-11-20T11:00:00Z",
+   "source": "Launch Library 2 upcoming",
+   "summary": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+   "launch": {
+    "net": "2026-11-20T11:00:00Z",
+    "net_precision": "Hour",
+    "status": "TBC",
+    "status_name": "To Be Confirmed",
+    "provider": "China Aerospace Science and Technology Corporation",
+    "rocket": "Long March 8A",
+    "mission": "SatNet LEO Group TBD?",
+    "mission_type": "Communications",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+    "pad": "Commercial LC-1",
+    "location": "Wenchang Space Launch Site, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/a2975167-7c6f-4403-99e1-b40df17c8140/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "Launch Day",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "SatNet LEO Group TBD?",
+    "tried": [
+     "SatNet LEO Group TBD?",
+     "SatNet LEO Group",
+     "SatNet LEO",
+     "SatNet"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-long-march-2d-cas-pathfinder-1",
+   "title": "Long March 2D | CAS Pathfinder-1",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/d66590ab-b273-47ff-b85a-608b62851b4b/",
+   "published": "2026-11-11T11:41:00Z",
+   "source": "Launch Library 2 recent",
+   "summary": "The Chinese Academy of Science (CAS)' Pathfinder-1 satellites is built for in-orbit validation of critical technologies for the upcoming main missions of CAS' \"Origins” Space Science Program, which consists of 4 upcoming astronomical observatory missions to be launched by 2030:\r\n\r\n* Discovering the Sky at the Longest wavelength (DSL\r\n* Solar Polar Orbit Observatory (SPO)\r\n* Earth 2.0 (ET)\r\n* Enhan",
+   "launch": {
+    "net": "2026-11-11T11:41:00Z",
+    "net_precision": "Minute",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "China Aerospace Science and Technology Corporation",
+    "rocket": "Long March 2D",
+    "mission": "CAS Pathfinder-1",
+    "mission_type": "Technology",
+    "orbit": "Sun-Synchronous Orbit",
+    "mission_description": "The Chinese Academy of Science (CAS)' Pathfinder-1 satellites is built for in-orbit validation of critical technologies for the upcoming main missions of CAS' \"Origins” Space Science Program, which consists of 4 upcoming astronomical observatory missions to be launched by 2030:\r\n\r\n* Discovering the Sky at the Longest wavelength (DSL\r\n* Solar Polar Orbit Observatory (SPO)\r\n* Earth 2.0 (ET)\r\n* Enhanced X-ray Timing and Polarimetry (eXTP)\r\n\r\nThe mission consists of a main satellite and 3 sub-satellites, the later of which flies in formation to demonstrate a low frequency radio astronomy interferometry instrument.\r\n\r\nThe main satellite also contains the following science instrument:\r\n* Very Large Area Gamma-ray Space Telescope Pathfinder (VLAST-P)\r\n* a magnetometer (MHI)\r\n* an upper atmosphere LiDAR (HiRAL)\r\n* a Langmuir Probe (LMP)\r\n* a space weather monitor (SWEM)",
+    "pad": "Launch Area 94 (SLS-2 / 603)",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/d66590ab-b273-47ff-b85a-608b62851b4b/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "CAS",
+    "total_hits": 4799,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA24691",
+      "title": "Sacramento-San Joaquin River Delta, CA",
+      "date_created": "2021-06-08",
+      "center": "JPL",
+      "credit": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA24691/PIA24691~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA24691"
+     },
+     {
+      "nasa_id": "GRC-2019-C-09848",
+      "title": "Convergent Aeronautics Solutions (CAS) Quantum Technologies (QTe",
+      "date_created": "2019-10-16",
+      "center": "GRC",
+      "credit": "NASA/GRC/Jef Janis",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GRC-2019-C-09848/GRC-2019-C-09848~medium.jpg",
+      "page": "https://images.nasa.gov/details/GRC-2019-C-09848"
+     },
+     {
+      "nasa_id": "NHQ201910100011",
+      "title": "NASA Administrator Visits SpaceX HQ",
+      "date_created": "2019-10-10",
+      "center": "HQ",
+      "credit": "NASA/Aubrey Gemignani",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201910100011/NHQ201910100011~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201910100011"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-long-march-12-satnet-leo-group-29",
+   "title": "Long March 12 | SatNet LEO Group 29",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/a2423132-f965-423f-8b03-6891b775dc54/",
+   "published": "2026-11-08T20:24:00Z",
+   "source": "Launch Library 2 recent",
+   "summary": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+   "launch": {
+    "net": "2026-11-08T20:24:00Z",
+    "net_precision": "Minute",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "China Aerospace Science and Technology Corporation",
+    "rocket": "Long March 12",
+    "mission": "SatNet LEO Group 29",
+    "mission_type": "Communications",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+    "pad": "Commercial LC-2",
+    "location": "Wenchang Space Launch Site, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/a2423132-f965-423f-8b03-6891b775dc54/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "SatNet LEO Group 29",
+    "tried": [
+     "SatNet LEO Group 29",
+     "SatNet LEO Group",
+     "SatNet LEO",
+     "SatNet"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-soyuz-21bfregat-glonass-k1-kosmos-2621",
+   "title": "Soyuz 2.1b/Fregat | Glonass-K1? (Kosmos 2621?)",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/c476fea7-7814-4adb-91d1-98918bc2cc57/",
+   "published": "2026-11-07T13:22:00Z",
+   "source": "Launch Library 2 recent",
+   "summary": "Note: Payload identity uncertain.\r\n\r\nGlonass-K are the third generation of satellite design for GLONASS satellite navigation system. GLONASS is a Russian space-based navigation system comparable to the similar GPS and Galileo systems. This generation improves on accuracy, power consumption and design life. Each satellite is unpressurized and weighs 935 kg,  and has an operational lifetime of 10 ye",
+   "launch": {
+    "net": "2026-11-07T13:22:00Z",
+    "net_precision": "Minute",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "Russian Space Forces",
+    "rocket": "Soyuz 2.1b Fregat-M",
+    "mission": "Glonass-K1? (Kosmos 2621?)",
+    "mission_type": "Navigation",
+    "orbit": "Medium Earth Orbit",
+    "mission_description": "Note: Payload identity uncertain.\r\n\r\nGlonass-K are the third generation of satellite design for GLONASS satellite navigation system. GLONASS is a Russian space-based navigation system comparable to the similar GPS and Galileo systems. This generation improves on accuracy, power consumption and design life. Each satellite is unpressurized and weighs 935 kg,  and has an operational lifetime of 10 years.",
+    "pad": "43/3 (43L)",
+    "location": "Plesetsk Cosmodrome, Russian Federation",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/c476fea7-7814-4adb-91d1-98918bc2cc57/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Glonass-K1? (Kosmos 2621?)",
+    "tried": [
+     "Glonass-K1? (Kosmos 2621?)",
+     "Glonass-K1? (Kosmos",
+     "Glonass-K1?"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-falcon-9-block-5-ussf-432",
+   "title": "Falcon 9 Block 5 | USSF-432",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/54d471e8-695c-4fa7-a3cf-dbd8b389e8ae/",
+   "published": "2026-11-07T00:48:42Z",
+   "source": "Launch Library 2 recent",
+   "summary": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+   "launch": {
+    "net": "2026-11-07T00:48:42Z",
+    "net_precision": "Second",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "SpaceX",
+    "rocket": "Falcon 9 Block 5",
+    "mission": "USSF-432",
+    "mission_type": "Government/Top Secret",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+    "pad": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/54d471e8-695c-4fa7-a3cf-dbd8b389e8ae/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "USSF-432",
+    "tried": [
+     "USSF-432"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "ll2-ceres-2-4-satellites",
+   "title": "Ceres-2 | 4 satellites",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/e91d1da2-819b-4523-95bf-39ac7daa871d/",
+   "published": "2026-11-06T23:37:00Z",
+   "source": "Launch Library 2 recent",
+   "summary": "Share-ride of 4 commercial Earth observation and technology demonstration satellites to SSO, details TBD.",
+   "launch": {
+    "net": "2026-11-06T23:37:00Z",
+    "net_precision": "Minute",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "Galactic Energy",
+    "rocket": "Ceres-2",
+    "mission": "4 satellites",
+    "mission_type": "Earth Science",
+    "orbit": "Sun-Synchronous Orbit",
+    "mission_description": "Share-ride of 4 commercial Earth observation and technology demonstration satellites to SSO, details TBD.",
+    "pad": "Launch Area 95A",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/e91d1da2-819b-4523-95bf-39ac7daa871d/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "4 satellites",
+    "total_hits": 1188,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2020e049619",
+      "title": "BIRDS-4 Project",
+      "date_created": "2020-02-04",
+      "center": "JSC",
+      "credit": "Mark Angelo Purio",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2020e049619/jsc2020e049619~medium.jpg",
+      "page": "https://images.nasa.gov/details/jsc2020e049619"
+     },
+     {
+      "nasa_id": "iss061e148301",
+      "title": "iss061e148301",
+      "date_created": "2020-01-29",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss061e148301/iss061e148301~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss061e148301"
+     },
+     {
+      "nasa_id": "iss061e148704",
+      "title": "iss061e148704",
+      "date_created": "2020-01-29",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss061e148704/iss061e148704~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss061e148704"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "ll2-long-march-2c-yaogan-51-07-to-09",
+   "title": "Long March 2C | Yaogan 51-07 to 09",
+   "url": "https://ll.thespacedevs.com/2.3.0/launches/711de6bc-f755-475b-a12f-ec5240da3a11/",
+   "published": "2026-11-05T15:58:00Z",
+   "source": "Launch Library 2 recent",
+   "summary": "3 Chinese military “remote sensing” satellite of unknown purposes.",
+   "launch": {
+    "net": "2026-11-05T15:58:00Z",
+    "net_precision": "Minute",
+    "status": "Success",
+    "status_name": "Launch Successful",
+    "provider": "China Aerospace Science and Technology Corporation",
+    "rocket": "Long March 2C",
+    "mission": "Yaogan 51-07 to 09",
+    "mission_type": "Government/Top Secret",
+    "orbit": "Low Earth Orbit",
+    "mission_description": "3 Chinese military “remote sensing” satellite of unknown purposes.",
+    "pad": "Launch Complex 3 (LC-3/LA-1)",
+    "location": "Xichang Satellite Launch Center, People's Republic of China",
+    "ll2_url": "https://ll.thespacedevs.com/2.3.0/launches/711de6bc-f755-475b-a12f-ec5240da3a11/",
+    "webcast_live": false,
+    "image_note": "LL2 images carry third-party licenses (often 'Unknown'); do not use them on screen."
+   },
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "Launch Day": 3
+   },
+   "images": {
+    "query": "Yaogan 51-07 to 09",
+    "tried": [
+     "Yaogan 51-07 to 09",
+     "Yaogan 51-07 to",
+     "Yaogan 51-07",
+     "Yaogan"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-water-surges-into-navajo-reservoir",
+   "title": "Water Surges Into Navajo Reservoir",
+   "url": "https://science.nasa.gov/earth/earth-observatory/water-surges-into-navajo-reservoir/",
+   "published": "2026-11-11T05:01:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Earth Observatory",
+    "Floods",
+    "Landsat 9",
+    "Surface Water"
+   ],
+   "summary": "Rounds of heavy rain in the U.S. Southwest flooded rivers and rapidly raised New Mexico’s second-largest reservoir.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 1,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Water Surges",
+    "total_hits": 105,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20161018-PH_JBS01_0001",
+      "title": "DART Support for Hurricane Matthew",
+      "date_created": "2016-10-18",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20161018-PH_JBS01_0001/KSC-20161018-PH_JBS01_0001~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20161018-PH_JBS01_0001"
+     },
+     {
+      "nasa_id": "KSC-20161018-PH_JBS01_0043",
+      "title": "DART Support for Hurricane Matthew",
+      "date_created": "2016-10-18",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20161018-PH_JBS01_0043/KSC-20161018-PH_JBS01_0043~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20161018-PH_JBS01_0043"
+     },
+     {
+      "nasa_id": "KSC-20161018-PH_JBS01_0009",
+      "title": "DART Support for Hurricane Matthew",
+      "date_created": "2016-10-18",
+      "center": "KSC",
+      "credit": "NASA/Ben Smegelsky",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20161018-PH_JBS01_0009/KSC-20161018-PH_JBS01_0009~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20161018-PH_JBS01_0009"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-ews-release-nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+   "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
+   "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/",
+   "published": "2026-11-10T19:22:45Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Voyager 1",
+    "Heliophysics",
+    "Heliophysics Division",
+    "Jet Propulsion Laboratory",
+    "NASA Headquarters",
+    "Voyager 2"
+   ],
+   "summary": "Launched nearly 50 years ago in 1977, NASA’s Voyager 1 on Wednesday, Nov. 18 will have traveled one light-day from Earth, which is more than 16 billion miles (25.9 billion kilometers). Voyager 1 is the most distant human-made object, and any light from Earth would take 24 hours to reach the spacecraft. NASA will highlight […]",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 5,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 1
+   },
+   "flags": [],
+   "images": {
+    "query": "Invites Media",
+    "total_hits": 88,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000170",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000170/GSFC_20171208_Archive_e000170~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000170"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000168",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000168/GSFC_20171208_Archive_e000168~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000168"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000165",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000165/GSFC_20171208_Archive_e000165~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000165"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-ws-release-nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston",
+   "title": "NASA to Welcome Expedition 74 Astronauts Home at Space Center Houston",
+   "url": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston/",
+   "published": "2026-11-10T18:06:33Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Johnson Space Center"
+   ],
+   "summary": "NASA will welcome home the Expedition 74 crew during a public event at Space Center Houston following their return from a long-duration mission aboard the International Space Station. NASA astronauts Jessica Meir, Jack Hathaway, and Chris Williams; ESA (European Space Agency) astronaut Sophie Adenot; and Roscosmos cosmonauts Sergey Kud‑Sverchkov and Sergei Mikaev will share mission […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Welcome Expedition 74 Astronauts",
+    "total_hits": 6,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss074e0813891",
+      "title": "iss074e0813891",
+      "date_created": "2026-07-14",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0813891/iss074e0813891~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0813891"
+     },
+     {
+      "nasa_id": "iss074e0813893",
+      "title": "iss074e0813893",
+      "date_created": "2026-07-14",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0813893/iss074e0813893~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0813893"
+     },
+     {
+      "nasa_id": "NHQ202606020001",
+      "title": "Expedition 73/74 Employee Engagement Event",
+      "date_created": "2026-06-02",
+      "center": "HQ",
+      "credit": "NASA/Aubrey Gemignani",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ202606020001/NHQ202606020001~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ202606020001"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-missions-lisa-gravitational-waves-can-reveal-new-worlds",
+   "title": "NASA Scientists Show How Gravitational Waves Can Reveal New Worlds",
+   "url": "https://science.nasa.gov/missions/lisa/gravitational-waves-can-reveal-new-worlds/",
+   "published": "2026-11-10T16:00:26Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Binary Stars",
+    "Exoplanets",
+    "Goddard Space Flight Center",
+    "Gravitational Waves",
+    "Infrared Light",
+    "James Webb Space Telescope (JWST)"
+   ],
+   "summary": "The LISA (Laser Interferometer Space Antenna) observatory, now in development, will detect gravitational waves, the tiny ripples in space-time caused by orbiting masses. Now two studies led by NASA astrophysicists show in new detail how LISA could reveal a new and unique population of exoplanets — worlds beyond our solar system — throughout our galaxy. […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 12,
+    "How Does That Work": 6,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Scientists Gravitational",
+    "total_hits": 59,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20200211-PH-KLS01_0022",
+      "title": "Microgravity Simulation Support Facility",
+      "date_created": "2027-02-11",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200211-PH-KLS01_0022/KSC-20200211-PH-KLS01_0022~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200211-PH-KLS01_0022"
+     },
+     {
+      "nasa_id": "KSC-20200211-PH-KLS01_0020",
+      "title": "Microgravity Simulation Support Facility",
+      "date_created": "2027-02-11",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200211-PH-KLS01_0020/KSC-20200211-PH-KLS01_0020~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200211-PH-KLS01_0020"
+     },
+     {
+      "nasa_id": "KSC-20200211-PH-KLS01_0043",
+      "title": "Microgravity Simulation Support Facility",
+      "date_created": "2027-02-11",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20200211-PH-KLS01_0043/KSC-20200211-PH-KLS01_0043~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20200211-PH-KLS01_0043"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-image-article-chapea-crew-leaves-a-mark",
+   "title": "CHAPEA Crew Leaves a Mark",
+   "url": "https://www.nasa.gov/image-article/chapea-crew-leaves-a-mark/",
+   "published": "2026-11-10T14:57:55Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [],
+   "summary": "The Crew Health and Performance Exploration Analog (CHAPEA) Mission 2 crew arranged photos around a boot print in the simulated Martian sand outside their habitat on Aug. 31, 2026. The crew recently exited their habitat on Saturday, Oct. 31, after 378 days of isolation in a facility at the agency’s Johnson Space Center in Houston. Health […]",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "CHAPEA Crew",
+    "total_hits": 43,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2026e424285",
+      "title": "CHAPEA Crew Exits Habitat After Yearlong Stay",
+      "date_created": "2026-10-31",
+      "center": "JSC",
+      "credit": "James Blair - NASA - JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e424285/jsc2026e424285~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e424285"
+     },
+     {
+      "nasa_id": "jsc2026e424286",
+      "title": "CHAPEA Mission 2 Crew Exits Habitat After Yearlong Stay",
+      "date_created": "2026-10-31",
+      "center": "JSC",
+      "credit": "James Blair - NASA - JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e424286/jsc2026e424286~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e424286"
+     },
+     {
+      "nasa_id": "jsc2026e424293",
+      "title": "CHAPEA Mission 2 Crew Poses Outdoors After Exiting Habitat",
+      "date_created": "2026-10-31",
+      "center": "JSC",
+      "credit": "James Blair - NASA - JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e424293/jsc2026e424293~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e424293"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-autumn-mornings-bring-valley-fog",
+   "title": "Autumn Mornings Bring Valley Fog",
+   "url": "https://science.nasa.gov/earth/earth-observatory/autumn-mornings-bring-valley-fog/",
+   "published": "2026-11-10T05:00:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Clouds",
+    "Earth Observatory",
+    "NOAA-21 (JPSS-2)",
+    "Terra"
+   ],
+   "summary": "Low clouds trace the branching valleys of the Appalachian Plateau and the Cumberland River, then burn off by afternoon.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Autumn",
+    "total_hits": 62,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA22487",
+      "title": "Mars Before and After Dust Storm",
+      "date_created": "2018-07-19",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22487/PIA22487~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22487"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e001325",
+      "title": "Autumn snow across the Midwest",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001325/GSFC_20171208_Archive_e001325~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001325"
+     },
+     {
+      "nasa_id": "PIA19039",
+      "title": "Mars Rover Curiosity Walkabout at Pahrump Hills",
+      "date_created": "2014-11-04",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA19039/PIA19039~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA19039"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-blog-curiosity-blog-sols-5056-5062-charging-back-up",
+   "title": "Curiosity Blog, Sols 5056-5062: Charging Back Up!",
+   "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5056-5062-charging-back-up/",
+   "published": "2026-11-10T01:07:45Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [],
+   "summary": "By Remington Free, Operations Systems Engineer, NASA-JPL Earth planning date: Friday, Oct. 30, 2026 Today’s plan covered 3 sols, 5060, 5061, and 5062, as we take a few recharging sols before getting back to our normal drilling activities. As you may know if you have been following the blog closely, we are in the middle […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Curiosity",
+    "total_hits": 1846,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA22486",
+      "title": "Curiosity's Dusty Selfie",
+      "date_created": "2018-06-20",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22486/PIA22486~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA22486"
+     },
+     {
+      "nasa_id": "PIA22326",
+      "title": "Curiosity Successfully Drills \"Duluth\"",
+      "date_created": "2018-05-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22326/PIA22326~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22326"
+     },
+     {
+      "nasa_id": "PIA22312",
+      "title": "Curiosity is Ready for Clay (Highlighted)",
+      "date_created": "2018-03-22",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22312/PIA22312~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA22312"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-blog-curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole",
+   "title": "Curiosity Blog, Sols 5050-5055: It’s Nazca, Our 49th Drill Hole",
+   "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5050-5055-its-nazca-our-49th-drill-hole/",
+   "published": "2026-11-10T01:05:48Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Blogs"
+   ],
+   "summary": "Written by Susanne P. Schwenzer, Professor of Planetary Mineralogy at The Open University, UK Earth planning date: Friday, Oct. 23, 2026 As regular readers of this blog will know, we returned to the area where we found disc shaped inclusions in the rocks, which we interpreted as potential crystals. If they are indeed crystals, and […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 2,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Curiosity",
+    "total_hits": 1846,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA22486",
+      "title": "Curiosity's Dusty Selfie",
+      "date_created": "2018-06-20",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22486/PIA22486~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA22486"
+     },
+     {
+      "nasa_id": "PIA22326",
+      "title": "Curiosity Successfully Drills \"Duluth\"",
+      "date_created": "2018-05-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22326/PIA22326~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA22326"
+     },
+     {
+      "nasa_id": "PIA22312",
+      "title": "Curiosity is Ready for Clay (Highlighted)",
+      "date_created": "2018-03-22",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA22312/PIA22312~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA22312"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-blog-rubies-on-mars",
+   "title": "Rubies on Mars?",
+   "url": "https://science.nasa.gov/blog/rubies-on-mars/",
+   "published": "2026-11-09T22:27:12Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Blogs"
+   ],
+   "summary": "Written by Roger C. Wiens, SuperCam Principal Investigator for NASA’s Perseverance rover at Purdue University Nov. 4, 2026 Exploration on Mars turns up the unexpected. Perseverance is equipped with a fantastic set of instruments for studying the rock record of this ancient planet. Both PIXL and SuperCam have great capabilities for detecting all kinds of […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 3,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Rubies",
+    "total_hits": 6,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ20220811ARMD31",
+      "title": "AirVenture 2022",
+      "date_created": "2022-07-25",
+      "center": "HQ",
+      "credit": "Andrew Carlsen",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20220811ARMD31/NHQ20220811ARMD31~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20220811ARMD31"
+     },
+     {
+      "nasa_id": "KSC-20190930-PH-CSH01_0056",
+      "title": "Science Verification Test Harvest",
+      "date_created": "2019-09-30",
+      "center": "KSC",
+      "credit": "NASA/Cory Huston",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20190930-PH-CSH01_0056/KSC-20190930-PH-CSH01_0056~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20190930-PH-CSH01_0056"
+     },
+     {
+      "nasa_id": "KSC-20190930-PH-CSH01_0055",
+      "title": "Science Verification Test Harvest",
+      "date_created": "2019-09-30",
+      "center": "KSC",
+      "credit": "NASA/Cory Huston",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20190930-PH-CSH01_0055/KSC-20190930-PH-CSH01_0055~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20190930-PH-CSH01_0055"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-blog-newest-sample-oldest-rock",
+   "title": "Newest Sample, Oldest Rock?",
+   "url": "https://science.nasa.gov/blog/newest-sample-oldest-rock/",
+   "published": "2026-11-09T22:25:52Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Blogs"
+   ],
+   "summary": "Written by Tasha Coelho, Mastcam-Z Student Collaborator at Arizona State University Nov. 1, 2026 Perseverance’s most recent abrasion “Pumbe” bears a striking resemblance to an earlier abrasion, “Badger Peak.” That’s no coincidence. As previously reported, that rock had a hardness too high to core. However, the team felt strongly that it was worth the effort […]",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 3,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Newest",
+    "total_hits": 468,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "AFRC2025-0190-69",
+      "title": "NASA’s Newest F-15s Arrive at NASA Armstrong",
+      "date_created": "2025-12-22",
+      "center": "AFRC",
+      "credit": "NASA/Christopher LC Clark",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2025-0190-69/AFRC2025-0190-69~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2025-0190-69"
+     },
+     {
+      "nasa_id": "AFRC2025-0190-03",
+      "title": "NASA’s Newest F-15s Arrive at NASA Armstrong",
+      "date_created": "2025-12-22",
+      "center": "AFRC",
+      "credit": "NASA/Christopher LC Clark",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2025-0190-03/AFRC2025-0190-03~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2025-0190-03"
+     },
+     {
+      "nasa_id": "AFRC2025-0190-14",
+      "title": "NASA’s Newest F-15s Arrive at NASA Armstrong",
+      "date_created": "2025-12-22",
+      "center": "AFRC",
+      "credit": "NASA/Christopher LC Clark",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2025-0190-14/AFRC2025-0190-14~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2025-0190-14"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-news-release-la-nasa-busca-a-la-proxima-generacion-de-astronautas",
+   "title": "La NASA busca a la próxima generación de astronautas",
+   "url": "https://www.nasa.gov/news-release/la-nasa-busca-a-la-proxima-generacion-de-astronautas/",
+   "published": "2026-11-09T19:27:20Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "NASA en español"
+   ],
+   "summary": "Read this release in English here.La NASA busca a los exploradores que ayudarán a escribir el próximo capítulo de los vuelos espaciales tripulados. Ya está abierto el plazo de inscripción para la próxima promoción de astronautas de la agencia, que se incorporarán a la NASA en un momento en el que Estados Unidos regresa a […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "La",
+    "total_hits": 1354,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss071e666237",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666237/iss071e666237~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666237"
+     },
+     {
+      "nasa_id": "iss071e666277",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666277/iss071e666277~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666277"
+     },
+     {
+      "nasa_id": "iss071e666253",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666253/iss071e666253~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666253"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-missions-chandra-nasas-chandra-finds-source-of-stars-mysterious-outbursts",
+   "title": "NASA’s Chandra Finds Source of Star’s Mysterious Outbursts",
+   "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+   "published": "2026-11-09T18:55:50Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Astrophysics",
+    "Black Holes",
+    "Chandra X-Ray Observatory",
+    "Galaxies",
+    "Galaxies, Stars, & Black Holes",
+    "Marshall Astrophysics"
+   ],
+   "summary": "Using NASA’s Chandra X-ray Observatory, astronomers have discovered what is triggering repeated outbursts from a giant, unstable star. A new study, published Monday in the latest issue of The Astrophysical Journal, details the discovery of a previously hidden companion object that keeps pulling material away from the massive star every 113 days as they orbit […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 16,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Chandra Source Star Mysterious",
+    "total_hits": 3,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "9906671",
+      "title": "History of Chandra X-Ray Observatory",
+      "date_created": "1999-01-01",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/9906671/9906671~medium.jpg",
+      "page": "https://images.nasa.gov/details/9906671"
+     },
+     {
+      "nasa_id": "0003356",
+      "title": "n/a",
+      "date_created": "1991-04-01",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/0003356/0003356~medium.jpg",
+      "page": "https://images.nasa.gov/details/0003356"
+     },
+     {
+      "nasa_id": "9134213",
+      "title": "Space Shuttle Projects",
+      "date_created": "1991-04-01",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/9134213/9134213~medium.jpg",
+      "page": "https://images.nasa.gov/details/9134213"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-collaborative-innovation-coeci-nasa-advanced-mid-power-electric-rocket-challenge",
+   "title": "NASA Advanced Mid-Power Electric Rocket Challenge",
+   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/nasa-advanced-mid-power-electric-rocket-challenge/",
+   "published": "2026-11-09T17:42:42Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Center of Excellence for Collaborative Innovation (CoECI)",
+    "CoECI News",
+    "General",
+    "Get Involved",
+    "Opportunities to Contribute to NASA Missions & Get Involved",
+    "Prizes, Challenges, & Crowdsourcing News"
+   ],
+   "summary": "Mid-power (3-7 kW) Hall effect thruster systems have been identified by government and industry stakeholders as critical capabilities for satellite, defense, and exploration missions. Given the need for this capability, NASA is launching the Advanced Mid-Power Electric Rocket (AMPERE) Challenge. The NASA AMPERE Challenge invites U.S. commercial companies to develop and demonstrate mid-power Hall e",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 1
+   },
+   "flags": [],
+   "images": {
+    "query": "Advanced Mid Power Electric",
+    "total_hits": 3,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GRC-1977-C-01503",
+      "title": "Change-of-Pace Electric Vehicle at the Lewis Research Center",
+      "date_created": "1977-04-23",
+      "center": "GRC",
+      "credit": "NASA/GRC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GRC-1977-C-01503/GRC-1977-C-01503~medium.jpg",
+      "page": "https://images.nasa.gov/details/GRC-1977-C-01503"
+     },
+     {
+      "nasa_id": "GRC-1976-C-02241",
+      "title": "Metro Electric Vehicle Evaluation at the Lewis Research Center",
+      "date_created": "1976-05-23",
+      "center": "GRC",
+      "credit": "NASA/GRC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GRC-1976-C-02241/GRC-1976-C-02241~medium.jpg",
+      "page": "https://images.nasa.gov/details/GRC-1976-C-02241"
+     },
+     {
+      "nasa_id": "GRC-1970-C-02492",
+      "title": "Electron Bombardment Ion Thruster",
+      "date_created": "1970-08-23",
+      "center": "GRC",
+      "credit": "NASA/GRC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GRC-1970-C-02492/GRC-1970-C-02492~medium.jpg",
+      "page": "https://images.nasa.gov/details/GRC-1970-C-02492"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-news-release-la-nasa-destina-un-millon-de-dolares-al-reto-estudiantil-base-lunar",
+   "title": "La NASA destina un millón de dólares al reto estudiantil Base Lunar",
+   "url": "https://www.nasa.gov/news-release/la-nasa-destina-un-millon-de-dolares-al-reto-estudiantil-base-lunar/",
+   "published": "2026-11-09T17:36:33Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "NASA en español"
+   ],
+   "summary": "Read this release in English here.El domingo 8 de noviembre de 2026, la NASA anunció la convocatoria del reto estudiantil Base Lunar, dotado con un millón de dólares, durante un acto de MAX POWER celebrado en el Complejo de Visitantes del Centro Espacial Kennedy, en Florida. En el marco de una edad de oro de […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "La",
+    "total_hits": 1354,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss071e666237",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666237/iss071e666237~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666237"
+     },
+     {
+      "nasa_id": "iss071e666277",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666277/iss071e666277~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666277"
+     },
+     {
+      "nasa_id": "iss071e666253",
+      "title": "Fire in La Porte, Texas",
+      "date_created": "2024-09-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss071e666253/iss071e666253~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss071e666253"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-image-article-astronauts-across-generations-share-the-stage",
+   "title": "Astronauts Across Generations Share the Stage",
+   "url": "https://www.nasa.gov/image-article/astronauts-across-generations-share-the-stage/",
+   "published": "2026-11-09T16:56:29Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Artemis",
+    "Artemis 3"
+   ],
+   "summary": "On Nov. 6, 2026, Purpose Entertainment hosted the Artemis Celebration Gala at NASA’s Kennedy Space Center Visitor Complex in Merritt Island, Florida. Held on the eve of NASA’s MAX POWER event, the gala celebrated the explorers, innovators, and visionaries advancing the next era of human spaceflight. The event honored the successful completion of the agency’s […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Astronauts Across Generations",
+    "total_hits": 14,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002131",
+      "title": "NASA Blue Marble 2007 West",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002131/GSFC_20171208_Archive_e002131~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002131"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002130",
+      "title": "NASA Blue Marble 2007 East",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002130/GSFC_20171208_Archive_e002130~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002130"
+     },
+     {
+      "nasa_id": "iss022e019513",
+      "title": "Earth Observations taken by the Expedition 22 Crew",
+      "date_created": "2010-01-04",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss022e019513/iss022e019513~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss022e019513"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-general-max-power-nasas-inaugural-aerospace-expo-ignites-americas-future",
+   "title": "MAX POWER: NASA’s Inaugural Aerospace Expo Ignites America’s Future",
+   "url": "https://www.nasa.gov/general/max-power-nasas-inaugural-aerospace-expo-ignites-americas-future/",
+   "published": "2026-11-09T16:07:10Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "General",
+    "Aeronautics",
+    "Human Spaceflight Mission Directorate",
+    "Kennedy Space Center",
+    "Research and Technology Mission Directorate",
+    "Science Mission Directorate"
+   ],
+   "summary": "Thousands gathered over several days in early November to experience MAX POWER – NASA’s first exhibition of America’s superiority in space, aeronautics, and technology on and around the agency’s Kennedy Space Center in Florida. The multi-day, family-friendly event honored the nation’s 250th anniversary and served as a culmination of the agency’s Inspiration Tour. Among the […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 0,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "MAX POWER Inaugural Aerospace",
+    "total_hits": 45,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20261108-PH-JLS01_0665-2",
+      "title": "Max Power Support – SLF / Air Dot Air Show",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/Jonathan Shaban",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20261108-PH-JLS01_0665-2/KSC-20261108-PH-JLS01_0665-2~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20261108-PH-JLS01_0665-2"
+     },
+     {
+      "nasa_id": "KSC-20261108-PH-JLS01_0301-3",
+      "title": "Max Power Support – SLF / Air Dot Air Show",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/Jonathan Shaban",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20261108-PH-JLS01_0301-3/KSC-20261108-PH-JLS01_0301-3~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20261108-PH-JLS01_0301-3"
+     },
+     {
+      "nasa_id": "KSC-20261108-PH-JLS01_0222",
+      "title": "Max Power Support – SLF / Air Dot Air Show",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/Jonathan Shaban",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20261108-PH-JLS01_0222/KSC-20261108-PH-JLS01_0222~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20261108-PH-JLS01_0222"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa--heliophysics-nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars",
+   "title": "NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars",
+   "url": "https://science.nasa.gov/science-research/heliophysics/nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars/",
+   "published": "2026-11-09T16:01:47Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "EscaPADE (Escape and Plasma Acceleration and Dynamics Explorers)",
+    "Heliophysics",
+    "Heliophysics Division",
+    "Mars",
+    "Solar Wind",
+    "Space Weather"
+   ],
+   "summary": "NASA’s two ESCAPADE (Escape and Plasma Acceleration and Dynamics Explorers) spacecraft have each successfully completed a powered Earth flyby, using Earth’s gravity in combination with a sustained engine burn to slingshot themselves toward Mars. With these successful maneuvers complete, the twin spacecraft are on target to reach the Red Planet in September 2027. “This is […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 1,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "ESCAPADE",
+    "total_hits": 23,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20251113-PH-BLU01_0007",
+      "title": "NASA's ESCAPADE Launch on Blue Origin's NG-2",
+      "date_created": "2025-11-13",
+      "center": "KSC",
+      "credit": "Blue Origin",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20251113-PH-BLU01_0007/KSC-20251113-PH-BLU01_0007~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20251113-PH-BLU01_0007"
+     },
+     {
+      "nasa_id": "KSC-20251113-PH-BLU01_0002",
+      "title": "NASA's ESCAPADE Launch on Blue Origin's NG-2",
+      "date_created": "2025-11-13",
+      "center": "KSC",
+      "credit": "Blue Origin",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20251113-PH-BLU01_0002/KSC-20251113-PH-BLU01_0002~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20251113-PH-BLU01_0002"
+     },
+     {
+      "nasa_id": "KSC-20251113-PH-BLU01_0004",
+      "title": "NASA's ESCAPADE Launch on Blue Origin's NG-2",
+      "date_created": "2025-11-13",
+      "center": "KSC",
+      "credit": "Blue Origin",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20251113-PH-BLU01_0004/KSC-20251113-PH-BLU01_0004~large.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20251113-PH-BLU01_0004"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-cilities-johnson-chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars",
+   "title": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
+   "url": "https://www.nasa.gov/centers-and-facilities/johnson/chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars/",
+   "published": "2026-11-09T11:00:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Johnson Space Center",
+    "CHAPEA Mission 2",
+    "Crew Health and Performance Exploration Analog (CHAPEA)",
+    "General",
+    "Human Health and Performance"
+   ],
+   "summary": "After 378 days without windows, the sounds of the outside world, or real-time calls with family and friends, four research volunteers stepped out of NASA’s Mars Dune Alpha habitat on Oct. 31, completing the agency’s second yearlong Mars surface simulation. Ross Elder, Ellen Ellis, James Spicer, and Matthew Montgomery entered the roughly 1,700-square-foot, 3D-printed habitat at […]",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 4,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "CHAPEA Mission 2 Crew",
+    "total_hits": 42,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2026e425223",
+      "title": "CHAPEA Mission 2 Crew Members Conduct Extravehicular Activity",
+      "date_created": "2026-08-31",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e425223/jsc2026e425223~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e425223"
+     },
+     {
+      "nasa_id": "jsc2026e425219",
+      "title": "Photos From CHAPEA Mission 2 Arranged Around Boot Print",
+      "date_created": "2026-08-31",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e425219/jsc2026e425219~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e425219"
+     },
+     {
+      "nasa_id": "jsc2026e425218",
+      "title": "CHAPEA Mission 2 Crew Celebrates One Year Inside Habitat",
+      "date_created": "2026-08-29",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2026e425218/jsc2026e425218~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2026e425218"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-ozone-hole-reaches-its-2026-maximum",
+   "title": "Ozone Hole Reaches Its 2026 Maximum",
+   "url": "https://science.nasa.gov/earth/earth-observatory/ozone-hole-reaches-its-2026-maximum/",
+   "published": "2026-11-09T05:00:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Aura",
+    "Earth Observatory",
+    "Nimbus",
+    "NOAA-20 (JPSS-1)",
+    "Ozone Layer",
+    "Suomi NPP (Suomi National Polar-orbiting Partnership)"
+   ],
+   "summary": "The ozone hole ranked seventh largest by area in 48 years of monitoring, but it was not as deep as other large holes on record.",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 3,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Ozone Hole Reaches",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002226",
+      "title": "2009 Antarctic Ozone Hole",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002226/GSFC_20171208_Archive_e002226~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002226"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e001962",
+      "title": "Snapshot of the Antarctic Ozone Hole 2010",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001962/GSFC_20171208_Archive_e001962~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001962"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-news-release-nasa-announces-1-million-to-students-for-moon-base-challenge",
+   "title": "NASA Announces $1 Million to Students for Moon Base Challenge",
+   "url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+   "published": "2026-11-08T15:26:38Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Moon Base",
+    "Center of Excellence for Collaborative Innovation (CoECI)",
+    "Get Involved",
+    "Johnson Space Center",
+    "Opportunities For Students to Get Involved",
+    "Opportunities to Contribute to NASA Missions & Get Involved"
+   ],
+   "summary": "On Sunday, NASA announced the opening of its $1 million Moon Base Student Challenge during a MAX POWER event at Kennedy Space Center Visitor Complex in Florida. As part of a Golden Age of Science, the competition invites student teams at U.S. high schools and post-secondary schools to contribute designs for the Moon Base. “We’re […]",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 4,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Announces 1 Million Students",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ20261108_admin_0001",
+      "title": "NASA's MAX POWER at Kennedy Space Center",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/John Kraus",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20261108_admin_0001/NHQ20261108_admin_0001~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20261108_admin_0001"
+     },
+     {
+      "nasa_id": "NHQ20261108_admin_0002",
+      "title": "NASA's MAX POWER at Kennedy Space Center",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/John Kraus",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20261108_admin_0002/NHQ20261108_admin_0002~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20261108_admin_0002"
+     },
+     {
+      "nasa_id": "NHQ20261108_admin_0003",
+      "title": "NASA's MAX POWER at Kennedy Space Center",
+      "date_created": "2026-11-08",
+      "center": "KSC",
+      "credit": "NASA/John Kraus",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20261108_admin_0003/NHQ20261108_admin_0003~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20261108_admin_0003"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-news-release-nasa-awards-moon-base-transportation-technology-science-projects",
+   "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
+   "url": "https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects/",
+   "published": "2026-11-07T22:47:03Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Moon Base"
+   ],
+   "summary": "NASA announced a suite of awards and mission updates on Saturday to expand the agency’s Moon Base exploration, science, and infrastructure capabilities. The investments will advance commercial robotic deliveries, a nuclear-powered rover named PROMISE, launch and orbital transfer services, and surface infrastructure as the agency works with American industry to establish a sustained presence on […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 3,
+    "Launch Day": 1
+   },
+   "flags": [],
+   "images": {
+    "query": "Awards Moon Base",
+    "total_hits": 12,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ20260828_admin_0024",
+      "title": "Artemis II Congressional Space Medal of Honor Ceremony",
+      "date_created": "2026-08-28",
+      "center": "KSC",
+      "credit": "NASA/John Kraus",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20260828_admin_0024/NHQ20260828_admin_0024~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20260828_admin_0024"
+     },
+     {
+      "nasa_id": "KSC-20220630-PH-GEB01_0024",
+      "title": "Astrobotic's CubeRover",
+      "date_created": "2022-06-30",
+      "center": "KSC",
+      "credit": "NASA/Glenn Benson",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220630-PH-GEB01_0024/KSC-20220630-PH-GEB01_0024~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220630-PH-GEB01_0024"
+     },
+     {
+      "nasa_id": "KSC-20220630-PH-GEB01_0184",
+      "title": "Astrobotic's CubeRover",
+      "date_created": "2022-06-30",
+      "center": "KSC",
+      "credit": "NASA/Glenn Benson",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220630-PH-GEB01_0184/KSC-20220630-PH-GEB01_0184~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220630-PH-GEB01_0184"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-news-release-nasa-seeks-next-generation-of-explorers-to-join-astronaut-corps",
+   "title": "NASA Seeks Next Generation of Explorers to Join Astronaut Corps",
+   "url": "https://www.nasa.gov/news-release/nasa-seeks-next-generation-of-explorers-to-join-astronaut-corps/",
+   "published": "2026-11-07T18:11:57Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Becoming an Astronaut",
+    "Astronauts",
+    "Candidate Astronauts",
+    "Humans in Space"
+   ],
+   "summary": "NASA is looking for the explorers who will help write the next chapter of human spaceflight. Applications are now open for the agency’s next class of astronauts, who will join NASA as America returns to the Moon, builds the Moon Base, and lays the groundwork for the first crewed missions to Mars. The next generation […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Seeks Next Generation",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "0301772",
+      "title": "Advanced Space Transportation Program (ASTP)",
+      "date_created": "2003-07-21",
+      "center": "MSFC",
+      "credit": "NASA/MSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/0301772/0301772~medium.jpg",
+      "page": "https://images.nasa.gov/details/0301772"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-image-article-m30s-sparkling-stars",
+   "title": "M30’s Sparkling Stars",
+   "url": "https://www.nasa.gov/image-article/m30s-sparkling-stars/",
+   "published": "2026-11-06T16:23:41Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Messier Catalog"
+   ],
+   "summary": "This NASA/ESA Hubble Space Telescope image released Nov. 5, 2026, provides a lesson in galactic history. The sparkling collection of stars is named Messier 30 (M30) after the French astronomer, Charles Messier, who cataloged M30 and other diffuse objects that might be mistaken for comets in the early telescopes of Messier’s time. M30 lies about […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 9,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "M30 Sparkling Stars",
+    "tried": [
+     "M30 Sparkling Stars",
+     "M30 Sparkling",
+     "M30"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "nasa-earth-supercomputing-tech-demo-schedule",
+   "title": "Supercomputing Tech Demo Schedule",
+   "url": "https://science.nasa.gov/earth/supercomputing-tech-demo-schedule/",
+   "published": "2026-11-06T16:03:52Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Earth"
+   ],
+   "summary": "Supercomputing 2026 Join NASA in the Exhibit Hall (Booth #4038) for presentations by NASA experts. Full Tech Demo schedule below. TUESDAY, NOVEMBER 17 10:00 AM – 11:30 AMType-safe Templates in Fortran 2028Tom Clune1:00PM – 2:30 PM Mixing and Matching and Multiple Versions, Oh My!Brad Richardson4:00 PM – 5:30 PMPorting NAS Parallel Benchmarks to use OpenMP Target […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Supercomputing",
+    "total_hits": 55,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002030",
+      "title": "Discover Supercomputer 3",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002030/GSFC_20171208_Archive_e002030~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002030"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002034",
+      "title": "Discover Supercomputer 1",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002034/GSFC_20171208_Archive_e002034~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002034"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e002027",
+      "title": "Discover Supercomputer 5",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002027/GSFC_20171208_Archive_e002027~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002027"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-taking-a-gander-at-utahs-goosenecks",
+   "title": "Taking a Gander at Utah’s Goosenecks",
+   "url": "https://science.nasa.gov/earth/earth-observatory/taking-a-gander-at-utahs-goosenecks/",
+   "published": "2026-11-06T05:01:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Earth Observatory",
+    "Surface Water",
+    "Topography"
+   ],
+   "summary": "The San Juan River has carved deep, improbably curvy meanders into the desert landscape.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Taking",
+    "total_hits": 11559,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "expedition-68-takes-a-group-photo_52234128450_o",
+      "title": "Expedition 68 takes a group photo",
+      "date_created": "2022-05-13",
+      "center": "JSC",
+      "credit": "James Blair - NASA - JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/expedition-68-takes-a-group-photo_52234128450_o/expedition-68-takes-a-group-photo_52234128450_o~medium.jpg",
+      "page": "https://images.nasa.gov/details/expedition-68-takes-a-group-photo_52234128450_o"
+     },
+     {
+      "nasa_id": "MSFC-202000223",
+      "title": "Katherine Van Hooser, MSFC Chief Engineer, in her office, for Marshall Star “Take 5” series.",
+      "date_created": "2020-03-10",
+      "center": "MSFC",
+      "credit": "Emmett Given",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/MSFC-202000223/MSFC-202000223~medium.jpg",
+      "page": "https://images.nasa.gov/details/MSFC-202000223"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000161",
+      "title": "Hubble Takes Flight with the Toucan and the Cluster",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000161/GSFC_20171208_Archive_e000161~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000161"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-image-article-midwestern-city-lights",
+   "title": "Midwestern City Lights",
+   "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
+   "published": "2026-11-05T15:17:19Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "International Space Station (ISS)"
+   ],
+   "summary": "City lights from the Midwestern United States to the East Coast sparkle across the landscape a couple of hours before sunrise on Oct. 18, 2026. Major urban areas visible in the photograph include Chicago, Illinois; Detroit, Michigan; and the New York metropolitan region. The International Space Station was orbiting 259 miles above Earth when this […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 1,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Midwestern City Lights",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss075e0227352",
+      "title": "City lights from the Midwestern United States to the East Coast",
+      "date_created": "2026-10-18",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss075e0227352/iss075e0227352~large.jpg",
+      "page": "https://images.nasa.gov/details/iss075e0227352"
+     },
+     {
+      "nasa_id": "iss072e842757",
+      "title": "City lights dot the cloudy, midwestern landscape of the United States",
+      "date_created": "2025-03-15",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss072e842757/iss072e842757~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss072e842757"
+     },
+     {
+      "nasa_id": "iss070e022666",
+      "title": "iss070e022666",
+      "date_created": "2023-11-10",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss070e022666/iss070e022666~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss070e022666"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-missions-hubble-hubble-learns-galactic-history-from-stars",
+   "title": "Hubble Learns Galactic History From Stars",
+   "url": "https://science.nasa.gov/missions/hubble/hubble-learns-galactic-history-from-stars/",
+   "published": "2026-11-05T12:56:21Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Astrophysics",
+    "Astrophysics Division",
+    "Globular Clusters",
+    "Goddard Space Flight Center",
+    "Hubble Space Telescope",
+    "Star Clusters"
+   ],
+   "summary": "This Hubble image features the sparkling collection of stars named Messier 30 (M30), also called NGC 7099.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 9,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Hubble Learns Galactic History",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000438",
+      "title": "Hubble Views a Galactic Mega-merger",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000438/GSFC_20171208_Archive_e000438~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000438"
+     },
+     {
+      "nasa_id": "hubble-views-a-galactic-mega-merger_24314964401_o",
+      "title": "A galactic mega-merger",
+      "date_created": "2016-01-11",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/hubble-views-a-galactic-mega-merger_24314964401_o/hubble-views-a-galactic-mega-merger_24314964401_o~small.jpg",
+      "page": "https://images.nasa.gov/details/hubble-views-a-galactic-mega-merger_24314964401_o"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-cyprus-island-of-snakes-cats-and-ophiolites",
+   "title": "Cyprus: Island of Snakes, Cats, and Ophiolites",
+   "url": "https://science.nasa.gov/earth/earth-observatory/cyprus-island-of-snakes-cats-and-ophiolites/",
+   "published": "2026-11-05T05:01:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Earth Observatory",
+    "Landsat 8 / LDCM (Landsat Data Continuity Mission)",
+    "Topography"
+   ],
+   "summary": "The third-largest island in the Mediterranean Sea exposes an ancient piece of the ocean floor and hosts a clowder of cats.",
+   "suggested_series": "By the Numbers",
+   "series_scores": {
+    "By the Numbers": 1,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Cyprus Island",
+    "total_hits": 13,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss073e0906745",
+      "title": "The Republic of Cyprus in the Mediterranean Sea",
+      "date_created": "2025-09-28",
+      "center": "JSC",
+      "credit": "Kimiya Yui",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e0906745/iss073e0906745~large.jpg",
+      "page": "https://images.nasa.gov/details/iss073e0906745"
+     },
+     {
+      "nasa_id": "iss072e065376",
+      "title": "The island Republic of Cyprus in the Mediterranean Sea",
+      "date_created": "2024-10-17",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss072e065376/iss072e065376~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss072e065376"
+     },
+     {
+      "nasa_id": "54054828759_d0e28b3a56_o",
+      "title": "Cyprus Island in the Mediterranean Sea",
+      "date_created": "2024-09-28",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/54054828759_d0e28b3a56_o/54054828759_d0e28b3a56_o~medium.jpg",
+      "page": "https://images.nasa.gov/details/54054828759_d0e28b3a56_o"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-ews-release-nasa-announces-x-70-experimental-aircraft-to-advance-flight-research",
+   "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
+   "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research/",
+   "published": "2026-11-05T01:43:21Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Aeronautics",
+    "Flight Innovation",
+    "NASA Aircraft",
+    "Research and Technology Mission Directorate"
+   ],
+   "summary": "On Wednesday, NASA unveiled its newest experimental aircraft, the X-70 Fractal, during the UP.Summit at the agency’s Kennedy Space Center in Florida. This high-performance, highly adaptable research platform is designed to accelerate the development and testing of advanced aviation technologies. The crewed X-70 features advanced, rapidly reconfigurable flight-control technology that will allow NAS",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 3,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Announces X",
+    "total_hits": 22,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ201804030005",
+      "title": "Low Boom Flight Demonstrator Briefing",
+      "date_created": "2018-04-03",
+      "center": "HQ",
+      "credit": "NASA/Aubrey Gemignani",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201804030005/NHQ201804030005~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201804030005"
+     },
+     {
+      "nasa_id": "NHQ201804030006",
+      "title": "Low Boom Flight Demonstrator Briefing",
+      "date_created": "2018-04-03",
+      "center": "HQ",
+      "credit": "NASA/Aubrey Gemignani",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ201804030006/NHQ201804030006~medium.jpg",
+      "page": "https://images.nasa.gov/details/NHQ201804030006"
+     },
+     {
+      "nasa_id": "200911050004HQ",
+      "title": "NASA and X PRIZE Announce Winners of Lunar Lander Challenge",
+      "date_created": "2009-11-05",
+      "center": "HQ",
+      "credit": "NASA/Carla Cioffi",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/200911050004HQ/200911050004HQ~medium.jpg",
+      "page": "https://images.nasa.gov/details/200911050004HQ"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-missions-artemis-nasa-shares-plans-to-accelerate-artemis-return-to-moon",
+   "title": "NASA Shares Plans to Accelerate Artemis, Return to Moon",
+   "url": "https://www.nasa.gov/missions/artemis/nasa-shares-plans-to-accelerate-artemis-return-to-moon/",
+   "published": "2026-11-04T21:04:10Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Artemis",
+    "Artemis 3",
+    "Artemis 4",
+    "Human Landing System Program",
+    "Marshall Space Flight Center",
+    "Space Launch System (SLS)"
+   ],
+   "summary": "In an update on Oct. 23, NASA Administrator Jared Isaacman and other agency leaders shared the agency’s path to returning Americans to the lunar surface in 2028. Agency leadership provided updates on the previously announced acceleration plans for the Artemis program, advancing toward the agency’s Artemis III test flight in 2027 and Artemis IV Moon […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Shares Plans",
+    "total_hits": 76,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "art002e016186",
+      "title": "Artemis II Lunar Targeting Plan in Action -- art002e016186",
+      "date_created": "2026-04-06",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/art002e016186/art002e016186~large.jpg",
+      "page": "https://images.nasa.gov/details/art002e016186"
+     },
+     {
+      "nasa_id": "art002e014251",
+      "title": "Capturing the Lunar Flyby from Orion -- art002e014251",
+      "date_created": "2026-04-06",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/art002e014251/art002e014251~large.jpg",
+      "page": "https://images.nasa.gov/details/art002e014251"
+     },
+     {
+      "nasa_id": "SSC-20241023-s01033",
+      "title": "From Logistics to Legacy: NASA Employee is a Part of Something Great",
+      "date_created": "2024-10-23",
+      "center": "SSC",
+      "credit": "Danny Nowlin",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/SSC-20241023-s01033/SSC-20241023-s01033~medium.jpg",
+      "page": "https://images.nasa.gov/details/SSC-20241023-s01033"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-s-release-nasa-announces-ka-band-satellite-relay-awards-for-space-communications",
+   "title": "NASA Announces Ka-Band Satellite Relay Awards for Space Communications",
+   "url": "https://www.nasa.gov/news-release/nasa-announces-ka-band-satellite-relay-awards-for-space-communications/",
+   "published": "2026-11-04T18:00:02Z",
+   "source": "NASA",
+   "news_release": true,
+   "categories": [
+    "Space Communications & Navigation Program",
+    "Space Communications Technology"
+   ],
+   "summary": "NASA selected three companies on Wednesday to perform work to develop Ka-band space relay capability concepts that are compatible with current missions in space, ensuring service continuity for existing spacecraft without requiring modifications to their onboard systems. Through this work, NASA will aim to acquire end-to-end solutions that include space, ground, launch, operations, and integration",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 1
+   },
+   "flags": [],
+   "images": {
+    "query": "Announces",
+    "total_hits": 1382,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "jsc2025e076364",
+      "title": "2025 Astronaut Candidate Imelda Muller at Announcement Ceremony ",
+      "date_created": "2025-09-22",
+      "center": "JSC",
+      "credit": "JAMES M BLAIR",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2025e076364/jsc2025e076364~large.jpg",
+      "page": "https://images.nasa.gov/details/jsc2025e076364"
+     },
+     {
+      "nasa_id": "jsc2025e076292",
+      "title": "2025 Astronaut Candidates at the Announcement Ceremony",
+      "date_created": "2025-09-22",
+      "center": "JSC",
+      "credit": "NASA/PHOTO        BILL STAFFORD",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2025e076292/jsc2025e076292~medium.jpg",
+      "page": "https://images.nasa.gov/details/jsc2025e076292"
+     },
+     {
+      "nasa_id": "jsc2025e076293",
+      "title": "2025 Astronaut Candidates at Announcement Ceremony",
+      "date_created": "2025-09-22",
+      "center": "JSC",
+      "credit": "NASA/PHOTO        BILL STAFFORD",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/jsc2025e076293/jsc2025e076293~medium.jpg",
+      "page": "https://images.nasa.gov/details/jsc2025e076293"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-lities-armstrong-nasa-navigation-experiment-shows-promise-for-planetary-landings",
+   "title": "NASA Navigation Experiment Shows Promise for Planetary Landings",
+   "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-navigation-experiment-shows-promise-for-planetary-landings/",
+   "published": "2026-11-04T16:52:43Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Armstrong Flight Research Center",
+    "Aeronautics",
+    "Flight Innovation",
+    "Flight Opportunities Program",
+    "Johnson Space Center",
+    "Research and Technology Mission Directorate"
+   ],
+   "summary": "NASA successfully demonstrated technology designed to help spacecraft autonomously navigate to safe landing sites on the Moon and on other planets. An Alta-X drone equipped with the agency’s Safe and Precise Landing – Integrated Capabilities Evolution (SPLICE) guidance, navigation, and control payload completed simulated lunar descent and landing maneuvers Aug. 27. The flight took place […]",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 4,
+    "How Does That Work": 5,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Navigation Experiment",
+    "total_hits": 213,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "AFRC2026-0179-19",
+      "title": "  ",
+      "date_created": "2026-08-27",
+      "center": "AFRC",
+      "credit": "NASA/Ryan Kline",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2026-0179-19/AFRC2026-0179-19~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2026-0179-19"
+     },
+     {
+      "nasa_id": "AFRC2026-0179-18",
+      "title": "  ",
+      "date_created": "2026-08-27",
+      "center": "AFRC",
+      "credit": "NASA/Ryan Kline",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2026-0179-18/AFRC2026-0179-18~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2026-0179-18"
+     },
+     {
+      "nasa_id": "AFRC2026-0152-30",
+      "title": "  ",
+      "date_created": "2026-07-15",
+      "center": "AFRC",
+      "credit": "NASA/Ryan Kline",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/AFRC2026-0152-30/AFRC2026-0152-30~large.jpg",
+      "page": "https://images.nasa.gov/details/AFRC2026-0152-30"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-image-article-hubble-reveals-cosmic-mystery",
+   "title": "Hubble Reveals Cosmic Mystery",
+   "url": "https://www.nasa.gov/image-article/hubble-reveals-cosmic-mystery/",
+   "published": "2026-11-04T15:59:36Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [],
+   "summary": "This photo released on Nov. 2, 2026, showcases NGC 4449, a dwarf irregular. Researchers using NASA’s Hubble Space Telescope studied 37 nearby dwarf galaxies — small galaxies containing a few thousand to hundreds of millions of stars — including NGC 4449 and found that much of the oxygen they expected to see is missing. Read […]",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 2,
+    "Just Discovered": 12,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Hubble Reveals Cosmic Mystery",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA26702",
+      "title": "Webb Data Reveals Dark Matter",
+      "date_created": "2026-01-26",
+      "center": "JPL",
+      "credit": "NASA/STScI/J. DePasquale/A. Pagan",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA26702/PIA26702~large.jpg",
+      "page": "https://images.nasa.gov/details/PIA26702"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e001362",
+      "title": "A monster in the Milky Way",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001362/GSFC_20171208_Archive_e001362~small.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001362"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000207",
+      "title": "Hubble Explores the Hidden Dark Side of a Spiral Galaxy",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000207/GSFC_20171208_Archive_e000207~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000207"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-earth-earth-observatory-before-the-dawn-in-americas-heartland",
+   "title": "Before the Dawn in America’s Heartland",
+   "url": "https://science.nasa.gov/earth/earth-observatory/before-the-dawn-in-americas-heartland/",
+   "published": "2026-11-04T05:01:00Z",
+   "source": "NASA",
+   "news_release": false,
+   "categories": [
+    "Earth Observatory"
+   ],
+   "summary": "With hardly a cloud in sight, astronauts had a sweeping view of nighttime lights in the U.S. Midwest.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [
+    "earth science"
+   ],
+   "images": {
+    "query": "Dawn America",
+    "total_hits": 7,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss046e026252",
+      "title": "Earth observation taken by Expedition 46 crew",
+      "date_created": "2016-01-28",
+      "center": "JSC",
+      "credit": "Tim Kopra",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss046e026252/iss046e026252~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss046e026252"
+     },
+     {
+      "nasa_id": "EC03-0163-03",
+      "title": "Bob Mccall and NASA Dryden Center Director Kevin Petersen in the artist's studio in Paradise Valley, Arizona.",
+      "date_created": "2003-06-05",
+      "center": "AFRC",
+      "credit": "NASA/Tony Landis",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/EC03-0163-03/EC03-0163-03~medium.jpg",
+      "page": "https://images.nasa.gov/details/EC03-0163-03"
+     },
+     {
+      "nasa_id": "EC03-0163-15",
+      "title": "Artists Bob and Louise McCall in their studio in Paradise Valley, Arizona.",
+      "date_created": "2003-06-05",
+      "center": "AFRC",
+      "credit": "NASA/Tony Landis",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/EC03-0163-15/EC03-0163-15~medium.jpg",
+      "page": "https://images.nasa.gov/details/EC03-0163-15"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-blogs-quesst-2026-11-11-x-59-test-pilots-veterans-day",
+   "title": "Honoring NASA’s X-59 Test Pilots on Veterans Day",
+   "url": "https://www.nasa.gov/blogs/quesst/2026/11/11/x-59-test-pilots-veterans-day/",
+   "published": "2026-11-11T14:00:00Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "Aeronautics",
+    "Aeronautics Research Mission Directorate",
+    "Ames Research Center",
+    "Armstrong Flight Research Center",
+    "Glenn Research Center",
+    "Langley Research Center"
+   ],
+   "summary": "Seasoned pilots, aerospace engineers, and U.S. military veterans, NASA’s X-59 test pilots bring decades of service, technical expertise, and flight experience to the agency’s Quesst mission. NASA X-59 pilots Jim “Clue” Less and Nils Larson served in the U.S. Air Force, while Mike Lippert served in the U.S. Marine Corps. Today, the three pilots continue […] The post Honoring NASA’s X-59 Test Pilots",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 6,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Honoring X",
+    "total_hits": 36,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "KSC-20210430-PH-KLS01_0012",
+      "title": "Mike Collins Wreath Laying Ceremony",
+      "date_created": "2021-04-30",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20210430-PH-KLS01_0012/KSC-20210430-PH-KLS01_0012~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20210430-PH-KLS01_0012"
+     },
+     {
+      "nasa_id": "KSC-20210430-PH-KLS01_0005",
+      "title": "Mike Collins Wreath Laying Ceremony",
+      "date_created": "2021-04-30",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20210430-PH-KLS01_0005/KSC-20210430-PH-KLS01_0005~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20210430-PH-KLS01_0005"
+     },
+     {
+      "nasa_id": "KSC-20210430-PH-KLS01_0027",
+      "title": "Mike Collins Wreath Laying Ceremony",
+      "date_created": "2021-04-30",
+      "center": "KSC",
+      "credit": "NASA/Kim Shiflett",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20210430-PH-KLS01_0027/KSC-20210430-PH-KLS01_0027~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20210430-PH-KLS01_0027"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-tation-2026-11-10-microbiology-spacesuits-and-cargo-mission-preps-keep-crew-busy",
+   "title": "Microbiology, Spacesuits, and Cargo Mission Preps Keep Crew Busy",
+   "url": "https://www.nasa.gov/blogs/spacestation/2026/11/10/microbiology-spacesuits-and-cargo-mission-preps-keep-crew-busy/",
+   "published": "2026-11-10T19:31:40Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "Commercial Resupply",
+    "International Space Station (ISS)",
+    "ISS Research",
+    "Northrop Grumman Commercial Resupply",
+    "SpaceX Commercial Resupply"
+   ],
+   "summary": "Microbiology and spacesuit maintenance kept the Expedition 75 crew busy aboard the International Space Station on Tuesday. The orbital residents are also preparing for upcoming cargo missions at the orbital outpost. The post Microbiology, Spacesuits, and Cargo Mission Preps Keep Crew Busy appeared first on NASA Science .",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 6,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Microbiology Spacesuits",
+    "total_hits": 4,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss074e0619980",
+      "title": "Cosmonaut Sergey Kud-Sverchkov works outside the International Space Station in his Orlan spacesuit with red stripes",
+      "date_created": "2026-05-27",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0619980/iss074e0619980~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0619980"
+     },
+     {
+      "nasa_id": "iss074e0619960",
+      "title": "Cosmonaut Sergei Mikaev works outside the International Space Station's Poisk module in his Orlan spacesuit with blue stripes",
+      "date_created": "2026-05-27",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0619960/iss074e0619960~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0619960"
+     },
+     {
+      "nasa_id": "iss074e0619966",
+      "title": "Cosmonaut Sergey Kud-Sverchkov works outside the International Space Station in his Orlan spacesuit with red stripes",
+      "date_created": "2026-05-27",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss074e0619966/iss074e0619966~large.jpg",
+      "page": "https://images.nasa.gov/details/iss074e0619966"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-history-nasas-discovery-program-book-vol-2",
+   "title": "NASA’s Discovery Program: Competitive Planetary Exploration in the 21st Century",
+   "url": "https://www.nasa.gov/history/nasas-discovery-program-book-vol-2/",
+   "published": "2026-11-10T15:15:01Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "NASA History"
+   ],
+   "summary": "By David W. Brown Velocity and audacity defined the Discovery Program at its inception in the early 1990s, when it emerged in response to limited flagship mission opportunities and budget uncertainty. Designed for focused, low-cost planetary exploration, Discovery marked a shift from traditional directed missions. The early history of the program is covered in NASA’s […] The post NASA’s Discovery ",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 10,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Discovery Program Competitive",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PIA18152",
+      "title": "Artist Rendering of NASA Dawn Spacecraft Approaching Mars",
+      "date_created": "2009-05-23",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA18152/PIA18152~small.jpg",
+      "page": "https://images.nasa.gov/details/PIA18152"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-ames-earth-science-rummble",
+   "title": "RUMMBLE",
+   "url": "https://www.nasa.gov/ames/earth-science/rummble/",
+   "published": "2026-11-09T21:20:40Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [],
+   "summary": "Overview RUMMBLE, which stands for Remote-sensing Underground Magma Movement Before Large Eruptions, investigates how magma movement beneath volcanoes can be detected using space-based observations. The project focuses on measuring volcanic gas emissions and improving remote-sensing techniques to identify early warning signs of eruptions. What is RUMMBLE? The goal of RUMMBLE is to improve the dete",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 1,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "RUMMBLE",
+    "tried": [
+     "RUMMBLE"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "nasa-science-ames-earth-science-seastar",
+   "title": "SeaSTAR",
+   "url": "https://www.nasa.gov/ames/earth-science/seastar/",
+   "published": "2026-11-09T21:03:23Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [],
+   "summary": "Overview SeaSTAR, which stands for Sea-going Sky-Scanning Sun-tracking Atmospheric Research Radiometer, is a robotic ship-mounted instrument designed to measure aerosol optical depth and aerosol optical properties across multiple wavelengths. The instrument will collect high-resolution atmospheric measurements at sea to support validation of observations from the PACE satellite. What is SeaSTAR? S",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 5,
+    "How Does That Work": 2,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "SeaSTAR",
+    "tried": [
+     "SeaSTAR"
+    ],
+    "usable": false,
+    "top": [],
+    "total_hits": 0
+   }
+  },
+  {
+   "id": "nasa-science--blog-2026-11-09-crew-packing-dragon-for-return-with-experiments-and-a-spacesuit",
+   "title": "Crew Packing Dragon for Return with Experiments and a Spacesuit",
+   "url": "https://www.nasa.gov/blogs/general-blog/2026/11/09/crew-packing-dragon-for-return-with-experiments-and-a-spacesuit/",
+   "published": "2026-11-09T19:43:40Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [],
+   "summary": "Expedition 75 kicked off the week processing microbe samples and swapping spacesuits for return to Earth soon inside a U.S. cargo craft. The International Space Station crew members also studied breathing in microgravity and photographed Earth landmarks. The post Crew Packing Dragon for Return with Experiments and a Spacesuit appeared first on NASA Science .",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 5,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Crew Packing Dragon Return",
+    "total_hits": 3,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss073e0284872",
+      "title": "Astronauts Anne McClain and Peggy Whitson pack frozen research samples",
+      "date_created": "2025-07-12",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e0284872/iss073e0284872~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss073e0284872"
+     },
+     {
+      "nasa_id": "iss073e0284809",
+      "title": "Astronauts Anne McClain and Peggy Whitson pack frozen research samples",
+      "date_created": "2025-07-12",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss073e0284809/iss073e0284809~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss073e0284809"
+     },
+     {
+      "nasa_id": "iss072e310952",
+      "title": "iss072e310952",
+      "date_created": "2024-12-03",
+      "center": "JSC",
+      "credit": "NASA/JSC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss072e310952/iss072e310952~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss072e310952"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-planet-meetings-missing-links-in-planet-formation-from-embedded-disks-to-planets",
+   "title": "Missing Links in Planet Formation: From Embedded Disks to Planets",
+   "url": "https://science.nasa.gov/astrophysics/programs/exep/resources/exoplanet-meetings/missing-links-in-planet-formation-from-embedded-disks-to-planets/",
+   "published": "2026-11-09T06:52:00Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "Uncategorized"
+   ],
+   "summary": "Date: November 9-13, 2026 Location: ASIAA, Taipei The post Missing Links in Planet Formation: From Embedded Disks to Planets appeared first on NASA Science .",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 8,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Missing Links",
+    "total_hits": 2,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e001061",
+      "title": "Hubble Team Unveils Most Colorful View of Universe Captured by Space Telescope",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001061/GSFC_20171208_Archive_e001061~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001061"
+     },
+     {
+      "nasa_id": "PIA21085",
+      "title": "Pulsar Artist Concept",
+      "date_created": "2017-01-06",
+      "center": "JPL",
+      "credit": "NASA/JPL-Caltech",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PIA21085/PIA21085~medium.jpg",
+      "page": "https://images.nasa.gov/details/PIA21085"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-mission-promise",
+   "title": "PROMISE",
+   "url": "https://www.nasa.gov/mission/promise/",
+   "published": "2026-11-07T21:05:12Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "Curiosity (Rover)",
+    "Earth's Moon",
+    "Exploration Systems Development Mission Directorate",
+    "Human Spaceflight Mission Directorate",
+    "Jet Propulsion Laboratory",
+    "Perseverance (Rover)"
+   ],
+   "summary": "Explore the PROMISE Lunar Rover’s Payload The PROMISE Payload The PROMISE rover will carry an extensive payload of science instruments and technology demonstrations sponsored by NASA’s Science Mission Directorate, Research and Technology Mission Directorate, and Human Spaceflight Mission Directorate. Data provided by the rover mobility system’s interaction with the Moon’s surface will complement s",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 3,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "PROMISE",
+    "total_hits": 95,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "PROMISE - 4",
+      "title": "Artist’s Rendering of NASA’s PROMISE Lunar Rover",
+      "date_created": "2026-11-07",
+      "center": "HQ",
+      "credit": "NASA/HQ",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PROMISE - 4/PROMISE - 4~large.jpg",
+      "page": "https://images.nasa.gov/details/PROMISE - 4"
+     },
+     {
+      "nasa_id": "PROMISE - 6",
+      "title": "Artist’s Rendering of NASA’s PROMISE Lunar Rover",
+      "date_created": "2026-11-07",
+      "center": "HQ",
+      "credit": "NASA/HQ",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PROMISE - 6/PROMISE - 6~large.jpg",
+      "page": "https://images.nasa.gov/details/PROMISE - 6"
+     },
+     {
+      "nasa_id": "PROMISE - 5",
+      "title": "Artist’s Rendering of NASA’s PROMISE Lunar Rover",
+      "date_created": "2026-11-07",
+      "center": "HQ",
+      "credit": "NASA/HQ",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/PROMISE - 5/PROMISE - 5~large.jpg",
+      "page": "https://images.nasa.gov/details/PROMISE - 5"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-ion-2026-11-06-spacewalk-cleanup-biomedical-science-and-maintenance-wrap-up-week",
+   "title": "Spacewalk Cleanup, Biomedical Science, and Maintenance Wrap Up Week",
+   "url": "https://www.nasa.gov/blogs/spacestation/2026/11/06/spacewalk-cleanup-biomedical-science-and-maintenance-wrap-up-week/",
+   "published": "2026-11-06T17:48:13Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [
+    "International Space Station (ISS)",
+    "ISS Research"
+   ],
+   "summary": "The seven Expedition 75 crew members cleaned up after a spacewalk, conducted biomedical assessments, and maintained orbital systems to wrap up a busy week aboard the International Space Station. The post Spacewalk Cleanup, Biomedical Science, and Maintenance Wrap Up Week appeared first on NASA Science .",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 9,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Spacewalk Cleanup",
+    "total_hits": 1,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "iss061e003491",
+      "title": "Koch during EVA 56 Cleanup OPS",
+      "date_created": "2019-10-06",
+      "center": "JSC",
+      "credit": "Drew Morgan",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/iss061e003491/iss061e003491~medium.jpg",
+      "page": "https://images.nasa.gov/details/iss061e003491"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "nasa-science-mission-crave-links",
+   "title": "CERES Radiation Validation Experiment (CRAVE) Program Related Links",
+   "url": "https://science.nasa.gov/mission/crave/links/",
+   "published": "2026-11-06T15:30:30Z",
+   "source": "NASA Science",
+   "news_release": false,
+   "categories": [],
+   "summary": "Granite Island Light Station, Lake Superior EOS Satellites with CERES Instruments Some CERES Projects Langley Links Other Links The post CERES Radiation Validation Experiment (CRAVE) Program Related Links appeared first on NASA Science .",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 1,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "CERES Radiation",
+    "total_hits": 17,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "CeREs_VCLS_CubeSat_0002",
+      "title": "CeREs_VCLS_CubeSat_0002",
+      "date_created": "2018-04-10",
+      "center": "KSC",
+      "credit": "NASA",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/CeREs_VCLS_CubeSat_0002/CeREs_VCLS_CubeSat_0002~medium.jpg",
+      "page": "https://images.nasa.gov/details/CeREs_VCLS_CubeSat_0002"
+     },
+     {
+      "nasa_id": "KSC-20180410-PH_CSH01_0008",
+      "title": "ELaNa 19 / Venture Class CubeSats - CeREs",
+      "date_created": "2018-04-10",
+      "center": "KSC",
+      "credit": "NASA/Cory Huston",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20180410-PH_CSH01_0008/KSC-20180410-PH_CSH01_0008~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20180410-PH_CSH01_0008"
+     },
+     {
+      "nasa_id": "KSC-20180410-PH_CSH01_0018",
+      "title": "ELaNa 19 / Venture Class CubeSats - CeREs",
+      "date_created": "2018-04-10",
+      "center": "KSC",
+      "credit": "NASA/Cory Huston",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20180410-PH_CSH01_0018/KSC-20180410-PH_CSH01_0018~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20180410-PH_CSH01_0018"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "jpl-news-nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+   "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
+   "url": "https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+   "published": "2026-11-10T18:00:00Z",
+   "source": "JPL",
+   "news_release": false,
+   "categories": [],
+   "summary": "Everyone is encouraged to ‘Shine Bright for Voyager's Light-Day’ on Nov. 17 and to watch a moderated discussion on Nov. 19.",
+   "suggested_series": "Just Discovered",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 0,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Invites Media",
+    "total_hits": 88,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000170",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000170/GSFC_20171208_Archive_e000170~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000170"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000168",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000168/GSFC_20171208_Archive_e000168~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000168"
+     },
+     {
+      "nasa_id": "GSFC_20171208_Archive_e000165",
+      "title": "Media Invited to Rare View of NASA's James Webb Space Telescope Mirrors",
+      "date_created": "2017-12-08",
+      "center": "GSFC",
+      "credit": "NASA/GSFC",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000165/GSFC_20171208_Archive_e000165~medium.jpg",
+      "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000165"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  },
+  {
+   "id": "jpl-news-nasa-awards-moon-base-transportation-technology-science-projects",
+   "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
+   "url": "https://www.jpl.nasa.gov/news/nasa-awards-moon-base-transportation-technology-science-projects",
+   "published": "2026-11-07T23:00:00Z",
+   "source": "JPL",
+   "news_release": false,
+   "categories": [],
+   "summary": "Announcements include the agency’s decision to move forward with the nuclear-powered rover PROMISE and transportation for the MoonFall lunar drones — two missions managed by JPL.",
+   "suggested_series": "How Does That Work",
+   "series_scores": {
+    "By the Numbers": 0,
+    "Just Discovered": 0,
+    "How Does That Work": 3,
+    "Launch Day": 0
+   },
+   "flags": [],
+   "images": {
+    "query": "Awards Moon Base",
+    "total_hits": 12,
+    "usable": true,
+    "top": [
+     {
+      "nasa_id": "NHQ20260828_admin_0024",
+      "title": "Artemis II Congressional Space Medal of Honor Ceremony",
+      "date_created": "2026-08-28",
+      "center": "KSC",
+      "credit": "NASA/John Kraus",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/NHQ20260828_admin_0024/NHQ20260828_admin_0024~large.jpg",
+      "page": "https://images.nasa.gov/details/NHQ20260828_admin_0024"
+     },
+     {
+      "nasa_id": "KSC-20220630-PH-GEB01_0024",
+      "title": "Astrobotic's CubeRover",
+      "date_created": "2022-06-30",
+      "center": "KSC",
+      "credit": "NASA/Glenn Benson",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220630-PH-GEB01_0024/KSC-20220630-PH-GEB01_0024~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220630-PH-GEB01_0024"
+     },
+     {
+      "nasa_id": "KSC-20220630-PH-GEB01_0184",
+      "title": "Astrobotic's CubeRover",
+      "date_created": "2022-06-30",
+      "center": "KSC",
+      "credit": "NASA/Glenn Benson",
+      "public_domain_likely": true,
+      "note": null,
+      "preview": "https://images-assets.nasa.gov/image/KSC-20220630-PH-GEB01_0184/KSC-20220630-PH-GEB01_0184~medium.jpg",
+      "page": "https://images.nasa.gov/details/KSC-20220630-PH-GEB01_0184"
+     }
+    ],
+    "note": "NASA media are generally not copyrighted in the US; acknowledge NASA, keep third-party credits, no implied endorsement. A hit only means the search matched; check that the image shows what the narration says."
+   }
+  }
+ ]
+}

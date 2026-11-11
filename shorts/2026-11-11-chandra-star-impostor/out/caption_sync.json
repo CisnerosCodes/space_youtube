@@ -1,0 +1,636 @@
+{
+ "maxAbsDiffFrames": 0,
+ "outsideTwoFrames": [],
+ "rows": [
+  {
+   "i": 0,
+   "text": "A",
+   "spoken": 5,
+   "shown": 5,
+   "delta": 0
+  },
+  {
+   "i": 1,
+   "text": "star",
+   "spoken": 9,
+   "shown": 9,
+   "delta": 0
+  },
+  {
+   "i": 2,
+   "text": "about",
+   "spoken": 19,
+   "shown": 19,
+   "delta": 0
+  },
+  {
+   "i": 3,
+   "text": "30",
+   "spoken": 29,
+   "shown": 29,
+   "delta": 0
+  },
+  {
+   "i": 4,
+   "text": "million",
+   "spoken": 41,
+   "shown": 41,
+   "delta": 0
+  },
+  {
+   "i": 5,
+   "text": "light-years",
+   "spoken": 54,
+   "shown": 54,
+   "delta": 0
+  },
+  {
+   "i": 6,
+   "text": "away",
+   "spoken": 73,
+   "shown": 73,
+   "delta": 0
+  },
+  {
+   "i": 7,
+   "text": "keeps",
+   "spoken": 83,
+   "shown": 83,
+   "delta": 0
+  },
+  {
+   "i": 8,
+   "text": "erupting",
+   "spoken": 97,
+   "shown": 97,
+   "delta": 0
+  },
+  {
+   "i": 9,
+   "text": "like",
+   "spoken": 117,
+   "shown": 117,
+   "delta": 0
+  },
+  {
+   "i": 10,
+   "text": "a",
+   "spoken": 121,
+   "shown": 121,
+   "delta": 0
+  },
+  {
+   "i": 11,
+   "text": "supernova,",
+   "spoken": 125,
+   "shown": 125,
+   "delta": 0
+  },
+  {
+   "i": 12,
+   "text": "and",
+   "spoken": 137,
+   "shown": 137,
+   "delta": 0
+  },
+  {
+   "i": 13,
+   "text": "surviving.",
+   "spoken": 152,
+   "shown": 152,
+   "delta": 0
+  },
+  {
+   "i": 14,
+   "text": "At",
+   "spoken": 180,
+   "shown": 180,
+   "delta": 0
+  },
+  {
+   "i": 15,
+   "text": "least",
+   "spoken": 194,
+   "shown": 194,
+   "delta": 0
+  },
+  {
+   "i": 16,
+   "text": "27",
+   "spoken": 200,
+   "shown": 200,
+   "delta": 0
+  },
+  {
+   "i": 17,
+   "text": "bursts",
+   "spoken": 216,
+   "shown": 216,
+   "delta": 0
+  },
+  {
+   "i": 18,
+   "text": "between",
+   "spoken": 232,
+   "shown": 232,
+   "delta": 0
+  },
+  {
+   "i": 19,
+   "text": "2012",
+   "spoken": 245,
+   "shown": 245,
+   "delta": 0
+  },
+  {
+   "i": 20,
+   "text": "and",
+   "spoken": 259,
+   "shown": 259,
+   "delta": 0
+  },
+  {
+   "i": 21,
+   "text": "2026.",
+   "spoken": 271,
+   "shown": 271,
+   "delta": 0
+  },
+  {
+   "i": 22,
+   "text": "They",
+   "spoken": 300,
+   "shown": 300,
+   "delta": 0
+  },
+  {
+   "i": 23,
+   "text": "call",
+   "spoken": 315,
+   "shown": 315,
+   "delta": 0
+  },
+  {
+   "i": 24,
+   "text": "it",
+   "spoken": 321,
+   "shown": 321,
+   "delta": 0
+  },
+  {
+   "i": 25,
+   "text": "a",
+   "spoken": 327,
+   "shown": 327,
+   "delta": 0
+  },
+  {
+   "i": 26,
+   "text": "supernova",
+   "spoken": 331,
+   "shown": 331,
+   "delta": 0
+  },
+  {
+   "i": 27,
+   "text": "impostor.",
+   "spoken": 345,
+   "shown": 345,
+   "delta": 0
+  },
+  {
+   "i": 28,
+   "text": "Why?",
+   "spoken": 377,
+   "shown": 377,
+   "delta": 0
+  },
+  {
+   "i": 29,
+   "text": "Chandra",
+   "spoken": 395,
+   "shown": 395,
+   "delta": 0
+  },
+  {
+   "i": 30,
+   "text": "caught",
+   "spoken": 413,
+   "shown": 413,
+   "delta": 0
+  },
+  {
+   "i": 31,
+   "text": "it",
+   "spoken": 420,
+   "shown": 420,
+   "delta": 0
+  },
+  {
+   "i": 32,
+   "text": "at",
+   "spoken": 426,
+   "shown": 426,
+   "delta": 0
+  },
+  {
+   "i": 33,
+   "text": "least",
+   "spoken": 431,
+   "shown": 431,
+   "delta": 0
+  },
+  {
+   "i": 34,
+   "text": "100",
+   "spoken": 437,
+   "shown": 437,
+   "delta": 0
+  },
+  {
+   "i": 35,
+   "text": "times",
+   "spoken": 447,
+   "shown": 447,
+   "delta": 0
+  },
+  {
+   "i": 36,
+   "text": "brighter",
+   "spoken": 464,
+   "shown": 464,
+   "delta": 0
+  },
+  {
+   "i": 37,
+   "text": "in",
+   "spoken": 475,
+   "shown": 475,
+   "delta": 0
+  },
+  {
+   "i": 38,
+   "text": "X-rays",
+   "spoken": 481,
+   "shown": 481,
+   "delta": 0
+  },
+  {
+   "i": 39,
+   "text": "than",
+   "spoken": 492,
+   "shown": 492,
+   "delta": 0
+  },
+  {
+   "i": 40,
+   "text": "before",
+   "spoken": 497,
+   "shown": 497,
+   "delta": 0
+  },
+  {
+   "i": 41,
+   "text": "its",
+   "spoken": 509,
+   "shown": 509,
+   "delta": 0
+  },
+  {
+   "i": 42,
+   "text": "outbursts",
+   "spoken": 518,
+   "shown": 518,
+   "delta": 0
+  },
+  {
+   "i": 43,
+   "text": "began.",
+   "spoken": 533,
+   "shown": 533,
+   "delta": 0
+  },
+  {
+   "i": 44,
+   "text": "The",
+   "spoken": 546,
+   "shown": 546,
+   "delta": 0
+  },
+  {
+   "i": 45,
+   "text": "best",
+   "spoken": 559,
+   "shown": 559,
+   "delta": 0
+  },
+  {
+   "i": 46,
+   "text": "explanation:",
+   "spoken": 564,
+   "shown": 564,
+   "delta": 0
+  },
+  {
+   "i": 47,
+   "text": "a",
+   "spoken": 586,
+   "shown": 586,
+   "delta": 0
+  },
+  {
+   "i": 48,
+   "text": "hidden",
+   "spoken": 599,
+   "shown": 599,
+   "delta": 0
+  },
+  {
+   "i": 49,
+   "text": "black",
+   "spoken": 610,
+   "shown": 610,
+   "delta": 0
+  },
+  {
+   "i": 50,
+   "text": "hole",
+   "spoken": 620,
+   "shown": 620,
+   "delta": 0
+  },
+  {
+   "i": 51,
+   "text": "or",
+   "spoken": 631,
+   "shown": 631,
+   "delta": 0
+  },
+  {
+   "i": 52,
+   "text": "neutron",
+   "spoken": 639,
+   "shown": 639,
+   "delta": 0
+  },
+  {
+   "i": 53,
+   "text": "star,",
+   "spoken": 648,
+   "shown": 648,
+   "delta": 0
+  },
+  {
+   "i": 54,
+   "text": "pulling",
+   "spoken": 663,
+   "shown": 663,
+   "delta": 0
+  },
+  {
+   "i": 55,
+   "text": "material",
+   "spoken": 676,
+   "shown": 676,
+   "delta": 0
+  },
+  {
+   "i": 56,
+   "text": "off",
+   "spoken": 684,
+   "shown": 684,
+   "delta": 0
+  },
+  {
+   "i": 57,
+   "text": "it",
+   "spoken": 695,
+   "shown": 695,
+   "delta": 0
+  },
+  {
+   "i": 58,
+   "text": "every",
+   "spoken": 701,
+   "shown": 701,
+   "delta": 0
+  },
+  {
+   "i": 59,
+   "text": "113",
+   "spoken": 708,
+   "shown": 708,
+   "delta": 0
+  },
+  {
+   "i": 60,
+   "text": "days.",
+   "spoken": 735,
+   "shown": 735,
+   "delta": 0
+  },
+  {
+   "i": 61,
+   "text": "It",
+   "spoken": 755,
+   "shown": 755,
+   "delta": 0
+  },
+  {
+   "i": 62,
+   "text": "is",
+   "spoken": 770,
+   "shown": 770,
+   "delta": 0
+  },
+  {
+   "i": 63,
+   "text": "the",
+   "spoken": 773,
+   "shown": 773,
+   "delta": 0
+  },
+  {
+   "i": 64,
+   "text": "first",
+   "spoken": 776,
+   "shown": 776,
+   "delta": 0
+  },
+  {
+   "i": 65,
+   "text": "X-ray",
+   "spoken": 788,
+   "shown": 788,
+   "delta": 0
+  },
+  {
+   "i": 66,
+   "text": "detection",
+   "spoken": 801,
+   "shown": 801,
+   "delta": 0
+  },
+  {
+   "i": 67,
+   "text": "of",
+   "spoken": 808,
+   "shown": 808,
+   "delta": 0
+  },
+  {
+   "i": 68,
+   "text": "this",
+   "spoken": 817,
+   "shown": 817,
+   "delta": 0
+  },
+  {
+   "i": 69,
+   "text": "class",
+   "spoken": 822,
+   "shown": 822,
+   "delta": 0
+  },
+  {
+   "i": 70,
+   "text": "of",
+   "spoken": 828,
+   "shown": 828,
+   "delta": 0
+  },
+  {
+   "i": 71,
+   "text": "erupting",
+   "spoken": 833,
+   "shown": 833,
+   "delta": 0
+  },
+  {
+   "i": 72,
+   "text": "star.",
+   "spoken": 842,
+   "shown": 842,
+   "delta": 0
+  },
+  {
+   "i": 73,
+   "text": "Next:",
+   "spoken": 867,
+   "shown": 867,
+   "delta": 0
+  },
+  {
+   "i": 74,
+   "text": "Voyager",
+   "spoken": 882,
+   "shown": 882,
+   "delta": 0
+  },
+  {
+   "i": 75,
+   "text": "1",
+   "spoken": 902,
+   "shown": 902,
+   "delta": 0
+  },
+  {
+   "i": 76,
+   "text": "reaches",
+   "spoken": 907,
+   "shown": 907,
+   "delta": 0
+  },
+  {
+   "i": 77,
+   "text": "one",
+   "spoken": 916,
+   "shown": 916,
+   "delta": 0
+  },
+  {
+   "i": 78,
+   "text": "light-day",
+   "spoken": 927,
+   "shown": 927,
+   "delta": 0
+  },
+  {
+   "i": 79,
+   "text": "from",
+   "spoken": 944,
+   "shown": 944,
+   "delta": 0
+  },
+  {
+   "i": 80,
+   "text": "Earth,",
+   "spoken": 951,
+   "shown": 951,
+   "delta": 0
+  },
+  {
+   "i": 81,
+   "text": "Wednesday,",
+   "spoken": 963,
+   "shown": 963,
+   "delta": 0
+  },
+  {
+   "i": 82,
+   "text": "November",
+   "spoken": 976,
+   "shown": 976,
+   "delta": 0
+  },
+  {
+   "i": 83,
+   "text": "18.",
+   "spoken": 981,
+   "shown": 981,
+   "delta": 0
+  },
+  {
+   "i": 84,
+   "text": "Follow",
+   "spoken": 1002,
+   "shown": 1002,
+   "delta": 0
+  },
+  {
+   "i": 85,
+   "text": "Downlink",
+   "spoken": 1014,
+   "shown": 1014,
+   "delta": 0
+  },
+  {
+   "i": 86,
+   "text": "Cat",
+   "spoken": 1027,
+   "shown": 1027,
+   "delta": 0
+  },
+  {
+   "i": 87,
+   "text": "for",
+   "spoken": 1033,
+   "shown": 1033,
+   "delta": 0
+  },
+  {
+   "i": 88,
+   "text": "that",
+   "spoken": 1038,
+   "shown": 1038,
+   "delta": 0
+  },
+  {
+   "i": 89,
+   "text": "milestone.",
+   "spoken": 1043,
+   "shown": 1043,
+   "delta": 0
+  }
+ ]
+}

@@ -1,0 +1,442 @@
+{
+ "audio": "take1.mp3",
+ "duration": 36.2,
+ "text": "A star about 30 million light years away keeps erupting like a supernova and surviving. At least  27 bursts between 2012 and 2026. They call it a supernova imposter. Why? Chandra caught it at  least 100 times brighter in x-rays than before its outburst began. The best explanation? A hidden  black hole or neutron star pulling material off it every 113 days. It is the first x-ray detection  Voyager 1 reaches one light day from Earth Wednesday, November 18th.  Follow Downlink Cat for that milestone.",
+ "words": [
+  {
+   "w": "A",
+   "start": 0.09,
+   "end": 0.29
+  },
+  {
+   "w": "star",
+   "start": 0.29,
+   "end": 0.59
+  },
+  {
+   "w": "about",
+   "start": 0.59,
+   "end": 0.85
+  },
+  {
+   "w": "30",
+   "start": 0.85,
+   "end": 1.39
+  },
+  {
+   "w": "million",
+   "start": 1.39,
+   "end": 1.77
+  },
+  {
+   "w": "light",
+   "start": 1.77,
+   "end": 2.19
+  },
+  {
+   "w": "years",
+   "start": 2.19,
+   "end": 2.35
+  },
+  {
+   "w": "away",
+   "start": 2.35,
+   "end": 2.63
+  },
+  {
+   "w": "keeps",
+   "start": 2.63,
+   "end": 3.07
+  },
+  {
+   "w": "erupting",
+   "start": 3.07,
+   "end": 3.73
+  },
+  {
+   "w": "like",
+   "start": 3.73,
+   "end": 3.89
+  },
+  {
+   "w": "a",
+   "start": 3.89,
+   "end": 4.03
+  },
+  {
+   "w": "supernova",
+   "start": 4.03,
+   "end": 4.43
+  },
+  {
+   "w": "and",
+   "start": 4.43,
+   "end": 4.93
+  },
+  {
+   "w": "surviving.",
+   "start": 4.93,
+   "end": 5.69
+  },
+  {
+   "w": "At",
+   "start": 6.07,
+   "end": 6.49
+  },
+  {
+   "w": "least",
+   "start": 6.49,
+   "end": 6.65
+  },
+  {
+   "w": "27",
+   "start": 6.65,
+   "end": 7.13
+  },
+  {
+   "w": "bursts",
+   "start": 7.13,
+   "end": 7.63
+  },
+  {
+   "w": "between",
+   "start": 7.63,
+   "end": 8.01
+  },
+  {
+   "w": "2012",
+   "start": 8.01,
+   "end": 8.49
+  },
+  {
+   "w": "and",
+   "start": 8.49,
+   "end": 8.87
+  },
+  {
+   "w": "2026.",
+   "start": 8.87,
+   "end": 9.75
+  },
+  {
+   "w": "They",
+   "start": 9.75,
+   "end": 10.21
+  },
+  {
+   "w": "call",
+   "start": 10.21,
+   "end": 10.41
+  },
+  {
+   "w": "it",
+   "start": 10.41,
+   "end": 10.57
+  },
+  {
+   "w": "a",
+   "start": 10.57,
+   "end": 10.67
+  },
+  {
+   "w": "supernova",
+   "start": 10.67,
+   "end": 11.19
+  },
+  {
+   "w": "imposter.",
+   "start": 11.19,
+   "end": 12.11
+  },
+  {
+   "w": "Why?",
+   "start": 12.25,
+   "end": 13.15
+  },
+  {
+   "w": "Chandra",
+   "start": 13.15,
+   "end": 13.81
+  },
+  {
+   "w": "caught",
+   "start": 13.81,
+   "end": 14.07
+  },
+  {
+   "w": "it",
+   "start": 14.07,
+   "end": 14.23
+  },
+  {
+   "w": "at",
+   "start": 14.23,
+   "end": 14.37
+  },
+  {
+   "w": "least",
+   "start": 14.37,
+   "end": 14.57
+  },
+  {
+   "w": "100",
+   "start": 14.57,
+   "end": 14.87
+  },
+  {
+   "w": "times",
+   "start": 14.87,
+   "end": 15.57
+  },
+  {
+   "w": "brighter",
+   "start": 15.57,
+   "end": 15.87
+  },
+  {
+   "w": "in",
+   "start": 15.87,
+   "end": 16.07
+  },
+  {
+   "w": "x",
+   "start": 16.07,
+   "end": 16.29
+  },
+  {
+   "w": "-rays",
+   "start": 16.29,
+   "end": 16.45
+  },
+  {
+   "w": "than",
+   "start": 16.45,
+   "end": 16.61
+  },
+  {
+   "w": "before",
+   "start": 16.61,
+   "end": 16.99
+  },
+  {
+   "w": "its",
+   "start": 16.99,
+   "end": 17.37
+  },
+  {
+   "w": "outburst",
+   "start": 17.37,
+   "end": 17.71
+  },
+  {
+   "w": "began.",
+   "start": 17.71,
+   "end": 18.31
+  },
+  {
+   "w": "The",
+   "start": 18.37,
+   "end": 18.93
+  },
+  {
+   "w": "best",
+   "start": 18.93,
+   "end": 19.05
+  },
+  {
+   "w": "explanation?",
+   "start": 19.05,
+   "end": 19.65
+  },
+  {
+   "w": "A",
+   "start": 19.77,
+   "end": 20.03
+  },
+  {
+   "w": "hidden",
+   "start": 20.03,
+   "end": 20.35
+  },
+  {
+   "w": "black",
+   "start": 20.35,
+   "end": 20.65
+  },
+  {
+   "w": "hole",
+   "start": 20.65,
+   "end": 20.95
+  },
+  {
+   "w": "or",
+   "start": 20.95,
+   "end": 21.21
+  },
+  {
+   "w": "neutron",
+   "start": 21.21,
+   "end": 21.51
+  },
+  {
+   "w": "star",
+   "start": 21.51,
+   "end": 21.89
+  },
+  {
+   "w": "pulling",
+   "start": 21.89,
+   "end": 22.41
+  },
+  {
+   "w": "material",
+   "start": 22.41,
+   "end": 22.83
+  },
+  {
+   "w": "off",
+   "start": 22.83,
+   "end": 23.27
+  },
+  {
+   "w": "it",
+   "start": 23.27,
+   "end": 23.45
+  },
+  {
+   "w": "every",
+   "start": 23.45,
+   "end": 23.69
+  },
+  {
+   "w": "113",
+   "start": 23.69,
+   "end": 24.45
+  },
+  {
+   "w": "days.",
+   "start": 24.45,
+   "end": 25.05
+  },
+  {
+   "w": "It",
+   "start": 25.07,
+   "end": 25.63
+  },
+  {
+   "w": "is",
+   "start": 25.63,
+   "end": 25.75
+  },
+  {
+   "w": "the",
+   "start": 25.75,
+   "end": 25.87
+  },
+  {
+   "w": "first",
+   "start": 25.87,
+   "end": 26.33
+  },
+  {
+   "w": "x",
+   "start": 26.33,
+   "end": 26.73
+  },
+  {
+   "w": "-ray",
+   "start": 26.73,
+   "end": 26.95
+  },
+  {
+   "w": "detection",
+   "start": 26.95,
+   "end": 27.17
+  },
+  {
+   "w": "Voyager",
+   "start": 30.09,
+   "end": 30.51
+  },
+  {
+   "w": "1",
+   "start": 30.51,
+   "end": 30.71
+  },
+  {
+   "w": "reaches",
+   "start": 30.71,
+   "end": 30.99
+  },
+  {
+   "w": "one",
+   "start": 30.99,
+   "end": 31.35
+  },
+  {
+   "w": "light",
+   "start": 31.35,
+   "end": 31.77
+  },
+  {
+   "w": "day",
+   "start": 31.77,
+   "end": 32.05
+  },
+  {
+   "w": "from",
+   "start": 32.05,
+   "end": 32.31
+  },
+  {
+   "w": "Earth",
+   "start": 32.31,
+   "end": 32.51
+  },
+  {
+   "w": "Wednesday,",
+   "start": 32.51,
+   "end": 33.01
+  },
+  {
+   "w": "November",
+   "start": 33.01,
+   "end": 33.17
+  },
+  {
+   "w": "18th.",
+   "start": 33.17,
+   "end": 33.73
+  },
+  {
+   "w": "Follow",
+   "start": 33.85,
+   "end": 34.35
+  },
+  {
+   "w": "Downlink",
+   "start": 34.35,
+   "end": 34.73
+  },
+  {
+   "w": "Cat",
+   "start": 34.73,
+   "end": 34.93
+  },
+  {
+   "w": "for",
+   "start": 34.93,
+   "end": 35.13
+  },
+  {
+   "w": "that",
+   "start": 35.13,
+   "end": 35.31
+  },
+  {
+   "w": "milestone.",
+   "start": 35.31,
+   "end": 35.89
+  }
+ ]
+}

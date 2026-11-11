@@ -1,0 +1,482 @@
+{
+ "built": "2026-11-11T16:48:39.170Z",
+ "style": "anime",
+ "shortDir": "shorts/2026-11-11-chandra-star-impostor",
+ "frames": 1110,
+ "seconds": 37,
+ "buildSeconds": 17.8,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 5,
+   "T0": 0,
+   "T1": 92,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 1,
+   "id": "erupt",
+   "type": "photo",
+   "word": 97,
+   "T0": 92,
+   "T1": 152,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 2,
+   "id": "survive",
+   "type": "react",
+   "word": 152,
+   "T0": 152,
+   "T1": 175,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 3,
+   "id": "count",
+   "type": "number",
+   "word": 180,
+   "T0": 175,
+   "T1": 232,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 4,
+   "id": "quietloud",
+   "type": "compare",
+   "word": 232,
+   "T0": 232,
+   "T1": 294,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 5,
+   "id": "impostor",
+   "type": "band",
+   "word": 300,
+   "T0": 294,
+   "T1": 345,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 6,
+   "id": "smirk",
+   "type": "react",
+   "word": 345,
+   "T0": 345,
+   "T1": 372,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 7,
+   "id": "why",
+   "type": "photo",
+   "word": 377,
+   "T0": 372,
+   "T1": 437,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 8,
+   "id": "brighter",
+   "type": "compare",
+   "word": 437,
+   "T0": 437,
+   "T1": 559,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 9,
+   "id": "partner",
+   "type": "diagram",
+   "word": 564,
+   "T0": 559,
+   "T1": 696,
+   "transition": "iris",
+   "N": 10
+  },
+  {
+   "i": 10,
+   "id": "period",
+   "type": "number",
+   "word": 701,
+   "T0": 696,
+   "T1": 750,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 11,
+   "id": "first",
+   "type": "photo",
+   "word": 755,
+   "T0": 750,
+   "T1": 859,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 12,
+   "id": "nextband",
+   "type": "band",
+   "word": 867,
+   "T0": 859,
+   "T1": 907,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 13,
+   "id": "voyager",
+   "type": "next",
+   "word": 907,
+   "T0": 907,
+   "T1": 997,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 14,
+   "id": "end",
+   "type": "end",
+   "word": 1002,
+   "T0": 997,
+   "T1": 1110,
+   "transition": "whip",
+   "N": 10
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 5,
+   "f1": 41,
+   "text": "A star about 30"
+  },
+  {
+   "f0": 41,
+   "f1": 97,
+   "text": "million light-years away keeps"
+  },
+  {
+   "f0": 97,
+   "f1": 152,
+   "text": "erupting like a supernova, and"
+  },
+  {
+   "f0": 152,
+   "f1": 175,
+   "text": "surviving."
+  },
+  {
+   "f0": 180,
+   "f1": 232,
+   "text": "At least 27 bursts"
+  },
+  {
+   "f0": 232,
+   "f1": 300,
+   "text": "between 2012 and 2026."
+  },
+  {
+   "f0": 300,
+   "f1": 345,
+   "text": "They call it a supernova"
+  },
+  {
+   "f0": 345,
+   "f1": 372,
+   "text": "impostor."
+  },
+  {
+   "f0": 377,
+   "f1": 395,
+   "text": "Why?"
+  },
+  {
+   "f0": 395,
+   "f1": 437,
+   "text": "Chandra caught it at least"
+  },
+  {
+   "f0": 437,
+   "f1": 492,
+   "text": "100 times brighter in X-rays"
+  },
+  {
+   "f0": 492,
+   "f1": 546,
+   "text": "than before its outbursts began."
+  },
+  {
+   "f0": 546,
+   "f1": 564,
+   "text": "The best"
+  },
+  {
+   "f0": 564,
+   "f1": 586,
+   "text": "explanation:"
+  },
+  {
+   "f0": 586,
+   "f1": 631,
+   "text": "a hidden black hole"
+  },
+  {
+   "f0": 631,
+   "f1": 663,
+   "text": "or neutron star,"
+  },
+  {
+   "f0": 663,
+   "f1": 701,
+   "text": "pulling material off it"
+  },
+  {
+   "f0": 701,
+   "f1": 755,
+   "text": "every 113 days."
+  },
+  {
+   "f0": 755,
+   "f1": 788,
+   "text": "It is the first"
+  },
+  {
+   "f0": 788,
+   "f1": 822,
+   "text": "X-ray detection of this"
+  },
+  {
+   "f0": 822,
+   "f1": 859,
+   "text": "class of erupting star."
+  },
+  {
+   "f0": 867,
+   "f1": 882,
+   "text": "Next:"
+  },
+  {
+   "f0": 882,
+   "f1": 907,
+   "text": "Voyager 1"
+  },
+  {
+   "f0": 907,
+   "f1": 963,
+   "text": "reaches one light-day from Earth,"
+  },
+  {
+   "f0": 963,
+   "f1": 1002,
+   "text": "Wednesday, November 18."
+  },
+  {
+   "f0": 1002,
+   "f1": 1033,
+   "text": "Follow Downlink Cat"
+  },
+  {
+   "f0": 1033,
+   "f1": 1110,
+   "text": "for that milestone."
+  }
+ ],
+ "impacts": [
+  152,
+  200,
+  437,
+  599,
+  708,
+  776,
+  981
+ ],
+ "cues": 18,
+ "nightShift": {
+  "share": 0.773,
+  "frames": 858,
+  "overlay": {
+   "distinct": [
+    "enter pop",
+    "point",
+    "exit down",
+    "enter slide",
+    "gasp",
+    "exit slide",
+    "enter smear",
+    "think",
+    "lean",
+    "pump",
+    "nod",
+    "move",
+    "wink",
+    "exit zip"
+   ],
+   "visits": [
+    [
+     41,
+     97
+    ],
+    [
+     194,
+     234
+    ],
+    [
+     447,
+     564
+    ],
+    [
+     599,
+     701
+    ],
+    [
+     708,
+     755
+    ],
+    [
+     776,
+     867
+    ],
+    [
+     911,
+     1004
+    ]
+   ]
+  },
+  "pho": null
+ },
+ "captionSync": {
+  "maxAbsDelta": 0,
+  "late": 0,
+  "oobWordFrames": 0
+ },
+ "creditAudit": {
+  "photoMisses": 0,
+  "illustrationMisses": 0,
+  "framesWithPhoto": 526,
+  "framesWithIllustration": 251
+ },
+ "maxImpactsPerSecond": 1,
+ "lineStarts": [
+  5,
+  180,
+  300,
+  377,
+  395,
+  546,
+  586,
+  755,
+  867,
+  882,
+  1002
+ ],
+ "problems": [],
+ "notes": [
+  "the credit slot has 3 or more lines on frames 96-101, 559-568; captions are kept above 2 lines"
+ ],
+ "warnings": [
+  "beats[5] (id 'impostor').shot.label: band labels are series devices (\"NEXT\", \"STEP 1\"); narration words belong in \"words\""
+ ],
+ "qaFrames": [
+  0,
+  4,
+  5,
+  11,
+  49,
+  91,
+  92,
+  97,
+  102,
+  125,
+  151,
+  152,
+  164,
+  174,
+  175,
+  179,
+  180,
+  185,
+  186,
+  206,
+  231,
+  232,
+  263,
+  293,
+  294,
+  299,
+  300,
+  306,
+  323,
+  344,
+  345,
+  359,
+  371,
+  372,
+  376,
+  377,
+  382,
+  383,
+  394,
+  395,
+  401,
+  407,
+  436,
+  437,
+  498,
+  545,
+  546,
+  552,
+  558,
+  559,
+  564,
+  569,
+  585,
+  586,
+  592,
+  630,
+  695,
+  696,
+  701,
+  706,
+  726,
+  749,
+  750,
+  754,
+  755,
+  760,
+  761,
+  807,
+  858,
+  859,
+  866,
+  867,
+  873,
+  881,
+  882,
+  887,
+  888,
+  906,
+  907,
+  952,
+  996,
+  997,
+  1001,
+  1002,
+  1007,
+  1008,
+  1056,
+  1109
+ ]
+}

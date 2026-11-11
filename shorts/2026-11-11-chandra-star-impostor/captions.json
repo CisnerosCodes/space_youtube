@@ -1,0 +1,741 @@
+{
+ "generated": "2026-11-11",
+ "aligner": "pipeline/engine/align_captions.mjs",
+ "script": "script.md",
+ "timing": "voice.words.json",
+ "audio": "voice.mp3",
+ "audioPath": "voice.mp3",
+ "duration": 35.616,
+ "transcriptDuration": 35.56,
+ "words": [
+  {
+   "i": 0,
+   "text": "A",
+   "start": 0.15,
+   "end": 0.29,
+   "matched": true,
+   "src": 0
+  },
+  {
+   "i": 1,
+   "text": "star",
+   "start": 0.29,
+   "end": 0.63,
+   "matched": true,
+   "src": 1
+  },
+  {
+   "i": 2,
+   "text": "about",
+   "start": 0.63,
+   "end": 0.95,
+   "matched": true,
+   "src": 2
+  },
+  {
+   "i": 3,
+   "text": "30",
+   "start": 0.95,
+   "end": 1.37,
+   "matched": true,
+   "src": 3
+  },
+  {
+   "i": 4,
+   "text": "million",
+   "start": 1.37,
+   "end": 1.79,
+   "matched": true,
+   "src": 4
+  },
+  {
+   "i": 5,
+   "text": "light-years",
+   "start": 1.79,
+   "end": 2.43,
+   "matched": true,
+   "src": 5,
+   "phrase": "light years"
+  },
+  {
+   "i": 6,
+   "text": "away",
+   "start": 2.43,
+   "end": 2.77,
+   "matched": true,
+   "src": 7
+  },
+  {
+   "i": 7,
+   "text": "keeps",
+   "start": 2.77,
+   "end": 3.23,
+   "matched": true,
+   "src": 8
+  },
+  {
+   "i": 8,
+   "text": "erupting",
+   "start": 3.23,
+   "end": 3.89,
+   "matched": true,
+   "src": 9
+  },
+  {
+   "i": 9,
+   "text": "like",
+   "start": 3.89,
+   "end": 4.03,
+   "matched": true,
+   "src": 10
+  },
+  {
+   "i": 10,
+   "text": "a",
+   "start": 4.03,
+   "end": 4.17,
+   "matched": true,
+   "src": 11
+  },
+  {
+   "i": 11,
+   "text": "supernova,",
+   "start": 4.17,
+   "end": 4.55,
+   "matched": true,
+   "src": 12
+  },
+  {
+   "i": 12,
+   "text": "and",
+   "start": 4.55,
+   "end": 5.07,
+   "matched": true,
+   "src": 13
+  },
+  {
+   "i": 13,
+   "text": "surviving.",
+   "start": 5.07,
+   "end": 5.83,
+   "matched": true,
+   "src": 14
+  },
+  {
+   "i": 14,
+   "text": "At",
+   "start": 5.99,
+   "end": 6.47,
+   "matched": true,
+   "src": 15
+  },
+  {
+   "i": 15,
+   "text": "least",
+   "start": 6.47,
+   "end": 6.67,
+   "matched": true,
+   "src": 16
+  },
+  {
+   "i": 16,
+   "text": "27",
+   "start": 6.67,
+   "end": 7.21,
+   "matched": true,
+   "src": 17
+  },
+  {
+   "i": 17,
+   "text": "bursts",
+   "start": 7.21,
+   "end": 7.73,
+   "matched": true,
+   "src": 18
+  },
+  {
+   "i": 18,
+   "text": "between",
+   "start": 7.73,
+   "end": 8.17,
+   "matched": true,
+   "src": 19
+  },
+  {
+   "i": 19,
+   "text": "2012",
+   "start": 8.17,
+   "end": 8.63,
+   "matched": true,
+   "src": 20
+  },
+  {
+   "i": 20,
+   "text": "and",
+   "start": 8.63,
+   "end": 9.03,
+   "matched": true,
+   "src": 21
+  },
+  {
+   "i": 21,
+   "text": "2026.",
+   "start": 9.03,
+   "end": 9.97,
+   "matched": true,
+   "src": 22
+  },
+  {
+   "i": 22,
+   "text": "They",
+   "start": 10.01,
+   "end": 10.49,
+   "matched": true,
+   "src": 23
+  },
+  {
+   "i": 23,
+   "text": "call",
+   "start": 10.49,
+   "end": 10.71,
+   "matched": true,
+   "src": 24
+  },
+  {
+   "i": 24,
+   "text": "it",
+   "start": 10.71,
+   "end": 10.89,
+   "matched": true,
+   "src": 25
+  },
+  {
+   "i": 25,
+   "text": "a",
+   "start": 10.89,
+   "end": 11.03,
+   "matched": true,
+   "src": 26
+  },
+  {
+   "i": 26,
+   "text": "supernova",
+   "start": 11.03,
+   "end": 11.49,
+   "matched": true,
+   "src": 27
+  },
+  {
+   "i": 27,
+   "text": "impostor.",
+   "start": 11.49,
+   "end": 12.17,
+   "matched": true,
+   "src": 28
+  },
+  {
+   "i": 28,
+   "text": "Why?",
+   "start": 12.57,
+   "end": 12.93,
+   "matched": true,
+   "src": 29
+  },
+  {
+   "i": 29,
+   "text": "Chandra",
+   "start": 13.17,
+   "end": 13.77,
+   "matched": true,
+   "src": 30
+  },
+  {
+   "i": 30,
+   "text": "caught",
+   "start": 13.77,
+   "end": 13.99,
+   "matched": true,
+   "src": 31
+  },
+  {
+   "i": 31,
+   "text": "it",
+   "start": 13.99,
+   "end": 14.21,
+   "matched": true,
+   "src": 32
+  },
+  {
+   "i": 32,
+   "text": "at",
+   "start": 14.21,
+   "end": 14.35,
+   "matched": true,
+   "src": 33
+  },
+  {
+   "i": 33,
+   "text": "least",
+   "start": 14.35,
+   "end": 14.55,
+   "matched": true,
+   "src": 34
+  },
+  {
+   "i": 34,
+   "text": "100",
+   "start": 14.55,
+   "end": 14.89,
+   "matched": true,
+   "src": 35
+  },
+  {
+   "i": 35,
+   "text": "times",
+   "start": 14.89,
+   "end": 15.45,
+   "matched": true,
+   "src": 36
+  },
+  {
+   "i": 36,
+   "text": "brighter",
+   "start": 15.45,
+   "end": 15.83,
+   "matched": true,
+   "src": 37
+  },
+  {
+   "i": 37,
+   "text": "in",
+   "start": 15.83,
+   "end": 16.03,
+   "matched": true,
+   "src": 38
+  },
+  {
+   "i": 38,
+   "text": "X-rays",
+   "start": 16.03,
+   "end": 16.39,
+   "matched": true,
+   "src": 39
+  },
+  {
+   "i": 39,
+   "text": "than",
+   "start": 16.39,
+   "end": 16.57,
+   "matched": true,
+   "src": 40
+  },
+  {
+   "i": 40,
+   "text": "before",
+   "start": 16.57,
+   "end": 16.95,
+   "matched": true,
+   "src": 41
+  },
+  {
+   "i": 41,
+   "text": "its",
+   "start": 16.95,
+   "end": 17.25,
+   "matched": true,
+   "src": 42
+  },
+  {
+   "i": 42,
+   "text": "outbursts",
+   "start": 17.25,
+   "end": 17.75,
+   "matched": true,
+   "src": 43
+  },
+  {
+   "i": 43,
+   "text": "began.",
+   "start": 17.75,
+   "end": 18.21,
+   "matched": true,
+   "src": 44
+  },
+  {
+   "i": 44,
+   "text": "The",
+   "start": 18.21,
+   "end": 18.63,
+   "matched": true,
+   "src": 45
+  },
+  {
+   "i": 45,
+   "text": "best",
+   "start": 18.63,
+   "end": 18.79,
+   "matched": true,
+   "src": 46
+  },
+  {
+   "i": 46,
+   "text": "explanation:",
+   "start": 18.79,
+   "end": 19.51,
+   "matched": true,
+   "src": 47
+  },
+  {
+   "i": 47,
+   "text": "a",
+   "start": 19.53,
+   "end": 19.97,
+   "matched": true,
+   "src": 48
+  },
+  {
+   "i": 48,
+   "text": "hidden",
+   "start": 19.97,
+   "end": 20.33,
+   "matched": true,
+   "src": 49
+  },
+  {
+   "i": 49,
+   "text": "black",
+   "start": 20.33,
+   "end": 20.67,
+   "matched": true,
+   "src": 50
+  },
+  {
+   "i": 50,
+   "text": "hole",
+   "start": 20.67,
+   "end": 21.03,
+   "matched": true,
+   "src": 51
+  },
+  {
+   "i": 51,
+   "text": "or",
+   "start": 21.03,
+   "end": 21.31,
+   "matched": true,
+   "src": 52
+  },
+  {
+   "i": 52,
+   "text": "neutron",
+   "start": 21.31,
+   "end": 21.61,
+   "matched": true,
+   "src": 53
+  },
+  {
+   "i": 53,
+   "text": "star,",
+   "start": 21.61,
+   "end": 22.11,
+   "matched": true,
+   "src": 54
+  },
+  {
+   "i": 54,
+   "text": "pulling",
+   "start": 22.11,
+   "end": 22.53,
+   "matched": true,
+   "src": 55
+  },
+  {
+   "i": 55,
+   "text": "material",
+   "start": 22.53,
+   "end": 22.81,
+   "matched": true,
+   "src": 56
+  },
+  {
+   "i": 56,
+   "text": "off",
+   "start": 22.81,
+   "end": 23.17,
+   "matched": true,
+   "src": 57
+  },
+  {
+   "i": 57,
+   "text": "it",
+   "start": 23.17,
+   "end": 23.35,
+   "matched": true,
+   "src": 58
+  },
+  {
+   "i": 58,
+   "text": "every",
+   "start": 23.35,
+   "end": 23.59,
+   "matched": true,
+   "src": 59
+  },
+  {
+   "i": 59,
+   "text": "113",
+   "start": 23.59,
+   "end": 24.49,
+   "matched": true,
+   "src": 60
+  },
+  {
+   "i": 60,
+   "text": "days.",
+   "start": 24.49,
+   "end": 25.17,
+   "matched": true,
+   "src": 61
+  },
+  {
+   "i": 61,
+   "text": "It",
+   "start": 25.17,
+   "end": 25.65,
+   "matched": true,
+   "src": 62
+  },
+  {
+   "i": 62,
+   "text": "is",
+   "start": 25.65,
+   "end": 25.77,
+   "matched": true,
+   "src": 63
+  },
+  {
+   "i": 63,
+   "text": "the",
+   "start": 25.77,
+   "end": 25.87,
+   "matched": true,
+   "src": 64
+  },
+  {
+   "i": 64,
+   "text": "first",
+   "start": 25.87,
+   "end": 26.27,
+   "matched": true,
+   "src": 65
+  },
+  {
+   "i": 65,
+   "text": "X-ray",
+   "start": 26.27,
+   "end": 26.71,
+   "matched": true,
+   "src": 66
+  },
+  {
+   "i": 66,
+   "text": "detection",
+   "start": 26.71,
+   "end": 26.93,
+   "matched": true,
+   "src": 67
+  },
+  {
+   "i": 67,
+   "text": "of",
+   "start": 26.93,
+   "end": 27.23,
+   "matched": true,
+   "src": 68
+  },
+  {
+   "i": 68,
+   "text": "this",
+   "start": 27.23,
+   "end": 27.39,
+   "matched": true,
+   "src": 69
+  },
+  {
+   "i": 69,
+   "text": "class",
+   "start": 27.39,
+   "end": 27.61,
+   "matched": true,
+   "src": 70
+  },
+  {
+   "i": 70,
+   "text": "of",
+   "start": 27.61,
+   "end": 27.77,
+   "matched": true,
+   "src": 71
+  },
+  {
+   "i": 71,
+   "text": "erupting",
+   "start": 27.77,
+   "end": 28.07,
+   "matched": true,
+   "src": 72
+  },
+  {
+   "i": 72,
+   "text": "star.",
+   "start": 28.07,
+   "end": 28.41,
+   "matched": true,
+   "src": 73
+  },
+  {
+   "i": 73,
+   "text": "Next:",
+   "start": 28.89,
+   "end": 29.41,
+   "matched": true,
+   "src": 74
+  },
+  {
+   "i": 74,
+   "text": "Voyager",
+   "start": 29.41,
+   "end": 30.07,
+   "matched": true,
+   "src": 75
+  },
+  {
+   "i": 75,
+   "text": "1",
+   "start": 30.07,
+   "end": 30.23,
+   "matched": true,
+   "src": 76
+  },
+  {
+   "i": 76,
+   "text": "reaches",
+   "start": 30.23,
+   "end": 30.53,
+   "matched": true,
+   "src": 77
+  },
+  {
+   "i": 77,
+   "text": "one",
+   "start": 30.53,
+   "end": 30.91,
+   "matched": true,
+   "src": 78
+  },
+  {
+   "i": 78,
+   "text": "light-day",
+   "start": 30.91,
+   "end": 31.47,
+   "matched": true,
+   "src": 79,
+   "phrase": "light day"
+  },
+  {
+   "i": 79,
+   "text": "from",
+   "start": 31.47,
+   "end": 31.69,
+   "matched": true,
+   "src": 81
+  },
+  {
+   "i": 80,
+   "text": "Earth,",
+   "start": 31.69,
+   "end": 32.09,
+   "matched": true,
+   "src": 82
+  },
+  {
+   "i": 81,
+   "text": "Wednesday,",
+   "start": 32.09,
+   "end": 32.53,
+   "matched": true,
+   "src": 83
+  },
+  {
+   "i": 82,
+   "text": "November",
+   "start": 32.53,
+   "end": 32.71,
+   "matched": true,
+   "src": 84
+  },
+  {
+   "i": 83,
+   "text": "18.",
+   "start": 32.71,
+   "end": 33.39,
+   "matched": true,
+   "src": 85
+  },
+  {
+   "i": 84,
+   "text": "Follow",
+   "start": 33.39,
+   "end": 33.81,
+   "matched": true,
+   "src": 86
+  },
+  {
+   "i": 85,
+   "text": "Downlink",
+   "start": 33.81,
+   "end": 34.23,
+   "matched": true,
+   "src": 87,
+   "keep_with_next": true
+  },
+  {
+   "i": 86,
+   "text": "Cat",
+   "start": 34.23,
+   "end": 34.43,
+   "matched": true,
+   "src": 88
+  },
+  {
+   "i": 87,
+   "text": "for",
+   "start": 34.43,
+   "end": 34.59,
+   "matched": true,
+   "src": 89
+  },
+  {
+   "i": 88,
+   "text": "that",
+   "start": 34.59,
+   "end": 34.75,
+   "matched": true,
+   "src": 90
+  },
+  {
+   "i": 89,
+   "text": "milestone.",
+   "start": 34.75,
+   "end": 35.31,
+   "matched": true,
+   "src": 91
+  }
+ ],
+ "names": [
+  "Downlink Cat"
+ ],
+ "interpolated": [],
+ "substituted": [],
+ "warnings": []
+}

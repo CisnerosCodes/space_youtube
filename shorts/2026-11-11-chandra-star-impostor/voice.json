@@ -1,0 +1,149 @@
+{
+ "model": "google/gemini-3.8-flash-tts",
+ "voice": "Puck",
+ "stt_model": "openai/whisper-large-v3",
+ "created": "2026-11-11T16:35:25Z",
+ "seconds": 35.56,
+ "text": "A star about 30 million light-years away keeps erupting like a supernova, and surviving. At least 27 bursts between 2012 and 2026. They call it a supernova impostor. Why? Chandra caught it at least 100 times brighter in X-rays than before its outbursts began. The best explanation: a hidden black hole or neutron star, pulling material off it every 113 days. It is the first X-ray detection of this class of erupting star. Next: Voyager 1 reaches one light-day from Earth, Wednesday, November 18. Follow Downlink Cat for that milestone.",
+ "direction": "You are a young, nerdy science creator in your early twenties, a little scrawny, filming a vertical video for your followers. Talk like a popular creator on TikTok or YouTube Shorts, not a narrator: conversational, a grin in your voice, genuinely hyped. Hit the hook hard, take a tiny beat before each reveal, punch the key words (supernova, surviving, 27, impostor, 100, hidden, 113, first, Voyager), speed up through setup lines and slow down on the payoff. Energy: high. A little more cat: a playful purr on a few r sounds and a small 'mrr'-like rise on the question line. Still natural, never a meow.",
+ "usd": 0.016859,
+ "cost": {
+  "tts_usd": 0.016294,
+  "stt_usd": 0.000565,
+  "total_usd": 0.016859,
+  "estimated": false,
+  "note": "tts cost from /generation (retried while 404); estimated at 0.000227 USD per audio second when it never answered"
+ },
+ "takes_tried": 2,
+ "chosen_take": 2,
+ "verified": true,
+ "diff": {
+  "ok": true,
+  "counts": {
+   "content": 0,
+   "spelling": 0,
+   "minor": 0,
+   "joined": 1
+  },
+  "script_tokens": 93,
+  "heard_tokens": 93,
+  "differences": [],
+  "joined": [
+   {
+    "script": "impostor.",
+    "heard": "imposter.",
+    "script_index": [
+     27
+    ],
+    "heard_index": [
+     28
+    ],
+    "kind": "joined"
+   }
+  ]
+ },
+ "gaps": [],
+ "takes": [
+  {
+   "take": 1,
+   "file": "work/voice/take1.mp3",
+   "seconds": 36.2,
+   "generation_id": "gen-tts-1794414884-jC4zH4mkt8lgqIntIiUW",
+   "stt_usd": 0.000298,
+   "gaps": [
+    {
+     "from": 27.17,
+     "to": 30.09,
+     "clip": "take1.gap_27.17.mp3",
+     "clip_text": "ray detection of this class of erupting star.  Next, voiceover.",
+     "inserted": "of this class of erupting star. Next, voiceover.",
+     "kind": "dropped words"
+    }
+   ],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 2,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 1
+    },
+    "script_tokens": 93,
+    "heard_tokens": 94,
+    "differences": [
+     {
+      "script": "outbursts",
+      "heard": "outburst",
+      "script_index": [
+       42
+      ],
+      "heard_index": [
+       44
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "",
+      "heard": "voiceover.",
+      "script_index": null,
+      "heard_index": [
+       77
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": [
+     {
+      "script": "impostor.",
+      "heard": "imposter.",
+      "script_index": [
+       27
+      ],
+      "heard_index": [
+       28
+      ],
+      "kind": "joined"
+     }
+    ]
+   },
+   "tts_usd": 0.0082235,
+   "tts_usd_estimated": false
+  },
+  {
+   "take": 2,
+   "file": "work/voice/take2.mp3",
+   "seconds": 35.56,
+   "generation_id": "gen-tts-1794414898-p87ZPszcU0oPpqKt2BQH",
+   "stt_usd": 0.000267,
+   "gaps": [],
+   "diff": {
+    "ok": true,
+    "counts": {
+     "content": 0,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 1
+    },
+    "script_tokens": 93,
+    "heard_tokens": 93,
+    "differences": [],
+    "joined": [
+     {
+      "script": "impostor.",
+      "heard": "imposter.",
+      "script_index": [
+       27
+      ],
+      "heard_index": [
+       28
+      ],
+      "kind": "joined"
+     }
+    ]
+   },
+   "tts_usd": 0.0080705,
+   "tts_usd_estimated": false
+  }
+ ],
+ "elapsed_s": 41.1
+}

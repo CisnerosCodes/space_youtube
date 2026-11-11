@@ -1,0 +1,186 @@
+[
+ {
+  "line": "1",
+  "claim": "A star about 30 million light-years away",
+  "quote": "The volatile star, known as AT 2016blu, is in the spiral galaxy NGC 4559, located about 30 million light-years from Earth.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "1",
+  "claim": "It keeps erupting like a supernova, and surviving",
+  "quote": "This star’s behavior was confusing at first because it kept acting like a supernova, but clearly it’s not because it keeps surviving these outbursts about three times a year",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "1",
+  "claim": "(same)",
+  "quote": "The spikes in brightness are so extreme that they resemble supernova explosions",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "2",
+  "claim": "At least 27 bursts between 2012 and 2026",
+  "quote": "Between 2012 and 2026, astronomers detected at least 27 bursts of optical light",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "3",
+  "claim": "They call it a supernova impostor",
+  "quote": "AT 2016blu is also referred to as a “supernova impostor.”",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "4",
+  "claim": "Chandra caught it at least 100 times brighter in X-rays than before its outbursts began",
+  "quote": "Chandra data from March 2026 revealed that AT 2016blu was at least 100 times brighter in X-rays than in Chandra data from 2001 to 2002, which is before the outbursts began.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "4",
+  "claim": "Chandra caught it during an outburst",
+  "quote": "When these observations showed that the star was in outburst in early 2026, Chandra observations were triggered and obtained in March 2026",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "5",
+  "claim": "The best explanation: a black hole or neutron star",
+  "quote": "The best explanation for this is that material from the star is falling onto a neutron star or black hole",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "5",
+  "claim": "A hidden partner pulling material off it every 113 days",
+  "quote": "a previously hidden companion object that keeps pulling material away from the massive star every 113 days as they orbit one another",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "5",
+  "claim": "The partner is a black hole or a neutron star",
+  "quote": "This partner is either a stellar-mass black hole, or the dense collapsed core of a massive star called a neutron star.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "6",
+  "claim": "First X-ray detection of this class of erupting star",
+  "quote": "This is the first X-ray detection of one of this class of erupting stars.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "7",
+  "claim": "Voyager 1 reaches one light-day from Earth, Wednesday, November 18",
+  "quote": "NASA’s Voyager 1 on Wednesday, Nov. 18 will have traveled one light-day from Earth",
+  "url": "https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+  "match": true,
+  "page_file": "source2.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "NEXT card fact: one light-day is more than 16 billion miles",
+  "quote": "which is more than 16 billion miles (25.9 billion kilometers)",
+  "url": "https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+  "match": true,
+  "page_file": "source2.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "NEXT card fact: light from Earth takes 24 hours to reach Voyager 1",
+  "quote": "any light from Earth would take 24 hours to reach the spacecraft",
+  "url": "https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities",
+  "match": true,
+  "page_file": "source2.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The galaxy photo is a Chandra X-ray and SDSS optical composite of NGC 4559",
+  "quote": "A composite NASA Chandra X-ray and Sloan Digital Sky Survey (SDSS) optical image of the galaxy NGC 4559",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The ring marks the small group of pink and blue dots near the frame center, where AT 2016blu is",
+  "quote": "Sitting near the outer edge of the dense spiral, near the center of the frame, is a small group of pink and blue dots.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "(same)",
+  "quote": "The smallest pink dot in the square is AT 2016blu",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "Galaxy photo credit",
+  "quote": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al.; Optical: SDSS; Image Processing: NASA/CXC/SAO/P. Edmonds",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The four-panel image shows AT 2016blu quiet and in outburst (optical, top) and Chandra X-ray before and during (bottom)",
+  "quote": "Images showing AT 2016blu in outburst and quiescence.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "Four-panel X-ray, before: Chandra data from 2001 and 2002 (label printed on the image: \"Chandra X-ray: 2001 and 2002\")",
+  "quote": "Chandra X-ray data obtained in 2001 and 2002",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "Four-panel X-ray, during: Chandra data from March 24 to 27, 2026 (label printed on the image: \"Chandra X-ray: March 24-27, 2026\")",
+  "quote": "the bottom-right image shows Chandra data obtained between March 24 and March 27, 2026",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "Four-panel credit",
+  "quote": "X-ray: NASA/CXC/Univ. of Virgina/M. Aghakhanloo et al; Optical: NSF/KAIT",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ },
+ {
+  "line": "visual",
+  "claim": "The star is at least 33 times the mass of the Sun (chip)",
+  "quote": "Astronomers estimate the mass of this star is at least 33 times that of the Sun.",
+  "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+  "match": true,
+  "page_file": "source1.txt"
+ }
+]

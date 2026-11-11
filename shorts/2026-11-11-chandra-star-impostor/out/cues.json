@@ -1,0 +1,110 @@
+[
+ {
+  "frame": 45,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "Night Shift enters"
+ },
+ {
+  "frame": 97,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into erupt"
+ },
+ {
+  "frame": 152,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 180,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into count"
+ },
+ {
+  "frame": 200,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 232,
+  "fps": 30,
+  "type": "impact",
+  "note": "smash cut into quietloud"
+ },
+ {
+  "frame": 296,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "impostor band wipes in"
+ },
+ {
+  "frame": 377,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into why"
+ },
+ {
+  "frame": 437,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 561,
+  "fps": 30,
+  "type": "reveal",
+  "note": "iris into partner"
+ },
+ {
+  "frame": 599,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 708,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 755,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into first"
+ },
+ {
+  "frame": 776,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 861,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "nextband band wipes in"
+ },
+ {
+  "frame": 981,
+  "fps": 30,
+  "type": "number_slam",
+  "note": "impact frame"
+ },
+ {
+  "frame": 1002,
+  "fps": 30,
+  "type": "scene_move",
+  "note": "whip into end"
+ },
+ {
+  "frame": 1061,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "wordmark echo mark, sonic logo"
+ }
+]
