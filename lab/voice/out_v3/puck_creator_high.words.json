@@ -1,0 +1,522 @@
+{
+ "audio": "puck_creator_high.mp3",
+ "duration": 37.16,
+ "text": "Mars has a moon that is falling slowly. Phobos drops about six feet closer to Mars every hundred years. In 50 million years, it either crashes into Mars or shatters into a ring. And on Monday, Japan launches a mission to go grab a piece of it. It is called MMX. Land on Phobos, scoop up a sample, fly it home. No mission has ever brought back a sample from Mars or its moons. Why bother? Because nobody knows where these moons came from. could finally tell us. Liftoff is Monday on Japan's H-3 rocket. Follow and we will show you the launch.",
+ "words": [
+  {
+   "w": "Mars",
+   "start": 0.36,
+   "end": 0.681
+  },
+  {
+   "w": "has",
+   "start": 0.781,
+   "end": 0.901
+  },
+  {
+   "w": "a",
+   "start": 0.961,
+   "end": 1.001
+  },
+  {
+   "w": "moon",
+   "start": 1.041,
+   "end": 1.261
+  },
+  {
+   "w": "that",
+   "start": 1.341,
+   "end": 1.462
+  },
+  {
+   "w": "is",
+   "start": 1.582,
+   "end": 1.642
+  },
+  {
+   "w": "falling",
+   "start": 2.022,
+   "end": 2.423
+  },
+  {
+   "w": "slowly.",
+   "start": 3.023,
+   "end": 3.364
+  },
+  {
+   "w": "Phobos",
+   "start": 4.004,
+   "end": 4.405
+  },
+  {
+   "w": "drops",
+   "start": 4.425,
+   "end": 4.685
+  },
+  {
+   "w": "about",
+   "start": 4.705,
+   "end": 4.905
+  },
+  {
+   "w": "six",
+   "start": 5.025,
+   "end": 5.186
+  },
+  {
+   "w": "feet",
+   "start": 5.346,
+   "end": 5.526
+  },
+  {
+   "w": "closer",
+   "start": 5.606,
+   "end": 5.866
+  },
+  {
+   "w": "to",
+   "start": 5.886,
+   "end": 5.986
+  },
+  {
+   "w": "Mars",
+   "start": 6.006,
+   "end": 6.227
+  },
+  {
+   "w": "every",
+   "start": 6.447,
+   "end": 6.607
+  },
+  {
+   "w": "hundred",
+   "start": 6.747,
+   "end": 7.068
+  },
+  {
+   "w": "years.",
+   "start": 7.148,
+   "end": 7.448
+  },
+  {
+   "w": "In",
+   "start": 8.149,
+   "end": 8.209
+  },
+  {
+   "w": "50",
+   "start": 8.329,
+   "end": 8.569
+  },
+  {
+   "w": "million",
+   "start": 8.609,
+   "end": 8.89
+  },
+  {
+   "w": "years,",
+   "start": 8.91,
+   "end": 9.17
+  },
+  {
+   "w": "it",
+   "start": 9.33,
+   "end": 9.37
+  },
+  {
+   "w": "either",
+   "start": 9.51,
+   "end": 9.71
+  },
+  {
+   "w": "crashes",
+   "start": 9.831,
+   "end": 10.331
+  },
+  {
+   "w": "into",
+   "start": 10.351,
+   "end": 10.471
+  },
+  {
+   "w": "Mars",
+   "start": 10.511,
+   "end": 10.772
+  },
+  {
+   "w": "or",
+   "start": 11.292,
+   "end": 11.392
+  },
+  {
+   "w": "shatters",
+   "start": 11.893,
+   "end": 12.293
+  },
+  {
+   "w": "into",
+   "start": 12.333,
+   "end": 12.493
+  },
+  {
+   "w": "a",
+   "start": 12.553,
+   "end": 12.674
+  },
+  {
+   "w": "ring.",
+   "start": 12.814,
+   "end": 13.034
+  },
+  {
+   "w": "And",
+   "start": 13.855,
+   "end": 13.915
+  },
+  {
+   "w": "on",
+   "start": 13.975,
+   "end": 14.015
+  },
+  {
+   "w": "Monday,",
+   "start": 14.095,
+   "end": 14.395
+  },
+  {
+   "w": "Japan",
+   "start": 14.616,
+   "end": 14.896
+  },
+  {
+   "w": "launches",
+   "start": 14.956,
+   "end": 15.236
+  },
+  {
+   "w": "a",
+   "start": 15.236,
+   "end": 15.276
+  },
+  {
+   "w": "mission",
+   "start": 15.296,
+   "end": 15.517
+  },
+  {
+   "w": "to",
+   "start": 15.577,
+   "end": 15.657
+  },
+  {
+   "w": "go",
+   "start": 15.717,
+   "end": 15.817
+  },
+  {
+   "w": "grab",
+   "start": 15.897,
+   "end": 16.137
+  },
+  {
+   "w": "a",
+   "start": 16.177,
+   "end": 16.217
+  },
+  {
+   "w": "piece",
+   "start": 16.358,
+   "end": 16.598
+  },
+  {
+   "w": "of",
+   "start": 16.658,
+   "end": 16.698
+  },
+  {
+   "w": "it.",
+   "start": 16.778,
+   "end": 16.818
+  },
+  {
+   "w": "It",
+   "start": 17.359,
+   "end": 17.399
+  },
+  {
+   "w": "is",
+   "start": 17.459,
+   "end": 17.519
+  },
+  {
+   "w": "called",
+   "start": 17.559,
+   "end": 17.839
+  },
+  {
+   "w": "MMX.",
+   "start": 18.039,
+   "end": 18.34
+  },
+  {
+   "w": "Land",
+   "start": 18.94,
+   "end": 19.121
+  },
+  {
+   "w": "on",
+   "start": 19.181,
+   "end": 19.241
+  },
+  {
+   "w": "Phobos,",
+   "start": 19.301,
+   "end": 19.681
+  },
+  {
+   "w": "scoop",
+   "start": 19.901,
+   "end": 20.162
+  },
+  {
+   "w": "up",
+   "start": 20.222,
+   "end": 20.262
+  },
+  {
+   "w": "a",
+   "start": 20.322,
+   "end": 20.342
+  },
+  {
+   "w": "sample,",
+   "start": 20.382,
+   "end": 20.722
+  },
+  {
+   "w": "fly",
+   "start": 20.963,
+   "end": 21.163
+  },
+  {
+   "w": "it",
+   "start": 21.243,
+   "end": 21.283
+  },
+  {
+   "w": "home.",
+   "start": 21.323,
+   "end": 21.483
+  },
+  {
+   "w": "No",
+   "start": 22.204,
+   "end": 22.304
+  },
+  {
+   "w": "mission",
+   "start": 22.384,
+   "end": 22.604
+  },
+  {
+   "w": "has",
+   "start": 22.664,
+   "end": 22.744
+  },
+  {
+   "w": "ever",
+   "start": 23.005,
+   "end": 23.165
+  },
+  {
+   "w": "brought",
+   "start": 23.225,
+   "end": 23.445
+  },
+  {
+   "w": "back",
+   "start": 23.445,
+   "end": 23.585
+  },
+  {
+   "w": "a",
+   "start": 23.645,
+   "end": 23.685
+  },
+  {
+   "w": "sample",
+   "start": 23.726,
+   "end": 23.966
+  },
+  {
+   "w": "from",
+   "start": 24.026,
+   "end": 24.126
+  },
+  {
+   "w": "Mars",
+   "start": 24.166,
+   "end": 24.386
+  },
+  {
+   "w": "or",
+   "start": 24.666,
+   "end": 24.747
+  },
+  {
+   "w": "its",
+   "start": 24.767,
+   "end": 24.967
+  },
+  {
+   "w": "moons.",
+   "start": 25.027,
+   "end": 25.287
+  },
+  {
+   "w": "Why",
+   "start": 26.228,
+   "end": 26.308
+  },
+  {
+   "w": "bother?",
+   "start": 26.368,
+   "end": 26.669
+  },
+  {
+   "w": "Because",
+   "start": 27.129,
+   "end": 27.43
+  },
+  {
+   "w": "nobody",
+   "start": 27.51,
+   "end": 27.81
+  },
+  {
+   "w": "knows",
+   "start": 27.89,
+   "end": 28.11
+  },
+  {
+   "w": "where",
+   "start": 28.21,
+   "end": 28.411
+  },
+  {
+   "w": "these",
+   "start": 28.431,
+   "end": 28.631
+  },
+  {
+   "w": "moons",
+   "start": 28.651,
+   "end": 28.851
+  },
+  {
+   "w": "came",
+   "start": 28.891,
+   "end": 29.111
+  },
+  {
+   "w": "from.",
+   "start": 29.211,
+   "end": 29.412
+  },
+  {
+   "w": "could",
+   "start": 30.433,
+   "end": 30.553
+  },
+  {
+   "w": "finally",
+   "start": 30.713,
+   "end": 31.174
+  },
+  {
+   "w": "tell",
+   "start": 31.294,
+   "end": 31.474
+  },
+  {
+   "w": "us.",
+   "start": 31.574,
+   "end": 31.654
+  },
+  {
+   "w": "Liftoff",
+   "start": 32.495,
+   "end": 32.895
+  },
+  {
+   "w": "is",
+   "start": 32.955,
+   "end": 33.016
+  },
+  {
+   "w": "Monday",
+   "start": 33.116,
+   "end": 33.396
+  },
+  {
+   "w": "on",
+   "start": 33.416,
+   "end": 33.616
+  },
+  {
+   "w": "Japan's",
+   "start": 33.636,
+   "end": 33.977
+  },
+  {
+   "w": "H-3",
+   "start": 34.257,
+   "end": 34.517
+  },
+  {
+   "w": "rocket.",
+   "start": 34.557,
+   "end": 34.858
+  },
+  {
+   "w": "Follow",
+   "start": 35.238,
+   "end": 35.518
+  },
+  {
+   "w": "and",
+   "start": 35.558,
+   "end": 35.839
+  },
+  {
+   "w": "we",
+   "start": 35.879,
+   "end": 35.919
+  },
+  {
+   "w": "will",
+   "start": 35.959,
+   "end": 36.079
+  },
+  {
+   "w": "show",
+   "start": 36.159,
+   "end": 36.299
+  },
+  {
+   "w": "you",
+   "start": 36.359,
+   "end": 36.439
+  },
+  {
+   "w": "the",
+   "start": 36.479,
+   "end": 36.539
+  },
+  {
+   "w": "launch.",
+   "start": 36.579,
+   "end": 36.82
+  }
+ ]
+}

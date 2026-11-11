@@ -1,0 +1,125 @@
+[
+ {
+  "frame": 3,
+  "fps": 30,
+  "t": 0.1,
+  "type": "number_slam",
+  "note": "hook: 1/1000 slams in"
+ },
+ {
+  "frame": 38,
+  "fps": 30,
+  "t": 1.267,
+  "type": "impact",
+  "note": "hook: pulse on burst",
+  "sfx": "tick"
+ },
+ {
+  "frame": 84,
+  "fps": 30,
+  "t": 2.8,
+  "type": "chip_in",
+  "note": "signal delay chip"
+ },
+ {
+  "frame": 99,
+  "fps": 30,
+  "t": 3.3,
+  "type": "echo_land",
+  "note": "chip echo ring lands",
+  "gain_db": -2
+ },
+ {
+  "frame": 117,
+  "fps": 30,
+  "t": 3.9,
+  "type": "number_slam",
+  "note": "travel: 3 counts up",
+  "gain_db": -2
+ },
+ {
+  "frame": 156,
+  "fps": 30,
+  "t": 5.2,
+  "type": "impact",
+  "note": "travel: pulse on earth",
+  "sfx": "tick"
+ },
+ {
+  "frame": 166,
+  "fps": 30,
+  "t": 5.533,
+  "type": "scene_move",
+  "note": "travel irises into the dot, webb_field opens",
+  "gain_db": -1
+ },
+ {
+  "frame": 227,
+  "fps": 30,
+  "t": 7.567,
+  "type": "impact",
+  "note": "webb_field: a ring marks the subject",
+  "sfx": "tick"
+ },
+ {
+  "frame": 390,
+  "fps": 30,
+  "t": 13,
+  "type": "cat_chirp",
+  "note": "the cat reacts (what)"
+ },
+ {
+  "frame": 483,
+  "fps": 30,
+  "t": 16.1,
+  "type": "scene_move",
+  "note": "ground irises into the dot, webb_galaxy opens",
+  "gain_db": -1
+ },
+ {
+  "frame": 536,
+  "fps": 30,
+  "t": 17.867,
+  "type": "scene_move",
+  "note": "webb_galaxy shrinks into the dot, dwarf opens",
+  "gain_db": -1
+ },
+ {
+  "frame": 563,
+  "fps": 30,
+  "t": 18.767,
+  "type": "number_slam",
+  "note": "dwarf: 1,000x counts up",
+  "gain_db": -2
+ },
+ {
+  "frame": 644,
+  "fps": 30,
+  "t": 21.467,
+  "type": "hard_cut",
+  "note": "dwarf leaves up, merger arrives",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 721,
+  "fps": 30,
+  "t": 24.033,
+  "type": "impact",
+  "note": "merger: fact line 3 slams in",
+  "gain_db": -2
+ },
+ {
+  "frame": 770,
+  "fps": 30,
+  "t": 25.667,
+  "type": "next_card_in",
+  "note": "next: the NEXT card"
+ },
+ {
+  "frame": 903,
+  "fps": 30,
+  "t": 30.1,
+  "type": "wordmark_echo",
+  "note": "wordmark dot, then its echo ring 12 frames later (sonic logo)"
+ }
+]

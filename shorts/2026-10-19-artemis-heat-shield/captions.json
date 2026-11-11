@@ -1,0 +1,727 @@
+{
+ "generated": "2026-10-19",
+ "aligner": "pipeline/engine/align_captions.mjs",
+ "script": "script.md",
+ "timing": "voice.words.json",
+ "audio": "take2.mp3",
+ "audioPath": "take2.mp3",
+ "duration": 32.4,
+ "transcriptDuration": 32.4,
+ "words": [
+  {
+   "i": 0,
+   "text": "Orion",
+   "start": 0.18,
+   "end": 0.46,
+   "matched": true,
+   "src": 0
+  },
+  {
+   "i": 1,
+   "text": "came",
+   "start": 0.46,
+   "end": 0.78,
+   "matched": true,
+   "src": 1
+  },
+  {
+   "i": 2,
+   "text": "home",
+   "start": 0.78,
+   "end": 1.1,
+   "matched": true,
+   "src": 2
+  },
+  {
+   "i": 3,
+   "text": "at",
+   "start": 1.1,
+   "end": 1.28,
+   "matched": true,
+   "src": 3
+  },
+  {
+   "i": 4,
+   "text": "39",
+   "start": 1.28,
+   "end": 1.72,
+   "matched": true,
+   "src": 4
+  },
+  {
+   "i": 5,
+   "text": "times",
+   "start": 1.72,
+   "end": 2.16,
+   "matched": true,
+   "src": 5
+  },
+  {
+   "i": 6,
+   "text": "the",
+   "start": 2.16,
+   "end": 2.4,
+   "matched": true,
+   "src": 6
+  },
+  {
+   "i": 7,
+   "text": "speed",
+   "start": 2.4,
+   "end": 2.68,
+   "matched": true,
+   "src": 7
+  },
+  {
+   "i": 8,
+   "text": "of",
+   "start": 2.68,
+   "end": 2.8,
+   "matched": true,
+   "src": 8
+  },
+  {
+   "i": 9,
+   "text": "sound,",
+   "start": 2.8,
+   "end": 3.2,
+   "matched": true,
+   "src": 9
+  },
+  {
+   "i": 10,
+   "text": "and",
+   "start": 3.2,
+   "end": 3.46,
+   "matched": true,
+   "src": 10
+  },
+  {
+   "i": 11,
+   "text": "the",
+   "start": 3.46,
+   "end": 3.54,
+   "matched": true,
+   "src": 11
+  },
+  {
+   "i": 12,
+   "text": "cabin",
+   "start": 3.54,
+   "end": 3.9,
+   "matched": true,
+   "src": 12
+  },
+  {
+   "i": 13,
+   "text": "stayed",
+   "start": 3.9,
+   "end": 4.22,
+   "matched": true,
+   "src": 13
+  },
+  {
+   "i": 14,
+   "text": "in",
+   "start": 4.22,
+   "end": 4.42,
+   "matched": true,
+   "src": 14
+  },
+  {
+   "i": 15,
+   "text": "the",
+   "start": 4.42,
+   "end": 4.46,
+   "matched": true,
+   "src": 15
+  },
+  {
+   "i": 16,
+   "text": "mid-70s.",
+   "start": 4.46,
+   "end": 5.22,
+   "matched": true,
+   "src": 16
+  },
+  {
+   "i": 17,
+   "text": "Outside,",
+   "start": 5.44,
+   "end": 6.14,
+   "matched": true,
+   "src": 17
+  },
+  {
+   "i": 18,
+   "text": "it",
+   "start": 6.14,
+   "end": 6.26,
+   "matched": true,
+   "src": 18
+  },
+  {
+   "i": 19,
+   "text": "passed",
+   "start": 6.26,
+   "end": 6.48,
+   "matched": true,
+   "src": 19
+  },
+  {
+   "i": 20,
+   "text": "4,000",
+   "start": 6.48,
+   "end": 7.34,
+   "matched": true,
+   "src": 20
+  },
+  {
+   "i": 21,
+   "text": "degrees",
+   "start": 7.34,
+   "end": 7.52,
+   "matched": true,
+   "src": 21
+  },
+  {
+   "i": 22,
+   "text": "Fahrenheit.",
+   "start": 7.52,
+   "end": 8.12,
+   "matched": true,
+   "src": 22
+  },
+  {
+   "i": 23,
+   "text": "The",
+   "start": 8.67,
+   "end": 8.81,
+   "matched": true,
+   "src": 23
+  },
+  {
+   "i": 24,
+   "text": "heat",
+   "start": 8.81,
+   "end": 8.99,
+   "matched": true,
+   "src": 24
+  },
+  {
+   "i": 25,
+   "text": "shield",
+   "start": 8.99,
+   "end": 9.23,
+   "matched": true,
+   "src": 25
+  },
+  {
+   "i": 26,
+   "text": "took",
+   "start": 9.23,
+   "end": 9.73,
+   "matched": true,
+   "src": 26
+  },
+  {
+   "i": 27,
+   "text": "it:",
+   "start": 9.73,
+   "end": 10.07,
+   "matched": true,
+   "src": 27
+  },
+  {
+   "i": 28,
+   "text": "186",
+   "start": 10.68,
+   "end": 11.15,
+   "matched": true,
+   "src": 28
+  },
+  {
+   "i": 29,
+   "text": "blocks",
+   "start": 11.15,
+   "end": 11.49,
+   "matched": true,
+   "src": 29
+  },
+  {
+   "i": 30,
+   "text": "of",
+   "start": 11.49,
+   "end": 11.79,
+   "matched": true,
+   "src": 30
+  },
+  {
+   "i": 31,
+   "text": "Avcoat.",
+   "start": 11.79,
+   "end": 12.39,
+   "matched": true,
+   "src": 31
+  },
+  {
+   "i": 32,
+   "text": "After",
+   "start": 12.93,
+   "end": 13.19,
+   "matched": true,
+   "src": 32
+  },
+  {
+   "i": 33,
+   "text": "Artemis",
+   "start": 13.19,
+   "end": 13.59,
+   "matched": true,
+   "src": 33,
+   "keep_with_next": true
+  },
+  {
+   "i": 34,
+   "text": "I,",
+   "start": 13.59,
+   "end": 13.91,
+   "matched": true,
+   "src": 34
+  },
+  {
+   "i": 35,
+   "text": "NASA",
+   "start": 13.91,
+   "end": 14.17,
+   "matched": true,
+   "src": 35
+  },
+  {
+   "i": 36,
+   "text": "changed",
+   "start": 14.17,
+   "end": 14.45,
+   "matched": true,
+   "src": 36
+  },
+  {
+   "i": 37,
+   "text": "the",
+   "start": 14.45,
+   "end": 14.69,
+   "matched": true,
+   "src": 37
+  },
+  {
+   "i": 38,
+   "text": "path",
+   "start": 14.69,
+   "end": 14.83,
+   "matched": true,
+   "src": 38
+  },
+  {
+   "i": 39,
+   "text": "home.",
+   "start": 14.83,
+   "end": 15.29,
+   "matched": true,
+   "src": 39
+  },
+  {
+   "i": 40,
+   "text": "How?",
+   "start": 15.29,
+   "end": 15.99,
+   "matched": true,
+   "src": 40
+  },
+  {
+   "i": 41,
+   "text": "It",
+   "start": 15.99,
+   "end": 16.39,
+   "matched": true,
+   "src": 41
+  },
+  {
+   "i": 42,
+   "text": "capped",
+   "start": 16.39,
+   "end": 16.77,
+   "matched": true,
+   "src": 42
+  },
+  {
+   "i": 43,
+   "text": "how",
+   "start": 16.77,
+   "end": 16.89,
+   "matched": true,
+   "src": 43
+  },
+  {
+   "i": 44,
+   "text": "far",
+   "start": 16.89,
+   "end": 17.19,
+   "matched": true,
+   "src": 44
+  },
+  {
+   "i": 45,
+   "text": "Orion",
+   "start": 17.19,
+   "end": 17.45,
+   "matched": true,
+   "src": 45
+  },
+  {
+   "i": 46,
+   "text": "could",
+   "start": 17.45,
+   "end": 17.65,
+   "matched": true,
+   "src": 46
+  },
+  {
+   "i": 47,
+   "text": "fly",
+   "start": 17.65,
+   "end": 17.87,
+   "matched": true,
+   "src": 47
+  },
+  {
+   "i": 48,
+   "text": "through",
+   "start": 17.87,
+   "end": 18.19,
+   "matched": true,
+   "src": 48
+  },
+  {
+   "i": 49,
+   "text": "the",
+   "start": 18.19,
+   "end": 18.37,
+   "matched": true,
+   "src": 49
+  },
+  {
+   "i": 50,
+   "text": "atmosphere,",
+   "start": 18.37,
+   "end": 18.93,
+   "matched": true,
+   "src": 50
+  },
+  {
+   "i": 51,
+   "text": "so",
+   "start": 18.93,
+   "end": 19.29,
+   "matched": true,
+   "src": 51
+  },
+  {
+   "i": 52,
+   "text": "less",
+   "start": 19.29,
+   "end": 19.67,
+   "matched": true,
+   "src": 52
+  },
+  {
+   "i": 53,
+   "text": "time",
+   "start": 19.67,
+   "end": 19.89,
+   "matched": true,
+   "src": 53
+  },
+  {
+   "i": 54,
+   "text": "in",
+   "start": 19.89,
+   "end": 20.07,
+   "matched": true,
+   "src": 54
+  },
+  {
+   "i": 55,
+   "text": "the",
+   "start": 20.07,
+   "end": 20.13,
+   "matched": true,
+   "src": 55
+  },
+  {
+   "i": 56,
+   "text": "temperature",
+   "start": 20.13,
+   "end": 20.41,
+   "matched": true,
+   "src": 56
+  },
+  {
+   "i": 57,
+   "text": "range",
+   "start": 20.41,
+   "end": 20.71,
+   "matched": true,
+   "src": 57
+  },
+  {
+   "i": 58,
+   "text": "that",
+   "start": 20.71,
+   "end": 20.93,
+   "matched": true,
+   "src": 58
+  },
+  {
+   "i": 59,
+   "text": "damaged",
+   "start": 20.93,
+   "end": 21.27,
+   "matched": true,
+   "src": 59
+  },
+  {
+   "i": 60,
+   "text": "Artemis",
+   "start": 21.27,
+   "end": 21.73,
+   "matched": true,
+   "src": 60,
+   "keep_with_next": true
+  },
+  {
+   "i": 61,
+   "text": "I.",
+   "start": 21.73,
+   "end": 22.07,
+   "matched": true,
+   "src": 61
+  },
+  {
+   "i": 62,
+   "text": "The",
+   "start": 22.07,
+   "end": 22.49,
+   "matched": true,
+   "src": 62
+  },
+  {
+   "i": 63,
+   "text": "result:",
+   "start": 22.49,
+   "end": 22.93,
+   "matched": true,
+   "src": 63
+  },
+  {
+   "i": 64,
+   "text": "nine",
+   "start": 22.93,
+   "end": 23.47,
+   "matched": true,
+   "src": 64
+  },
+  {
+   "i": 65,
+   "text": "spots",
+   "start": 23.47,
+   "end": 23.81,
+   "matched": true,
+   "src": 65
+  },
+  {
+   "i": 66,
+   "text": "of",
+   "start": 23.81,
+   "end": 24.09,
+   "matched": true,
+   "src": 66
+  },
+  {
+   "i": 67,
+   "text": "char",
+   "start": 24.09,
+   "end": 24.25,
+   "matched": true,
+   "src": 67
+  },
+  {
+   "i": 68,
+   "text": "loss.",
+   "start": 24.25,
+   "end": 24.69,
+   "matched": true,
+   "src": 68
+  },
+  {
+   "i": 69,
+   "text": "Artemis",
+   "start": 24.69,
+   "end": 25.17,
+   "matched": true,
+   "src": 69
+  },
+  {
+   "i": 70,
+   "text": "I",
+   "start": 25.17,
+   "end": 25.33,
+   "matched": true,
+   "src": 70
+  },
+  {
+   "i": 71,
+   "text": "had",
+   "start": 25.33,
+   "end": 25.63,
+   "matched": true,
+   "src": 71
+  },
+  {
+   "i": 72,
+   "text": "103.",
+   "start": 25.63,
+   "end": 26.41,
+   "matched": true,
+   "src": 72
+  },
+  {
+   "i": 73,
+   "text": "NASA",
+   "start": 27.05,
+   "end": 27.61,
+   "matched": true,
+   "src": 73
+  },
+  {
+   "i": 74,
+   "text": "updates",
+   "start": 27.61,
+   "end": 27.93,
+   "matched": true,
+   "src": 74
+  },
+  {
+   "i": 75,
+   "text": "its",
+   "start": 27.93,
+   "end": 28.19,
+   "matched": true,
+   "src": 75
+  },
+  {
+   "i": 76,
+   "text": "Moon",
+   "start": 28.19,
+   "end": 28.37,
+   "matched": true,
+   "src": 76
+  },
+  {
+   "i": 77,
+   "text": "plans",
+   "start": 28.37,
+   "end": 28.61,
+   "matched": true,
+   "src": 77
+  },
+  {
+   "i": 78,
+   "text": "on",
+   "start": 28.61,
+   "end": 28.89,
+   "matched": true,
+   "src": 78
+  },
+  {
+   "i": 79,
+   "text": "Friday,",
+   "start": 28.89,
+   "end": 29.33,
+   "matched": true,
+   "src": 79
+  },
+  {
+   "i": 80,
+   "text": "October",
+   "start": 29.33,
+   "end": 29.55,
+   "matched": true,
+   "src": 80
+  },
+  {
+   "i": 81,
+   "text": "23.",
+   "start": 29.55,
+   "end": 30.11,
+   "matched": true,
+   "src": 81
+  },
+  {
+   "i": 82,
+   "text": "Follow",
+   "start": 30.35,
+   "end": 30.79,
+   "matched": true,
+   "src": 82
+  },
+  {
+   "i": 83,
+   "text": "Downlink",
+   "start": 30.79,
+   "end": 31.21,
+   "matched": true,
+   "src": 83,
+   "keep_with_next": true
+  },
+  {
+   "i": 84,
+   "text": "Cat",
+   "start": 31.21,
+   "end": 31.41,
+   "matched": true,
+   "src": 84
+  },
+  {
+   "i": 85,
+   "text": "for",
+   "start": 31.41,
+   "end": 31.61,
+   "matched": true,
+   "src": 85
+  },
+  {
+   "i": 86,
+   "text": "the",
+   "start": 31.61,
+   "end": 31.73,
+   "matched": true,
+   "src": 86
+  },
+  {
+   "i": 87,
+   "text": "update.",
+   "start": 31.73,
+   "end": 32.17,
+   "matched": true,
+   "src": 87
+  }
+ ],
+ "names": [
+  "Artemis I",
+  "Artemis I",
+  "Downlink Cat"
+ ],
+ "interpolated": [],
+ "substituted": [],
+ "warnings": []
+}

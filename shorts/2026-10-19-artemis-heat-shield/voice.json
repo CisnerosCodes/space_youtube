@@ -1,0 +1,230 @@
+{
+ "model": "google/gemini-3.8-flash-tts",
+ "voice": "Puck",
+ "stt_model": "openai/whisper-large-v3",
+ "created": "2026-10-19T17:07:54Z",
+ "seconds": 32.4,
+ "text": "Orion came home at 39 times the speed of sound, and the cabin stayed in the mid-70s. Outside, it passed 4,000 degrees Fahrenheit. The heat shield took it: 186 blocks of Avcoat. After Artemis I, NASA changed the path home. How? It capped how far Orion could fly through the atmosphere, so less time in the temperature range that damaged Artemis I. The result: nine spots of char loss. Artemis I had 103. NASA updates its Moon plans on Friday, October 23. Follow Downlink Cat for the update.",
+ "direction": "You are a young, nerdy science creator in your early twenties, a little scrawny, filming a vertical video for your followers. Talk like a popular creator on TikTok or YouTube Shorts, not a narrator: conversational, a grin in your voice, genuinely hyped. Hit the hook hard, take a tiny beat before each reveal, punch the key words (39, mid-70s, 4,000, path, capped, nine, 103), speed up through setup lines and slow down on the payoff. Energy: high. A little more cat: a playful purr on a few r sounds and a small 'mrr'-like rise on the question line. Still natural, never a meow.",
+ "usd": 0.025107,
+ "cost": {
+  "tts_usd": 0.023052,
+  "stt_usd": 0.002055,
+  "total_usd": 0.025107,
+  "estimated": false,
+  "note": "tts cost from /generation (retried while 404); estimated at 0.000227 USD per audio second when it never answered"
+ },
+ "takes_tried": 3,
+ "chosen_take": 2,
+ "verified": true,
+ "diff": {
+  "ok": true,
+  "counts": {
+   "content": 0,
+   "spelling": 0,
+   "minor": 0,
+   "joined": 0
+  },
+  "note": "take 2 with aliases I=1, Avcoat=AVCODE"
+ },
+ "gaps": [],
+ "takes": [
+  {
+   "take": 1,
+   "file": "work/voice/take1.mp3",
+   "seconds": 32.76,
+   "generation_id": "gen-tts-1792429613-pR01AcAz8Z63eyYl357l",
+   "stt_usd": 0.000901,
+   "gaps": [
+    {
+     "from": 27.453,
+     "to": 30.117,
+     "clip": "take1.gap_27.45.mp3",
+     "clip_text": "Three, NASA updates its moon plans on Friday, October 20th.",
+     "inserted": "Three, NASA updates its moon plans on Friday,",
+     "kind": "dropped words"
+    }
+   ],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 5,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 89,
+    "heard_tokens": 90,
+    "differences": [
+     {
+      "script": "Avcoat.",
+      "heard": "afcode.",
+      "script_index": [
+       31
+      ],
+      "heard_index": [
+       31
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I,",
+      "heard": "1,",
+      "script_index": [
+       34
+      ],
+      "heard_index": [
+       34
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I.",
+      "heard": "1.",
+      "script_index": [
+       61
+      ],
+      "heard_index": [
+       61
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I",
+      "heard": "1",
+      "script_index": [
+       70
+      ],
+      "heard_index": [
+       70
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "",
+      "heard": "Three,",
+      "script_index": null,
+      "heard_index": [
+       73
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.007435,
+   "tts_usd_estimated": false
+  },
+  {
+   "take": 2,
+   "file": "work/voice/take2.mp3",
+   "seconds": 32.4,
+   "generation_id": "gen-tts-1792429626-5V0wAWm2y8mtz4J3j6XV",
+   "stt_usd": 0.000243,
+   "gaps": [],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 4,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 89,
+    "heard_tokens": 89,
+    "differences": [
+     {
+      "script": "Avcoat.",
+      "heard": "AVCODE.",
+      "script_index": [
+       31
+      ],
+      "heard_index": [
+       33
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I,",
+      "heard": "1,",
+      "script_index": [
+       34
+      ],
+      "heard_index": [
+       36
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I.",
+      "heard": "1.",
+      "script_index": [
+       61
+      ],
+      "heard_index": [
+       63
+      ],
+      "kind": "content"
+     },
+     {
+      "script": "I",
+      "heard": "1",
+      "script_index": [
+       70
+      ],
+      "heard_index": [
+       72
+      ],
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.007354,
+   "tts_usd_estimated": false
+  },
+  {
+   "take": 3,
+   "file": "work/voice/take3.mp3",
+   "seconds": 36.44,
+   "generation_id": "gen-tts-1792429654-C9EoAOoStevhFU6HMLpg",
+   "stt_usd": 0.000911,
+   "gaps": [],
+   "diff": {
+    "ok": false,
+    "counts": {
+     "content": 1,
+     "spelling": 0,
+     "minor": 0,
+     "joined": 0
+    },
+    "script_tokens": 89,
+    "heard_tokens": 85,
+    "differences": [
+     {
+      "script": "Artemis I had 103.",
+      "heard": "",
+      "script_index": [
+       69
+      ],
+      "heard_index": null,
+      "kind": "content"
+     }
+    ],
+    "joined": []
+   },
+   "tts_usd": 0.008263,
+   "tts_usd_estimated": false
+  }
+ ],
+ "elapsed_s": 62.3,
+ "aliases": [
+  "I=1",
+  "Avcoat=AVCODE"
+ ],
+ "promoted": {
+  "when": "2026-10-19T17:10:00Z",
+  "from_take": 2,
+  "why": "take 3 (kept by voice.py) dropped the sentence 'Artemis I had 103.'; take 2 has every word. Its only differences were Whisper spellings: 'Artemis I' heard as 'Artemis 1' and 'Avcoat' as 'AVCODE'. Checked with: python3 pipeline/wordnorm.py script.md work/voice/take2.words.json --alias I=1 --alias Avcoat=AVCODE (content 0)."
+ }
+}

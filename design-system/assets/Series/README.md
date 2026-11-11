@@ -1,0 +1,1 @@
+The four series marks, 28 x 28, single-ink `amber` (#F5B83D), always on `ink` inside the series kicker: `launch-day.svg` (upward triangle), `just-discovered.svg` (four-point diamond), `how-does-that-work.svg` (circle with a crosshair, stroked), `by-the-numbers.svg` (three ascending bars).

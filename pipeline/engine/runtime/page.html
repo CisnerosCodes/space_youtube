@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>__TITLE__</title>
+<!-- built by pipeline/engine/build.mjs: __BUILDINFO__ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  :root { --ink: #0B0B0C; --paper: #F2EFE8; --amber: #F5B83D; --muted: #8C8A85; }
+  html, body { margin: 0; background: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); color: var(--paper); font-family: 'Archivo', sans-serif; }
+  canvas, .layer { position: absolute; left: 0; top: 0; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+  .box { background: var(--ink); }
+  #caps { position: absolute; left: 80px; top: 1196px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { padding: 8px 16px; background: rgba(11,11,12,0.88); font-weight: 700; font-stretch: 100%; font-size: 90px; line-height: 96px; white-space: nowrap; }
+  .w { color: var(--paper); }
+  .w.on { color: var(--amber); }
+  #kicker { position: absolute; left: 80px; top: 246px; display: flex; align-items: center; gap: 12px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; text-transform: uppercase; white-space: nowrap; }
+  .chip { position: absolute; left: 80px; top: 302px; display: none; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; white-space: nowrap; }
+  #credit { position: absolute; left: 80px; bottom: 422px; display: none; max-width: 796px; padding: 6px 12px; font-size: 24px; line-height: 28px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="pic" width="1080" height="1920"></canvas>
+  <!-- the cat (v3 actor), under the captions: he never covers caption words -->
+  <svg id="cat" class="layer" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="display: none; overflow: hidden"></svg>
+  <div class="mono box" id="kicker"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path id="kMark" d=""></path></svg><span id="kText"></span></div>
+  <div id="chips"></div>
+  <div id="caps"></div>
+  <div class="mono box" id="credit"></div>
+</div>
+<script>
+const PLAN = /*__PLAN__*/null;
+const CAPTIONS = /*__CAPTIONS__*/null;
+const IMAGES = /*__IMAGES__*/null;
+/*__RIG__*/
+/*__RUNTIME__*/
+</script>
+</body>
+</html>

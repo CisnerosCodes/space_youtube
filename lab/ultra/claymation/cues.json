@@ -1,0 +1,126 @@
+[
+ {
+  "frame": 9,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "\"moon\": the pointer pokes Phobos, it boings on its pin"
+ },
+ {
+  "frame": 54,
+  "fps": 30,
+  "type": "impact",
+  "note": "\"collision\": the gasp (punch-in), the camera starts to pull back"
+ },
+ {
+  "frame": 102,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "4-frame whip to the launch pad on \"Japan\""
+ },
+ {
+  "frame": 134,
+  "fps": 30,
+  "type": "number_slam",
+  "gain_db": -3,
+  "note": "H3 lifts off, cotton smoke bursts (punch)"
+ },
+ {
+  "frame": 147,
+  "fps": 30,
+  "type": "cat_chirp",
+  "note": "\"heist\": Night Shift turns to camera with a sly grin"
+ },
+ {
+  "frame": 220,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "4-frame whip into the run, \"Step one\""
+ },
+ {
+  "frame": 263,
+  "fps": 30,
+  "type": "chip_in",
+  "note": "the flip calendar lands on AUG 2027 on \"August\""
+ },
+ {
+  "frame": 319,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "vertical whip through the sky onto the Phobos set, \"Step two\""
+ },
+ {
+  "frame": 353,
+  "fps": 30,
+  "type": "cat_out",
+  "note": "\"drop\": MMX lets go of the rover"
+ },
+ {
+  "frame": 476,
+  "fps": 30,
+  "type": "chip_in",
+  "gain_db": -2,
+  "note": "the rover touches the scale: a tiny tick, not a crash"
+ },
+ {
+  "frame": 496,
+  "fps": 30,
+  "type": "number_slam",
+  "gain_db": -4,
+  "note": "\"15\": the dial shows 15 g, the jaw drops (punch)"
+ },
+ {
+  "frame": 586,
+  "fps": 30,
+  "type": "impact",
+  "note": "MMX lands on Phobos"
+ },
+ {
+  "frame": 655,
+  "fps": 30,
+  "type": "hard_cut",
+  "gain_db": -2,
+  "note": "cut to the nitrogen blast, puffs hit the cat"
+ },
+ {
+  "frame": 732,
+  "fps": 30,
+  "type": "cat_in",
+  "note": "\"grams\": the jar lid pops on"
+ },
+ {
+  "frame": 750,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "whip up through the sky and down to MMX beside Phobos"
+ },
+ {
+  "frame": 802,
+  "fps": 30,
+  "type": "impact",
+  "note": "\"burn\": the main engine lights"
+ },
+ {
+  "frame": 947,
+  "fps": 30,
+  "type": "reveal",
+  "note": "\"First\": the real Phobos print pops onto the easel, the jar goes up"
+ },
+ {
+  "frame": 1044,
+  "fps": 30,
+  "type": "hard_cut",
+  "note": "4-frame whip to the NEXT counter, the cat pops up behind it"
+ },
+ {
+  "frame": 1141,
+  "fps": 30,
+  "type": "next_card_in",
+  "note": "\"Wednesday\": the WED 21 OCT page-a-day calendar pops up"
+ },
+ {
+  "frame": 1212,
+  "fps": 30,
+  "type": "wordmark_echo",
+  "note": "end card: the dot pulses on the logo signal, the ring pings on its echo"
+ }
+]

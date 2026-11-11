@@ -1,0 +1,33 @@
+<!-- @dsCard group="Shorts beats" height=440 subtitle="A count-up over a labeled line diagram, for a beat no photo shows. 50% scale" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@500&display=block">
+<style>
+body{margin:0;background:var(--ink,#0b0b0c)}
+.f{position:relative;width:540px;height:420px;background:var(--ink,#0b0b0c);overflow:hidden}
+.n{position:absolute;left:20px;top:20px;font-family:"Archivo",system-ui,sans-serif;font-weight:800;font-stretch:112%;font-size:150px;line-height:.88;color:var(--amber,#f5b83d);font-variant-numeric:tabular-nums}
+.d{position:absolute;left:40px;top:160px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;font-size:14px;line-height:18px;color:var(--paper,#f2efe8);text-transform:uppercase}
+.d span{display:block;color:var(--muted,#8c8a85);font-size:12px}
+svg{position:absolute;left:0;top:200px;width:540px;height:180px}
+.lab{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;font-size:12px;letter-spacing:.05em;fill:#f2efe8}
+.req{position:absolute;left:40px;bottom:16px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;font-size:12px;letter-spacing:.05em;color:var(--paper,#f2efe8)}
+</style>
+</head>
+<body>
+<div class="f">
+  <div class="n">3:27</div>
+  <div class="d">Return powered flyby burn<span>MIN : SEC</span></div>
+  <svg viewBox="0 0 540 180" role="img" aria-label="Line art: Orion's path around the Moon with the burn point marked">
+    <path d="M0 40 C120 20 260 30 330 70" fill="none" stroke="#f5b83d" stroke-width="2" stroke-dasharray="5 6"/>
+    <circle cx="380" cy="100" r="46" fill="none" stroke="#f5b83d" stroke-width="2"/>
+    <circle cx="430" cy="98" r="6" fill="#f5b83d"/>
+    <text class="lab" x="362" y="104">MOON</text>
+    <text class="lab" x="444" y="92">BURN</text>
+  </svg>
+  <span class="req">Source: JAXA</span>
+</div>
+<script></script>
+</body>
+</html>

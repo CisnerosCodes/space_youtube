@@ -1,0 +1,58 @@
+[
+  {
+    "take": "fish_ethan_young",
+    "model": "fish-audio/drama-3",
+    "voice": "536d3a5e000945adb7038665781a4aca",
+    "chars": 497,
+    "seconds": 38.9,
+    "usd": 0.001308
+  },
+  {
+    "take": "fish_ethan_young_cat",
+    "model": "fish-audio/drama-3",
+    "voice": "536d3a5e000945adb7038665781a4aca",
+    "chars": 497,
+    "seconds": 39.1,
+    "usd": 0.00156
+  },
+  {
+    "take": "eleven_liam",
+    "model": "elevenlabs/eleven-v4-turbo",
+    "voice": "liam",
+    "chars": 527,
+    "seconds": 32.4,
+    "usd": 0.01054
+  },
+  {
+    "take": "eleven_charlie",
+    "model": "elevenlabs/eleven-v4-turbo",
+    "voice": "charlie",
+    "chars": 527,
+    "seconds": 35.7,
+    "usd": 0.01054
+  },
+  {
+    "take": "seed_mascot_voice",
+    "model": "bytedance-seed/seed-audio-1-0",
+    "voice": "designed from mascot image",
+    "chars": 597,
+    "seconds": 37.9,
+    "usd": 0.09445
+  },
+  {
+    "take": "gemini_puck_cat",
+    "model": "google/gemini-3.8-flash-tts",
+    "voice": "Puck",
+    "chars": 497,
+    "seconds": 32.9,
+    "usd": 0.0074655
+  },
+  {
+    "take": "gemini_fenrir_cat",
+    "model": "google/gemini-3.8-flash-tts",
+    "voice": "Fenrir",
+    "chars": 497,
+    "seconds": 31.2,
+    "usd": 0.0070875
+  }
+]

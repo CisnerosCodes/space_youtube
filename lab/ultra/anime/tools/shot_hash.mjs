@@ -1,0 +1,13 @@
+import { chromium } from '/home/user/space_youtube/lab/motion-ab-test/node_modules/playwright/index.mjs';
+import { pathToFileURL } from 'node:url';
+import path from 'node:path';
+const [hash, t, out] = process.argv.slice(2);
+const dir = path.resolve(new URL('..', import.meta.url).pathname);
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+page.on('pageerror', (e) => console.error('pageerror:', e.message));
+await page.goto(pathToFileURL(path.join(dir, 'page.html')).href + '#' + hash, { waitUntil: 'networkidle' });
+await page.evaluate(async () => { await document.fonts.ready; if (window.__ready) await window.__ready; });
+await page.evaluate((t) => window.renderAt(t), Number(t));
+await page.screenshot({ path: out });
+await browser.close();

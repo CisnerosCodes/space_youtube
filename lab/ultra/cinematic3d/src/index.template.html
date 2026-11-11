@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MMX Heist Cinematic</title>
+<meta name="viewport" content="width=1080">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0c;--paper:#f2efe8;--amber:#f5b83d;--muted:#8c8a85}
+html,body{margin:0;padding:0;background:#000;width:1080px;height:1920px;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#000}
+#gl{position:absolute;left:0;top:0;width:1080px;height:1920px;display:block}
+.ov{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+#scrim{background:linear-gradient(to bottom,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 1060px,rgba(0,0,0,.42) 1300px,rgba(0,0,0,.62) 1520px,rgba(0,0,0,.62) 1920px)}
+#topscrim{background:linear-gradient(to bottom,rgba(0,0,0,.45) 0px,rgba(0,0,0,.28) 520px,rgba(0,0,0,0) 820px)}
+#series{position:absolute;left:80px;top:236px;font:500 22px/1 "IBM Plex Mono",monospace;letter-spacing:.24em;color:var(--paper);opacity:.78;display:flex;align-items:center;gap:14px;white-space:nowrap}
+#series svg{display:block}
+.card{position:absolute;left:80px;top:300px;width:820px}
+.el{position:absolute;left:0;white-space:nowrap;will-change:transform,opacity,filter}
+.kicker{font:500 24px/1 "IBM Plex Mono",monospace;letter-spacing:.28em;color:var(--amber);text-transform:uppercase}
+.big{font-family:Archivo,sans-serif;font-weight:300;font-stretch:125%;text-transform:uppercase;color:var(--paper);line-height:.92;letter-spacing:.14em;text-shadow:0 2px 30px rgba(0,0,0,.55)}
+.num{font-family:Archivo,sans-serif;font-weight:800;font-stretch:112%;color:var(--paper);line-height:.86;font-variant-numeric:tabular-nums;letter-spacing:-.01em;text-shadow:0 4px 40px rgba(0,0,0,.6)}
+.num .u{font-weight:300;font-stretch:125%;letter-spacing:.08em;color:var(--amber)}
+.sub{font-family:Archivo,sans-serif;font-weight:500;font-stretch:100%;font-size:38px;line-height:1.18;color:var(--paper);text-shadow:0 2px 18px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.7)}
+.src{font:500 20px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;color:var(--paper);opacity:.72;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.rule{position:absolute;left:0;height:2px;background:var(--amber)}
+.ltr{display:inline-block}
+#caps{position:absolute;left:80px;top:0;width:820px}
+.chunk{position:absolute;left:0;top:0;width:820px;font-family:Archivo,sans-serif;font-weight:700;font-stretch:100%;font-size:66px;line-height:1.14;color:var(--paper)}
+.chunk .line{display:block;white-space:nowrap}
+.w{display:inline-block;text-shadow:0 2px 22px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.8);will-change:transform,opacity}
+.w.new{color:var(--amber)}
+#credits{position:absolute;left:80px;width:820px;bottom:426px;font:500 19px/1.38 "IBM Plex Mono",monospace;color:var(--paper);letter-spacing:.01em}
+#credits div{white-space:nowrap;text-shadow:0 1px 6px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,.9)}
+#credits .ill{color:var(--amber)}
+#callouts svg{position:absolute;left:0;top:0}
+.co{position:absolute;padding:10px 14px 11px;background:rgba(11,11,12,.72);font:500 22px/1.25 "IBM Plex Mono",monospace;color:var(--paper);letter-spacing:.06em;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.95)}
+.co b{display:block;font-weight:500;color:var(--amber);letter-spacing:.18em;font-size:22px}
+#end{opacity:0}
+#wm{position:absolute;left:80px;top:760px;display:flex;align-items:center;gap:30px}
+#wmtext{font-family:Archivo,sans-serif;font-weight:800;font-stretch:125%;font-size:104px;line-height:1;letter-spacing:.01em;white-space:nowrap}
+#wmtext .d{color:var(--paper)} #wmtext .c{color:var(--amber)}
+#eyes{position:absolute;left:0;top:0;overflow:visible}
+#flash{background:#fff;opacity:0}
+#fade{background:#000;opacity:0}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl" width="1080" height="1920"></canvas>
+  <div id="topscrim" class="ov"></div>
+  <div id="scrim" class="ov"></div>
+  <div id="fade" class="ov"></div>
+  <div id="flash" class="ov"></div>
+  <div id="series"><svg width="22" height="20" viewBox="0 0 22 20"><path d="M11 1 L21 19 L1 19 Z" fill="#f5b83d"/></svg><span>LAUNCH DAY</span></div>
+  <div id="callouts" class="ov"><svg id="cosvg" width="1080" height="1920"></svg></div>
+  <div id="titles" class="ov"></div>
+  <div id="end" class="ov">
+    <svg id="eyes" width="1080" height="1920"></svg>
+    <div id="wm"><div id="wmtext"><span class="d">DOWNLINK</span> <span class="c">CAT</span></div></div>
+  </div>
+  <div id="caps"></div>
+  <div id="credits"></div>
+</div>
+<!--ASSETS-->
+<script type="module">
+/*MAIN*/
+</script>
+</body>
+</html>

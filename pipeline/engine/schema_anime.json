@@ -1,0 +1,68 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://downlinkcat/pipeline/engine/schema_anime.json",
+ "title": "Downlink Cat shot list (v1, anime style, the house default)",
+ "description": "What a director model writes for one anime Short. The builder checks it with lib/validate_anime.mjs, which adds the rules that depend on the narration (anchors, beat order, hard cuts only on a hit or an impact, the flash limit, numbers on screen against the fact table, the cast's visits) and reports each problem with its path. Anchors: \"word\", \"word#2\", \"word@end\", \"word+4f\", \"word-6f\" or a frame number. Screen coordinates are px of the 1080 x 1920 frame; diagram coordinates are units of the diagram's size box. See DIRECTOR.md part A and examples/artemis_anime, examples/mmx_anime.",
+ "type": "object",
+ "required": ["version", "style", "series", "title", "bed", "assets", "beats"],
+ "properties": {
+  "version": { "const": 1 },
+  "style": { "const": "anime" },
+  "series": { "enum": ["LAUNCH DAY", "JUST DISCOVERED", "HOW DOES THAT WORK", "BY THE NUMBERS"] },
+  "title": { "type": "string" },
+  "bed": { "type": "string", "description": "A bed id from lab/sound/beds/beds.json (never the previous Short's)." },
+  "captions": { "type": "string", "default": "captions.json" },
+  "voice": { "type": "string", "default": "voice.mp3" },
+  "facts": { "description": "The fact table (factcheck.md or facts.md); every number on screen must appear in it or in the narration.", "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }] },
+  "stress": { "type": "array", "items": { "type": "string" }, "description": "Emphasis words: drawn as emphasis lettering (numbers are emphasised automatically)." },
+  "impacts": { "type": "array", "items": { "$ref": "#/$defs/anchor" }, "description": "Words that get ONE impact frame. At most 3 in any second, at least 10 frames apart; keep about 2 s apart." },
+  "hits": { "type": "array", "items": { "type": "object", "properties": { "at": { "$ref": "#/$defs/anchor" }, "amp": { "type": "number" } } }, "description": "Extra camera-shake hits." },
+  "assets": { "type": "object", "additionalProperties": { "$ref": "#/$defs/asset" } },
+  "beats": { "type": "array", "minItems": 4, "items": { "$ref": "#/$defs/beat" }, "description": "First a hook on a real photo, then the story, a NEXT band and scene, last the end card." },
+  "cast": {
+   "type": "object",
+   "properties": {
+    "ns": { "$ref": "#/$defs/castNS" },
+    "pho": { "$ref": "#/$defs/castPho" }
+   },
+   "additionalProperties": false
+  }
+ },
+ "$defs": {
+  "anchor": { "oneOf": [{ "type": "string" }, { "type": "integer", "minimum": 0 }] },
+  "text": { "description": "A line of on-screen text, or { t, c } with c amber, muted, red or paper.", "oneOf": [{ "type": "string" }, { "type": "object", "required": ["t"], "properties": { "t": { "type": "string" }, "c": { "type": "string" } } }] },
+  "asset": {
+   "type": "object", "required": ["file", "credit", "focus"],
+   "properties": {
+    "file": { "type": "string", "description": "jpg, png (alpha kept for cutouts) or webp, relative to the shot list's folder." },
+    "credit": { "type": "string", "description": "Exactly as the source gives it; drawn on every frame the photo is on screen." },
+    "focus": { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4, "description": "[x, y, w, h] of the subject as fractions of the image: framing centres on it." },
+    "fill": { "type": "number", "description": "Zoom so the focus box fills this fraction of a frame's width (for small subjects inside big images)." },
+    "note": { "type": "string" }
+   }
+  },
+  "beat": {
+   "type": "object", "required": ["id", "start", "shot"],
+   "properties": {
+    "id": { "type": "string" },
+    "start": { "$ref": "#/$defs/anchor" },
+    "transition": { "type": "object", "properties": { "type": { "enum": ["cut", "whip", "smash", "iris"] }, "dir": { "enum": ["up", "down", "left", "right", "up-left", "up-right", "down-left", "down-right"] }, "frames": { "type": "integer", "minimum": 6, "maximum": 16 }, "at": { "type": "array", "items": { "type": "number" } } } },
+    "hit": { "type": "boolean", "description": "The start word is a hit word: a hard cut is allowed." },
+    "impact": { "$ref": "#/$defs/anchor" },
+    "source": { "type": "string", "description": "The source of the facts of a drawn beat (\"Illustration · facts: NASA\")." },
+    "caption": { "type": "object", "properties": { "y": { "type": "number" }, "size": { "type": "number" }, "maxY": { "type": "number" }, "tilt": { "type": "number" } } },
+    "chips": { "type": "array", "items": { "type": "object", "required": ["at", "lines"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "until": { "$ref": "#/$defs/anchor" }, "lines": { "type": "array", "items": { "$ref": "#/$defs/text" } }, "y": { "type": "number" }, "size": { "type": "number" } } } },
+    "sfx": { "type": "array", "items": { "type": "object", "required": ["text", "at"], "properties": { "text": { "type": "string", "description": "Katakana onomatopoeia only." }, "at": { "$ref": "#/$defs/anchor" }, "for": { "type": "integer" }, "pos": { "type": "array", "items": { "type": "number" } }, "size": { "type": "number" }, "color": { "type": "string" }, "rot": { "type": "number" } } } },
+    "shot": {
+     "type": "object", "required": ["type"],
+     "properties": {
+      "type": { "enum": ["hook", "photo", "number", "craft", "compare", "diagram", "react", "band", "next", "end"] }
+     },
+     "description": "hook/photo: image, frame (full, panel, circle, cutout, monitor), push, keys [{at, zoom, focus, frames}], punch [anchors], marks [{at, point, r}], scan {at, until}, overlay (focus, speed), bg, pull, lean_at, sparkle, slam. number: text, at, y, size, bg, art (a craft spec), image. craft: craft (capsule, crew-capsule, rocket, rocket-slim, probe, rover, satellite), bg (space, limb, sky, sea, pad, earth, mars, moon, phobos, plasma...), backdrop {...}, pos, scale, rot, keys [{at, pos, scale, rot, frames}], ease, drift, plasma {at, until}, chutes {at}, splash {at}, liftoff {at}, burn {at}, arm {at}, legs, wing, window, speed, push. compare: layout (lens, stack, side), items [{image | craft, focus, label, at, value, value_at, value_sub, tone}]. diagram: size, region, backdrop {kind, y, r, angle, lines}, camera [{at, zoom, center, frames}], elements [{path, id, color, dash, width, at, draw} | {heat, from, to, at} | {craft, path, keys [{at, u}], size} | {label, pos, color, at} | {marker (stop, x, dot), pos, angle, at} | {ring, pulse} | {body, pos, r} | {zone}]. react: who (ns, pho), faces [{at, expr, p}], bg, rim, pos, size, turn_in, look, paw {at, close_at}, reticle {at, piece_at}, piece. band: style (1, 2, 3, 4, next), words [from, to] or label, num, step, steps, stamp {text, at}, expr, face, lead. next: scene (moon, rocket, earth, mars) or image, chip [lines], chip_at, stamp {text, at, x, y}. end: downlink, cat."
+    }
+   }
+  },
+  "castNS": { "type": "object", "required": ["moves"], "properties": { "moves": { "type": "array", "items": { "type": "object", "required": ["at", "do"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "do": { "enum": ["enter", "exit", "move", "point", "pump", "fist", "salute", "wave", "shrug", "think", "gasp", "nod", "lean", "hold", "wink", "expr", "look"] }, "place": {}, "to": {}, "how": { "enum": ["pop", "slide", "drop", "smear", "down", "zip"] }, "target": {}, "expr": { "enum": ["neutral", "smirk", "grin", "happy", "proud", "shock", "grit", "wink", "curious", "worried", "focus", "meh"] }, "for": { "type": "integer" }, "text": { "type": "string" }, "prop": { "enum": ["tag", "canister"] } } } }, "expr": { "type": "string" }, "rim": { "type": "string" } } },
+  "castPho": { "type": "object", "required": ["moves"], "properties": { "moves": { "type": "array", "items": { "type": "object", "required": ["at", "do"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "do": { "enum": ["enter", "exit", "move", "expr", "look", "shake", "sweat", "piece"] }, "place": {}, "to": {}, "how": { "type": "string" }, "expr": { "enum": ["grumpy", "alarm", "furious", "flinch"] }, "target": {}, "for": { "type": "integer" }, "on": { "type": "boolean" } } } } } }
+ }
+}

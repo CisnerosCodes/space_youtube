@@ -1,0 +1,605 @@
+{
+ "built": "2026-10-20T20:51:17.145Z",
+ "style": "anime",
+ "shortDir": "pipeline/engine/examples/mmx_anime",
+ "frames": 1260,
+ "seconds": 42,
+ "buildSeconds": 20.7,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 5,
+   "T0": 0,
+   "T1": 98,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 1,
+   "id": "launch",
+   "type": "craft",
+   "word": 103,
+   "T0": 98,
+   "T1": 142,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 2,
+   "id": "heist",
+   "type": "react",
+   "word": 142,
+   "T0": 142,
+   "T1": 163,
+   "transition": "cut",
+   "N": 0
+  },
+  {
+   "i": 3,
+   "id": "target",
+   "type": "react",
+   "word": 168,
+   "T0": 163,
+   "T1": 212,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 4,
+   "id": "step1",
+   "type": "band",
+   "word": 220,
+   "T0": 212,
+   "T1": 240,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 5,
+   "id": "mars",
+   "type": "photo",
+   "word": 240,
+   "T0": 240,
+   "T1": 312,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 6,
+   "id": "step2",
+   "type": "band",
+   "word": 322,
+   "T0": 312,
+   "T1": 352,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 7,
+   "id": "drop",
+   "type": "craft",
+   "word": 352,
+   "T0": 352,
+   "T1": 441,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 8,
+   "id": "weighs",
+   "type": "react",
+   "word": 446,
+   "T0": 441,
+   "T1": 496,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 9,
+   "id": "shock",
+   "type": "react",
+   "word": 496,
+   "T0": 496,
+   "T1": 562,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 10,
+   "id": "step3",
+   "type": "band",
+   "word": 570,
+   "T0": 562,
+   "T1": 601,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 11,
+   "id": "grab",
+   "type": "react",
+   "word": 601,
+   "T0": 601,
+   "T1": 625,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 12,
+   "id": "core",
+   "type": "craft",
+   "word": 630,
+   "T0": 625,
+   "T1": 682,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 13,
+   "id": "ten",
+   "type": "react",
+   "word": 687,
+   "T0": 682,
+   "T1": 758,
+   "transition": "iris",
+   "N": 10
+  },
+  {
+   "i": 14,
+   "id": "step4",
+   "type": "band",
+   "word": 768,
+   "T0": 758,
+   "T1": 788,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 15,
+   "id": "burn",
+   "type": "craft",
+   "word": 788,
+   "T0": 788,
+   "T1": 841,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 16,
+   "id": "capsule",
+   "type": "craft",
+   "word": 846,
+   "T0": 841,
+   "T1": 905,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 17,
+   "id": "loot",
+   "type": "react",
+   "word": 910,
+   "T0": 905,
+   "T1": 949,
+   "transition": "whip",
+   "N": 10
+  },
+  {
+   "i": 18,
+   "id": "first",
+   "type": "photo",
+   "word": 949,
+   "T0": 949,
+   "T1": 994,
+   "transition": "smash",
+   "N": 0
+  },
+  {
+   "i": 19,
+   "id": "home",
+   "type": "photo",
+   "word": 999,
+   "T0": 994,
+   "T1": 1039,
+   "transition": "iris",
+   "N": 10
+  },
+  {
+   "i": 20,
+   "id": "nextband",
+   "type": "band",
+   "word": 1047,
+   "T0": 1039,
+   "T1": 1075,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 21,
+   "id": "electron",
+   "type": "next",
+   "word": 1075,
+   "T0": 1075,
+   "T1": 1162,
+   "transition": "none",
+   "N": 0
+  },
+  {
+   "i": 22,
+   "id": "end",
+   "type": "end",
+   "word": 1167,
+   "T0": 1162,
+   "T1": 1260,
+   "transition": "whip",
+   "N": 10
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 5,
+   "f1": 32,
+   "text": "This moon is on a"
+  },
+  {
+   "f0": 32,
+   "f1": 103,
+   "text": "slow-motion collision course with Mars."
+  },
+  {
+   "f0": 103,
+   "f1": 142,
+   "text": "Japan just launched"
+  },
+  {
+   "f0": 142,
+   "f1": 168,
+   "text": "a heist to"
+  },
+  {
+   "f0": 168,
+   "f1": 220,
+   "text": "steal a piece of it."
+  },
+  {
+   "f0": 240,
+   "f1": 312,
+   "text": "Mars, August 2027."
+  },
+  {
+   "f0": 352,
+   "f1": 393,
+   "text": "drop a lookout."
+  },
+  {
+   "f0": 393,
+   "f1": 446,
+   "text": "A 25 kilo rover."
+  },
+  {
+   "f0": 446,
+   "f1": 496,
+   "text": "On Phobos, it weighs..."
+  },
+  {
+   "f0": 496,
+   "f1": 558,
+   "text": "15 grams."
+  },
+  {
+   "f0": 601,
+   "f1": 625,
+   "text": "the grab."
+  },
+  {
+   "f0": 630,
+   "f1": 687,
+   "text": "Coring arm, nitrogen blaster."
+  },
+  {
+   "f0": 687,
+   "f1": 706,
+   "text": "Target:"
+  },
+  {
+   "f0": 706,
+   "f1": 758,
+   "text": "at least 10 grams."
+  },
+  {
+   "f0": 788,
+   "f1": 841,
+   "text": "one burn to leave Mars."
+  },
+  {
+   "f0": 846,
+   "f1": 928,
+   "text": "Capsule lands in Australia, 2031."
+  },
+  {
+   "f0": 928,
+   "f1": 949,
+   "text": "The loot?"
+  },
+  {
+   "f0": 949,
+   "f1": 999,
+   "text": "First piece of Phobos"
+  },
+  {
+   "f0": 999,
+   "f1": 1039,
+   "text": "ever brought home."
+  },
+  {
+   "f0": 1061,
+   "f1": 1075,
+   "text": "Rocket Lab"
+  },
+  {
+   "f0": 1075,
+   "f1": 1103,
+   "text": "aims to launch three"
+  },
+  {
+   "f0": 1103,
+   "f1": 1141,
+   "text": "HawkEye 360 satellites,"
+  },
+  {
+   "f0": 1141,
+   "f1": 1162,
+   "text": "Wednesday."
+  },
+  {
+   "f0": 1167,
+   "f1": 1260,
+   "text": "Follow Downlink Cat."
+  }
+ ],
+ "impacts": [
+  54,
+  147,
+  280,
+  496,
+  604,
+  723,
+  802,
+  886
+ ],
+ "cues": 20,
+ "nightShift": {
+  "share": 0.544,
+  "frames": 686,
+  "overlay": {
+   "distinct": [
+    "enter slide",
+    "point",
+    "exit slide",
+    "enter smear",
+    "enter pop",
+    "gasp",
+    "exit down",
+    "hold",
+    "pump"
+   ],
+   "visits": [
+    [
+     168,
+     220
+    ],
+    [
+     375,
+     444
+    ],
+    [
+     636,
+     683
+    ],
+    [
+     938,
+     953
+    ],
+    [
+     1075,
+     1165
+    ]
+   ]
+  },
+  "pho": {
+   "distinct": [
+    "enter slide",
+    "exit slide",
+    "enter pop",
+    "shake"
+   ],
+   "visits": [
+    [
+     377,
+     403
+    ],
+    [
+     802,
+     844
+    ]
+   ]
+  }
+ },
+ "captionSync": {
+  "maxAbsDelta": 0,
+  "late": 0,
+  "oobWordFrames": 0
+ },
+ "creditAudit": {
+  "photoMisses": 0,
+  "illustrationMisses": 0,
+  "framesWithPhoto": 291,
+  "framesWithIllustration": 658
+ },
+ "maxImpactsPerSecond": 1,
+ "lineStarts": [
+  5,
+  103,
+  220,
+  240,
+  322,
+  352,
+  393,
+  446,
+  496,
+  570,
+  601,
+  630,
+  687,
+  706,
+  768,
+  788,
+  846,
+  928,
+  949,
+  1047,
+  1061,
+  1167
+ ],
+ "problems": [],
+ "notes": [],
+ "warnings": [],
+ "qaFrames": [
+  0,
+  4,
+  5,
+  11,
+  52,
+  97,
+  98,
+  102,
+  103,
+  108,
+  109,
+  123,
+  141,
+  142,
+  153,
+  162,
+  163,
+  168,
+  173,
+  190,
+  211,
+  212,
+  219,
+  220,
+  226,
+  230,
+  239,
+  240,
+  246,
+  276,
+  311,
+  312,
+  321,
+  322,
+  328,
+  337,
+  351,
+  352,
+  358,
+  392,
+  393,
+  397,
+  399,
+  440,
+  441,
+  445,
+  446,
+  451,
+  452,
+  471,
+  495,
+  496,
+  502,
+  529,
+  561,
+  562,
+  569,
+  570,
+  576,
+  586,
+  600,
+  601,
+  607,
+  613,
+  624,
+  625,
+  629,
+  630,
+  635,
+  636,
+  656,
+  681,
+  682,
+  686,
+  687,
+  692,
+  693,
+  705,
+  706,
+  712,
+  723,
+  757,
+  758,
+  767,
+  768,
+  774,
+  778,
+  787,
+  788,
+  794,
+  815,
+  840,
+  841,
+  845,
+  846,
+  851,
+  852,
+  876,
+  904,
+  905,
+  910,
+  915,
+  927,
+  928,
+  930,
+  934,
+  948,
+  949,
+  955,
+  972,
+  993,
+  994,
+  999,
+  1004,
+  1019,
+  1038,
+  1039,
+  1046,
+  1047,
+  1053,
+  1060,
+  1061,
+  1067,
+  1074,
+  1075,
+  1119,
+  1161,
+  1162,
+  1166,
+  1167,
+  1172,
+  1173,
+  1214,
+  1259
+ ]
+}

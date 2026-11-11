@@ -1,0 +1,18 @@
+URL: https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/
+FETCHED: 2026-10-19T17:03:37Z
+STATUS: 200
+
+1 min read
+Artemis II Heat Shield After Splashdown
+HQ Web Team
+Oct 16, 2026
+Image Article
+US Navy
+Shortly after NASA’s Artemis II mission splashed down on April 10, 2026, U.S. Navy divers captured underwater imagery of the Orion spacecraft’s heat shield. In the months after, the agency measured whether the thermal protection system effectively safeguarded the crew and Orion systems as the spacecraft reentered Earth’s atmosphere. This rigorous analysis confirmed that the heat shield performed as expected.
+Learn how Orion’s heat shield was examined.
+Image credit: US Navy
+
+IMAGES:
+https://www.nasa.gov/wp-content/uploads/2026/10/ksc-20260411-navy01-0045orig-rotated.jpg | og:image
+https://secure.gravatar.com/avatar/a488ada52047068f06752b421e04ab555e22cdfaf7b7f4a25d14b595874694af?s=300&d=blank&r=g | The headshot image of HQ Web Team
+https://www.nasa.gov/wp-content/uploads/2026/10/ksc-20260411-navy01-0045orig-rotated.jpg?w=2048 | The Orion spacecraft's heat shield dominates this underwater photo. Due to the water, the heat shield appears to be teal-colored.

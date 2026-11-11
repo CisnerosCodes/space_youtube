@@ -1,0 +1,189 @@
+{
+  "name": "Signal Delay v1",
+  "version": "1.0.0",
+  "description": "Approved hybrid: Full Bleed photo-first frame and cut rate, Telemetry type system, amber accent and labeled line diagrams.",
+  "color": {
+    "ink": { "value": "#0B0B0C", "role": "Ground for diagrams and cards; every text box; base of scrims." },
+    "paper": { "value": "#F2EFE8", "role": "All body text, caption words, labels, credits; giant type over photos." },
+    "amber": { "value": "#F5B83D", "role": "Accent only: active caption word, series marks, reached ticks, chip value and echo mark, diagram strokes, key numbers on ink, DELAY in the wordmark." },
+    "muted": { "value": "#8C8A85", "role": "Secondary labels (units, DIAGRAM label on the NEXT card). Only on ink, never on a photo." },
+    "tickPending": { "value": "rgba(242,239,232,0.30)", "role": "Progress tick not yet reached (paper at 30%)." },
+    "captionBox": { "value": "rgba(11,11,12,0.88)", "role": "Box behind each caption line and thumbnail headline line (ink at 88%)." },
+    "solidBox": { "value": "#0B0B0C", "role": "Box behind kicker, credit, chip, data lines (ink at 100%)." },
+    "photoScrim": { "value": "rgba(11,11,12,0.30)", "range": [0.25, 0.35], "role": "Flat full-frame scrim only when giant paper type sits directly on a photo; measure, never a gradient." }
+  },
+  "contrast": {
+    "minimum": 4.5,
+    "measured": {
+      "paperOnInk": 17.1,
+      "amberOnInk": 11.0,
+      "mutedOnInk": 5.7,
+      "hookTypeOnScrimmedPhotoWorstPixel": 6.3,
+      "day20TypeOnScrimmedPhotoWorstPixel": 6.4
+    }
+  },
+  "font": {
+    "families": {
+      "display": { "family": "Archivo", "source": "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@500&display=block", "axes": { "wdth": [62, 125], "wght": [100, 900] } },
+      "mono": { "family": "IBM Plex Mono", "weight": 500 }
+    },
+    "styles": {
+      "headline": { "family": "Archivo", "weight": 800, "wdth": 112, "size": 88, "case": "uppercase", "tracking": "0", "lineHeight": "84px", "color": "paper", "use": "NEXT card line, section titles." },
+      "giantNumber": { "family": "Archivo", "weight": 800, "wdth": 112, "size": { "hook": 340, "range": [300, 400], "secondary": 260, "date": 190 }, "case": "uppercase", "tracking": "0", "lineHeight": "0.88em", "left": 40, "color": { "onPhoto": "paper", "onInk": "amber" }, "numerals": "tabular-nums", "use": "Hook number (1:47), stacked labels (DAY / 20), count-ups (3:27), dates (DEC. 11)." },
+      "wordmark": { "family": "Archivo", "weight": 800, "wdth": 125, "size": { "shorts": 64, "spec": 72, "banner": 120, "thumbnail": 30 }, "case": "uppercase", "tracking": "0", "lineHeight": "1.0", "color": { "SIGNAL": "paper", "DELAY": "amber" } },
+      "caption": { "family": "Archivo", "weight": 700, "wdth": 100, "size": 90, "case": "sentence", "tracking": "0", "lineHeight": "96px", "color": { "word": "paper", "activeWord": "amber" } },
+      "kicker": { "family": "IBM Plex Mono", "weight": 500, "wdth": null, "size": 28, "case": "uppercase", "tracking": "0", "lineHeight": "36px", "color": "paper" },
+      "credit": { "family": "IBM Plex Mono", "weight": 500, "wdth": null, "size": 24, "case": "as supplied", "tracking": "0", "lineHeight": "28px", "color": "paper" },
+      "chip": { "family": "IBM Plex Mono", "weight": 500, "wdth": null, "size": 28, "case": "uppercase label, value as written (MOON 1.3 s)", "tracking": "0", "lineHeight": "36px", "color": { "label": "paper", "value": "amber" } },
+      "data": { "family": "IBM Plex Mono", "weight": 500, "wdth": null, "size": { "line": 28, "label": 24, "date": 64 }, "case": "uppercase", "tracking": "0", "lineHeight": "1.3", "color": { "default": "paper", "unit": "muted", "date": "amber" } },
+      "diagramLabel": { "family": "IBM Plex Mono", "weight": 500, "size": 24, "case": "uppercase", "tracking": "0.05em", "color": "paper" }
+    }
+  },
+  "spacing": {
+    "unit": 8,
+    "margin": { "shortsLeft": 80, "giantLeft": 40, "thumbnail": 48 },
+    "gaps": { "captionLines": 8, "markToLabel": 12, "chipItems": 14, "wordmarkMarkToText": 24, "tickGap": 8 },
+    "safeZones": {
+      "shorts": { "frame": [1080, 1920], "text": { "x": [80, 900], "y": [260, 1500] }, "captionZone": { "y": [1160, 1440] }, "giantMayStartAt": 40 },
+      "banner": { "frame": [2560, 1440], "text": { "x": [507, 2053], "y": [508, 931] }, "size": [1546, 423] },
+      "thumbnail": { "frame": [1280, 720], "readableAt": [320, 180], "maxLargeWords": 4, "avoid": "bottom-right corner (duration badge)" },
+      "avatar": { "frame": [800, 800], "crop": "circle", "minDisplay": 98 }
+    },
+    "positions": {
+      "ticks": { "x": 80, "y": 220, "width": 920, "height": 6 },
+      "kicker": { "x": 80, "y": 246 },
+      "chip": { "x": 80, "y": 302 },
+      "giantTop": 314,
+      "captionTop": 1196,
+      "credit": { "x": 80, "y": 1458 },
+      "wordmarkOnNextCard": { "x": 80, "y": 1404 }
+    }
+  },
+  "components": {
+    "captionLine": {
+      "box": { "background": "captionBox", "padding": "8px 16px" },
+      "text": "caption",
+      "rules": ["1 to 4 words per line", "at most 2 lines per chunk", "each line on its own box", "left edge at x 80", "lines inside y 1160 to 1440", "the newest word is amber, all others paper", "words cut in, never fade"]
+    },
+    "kicker": {
+      "box": { "background": "solidBox", "padding": "8px 16px 8px 12px" },
+      "text": "kicker",
+      "markSize": 28,
+      "markColor": "amber",
+      "viewBox": "0 0 28 28",
+      "series": {
+        "LAUNCH DAY": { "mark": "upward triangle", "path": "M14 3 L26 25 H2 Z", "paint": "fill" },
+        "JUST DISCOVERED": { "mark": "four-point diamond", "path": "M14 1 L27 14 L14 27 L1 14 Z", "paint": "fill" },
+        "HOW DOES THAT WORK": { "mark": "circle with a crosshair", "path": "M5 14 A9 9 0 1 0 23 14 A9 9 0 1 0 5 14 M14 1 V27 M1 14 H27", "paint": "stroke", "strokeWidth": 3 },
+        "BY THE NUMBERS": { "mark": "three ascending bars", "path": "M2 17 H8 V25 H2 Z M11 10 H17 V25 H11 Z M20 3 H26 V25 H20 Z", "paint": "fill" }
+      },
+      "nextCardText": "NEXT ON <SERIES>",
+      "rule": "Identical every day: same position, same mark, same box; on screen for the whole Short."
+    },
+    "ticks": {
+      "count": 7,
+      "x": [80, 1000],
+      "y": 220,
+      "height": 6,
+      "gap": 8,
+      "pending": "tickPending",
+      "reached": "amber",
+      "fill": "scaleX 0 to 1 over 6 frames on the enter curve, starting 4 frames after the beat cut",
+      "rule": "One tick per story beat; all seven are amber on the NEXT card."
+    },
+    "credit": {
+      "box": { "background": "solidBox", "padding": "6px 12px" },
+      "text": "credit",
+      "position": { "x": 80, "y": 1458 },
+      "rule": "Shown whenever a photo is on screen, exactly as supplied (NASA/Joel Kowsky, NASA/Bill Ingalls, NASA). On a diagram the same slot reads DIAGRAM · NOT TO SCALE."
+    },
+    "echoMark": {
+      "viewBox": "0 0 104 44",
+      "dot": { "cx": 22, "cy": 22, "r": 22, "paint": "fill amber" },
+      "ring": { "cx": 82, "cy": 22, "r": 19, "strokeWidth": 6, "paint": "stroke amber, no fill" },
+      "path": "M0 22 A22 22 0 1 0 44 22 A22 22 0 1 0 0 22 Z M63 22 A19 19 0 1 0 101 22 A19 19 0 1 0 63 22",
+      "rule": "The ring arrives exactly the real light delay after the dot (Moon: 1.3 s = 39 frames).",
+      "avatar": { "frame": 800, "dot": { "cx": 257, "cy": 400, "r": 105 }, "ring": { "cx": 543, "cy": 400, "r": 90.7, "strokeWidth": 28.6 } }
+    },
+    "chip": {
+      "box": { "background": "solidBox", "padding": "8px 16px 8px 12px" },
+      "text": "chip",
+      "content": ["echoMark at 20 px tall", "SIGNAL DELAY (paper)", "MOON 1.3 s (amber)"],
+      "position": { "x": 80, "y": 302 },
+      "enter": "hard cut 4 frames after the beat cut; echo ring lands 39 frames after the chip appears",
+      "allowedValues": { "MOON": "1.3 s" }
+    },
+    "giantType": {
+      "style": "giantNumber",
+      "enter": "slam: scale 1.12 to 1.0 over 5 frames on the enter curve, origin left center",
+      "stack": "a word line and a number line (DAY / 20) slam 8 frames apart",
+      "countUp": { "spring": { "zeta": 0.8, "f": 2 }, "cap": "true value", "monotonic": true, "firstFrame": "first nonzero step, never a zero value" }
+    },
+    "diagram": {
+      "ground": "ink",
+      "stroke": { "color": "amber", "width": 4, "linecap": "butt", "pastPathDash": [10, 12] },
+      "markers": { "event": "amber filled circle r 11", "spacecraft": "paper filled square 18" },
+      "labels": "diagramLabel, paper, fixed size at any camera scale",
+      "requiredLabel": "DIAGRAM · NOT TO SCALE",
+      "zone": { "belowNumberBlock": [730, 1180], "belowDate": [540, 1180] },
+      "rule": "Use a diagram for any beat that no supplied photo depicts. Never put a photo on a beat it does not show. Flat line art only, so it can never pass as a photo.",
+      "camera": "cuts between framings on multiples of 15; strokes stay 4 px at every scale"
+    },
+    "nextCard": {
+      "ground": "ink, no photo",
+      "layout": {
+        "ticks": "all 7 amber",
+        "kicker": "NEXT ON <SERIES> with the series mark, same position as every frame",
+        "headline": { "style": "headline", "x": 80, "y": 330, "maxLines": 4 },
+        "date": { "style": "data", "size": 64, "color": "amber", "x": 80, "y": 698, "format": "DDD DD MMM" },
+        "pointer": { "text": "This week in space · Sunday", "size": 28, "box": "2 px amber outline", "x": 80, "y": 800, "icon": "amber arrow M3 14 H23 M15 6 L23 14 L15 22" },
+        "diagram": { "optional": true, "position": "right half, y 1000 to 1230", "label": "DIAGRAM · NOT TO SCALE in muted" },
+        "wordmark": { "x": 80, "y": 1404, "size": 64, "markHeight": 44 }
+      },
+      "timing": { "minimumHold": "0.3 s per word of the headline + 0.5 s", "order": ["headline with kicker on the cut", "date +15 f", "pointer +30 f", "diagram +34 f", "wordmark dot +45 f", "echo ring +84 f (39 f after the dot)"], "lastFrame": "ends on the completed wordmark; kicker sits where frame 0 kicker sits so the loop reads as the next episode" },
+      "example": { "kicker": "NEXT ON LAUNCH DAY", "headline": "Japan's MMX launches for the moons of Mars.", "date": "MON 19 OCT", "pointer": "This week in space · Sunday" }
+    },
+    "photo": {
+      "fit": "cover the 1080 x 1920 frame; crops chosen per shot",
+      "credit": "always on screen with the photo",
+      "rule": "No added glow, flare or gradient. A real camera flare in the source stays as shot."
+    }
+  },
+  "motion": {
+    "fps": 30,
+    "easing": {
+      "enter": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "move": "cubic-bezier(0.76, 0, 0.24, 1)",
+      "exit": "cubic-bezier(0.7, 0, 0.84, 0)",
+      "exitDurationRatio": [0.5, 0.6]
+    },
+    "spring": {
+      "formula": "1 - exp(-zeta*w*t) * (cos(wd*t) + (zeta*w/wd) * sin(wd*t)), w = 2*pi*f, wd = w*sqrt(1 - zeta^2)",
+      "countUp": { "zeta": 0.8, "f": 2 },
+      "punchIn": { "zeta": 0.7, "f": 4, "settleFrames": 6 },
+      "echoRing": { "zeta": 0.7, "f": 4, "scaleFrom": 0.4, "opacityFrames": 3 },
+      "overshoot": "position and scale only; opacity and color never overshoot"
+    },
+    "beatGrid": { "bpm": 120, "framesPerBeat": 15, "rule": "something meaningful lands on every beat: a cut, a punch-in, a new word, a number or a mark" },
+    "cuts": { "landOn": "multiples of 15 frames", "shotLength": [15, 30], "maxFramesWithoutPictureChange": 30, "transition": "hard cut only" },
+    "punchIn": { "amount": 0.04, "when": "middle beat of a 30-frame shot", "maxPerShot": 0.10 },
+    "slam": { "from": 1.12, "to": 1.0, "frames": 5, "easing": "enter" },
+    "secondary": { "delayFrames": 4, "travel": 0.6 },
+    "wordCadence": { "framesBetweenWords": 8, "wordsPerLine": [1, 4], "linesPerChunk": 2, "enter": "hard cut-in, no fade", "active": "newest word amber" },
+    "flashLimit": "no more than 3 flashes per second",
+    "banned": ["fade-and-slide-up on everything", "everything entering at once", "typewriter text", "glow, bloom or added lens flares", "starfields or particles", "nebula gradients", "HUD rings or interface chrome", "frosted glass"],
+    "shortTemplate": {
+      "duration": "15 s at 30 fps (450 frames)",
+      "beats": [
+        { "frames": [0, 29], "content": "hook: series kicker + giant number on a photo, frame 0 finished" },
+        { "frames": [30, 59], "content": "story beat on photo" },
+        { "frames": [60, 104], "content": "story beat on photo" },
+        { "frames": [105, 179], "content": "story beat on photo" },
+        { "frames": [180, 239], "content": "story beat with the signal delay chip" },
+        { "frames": [240, 314], "content": "number beat; diagram when no photo shows it" },
+        { "frames": [315, 359], "content": "outcome beat; diagram when no photo shows it" },
+        { "frames": [360, 449], "content": "NEXT card, held for reading, ends on the wordmark" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,341 @@
+{
+ "built": "2026-10-19T17:15:39.408Z",
+ "shortDir": "shorts/2026-10-19-artemis-heat-shield",
+ "frames": 1016,
+ "seconds": 33.867,
+ "buildSeconds": 11.9,
+ "beats": [
+  {
+   "i": 0,
+   "id": "hook",
+   "type": "hook",
+   "word": 5,
+   "T0": 0,
+   "T1": 100,
+   "end": 112,
+   "transition": {
+    "type": "none",
+    "N": 0
+   }
+  },
+  {
+   "i": 1,
+   "id": "cabin",
+   "type": "count",
+   "word": 106,
+   "T0": 100,
+   "T1": 155,
+   "end": 169,
+   "transition": {
+    "type": "morph",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 2,
+   "id": "outside",
+   "type": "photo",
+   "word": 163,
+   "T0": 155,
+   "T1": 258,
+   "end": 270,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 3,
+   "id": "blocks",
+   "type": "photo",
+   "word": 264,
+   "T0": 258,
+   "T1": 389,
+   "end": 401,
+   "transition": {
+    "type": "push",
+    "dir": "down",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 4,
+   "id": "artemis1",
+   "type": "photo",
+   "word": 396,
+   "T0": 389,
+   "T1": 452,
+   "end": 466,
+   "transition": {
+    "type": "iris",
+    "frames": 12,
+    "N": 12
+   }
+  },
+  {
+   "i": 5,
+   "id": "path",
+   "type": "diagram",
+   "word": 459,
+   "T0": 452,
+   "T1": 667,
+   "end": 681,
+   "transition": {
+    "type": "morph",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 6,
+   "id": "result",
+   "type": "photo",
+   "word": 675,
+   "T0": 667,
+   "T1": 734,
+   "end": 748,
+   "transition": {
+    "type": "iris",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 7,
+   "id": "artemis1_spots",
+   "type": "photo",
+   "word": 741,
+   "T0": 734,
+   "T1": 812,
+   "end": 812,
+   "transition": {
+    "type": "push",
+    "dir": "right",
+    "frames": 14,
+    "N": 14
+   }
+  },
+  {
+   "i": 8,
+   "id": "next",
+   "type": "next",
+   "word": 812,
+   "T0": 812,
+   "T1": 1016,
+   "end": 1016,
+   "transition": {
+    "type": "cut",
+    "N": 0
+   }
+  }
+ ],
+ "chunks": [
+  {
+   "f0": 5,
+   "f1": 72,
+   "text": "Orion came home / at 39 times the"
+  },
+  {
+   "f0": 72,
+   "f1": 117,
+   "text": "speed of sound, / and the cabin"
+  },
+  {
+   "f0": 117,
+   "f1": 163,
+   "text": "stayed in / the mid-70s."
+  },
+  {
+   "f0": 163,
+   "f1": 194,
+   "text": "Outside, it passed"
+  },
+  {
+   "f0": 194,
+   "f1": 260,
+   "text": "4,000 degrees / Fahrenheit."
+  },
+  {
+   "f0": 260,
+   "f1": 320,
+   "text": "The heat shield / took it:"
+  },
+  {
+   "f0": 320,
+   "f1": 388,
+   "text": "186 blocks / of Avcoat."
+  },
+  {
+   "f0": 388,
+   "f1": 417,
+   "text": "After Artemis I,"
+  },
+  {
+   "f0": 417,
+   "f1": 459,
+   "text": "NASA changed / the path home."
+  },
+  {
+   "f0": 459,
+   "f1": 480,
+   "text": "How?"
+  },
+  {
+   "f0": 480,
+   "f1": 507,
+   "text": "It capped how"
+  },
+  {
+   "f0": 507,
+   "f1": 546,
+   "text": "far Orion could / fly through"
+  },
+  {
+   "f0": 546,
+   "f1": 597,
+   "text": "the atmosphere, / so less time"
+  },
+  {
+   "f0": 597,
+   "f1": 621,
+   "text": "in the temperature / range"
+  },
+  {
+   "f0": 621,
+   "f1": 662,
+   "text": "that damaged / Artemis I."
+  },
+  {
+   "f0": 662,
+   "f1": 688,
+   "text": "The result:"
+  },
+  {
+   "f0": 688,
+   "f1": 741,
+   "text": "nine spots / of char loss."
+  },
+  {
+   "f0": 741,
+   "f1": 812,
+   "text": "Artemis I had 103."
+  },
+  {
+   "f0": 812,
+   "f1": 858,
+   "text": "NASA updates / its Moon plans"
+  },
+  {
+   "f0": 858,
+   "f1": 911,
+   "text": "on Friday, / October 23."
+  },
+  {
+   "f0": 911,
+   "f1": 942,
+   "text": "Follow / Downlink Cat"
+  },
+  {
+   "f0": 942,
+   "f1": 1016,
+   "text": "for the update."
+  }
+ ],
+ "cues": 17,
+ "cat": {
+  "share": 0.563,
+  "framesOn": 572,
+  "windows": [
+   [
+    7,
+    119
+   ],
+   [
+    262,
+    405
+   ],
+   [
+    457,
+    617
+   ],
+   [
+    862,
+    1015
+   ]
+  ],
+  "moves": [
+   "enter pop",
+   "gasp",
+   "exit zip",
+   "enter drop",
+   "point",
+   "nod",
+   "shrug",
+   "exit tether",
+   "enter skid",
+   "what",
+   "listen",
+   "enter float",
+   "bounce",
+   "hop",
+   "wave"
+  ],
+  "hits": 201,
+  "hardHits": 0,
+  "exemptHits": 89
+ },
+ "problems": [],
+ "notes": [
+  "cat crosses a subject mid-travel (hop, walk, skid...) on 28 frames: 924-949, 956-957; look at these stills",
+  "cat leaves the safe zone on 79 frames outside entrances and exits: 62, 499-533, 561-603",
+  "beat next: more than 40% of the band y 640 to 1150 is empty (no picture, no line art, no cat) on frames 820, 825, 830, 835, 840, 845, 850, 855, 860 (fill the frame: a larger lens, a lower diagram, the cat)"
+ ],
+ "warnings": [],
+ "qaFrames": [
+  0,
+  5,
+  53,
+  99,
+  100,
+  106,
+  112,
+  131,
+  154,
+  155,
+  163,
+  169,
+  211,
+  257,
+  258,
+  264,
+  270,
+  327,
+  388,
+  389,
+  396,
+  401,
+  424,
+  451,
+  452,
+  459,
+  466,
+  563,
+  666,
+  667,
+  675,
+  681,
+  705,
+  733,
+  734,
+  741,
+  748,
+  777,
+  811,
+  812,
+  914,
+  1015
+ ]
+}

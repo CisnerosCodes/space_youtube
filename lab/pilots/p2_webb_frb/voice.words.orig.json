@@ -1,0 +1,427 @@
+{
+ "audio": "voice.mp3",
+ "duration": 30.24,
+ "text": "A flash lasting one thousandth of a second left when the universe was only three billion years old.  Astronomers just confirmed the farthest fast radio burst ever seen.  Nobody knows what makes these bursts.  So what was out there?  Ground telescopes saw nothing at that spot.  Webb found a galaxy.  A dwarf 1,000 times less massive than expected.  That makes a neutron star merger very unlikely, the team says.  Miracat may find several more every year.  Follow Signal Delay for the next one.",
+ "words": [
+  {
+   "w": "A",
+   "start": 0.09,
+   "end": 0.21
+  },
+  {
+   "w": "flash",
+   "start": 0.21,
+   "end": 0.47
+  },
+  {
+   "w": "lasting",
+   "start": 0.47,
+   "end": 0.91
+  },
+  {
+   "w": "one",
+   "start": 0.91,
+   "end": 1.25
+  },
+  {
+   "w": "thousandth",
+   "start": 1.25,
+   "end": 2.15
+  },
+  {
+   "w": "of",
+   "start": 2.15,
+   "end": 2.23
+  },
+  {
+   "w": "a",
+   "start": 2.23,
+   "end": 2.33
+  },
+  {
+   "w": "second",
+   "start": 2.33,
+   "end": 2.65
+  },
+  {
+   "w": "left",
+   "start": 2.65,
+   "end": 2.93
+  },
+  {
+   "w": "when",
+   "start": 2.93,
+   "end": 3.09
+  },
+  {
+   "w": "the",
+   "start": 3.09,
+   "end": 3.17
+  },
+  {
+   "w": "universe",
+   "start": 3.17,
+   "end": 3.45
+  },
+  {
+   "w": "was",
+   "start": 3.45,
+   "end": 3.67
+  },
+  {
+   "w": "only",
+   "start": 3.67,
+   "end": 3.91
+  },
+  {
+   "w": "three",
+   "start": 3.91,
+   "end": 4.31
+  },
+  {
+   "w": "billion",
+   "start": 4.31,
+   "end": 4.83
+  },
+  {
+   "w": "years",
+   "start": 4.83,
+   "end": 5.19
+  },
+  {
+   "w": "old.",
+   "start": 5.19,
+   "end": 5.73
+  },
+  {
+   "w": "Astronomers",
+   "start": 5.73,
+   "end": 6.55
+  },
+  {
+   "w": "just",
+   "start": 6.55,
+   "end": 6.77
+  },
+  {
+   "w": "confirmed",
+   "start": 6.77,
+   "end": 7.23
+  },
+  {
+   "w": "the",
+   "start": 7.23,
+   "end": 7.55
+  },
+  {
+   "w": "farthest",
+   "start": 7.55,
+   "end": 8.19
+  },
+  {
+   "w": "fast",
+   "start": 8.19,
+   "end": 8.53
+  },
+  {
+   "w": "radio",
+   "start": 8.53,
+   "end": 8.95
+  },
+  {
+   "w": "burst",
+   "start": 8.95,
+   "end": 9.25
+  },
+  {
+   "w": "ever",
+   "start": 9.25,
+   "end": 9.67
+  },
+  {
+   "w": "seen.",
+   "start": 9.67,
+   "end": 10.11
+  },
+  {
+   "w": "Nobody",
+   "start": 10.11,
+   "end": 10.65
+  },
+  {
+   "w": "knows",
+   "start": 10.65,
+   "end": 10.91
+  },
+  {
+   "w": "what",
+   "start": 10.91,
+   "end": 11.09
+  },
+  {
+   "w": "makes",
+   "start": 11.09,
+   "end": 11.35
+  },
+  {
+   "w": "these",
+   "start": 11.35,
+   "end": 11.53
+  },
+  {
+   "w": "bursts.",
+   "start": 11.53,
+   "end": 11.91
+  },
+  {
+   "w": "So",
+   "start": 11.91,
+   "end": 12.21
+  },
+  {
+   "w": "what",
+   "start": 12.21,
+   "end": 12.59
+  },
+  {
+   "w": "was",
+   "start": 12.59,
+   "end": 12.71
+  },
+  {
+   "w": "out",
+   "start": 12.71,
+   "end": 12.85
+  },
+  {
+   "w": "there?",
+   "start": 12.85,
+   "end": 13.29
+  },
+  {
+   "w": "Ground",
+   "start": 13.29,
+   "end": 13.91
+  },
+  {
+   "w": "telescopes",
+   "start": 13.91,
+   "end": 14.29
+  },
+  {
+   "w": "saw",
+   "start": 14.29,
+   "end": 14.69
+  },
+  {
+   "w": "nothing",
+   "start": 14.69,
+   "end": 15.35
+  },
+  {
+   "w": "at",
+   "start": 15.35,
+   "end": 15.71
+  },
+  {
+   "w": "that",
+   "start": 15.71,
+   "end": 15.87
+  },
+  {
+   "w": "spot.",
+   "start": 15.87,
+   "end": 16.29
+  },
+  {
+   "w": "Webb",
+   "start": 16.29,
+   "end": 16.75
+  },
+  {
+   "w": "found",
+   "start": 16.75,
+   "end": 17.19
+  },
+  {
+   "w": "a",
+   "start": 17.19,
+   "end": 17.35
+  },
+  {
+   "w": "galaxy.",
+   "start": 17.35,
+   "end": 17.99
+  },
+  {
+   "w": "A",
+   "start": 17.99,
+   "end": 18.49
+  },
+  {
+   "w": "dwarf",
+   "start": 18.49,
+   "end": 18.75
+  },
+  {
+   "w": "1",
+   "start": 18.75,
+   "end": 19.13
+  },
+  {
+   "w": ",000",
+   "start": 19.13,
+   "end": 19.91
+  },
+  {
+   "w": "times",
+   "start": 19.91,
+   "end": 20.11
+  },
+  {
+   "w": "less",
+   "start": 20.11,
+   "end": 20.49
+  },
+  {
+   "w": "massive",
+   "start": 20.49,
+   "end": 20.93
+  },
+  {
+   "w": "than",
+   "start": 20.93,
+   "end": 21.07
+  },
+  {
+   "w": "expected.",
+   "start": 21.07,
+   "end": 21.65
+  },
+  {
+   "w": "That",
+   "start": 21.65,
+   "end": 22.11
+  },
+  {
+   "w": "makes",
+   "start": 22.11,
+   "end": 22.31
+  },
+  {
+   "w": "a",
+   "start": 22.31,
+   "end": 22.53
+  },
+  {
+   "w": "neutron",
+   "start": 22.53,
+   "end": 22.77
+  },
+  {
+   "w": "star",
+   "start": 22.77,
+   "end": 23.13
+  },
+  {
+   "w": "merger",
+   "start": 23.13,
+   "end": 23.43
+  },
+  {
+   "w": "very",
+   "start": 23.43,
+   "end": 24.03
+  },
+  {
+   "w": "unlikely,",
+   "start": 24.03,
+   "end": 24.73
+  },
+  {
+   "w": "the",
+   "start": 24.73,
+   "end": 24.85
+  },
+  {
+   "w": "team",
+   "start": 24.85,
+   "end": 25.01
+  },
+  {
+   "w": "says.",
+   "start": 25.01,
+   "end": 25.61
+  },
+  {
+   "w": "Miracat",
+   "start": 25.67,
+   "end": 26.23
+  },
+  {
+   "w": "may",
+   "start": 26.23,
+   "end": 26.43
+  },
+  {
+   "w": "find",
+   "start": 26.43,
+   "end": 26.67
+  },
+  {
+   "w": "several",
+   "start": 26.67,
+   "end": 27.09
+  },
+  {
+   "w": "more",
+   "start": 27.09,
+   "end": 27.27
+  },
+  {
+   "w": "every",
+   "start": 27.27,
+   "end": 27.65
+  },
+  {
+   "w": "year.",
+   "start": 27.65,
+   "end": 28.19
+  },
+  {
+   "w": "Follow",
+   "start": 28.19,
+   "end": 28.59
+  },
+  {
+   "w": "Signal",
+   "start": 28.59,
+   "end": 28.89
+  },
+  {
+   "w": "Delay",
+   "start": 28.89,
+   "end": 29.19
+  },
+  {
+   "w": "for",
+   "start": 29.19,
+   "end": 29.31
+  },
+  {
+   "w": "the",
+   "start": 29.31,
+   "end": 29.43
+  },
+  {
+   "w": "next",
+   "start": 29.43,
+   "end": 29.57
+  },
+  {
+   "w": "one.",
+   "start": 29.57,
+   "end": 29.83
+  }
+ ]
+}

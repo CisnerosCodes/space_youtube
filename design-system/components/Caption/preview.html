@@ -1,0 +1,28 @@
+<!-- @dsCard group="Shorts overlay" height=420 subtitle="Two caption lines on a photo, newest word in amber, 50% scale" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@500&display=block">
+<style>
+body{margin:0;background:var(--ink,#0b0b0c)}
+.frame{position:relative;width:540px;height:400px;overflow:hidden}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+.lines{position:absolute;left:40px;top:150px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.line{background:var(--caption-box,rgba(11,11,12,.88));padding:4px 8px;font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-stretch:100%;font-size:45px;line-height:48px;color:var(--paper,#f2efe8)}
+.on{color:var(--amber,#f5b83d)}
+.credit{position:absolute;left:40px;bottom:24px;background:var(--ink,#0b0b0c);padding:3px 6px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;font-size:12px;line-height:14px;color:var(--paper,#f2efe8)}
+</style>
+</head>
+<body>
+<div class="frame">
+  <img src="/_blob/e31bd267cb37c3a5cd157a8907015889" alt="Earth rising behind the Moon, seen from Orion on Artemis I flight day 20">
+  <div class="lines">
+    <span class="line">Earth rises</span>
+    <span class="line">behind the <span class="on">Moon.</span></span>
+  </div>
+  <span class="credit">NASA</span>
+</div>
+<script></script>
+</body>
+</html>

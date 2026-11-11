@@ -1,0 +1,352 @@
+{
+ "audio": "voice.mp3",
+ "duration": 35.85,
+ "text": "A robot on Mars just outdrove every vehicle ever sent to another world. On October 11th, it passed 28.10 miles. The old record, set by Opportunity, was 28.06. Opportunity needed almost 15 years. Perseverance took five and a half. How? It drives itself, mapping hazards while rolling. Sojourner checked 20 points ahead. Perseverance checked 600,000. water systems. NASA expects the record to keep growing. Follow downlink cat to watch.",
+ "words": [
+  {
+   "w": "A",
+   "start": 0.22,
+   "end": 0.24
+  },
+  {
+   "w": "robot",
+   "start": 0.32,
+   "end": 0.66
+  },
+  {
+   "w": "on",
+   "start": 0.761,
+   "end": 0.821
+  },
+  {
+   "w": "Mars",
+   "start": 0.881,
+   "end": 1.141
+  },
+  {
+   "w": "just",
+   "start": 1.261,
+   "end": 1.401
+  },
+  {
+   "w": "outdrove",
+   "start": 1.521,
+   "end": 1.942
+  },
+  {
+   "w": "every",
+   "start": 2.202,
+   "end": 2.422
+  },
+  {
+   "w": "vehicle",
+   "start": 2.502,
+   "end": 2.942
+  },
+  {
+   "w": "ever",
+   "start": 3.263,
+   "end": 3.443
+  },
+  {
+   "w": "sent",
+   "start": 3.523,
+   "end": 3.723
+  },
+  {
+   "w": "to",
+   "start": 3.963,
+   "end": 4.063
+  },
+  {
+   "w": "another",
+   "start": 4.163,
+   "end": 4.424
+  },
+  {
+   "w": "world.",
+   "start": 4.484,
+   "end": 4.724
+  },
+  {
+   "w": "On",
+   "start": 5.364,
+   "end": 5.404
+  },
+  {
+   "w": "October",
+   "start": 5.465,
+   "end": 5.845
+  },
+  {
+   "w": "11th,",
+   "start": 5.865,
+   "end": 6.205
+  },
+  {
+   "w": "it",
+   "start": 6.385,
+   "end": 6.445
+  },
+  {
+   "w": "passed",
+   "start": 6.505,
+   "end": 6.826
+  },
+  {
+   "w": "28.10",
+   "start": 6.946,
+   "end": 8.027
+  },
+  {
+   "w": "miles.",
+   "start": 8.047,
+   "end": 8.367
+  },
+  {
+   "w": "The",
+   "start": 8.807,
+   "end": 8.927
+  },
+  {
+   "w": "old",
+   "start": 8.988,
+   "end": 9.088
+  },
+  {
+   "w": "record,",
+   "start": 9.148,
+   "end": 9.408
+  },
+  {
+   "w": "set",
+   "start": 9.568,
+   "end": 9.688
+  },
+  {
+   "w": "by",
+   "start": 9.728,
+   "end": 9.788
+  },
+  {
+   "w": "Opportunity,",
+   "start": 9.808,
+   "end": 10.309
+  },
+  {
+   "w": "was",
+   "start": 10.669,
+   "end": 10.809
+  },
+  {
+   "w": "28.06.",
+   "start": 10.829,
+   "end": 12.21
+  },
+  {
+   "w": "Opportunity",
+   "start": 12.911,
+   "end": 13.591
+  },
+  {
+   "w": "needed",
+   "start": 13.651,
+   "end": 13.912
+  },
+  {
+   "w": "almost",
+   "start": 13.972,
+   "end": 14.252
+  },
+  {
+   "w": "15",
+   "start": 14.412,
+   "end": 14.912
+  },
+  {
+   "w": "years.",
+   "start": 14.953,
+   "end": 15.473
+  },
+  {
+   "w": "Perseverance",
+   "start": 15.913,
+   "end": 16.514
+  },
+  {
+   "w": "took",
+   "start": 16.714,
+   "end": 16.854
+  },
+  {
+   "w": "five",
+   "start": 17.054,
+   "end": 17.254
+  },
+  {
+   "w": "and",
+   "start": 17.274,
+   "end": 17.375
+  },
+  {
+   "w": "a",
+   "start": 17.375,
+   "end": 17.415
+  },
+  {
+   "w": "half.",
+   "start": 17.455,
+   "end": 17.675
+  },
+  {
+   "w": "How?",
+   "start": 18.355,
+   "end": 18.576
+  },
+  {
+   "w": "It",
+   "start": 19.296,
+   "end": 19.356
+  },
+  {
+   "w": "drives",
+   "start": 19.416,
+   "end": 19.756
+  },
+  {
+   "w": "itself,",
+   "start": 19.797,
+   "end": 20.237
+  },
+  {
+   "w": "mapping",
+   "start": 20.697,
+   "end": 20.977
+  },
+  {
+   "w": "hazards",
+   "start": 21.038,
+   "end": 21.478
+  },
+  {
+   "w": "while",
+   "start": 21.638,
+   "end": 21.918
+  },
+  {
+   "w": "rolling.",
+   "start": 22.018,
+   "end": 22.359
+  },
+  {
+   "w": "Sojourner",
+   "start": 22.959,
+   "end": 23.4
+  },
+  {
+   "w": "checked",
+   "start": 23.48,
+   "end": 23.72
+  },
+  {
+   "w": "20",
+   "start": 23.82,
+   "end": 24.08
+  },
+  {
+   "w": "points",
+   "start": 24.14,
+   "end": 24.36
+  },
+  {
+   "w": "ahead.",
+   "start": 24.38,
+   "end": 24.581
+  },
+  {
+   "w": "Perseverance",
+   "start": 24.941,
+   "end": 25.501
+  },
+  {
+   "w": "checked",
+   "start": 25.681,
+   "end": 25.922
+  },
+  {
+   "w": "600,000.",
+   "start": 26.142,
+   "end": 27.323
+  },
+  {
+   "w": "water",
+   "start": 30.225,
+   "end": 30.465
+  },
+  {
+   "w": "systems.",
+   "start": 30.506,
+   "end": 30.866
+  },
+  {
+   "w": "NASA",
+   "start": 31.366,
+   "end": 31.666
+  },
+  {
+   "w": "expects",
+   "start": 31.787,
+   "end": 32.087
+  },
+  {
+   "w": "the",
+   "start": 32.107,
+   "end": 32.207
+  },
+  {
+   "w": "record",
+   "start": 32.267,
+   "end": 32.487
+  },
+  {
+   "w": "to",
+   "start": 32.567,
+   "end": 32.647
+  },
+  {
+   "w": "keep",
+   "start": 32.827,
+   "end": 32.968
+  },
+  {
+   "w": "growing.",
+   "start": 33.048,
+   "end": 33.408
+  },
+  {
+   "w": "Follow",
+   "start": 34.089,
+   "end": 34.309
+  },
+  {
+   "w": "downlink",
+   "start": 34.369,
+   "end": 34.669
+  },
+  {
+   "w": "cat",
+   "start": 34.729,
+   "end": 34.889
+  },
+  {
+   "w": "to",
+   "start": 34.949,
+   "end": 35.029
+  },
+  {
+   "w": "watch.",
+   "start": 35.129,
+   "end": 35.41
+  }
+ ]
+}

@@ -1,0 +1,2459 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Downlink Cat: MMX heist (anime)</title>
+<style>
+@font-face{font-family:'Archivo';src:url(fonts/archivo.woff2) format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:block}
+@font-face{font-family:'Archivo';src:url(fonts/archivo-italic.woff2) format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:italic;font-display:block}
+@font-face{font-family:'Plex Mono';src:url(fonts/plexmono-500.woff2) format('woff2');font-weight:500;font-display:block}
+@font-face{font-family:'Plex Mono';src:url(fonts/plexmono-600.woff2) format('woff2');font-weight:600;font-display:block}
+@font-face{font-family:'Dela Gothic One';src:url(fonts/delagothic.woff2) format('woff2');font-weight:400;font-display:block}
+html,body{margin:0;padding:0;background:#0b0b0c;overflow:hidden}
+canvas{display:block}
+#fontwarm{position:absolute;left:-9999px;top:0;font-size:20px}
+</style></head>
+<body><canvas id="cv" width="1080" height="1920"></canvas>
+<div id="fontwarm"><span style="font-family:Archivo;font-weight:800">Aa</span><span style="font-family:Archivo;font-weight:900;font-style:italic">Aa</span><span style="font-family:'Plex Mono';font-weight:600">Aa</span><span style="font-family:'Plex Mono';font-weight:500">Aa</span><span style="font-family:'Dela Gothic One'">Aa1ゴドン</span></div>
+<script>
+const WORDS = [{"text":"This","start":0.15,"end":0.29},{"text":"moon","start":0.29,"end":0.63},{"text":"is","start":0.63,"end":0.81},{"text":"on","start":0.81,"end":0.97},{"text":"a","start":0.97,"end":1.07},{"text":"slow-motion","start":1.07,"end":1.79},{"text":"collision","start":1.79,"end":2.19},{"text":"course","start":2.19,"end":2.59},{"text":"with","start":2.59,"end":2.85},{"text":"Mars.","start":2.85,"end":3.43},{"text":"Japan","start":3.43,"end":3.93},{"text":"just","start":3.93,"end":4.35},{"text":"launched","start":4.35,"end":4.73},{"text":"a","start":4.73,"end":4.91},{"text":"heist","start":4.91,"end":5.37},{"text":"to","start":5.37,"end":5.61},{"text":"steal","start":5.61,"end":6.03},{"text":"a","start":6.03,"end":6.27},{"text":"piece","start":6.27,"end":6.55},{"text":"of","start":6.55,"end":6.73},{"text":"it.","start":6.73,"end":7.33},{"text":"Step","start":7.33,"end":7.61},{"text":"one:","start":7.61,"end":8.01},{"text":"Mars,","start":8.01,"end":8.79},{"text":"August","start":8.79,"end":9.33},{"text":"2027.","start":9.33,"end":10.27},{"text":"Step","start":10.74,"end":11.28},{"text":"two:","start":11.28,"end":11.74},{"text":"drop","start":11.74,"end":12.22},{"text":"a","start":12.22,"end":12.5},{"text":"lookout.","start":12.5,"end":13.1},{"text":"A","start":13.1,"end":13.48},{"text":"25","start":13.48,"end":13.92},{"text":"kilo","start":13.92,"end":14.38},{"text":"rover.","start":14.38,"end":14.86},{"text":"On","start":14.86,"end":15.34},{"text":"Phobos,","start":15.34,"end":15.96},{"text":"it","start":15.96,"end":16.12},{"text":"weighs...","start":16.12,"end":16.52},{"text":"15","start":16.52,"end":17.44},{"text":"grams.","start":17.44,"end":18.14},{"text":"Step","start":18.99,"end":19.23},{"text":"three:","start":19.23,"end":19.63},{"text":"the","start":20.04,"end":20.14},{"text":"grab.","start":20.14,"end":20.6},{"text":"Coring","start":21,"end":21.38},{"text":"arm,","start":21.38,"end":21.78},{"text":"nitrogen","start":21.78,"end":22.18},{"text":"blaster.","start":22.18,"end":22.9},{"text":"Target:","start":22.9,"end":23.52},{"text":"at","start":23.52,"end":23.9},{"text":"least","start":23.9,"end":24.1},{"text":"10","start":24.1,"end":24.4},{"text":"grams.","start":24.4,"end":24.9},{"text":"Step","start":25.59,"end":25.81},{"text":"four:","start":25.81,"end":26.25},{"text":"one","start":26.25,"end":26.73},{"text":"burn","start":26.73,"end":27.01},{"text":"to","start":27.01,"end":27.25},{"text":"leave","start":27.25,"end":27.45},{"text":"Mars.","start":27.45,"end":27.89},{"text":"Capsule","start":28.2,"end":28.64},{"text":"lands","start":28.64,"end":28.78},{"text":"in","start":28.78,"end":28.96},{"text":"Australia,","start":28.96,"end":29.54},{"text":"2031.","start":29.54,"end":30.42},{"text":"The","start":30.92,"end":31.28},{"text":"loot?","start":31.28,"end":31.62},{"text":"First","start":31.62,"end":32.28},{"text":"piece","start":32.28,"end":32.66},{"text":"of","start":32.66,"end":32.94},{"text":"Phobos","start":32.94,"end":33.3},{"text":"ever","start":33.3,"end":33.66},{"text":"brought","start":33.66,"end":33.94},{"text":"home.","start":33.94,"end":34.34},{"text":"Next:","start":34.89,"end":35.35},{"text":"Rocket","start":35.35,"end":35.67},{"text":"Lab","start":35.67,"end":35.83},{"text":"aims","start":35.83,"end":36.07},{"text":"to","start":36.07,"end":36.27},{"text":"launch","start":36.27,"end":36.45},{"text":"three","start":36.45,"end":36.75},{"text":"HawkEye","start":36.75,"end":37.25},{"text":"360","start":37.25,"end":37.49},{"text":"satellites,","start":37.49,"end":38.03},{"text":"Wednesday.","start":38.03,"end":38.73},{"text":"Follow","start":38.89,"end":39.47},{"text":"Downlink","start":39.47,"end":39.91},{"text":"Cat.","start":39.91,"end":40.29}];
+// ===== core.js =====
+// core.js: math, seeded noise, line boil, cel shapes, anime effects. Everything is a pure function of t.
+'use strict';
+const W = 1080, H = 1920, FPS = 30;
+const C = {
+  ink: '#0b0b0c', ink2: '#15161f', night: '#0e1230', night2: '#1b2152', night3: '#2c2f6b',
+  paper: '#f2efe8', paper2: '#d9d3c6', paper3: '#b9b2a3',
+  amber: '#f5b83d', amber2: '#c9861f', amber3: '#ffd77a',
+  fur: '#232536', fur2: '#13141d', fur3: '#3a3e5c', furLine: '#4d5276',
+  red: '#e2402f', red2: '#9c1f1c', mars: '#c9562f', mars2: '#8a2f1c', mars3: '#ec8a52',
+  pho: '#9d8574', pho2: '#6b5648', pho3: '#cbb59f', pho4: '#4a3a31',
+  sky: '#cfe3f0', cyan: '#7fd6ff', blue: '#2b5fd9', blue2: '#163a8f', green: '#6fa35a', green2: '#4b7a3e',
+  smoke: '#e9e4da', smoke2: '#b7b0a6', smoke3: '#7d7872', fire: '#ffb347', fire2: '#ff6a2a', fire3: '#fff3c4',
+};
+
+// ---------- math ----------
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const inv = (a, b, x) => clamp((x - a) / (b - a));
+const smooth = (x) => x * x * (3 - 2 * x);
+const ss = (a, b, x) => smooth(inv(a, b, x));
+const E = {
+  out: (x) => 1 - Math.pow(1 - clamp(x), 3),
+  out5: (x) => 1 - Math.pow(1 - clamp(x), 5),
+  in: (x) => Math.pow(clamp(x), 3),
+  io: (x) => { x = clamp(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; },
+  back: (x, s = 1.9) => { x = clamp(x) - 1; return 1 + x * x * ((s + 1) * x + s); },
+};
+// damped spring 0 -> 1, t in seconds
+function spring(t, zeta = 0.45, f = 3.2) {
+  if (t <= 0) return 0;
+  const w = 2 * Math.PI * f, wd = w * Math.sqrt(1 - zeta * zeta);
+  return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+}
+// decaying wobble used by hits
+const bump = (t, f = 9, d = 7) => (t < 0 ? 0 : Math.exp(-d * t) * Math.sin(2 * Math.PI * f * t));
+
+// ---------- seeded noise ----------
+function hash(a, b = 0, c = 0) {
+  let h = (a * 374761393 + b * 668265263 + c * 2147483647) | 0;
+  h = Math.imul(h ^ (h >>> 13), 1274126177);
+  h ^= h >>> 16;
+  return (h >>> 0) / 4294967296;
+}
+function mulberry(seed) {
+  let s = seed >>> 0;
+  return () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+// 1D value noise, smooth
+function vnoise(x, seed = 0) {
+  const i = Math.floor(x), f = x - i, u = f * f * (3 - 2 * f);
+  return lerp(hash(i, seed, 7), hash(i + 1, seed, 7), u) * 2 - 1;
+}
+
+// ---------- frame state ----------
+const G = { t: 0, f: 0, BF: 0, tc: 0, boilPx: 1.6, S: 1 };
+function setFrame(t) {
+  G.t = t; G.f = Math.round(t * FPS);
+  G.BF = Math.floor(G.f / 3);            // line boil: new drawing every 3 frames (10 fps)
+  G.tc = Math.floor(G.f / 2) * 2 / FPS;  // character time on twos (15 fps)
+}
+
+// ---------- canvas helpers ----------
+let ctx = null;
+function useCtx(c) { ctx = c; }
+// current uniform scale of the transform (px per unit), for constant-pixel boil
+function curScale() { const m = ctx.getTransform(); return Math.sqrt(Math.abs(m.a * m.d - m.b * m.c)) || 1; }
+
+// jitter: seed per shape, i per point, changes every boil frame
+function jit(seed, i, amp) {
+  return [(hash(seed, i * 2, G.BF) - 0.5) * 2 * amp, (hash(seed, i * 2 + 1, G.BF) - 0.5) * 2 * amp];
+}
+function boilPts(pts, seed, px = G.boilPx) {
+  const amp = px / curScale();
+  return pts.map((p, i) => { const j = jit(seed, i, amp); return [p[0] + j[0], p[1] + j[1]]; });
+}
+// Catmull-Rom spline through points as bezier (closed or open)
+function splinePath(pts, closed = true, tension = 1) {
+  const n = pts.length; if (n < 2) return;
+  ctx.moveTo(pts[0][0], pts[0][1]);
+  const get = (i) => (closed ? pts[(i + n) % n] : pts[clamp(i, 0, n - 1)]);
+  const last = closed ? n : n - 1;
+  for (let i = 0; i < last; i++) {
+    const p0 = get(i - 1), p1 = get(i), p2 = get(i + 1), p3 = get(i + 2);
+    const k = tension / 6;
+    ctx.bezierCurveTo(p1[0] + (p2[0] - p0[0]) * k, p1[1] + (p2[1] - p0[1]) * k, p2[0] - (p3[0] - p1[0]) * k, p2[1] - (p3[1] - p1[1]) * k, p2[0], p2[1]);
+  }
+  if (closed) ctx.closePath();
+}
+function polyPath(pts, closed = true) {
+  ctx.moveTo(pts[0][0], pts[0][1]);
+  for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+  if (closed) ctx.closePath();
+}
+// boiled smooth shape
+function shapePath(pts, seed, { smooth: sm = true, closed = true, px } = {}) {
+  const b = boilPts(pts, seed, px);
+  ctx.beginPath();
+  if (sm) splinePath(b, closed); else polyPath(b, closed);
+}
+// ellipse as points (for boil)
+function ellPts(cx, cy, rx, ry, n = 16, rot = 0) {
+  const out = [];
+  for (let i = 0; i < n; i++) { const a = (i / n) * Math.PI * 2; const x = Math.cos(a) * rx, y = Math.sin(a) * ry; out.push([cx + x * Math.cos(rot) - y * Math.sin(rot), cy + x * Math.sin(rot) + y * Math.cos(rot)]); }
+  return out;
+}
+// cel fill: base fill, clipped shadow drawn by fn, outline
+function cel(pathFn, { fill, shade, shadeFn, hi, hiFn, line = C.ink, lw = 0, keyline, keyW = 0 }) {
+  if (keyline && keyW) { pathFn(); ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.strokeStyle = keyline; ctx.lineWidth = keyW; ctx.stroke(); }
+  pathFn(); if (fill) { ctx.fillStyle = fill; ctx.fill(); }
+  if ((shade && shadeFn) || (hi && hiFn)) {
+    ctx.save(); pathFn(); ctx.clip();
+    if (shade && shadeFn) { ctx.fillStyle = shade; ctx.beginPath(); shadeFn(); ctx.fill(); }
+    if (hi && hiFn) { ctx.fillStyle = hi; ctx.beginPath(); hiFn(); ctx.fill(); }
+    ctx.restore();
+  }
+  if (lw) { pathFn(); ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.strokeStyle = line; ctx.lineWidth = lw; ctx.stroke(); }
+}
+// boiled stroke line through points
+function inkLine(pts, seed, { color = C.ink, lw = 4, smooth: sm = true, cap = 'round', px } = {}) {
+  const b = boilPts(pts, seed, px);
+  ctx.beginPath(); if (sm) splinePath(b, false); else polyPath(b, false);
+  ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineCap = cap; ctx.lineJoin = 'round'; ctx.stroke();
+}
+// tapered brush stroke (thick in middle, thin at ends)
+function brush(pts, seed, { color = C.ink, w0 = 1, w1 = 8, px } = {}) {
+  const b = boilPts(pts, seed, px);
+  const n = b.length; if (n < 2) return;
+  const L = [], R = [];
+  for (let i = 0; i < n; i++) {
+    const p = b[i], q = b[Math.min(n - 1, i + 1)], o = b[Math.max(0, i - 1)];
+    let dx = q[0] - o[0], dy = q[1] - o[1]; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+    const s = i / (n - 1), w = lerp(w0, w1, Math.sin(Math.PI * s));
+    L.push([p[0] - dy * w / 2, p[1] + dx * w / 2]); R.push([p[0] + dy * w / 2, p[1] - dx * w / 2]);
+  }
+  ctx.beginPath(); splinePath(L.concat(R.reverse()), true); ctx.fillStyle = color; ctx.fill();
+}
+
+// ---------- images ----------
+const IMG = {};
+function loadImg(key, src) {
+  return new Promise((res, rej) => { const im = new Image(); im.onload = () => { IMG[key] = im; res(); }; im.onerror = () => rej(new Error('img ' + src)); im.src = src; });
+}
+// draw image centred at (cx, cy) with width w, rotation r (deg)
+function drawImg(key, cx, cy, w, rot = 0, alpha = 1) {
+  const im = IMG[key]; if (!im) return; const h = w * im.height / im.width;
+  ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(cx, cy); ctx.rotate(rot * Math.PI / 180); ctx.drawImage(im, -w / 2, -h / 2, w, h); ctx.restore();
+}
+
+// ---------- backgrounds and effects ----------
+function fillBg(c) { ctx.fillStyle = c; ctx.fillRect(-200, -200, W + 400, H + 400); }
+function vGrad(stops, y0 = 0, y1 = H) {
+  const g = ctx.createLinearGradient(0, y0, 0, y1); stops.forEach(([k, c]) => g.addColorStop(k, c)); ctx.fillStyle = g; ctx.fillRect(-200, -200, W + 400, H + 400);
+}
+function radGlow(x, y, r, c0, c1 = 'rgba(0,0,0,0)') {
+  const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, c0); g.addColorStop(1, c1); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+}
+// 集中線: focus lines converging on (cx, cy). inner radius r0 (lines stop there), count n
+function focusLines(cx, cy, r0, { n = 90, color = C.paper, alpha = 0.9, seed = 1, wMax = 22, rate = 2, jitterR = 0.35, reach = 1500 } = {}) {
+  const bf = Math.floor(G.f / rate);
+  ctx.save(); ctx.globalAlpha *= alpha; ctx.fillStyle = color;
+  for (let i = 0; i < n; i++) {
+    const a = (i / n) * Math.PI * 2 + (hash(i, seed, bf) - 0.5) * (Math.PI * 2 / n) * 1.4;
+    if (hash(i, seed + 3, bf) < 0.18) continue;
+    const r1 = r0 * (1 + hash(i, seed + 1, bf) * jitterR * 2);
+    const w = wMax * (0.25 + 0.75 * hash(i, seed + 2, bf));
+    const ca = Math.cos(a), sa = Math.sin(a);
+    ctx.beginPath();
+    ctx.moveTo(cx + ca * r1, cy + sa * r1);
+    ctx.lineTo(cx + ca * reach - sa * w, cy + sa * reach + ca * w);
+    ctx.lineTo(cx + ca * reach + sa * w, cy + sa * reach - ca * w);
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+// parallel speed lines moving along angle ang (deg), filling the frame
+function speedLines(ang, { n = 40, color = C.paper, alpha = 0.7, seed = 5, speed = 3000, len = [200, 900], w = [2, 10], rate = 1, area = [0, 0, W, H] } = {}) {
+  const a = ang * Math.PI / 180, ca = Math.cos(a), sa = Math.sin(a);
+  const diag = Math.hypot(area[2], area[3]);
+  ctx.save(); ctx.globalAlpha *= alpha; ctx.fillStyle = color;
+  const cx = area[0] + area[2] / 2, cy = area[1] + area[3] / 2;
+  for (let i = 0; i < n; i++) {
+    const off = (hash(i, seed, 1) - 0.5) * diag;              // lateral position
+    const L = lerp(len[0], len[1], hash(i, seed, 2));
+    const ww = lerp(w[0], w[1], hash(i, seed, 3));
+    const ph = hash(i, seed, 4) * (diag + L);
+    const s = ((G.t * speed / rate + ph) % (diag + L)) - (diag + L) / 2; // along position
+    const x0 = cx - sa * off + ca * s, y0 = cy + ca * off + sa * s;
+    ctx.beginPath();
+    ctx.moveTo(x0, y0);
+    ctx.lineTo(x0 - ca * L - sa * ww / 2, y0 - sa * L + ca * ww / 2);
+    ctx.lineTo(x0 - ca * L + sa * ww / 2, y0 - sa * L - ca * ww / 2);
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+// camera shake offset (px) from a list of hit times, decaying
+function shakeAt(t, hits, amp = 26, dur = 0.5) {
+  let x = 0, y = 0, r = 0;
+  for (const [th, a = 1] of hits) {
+    const d = t - th; if (d < 0 || d > dur) continue;
+    const k = Math.exp(-d * 7) * a * amp, q = Math.floor(d * 30);
+    x += (hash(q, 11, th * 100 | 0) - 0.5) * 2 * k; y += (hash(q, 12, th * 100 | 0) - 0.5) * 2 * k; r += (hash(q, 13, th * 100 | 0) - 0.5) * 0.02 * k / amp;
+  }
+  return [x, y, r];
+}
+// stars as tiny 4-point glints and dots, seeded, drifting
+function stars(seed, n, { area = [0, 0, W, H], drift = [0, 0], color = C.paper, alpha = 0.8, size = 3 } = {}) {
+  ctx.save(); ctx.fillStyle = color;
+  for (let i = 0; i < n; i++) {
+    let x = area[0] + hash(i, seed, 1) * area[2] + drift[0] * (0.4 + hash(i, seed, 5));
+    let y = area[1] + hash(i, seed, 2) * area[3] + drift[1] * (0.4 + hash(i, seed, 5));
+    x = ((x - area[0]) % area[2] + area[2]) % area[2] + area[0];
+    y = ((y - area[1]) % area[3] + area[3]) % area[3] + area[1];
+    const s = size * (0.4 + hash(i, seed, 3) * 1.2);
+    const tw = 0.55 + 0.45 * Math.sin(G.t * (2 + hash(i, seed, 4) * 4) + i);
+    ctx.globalAlpha = alpha * tw;
+    if (hash(i, seed, 6) > 0.85) { // glint
+      ctx.beginPath(); ctx.moveTo(x, y - s * 3); ctx.lineTo(x + s * 0.6, y); ctx.lineTo(x, y + s * 3); ctx.lineTo(x - s * 0.6, y); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(x - s * 3, y); ctx.lineTo(x, y + s * 0.6); ctx.lineTo(x + s * 3, y); ctx.lineTo(x, y - s * 0.6); ctx.closePath(); ctx.fill();
+    } else { ctx.beginPath(); ctx.arc(x, y, s * 0.5, 0, Math.PI * 2); ctx.fill(); }
+  }
+  ctx.restore();
+}
+// anime sparkle (kira) at x,y size s
+function kira(x, y, s, color = C.paper, rot = 0) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.fillStyle = color; ctx.beginPath();
+  for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, r = i % 2 ? s * 0.18 : s; ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r); }
+  ctx.closePath(); ctx.fill(); ctx.restore();
+}
+
+// ===== chars.js =====
+// chars.js: Night Shift (anime design: echo-mark eyes, headset, oversized jacket) and Pho (grumpy Phobos).
+'use strict';
+
+const NS_DEF = {
+  turn: 0, tilt: 0, look: [0, 0], lidL: 0, lidR: 0, slant: 0, low: 0, brow: 0, eyeK: 1, pupil: 1,
+  mouth: 'w', open: 0, earL: 0, earR: 0, sweat: 0, light: 1, rim: C.amber, rimK: 1, glint: 0, keyW: 0.06,
+  squash: 1, blink: 0, fang: 1, shock: 0, tuftUp: 0,
+};
+// head outline (right half, top -> chin), mirrored for the left
+const HEAD_R = [[0, -0.93], [0.42, -0.88], [0.76, -0.64], [0.94, -0.28], [1.14, 0.02], [0.99, 0.12], [1.12, 0.31], [0.9, 0.4], [0.63, 0.63], [0.31, 0.79]];
+function headPts(turn) {
+  const R = HEAD_R.map(([x, y]) => [x * (1 - 0.1 * turn) + turn * 0.05, y]);
+  const L = HEAD_R.slice(1).reverse().map(([x, y]) => [-x * (1 + 0.1 * turn) + turn * 0.05, y]);
+  return [...R, [turn * 0.05, 0.83], ...L];
+}
+function nsHeadPath(p, seed) { return () => shapePath(headPts(p.turn), seed); }
+
+// one ear: side -1 (viewer left) or 1, angle offset a (rad, + = outward droop)
+function nsEar(p, side, a, seed) {
+  const bx = side * 0.6 + p.turn * 0.05, by = -0.66;
+  ctx.save(); ctx.translate(bx, by); ctx.rotate(side * a);
+  const outer = [[side * -0.32, -0.16], [side * 0.36, 0.16], [side * 0.42, -0.86 - p.tuftUp * 0.05], [side * 0.24, -0.7]];
+  const pts = [[side * -0.34, -0.12], [side * 0.05, -0.62], [side * 0.4, -0.86], [side * 0.36, -0.2], [side * 0.3, 0.14]];
+  cel(() => shapePath(pts, seed, { smooth: false }), { fill: C.fur, keyline: C.paper, keyW: p.keyW * 1.05 });
+  const inner = [[side * -0.18, -0.12], [side * 0.08, -0.5], [side * 0.3, -0.66], [side * 0.26, -0.16]];
+  ctx.fillStyle = '#7a5a2a'; shapePath(inner, seed + 1, { smooth: false }); ctx.fill();
+  // fur tufts inside the ear
+  inkLine([[side * 0.02, -0.08], [side * 0.12, -0.3], [side * 0.08, -0.42]], seed + 2, { color: C.fur3, lw: 0.025 });
+  ctx.restore();
+  void outer;
+}
+function nsEye(p, cx, cy, r, disc, seed, kx) {
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(kx, 1);
+  const lid = clamp(disc ? p.lidL : p.lidR) , low = clamp(p.low), sl = p.slant * (disc ? 1 : -1);
+  // eye socket clip so lids cut the eye
+  ctx.save();
+  ctx.beginPath(); ctx.arc(0, 0, r * 1.08, 0, Math.PI * 2); ctx.clip();
+  if (disc) {
+    ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+    // cel shade on the disc (lower crescent)
+    ctx.fillStyle = C.amber2; ctx.beginPath(); ctx.arc(0, 0, r, 0.15 * Math.PI, 0.85 * Math.PI); ctx.arc(0, -r * 0.35, r * 0.95, 0.85 * Math.PI, 0.15 * Math.PI, true); ctx.fill();
+    // pupil (slit), shrinks in shock
+    const pr = p.pupil;
+    ctx.fillStyle = C.ink; ctx.beginPath(); ctx.ellipse(p.look[0] * r * 0.32, p.look[1] * r * 0.25, r * 0.17 * pr, r * 0.46 * pr * (p.shock ? 0.4 : 1), 0, 0, Math.PI * 2); ctx.fill();
+    // catchlights
+    ctx.fillStyle = '#fffaf0'; ctx.beginPath(); ctx.ellipse(-r * 0.36, -r * 0.38, r * 0.2, r * 0.15, -0.5, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(r * 0.32, r * 0.36, r * 0.07, 0, Math.PI * 2); ctx.fill();
+  } else {
+    const sw = r * 6 / 22;
+    ctx.strokeStyle = C.amber; ctx.lineWidth = sw; ctx.beginPath(); ctx.arc(0, 0, r - sw / 2, 0, Math.PI * 2); ctx.stroke();
+    ctx.strokeStyle = C.amber2; ctx.lineWidth = sw * 0.5; ctx.beginPath(); ctx.arc(0, 0, r - sw * 0.25, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
+    ctx.fillStyle = '#fffaf0'; ctx.beginPath(); ctx.ellipse(-r * 0.52, -r * 0.55, r * 0.12, r * 0.09, -0.6, 0, Math.PI * 2); ctx.fill();
+  }
+  // upper lid (fur), slanted
+  if (lid > 0.001 || Math.abs(sl) > 0.01) {
+    ctx.fillStyle = C.fur; ctx.save(); ctx.rotate(sl * 0.42);
+    const y = -r * 1.1 + lid * r * 2.2 + Math.abs(sl) * r * 0.18;
+    ctx.beginPath(); ctx.moveTo(-r * 1.4, -r * 1.6); ctx.lineTo(r * 1.4, -r * 1.6); ctx.lineTo(r * 1.4, y); ctx.quadraticCurveTo(0, y + r * 0.12, -r * 1.4, y); ctx.fill();
+    ctx.strokeStyle = C.fur3; ctx.lineWidth = r * 0.08; ctx.beginPath(); ctx.moveTo(-r * 1.2, y); ctx.quadraticCurveTo(0, y + r * 0.12, r * 1.2, y); ctx.stroke();
+    ctx.restore();
+  }
+  if (low > 0.001) {
+    ctx.fillStyle = C.fur; const y = r * 1.1 - low * r * 1.3;
+    ctx.beginPath(); ctx.moveTo(-r * 1.4, r * 1.6); ctx.lineTo(r * 1.4, r * 1.6); ctx.lineTo(r * 1.4, y + r * 0.3); ctx.quadraticCurveTo(0, y - r * 0.35, -r * 1.4, y + r * 0.3); ctx.fill();
+  }
+  ctx.restore();
+  ctx.restore();
+}
+function nsMouth(p, mx, my, seed) {
+  const o = clamp(p.open);
+  ctx.save(); ctx.translate(mx, my);
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  // nose
+  ctx.fillStyle = C.paper; shapePath([[-0.07, -0.05], [0.07, -0.05], [0, 0.04]], seed, { px: 0.8 }); ctx.fill();
+  const t = p.mouth;
+  if (t === 'w' && o < 0.08) {
+    inkLine([[0, 0.04], [0, 0.09], [-0.07, 0.13], [-0.14, 0.09]], seed + 1, { color: C.paper, lw: 0.035 });
+    inkLine([[0, 0.09], [0.07, 0.13], [0.14, 0.09]], seed + 2, { color: C.paper, lw: 0.035 });
+  } else if (t === 'smirk' && o < 0.08) {
+    inkLine([[0, 0.04], [0, 0.09], [-0.1, 0.12], [-0.17, 0.1]], seed + 1, { color: C.paper, lw: 0.035 });
+    inkLine([[0, 0.09], [0.1, 0.11], [0.2, 0.05], [0.25, -0.01]], seed + 2, { color: C.paper, lw: 0.04 });
+    if (p.fang) { ctx.fillStyle = C.paper; shapePath([[0.1, 0.105], [0.155, 0.09], [0.135, 0.17]], seed + 3, { smooth: false, px: 0.6 }); ctx.fill(); }
+  } else if (t === 'flat' && o < 0.08) {
+    inkLine([[0, 0.04], [0, 0.09]], seed + 1, { color: C.paper, lw: 0.035 });
+    inkLine([[-0.15, 0.12], [0, 0.1], [0.15, 0.12]], seed + 2, { color: C.paper, lw: 0.035 });
+  } else if (t === 'grit') {
+    // gritted teeth: wide rectangle of teeth
+    const w = 0.3, h = 0.08 + o * 0.06;
+    ctx.fillStyle = '#3a0f17'; shapePath([[-w, 0.08], [w, 0.06], [w * 0.9, 0.1 + h], [-w * 0.9, 0.12 + h]], seed, { smooth: false, px: 0.8 }); ctx.fill();
+    ctx.fillStyle = C.paper; ctx.fillRect(-w * 0.86, 0.085, w * 1.72, h * 0.95);
+    ctx.strokeStyle = C.paper3; ctx.lineWidth = 0.012; for (let i = -2; i <= 2; i++) { ctx.beginPath(); ctx.moveTo(i * w * 0.3, 0.085); ctx.lineTo(i * w * 0.3, 0.09 + h); ctx.stroke(); }
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 0.03; shapePath([[-w, 0.08], [w, 0.06], [w * 0.9, 0.1 + h], [-w * 0.9, 0.12 + h]], seed, { smooth: false, px: 0.8 }); ctx.stroke();
+  } else {
+    // open mouth: shape grows with o; 'shout' is wider and taller; 'smirk'/'grin' lopsided
+    const wide = t === 'shout' ? 0.3 : t === 'grin' ? 0.27 : 0.17;
+    const h = 0.05 + o * (t === 'shout' ? 0.42 : 0.22);
+    const lift = t === 'smirk' || t === 'grin' ? 0.05 : 0;
+    const pts = [[-wide, 0.08 - lift * 0.3], [0, 0.1], [wide, 0.07 - lift], [wide * 0.65, 0.1 + h * 0.75], [0, 0.11 + h], [-wide * 0.65, 0.1 + h * 0.7]];
+    ctx.fillStyle = '#3a0f17'; shapePath(pts, seed + 4, { px: 0.8 }); ctx.fill();
+    ctx.save(); shapePath(pts, seed + 4, { px: 0.8 }); ctx.clip();
+    ctx.fillStyle = '#c4485a'; ctx.beginPath(); ctx.ellipse(0, 0.12 + h, wide * 0.6, h * 0.45, 0, 0, Math.PI * 2); ctx.fill();
+    if (p.fang) { ctx.fillStyle = C.paper; ctx.beginPath(); ctx.moveTo(-wide * 0.62, 0.08); ctx.lineTo(-wide * 0.3, 0.085); ctx.lineTo(-wide * 0.47, 0.08 + 0.07 + o * 0.03); ctx.fill(); ctx.beginPath(); ctx.moveTo(wide * 0.3, 0.08); ctx.lineTo(wide * 0.62, 0.075); ctx.lineTo(wide * 0.47, 0.08 + 0.07 + o * 0.03); ctx.fill(); }
+    ctx.restore();
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 0.03; shapePath(pts, seed + 4, { px: 0.8 }); ctx.stroke();
+    inkLine([[0, 0.04], [0, 0.1]], seed + 5, { color: C.paper, lw: 0.03 });
+  }
+  ctx.restore();
+}
+// Night Shift head at (x, y), size = px per head unit
+function drawNSHead(x, y, size, p0 = {}) {
+  const p = Object.assign({}, NS_DEF, p0);
+  const seed = 100;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(p.tilt); ctx.scale(size, size * p.squash);
+  G.S = size;
+  const T = p.turn;
+  // ears behind the head
+  nsEar(p, -1, p.earL, seed + 10);
+  nsEar(p, 1, p.earR, seed + 20);
+  const L = p.light;
+  // tuft (anime spikes)
+  const tu = p.tuftUp;
+  const tuft = [[-0.42 + T * 0.1, -0.6], [-0.5 + T * 0.1, -1.12 - tu * 0.1], [-0.16 + T * 0.1, -0.96], [-0.08 + T * 0.1, -1.42 - tu * 0.14], [0.16 + T * 0.1, -1.0], [0.5 + T * 0.1, -1.24 - tu * 0.1], [0.36 + T * 0.1, -0.9], [0.46 + T * 0.1, -0.6]];
+  cel(() => shapePath(tuft, seed + 30, { smooth: false }), { fill: C.fur, keyline: C.paper, keyW: p.keyW * 1.6 });
+  // head
+  const hp = nsHeadPath(p, seed);
+  cel(hp, {
+    fill: C.fur, keyline: C.paper, keyW: p.keyW * 2,
+    shade: C.fur2, shadeFn: () => { ctx.ellipse(-L * 1.75 + T * 0.1, 0.1, 1.2, 1.5, 0, 0, Math.PI * 2); },
+  });
+  // rim light: thin hard stroke along the lit edge
+  if (p.rimK > 0) {
+    ctx.save(); hp(); ctx.clip();
+    ctx.beginPath(); ctx.rect(L > 0 ? 0.18 + T * 0.1 : -3, -3, 2.82 + (L > 0 ? 0 : 0.18), 6); ctx.clip();
+    ctx.globalAlpha = p.rimK; hp(); ctx.strokeStyle = p.rim; ctx.lineWidth = 0.2; ctx.stroke();
+    ctx.restore();
+  }
+  // anime hair shine on the crown
+  ctx.save(); hp(); ctx.clip();
+  ctx.fillStyle = C.fur3; shapePath([[-0.55 + T * 0.1, -0.62], [-0.3 + T * 0.1, -0.72], [-0.18 + T * 0.1, -0.62], [0.0 + T * 0.1, -0.74], [0.16 + T * 0.1, -0.63], [0.42 + T * 0.1, -0.72], [0.58 + T * 0.1, -0.6], [0.4 + T * 0.1, -0.56], [0.16 + T * 0.1, -0.52], [0.0 + T * 0.1, -0.6], [-0.18 + T * 0.1, -0.5], [-0.3 + T * 0.1, -0.6]], seed + 35, { smooth: false }); ctx.fill();
+  ctx.restore();
+  // headset band (in front of the head)
+  const band = [[-1.02, -0.12], [-0.9, -0.55], [-0.5, -0.83], [0.5, -0.83], [0.9, -0.55], [1.02, -0.12]].map(([a, b]) => [a + T * 0.04, b]);
+  inkLine(band, seed + 40, { color: C.ink, lw: 0.12 });
+  inkLine(band, seed + 40, { color: C.paper, lw: 0.07 });
+  inkLine(band.slice(1, 5).map(([a, b]) => [a, b + 0.015]), seed + 41, { color: C.paper3, lw: 0.025 });
+  // face features
+  const fx = T * 0.24;
+  const er = 0.3 * p.eyeK;
+  const kL = 1 - Math.max(0, T) * 0.3, kR = 1 - Math.max(0, -T) * 0.3;
+  const ex = 0.41;
+  nsEye(p, -ex + fx, 0.0, er, true, seed + 50, kL);
+  nsEye(p, ex + fx, 0.0, er, false, seed + 60, kR);
+  // brows (paper bars)
+  const by = -0.42 - p.brow * 0.12 - (p.eyeK - 1) * 0.3;
+  const bs = p.slant;
+  ctx.save(); ctx.translate(-ex + fx, by); ctx.rotate(bs * 0.45 + p.brow * -0.08);
+  ctx.fillStyle = C.paper; shapePath([[-0.15, -0.035], [0.15, -0.035 + bs * 0.0], [0.14, 0.04], [-0.16, 0.035]], seed + 70, { smooth: false, px: 0.8 }); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.translate(ex + fx, by); ctx.rotate(-bs * 0.45 + p.brow * 0.08);
+  ctx.fillStyle = C.paper; shapePath([[-0.15, -0.035], [0.15, -0.035], [0.16, 0.035], [-0.14, 0.04]], seed + 71, { smooth: false, px: 0.8 }); ctx.fill(); ctx.restore();
+  // whiskers
+  const wy = 0.38;
+  for (let s of [-1, 1]) for (let i = 0; i < 2; i++) {
+    const x0 = s * 0.42 + fx * 0.9, y0 = wy + i * 0.07;
+    inkLine([[x0, y0], [x0 + s * 0.28, y0 - 0.04 + i * 0.07], [x0 + s * 0.5, y0 - 0.02 + i * 0.13]], seed + 80 + i + (s > 0 ? 5 : 0), { color: C.paper, lw: 0.018 });
+  }
+  nsMouth(p, fx * 0.95, 0.3, seed + 90);
+  // sweat drops
+  if (p.sweat > 0) {
+    const k = p.sweat;
+    ctx.save(); ctx.translate(0.92 + fx * 0.3, -0.48 + (1 - k) * -0.1); ctx.scale(k, k);
+    ctx.fillStyle = C.cyan; ctx.strokeStyle = C.ink; ctx.lineWidth = 0.03;
+    shapePath([[0, -0.2], [0.09, 0.02], [0.06, 0.1], [-0.06, 0.1], [-0.09, 0.02]], seed + 95, { px: 0.6 }); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.ellipse(-0.02, 0.03, 0.025, 0.045, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+  }
+  // ear cups + mic (on top)
+  for (const s of [-1, 1]) {
+    const cx = s * 1.04 + T * 0.04, cy = -0.06;
+    const pts = [[cx - 0.11, cy - 0.21], [cx + 0.11, cy - 0.21], [cx + 0.13, cy + 0.2], [cx - 0.13, cy + 0.2]];
+    cel(() => { ctx.beginPath(); ctx.roundRect(cx - 0.12, cy - 0.22, 0.24, 0.44, 0.09); }, { fill: C.paper, shade: C.paper3, shadeFn: () => ctx.rect(cx - 0.12, cy + 0.04, 0.24, 0.3), line: C.ink, lw: 0.035 });
+    void pts;
+  }
+  const mic = [[-1.02 + T * 0.04, 0.12], [-0.92, 0.42], [-0.66 + fx * 0.5, 0.56], [-0.42 + fx * 0.7, 0.55]];
+  inkLine(mic, seed + 97, { color: C.ink, lw: 0.075 });
+  inkLine(mic, seed + 97, { color: C.paper, lw: 0.04 });
+  ctx.save(); ctx.translate(-0.4 + fx * 0.7, 0.53); ctx.rotate(-0.35);
+  ctx.fillStyle = C.paper; ctx.strokeStyle = C.ink; ctx.lineWidth = 0.03; ctx.beginPath(); ctx.roundRect(-0.03, -0.055, 0.15, 0.11, 0.05); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // glint star on the disc eye
+  if (p.glint > 0) { kira(-ex + fx - er * 0.35, -0.02 - er * 0.38, 0.32 * p.glint, '#fffdf2', G.t * 2); }
+  ctx.restore();
+}
+
+// ----- bust: neck, collar, jacket, arms. Coordinates in head units; head centre at (0,0) -----
+// arms: {L: {e:[x,y], w:[x,y], paw:'fist'|'open'|'point'|'flat'|'mitt', pr: paw rotation}, R: ...}
+function drawNSBust(x, y, size, p0 = {}, arms = {}, opt = {}) {
+  const p = Object.assign({}, NS_DEF, p0);
+  const seed = 300; const T = p.turn; const L = p.light;
+  ctx.save(); ctx.translate(x, y); ctx.scale(size, size); G.S = size;
+  const flap = opt.flap || 0; // jacket flutter
+  const bob = opt.bob || 0;
+  ctx.translate(0, bob);
+  // torso (jacket) points
+  const sh = 1.28, bot = opt.bottom || 3.4;
+  const fl = (i) => Math.sin(G.tc * 9 + i * 1.7) * 0.05 * flap;
+  const jacket = [[-0.5, 0.95], [-1.05, 1.18], [-sh - 0.06, 1.42], [-1.55 + fl(1), 2.2], [-1.62 + fl(2), bot], [1.62 + fl(3), bot], [1.55 + fl(4), 2.2], [sh + 0.06, 1.42], [1.05, 1.18], [0.5, 0.95]];
+  // back arms first if they are behind
+  for (const side of ['L', 'R']) if (arms[side] && arms[side].behind) nsArm(side, arms[side], seed + (side === 'L' ? 500 : 600), p);
+  // neck
+  cel(() => shapePath([[-0.34, 0.55], [0.34, 0.55], [0.38, 1.25], [-0.38, 1.25]], seed + 1, { smooth: false }), { fill: C.fur, keyline: C.paper, keyW: p.keyW * 2, shade: C.fur2, shadeFn: () => ctx.rect(-0.5, 0.55, 1, 0.28) });
+  // jacket body
+  cel(() => shapePath(jacket, seed + 2), {
+    fill: C.paper, keyline: C.ink, keyW: 0.09,
+    shade: C.paper3, shadeFn: () => { ctx.ellipse(-L * 2.0, 2.3, 1.35, 1.9, 0, 0, Math.PI * 2); ctx.rect(-2, 1.0, 4, 0.22); },
+    hi: '#fffdf6', hiFn: () => { ctx.ellipse(L * 1.05, 1.55, 0.3, 0.12, 0.4 * L, 0, Math.PI * 2); },
+  });
+  // V opening (dark shirt/fur)
+  cel(() => shapePath([[-0.42, 1.02], [0.42, 1.02], [0.06, 2.05], [-0.06, 2.05]], seed + 3, { smooth: false }), { fill: C.fur, line: C.ink, lw: 0.04 });
+  // zipper line + folds
+  inkLine([[0, 2.05], [0.02, 2.7], [0, bot]], seed + 4, { color: C.ink, lw: 0.035 });
+  inkLine([[-1.1, 2.1], [-0.9, 2.6], [-0.95, 3.1]], seed + 5, { color: C.paper3, lw: 0.03 });
+  inkLine([[1.0, 2.3], [0.85, 2.8]], seed + 6, { color: C.paper3, lw: 0.03 });
+  // echo mark on the chest (viewer right)
+  ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(0.5, 2.0, 0.085, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = C.amber; ctx.lineWidth = 0.085 * 6 / 22 * 1.6; ctx.beginPath(); ctx.arc(0.5 + 0.085 * 60 / 22, 2.0, 0.085 - 0.012, 0, Math.PI * 2); ctx.stroke();
+  // collar flaps (stand-up)
+  for (const s of [-1, 1]) {
+    const pts = [[s * 0.28, 0.66], [s * 0.72, 0.86], [s * 0.66, 1.3], [s * 0.4, 1.38], [s * 0.12, 1.08]];
+    cel(() => shapePath(pts, seed + 10 + (s > 0 ? 1 : 0), { smooth: false }), { fill: C.paper, shade: C.paper2, shadeFn: () => ctx.rect(s > 0 ? 0 : -1, 1.05, 1, 0.5), line: C.ink, lw: 0.045 });
+  }
+  // headset cable into collar
+  inkLine([[-1.0, 0.2], [-0.95, 0.6], [-0.7, 0.9]], seed + 12, { color: C.paper3, lw: 0.035 });
+  for (const side of ['L', 'R']) if (arms[side] && !arms[side].behind && !arms[side].front) nsArm(side, arms[side], seed + (side === 'L' ? 500 : 600), p);
+  ctx.restore();
+  drawNSHead(x + 0 * size, y + bob * size, size, p);
+  ctx.save(); ctx.translate(x, y + bob * size); ctx.scale(size, size);
+  for (const side of ['L', 'R']) if (arms[side] && arms[side].front) nsArm(side, arms[side], seed + (side === 'L' ? 500 : 600), p);
+  ctx.restore();
+}
+// arm: shoulder fixed by side; e = elbow, w = wrist (head units)
+function nsArm(side, a, seed, p) {
+  const s = side === 'L' ? -1 : 1;
+  const sh = [s * 1.2, 1.5];
+  const e = a.e, w = a.w;
+  // sleeve as a tapered tube shoulder -> elbow -> wrist
+  const tube = (pts, w0, w1) => {
+    const L = [], R = [];
+    for (let i = 0; i < pts.length; i++) {
+      const q = pts[Math.min(pts.length - 1, i + 1)], o = pts[Math.max(0, i - 1)];
+      let dx = q[0] - o[0], dy = q[1] - o[1]; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+      const ww = lerp(w0, w1, i / (pts.length - 1)) / 2;
+      L.push([pts[i][0] - dy * ww, pts[i][1] + dx * ww]); R.push([pts[i][0] + dy * ww, pts[i][1] - dx * ww]);
+    }
+    return L.concat(R.reverse());
+  };
+  const mid1 = [(sh[0] + e[0]) / 2, (sh[1] + e[1]) / 2], mid2 = [(e[0] + w[0]) / 2, (e[1] + w[1]) / 2];
+  const pts = tube([sh, mid1, e, mid2, w], 0.62, 0.48);
+  cel(() => shapePath(pts, seed), { fill: C.paper, keyline: C.ink, keyW: 0.08, shade: C.paper3, shadeFn: () => ctx.ellipse(e[0] - s * 0.1, e[1] + 0.25, 0.35, 0.25, 0, 0, Math.PI * 2) });
+  inkLine([[e[0] - 0.12, e[1] - 0.05], [e[0], e[1] + 0.06], [e[0] + 0.12, e[1] - 0.04]], seed + 1, { color: C.paper3, lw: 0.03 });
+  // cuff
+  const ang = Math.atan2(w[1] - e[1], w[0] - e[0]);
+  ctx.save(); ctx.translate(w[0], w[1]); ctx.rotate(ang);
+  cel(() => { ctx.beginPath(); ctx.roundRect(-0.12, -0.27, 0.16, 0.54, 0.05); }, { fill: C.paper2, line: C.ink, lw: 0.04 });
+  ctx.restore();
+  // paw
+  const pr = a.pr != null ? a.pr : ang;
+  const pk = a.pk || 1;
+  ctx.save(); ctx.translate(w[0] + Math.cos(ang) * 0.18, w[1] + Math.sin(ang) * 0.18); ctx.rotate(pr); ctx.scale(pk, pk);
+  nsPaw(a.paw || 'mitt', seed + 5, s);
+  ctx.restore();
+}
+// paw drawn along +x (pointing direction)
+function nsPaw(type, seed, s) {
+  const k = { fill: C.fur, keyline: C.paper, keyW: 0.06 };
+  if (type === 'point') {
+    cel(() => shapePath([[-0.05, -0.2], [0.18, -0.2], [0.24, -0.08], [0.55, -0.1], [0.6, -0.02], [0.55, 0.05], [0.24, 0.06], [0.22, 0.2], [-0.05, 0.22], [-0.12, 0]], seed), k);
+    inkLine([[0.05, 0.08], [0.18, 0.1]], seed + 1, { color: C.fur3, lw: 0.025 });
+  } else if (type === 'fist') {
+    cel(() => shapePath([[-0.1, -0.2], [0.2, -0.24], [0.32, -0.08], [0.3, 0.14], [0.14, 0.24], [-0.1, 0.2], [-0.16, 0]], seed), k);
+    for (let i = 0; i < 3; i++) inkLine([[0.16, -0.14 + i * 0.12], [0.3, -0.12 + i * 0.12]], seed + 2 + i, { color: C.fur3, lw: 0.025 });
+  } else if (type === 'open' || type === 'flat') {
+    const sp = type === 'open' ? 1 : 0.35;
+    const pts = [[-0.1, -0.2]];
+    for (let i = 0; i < 4; i++) { const a = (-0.55 + i * 0.37) * sp; pts.push([0.22 + Math.cos(a) * 0.2, Math.sin(a) * 0.28 - 0.02], [0.3 + Math.cos(a) * 0.26, Math.sin(a) * 0.34 - 0.02]); }
+    pts.push([-0.1, 0.22], [-0.16, 0]);
+    cel(() => shapePath(pts, seed), k);
+  } else {
+    cel(() => shapePath(ellPts(0.08, 0, 0.24, 0.2, 10), seed), k);
+  }
+}
+
+// ----- Pho: the grumpy Phobos (drawn illustration, not the photo) -----
+const PHO_DEF = { look: [0, 0], expr: 'grumpy', lid: 0.45, brow: 0, mouthK: 0, vein: 0, sweat: 0, squash: 1, shake: 0, light: 1, rim: C.amber, flinch: 0, piece: 0 };
+function phoPts() {
+  const pts = [];
+  for (let i = 0; i < 28; i++) {
+    const a = (i / 28) * Math.PI * 2;
+    const r = 1 + 0.07 * Math.sin(3 * a + 1.1) + 0.045 * Math.sin(5 * a + 2.3) + 0.03 * Math.sin(7 * a + 0.4) - (a > 0.2 && a < 1.1 ? 0.06 * Math.sin((a - 0.2) / 0.9 * Math.PI) : 0);
+    pts.push([Math.cos(a) * r * 1.12, Math.sin(a) * r * 0.9]);
+  }
+  return pts;
+}
+const PHO_PTS = phoPts();
+const PHO_CRATERS = [[0.62, 0.42, 0.3, 'big'], [-0.72, -0.36, 0.13], [-0.55, 0.5, 0.11], [0.15, -0.68, 0.1], [0.7, -0.3, 0.09], [-0.95, 0.12, 0.08], [0.35, 0.68, 0.07], [-0.2, 0.74, 0.08], [0.9, 0.05, 0.06], [-0.4, -0.66, 0.06]];
+function drawPho(x, y, size, p0 = {}, rot = 0) {
+  const p = Object.assign({}, PHO_DEF, p0);
+  const seed = 900;
+  ctx.save(); ctx.translate(x + (p.shake ? (hash(G.f, 3, 1) - 0.5) * p.shake : 0), y); ctx.rotate(rot); ctx.scale(size, size * p.squash); G.S = size;
+  const L = p.light;
+  const body = () => shapePath(PHO_PTS, seed);
+  cel(body, {
+    fill: C.pho, keyline: C.ink, keyW: 0.05,
+    shade: C.pho2, shadeFn: () => ctx.ellipse(-L * 1.25, 0.55, 1.35, 1.1, 0, 0, Math.PI * 2),
+    hi: C.pho3, hiFn: () => ctx.ellipse(L * 0.65, -0.62, 0.55, 0.22, L * 0.45, 0, Math.PI * 2),
+  });
+  // rim light
+  ctx.save(); body(); ctx.clip(); ctx.beginPath(); ctx.rect(L > 0 ? 0.1 : -3, -3, 2.9, 6); ctx.clip(); ctx.globalAlpha = 0.9; body(); ctx.strokeStyle = p.rim; ctx.lineWidth = 0.13; ctx.stroke(); ctx.restore();
+  // grooves
+  ctx.save(); body(); ctx.clip();
+  for (let i = 0; i < 5; i++) inkLine([[-1.1, -0.2 + i * 0.13], [-0.3, -0.42 + i * 0.12], [0.6, -0.52 + i * 0.11]], seed + 40 + i, { color: C.pho2, lw: 0.018 });
+  // craters
+  PHO_CRATERS.forEach(([cx, cy, r, big], i) => {
+    const pts = ellPts(cx, cy, r, r * 0.8, 10, 0.3);
+    cel(() => shapePath(pts, seed + 60 + i), { fill: C.pho2, shade: C.pho4, shadeFn: () => ctx.ellipse(cx - r * 0.25, cy - r * 0.25, r * 0.9, r * 0.6, 0.3, 0, Math.PI * 2), line: C.pho4, lw: 0.02 });
+    inkLine(ellPts(cx + r * 0.05, cy + r * 0.05, r * 1.02, r * 0.82, 10, 0.3).slice(1, 5), seed + 80 + i, { color: C.pho3, lw: big ? 0.04 : 0.022 });
+  });
+  ctx.restore();
+  // the 'piece' outline: dashed amber cut line around a patch
+  if (p.piece > 0) {
+    ctx.save(); ctx.setLineDash([0.07, 0.05]); ctx.lineDashOffset = -G.t * 0.4;
+    const pts = ellPts(-0.62, 0.12, 0.26, 0.2, 9, 0.4);
+    shapePath(pts, seed + 99); ctx.strokeStyle = C.amber; ctx.lineWidth = 0.035 * p.piece; ctx.stroke(); ctx.restore();
+  }
+  // face
+  const e = p.expr;
+  const eyeY = -0.1, exL = -0.36, exR = 0.26;
+  if (e === 'flinch') {
+    inkLine([[exL - 0.14, eyeY - 0.08], [exL + 0.1, eyeY], [exL - 0.14, eyeY + 0.08]], seed + 10, { color: C.ink, lw: 0.06, smooth: false });
+    inkLine([[exR + 0.14, eyeY - 0.08], [exR - 0.1, eyeY], [exR + 0.14, eyeY + 0.08]], seed + 11, { color: C.ink, lw: 0.06, smooth: false });
+    inkLine([[-0.22, 0.32], [-0.12, 0.27], [-0.02, 0.33], [0.08, 0.27], [0.18, 0.32]], seed + 12, { color: C.ink, lw: 0.045, smooth: false });
+  } else {
+    const wide = e === 'alarm' ? 1 : 0;
+    for (const [ex, sd] of [[exL, -1], [exR, 1]]) {
+      const rx = 0.15 + wide * 0.03, ry = 0.13 + wide * 0.05;
+      ctx.save(); ctx.translate(ex, eyeY);
+      ctx.fillStyle = '#fbf6ea'; ctx.beginPath(); ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.save(); ctx.beginPath(); ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2); ctx.clip();
+      ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(p.look[0] * rx * 0.55, p.look[1] * ry * 0.5 + 0.02, wide ? 0.035 : 0.06, 0, Math.PI * 2); ctx.fill();
+      // heavy grumpy lid, slanted down toward the centre
+      const lid = wide ? 0 : p.lid;
+      if (lid > 0) {
+        ctx.fillStyle = C.pho2; ctx.rotate(sd * (e === 'furious' ? -0.45 : -0.22));
+        ctx.fillRect(-0.4, -0.4, 0.8, 0.4 - ry + lid * ry * 2 - 0.0);
+        ctx.strokeStyle = C.ink; ctx.lineWidth = 0.035; ctx.beginPath(); ctx.moveTo(-0.3, -ry + lid * ry * 2); ctx.lineTo(0.3, -ry + lid * ry * 2); ctx.stroke();
+      }
+      ctx.restore();
+      ctx.strokeStyle = C.ink; ctx.lineWidth = 0.03; ctx.beginPath(); ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2); ctx.stroke();
+      ctx.restore();
+      // brow
+      const ba = e === 'furious' ? 0.55 : e === 'alarm' ? -0.25 : 0.32;
+      const byy = eyeY - 0.24 - (wide ? 0.08 : 0) - p.brow * 0.06;
+      ctx.save(); ctx.translate(ex, byy); ctx.rotate(sd * -ba);
+      ctx.fillStyle = C.pho4; shapePath([[-0.2, -0.04], [0.2, -0.05], [0.21, 0.04], [-0.2, 0.05]], seed + 20 + (sd > 0 ? 1 : 0), { smooth: false, px: 0.6 }); ctx.fill();
+      ctx.restore();
+    }
+    // mouth
+    if (e === 'alarm') {
+      ctx.fillStyle = C.pho4; ctx.beginPath(); ctx.ellipse(-0.04, 0.3, 0.07, 0.09 + p.mouthK * 0.05, 0, 0, Math.PI * 2); ctx.fill();
+    } else if (e === 'furious') {
+      const pts = [[-0.24, 0.3], [0.16, 0.28], [0.14, 0.4], [-0.22, 0.42]];
+      ctx.fillStyle = C.pho4; shapePath(pts, seed + 30, { smooth: false }); ctx.fill();
+      ctx.fillStyle = '#efe6d2'; ctx.fillRect(-0.2, 0.31, 0.33, 0.045); ctx.fillRect(-0.19, 0.365, 0.31, 0.04);
+    } else {
+      inkLine([[-0.26, 0.36], [-0.12, 0.28], [0.04, 0.27], [0.16, 0.34]], seed + 31, { color: C.pho4, lw: 0.055 });
+    }
+  }
+  // anger vein mark (four curved ticks)
+  if (p.vein > 0) {
+    ctx.save(); ctx.translate(0.55, -0.55); ctx.scale(p.vein, p.vein); ctx.strokeStyle = C.red; ctx.lineWidth = 0.05; ctx.lineCap = 'round';
+    for (let i = 0; i < 4; i++) { ctx.rotate(Math.PI / 2); ctx.beginPath(); ctx.moveTo(0.05, 0.16); ctx.quadraticCurveTo(0.07, 0.07, 0.16, 0.05); ctx.stroke(); }
+    ctx.restore();
+  }
+  if (p.sweat > 0) {
+    ctx.save(); ctx.translate(-0.78, -0.45); ctx.scale(p.sweat, p.sweat);
+    ctx.fillStyle = C.cyan; ctx.strokeStyle = C.ink; ctx.lineWidth = 0.025;
+    shapePath([[0, -0.16], [0.07, 0.02], [0.05, 0.08], [-0.05, 0.08], [-0.07, 0.02]], seed + 97, { px: 0.6 }); ctx.fill(); ctx.stroke(); ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ===== props.js =====
+// props.js: stylized illustrations drawn in code (never photoreal): H3, MMX, IDEFIX, capsule, Electron,
+// satellites, Earth with Australia, cel Mars, exhaust clouds, flames, Phobos ground.
+'use strict';
+
+// ---------- exhaust / smoke clouds ----------
+// puffs: [{x, y, r}] in current units; light: direction of the flame light [dx, dy]; warm: 0..1 orange underlight
+function cloudCluster(puffs, seed, { base = C.smoke, shade = C.smoke2, line = C.ink, lw = 6, warm = 0, warmC = C.fire2, lightDir = [0, 1], alpha = 1 } = {}) {
+  if (!puffs.length) return;
+  ctx.save(); ctx.globalAlpha *= alpha;
+  const S = curScale();
+  const circ = (p, i, k = 1) => { const pts = ellPts(p.x, p.y, p.r * k, p.r * k * 0.92, 12, i); shapePath(pts, seed + i * 7, { px: 2.2 }); };
+  // union outline
+  ctx.lineJoin = 'round';
+  puffs.forEach((p, i) => { circ(p, i); ctx.strokeStyle = line; ctx.lineWidth = lw * 2 / S; ctx.stroke(); });
+  puffs.forEach((p, i) => { circ(p, i); ctx.fillStyle = base; ctx.fill(); });
+  // cel shadow (sky light from upper left -> shadow lower right) and a thin warm underlight crescent
+  puffs.forEach((p, i) => {
+    ctx.save(); circ(p, i); ctx.clip();
+    ctx.fillStyle = shade; ctx.beginPath(); ctx.arc(p.x - p.r * 0.32, p.y - p.r * 0.3, p.r * 0.92, 0, Math.PI * 2); ctx.rect(p.x - p.r * 2, p.y - p.r * 2, p.r * 4, p.r * 4); ctx.fill('evenodd');
+    if (warm > 0) { ctx.globalAlpha = warm; ctx.fillStyle = warmC; ctx.beginPath(); ctx.arc(p.x - lightDir[0] * p.r * 0.38, p.y - lightDir[1] * p.r * 0.38, p.r * 0.9, 0, Math.PI * 2); ctx.rect(p.x - p.r * 2, p.y - p.r * 2, p.r * 4, p.r * 4); ctx.fill('evenodd'); }
+    ctx.restore();
+  });
+  ctx.restore();
+}
+// expanding launch billows: returns puffs for time since ignition d (s); side spread along the ground
+function launchPuffs(d, seed, { cx = 0, gy = 0, spread = 900, up = 260, n = 26, rMax = 170 } = {}) {
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const b = hash(i, seed, 1) * 0.5;               // birth delay
+    const k = clamp((d - b) / 1.6); if (k <= 0) continue;
+    const side = i % 2 ? 1 : -1;
+    const e = E.out(k);
+    const reach = spread * (0.25 + 0.75 * hash(i, seed, 2));
+    const x = cx + side * reach * e;
+    const y = gy - up * hash(i, seed, 3) * e - 40 * Math.sin(k * 3);
+    const r = rMax * (0.35 + 0.65 * hash(i, seed, 4)) * (0.3 + 0.7 * E.out(k * 1.4));
+    out.push({ x, y, r });
+  }
+  // sort so back puffs (higher) draw first
+  return out.sort((a, b) => a.y - b.y);
+}
+// flame plume pointing +y from (0,0), length len, width w; flicker on twos
+function flame(len, w, seed, { core = C.fire3, mid = C.fire, outer = C.fire2, line = null } = {}) {
+  const fk = (i) => 1 + (hash(i, seed, Math.floor(G.f / 2)) - 0.5) * 0.18;
+  const plume = (k, ww) => {
+    const pts = [[-ww * 0.5, 0], [-ww * 0.62 * fk(1), len * 0.18 * k], [-ww * 0.42 * fk(2), len * 0.55 * k], [0, len * k * fk(3)], [ww * 0.42 * fk(4), len * 0.55 * k], [ww * 0.62 * fk(5), len * 0.18 * k], [ww * 0.5, 0]];
+    return pts;
+  };
+  shapePath(plume(1, w), seed, { px: 2 }); ctx.fillStyle = outer; ctx.fill(); if (line) { ctx.strokeStyle = line; ctx.lineWidth = 3 / curScale(); ctx.stroke(); }
+  shapePath(plume(0.72, w * 0.72), seed + 1, { px: 2 }); ctx.fillStyle = mid; ctx.fill();
+  shapePath(plume(0.42, w * 0.45), seed + 2, { px: 1.5 }); ctx.fillStyle = core; ctx.fill();
+}
+
+// ---------- H3 rocket (stylized). origin = base centre, units: 1 = core width; height ~ 11 ----------
+function drawH3(x, y, s, { tilt = 0, flameK = 0, seed = 2000 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(tilt); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  const white = '#f4f1ea', sh = '#b9c0cf', sh2 = '#8d96ab';
+  // flames under the engines
+  if (flameK > 0) {
+    ctx.save(); ctx.translate(0, 0.2); flame(5.5 * flameK, 1.2, seed + 1); ctx.restore();
+    for (const sx of [-0.78, 0.78]) { ctx.save(); ctx.translate(sx, 0.15); flame(6.5 * flameK, 0.55, seed + (sx > 0 ? 3 : 5)); ctx.restore(); }
+  }
+  // back boosters (darker)
+  for (const sx of [-0.45, 0.45]) cel(() => shapePath([[sx - 0.22, 0], [sx - 0.22, -3.7], [sx, -4.3], [sx + 0.22, -3.7], [sx + 0.22, 0]], seed + 10 + (sx > 0 ? 1 : 0), { smooth: false }), { fill: sh, line: C.ink, lw });
+  // core stage
+  const core = () => shapePath([[-0.5, 0], [-0.5, -7.6], [0.5, -7.6], [0.5, 0]], seed + 20, { smooth: false });
+  cel(core, { fill: white, shade: sh, shadeFn: () => ctx.rect(-0.5, -8, 0.32, 8.2), line: C.ink, lw });
+  // amber-brown insulation band and interstage (stylized, no markings)
+  ctx.fillStyle = '#d8894a'; shapePath([[-0.5, -2.4], [0.5, -2.4], [0.5, -5.6], [-0.5, -5.6]], seed + 21, { smooth: false }); ctx.fill();
+  ctx.fillStyle = '#a9622f'; shapePath([[-0.5, -2.4], [-0.18, -2.4], [-0.18, -5.6], [-0.5, -5.6]], seed + 22, { smooth: false }); ctx.fill();
+  core(); ctx.strokeStyle = C.ink; ctx.lineWidth = lw; ctx.stroke();
+  inkLine([[-0.5, -2.4], [0.5, -2.4]], seed + 23, { lw });
+  inkLine([[-0.5, -5.6], [0.5, -5.6]], seed + 24, { lw });
+  ctx.fillStyle = '#3b3f4f'; ctx.fillRect(-0.5, -7.75, 1.0, 0.18);
+  // long fairing (ogive)
+  cel(() => shapePath([[-0.52, -7.6], [-0.52, -9.3], [-0.38, -10.4], [0, -11.0], [0.38, -10.4], [0.52, -9.3], [0.52, -7.6]], seed + 30), { fill: white, shade: sh, shadeFn: () => ctx.rect(-0.6, -11.2, 0.36, 3.7), hi: '#ffffff', hiFn: () => ctx.rect(0.14, -10.2, 0.1, 2.3), line: C.ink, lw });
+  // front boosters
+  for (const sx of [-0.78, 0.78]) {
+    cel(() => shapePath([[sx - 0.24, 0.05], [sx - 0.24, -3.5], [sx - 0.14, -4.0], [sx, -4.2], [sx + 0.14, -4.0], [sx + 0.24, -3.5], [sx + 0.24, 0.05]], seed + 40 + (sx > 0 ? 1 : 0), { smooth: false }), { fill: white, shade: sh, shadeFn: () => ctx.rect(sx - 0.3, -4.4, 0.16, 4.6), line: C.ink, lw });
+    ctx.fillStyle = '#2b2e3a'; ctx.beginPath(); ctx.moveTo(sx - 0.18, 0.05); ctx.lineTo(sx + 0.18, 0.05); ctx.lineTo(sx + 0.24, 0.32); ctx.lineTo(sx - 0.24, 0.32); ctx.fill();
+  }
+  // core nozzles
+  for (const nx of [-0.2, 0.2]) { ctx.fillStyle = '#2b2e3a'; ctx.beginPath(); ctx.moveTo(nx - 0.12, 0); ctx.lineTo(nx + 0.12, 0); ctx.lineTo(nx + 0.18, 0.3); ctx.lineTo(nx - 0.18, 0.3); ctx.fill(); }
+  ctx.restore();
+}
+
+// ---------- MMX (stylized, simplified; not an engineering drawing). origin body centre; 1 unit = body width ----------
+function drawMMX(x, y, s, { rot = 0, legs = 0, arm = 0, armAng = 0, corer = 0, burn = 0, seed = 3000, wing = 1, sampler = 0, dig = 0 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  if (burn > 0) { ctx.save(); ctx.translate(0, 0.62); flame(2.6 * burn, 0.42, seed + 1); ctx.restore(); }
+  // landing legs
+  if (legs > 0) {
+    for (const sx of [-1, -0.35, 0.35, 1]) {
+      const far = Math.abs(sx) < 0.5;
+      const foot = [sx * 0.75 * (1 + 0.25 * legs), 0.55 + 0.55 * legs];
+      inkLine([[sx * 0.4, 0.3], foot], seed + 10 + sx * 10, { color: far ? '#6b6f80' : C.ink, lw: (far ? 0.07 : 0.1) });
+      inkLine([[sx * 0.4, 0.3], foot], seed + 10 + sx * 10, { color: far ? '#9aa0b4' : '#d7dbe6', lw: (far ? 0.035 : 0.05) });
+      ctx.fillStyle = far ? '#6b6f80' : '#d7dbe6'; ctx.strokeStyle = C.ink; ctx.lineWidth = lw;
+      ctx.beginPath(); ctx.ellipse(foot[0], foot[1], 0.12, 0.04, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      // P-sampler box on the front-right leg
+      if (sx === 1 && sampler > 0) {
+        cel(() => { ctx.beginPath(); ctx.roundRect(foot[0] - 0.2, foot[1] - 0.3, 0.2, 0.2, 0.03); }, { fill: C.amber, shade: C.amber2, shadeFn: () => ctx.rect(foot[0] - 0.2, foot[1] - 0.2, 0.2, 0.1), line: C.ink, lw });
+      }
+    }
+  }
+  // solar wings
+  if (wing > 0) for (const sd of [-1, 1]) {
+    ctx.save(); ctx.scale(sd, 1);
+    inkLine([[0.5, -0.05], [0.72, -0.05]], seed + 20, { lw: 0.06 });
+    const pw = 1.7 * wing;
+    cel(() => shapePath([[0.72, -0.32], [0.72 + pw, -0.4], [0.72 + pw, 0.24], [0.72, 0.2]], seed + 21 + sd, { smooth: false }), { fill: '#1f2f78', shade: '#16225a', shadeFn: () => ctx.rect(0.6, 0.0, 3, 0.4), hi: '#3d57b8', hiFn: () => ctx.rect(0.72 + pw * 0.15, -0.36, pw * 0.08, 0.6), line: C.ink, lw });
+    ctx.strokeStyle = '#5d74d6'; ctx.lineWidth = 0.015;
+    for (let i = 1; i < 6; i++) { const xx = 0.72 + pw * i / 6; ctx.beginPath(); ctx.moveTo(xx, -0.32 - 0.08 * i / 6); ctx.lineTo(xx, 0.2 + 0.04 * i / 6); ctx.stroke(); }
+    ctx.beginPath(); ctx.moveTo(0.72, -0.06); ctx.lineTo(0.72 + pw, -0.08); ctx.stroke();
+    ctx.restore();
+  }
+  // body: gold-foil box in 3/4
+  const front = () => shapePath([[-0.5, -0.4], [0.5, -0.4], [0.5, 0.38], [-0.5, 0.38]], seed + 30, { smooth: false });
+  const top = () => shapePath([[-0.5, -0.4], [-0.3, -0.62], [0.68, -0.62], [0.5, -0.4]], seed + 31, { smooth: false });
+  const side = () => shapePath([[0.5, -0.4], [0.68, -0.62], [0.68, 0.16], [0.5, 0.38]], seed + 32, { smooth: false });
+  cel(side, { fill: C.amber2, line: C.ink, lw });
+  cel(top, { fill: C.amber3, line: C.ink, lw });
+  cel(front, { fill: C.amber, shade: C.amber2, shadeFn: () => ctx.rect(-0.5, 0.1, 1, 0.3), line: C.ink, lw });
+  // foil crinkles
+  inkLine([[-0.35, -0.3], [-0.2, -0.12], [-0.3, 0.05]], seed + 33, { color: C.amber2, lw: 0.025 });
+  inkLine([[0.1, -0.25], [0.25, -0.05], [0.15, 0.2]], seed + 34, { color: C.amber3, lw: 0.025 });
+  // dish antenna on top
+  ctx.save(); ctx.translate(0.05, -0.72); ctx.rotate(-0.35);
+  cel(() => { ctx.beginPath(); ctx.ellipse(0, 0, 0.36, 0.13, 0, 0, Math.PI * 2); }, { fill: '#eef0f4', shade: '#b9c0cf', shadeFn: () => ctx.rect(-0.4, 0, 0.8, 0.2), line: C.ink, lw });
+  inkLine([[0, 0], [0, -0.16]], seed + 35, { lw: 0.03 });
+  ctx.restore();
+  // engine bell
+  ctx.fillStyle = '#3b3f4f'; ctx.strokeStyle = C.ink; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(-0.12, 0.38); ctx.lineTo(0.12, 0.38); ctx.lineTo(0.2, 0.62); ctx.lineTo(-0.2, 0.62); ctx.closePath(); ctx.fill(); ctx.stroke();
+  // coring arm (from the left side): stowed -> deployed, corer drives down to the ground at the feet
+  if (arm > 0) {
+    const sh = [-0.5, 0.12];
+    const el = [lerp(-0.62, -1.08, arm), lerp(-0.1, 0.36, arm)];
+    const wr = [lerp(-0.46, -1.0, arm), lerp(0.18, 0.8 + dig * 0.06, arm)];
+    inkLine([sh, el, wr], seed + 40, { lw: 0.2, smooth: false });
+    inkLine([sh, el, wr], seed + 40, { color: '#d7dbe6', lw: 0.12, smooth: false });
+    inkLine([[sh[0] + 0.02, sh[1] - 0.02], [el[0] + 0.02, el[1] - 0.03]], seed + 41, { color: '#ffffff', lw: 0.03, smooth: false });
+    for (const j of [sh, el]) { ctx.fillStyle = C.paper; ctx.strokeStyle = C.ink; ctx.lineWidth = lw; ctx.beginPath(); ctx.arc(j[0], j[1], 0.08, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); }
+    // corer cylinder pointing down
+    ctx.save(); ctx.translate(wr[0], wr[1]);
+    cel(() => { ctx.beginPath(); ctx.rect(-0.08, 0, 0.16, 0.32); }, { fill: '#c9ced9', shade: '#8d96ab', shadeFn: () => ctx.rect(-0.08, 0, 0.06, 0.32), line: C.ink, lw });
+    ctx.fillStyle = C.amber; ctx.fillRect(-0.08, 0.02, 0.16, 0.05);
+    if (corer > 0) { // drill spin ticks
+      ctx.strokeStyle = C.ink; ctx.lineWidth = 0.02;
+      for (let i = 0; i < 3; i++) { const yy = 0.1 + ((G.f * 0.05 + i * 0.07) % 0.2); ctx.beginPath(); ctx.moveTo(-0.08, yy); ctx.lineTo(0.08, yy - 0.04); ctx.stroke(); }
+    }
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ---------- IDEFIX rover (a machine: box, wheels, panel, camera mast; no face). origin = bottom centre, 1 unit = body width ----------
+function drawRover(x, y, s, { rot = 0, mast = 1, seed = 4000, wheelSpin = 0, scan = 0 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  // wheels
+  for (const wx of [-0.42, 0.42]) {
+    ctx.save(); ctx.translate(wx, -0.14);
+    cel(() => { ctx.beginPath(); ctx.arc(0, 0, 0.15, 0, Math.PI * 2); }, { fill: '#2b2e3a', line: C.ink, lw });
+    ctx.strokeStyle = '#7d8296'; ctx.lineWidth = 0.03; ctx.rotate(wheelSpin);
+    for (let i = 0; i < 3; i++) { ctx.rotate(Math.PI / 3); ctx.beginPath(); ctx.moveTo(-0.11, 0); ctx.lineTo(0.11, 0); ctx.stroke(); }
+    ctx.restore();
+  }
+  // body
+  cel(() => shapePath([[-0.5, -0.2], [-0.5, -0.62], [0.5, -0.62], [0.5, -0.2]], seed, { smooth: false }), { fill: '#e3e6ee', shade: '#a7aec0', shadeFn: () => ctx.rect(-0.5, -0.4, 1, 0.3), line: C.ink, lw });
+  // solar panel lid
+  cel(() => shapePath([[-0.56, -0.62], [-0.44, -0.74], [0.6, -0.74], [0.52, -0.62]], seed + 1, { smooth: false }), { fill: '#1f2f78', hi: '#3d57b8', hiFn: () => ctx.rect(0, -0.75, 0.08, 0.2), line: C.ink, lw });
+  // camera mast
+  if (mast > 0) {
+    const mh = 0.42 * mast;
+    inkLine([[0.3, -0.74], [0.3, -0.74 - mh]], seed + 2, { lw: 0.08 });
+    inkLine([[0.3, -0.74], [0.3, -0.74 - mh]], seed + 2, { color: '#c9ced9', lw: 0.04 });
+    const cw = 0.26 * (0.55 + 0.45 * Math.abs(Math.cos(scan * 1.2)));
+    cel(() => { ctx.beginPath(); ctx.roundRect(0.31 - cw / 2, -0.86 - mh, cw, 0.14, 0.03); }, { fill: '#c9ced9', line: C.ink, lw });
+    ctx.fillStyle = '#2b2e3a'; ctx.beginPath(); ctx.arc(0.31 + Math.sin(scan * 1.2) * cw * 0.35 + 0.06 * Math.cos(scan * 1.2), -0.79 - mh, 0.035, 0, Math.PI * 2); ctx.fill();
+  }
+  // panel lines
+  inkLine([[-0.3, -0.58], [-0.3, -0.24]], seed + 3, { color: '#8d96ab', lw: 0.02 });
+  ctx.restore();
+}
+
+// ---------- sample return capsule (blunt cone). origin centre, size 1 = diameter ----------
+function drawCapsule(x, y, s, { rot = 0, plasma = 0, seed = 5000 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  if (plasma > 0) {
+    ctx.save(); ctx.translate(0, -0.25); ctx.rotate(Math.PI); flame(3.2 * plasma, 1.15, seed + 1, { core: '#fff7da', mid: '#ffc861', outer: '#ff6a2a' }); ctx.restore();
+  }
+  cel(() => shapePath([[-0.5, 0.05], [-0.28, -0.32], [0.28, -0.32], [0.5, 0.05]], seed, { smooth: false }), { fill: '#e8e3d8', shade: '#a9a294', shadeFn: () => ctx.rect(-0.6, -0.4, 0.4, 0.5), line: C.ink, lw });
+  cel(() => { ctx.beginPath(); ctx.ellipse(0, 0.08, 0.52, 0.16, 0, 0, Math.PI * 2); }, { fill: '#5a3a2a', shade: '#3a241a', shadeFn: () => ctx.rect(-0.6, 0.08, 1.2, 0.2), line: C.ink, lw });
+  ctx.restore();
+}
+
+// ---------- Electron (stylized, dark, no markings). origin base centre; 1 unit = body width; height ~ 14 ----------
+function drawElectron(x, y, s, { seed = 6000, glow = 0 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  const body = '#2e3242', sh = '#181a22', hi = '#8a93b8';
+  if (glow > 0) { radGlow(0, 0.5, 4, `rgba(255,170,90,${0.35 * glow})`); }
+  const outline = [[-0.5, 0], [-0.5, -10.5], [-0.52, -11.3], [-0.38, -12.6], [0, -13.4], [0.38, -12.6], [0.52, -11.3], [0.5, -10.5], [0.5, 0]];
+  cel(() => shapePath(outline, seed), { fill: body, keyline: C.paper, keyW: 7 / s, shade: sh, shadeFn: () => ctx.rect(-0.6, -14, 0.42, 14.2), hi, hiFn: () => ctx.rect(0.16, -12.8, 0.16, 12.6) });
+  // cyan rim from the searchlights on the right edge
+  ctx.save(); shapePath(outline, seed); ctx.clip(); ctx.fillStyle = C.cyan; ctx.globalAlpha = 0.85; ctx.fillRect(0.38, -14, 0.2, 14.2); ctx.restore();
+  for (const yy of [-3.2, -8.2, -11.3]) inkLine([[-0.5, yy], [0.5, yy]], seed + yy, { color: '#5a6080', lw: 0.08 });
+  ctx.fillStyle = '#3b3f4f'; ctx.strokeStyle = C.ink; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(-0.38, 0); ctx.lineTo(0.38, 0); ctx.lineTo(0.5, 0.35); ctx.lineTo(-0.5, 0.35); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+// generic small satellite (box + two panels)
+function drawSat(x, y, s, { rot = 0, seed = 7000 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); G.S = s;
+  const lw = 3.5 / s;
+  for (const sd of [-1, 1]) cel(() => shapePath([[sd * 0.32, -0.22], [sd * 1.15, -0.22], [sd * 1.15, 0.22], [sd * 0.32, 0.22]], seed + sd, { smooth: false }), { fill: '#1f2f78', hi: '#3d57b8', hiFn: () => ctx.rect(sd * 0.6, -0.25, 0.1, 0.5), line: C.ink, lw });
+  cel(() => shapePath([[-0.32, -0.32], [0.32, -0.32], [0.32, 0.32], [-0.32, 0.32]], seed + 5, { smooth: false }), { fill: '#e3e6ee', shade: '#a7aec0', shadeFn: () => ctx.rect(-0.32, 0.05, 0.64, 0.3), line: C.ink, lw });
+  ctx.restore();
+}
+
+// ---------- cel Mars (drawn) ----------
+function drawMarsCel(x, y, r, { seed = 8000, rot = 0, light = [0.6, -0.4] } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(r, r); G.S = r;
+  const disk = () => { ctx.beginPath(); ctx.arc(0, 0, 1, 0, Math.PI * 2); };
+  cel(disk, { fill: C.mars, line: C.ink, lw: 5 / r });
+  ctx.save(); disk(); ctx.clip();
+  ctx.rotate(rot);
+  // dark regions
+  ctx.fillStyle = '#9a3a20';
+  [[[-0.5, -0.1], [-0.1, -0.25], [0.15, 0.05], [-0.05, 0.3], [-0.45, 0.25]], [[0.3, 0.3], [0.7, 0.2], [0.8, 0.5], [0.45, 0.6]], [[-0.8, -0.5], [-0.55, -0.62], [-0.4, -0.4], [-0.7, -0.3]]].forEach((pts, i) => { shapePath(pts, seed + i); ctx.fill(); });
+  ctx.rotate(-rot);
+  // canyon line
+  inkLine([[-0.6, 0.12], [-0.2, 0.08], [0.2, 0.14]], seed + 9, { color: '#7a2a16', lw: 0.03 });
+  // polar cap
+  ctx.fillStyle = '#f7efe6'; shapePath(ellPts(0.05, -0.95, 0.35, 0.14, 10), seed + 10); ctx.fill();
+  // terminator shadow
+  ctx.fillStyle = C.mars2; ctx.beginPath(); ctx.arc(light[0] * 0.75, light[1] * 0.75, 1.28, 0, Math.PI * 2); ctx.rect(-2, -2, 4, 4); ctx.fill('evenodd');
+  // highlight
+  ctx.fillStyle = C.mars3; ctx.beginPath(); ctx.ellipse(light[0] * 0.55, light[1] * 0.55, 0.3, 0.16, Math.atan2(light[1], light[0]) + Math.PI / 2, 0, Math.PI * 2); ctx.fill();
+  ctx.restore();
+  ctx.restore();
+}
+
+// ---------- Earth (drawn) centred on Australia, orthographic ----------
+const AUS = [[142.5,-10.7],[143.5,-14],[145.3,-15],[146,-18.5],[149,-21],[150.8,-23.5],[153,-25.5],[153.6,-28.5],[153,-31],[151.5,-33.5],[150,-37.5],[148,-37.8],[146.4,-39],[144.5,-38.2],[141,-38.1],[139.7,-37.2],[138.5,-35.5],[137.5,-33.0],[136,-34.8],[135.2,-34.6],[134,-32.6],[131,-31.5],[126,-32.3],[123.5,-33.9],[119.8,-34.3],[117.9,-35.1],[115,-34.3],[115.6,-31.6],[114.9,-29.5],[113.5,-26.5],[113.8,-23.5],[114.1,-21.8],[116.7,-20.6],[119,-19.9],[121.5,-18.5],[122.3,-17],[123.6,-16.2],[125.5,-14.5],[127,-13.8],[129,-14.9],[130,-13],[132.6,-11.5],[135,-12.2],[136.7,-12],[136,-13.5],[135.5,-14.9],[137.8,-16.3],[139.5,-17.5],[141,-16.5],[141.6,-13],[141.9,-11]];
+const TAS = [[144.7,-40.7],[148.3,-40.9],[148.3,-42.2],[147,-43.6],[145.3,-42.6]];
+const NZN = [[172.7,-34.4],[174.6,-36.2],[176,-37.6],[178.5,-37.7],[177,-39.6],[175.2,-41.6],[174.6,-41.2],[173,-39.3]];
+const NZS = [[172.6,-40.5],[174.3,-41.7],[173,-43.8],[171.2,-44.5],[169,-46.6],[166.5,-46],[168.2,-44.1],[171,-42.4]];
+const NG = [[131,-1.5],[136,-2.2],[141,-2.6],[145.8,-4.8],[147.5,-6.5],[150,-10.5],[146,-8.8],[143.5,-9.1],[140,-8],[138,-8.3],[137.5,-5],[133,-4]];
+function orthoPt(lon, lat, lon0, lat0) {
+  const d = Math.PI / 180; const la = lat * d, lo = (lon - lon0) * d, la0 = lat0 * d;
+  const x = Math.cos(la) * Math.sin(lo);
+  const y = Math.cos(la0) * Math.sin(la) - Math.sin(la0) * Math.cos(la) * Math.cos(lo);
+  const z = Math.sin(la0) * Math.sin(la) + Math.cos(la0) * Math.cos(la) * Math.cos(lo);
+  return [x, -y, z];
+}
+function drawEarthCel(x, y, r, { lon0 = 134, lat0 = -25, seed = 8500, pin = 0, light = [-0.6, -0.5] } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(r, r); G.S = r;
+  const disk = () => { ctx.beginPath(); ctx.arc(0, 0, 1, 0, Math.PI * 2); };
+  // atmosphere rim
+  ctx.save(); ctx.globalAlpha = 0.9; ctx.strokeStyle = C.cyan; ctx.lineWidth = 0.05; ctx.beginPath(); ctx.arc(0, 0, 1.03, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+  cel(disk, { fill: '#2f6fd6', line: C.ink, lw: 5 / r });
+  ctx.save(); disk(); ctx.clip();
+  const land = (poly, sd) => {
+    const pts = poly.map(([lo, la]) => orthoPt(lo, la, lon0, lat0)).filter((p) => p[2] > 0).map((p) => [p[0], p[1]]);
+    if (pts.length < 3) return;
+    cel(() => shapePath(pts, sd, { smooth: false, px: 0.8 }), { fill: '#d9a35a', shade: '#a8733a', shadeFn: () => ctx.ellipse(0.25, 0.1, 0.25, 0.15, 0.3, 0, Math.PI * 2), line: C.ink, lw: 3 / r });
+  };
+  land(AUS, seed + 1); land(TAS, seed + 2); land(NZN, seed + 3); land(NZS, seed + 4); land(NG, seed + 5);
+  // green edges of Australia (stylized)
+  // clouds: cel swirls
+  ctx.fillStyle = '#f4f6fb';
+  [[[-0.9, -0.45], [-0.5, -0.6], [-0.2, -0.52], [-0.5, -0.42]], [[0.3, 0.55], [0.75, 0.42], [0.95, 0.55], [0.55, 0.7]], [[-0.7, 0.62], [-0.35, 0.72], [-0.6, 0.85]], [[0.55, -0.75], [0.85, -0.55], [0.6, -0.5]]].forEach((pts, i) => { shapePath(pts, seed + 20 + i); ctx.fill(); });
+  ctx.fillStyle = 'rgba(160,210,255,0.35)'; ctx.beginPath(); ctx.ellipse(light[0] * 0.5, light[1] * 0.5, 0.45, 0.28, Math.atan2(light[1], light[0]) + Math.PI / 2, 0, Math.PI * 2); ctx.fill();
+  // night side
+  ctx.fillStyle = 'rgba(10,16,48,0.72)'; ctx.beginPath(); ctx.arc(light[0] * 0.8, light[1] * 0.8, 1.35, 0, Math.PI * 2); ctx.rect(-2, -2, 4, 4); ctx.fill('evenodd');
+  ctx.restore();
+  ctx.restore();
+}
+// screen position of a lon/lat on a drawn Earth
+function earthPt(x, y, r, lon, lat, lon0 = 134, lat0 = -25) { const p = orthoPt(lon, lat, lon0, lat0); return [x + p[0] * r, y + p[1] * r]; }
+
+// ---------- Phobos ground (drawn): big curved horizon ----------
+function drawPhoGround(cx, cy, R, { seed = 9000, light = 1, rim = C.amber } = {}) {
+  // a huge disk whose top edge is the horizon
+  const disk = () => shapePath(ellPts(cx, cy, R * 1.12, R * 0.9, 48), seed, { px: 2.5 });
+  cel(disk, { fill: C.pho, keyline: C.ink, keyW: 6, shade: C.pho2, shadeFn: () => ctx.ellipse(cx - light * R * 0.9, cy + R * 0.5, R * 1.3, R * 1.1, 0, 0, Math.PI * 2) });
+  ctx.save(); disk(); ctx.clip();
+  ctx.save(); ctx.beginPath(); ctx.rect(light > 0 ? cx : cx - 3 * R, cy - 2 * R, 3 * R, 4 * R); ctx.clip(); disk(); ctx.strokeStyle = rim; ctx.lineWidth = 16; ctx.stroke(); ctx.restore();
+  // craters in perspective (flattened ellipses), seeded
+  const rnd = mulberry(seed);
+  for (let i = 0; i < 26; i++) {
+    const a = -Math.PI / 2 + (rnd() - 0.5) * 1.6, dd = 0.15 + rnd() * 0.85;
+    const x = cx + Math.cos(a) * R * 1.12 * dd, y = cy - R * 0.9 + (1 - Math.cos((rnd() - 0.5) * 0.4)) * R + dd * R * 0.6 * rnd();
+    const r = (8 + rnd() * 50) * (0.4 + (y - (cy - R * 0.9)) / (R * 0.6));
+    if (y < cy - R * 0.88) continue;
+    cel(() => shapePath(ellPts(x, y, r, r * 0.32, 10), seed + 30 + i, { px: 1.4 }), { fill: C.pho2, shade: C.pho4, shadeFn: () => ctx.ellipse(x - r * 0.2, y - r * 0.12, r * 0.9, r * 0.22, 0, 0, Math.PI * 2), line: C.pho4, lw: 2 });
+    inkLine([[x - r * 0.8, y + r * 0.2], [x, y + r * 0.34], [x + r * 0.8, y + r * 0.2]], seed + 60 + i, { color: C.pho3, lw: Math.max(1.5, r * 0.06) });
+  }
+  // grooves
+  for (let i = 0; i < 4; i++) inkLine([[cx - R * 0.9, cy - R * 0.72 + i * 40], [cx, cy - R * 0.66 + i * 46], [cx + R * 0.9, cy - R * 0.72 + i * 40]], seed + 90 + i, { color: C.pho2, lw: 3 });
+  ctx.restore();
+}
+
+// ===== captions.js =====
+// captions.js: kinetic captions (narration words verbatim, timed from captions.json), credits, fact chips, banners.
+'use strict';
+const SAFE = { x0: 80, x1: 900, y0: 260, y1: 1500 };
+const wf = (i) => Math.round(WORDS[i].start * FPS);   // frame a word appears
+
+// chunk table: words [a, b], position (x, y = top of first line), base size, emphasis words (index -> {k, style}),
+// br: indices that start a new line, style: 'sub' (anime subtitle), 'banner' (STEP card), tilt in degrees
+const CHUNKS = [
+  { a: 0, b: 4, x: 80, y: 1210, size: 84 },
+  { a: 5, b: 7, x: 80, y: 1170, size: 84, br: [6], em: { 6: 1.55, 7: 1.55 }, maxY: 1398 },   // two credit lines below
+  { a: 8, b: 9, x: 80, y: 1230, size: 92, em: { 9: 1.3 } },
+  { a: 10, b: 12, x: 80, y: 1250, size: 88, em: { 12: 1.2 } },
+  { a: 13, b: 14, x: 80, y: 1080, size: 96, br: [14], em: { 14: 2.6 } },
+  { a: 15, b: 20, x: 80, y: 1230, size: 82, br: [17], em: { 16: 1.5 } },
+  { a: 21, b: 22, x: 0, y: 0, size: 100, style: 'banner' },
+  { a: 23, b: 25, x: 80, y: 1150, size: 90, br: [24], em: { 25: 2.3 }, maxY: 1398 },   // two credit lines below
+  { a: 26, b: 27, x: 0, y: 0, size: 100, style: 'banner' },
+  { a: 28, b: 30, x: 80, y: 1250, size: 88, em: { 30: 1.35 } },
+  { a: 31, b: 34, x: 80, y: 1120, size: 84, br: [33], em: { 32: 2.6 } },
+  { a: 35, b: 36, x: 80, y: 1250, size: 92 },
+  { a: 37, b: 38, x: 80, y: 1250, size: 92 },
+  { a: 39, b: 40, x: 80, y: 1120, size: 96, br: [40], em: { 39: 2.9, 40: 1.6 } },
+  { a: 41, b: 42, x: 0, y: 0, size: 100, style: 'banner' },
+  { a: 43, b: 44, x: 80, y: 1180, size: 96, em: { 44: 2.0 } },
+  { a: 45, b: 46, x: 80, y: 1250, size: 90 },
+  { a: 47, b: 48, x: 80, y: 1200, size: 90, br: [48], em: { 47: 1.45 } },
+  { a: 49, b: 53, x: 80, y: 1080, size: 86, br: [50, 52], em: { 52: 2.6, 53: 1.4 } },
+  { a: 54, b: 55, x: 0, y: 0, size: 100, style: 'banner' },
+  { a: 56, b: 57, x: 80, y: 1220, size: 96, em: { 57: 1.5 } },
+  { a: 58, b: 60, x: 80, y: 1250, size: 90 },
+  { a: 61, b: 64, x: 80, y: 1200, size: 86, br: [63], em: { 64: 1.15 } },
+  { a: 65, b: 65, x: 80, y: 1160, size: 96, em: { 65: 2.5 } },
+  { a: 66, b: 67, x: 80, y: 1180, size: 96, em: { 67: 2.0 } },
+  { a: 68, b: 71, x: 80, y: 1150, size: 86, br: [69], em: { 68: 2.3 } },
+  { a: 72, b: 74, x: 80, y: 1250, size: 90 },
+  { a: 75, b: 75, x: 0, y: 0, size: 120, style: 'banner' },
+  { a: 76, b: 80, x: 80, y: 1240, size: 80, br: [78] },
+  { a: 81, b: 84, x: 80, y: 1240, size: 80, br: [83] },
+  { a: 85, b: 85, x: 80, y: 1280, size: 96, em: { 85: 1.25 } },
+  { a: 86, b: 88, x: 80, y: 790, size: 104, maxY: 1040, br: [87] },
+];
+// chunk end: next chunk start, or last word end + 0.45 s if there is a pause
+CHUNKS.forEach((c, i) => {
+  const next = CHUNKS[i + 1];
+  const endHold = WORDS[c.b].end + 0.45;
+  c.f0 = wf(c.a);
+  c.f1 = next ? Math.min(wf(next.a), Math.round(Math.max(endHold, WORDS[c.b].end) * FPS)) : Math.round(42 * FPS);
+  if (next && wf(next.a) - Math.round(WORDS[c.b].end * FPS) < 18) c.f1 = wf(next.a);
+});
+// a chunk never survives a hard cut that comes after its last word
+const CUTS = [103, 147, 168, 212, 244, 314, 356, 446, 496, 544, 560, 600, 630, 687, 758, 792, 846, 913, 949, 999, 1038, 1064, 1162];
+CHUNKS.forEach((c) => { const lastEnd = Math.round(WORDS[c.b].end * FPS); const cut = CUTS.find((x) => x > lastEnd - 2 && x > c.f0); if (cut != null && cut < c.f1) c.f1 = cut; });
+// per-shot overrides of chunk placement (set by shots.js)
+const CAP_OVR = {};
+
+function capFont(size, em) {
+  ctx.font = em ? `400 ${size}px "Dela Gothic One"` : `italic 900 ${size}px Archivo`;
+  ctx.fontStretch = 'normal';
+}
+// layout a chunk -> [{i, x, y(baseline), size, em, w}]
+function layoutChunk(c) {
+  const o = Object.assign({}, c, CAP_OVR[CHUNKS.indexOf(c)] || {});
+  const items = []; let x = o.x, lineTop = o.y, line = [];
+  const maxX = SAFE.x1;
+  const flush = () => {
+    if (!line.length) return;
+    const asc = Math.max(...line.map((w) => w.size * (w.em ? 0.92 : 0.8)));
+    const desc = Math.max(...line.map((w) => w.size * (w.em ? 0.18 : 0.24)));
+    line.forEach((w) => { w.y = lineTop + asc; items.push(w); });
+    lineTop += asc + desc + 14; line = []; x = o.x;
+  };
+  for (let i = o.a; i <= o.b; i++) {
+    const k = (o.em && o.em[i]) || 1; const em = k > 1.01;
+    const size = o.size * k;
+    capFont(size, em);
+    const text = WORDS[i].text;
+    const w = ctx.measureText(text).width;
+    const gap = o.size * 0.26;
+    if ((o.br && o.br.includes(i)) || (line.length && x + w > maxX)) flush();
+    let sz = size, ww = w;
+    if (x + ww > maxX) { sz = size * (maxX - x) / ww; ww = maxX - x; }  // shrink a single long word to fit
+    line.push({ i, x, size: sz, em, w: ww, text });
+    x += ww + gap;
+  }
+  flush();
+  // keep the chunk inside the safe area and above the credit slot (y 1440)
+  const bottom = Math.max(...items.map((w) => w.y + w.size * (w.em ? 0.2 : 0.26)));
+  const lim = o.maxY || 1436;
+  if (bottom > lim) { const d = bottom - lim; items.forEach((w) => { w.y -= d; }); }
+  const top = Math.min(...items.map((w) => w.y - w.size * (w.em ? 0.95 : 0.85)));
+  if (top < SAFE.y0) { const d = SAFE.y0 - top; items.forEach((w) => { w.y += d; }); }
+  // ink-exact fit (final check): every line's real ink (outline stroke, drop, italic overhang and tilt
+  // included) sits inside CAP_SAFE at rest; a line that is too wide is scaled down, then shifted in.
+  const tilt = o.tilt != null ? o.tilt : -3;
+  const lines = [];
+  items.forEach((w) => { let l = lines.find((q) => Math.abs(q.y - w.y) < 0.5); if (!l) lines.push((l = { y: w.y, ws: [] })); l.ws.push(w); });
+  for (const l of lines) {
+    for (let iter = 0; iter < 4; iter++) {
+      const bx = l.ws.map((w) => wordInk(w, 1, 1, tilt));
+      const L = Math.min(...bx.map((b) => b[0])), R = Math.max(...bx.map((b) => b[2]));
+      const span = CAP_SAFE.x1 - CAP_SAFE.x0;
+      if (R - L > span) { const k = (span / (R - L)) * 0.995, x0 = l.ws[0].x; l.ws.forEach((w) => { w.x = x0 + (w.x - x0) * k; w.size *= k; w.w *= k; }); continue; }
+      const d = L < CAP_SAFE.x0 ? CAP_SAFE.x0 - L : R > CAP_SAFE.x1 ? CAP_SAFE.x1 - R : 0;
+      l.ws.forEach((w) => { w.x += d; });
+      break;
+    }
+  }
+  const ib = items.map((w) => wordInk(w, 1, 1, tilt));
+  const iT = Math.min(...ib.map((b) => b[1])), iB = Math.max(...ib.map((b) => b[3]));
+  const yl = Math.min(CAP_SAFE.y1, (o.maxY || 1436) + 10);
+  let dyv = iB > yl ? yl - iB : 0;
+  if (iT + dyv < CAP_SAFE.y0) dyv = CAP_SAFE.y0 - iT;
+  if (dyv) items.forEach((w) => { w.y += dyv; });
+  return { items, o };
+}
+// caption ink must stay inside this box on every frame (2 px inside the 80-900 x 260-1500 safe zone)
+const CAP_SAFE = { x0: 82, x1: 898, y0: 262, y1: 1498 };
+// screen box [L, T, R, B] of a caption word exactly as drawWord draws it: outline stroke (which covers
+// the drop), italic overhang, the tilt about the pivot and an optional pop scale kx, ky, plus an offset.
+function wordInk(it, kx = 1, ky = 1, tilt = -3, dx = 0, dy = 0) {
+  capFont(it.size, it.em);
+  const m = ctx.measureText(it.text), s = it.size;
+  const sw = s * (it.em ? 0.1 : 0.085), dr = s * (it.em ? 0.06 : 0.07);
+  const u0 = -m.actualBoundingBoxLeft - sw, u1 = m.actualBoundingBoxRight + sw;
+  const v0 = -m.actualBoundingBoxAscent - sw, v1 = m.actualBoundingBoxDescent + Math.max(sw, dr);
+  const a = (tilt * Math.PI) / 180, c = Math.cos(a), sn = Math.sin(a);
+  const px = it.x + dx, py = it.y - s * 0.3 + dy;
+  let L = Infinity, R = -Infinity, T = Infinity, B = -Infinity;
+  for (const u of [u0, u1]) for (const v of [v0, v1]) {
+    const X = kx * u, Y = ky * (v + s * 0.3);
+    const x = px + c * X - sn * Y, y = py + sn * X + c * Y;
+    L = Math.min(L, x); R = Math.max(R, x); T = Math.min(T, y); B = Math.max(B, y);
+  }
+  return [L, T, R, B];
+}
+const inkInside = (b) => b[0] >= CAP_SAFE.x0 - 0.5 && b[2] <= CAP_SAFE.x1 + 0.5 && b[1] >= CAP_SAFE.y0 - 0.5 && b[3] <= CAP_SAFE.y1 + 0.5;
+// pop scale that keeps the word inside the safe area: uniform if it fits, else the widest uniform
+// scale that fits plus a vertical stretch (a squash-and-stretch slam, at most 1.4x the width scale)
+function fitPop(it, k, tilt, dx, dy) {
+  if (k <= 1 || inkInside(wordInk(it, k, k, tilt, dx, dy))) return [k, k];
+  let lo = 1, hi = k;
+  for (let n = 0; n < 12; n++) { const m = (lo + hi) / 2; if (inkInside(wordInk(it, m, m, tilt, dx, dy))) lo = m; else hi = m; }
+  const kx = lo; let lo2 = kx, hi2 = Math.min(k, kx * 1.4);
+  if (inkInside(wordInk(it, kx, hi2, tilt, dx, dy))) return [kx, hi2];
+  for (let n = 0; n < 12; n++) { const m = (lo2 + hi2) / 2; if (inkInside(wordInk(it, kx, m, tilt, dx, dy))) lo2 = m; else hi2 = m; }
+  return [kx, lo2];
+}
+// draw one caption word
+function popK(it, fNow) {
+  const age = fNow - wf(it.i);
+  const pop = age < 0 ? 0 : age >= 5 ? 1 : E.back(age / 5, 2.2);
+  return it.em ? lerp(1.7, 1, pop) : lerp(1.22, 1, pop);
+}
+function drawWord(it, fNow, { color, amberNewest = true, newest = false, tilt = -3, kx = null, ky = null } = {}) {
+  const k = popK(it, fNow);
+  capFont(it.size, it.em);
+  ctx.save();
+  ctx.translate(it.x, it.y - it.size * 0.3);
+  ctx.rotate(tilt * Math.PI / 180);
+  ctx.scale(kx != null ? kx : k, ky != null ? ky : k);
+  ctx.translate(0, it.size * 0.3);
+  ctx.lineJoin = 'round'; ctx.miterLimit = 2;
+  if (it.em) {
+    // title style: paper outer, ink inner, amber fill, hard red drop
+    ctx.fillStyle = C.red2; ctx.fillText(it.text, it.size * 0.05, it.size * 0.06);
+    ctx.strokeStyle = C.paper; ctx.lineWidth = it.size * 0.2; ctx.strokeText(it.text, 0, 0);
+    ctx.strokeStyle = C.ink; ctx.lineWidth = it.size * 0.11; ctx.strokeText(it.text, 0, 0);
+    ctx.fillStyle = C.amber; ctx.fillText(it.text, 0, 0);
+    // anime shine stripe across the top half
+    ctx.save(); ctx.beginPath(); ctx.rect(0, -it.size * 0.75, it.w, it.size * 0.22); ctx.clip(); ctx.fillStyle = C.amber3; ctx.fillText(it.text, 0, 0); ctx.restore();
+  } else {
+    ctx.fillStyle = C.ink; ctx.fillText(it.text, it.size * 0.06, it.size * 0.07);
+    ctx.strokeStyle = C.ink; ctx.lineWidth = it.size * 0.17; ctx.strokeText(it.text, 0, 0);
+    ctx.fillStyle = color || (newest && amberNewest ? C.amber : C.paper); ctx.fillText(it.text, 0, 0);
+  }
+  ctx.restore();
+}
+// banner chunk (STEP cards and NEXT): drawn by shots via drawBanner; captions skip them here
+function drawCaptions(t, opt = {}) {
+  const f = G.f;
+  const boxes = G.capBoxes || [];
+  const shk = opt.shake || [0, 0];
+  for (let ci = 0; ci < CHUNKS.length; ci++) {
+    const c = CHUNKS[ci];
+    if (f < c.f0 || f >= c.f1) continue;
+    if (c.style === 'banner') continue;
+    const { items, o } = layoutChunk(c);
+    const tilt = o.tilt != null ? o.tilt : -3;
+    let newestI = -1; items.forEach((it) => { if (f >= wf(it.i)) newestI = it.i; });
+    // the caption shake follows the hits, clamped so the visible words' ink never leaves the safe area
+    const vis = items.filter((it) => f >= wf(it.i));
+    let dx = (o.dx || 0) + shk[0], dy = (o.dy || 0) + shk[1];
+    if (vis.length) {
+      const rb = vis.map((it) => wordInk(it, 1, 1, tilt, o.dx || 0, o.dy || 0));
+      const L = Math.min(...rb.map((b) => b[0])), R = Math.max(...rb.map((b) => b[2])), T = Math.min(...rb.map((b) => b[1])), B = Math.max(...rb.map((b) => b[3]));
+      dx = (o.dx || 0) + clamp(shk[0], CAP_SAFE.x0 - L, CAP_SAFE.x1 - R);
+      dy = (o.dy || 0) + clamp(shk[1], CAP_SAFE.y0 - T, CAP_SAFE.y1 - B);
+    }
+    ctx.save();
+    ctx.translate(dx, dy);
+    for (const it of vis) {
+      const [kx, ky] = fitPop(it, popK(it, f), tilt, dx, dy);
+      drawWord(it, f, { newest: it.i === newestI && items.length > 1, tilt, kx, ky });
+      const b = wordInk(it, kx, ky, tilt, dx, dy);   // exact ink box on screen, for caption QA
+      boxes.push({ i: it.i, text: it.text, x: b[0], y: b[1], w: b[2] - b[0], h: b[3] - b[1], f0: wf(it.i) });
+    }
+    ctx.restore();
+  }
+  G.capBoxes = boxes;
+}
+window.__capBoxes = (t) => { window.renderAt(t); return G.capBoxes || []; };
+
+// ---------- STEP / NEXT banner (the caption words "Step one:" etc. drawn as an anime eyecatch band) ----------
+// st: band style {y, ang (deg), axis 'x'|'y', dir, color, text, numC, ink, step (pips), stamp}
+// o: band offset along its axis (px); the caller moves the band, this draws it and its caption words.
+function bandXform(st, o, par = 1) {
+  ctx.translate(540, st.y); ctx.rotate(st.ang * Math.PI / 180);
+  if (st.axis === 'y') ctx.translate(0, o * par); else ctx.translate(o * par * st.dir, 0);
+}
+function drawBanner(ci, o, out, st) {
+  const c = CHUNKS[ci];
+  const f = G.f;
+  const ink = st.ink || C.ink, color = st.color || C.amber, txtC = st.text || C.paper, numC = st.numC || C.paper;
+  // back band (ink, parallax) and front band (colour)
+  ctx.save(); bandXform(st, o, 1.15); ctx.fillStyle = ink; ctx.fillRect(-1000, -205, 2000, 410); ctx.restore();
+  ctx.save(); bandXform(st, o);
+  ctx.fillStyle = color; ctx.fillRect(-1000, -175, 2000, 350);
+  // speed hatching in the band, running along the band's own motion axis
+  ctx.save(); ctx.beginPath(); ctx.rect(-1000, -175, 2000, 350); ctx.clip();
+  ctx.fillStyle = st.hatch || 'rgba(0,0,0,0.12)';
+  for (let i = 0; i < 18; i++) {
+    const L = 200 + hash(i, 42, 1) * 700;
+    if (st.axis === 'y') { const xx = -1000 + hash(i, 41, Math.floor(f / 3)) * 2000; const yy = ((hash(i, 43, 1) * 900 + f * 30) % 900) - 450; ctx.fillRect(xx, yy, 4 + hash(i, 44, 1) * 6, L * 0.4); }
+    else { const yy = -175 + hash(i, 41, Math.floor(f / 3)) * 350; const xx = ((hash(i, 43, 1) * 2400 + f * 60 * st.dir) % 2400 + 2400) % 2400 - 1200; ctx.fillRect(xx, yy, L, 4 + hash(i, 44, 1) * 6); }
+  }
+  ctx.restore();
+  // big numeral (zooms in from huge when st.numZoom)
+  // the numeral's right edge sits at band x NUM_R so that, at rest, it stays left of the screen's x 900
+  // (YouTube's buttons cover the right edge)
+  const NUM_R = 300;
+  let numLeft = NUM_R;
+  if (st.num) {
+    ctx.font = '400 340px "Dela Gothic One"'; ctx.lineJoin = 'round';
+    const nw = ctx.measureText(st.num).width; numLeft = NUM_R - nw;
+    const zk = st.numZoom ? lerp(st.numZoom, 1, E.out5(inv(st.fIn + 2, st.fIn + 12, f))) : 1;
+    ctx.save(); ctx.translate(NUM_R - nw / 2, 0); ctx.scale(zk, zk); ctx.translate(-(NUM_R - nw / 2), 0);
+    if (st.numDrop) { ctx.fillStyle = st.numDrop; ctx.fillText(st.num, NUM_R - nw + 13, 138); }
+    ctx.strokeStyle = ink; ctx.lineWidth = 24; ctx.strokeText(st.num, NUM_R - nw, 125);
+    ctx.fillStyle = numC; ctx.fillText(st.num, NUM_R - nw, 125);
+    ctx.restore();
+  }
+  // heist progress pips (four steps): filled up to this step
+  if (st.step) {
+    for (let i = 0; i < 4; i++) {
+      const px = -420 + i * 54, py = 128, on = i < st.step;
+      const pop = i === st.step - 1 ? E.back(inv(st.fIn + 10, st.fIn + 16, f), 3) : 1;
+      ctx.save(); ctx.translate(px, py); ctx.rotate(Math.PI / 4); ctx.scale(pop, pop);
+      ctx.fillStyle = on ? txtC : 'rgba(0,0,0,0)'; ctx.strokeStyle = ink; ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.rect(-14, -14, 28, 28); ctx.stroke(); if (on) ctx.fill();
+      ctx.strokeStyle = on ? ink : txtC; ctx.lineWidth = 3; ctx.strokeRect(-14, -14, 28, 28);
+      ctx.restore();
+    }
+  }
+  // caption words of this chunk, on the band (verbatim, timed per word), auto-fit before the numeral
+  let size = c.size;
+  const gap = 30, x0 = -426, maxW = (st.num ? numLeft - 50 : 380) - x0;
+  ctx.font = `400 ${size}px "Dela Gothic One"`;
+  let tw = 0; for (let i = c.a; i <= c.b; i++) tw += ctx.measureText(WORDS[i].text).width + (i < c.b ? gap : 0);
+  if (tw > maxW) size *= maxW / tw;
+  ctx.font = `400 ${size}px "Dela Gothic One"`; ctx.lineJoin = 'round';
+  const boxes = G.capBoxes || [];
+  let x = x0;
+  for (let i = c.a; i <= c.b; i++) {
+    const w = ctx.measureText(WORDS[i].text).width;
+    if (f >= wf(i) && out < 0.01) {
+      const age = f - wf(i), pop = age >= 5 ? 1 : E.back(age / 5, 2);
+      ctx.save(); ctx.translate(x, 40); ctx.scale(lerp(1.4, 1, pop), lerp(1.4, 1, pop));
+      // ink letters on a paper band (NEXT) get a paper outline, so the counters stay open and the word reads
+      ctx.strokeStyle = txtC === ink ? color : ink; ctx.lineWidth = size * 0.16; ctx.strokeText(WORDS[i].text, 0, 0);
+      ctx.fillStyle = txtC; ctx.fillText(WORDS[i].text, 0, 0);
+      ctx.restore();
+      // exact screen box of the word (corners through the current transform) for caption QA
+      const m = ctx.getTransform();
+      const pts = [[x, 40 - size * 0.9], [x + w, 40 - size * 0.9], [x, 40 + size * 0.2], [x + w, 40 + size * 0.2]].map(([a, b]) => m.transformPoint(new DOMPoint(a, b)));
+      const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y);
+      boxes.push({ i, text: WORDS[i].text, x: Math.min(...xs), y: Math.min(...ys), w: Math.max(...xs) - Math.min(...xs), h: Math.max(...ys) - Math.min(...ys), f0: wf(i) });
+    }
+    x += w + gap;
+  }
+  G.capBoxes = boxes;
+  // optional date stamp riding on the band (NEXT): appears with its word
+  if (st.stamp && f >= st.stamp.f) {
+    const sk = E.back(inv(st.stamp.f, st.stamp.f + 6, f), 2.4);
+    ctx.save(); ctx.translate(st.stamp.x, st.stamp.y); ctx.rotate(st.stamp.rot || 0.08); ctx.scale(sk, sk);
+    const ss = st.stamp.size || 74;
+    ctx.font = `400 ${ss}px "Dela Gothic One"`;
+    const sw = ctx.measureText(st.stamp.t).width;
+    ctx.fillStyle = C.red2; ctx.fillRect(-sw / 2 - 26, -ss * 0.78, sw + 52, ss * 1.3);
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 6; ctx.strokeRect(-sw / 2 - 16, -ss * 0.65, sw + 32, ss * 1.04);
+    ctx.fillStyle = C.paper; ctx.fillText(st.stamp.t, -sw / 2, ss * 0.25);
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ---------- credit slot (exact strings) ----------
+const CR = {
+  phobos: 'NASA/JPL-Caltech/University of Arizona',
+  mars: 'NASA/JPL/USGS',
+  earthset: 'NASA/JPL-Caltech/MSSS',
+};
+function drawCredit(lines, alpha = 1) {
+  if (!lines || !lines.length || alpha <= 0) return;
+  ctx.save(); ctx.globalAlpha *= alpha;
+  ctx.font = '600 25px "Plex Mono"';
+  let y = 1478 - (lines.length - 1) * 38;
+  for (const s of lines) {
+    const w = ctx.measureText(s).width;
+    ctx.fillStyle = 'rgba(11,11,12,0.86)'; ctx.fillRect(80, y - 27, w + 34, 36);
+    ctx.fillStyle = C.amber; ctx.fillRect(80, y - 27, 6, 36);
+    ctx.fillStyle = C.paper; ctx.fillText(s, 98, y);
+    y += 38;
+  }
+  ctx.restore();
+}
+// ---------- fact chip: mono text in an ink tag with a cut corner, wipes in ----------
+function drawChip(lines, x, y, k, { size = 32, accent = C.amber, maxW = 820, align = 'left' } = {}) {
+  if (k <= 0) return;
+  ctx.save();
+  ctx.font = `600 ${size}px "Plex Mono"`;
+  const lh = size * 1.32;
+  const w = Math.min(maxW, Math.max(...lines.map((s) => ctx.measureText(typeof s === 'string' ? s : s.t).width)) + 44);
+  const h = lines.length * lh + 22;
+  const x0 = align === 'right' ? x - w : x;
+  const kk = E.out5(k);
+  ctx.beginPath(); ctx.rect(x0, y, w * kk, h); ctx.clip();
+  ctx.fillStyle = 'rgba(11,11,12,0.9)';
+  ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x0 + w - 22, y); ctx.lineTo(x0 + w, y + 22); ctx.lineTo(x0 + w, y + h); ctx.lineTo(x0, y + h); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = accent; ctx.fillRect(x0, y, 8, h);
+  ctx.strokeStyle = accent; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x0 + w - 22, y); ctx.lineTo(x0 + w, y + 22); ctx.stroke();
+  lines.forEach((s, i) => { const t = typeof s === 'string' ? s : s.t; ctx.fillStyle = typeof s === 'string' ? C.paper : (s.c || C.amber); ctx.fillText(t, x0 + 26, y + 11 + lh * (i + 0.78)); });
+  ctx.restore();
+  return [x0, y, w, h];
+}
+// kicker (series mark + name)
+function drawKicker(alpha = 1) {
+  ctx.save(); ctx.globalAlpha *= alpha;
+  ctx.font = '600 26px "Plex Mono"';
+  const w = ctx.measureText('LAUNCH DAY').width + 70;
+  ctx.fillStyle = 'rgba(11,11,12,0.8)'; ctx.fillRect(80, 262, w, 42);
+  ctx.fillStyle = C.amber; ctx.beginPath(); ctx.moveTo(100, 294); ctx.lineTo(114, 270); ctx.lineTo(128, 294); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = C.paper; ctx.fillText('LAUNCH DAY', 142, 292);
+  ctx.restore();
+}
+// big decorative katakana SFX (onomatopoeia, not facts)
+function sfxText(txt, x, y, size, { rot = -0.12, fill = C.amber, line = C.ink, alpha = 1, jitter = 4 } = {}) {
+  ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y); ctx.rotate(rot);
+  ctx.font = `400 ${size}px "Dela Gothic One"`; ctx.lineJoin = 'round';
+  let xx = 0;
+  for (let i = 0; i < txt.length; i++) {
+    const ch = txt[i]; const j = [(hash(i, 51, G.BF) - 0.5) * jitter, (hash(i, 52, G.BF) - 0.5) * jitter];
+    ctx.strokeStyle = C.paper; ctx.lineWidth = size * 0.2; ctx.strokeText(ch, xx + j[0], j[1] + i * size * 0.12);
+    ctx.strokeStyle = line; ctx.lineWidth = size * 0.1; ctx.strokeText(ch, xx + j[0], j[1] + i * size * 0.12);
+    ctx.fillStyle = fill; ctx.fillText(ch, xx + j[0], j[1] + i * size * 0.12);
+    xx += ctx.measureText(ch).width * 0.92;
+  }
+  ctx.restore();
+}
+
+// ===== shots.js =====
+// shots.js: the timeline. Every shot is a pure function of the frame number.
+'use strict';
+const sec = (f) => f / FPS;
+// keyframe interpolation on frames: kf(f, [[f0, v0], [f1, v1], ...], ease)
+function kf(f, keys, ease = E.io) {
+  if (f <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    if (f <= keys[i][0]) { const [a, va] = keys[i - 1], [b, vb] = keys[i]; const k = ease((f - a) / (b - a)); return Array.isArray(va) ? va.map((x, j) => lerp(x, vb[j], k)) : lerp(va, vb, k); }
+  }
+  return keys[keys.length - 1][1];
+}
+const on2 = (f) => Math.floor(f / 2) * 2;   // character animation on twos
+
+// impact frames: ONE frame each (high-contrast ink multiplied with red), on emphasis words only,
+// never closer than 60 frames (2 s) to each other (photosensitivity: tools/pse.py).
+const IMPACTS = [54, 147, 280, 496, 604, 723, 802, 886];
+// camera shake hits [frame, amplitude 0..1]
+const HITS = [[54, 1], [130, 0.8], [147, 0.7], [188, 0.35], [280, 1], [324, 0.5], [375, 0.6], [404, 0.6], [496, 1], [568, 0.8], [604, 1], [653, 0.9], [706, 0.45], [723, 0.8], [770, 0.4], [802, 0.9], [886, 1], [949, 0.5], [1141, 0.45], [1185, 0.3], [1212, 0.4]];
+function shakeF(f, scale = 1) { const [x, y, r] = shakeAt(sec(f), HITS.map(([h, a]) => [sec(h), a]), 30 * scale, 0.55); return [x, y, r]; }
+
+// speech: mouth openness for Night Shift while a word is being spoken (on twos)
+function speak(f) {
+  const t = sec(on2(f));
+  for (const w of WORDS) if (t >= w.start && t < w.end) { const d = w.end - w.start, syl = Math.max(1, Math.round(d / 0.16)); return 0.25 + 0.55 * Math.abs(Math.sin(Math.PI * syl * (t - w.start) / d)); }
+  return 0;
+}
+// blinks: seeded schedule, 3 frames closed
+function blinkAt(f, seed = 3) {
+  let s = 0, i = 0;
+  while (s < f + 10) { s += 50 + Math.floor(hash(i, seed, 9) * 70); const d = f - s; if (d >= 0 && d < 4) return [0.6, 1, 1, 0.5][d]; i++; }
+  return 0;
+}
+// ghosting smear: draws fn(k) at n sub-steps behind, fading
+function smear(fn, n, alpha0 = 0.35) { for (let i = n; i >= 1; i--) { ctx.save(); ctx.globalAlpha *= alpha0 * (1 - i / (n + 1)); fn(i / n); ctx.restore(); } fn(0); }
+
+// ---------------------------------------------------------------- S1 HOOK (f0-103)
+function shotHook(f) {
+  // deep space with a red glow rising from Mars below
+  vGrad([[0, '#05060d'], [0.55, '#140b1c'], [1, '#3a1410']], 0, H + 1600);
+  stars(11, 70, { drift: [0, f * 0.4], alpha: 0.7 });
+  const wide = E.out5(inv(52, 66, f));           // snap to the wide at "collision"
+  const push = f / 103;
+  // Mars rising from the bottom (real photo)
+  const marsY = lerp(2700, 2020, wide) - push * 40;
+  const marsW = lerp(1900, 1800, wide);
+  if (wide > 0) {
+    radGlow(540, marsY - marsW * 0.42, 900, 'rgba(201,86,47,0.35)');
+    drawImg('mars', 540, marsY, marsW, -6);
+  }
+  // Phobos (real photo): big push, then the snap up-right
+  const px = lerp(540, 770, wide) + inv(62, 103, f) * 45, py = lerp(800, 600, wide) - inv(62, 103, f) * 25;
+  const slam = lerp(1.32, 1, E.out5(inv(0, 9, f)));
+  const pw = lerp(lerp(980, 1060, push) * slam, 500, wide);
+  const rot = lerp(-6, 4, push);
+  // focus lines (anime) around Phobos
+  focusLines(px, py, pw * 0.62, { n: 110, color: C.paper, alpha: lerp(0.55, 0.25, wide) + (slam - 1) * 1.2, seed: 3, wMax: 16 });
+  if (f >= 52 && f < 62) focusLines(px, py, pw * 0.5, { n: 160, color: C.paper, alpha: 0.7 * (1 - inv(56, 62, f)), seed: 5, wMax: 10 });
+  drawImg('phobos', px, py, pw, rot);
+  // collision course: a slow inward spiral from Phobos toward Mars (diagram, amber), stopping short of the limb
+  if (f >= 58) {
+    const k = E.out(inv(58, 96, f));
+    const mcx = 540, mcy = marsY, R0 = Math.hypot(px - mcx, py - mcy) - pw * 0.3;
+    const a0 = Math.atan2(py - mcy, px - mcx), R1 = marsW * 0.5 + 90;
+    ctx.save(); ctx.setLineDash([22, 16]); ctx.lineDashOffset = -f * 2; ctx.strokeStyle = C.amber; ctx.lineWidth = 8; ctx.lineCap = 'round';
+    ctx.beginPath(); let last = null, prev = null;
+    const N = 60;
+    for (let i = 0; i <= N * k; i++) { const u = i / N; const a = a0 - u * 0.62; const r = lerp(R0, R1, u); const x = mcx + Math.cos(a) * r, y = mcy + Math.sin(a) * r; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); prev = last; last = [x, y]; }
+    ctx.stroke(); ctx.setLineDash([]);
+    if (last && prev) { const ang = Math.atan2(last[1] - prev[1], last[0] - prev[0]); ctx.fillStyle = C.amber; ctx.save(); ctx.translate(last[0], last[1]); ctx.rotate(ang); ctx.beginPath(); ctx.moveTo(18, 0); ctx.lineTo(-14, -15); ctx.lineTo(-14, 15); ctx.closePath(); ctx.fill(); ctx.restore(); }
+    ctx.restore();
+  }
+  drawChip(['IN 50 MILLION YEARS:', 'CRASH INTO MARS', 'OR BREAK UP INTO A RING', { t: 'SOURCE: NASA', c: '#8c8a85' }], 80, 330, inv(66, 76, f), { size: 31 });
+  drawChip(['1.8 M (6 FT) CLOSER', 'TO MARS EVERY 100 YEARS'], 80, 580, inv(80, 88, f), { size: 31 });
+  // menacing katakana before the snap
+  if (f < 54) sfxText('ゴゴゴ', 630, 380, 80, { rot: 0.08, alpha: 0.95, fill: C.amber });
+  return wide > 0 ? [CR.phobos, CR.mars] : [CR.phobos];   // Mars is on screen from the first frame of the snap
+}
+
+// ---------------------------------------------------------------- S2 LAUNCH (f100-150)
+function shotLaunch(f) {
+  const ig = sec(f) - sec(118);                  // time since ignition
+  const lift = Math.max(0, sec(f) - sec(130));   // time since liftoff
+  const camUp = 1150 * E.in(clamp(lift / 0.65));  // camera tilts up with the rocket
+  // predawn sky (04:41 JST)
+  vGrad([[0, '#070b26'], [0.55, '#1b2152'], [0.82, '#4a2f5e'], [1, '#c2603d']], -camUp * 0.2, H - camUp * 0.2 + 300);
+  stars(21, 50, { area: [0, 0, W, 1000], drift: [0, camUp * 0.15], alpha: 0.6 });
+  ctx.save(); ctx.translate(540, 1400); ctx.rotate(-0.035); ctx.scale(1 + 0.06 * E.io(inv(103, 132, f)), 1 + 0.06 * E.io(inv(103, 132, f))); ctx.translate(-540, -1400); ctx.translate(0, camUp);
+  // ground glow when burning
+  if (ig > 0) radGlow(790, 1700, 1000, `rgba(255,150,70,${0.55 * clamp(ig * 3)})`);
+  // launch tower (lattice) at left
+  ctx.save(); ctx.translate(330, 1700); ctx.scale(1.5, 1.4);
+  ctx.fillStyle = '#10132e'; ctx.fillRect(-60, -1250, 120, 1250);
+  ctx.strokeStyle = '#2c3266'; ctx.lineWidth = 6;
+  for (let i = 0; i < 16; i++) { const y = -i * 78; ctx.beginPath(); ctx.moveTo(-60, y); ctx.lineTo(60, y - 78); ctx.moveTo(60, y); ctx.lineTo(-60, y - 78); ctx.stroke(); }
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.strokeRect(-60, -1250, 120, 1250);
+  for (let i = 0; i < 6; i++) { ctx.fillStyle = hash(i, 5, Math.floor(f / 8)) > 0.4 ? '#ff5a3c' : '#5a1f1c'; ctx.beginPath(); ctx.arc(60, -200 - i * 190, 7, 0, Math.PI * 2); ctx.fill(); }
+  ctx.restore();
+  // rocket
+  const ry = 1690 - 1100 * E.in(clamp(lift / 0.7)) - lift * 600;
+  const flameK = ig > 0 ? clamp(ig * 4) * (0.85 + 0.15 * hash(f, 7, 1)) : 0;
+  // vapour wisps before ignition
+  if (ig < 0.3) cloudCluster([0, 1, 2, 3].map((i) => ({ x: 790 + (i - 1.5) * 110 + Math.sin(f * 0.1 + i) * 10, y: 1700 - i * 8 - (f % 30) * 0.6, r: 55 + i * 8 })), 300, { alpha: 0.7, lw: 4 });
+  drawH3(790, ry, 152, { tilt: 0, flameK });
+  // ground/pad
+  ctx.fillStyle = '#0a0c1e'; ctx.fillRect(-200, 1735, W + 400, 600);
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-200, 1735); ctx.lineTo(W + 200, 1735); ctx.stroke();
+  // exhaust billows
+  if (ig > 0) {
+    const puffs = launchPuffs(ig, 17, { cx: 790, gy: 1730, spread: 1100, up: 340, n: 30, rMax: 260 });
+    cloudCluster(puffs, 400, { warm: 0.85, warmC: '#ff8a3d', lightDir: [0, 1], lw: 7 });
+  }
+  ctx.restore();
+  // vertical speed lines during liftoff
+  if (lift > 0) speedLines(90, { n: 34, alpha: 0.55 * clamp(lift * 3), speed: 3800, color: C.paper, seed: 9 });
+  // cloud wipe into the next shot: billows rise from the bottom and cover the frame
+  if (f >= 139) {
+    const k = E.in(inv(139, 148, f));
+    const puffs = [];
+    for (let i = 0; i < 16; i++) puffs.push({ x: (i % 4) * 330 + 40 + (hash(i, 61, 1) - 0.5) * 120, y: lerp(2400, 200, k) + Math.floor(i / 4) * 420 + (hash(i, 62, 1) - 0.5) * 150, r: 300 + hash(i, 63, 1) * 120 });
+    cloudCluster(puffs, 500, { warm: 0.25, lw: 7 });
+  }
+  drawChip(['H3 FLIGHT No.10 · TANEGASHIMA', 'LIFTOFF 04:41:03 JST, OCT 20, 2026', { t: '(19:41:03 UTC, OCT 19)', c: '#a9a6a0' }], 80, 330, inv(105, 113, f) * (1 - inv(140, 146, f)), { size: 28 });
+  if (f >= 130 && f < 144) sfxText('ドドド', 120, 900, 110, { rot: -0.15, alpha: 1 - inv(140, 144, f) });
+  return ['Illustration · facts: JAXA'];
+}
+
+// ---------------------------------------------------------------- S3 HEIST (f147-168)
+function shotHeist(f) {
+  vGrad([[0, '#3a0d10'], [0.6, '#7a1d17'], [1, '#160608']]);
+  focusLines(540, 720, 360, { n: 120, color: C.amber, alpha: 0.85, seed: 13, wMax: 26 });
+  focusLines(540, 720, 520, { n: 60, color: C.ink, alpha: 0.7, seed: 14, wMax: 14 });
+  const ff = on2(f);
+  const turn = kf(ff, [[147, 0.95], [153, 0]], E.out);
+  const push = kf(f, [[147, 300], [168, 345]], E.out);
+  const p = { turn, mouth: 'smirk', slant: 0.55, lidL: 0.22, lidR: 0.3, glint: kf(ff, [[152, 0], [156, 1.2], [166, 0.6]], E.out), rim: C.amber, light: 1, look: [0.1, 0], open: speak(f) * 0.6, earR: kf(ff, [[158, 0], [160, 0.25], [164, 0]]) };
+  if (ff < 153) smear((k) => drawNSHead(540 + k * 120, 760, push, Object.assign({}, p, { turn: Math.min(1, turn + k * 0.4) })), 3, 0.45);
+  else drawNSHead(540, 760, push, p);
+  // jacket collar hint at the bottom edge
+  sfxText('ドン', 615, 405, 120, { rot: 0.12 });
+  return [];
+}
+
+// ---------------------------------------------------------------- S4 TARGET (f168-222)
+function shotTarget(f) {
+  const whip = 1 - E.out5(inv(166, 174, f));
+  vGrad([[0, '#0b0f2a'], [1, '#22184a']]);
+  stars(31, 60, { drift: [-whip * 900 - f * 1.4, f * 0.5], alpha: 0.7 });
+  const pcx = 690, pcy = 640;
+  // camera: slow push on Pho through the line, a snap-zoom punch on "piece"
+  const cz = 1 + 0.12 * E.io(inv(172, 214, f)) + 0.08 * E.out5(inv(188, 192, f));
+  ctx.save(); ctx.translate(whip * 900, 0);
+  ctx.translate(pcx, pcy); ctx.scale(cz, cz); ctx.rotate(-0.035 * inv(172, 214, f)); ctx.translate(-pcx, -pcy);
+  const fur = f >= 202, notice = f >= 186;
+  const look = fur ? [0, 0] : f >= 190 ? [-0.9, 0.8] : notice ? [-0.8, 0.4] : [0.2, -0.2];
+  const pe = { expr: fur ? 'furious' : notice ? 'alarm' : 'grumpy', look, vein: fur ? E.back(inv(202, 208, f)) : 0, shake: fur ? 12 * (1 - inv(202, 222, f)) : 0, piece: inv(188, 193, f), rim: C.amber, sweat: f >= 192 && !fur ? E.back(inv(192, 198, f)) : 0 };
+  const pbob = Math.sin(sec(f) * 2.2) * 10, py = pcy + pbob;
+  drawPho(pcx, py, 245, pe, -0.06);
+  const pp = phoPt(pcx, py, 245, -0.06, -0.62, 0.12);
+  if (f >= 188 && f < 204) kira(pp[0] - 40, pp[1] - 46, 52 * Math.sin(Math.PI * inv(188, 204, f)), C.amber3, f * 0.08);
+  // target reticle: closes on Pho, then jumps to the piece when it is named
+  const rk = E.out(inv(172, 186, f)), jk = E.out5(inv(188, 192, f));
+  const rr = lerp(lerp(560, 330, rk), 150, jk), ra = lerp(0.8, 0, rk) + sec(f) * (0.15 + jk * 0.6);
+  ctx.save(); ctx.translate(lerp(pcx, pp[0], jk), lerp(py, pp[1], jk)); ctx.rotate(ra); ctx.strokeStyle = C.red; ctx.lineWidth = 9; ctx.lineCap = 'square';
+  ctx.globalAlpha = rk;
+  for (let i = 0; i < 4; i++) { ctx.rotate(Math.PI / 2); ctx.beginPath(); ctx.moveTo(rr, rr * 0.55); ctx.lineTo(rr, rr); ctx.lineTo(rr * 0.55, rr); ctx.stroke(); }
+  ctx.beginPath(); ctx.arc(0, 0, rr * 0.18, 0, Math.PI * 2); ctx.lineWidth = 5; ctx.stroke();
+  ctx.restore();
+  ctx.restore();
+  // Night Shift's pointing arm in the foreground (from the left edge), jabs again on "steal" and "piece"
+  const ak = E.back(inv(168, 176, on2(f)), 1.4);
+  const jab = 0.5 * Math.max(0, Math.sin(Math.PI * inv(188, 194, on2(f))));
+  const paw = [lerp(-260, 470, ak) + jab * 60, lerp(1180, 930, ak) - jab * 40];
+  ctx.save();
+  G.S = 1;
+  const sleeve = [[-200, 1330], [60, 1170], [paw[0] - 110, paw[1] + 30]];
+  inkLine(sleeve, 1200, { color: C.ink, lw: 270 });
+  inkLine(sleeve, 1200, { color: C.paper, lw: 246 });
+  inkLine([[-160, 1390], [40, 1260], [paw[0] - 150, paw[1] + 110]], 1201, { color: C.paper3, lw: 70 });
+  inkLine([[-60, 1180], [80, 1110]], 1202, { color: C.paper3, lw: 10 });
+  ctx.save(); ctx.translate(paw[0] - 110, paw[1] + 30); ctx.rotate(Math.atan2(paw[1] - 1170, paw[0] - 60));
+  cel(() => { ctx.beginPath(); ctx.roundRect(-40, -135, 80, 270, 22); }, { fill: C.paper2, line: C.ink, lw: 9 });
+  ctx.translate(60, 0); ctx.scale(380, 380); G.S = 380; nsPaw('point', 1210, 1);
+  ctx.restore();
+  ctx.restore();
+  // insert panel: his eyes narrow on "a piece of it"
+  eyeStrip(f, 191, 214);
+  drawChip(['TARGET: PHOBOS', { t: '27 x 22 x 18 km', c: C.amber }], 80, 330, inv(176, 184, f), { size: 30 });
+  if (fur) sfxText('ムカッ', 640, 410, 80, { rot: 0.15, fill: C.red, alpha: 1 - inv(218, 222, f) });
+  return ['Illustration · facts: NASA'];
+}
+
+// Mars, August 2027 (real photo); a drawn MMX (not to scale) arcs in and arrives on "2027."
+// ---------------------------------------------------------------- STEP banners (band wipe transitions)
+// Each STEP card has its own entry axis, angle, colour, camera move and Night Shift staging, so the device
+// never repeats the same layout: 1 slides in from the left (amber), 2 drops from the top and bounces
+// (amber, binoculars), 3 slams in from the right at a steep angle with a zoom punch (red, grit + fist),
+// 4 rises from the bottom with a camera roll and a numeral that zooms from huge (ink and amber).
+const BAND_ST = {
+  1: { y: 820, ang: -8, axis: 'x', dir: 1, Lin: 1650, Lout: 1750, color: C.amber, step: 1, face: 'top', faceX: -240, bg: -20 },
+  2: { y: 860, ang: 6, axis: 'y', dir: 1, Lin: 1300, Lout: 1500, color: C.amber, step: 2, face: 'binocs', bounce: 1.7, bg: 90, enter: 10 },
+  3: { y: 760, ang: -16, axis: 'x', dir: -1, Lin: 1700, Lout: 1800, color: C.red, numC: C.amber, numDrop: C.ink, step: 3, face: 'side', zoom: 0.4, bg: 164, hatch: 'rgba(0,0,0,0.18)' },
+  4: { y: 820, ang: 10, axis: 'y', dir: -1, Lin: 1550, Lout: 1300, color: C.ink2, text: C.amber, numC: C.amber, numDrop: C.red2, ink: C.ink, hatch: 'rgba(245,184,61,0.10)', step: 4, face: 'top', faceX: 240, spin: 16, numZoom: 3.2, bg: -90, enter: 10 },
+  next: { y: 820, ang: -6, axis: 'x', dir: 1, Lin: 1650, Lout: 1750, color: C.paper, text: C.ink, ink: C.ink, face: 'top', faceX: 250, bg: -20 },
+};
+function bandBg(f, st, seed = 71) {
+  vGrad(st.color === C.red ? [[0, '#2a0c14'], [1, '#12060b']] : [[0, '#0b0f2a'], [1, '#1b2152']]);
+  speedLines(st.bg, { n: 40, alpha: 0.35, speed: 2600, seed });
+}
+// half-plane in band-local coordinates: along-axis coordinate u = dir * (x or y); greater ? u > e : u < e
+function halfRect(st, e, greater) {
+  const s = st.dir; let lo, hi;
+  if (greater) { if (s > 0) { lo = e; hi = e + 9000; } else { lo = -e - 9000; hi = -e; } }
+  else { if (s > 0) { lo = e - 9000; hi = e; } else { lo = -e; hi = -e + 9000; } }
+  ctx.beginPath();
+  if (st.axis === 'y') ctx.rect(-5000, lo, 10000, hi - lo); else ctx.rect(lo, -5000, hi - lo, 10000);
+}
+function bandCam(f, o, st) {
+  // camera on the whole band shot: slow push through the hold, plus the style's own entry move
+  const kk = inv(o.fIn, o.fIn + 12, f);
+  let z = 1 + 0.035 * inv(o.fIn + 8, o.fOut + 8, f);
+  if (st.zoom) z *= 1 + st.zoom * (1 - E.out5(kk));
+  const r = (st.spin ? st.spin * (1 - E.out5(kk)) + 1.2 * Math.sin(sec(f - o.fIn) * 2.2) * (1 - inv(o.fOut, o.fOut + 8, f)) : 0) * Math.PI / 180;
+  ctx.translate(540, 960); ctx.rotate(r); ctx.scale(z, z); ctx.translate(-540, -960);
+}
+// The band sweeps in over the previous scene (prev visible ahead of its leading edge) and sweeps out
+// revealing the next scene behind its trailing edge. One continuous wipe, never an empty frame.
+function bandShot(f, o) {
+  const st = Object.assign({ fIn: o.fIn }, BAND_ST[o.style]);
+  const en = st.enter || 8;
+  const k = inv(o.fIn, o.fIn + en, f), out = inv(o.fOut, o.fOut + 8, f);
+  const ein = st.bounce ? E.back(k, st.bounce) : E.io(k);
+  const off = (1 - ein) * -st.Lin + E.io(out) * st.Lout;     // along-axis offset of the front band
+  const h = st.axis === 'y' ? 175 : 1000;                    // half extent of the front band along its axis
+  ctx.save();
+  bandCam(f, o, st);
+  const base = ctx.getTransform();
+  const local = () => { ctx.setTransform(base); ctx.translate(540, st.y); ctx.rotate(st.ang * Math.PI / 180); };
+  let credit = o.credit || [];
+  const entering = k < 1 && o.prev, leaving = out > 0 && o.next;
+  if (entering) { ctx.save(); local(); halfRect(st, off + h, true); ctx.setTransform(base); ctx.clip(); credit = o.prev(f) || []; ctx.restore(); }
+  const clipMid = () => { if (entering) { local(); halfRect(st, off + h, false); ctx.setTransform(base); ctx.clip(); } if (leaving) { local(); halfRect(st, off - h, true); ctx.setTransform(base); ctx.clip(); } };
+  ctx.save(); clipMid(); bandBg(f, st, o.seed || 71); if (o.extra) o.extra(f); ctx.restore();
+  if (leaving) { ctx.save(); local(); halfRect(st, off - h, false); ctx.setTransform(base); ctx.clip(); credit = o.next(f) || []; ctx.restore(); }
+  // Night Shift staging (behind or around the band)
+  ctx.save(); clipMid(); bandFace(f, o, st, off, out); ctx.restore();
+  drawBanner(o.ci, off, out, Object.assign(st, { num: o.num, stamp: o.stamp }));
+  if (st.face === 'top') { ctx.save(); bandFaceTop(f, o, st, off, out); ctx.restore(); }
+  if (o.extraTop) o.extraTop(f);
+  ctx.restore();
+  return credit;
+}
+// face peeking over the band's top edge (styles 1 and 4), clipped by the band
+function bandFaceTop(f, o, st, off, out) {
+  const up = E.back(inv(o.fIn + 6, o.fIn + 14, on2(f)), 2) * (1 - E.io(out));
+  if (up <= 0) return;
+  bandXform(st, off);
+  ctx.beginPath(); ctx.rect(-1200, -1600, 2400, 1600 - 205); ctx.clip();
+  ctx.save(); ctx.translate(st.faceX, -92 - up * 175); ctx.rotate(-st.ang * Math.PI / 180 * 0.5);
+  drawNSHead(0, 0, 150, Object.assign({ look: [st.faceX > 0 ? -0.5 : 0.6, 0.3], open: speak(f) * 0.7, blink: 0 }, o.faceP || {}));
+  ctx.restore();
+}
+// staging for styles 2 (binoculars lookout, lower right) and 3 (grit + fist, lower left)
+function bandFace(f, o, st, off, out) {
+  const ff = on2(f);
+  if (st.face === 'binocs') {
+    const up = E.back(inv(o.fIn + 8, o.fIn + 16, ff), 1.6);
+    if (up <= 0) return;
+    const y = lerp(2250, 1270, up) + E.in(out) * 900, x = 700;
+    const lower = E.back(inv(o.fIn + 22, o.fIn + 27, ff), 2);   // binoculars come down: a wink at the camera
+    const p = Object.assign({ tilt: -0.12 + Math.sin(sec(f) * 3) * 0.04, look: [-0.4, -0.2], open: speak(f) * 0.6, blink: 0, mouth: lower > 0.5 ? 'smirk' : 'w', lidR: lower > 0.5 ? 1 : 0, rim: C.amber }, o.faceP || {});
+    drawNSHead(x, y, 165, p);
+    // binoculars (drawn): two barrels over the eyes, held by both paws
+    ctx.save(); ctx.translate(x, y); ctx.rotate(p.tilt); ctx.scale(165, 165); G.S = 165;
+    ctx.translate(0, lerp(0, 1.05, lower));
+    for (const s of [-1, 1]) {
+      cel(() => { ctx.beginPath(); ctx.roundRect(s * 0.41 - 0.28, -0.3, 0.56, 0.6, 0.16); }, { fill: '#2b2f45', shade: '#171a28', shadeFn: () => ctx.rect(s * 0.41 - 0.3, 0.08, 0.6, 0.4), line: C.paper, lw: 0.05 });
+      cel(() => { ctx.beginPath(); ctx.arc(s * 0.41, -0.01, 0.2, 0, Math.PI * 2); }, { fill: '#2f6fd6', shade: '#163a8f', shadeFn: () => ctx.rect(s * 0.41 - 0.3, 0.04, 0.6, 0.3), line: C.ink, lw: 0.04 });
+      ctx.fillStyle = '#fffaf0'; ctx.beginPath(); ctx.ellipse(s * 0.41 - 0.07, -0.08, 0.07, 0.045, -0.5, 0, Math.PI * 2); ctx.fill();
+      ctx.save(); ctx.translate(s * 0.62, 0.32); ctx.rotate(s > 0 ? -2.2 : -0.9); nsPaw('mitt', 1400 + (s > 0 ? 1 : 0), s); ctx.restore();
+    }
+    ctx.fillStyle = C.ink; ctx.fillRect(-0.18, -0.12, 0.36, 0.16);
+    ctx.restore();
+    if (lower > 0.5) kira(x - 0.41 * 165 - 30, y - 55, 34 * Math.min(1, (ff - o.fIn - 24) / 4), '#fffdf2', 0.3);
+  } else if (st.face === 'side') {
+    const kin = E.out5(inv(o.fIn + 6, o.fIn + 12, ff));
+    if (kin <= 0) return;
+    const x = lerp(-300, 250, kin) - E.in(out) * 700, y = 1230;
+    focusLines(x, y, 220, { n: 70, color: C.amber, alpha: 0.35, seed: 377, wMax: 12, rate: 4, reach: 900 });
+    drawNSHead(x, y, 205, Object.assign({ turn: -0.25, mouth: 'grit', open: 0.35, slant: 1, lidL: 0.22, lidR: 0.22, rim: C.red, light: 1, look: [0.5, -0.1] }, o.faceP || {}));
+    const fk = E.back(inv(o.fIn + 14, o.fIn + 20, ff), 2.2);
+    if (fk > 0) {
+      ctx.save(); ctx.translate(lerp(x + 120, 620, fk) - E.in(out) * 700, lerp(1600, 1300, fk)); ctx.rotate(-0.25); const s = lerp(60, 150, fk); ctx.scale(s, s); G.S = s; bigPaw(1); ctx.restore();
+    }
+  }
+}
+
+// ---------------------------------------------------------------- S5 STEP ONE (band f216-244, Mars f244-316)
+function mmxFlyby(f) {
+  const k = inv(224, 246, f);
+  if (k > 0 && k < 1) {
+    const x = lerp(-450, 1500, E.io(k)), y = lerp(1500, 200, E.io(k));
+    speedLines(-34, { n: 20, alpha: 0.6, speed: 4200, seed: 76, area: [x - 500, y - 300, 1000, 600], len: [200, 600], w: [3, 8] });
+    smear((s) => drawMMX(x - s * 300, y + s * 200, 230, { rot: -0.55 }), 4, 0.3);
+  }
+}
+function bandOne(f) {
+  const cr = bandShot(f, { style: 1, ci: 6, num: '1', fIn: 212, fOut: 236, prev: shotTarget, next: sceneMars, extraTop: mmxFlyby, credit: ['Illustration · facts: NASA'], faceP: { mouth: 'smirk', slant: 0.5, lidL: 0.2, lidR: 0.2 } });
+  // the drawn MMX flies over the real Mars photo: say so
+  return f >= 224 && f < 246 ? [...new Set([...cr, 'Illustration · not to scale'])] : cr;
+}
+// Mars, August 2027 (real photo)
+function sceneMars(f) {
+  vGrad([[0, '#07070d'], [1, '#1a0b0b']]);
+  stars(41, 60, { alpha: 0.6, drift: [-f * 0.9, f * 0.2] });
+  const mw = lerp(980, 1160, inv(236, 322, f));
+  const mx = lerp(600, 510, inv(236, 322, f));
+  focusLines(mx, 820, mw * 0.56, { n: 100, color: C.paper, alpha: 0.32, seed: 43, wMax: 12, rate: 3 });
+  radGlow(mx, 820, mw * 0.7, 'rgba(201,86,47,0.25)');
+  drawImg('mars', mx, 820, mw, lerp(0, -4, inv(236, 322, f)));
+  const ak = inv(246, 282, f);
+  let mmxOn = false;
+  if (ak > 0) {
+    mmxOn = true;
+    const P0 = [-160, 1560], P1 = [120, 380], P2 = [850, 430];
+    const bez = (u) => [(1 - u) * (1 - u) * P0[0] + 2 * (1 - u) * u * P1[0] + u * u * P2[0], (1 - u) * (1 - u) * P0[1] + 2 * (1 - u) * u * P1[1] + u * u * P2[1]];
+    const u = E.out(ak);
+    let [x, y] = bez(u);
+    const drift = Math.max(0, f - 282); x += drift * 0.5; y += Math.sin(drift * 0.08) * 6;
+    // dashed amber trail
+    ctx.save(); ctx.setLineDash([16, 12]); ctx.lineDashOffset = -f * 3; ctx.strokeStyle = C.amber; ctx.lineWidth = 6; ctx.lineCap = 'round';
+    ctx.beginPath(); for (let i = 0; i <= 30; i++) { const q = bez(Math.max(0, u - 0.45) + (u - Math.max(0, u - 0.45)) * i / 30); i ? ctx.lineTo(q[0] + (i === 30 ? drift * 0.5 : 0), q[1]) : ctx.moveTo(q[0], q[1]); } ctx.stroke(); ctx.restore();
+    const [tx, ty] = bez(Math.min(1, u + 0.01)); const ang = Math.atan2(ty - y, tx - x);
+    if (ak < 1) speedLines(ang * 180 / Math.PI, { n: 12, alpha: 0.5 * (1 - ak), speed: 3600, seed: 47, area: [x - 260, y - 260, 520, 520], len: [80, 260], w: [2, 5] });
+    drawMMX(x, y, 92, { rot: ak < 1 ? ang * 0.35 : 0.0 });
+    // arrival pulse on "2027."
+    if (f >= 280 && f < 300) { const d = (f - 280) / 20; ctx.strokeStyle = `rgba(245,184,61,${1 - d})`; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(x, y, 60 + d * 140, 0, Math.PI * 2); ctx.stroke(); }
+  }
+  drawChip(['JUST UNDER ONE YEAR', 'EACH WAY (JAXA)'], 80, 330, inv(288, 296, f), { size: 31 });
+  if (f >= 280 && f < 300) sfxText('ドン', 615, 1060, 110, { rot: 0.1, alpha: 1 - inv(296, 300, f) });
+  return mmxOn ? [CR.mars, 'Illustration · not to scale'] : [CR.mars];
+}
+
+// a paper luggage tag on a string (number prop), anchored at (x, y), swing angle a
+// ---------------------------------------------------------------- S6 STEP TWO (f306-446): drop a lookout
+function sceneSurface(f, cam = { s: 1, x: 540, y: 960 }, { mmx = true, rover = null, measure = 0 } = {}) {
+  vGrad([[0, '#060818'], [0.6, '#141a44'], [1, '#2a2350']]);
+  stars(51, 70, { alpha: 0.7, area: [0, 0, W, 1300] });
+  ctx.save();
+  ctx.translate(540, 960); ctx.scale(cam.s, cam.s); ctx.translate(-cam.x, -cam.y);
+  drawMarsCel(900, 300, 210, { light: [-0.7, -0.3] });
+  drawPhoGround(540, 1000 + 0.9 * 2000, 2000, { light: 1 });
+  if (mmx) drawMMX(600, 600 + Math.sin(sec(f) * 2) * 8, 150, { legs: 0.2 });
+  if (measure > 0) {
+    ctx.save(); ctx.setLineDash([14, 12]); ctx.strokeStyle = C.amber; ctx.lineWidth = 4; ctx.globalAlpha = measure;
+    ctx.beginPath(); ctx.moveTo(860, 690); ctx.lineTo(860, 1000); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(835, 690); ctx.lineTo(885, 690); ctx.moveTo(835, 1000); ctx.lineTo(885, 1000); ctx.stroke(); ctx.restore();
+  }
+  if (rover) rover();
+  ctx.restore();
+}
+function bandTwo(f) {
+  return bandShot(f, { style: 2, ci: 8, num: '2', fIn: 314, fOut: 348, prev: sceneMars, next: sceneDrop, seed: 72 });
+}
+function sceneDrop(f) {
+  // rover drop: release at 352, lands 375
+  const fallK = inv(352, 375, f);
+  const landF = 375;
+  const zoom = E.io(inv(393, 425, f));
+  const cam = { s: lerp(1, 2.5, zoom) + inv(425, 446, f) * 0.15, x: lerp(540, 600, zoom), y: lerp(960, 950, zoom) };
+  const [sx, sy] = shakeF(f, 0.8);
+  ctx.save(); ctx.translate(sx, sy);
+  ctx.translate(540, 960); ctx.rotate(-0.05 * E.io(inv(410, 446, f))); ctx.translate(-540, -960);
+  sceneSurface(f, cam, {
+    measure: inv(356, 362, f) * (1 - inv(400, 410, f)),
+    rover: () => {
+      let x = 600, y, rot;
+      if (f < landF) { y = lerp(690, 1004, fallK * fallK); rot = fallK * 2.2; }
+      else {
+        const d = sec(f - landF);
+        const hop = Math.max(0, Math.sin(Math.min(1, d / 0.45) * Math.PI)) * 70 * (d < 0.45 ? 1 : 0);
+        y = 1004 - hop; rot = d < 0.45 ? lerp(2.2, Math.PI * 0.5, d / 0.45) : lerp(Math.PI * 0.5, 0, E.back(inv(0.45, 0.6, d), 2.5));
+        if (d >= 0.6) rot = 0;
+      }
+      const mast = E.back(inv(388, 396, f), 2);
+      const draw = (s) => drawRover(x, y - s * 60, 80, { rot, mast, scan: f > 398 ? Math.sin(sec(f - 398) * 4) : 0 });
+      if (f < landF && f > 354) { smear(draw, 3, 0.35); speedLines(90, { n: 14, alpha: 0.6, speed: 3000, seed: 77, area: [x - 150, y - 400, 300, 450], len: [60, 220], w: [2, 5] }); }
+      else draw(0);
+      // the number as a prop: a "25 KG" tag pops onto the rover on "25" and swings
+      const tk = E.back(inv(404, 409, f), 2.4);
+      if (tk > 0) { ctx.save(); ctx.translate(x + 26, y - 44); ctx.scale(tk, tk); drawTag(0, 0, '25 KG', 0.18 + Math.sin(sec(f) * 3.5) * 0.12, { size: 19, len: -30 }); ctx.restore(); }
+      // landing dust burst
+      if (f >= landF && f < landF + 30) {
+        const d = sec(f - landF);
+        const puffs = [];
+        for (let i = 0; i < 12; i++) { const a = Math.PI + (i / 11) * Math.PI; const rr = 60 + 220 * E.out(d * 2.2); puffs.push({ x: x + Math.cos(a) * rr * 1.1, y: 1006 + Math.sin(a) * rr * 0.3, r: (24 + hash(i, 81, 1) * 30) * (1 - d * 0.9) }); }
+        cloudCluster(puffs, 600, { base: C.pho3, shade: C.pho2, lw: 4, alpha: 1 - inv(0.6, 1.0, d) });
+      }
+    },
+  });
+  ctx.restore();
+  // Pho inset panel: an eye glances up at the landing
+  if (f >= 378 && f < 402) {
+    const k = E.out5(inv(378, 383, f)) * (1 - inv(398, 402, f));
+    ctx.save(); ctx.translate(lerp(1200, 640, k), 720); ctx.rotate(0.03);
+    ctx.fillStyle = C.ink; ctx.fillRect(-12, -12, 304, 244);
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 280, 220); ctx.clip();
+    vGrad([[0, '#2a2350'], [1, '#141a44']]);
+    drawPho(140, 118, 108, { expr: 'alarm', look: [0.2, -1] });
+    ctx.restore();
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 6; ctx.strokeRect(0, 0, 280, 220);
+    ctx.restore();
+  }
+  drawChip(['DROPPED FROM ABOUT 40 M,', 'IN FREE FALL (DLR)'], 80, 330, inv(356, 364, f) * (1 - inv(400, 406, f)), { size: 31 });
+  drawChip(['ABOUT THE SIZE OF', 'A CRATE OF DRINKS (DLR)'], 80, 330, inv(410, 418, f), { size: 31 });
+  if (f >= 375 && f < 392) sfxText('ズン', 140, 820, 90, { rot: -0.1, alpha: 1 - inv(388, 392, f) });
+  return ['Illustration · facts: DLR, ESA'];
+}
+
+// ---------------------------------------------------------------- S7 15 GRAMS (wide f446-496, shock f496-544)
+function sceneWide(f) {
+  // pull out: the rover is a speck on top of Pho; it floats up on "weighs..."
+  const k = E.out5(inv(446, 466, f));
+  vGrad([[0, '#060818'], [1, '#22184a']]);
+  stars(61, 70, { alpha: 0.7, drift: [f * 2.2, -f * 0.6] });
+  ctx.save(); ctx.translate(540, 900); ctx.rotate(0.11 * E.io(inv(446, 496, f)) - 0.04); ctx.translate(-540 + 40 * inv(446, 496, f), -900);
+  focusLines(540, 900, 520, { n: 70, color: C.paper, alpha: 0.18 * k, seed: 63, wMax: 10, rate: 3 });
+  const ps = lerp(1100, 330, k) * (1 + inv(458, 496, f) * 0.1);
+  const py = lerp(2000, 920, k);
+  const fl = E.io(inv(479, 494, f));
+  const look = [0.15 + Math.sin(sec(f) * 1.5) * 0.15, -1];
+  const pe = { expr: f > 484 ? 'alarm' : 'grumpy', look, lid: 0.35 };
+  if (k < 1) speedLines(90, { n: 30, alpha: 0.5 * (1 - k), speed: 4000, seed: 64 });
+  drawPho(540, py, ps, pe, 0.02 + Math.sin(sec(f)) * 0.03);
+  const ry = py - ps * 0.84 - fl * 150 + Math.sin(sec(f) * 3) * 3;
+  const rs = ps * 0.24;
+  drawRover(560, ry, rs, { rot: fl * 0.25 });
+  // the number as a prop: a "25 KG" tag on the rover, swinging; it drifts up, weightless, on "weighs..."
+  drawTag(560 + rs * 0.55, ry - rs * 0.1, '25 KG', 0.35 + Math.sin(sec(f) * 4) * 0.18 - fl * 1.1, { size: 38, len: 60 });
+  if (fl > 0.05) { ctx.save(); ctx.globalAlpha = fl; ctx.strokeStyle = C.paper; ctx.lineWidth = 4; for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.moveTo(520 + i * 40, ry + 18 + i % 2 * 6 + rs * 0.3); ctx.lineTo(520 + i * 40, ry + 50 + i % 2 * 6 + rs * 0.3); ctx.stroke(); } ctx.restore(); }
+  ctx.restore();
+  drawChip(['25 KG ROVER.', 'ON PHOBOS IT WEIGHS', 'THE EQUIVALENT OF', { t: '15 GRAMS (ESA)', c: C.amber }], 80, 330, inv(452, 460, f), { size: 31 });
+  return ['Illustration · facts: DLR, ESA'];
+}
+function sceneShock(f) {
+  // SHOCK close-up
+  const ff = on2(f);
+  vGrad([[0, '#10225c'], [1, '#050a20']]);
+  // gag lightning background stripes
+  ctx.save(); ctx.fillStyle = 'rgba(127,214,255,0.22)';
+  for (let i = 0; i < 9; i++) { const x = hash(i, 91, Math.floor(f / 6)) * W; ctx.beginPath(); ctx.moveTo(x, -50); ctx.lineTo(x + 30, 700); ctx.lineTo(x - 20, 720); ctx.lineTo(x + 10, H + 50); ctx.lineTo(x - 6, H + 50); ctx.lineTo(x - 40, 740); ctx.lineTo(x + 10, 720); ctx.lineTo(x - 16, -50); ctx.fill(); }
+  ctx.restore();
+  focusLines(540, 600, 400, { n: 130, color: C.paper, alpha: 0.5, seed: 93, wMax: 18, rate: 4 });
+  const lean = kf(ff, [[496, 0], [500, 1], [523, 1], [528, 1.15]], E.out);
+  const size = lerp(300, 360, lean);
+  const shiver = (hash(ff, 95, 1) - 0.5) * 8;
+  const p = { mouth: 'shout', open: kf(ff, [[496, 0.6], [500, 1], [520, 0.85], [526, 1]]), eyeK: kf(ff, [[496, 1.1], [500, 1.32]], E.out), pupil: 0.42, shock: 1, brow: 1.2, sweat: E.back(inv(500, 508, ff)), tuftUp: 1, earL: -0.2, earR: -0.2, rim: C.cyan, light: -1 };
+  drawNSHead(540 + shiver, 610 + lean * 10, size * 0.92, p);
+  sfxText('エッ!?', 515, 1010, 110, { rot: -0.1, fill: C.cyan });
+  return [];
+}
+
+// ---------------------------------------------------------------- S8 STEP THREE (f544-690)
+function sceneRecover(f) {
+  {
+    // recover: Night Shift shakes it off and gets serious
+    const ff = on2(f);
+    vGrad([[0, '#1a0c2c'], [1, '#08060f']]);
+    focusLines(540, 760, 420, { n: 90, color: C.amber, alpha: 0.4, seed: 101, wMax: 14 });
+    const shake = Math.sin(ff * 1.4) * 0.35 * (1 - inv(546, 560, ff));
+    drawNSBust(540, 760, 260, { turn: shake, mouth: ff < 552 ? 'flat' : 'grit', open: 0.3, slant: lerp(0, 0.9, inv(548, 556, ff)), lidL: 0.25, lidR: 0.25, rim: C.amber, sweat: 1 - inv(546, 556, ff) }, { L: { e: [-1.8, 2.4], w: [-1.0, 1.9], paw: 'fist', front: true }, R: { e: [1.8, 2.4], w: [1.0, 1.9], paw: 'fist', front: true } }, { bottom: 5 });
+    return [];
+  }
+}
+function bandThree(f) {
+  return bandShot(f, { style: 3, ci: 14, num: '3', fIn: 560, fOut: 592, prev: sceneRecover, next: sceneGrab, seed: 73 });
+}
+function sceneGrab(f) {
+  {
+    // THE GRAB: paw thrusts at the camera and closes
+    const ff = on2(f);
+    vGrad([[0, '#5a0f12'], [1, '#14050a']]);
+    focusLines(540, 860, 330, { n: 130, color: C.amber, alpha: 0.65, seed: 111, wMax: 24, rate: 4 });
+    drawNSHead(540, 470, 210, { mouth: 'grit', open: 0.5, slant: 1, lidL: 0.2, lidR: 0.2, rim: C.red, look: [0, 0.4] });
+    const k = E.out5(inv(600, 606, ff));
+    const close = inv(606, 612, ff);
+    const ps = lerp(160, 500, k);
+    const draw = (s) => {
+      ctx.save(); ctx.translate(540, lerp(1500, 1080, k) + s * 160); ctx.scale(ps * (1 - s * 0.3), ps * (1 - s * 0.3)); G.S = ps;
+      bigPaw(close);
+      ctx.restore();
+    };
+    if (ff < 606) smear(draw, 3, 0.4); else draw(0);
+    if (f >= 604 && f < 622) sfxText('ガシッ', 135, 740, 120, { rot: -0.12, alpha: 1 - inv(618, 622, f) });
+    return [];
+  }
+}
+function sceneCore(f) {
+  // coring arm + nitrogen blaster
+  const blast = sec(f) - sec(653);
+  const [sx, sy] = shakeF(f, 0.8);
+  ctx.save(); ctx.translate(sx, sy);
+  vGrad([[0, '#060818'], [0.6, '#141a44'], [1, '#2a2350']]);
+  stars(121, 50, { area: [0, 0, W, 1000], alpha: 0.6 });
+  const cam = kf(f, [[630, 1.0], [652, 1.08], [656, 1.25], [686, 1.3]], E.out);
+  ctx.save(); ctx.translate(540, 1000); ctx.scale(cam, cam); ctx.translate(-540, -1000);
+  drawMarsCel(960, 330, 170, { light: [-0.6, -0.4] });
+  drawPhoGround(540, 1160 + 0.9 * 2200, 2200, { light: -1 });
+  const armK = E.back(inv(632, 644, on2(f)), 1.4);
+  drawMMX(600, 790, 330, { legs: 1, arm: armK, corer: f > 644 ? 1 : 0, sampler: 1, wing: 0.7, dig: inv(644, 660, f) });
+  // rock chips from the corer
+  if (f > 644 && f < 680) {
+    for (let i = 0; i < 8; i++) { const d = ((f - 644) * 0.06 + hash(i, 131, 1)) % 1; const x = 270 + (hash(i, 132, 1) - 0.5) * 80 + Math.cos(i) * d * 170, y = 1160 - d * 240 + d * d * 220; ctx.fillStyle = C.pho2; ctx.save(); ctx.translate(x, y); ctx.rotate(d * 6 + i); ctx.fillRect(-8, -6, 16, 12); ctx.strokeStyle = C.ink; ctx.lineWidth = 3; ctx.strokeRect(-8, -6, 16, 12); ctx.restore(); }
+  }
+  // nitrogen blast at the right foot
+  if (blast > 0) {
+    const fx = 600 + 330 * 0.75 * 1.25, fy = 1160;
+    const puffs = [];
+    for (let i = 0; i < 14; i++) { const a = -Math.PI + (i / 13) * Math.PI; const rr = 40 + 330 * E.out(blast * 2.5) * (0.5 + hash(i, 141, 1) * 0.6); puffs.push({ x: fx + Math.cos(a) * rr * 1.1, y: fy + Math.sin(a) * rr * 0.5 - 10, r: (40 + hash(i, 142, 1) * 50) * (1 - clamp(blast * 0.7)) + 10 }); }
+    cloudCluster(puffs, 700, { base: '#e6f4ff', shade: '#9cc4e6', lw: 5, alpha: 1 - inv(0.8, 1.1, blast) });
+    // grains lofted up into the sampler
+    for (let i = 0; i < 26; i++) { const d = clamp(blast * 1.6 - hash(i, 143, 1) * 0.5); if (d <= 0 || d >= 1) continue; const x = fx + (hash(i, 144, 1) - 0.5) * 260 * (1 - d) - 60 * d, y = fy - d * 300; ctx.fillStyle = i % 3 ? C.pho3 : C.pho2; ctx.beginPath(); ctx.arc(x, y, 5 + hash(i, 145, 1) * 6, 0, Math.PI * 2); ctx.fill(); ctx.strokeStyle = C.ink; ctx.lineWidth = 2; ctx.stroke(); }
+  }
+  ctx.restore();
+  ctx.restore();
+  drawChip(['CORER DIGS TO 2 CM (JAXA)'], 80, 330, inv(634, 642, f) * (1 - inv(652, 656, f)), { size: 31 });
+  drawChip(['BURSTS OF HIGH-PRESSURE', 'NITROGEN GAS (NASA)'], 80, 330, inv(656, 664, f), { size: 31 });
+  if (blast > 0 && blast < 0.6) sfxText('バシュッ', 450, 640, 110, { rot: -0.1, fill: C.cyan, alpha: 1 - inv(0.45, 0.6, blast) });
+  // Pho inset: flinch
+  if (f >= 662 && f < 690) {
+    const k = E.out5(inv(662, 667, f)) * (1 - inv(684, 690, f));
+    ctx.save(); ctx.translate(lerp(-400, 80, k), 470); ctx.rotate(-0.03);
+    ctx.fillStyle = C.ink; ctx.fillRect(-12, -12, 304, 244);
+    ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 280, 220); ctx.clip();
+    vGrad([[0, '#2a2350'], [1, '#141a44']]);
+    drawPho(140 + (hash(f, 3, 3) - 0.5) * 8, 115, 108, { expr: 'flinch', sweat: 1 });
+    ctx.restore();
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 6; ctx.strokeRect(0, 0, 280, 220);
+    ctx.restore();
+  }
+  return ['Illustration · facts: JAXA, NASA'];
+}
+// big paw facing the camera: open palm with pads, then a fist (close 0..1). units: ~1 = paw radius
+function bigPaw(close) {
+  const c = clamp(close);
+  cel(() => { ctx.beginPath(); ctx.ellipse(0, 0.82, 0.7, 0.36, 0, 0, Math.PI * 2); }, { fill: C.paper2, shade: C.paper3, shadeFn: () => ctx.rect(-1, 0.86, 2, 1), line: C.ink, lw: 0.035 });
+  if (c < 0.5) {
+    const palm = ellPts(0, 0.15, 0.62, 0.58, 14);
+    cel(() => shapePath(palm, 1300), { fill: C.fur, keyline: C.paper, keyW: 0.05, shade: C.fur2, shadeFn: () => ctx.ellipse(-0.4, 0.4, 0.5, 0.5, 0, 0, Math.PI * 2) });
+    for (let i = 0; i < 4; i++) {
+      const a = -Math.PI / 2 + (i - 1.5) * 0.48 * (1 - c * 0.6);
+      const d = lerp(0.84, 0.62, c * 2);
+      const x = Math.cos(a) * d, y = 0.12 + Math.sin(a) * d;
+      cel(() => shapePath(ellPts(x, y, 0.21, 0.25, 10, a + Math.PI / 2), 1310 + i), { fill: C.fur, keyline: C.paper, keyW: 0.04 });
+      ctx.fillStyle = '#b5677a'; ctx.beginPath(); ctx.ellipse(x * 0.95, y + 0.02, 0.09, 0.11, a + Math.PI / 2, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#b5677a'; shapePath([[-0.28, 0.32], [0, 0.12], [0.28, 0.32], [0.18, 0.5], [-0.18, 0.5]], 1320); ctx.fill();
+  } else {
+    // fist: knuckles toward the camera, fingers curled, thumb across
+    cel(() => shapePath([[-0.62, -0.2], [-0.5, -0.42], [0.5, -0.42], [0.64, -0.2], [0.6, 0.45], [0.3, 0.62], [-0.35, 0.62], [-0.62, 0.42]], 1330), { fill: C.fur, keyline: C.paper, keyW: 0.06, shade: C.fur2, shadeFn: () => ctx.rect(-0.7, 0.2, 1.4, 0.5) });
+    for (let i = 0; i < 4; i++) {
+      const x = -0.42 + i * 0.28;
+      cel(() => shapePath(ellPts(x, -0.3, 0.15, 0.13, 10), 1340 + i), { fill: C.fur3, line: C.paper, lw: 0.025 });
+      inkLine([[x, -0.12], [x + 0.01, 0.12]], 1350 + i, { color: C.furLine, lw: 0.03 });
+    }
+    cel(() => shapePath([[-0.62, 0.22], [-0.1, 0.18], [0.18, 0.28], [0.1, 0.42], [-0.6, 0.45]], 1360), { fill: C.fur, line: C.paper, lw: 0.03 });
+  }
+}
+
+// ---------------------------------------------------------------- S9 TARGET 10 g (f687-750)
+function shotTen(f) {
+  const cx = 540, cy = 690, R = 372;
+  vGrad([[0, '#05060d'], [1, '#100a1e']]);
+  const z1 = E.out5(inv(706, 710, f)), z2 = E.out5(inv(723, 727, f));
+  const lockK = f >= 723 ? 1 : 0;
+  // housing: focus lines around the scope (red once locked)
+  focusLines(cx, cy, R + 30, { n: 80, color: lockK ? C.red : C.night3, alpha: lockK ? 0.55 : 0.45, seed: 701, wMax: 14, rate: 4, reach: 1500 });
+  const iris = E.out5(inv(687, 693, f));
+  // what the scope sees: Pho, a handheld sway that settles, the aim walks onto the patch
+  const size = 230 * (1 + 0.85 * z1) * (1 + 0.95 * z2) * (1 + 0.05 * inv(687, 758, f));
+  const sway = (1 - 0.8 * lockK) * (1 - 0.5 * z1);
+  const aim0 = [lerp(1.35, 0.15, E.io(inv(687, 702, f))), lerp(-0.85, -0.1, E.io(inv(687, 702, f)))];
+  const aim = [lerp(lerp(aim0[0], -0.25, z1), -0.62, z2) + Math.sin(sec(f) * 2.3) * 0.07 * sway, lerp(lerp(aim0[1], 0.0, z1), 0.12, z2) + Math.sin(sec(f) * 3.1 + 1) * 0.05 * sway];
+  const rot = -0.04;
+  const px = cx - (Math.cos(rot) * aim[0] - Math.sin(rot) * aim[1]) * size, py = cy - (Math.sin(rot) * aim[0] + Math.cos(rot) * aim[1]) * size;
+  if (iris > 0) {
+    ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R * iris, 0, Math.PI * 2); ctx.clip();
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R); g.addColorStop(0, '#0b0f2a'); g.addColorStop(1, '#2a1240'); ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, 2 * R, 2 * R);
+    stars(151, 40, { alpha: 0.7, area: [cx - R, cy - R, 2 * R, 2 * R], drift: [aim[0] * -120 * (1 + z1 + z2), aim[1] * -120] });
+    const fur = f >= 714, alarm = f >= 706;
+    drawPho(px, py, size, { expr: fur ? 'furious' : alarm ? 'alarm' : 'grumpy', vein: fur ? E.back(inv(714, 720, f)) : 0, look: alarm ? [0, 0] : [0.8, -0.3], piece: 1, shake: lockK ? 6 : fur ? 3 : 0, sweat: lockK ? 1 : 0 }, rot);
+    // zoom snaps: radial streaks inside the scope
+    for (const [a, b] of [[706, 712], [723, 729]]) if (f >= a && f < b) focusLines(cx, cy, 90, { n: 70, color: C.paper, alpha: 0.6 * (1 - inv(a, b, f)), seed: 703 + a, wMax: 8, rate: 1, reach: R });
+    // crosshair (no numbers: tick marks only)
+    ctx.strokeStyle = lockK ? C.red : 'rgba(242,239,232,0.75)'; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(cx - R, cy); ctx.lineTo(cx - 60, cy); ctx.moveTo(cx + 60, cy); ctx.lineTo(cx + R, cy); ctx.moveTo(cx, cy - R); ctx.lineTo(cx, cy - 60); ctx.moveTo(cx, cy + 60); ctx.lineTo(cx, cy + R); ctx.stroke();
+    for (let i = -6; i <= 6; i++) if (i) { const d = i * 46; ctx.beginPath(); ctx.moveTo(cx + d, cy - 10); ctx.lineTo(cx + d, cy + 10); ctx.moveTo(cx - 10, cy + d); ctx.lineTo(cx + 10, cy + d); ctx.stroke(); }
+    // lock brackets close on the patch
+    const bk = E.back(inv(723, 729, f), 2);
+    if (bk > 0) {
+      const rr = lerp(260, 120, bk);
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate((1 - bk) * 0.8 + sec(f) * 0.25); ctx.strokeStyle = C.red; ctx.lineWidth = 10; ctx.lineCap = 'square';
+      for (let i = 0; i < 4; i++) { ctx.rotate(Math.PI / 2); ctx.beginPath(); ctx.moveTo(rr, rr * 0.5); ctx.lineTo(rr, rr); ctx.lineTo(rr * 0.5, rr); ctx.stroke(); }
+      ctx.restore();
+    }
+    // lens vignette
+    const vg = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, R); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.6)'); ctx.fillStyle = vg; ctx.fillRect(cx - R, cy - R, 2 * R, 2 * R);
+    ctx.restore();
+  }
+  // scope bezel: thick cel ring with ticks that turn on every zoom stage
+  ctx.save(); ctx.translate(cx, cy);
+  const br = R * Math.max(iris, 0.02);
+  ctx.lineWidth = 44; ctx.strokeStyle = C.ink; ctx.beginPath(); ctx.arc(0, 0, br + 22, 0, Math.PI * 2); ctx.stroke();
+  ctx.lineWidth = 30; ctx.strokeStyle = '#2b2f45'; ctx.beginPath(); ctx.arc(0, 0, br + 22, 0, Math.PI * 2); ctx.stroke();
+  ctx.lineWidth = 6; ctx.strokeStyle = C.paper; ctx.beginPath(); ctx.arc(0, 0, br + 46, 0, Math.PI * 2); ctx.stroke();
+  ctx.rotate(0.5 * z1 + 0.5 * z2 + sec(f) * 0.05);
+  ctx.strokeStyle = lockK ? C.red : C.amber; ctx.lineWidth = 6;
+  for (let i = 0; i < 36; i++) { const a = i / 36 * Math.PI * 2, l = i % 3 ? 10 : 22; ctx.beginPath(); ctx.moveTo(Math.cos(a) * (br + 10), Math.sin(a) * (br + 10)); ctx.lineTo(Math.cos(a) * (br + 10 + l), Math.sin(a) * (br + 10 + l)); ctx.stroke(); }
+  ctx.restore();
+  drawChip(['HAYABUSA2 AIMED FOR 0.1 G', 'AND GOT 5.4 G (JAXA)'], 80, 330, inv(728, 736, f), { size: 31 });
+  if (f >= 723 && f < 744) sfxText('ロックオン', 550, 1150, 64, { rot: -0.08, fill: C.red, alpha: 1 - inv(740, 744, f) });
+  return ['Illustration · facts: JAXA'];
+}
+
+// ---------------------------------------------------------------- S10 STEP FOUR (f747-913)
+function bandFour(f) {
+  return bandShot(f, { style: 4, ci: 19, num: '4', fIn: 758, fOut: 784, prev: shotTen, next: sceneBurn, seed: 74, faceP: { mouth: 'smirk', slant: 0.4, lidL: 0.15, lidR: 0.3, glint: 1 } });
+}
+function sceneBurn(f) {
+  return sceneBurnInner(f);
+}
+function sceneBurnInner(f) {
+  {
+    // one burn to leave Mars
+    const burnT = sec(f) - sec(802);
+    const away = E.in(clamp(burnT / 1.4));
+    const [sx, sy] = shakeF(f, 0.9);
+    ctx.save(); ctx.translate(sx, sy);
+    vGrad([[0, '#070818'], [1, '#1a1030']]);
+    stars(161, 80, { drift: [-away * 500, away * 700], alpha: 0.7 });
+    const recede = lerp(1, 0.45, away);
+    drawMarsCel(260 + away * -60, 1620 + away * 300, 720 * recede, { light: [0.7, -0.6] });
+    drawPho(260 + away * 40, 560 + away * 240, 110 * recede, { expr: burnT > 0.1 ? 'furious' : 'grumpy', vein: burnT > 0.1 ? 1 : 0, look: [1, -0.3], shake: burnT > 0 ? 6 : 0 });
+    // anticipation before the burn: MMX settles back, shivers, the engine glows
+    const pre = burnT < 0 ? inv(790, 802, f) : 0;
+    const vib = pre > 0 ? (hash(f, 171, 1) - 0.5) * 10 * pre : 0;
+    const mx = lerp(620, 1250, away) - E.in(pre) * 46 + vib, my = lerp(880, -300, away) + E.in(pre) * 56 + vib * 0.6;
+    const ang = -0.75;
+    if (pre > 0) radGlow(mx - 110, my + 120, 70 + 120 * pre, `rgba(255,170,80,${0.55 * pre})`);
+    if (burnT > 0) {
+      speedLines(-55, { n: 36, alpha: 0.5 * clamp(burnT * 3), speed: 4200, seed: 162 });
+      // exhaust burst behind the engine
+      const ex = mx - Math.sin(ang) * -1 * 0, ey = my;
+      const puffs = []; for (let i = 0; i < 12; i++) { const d = clamp(burnT * 2 - hash(i, 163, 1) * 0.4); if (d <= 0) continue; puffs.push({ x: ex - (220 + 380 * d) * 0.6 + (hash(i, 164, 1) - 0.5) * 220, y: ey + (220 + 380 * d) * 0.8 + (hash(i, 165, 1) - 0.5) * 160, r: 40 + 80 * d * hash(i, 166, 1) + 20 }); }
+      cloudCluster(puffs, 800, { base: '#f3e6d0', shade: '#b8a58f', warm: 0.6, warmC: '#ff8a3d', lightDir: [0.6, -0.8], lw: 5, alpha: 1 - inv(1.0, 1.4, burnT) });
+    }
+    const draw = (s) => drawMMX(mx - s * 160, my + s * 220, 220 * (1 - away * 0.3), { rot: ang + Math.PI * 0.0, burn: burnT > 0 ? 1.4 : 0, legs: 0 });
+    if (burnT > 0.2) smear(draw, 4, 0.35); else draw(0);
+    ctx.restore();
+    if (burnT > 0 && burnT < 0.6) sfxText('ゴオッ', 120, 760, 110, { rot: -0.12, alpha: 1 - inv(0.45, 0.6, burnT) });
+    return ['Illustration · facts: JAXA'];
+  }
+}
+function sceneCapsule(f) {
+  return sceneCapsuleInner(f);
+}
+function sceneCapsuleInner(f) {
+  // capsule lands in Australia, 2031
+  const k = sec(f) - sec(846);
+  const push = E.io(inv(866, 900, f));
+  vGrad([[0, '#040714'], [1, '#0d1638']]);
+  stars(171, 70, { alpha: 0.7 });
+  const er = lerp(400, 560, push), ex = 540, ey = lerp(900, 960, push);
+  const lon0 = 122 + 18 * inv(846, 913, f);
+  drawEarthCel(ex, ey, er, { light: [-0.7, -0.5], lon0 });
+  const land = earthPt(ex, ey, er, 134, -26, lon0);
+  // capsule path from the upper right into Australia
+  const ck = E.out(clamp(k / 0.8));
+  const cx = lerp(1020, land[0], ck), cy = lerp(240, land[1], ck);
+  if (ck < 1) {
+    speedLines(125, { n: 16, alpha: 0.5, speed: 3600, seed: 172, area: [cx - 300, cy - 300, 600, 600], len: [100, 400], w: [2, 6] });
+    const draw = (s) => drawCapsule(cx + s * 90, cy - s * 70, 80, { rot: Math.atan2(land[1] - 240, land[0] - 1020) - Math.PI / 2, plasma: 1 - ck * 0.5 });
+    smear(draw, 3, 0.35);
+  }
+  // landing marker: an amber dot and its echo ring
+  if (ck >= 1) {
+    const d = sec(f) - sec(846) - 0.8;
+    ctx.fillStyle = C.amber; ctx.strokeStyle = C.ink; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.arc(land[0], land[1], 18 * E.back(clamp(d * 6)), 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    for (let i = 0; i < 2; i++) { const dd = (d * 1.2 + i * 0.5) % 1; ctx.strokeStyle = `rgba(245,184,61,${1 - dd})`; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(land[0], land[1], 20 + dd * 120, 0, Math.PI * 2); ctx.stroke(); }
+  }
+  drawChip(['SAMPLE CAPSULE: ABOUT 60 CM', 'ACROSS, WITH A HEAT SHIELD (ESA)'], 80, 330, inv(850, 858, f), { size: 31 });
+  if (f >= 886 && f < 905) sfxText('ドン', 615, 640, 110, { rot: 0.1, alpha: 1 - inv(900, 905, f) });
+  return ['Illustration · facts: JAXA, ESA, NASA'];
+}
+
+// ---------------------------------------------------------------- S11 LOOT (f913-1032)
+function sceneLoot(f) {
+  const ff = on2(f);
+  vGrad([[0, '#1d0f33'], [1, '#07060d']]);
+  // diagonal amber stripes sweep in (no white flash), then keep sliding
+  const sw = E.out5(inv(913, 921, f));
+  ctx.save(); ctx.translate(540 + (1 - sw) * 1400, 900); ctx.rotate(-0.5); ctx.fillStyle = 'rgba(245,184,61,0.14)';
+  for (let i = -7; i < 8; i++) ctx.fillRect(i * 190 + (f * 3) % 190, -1700, 70, 3400);
+  ctx.restore();
+  focusLines(540, 760, 470, { n: 70, color: C.amber, alpha: 0.18, seed: 917, wMax: 10, rate: 3 });
+  const ent = E.out5(inv(913, 921, ff));
+  const raise = E.back(inv(936, 944, ff), 1.8);
+  const p = { turn: -0.32, mouth: 'smirk', open: speak(f) * 0.7, slant: 0.45, lidL: 0.15, lidR: 0.55, brow: 0.3, glint: kf(ff, [[928, 0], [934, 1.2]], E.out), rim: C.amber, look: lerp(-0.2, -0.75, raise) > -1 ? [lerp(-0.2, -0.7, raise), lerp(0.1, -0.5, raise)] : [-0.5, 0.1] };
+  const L = { e: [lerp(-1.9, -2.15, raise), lerp(2.4, 1.25, raise)], w: [lerp(-1.5, -1.95, raise), lerp(3.2, 0.2, raise)], paw: 'mitt', front: true };
+  const bx = 600, by = lerp(1000, 780, ent), bs = 200;
+  drawNSBust(bx, by, bs, p, { L, R: { e: [1.75, 2.3], w: [0.78, 1.05], paw: 'mitt', front: true } }, { bottom: 7 });
+  // the loot: a canister (drawn) held up on "loot?"
+  if (raise > 0.001) {
+    const wx = bx + L.w[0] * bs, wy = by + L.w[1] * bs;
+    drawCanister(wx + 4, wy - 0.62 * bs * 0.75, bs * 0.62, { tag: inv(940, 946, f), rot: -0.08 + Math.sin(sec(f) * 2.5) * 0.04 });
+    for (let i = 0; i < 4; i++) { const tw = (sec(f) * 1.6 + i * 0.25) % 1; kira(wx - 120 + hash(i, 185, 1) * 240, wy - 280 + hash(i, 186, 1) * 200, 34 * Math.sin(tw * Math.PI), C.amber3, tw); }
+  }
+  for (let i = 0; i < 5; i++) { const tw = (sec(f) * 2 + i * 0.37) % 1; kira(560 + hash(i, 181, 1) * 340, 340 + hash(i, 182, 1) * 300, 30 * Math.sin(tw * Math.PI), C.amber3, tw); }
+  return raise > 0.001 ? ['Illustration · facts: JAXA, ESA'] : [];
+}
+function sceneFirst(f) {
+  // FIRST piece of Phobos (real photo) presented like treasure: rotating rays behind, a pop-in, a slow push
+  vGrad([[0, '#07070d'], [1, '#120c18']]);
+  const k = inv(949, 999, f);
+  ctx.save(); ctx.translate(540, 760); ctx.rotate(sec(f) * 0.6);
+  for (let i = 0; i < 16; i++) { ctx.rotate(Math.PI / 8); ctx.fillStyle = i % 2 ? 'rgba(245,184,61,0.2)' : 'rgba(245,184,61,0.07)'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(1500, -150); ctx.lineTo(1500, 150); ctx.closePath(); ctx.fill(); }
+  ctx.restore();
+  const pop = E.back(inv(949, 956, f), 1.8);
+  const pw = lerp(820, 980, pop) + E.io(k) * 140;
+  focusLines(540, 760, pw * 0.55, { n: 110, color: C.amber, alpha: 0.4, seed: 191, wMax: 14, rate: 3 });
+  radGlow(540, 760, pw * 0.75, 'rgba(245,184,61,0.18)');
+  drawImg('phobos', 540, 760, pw, lerp(-6, 5, k));
+  for (let i = 0; i < 6; i++) { const tw = (sec(f) * 1.4 + i / 6) % 1, a = i / 6 * Math.PI * 2 + sec(f) * 0.6; kira(540 + Math.cos(a) * pw * 0.55, 760 + Math.sin(a) * pw * 0.52, 40 * Math.sin(tw * Math.PI), C.amber3, tw * 2); }
+  return [CR.phobos];
+}
+// back of Night Shift's head and shoulders (over-the-shoulder shots); rim light from a screen
+function sceneEarthset(f) {
+  const SX = 160, SY = 380, SW = 760, SH = 640, scx = SX + SW / 2, scy = SY + SH / 2;
+  const pull = E.io(inv(999, 1010, f));
+  const cam = lerp(1080 / SW * 1.02, 1, pull) * (1 + 0.1 * E.io(inv(1008, 1040, f)));
+  // camera: the screen starts filling the frame (continuing the previous shot), then pulls back
+  ctx.save();
+  ctx.translate(540, 760); ctx.scale(cam, cam); ctx.translate(-scx, -scy);
+  ctx.translate(0, (1 - pull) * 0);
+  // the room: dark HQ, screen glow on the wall
+  vGrad([[0, '#090c22'], [1, '#04050c']], -400, 2300);
+  radGlow(scx, scy, 900, 'rgba(127,214,255,0.16)');
+  // desk edge and a few panel lines on the wall (cel)
+  ctx.fillStyle = '#0d1030'; ctx.fillRect(-400, 1180, 1900, 900);
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-400, 1180); ctx.lineTo(1500, 1180); ctx.stroke();
+  ctx.strokeStyle = 'rgba(127,214,255,0.12)'; ctx.lineWidth = 3; for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.moveTo(-400, 200 + i * 230); ctx.lineTo(100, 200 + i * 230); ctx.moveTo(980, 220 + i * 230); ctx.lineTo(1500, 220 + i * 230); ctx.stroke(); }
+  // monitor bezel
+  cel(() => { ctx.beginPath(); ctx.roundRect(SX - 34, SY - 34, SW + 68, SH + 68, 26); }, { fill: '#1b1e33', shade: '#11131f', shadeFn: () => ctx.rect(SX - 40, SY + SH * 0.6, SW + 80, SH), line: C.ink, lw: 8, keyline: C.paper, keyW: 16 });
+  ctx.fillStyle = '#2b2f45'; ctx.fillRect(scx - 60, SY + SH + 34, 120, 110); ctx.strokeStyle = C.ink; ctx.lineWidth = 6; ctx.strokeRect(scx - 60, SY + SH + 34, 120, 110);
+  ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(SX + SW + 10, SY + SH + 14, 7, 0, Math.PI * 2); ctx.fill();
+  // screen content
+  const sw = E.io(inv(1004, 1010, f));      // channel switch (wipe) from the Phobos photo to PIA26362
+  ctx.save(); ctx.beginPath(); ctx.rect(SX, SY, SW, SH); ctx.clip();
+  ctx.fillStyle = '#000'; ctx.fillRect(SX, SY, SW, SH);
+  const wipeX = SX + SW * sw;
+  if (sw < 1) {
+    ctx.save(); ctx.beginPath(); ctx.rect(wipeX, SY, SW, SH); ctx.clip();
+    // the previous shot, mapped into the screen (so the cut is invisible at the first frame)
+    const s0 = SW / 1080 / 1.02;
+    ctx.translate(scx, scy); ctx.scale(s0, s0); ctx.translate(-540, -760);
+    sceneFirst(f);
+    ctx.restore();
+  }
+  if (sw > 0) {
+    ctx.save(); ctx.beginPath(); ctx.rect(SX, SY, wipeX - SX, SH); ctx.clip();
+    const im = IMG.earthset;
+    const ix0 = 36, iy0 = 36, iw = 345, ih = 301;              // the photo's inset (Phobos and Earth), in photo pixels
+    const zs = SW / iw * 1.24 * (1 + 0.08 * inv(1010, 1038, f));
+    const icx = 212 + Math.sin(sec(f) * 0.9) * 4, icy = 182;
+    ctx.translate(scx, scy); ctx.scale(zs, zs); ctx.translate(-icx, -icy);
+    ctx.drawImage(im, ix0, iy0, iw, ih, ix0, iy0, iw, ih);
+    ctx.restore();
+    // amber echo ring on the small blue dot (Earth), no label
+    if (f >= 1014) {
+      const zs2 = SW / 345 * 1.24 * (1 + 0.08 * inv(1010, 1038, f));
+      const ex = scx + (296 - (212 + Math.sin(sec(f) * 0.9) * 4)) * zs2, ey = scy + (176.5 - 182) * zs2;
+      for (let i = 0; i < 2; i++) { const d = ((f - 1014) / 24 + i * 0.5) % 1; ctx.strokeStyle = `rgba(245,184,61,${0.9 * (1 - d)})`; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(ex, ey, 24 + d * 80, 0, Math.PI * 2); ctx.stroke(); }
+    }
+  }
+  // wipe edge (a bright scan bar, amber)
+  if (sw > 0 && sw < 1) { ctx.fillStyle = C.amber; ctx.fillRect(wipeX - 6, SY, 12, SH); }
+  // screen glass glare (a cel band on the bezel side, not over the photo centre)
+  ctx.restore();
+  // Night Shift, over the shoulder (lower left), lit by the screen; leans in on "home"
+  const lean = E.out(inv(1016, 1024, on2(f)));
+  drawNSBack(330 + lean * 20, 1470 - lean * 30, 270, { tilt: 0.06 + lean * 0.06, earL: -0.1 - 0.15 * lean, earR: 0.1 * Math.sin(sec(f) * 3), rim: C.cyan });
+  ctx.restore();
+  return sw < 1 ? [CR.phobos, CR.earthset] : [CR.earthset];
+}
+// ---------------------------------------------------------------- S12 NEXT (f1030-1166)
+function bandNext(f) {
+  return bandShot(f, { style: 'next', ci: 27, num: '', fIn: 1038, fOut: 1056, prev: sceneEarthset, next: sceneElectron, seed: 75, faceP: { mouth: 'w', look: [-0.6, 0.4], brow: 0.3, glint: 0.45 }, stamp: { f: 1047, t: 'WED 21 OCT', x: -170, y: 124, rot: 0.04, size: 54 } });
+}
+function sceneElectron(f) {
+  return sceneElectronInner(f);
+}
+function sceneElectronInner(f) {
+  // the camera never holds: a parallax truck (stars slow, rocket medium, Night Shift and the rock fast)
+  // plus a slow push; the three satellites fly in on "three" and are loaded into the nose on "satellites"
+  const pan = E.io(inv(1048, 1166, f));
+  const cz = 1 + 0.14 * pan, pivot = [640, 900];
+  const rx = lerp(-110, 70, pan);
+  vGrad([[0, '#050716'], [0.7, '#141a44'], [1, '#2a1f45']]);
+  stars(201, 80, { alpha: 0.7, area: [0, 0, W, 1300], drift: [-f * 0.5 + pan * 70, 0] });
+  const L = (x, y) => [pivot[0] + cz * (x + rx - pivot[0]), pivot[1] + cz * (y - pivot[1])];  // rocket layer -> screen
+  ctx.save(); ctx.translate(pivot[0], pivot[1]); ctx.scale(cz, cz); ctx.translate(-pivot[0] + rx, -pivot[1]);
+  // sea and coast (night)
+  ctx.fillStyle = '#0a1230'; ctx.fillRect(-500, 1380, W + 1000, 700);
+  ctx.strokeStyle = 'rgba(127,214,255,0.25)'; ctx.lineWidth = 3;
+  for (let i = 0; i < 12; i++) { const y = 1400 + i * 22; const x = (hash(i, 202, 1) * 900 + f * (1.5 + i * 0.3)) % 1400 - 250; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 80 + i * 6, y); ctx.stroke(); }
+  cel(() => shapePath([[300, 1500], [460, 1420], [700, 1395], [920, 1405], [1350, 1450], [1350, 1800], [300, 1800]], 210), { fill: '#141322', line: C.ink, lw: 5 });
+  // searchlights sweep
+  ctx.save(); ctx.globalAlpha = 0.16; ctx.fillStyle = '#cfe3f0';
+  for (const [x0, a] of [[560, -1.25 + Math.sin(sec(f) * 1.7) * 0.2], [880, -1.9 + Math.sin(sec(f) * 2.1 + 1) * 0.2]]) { ctx.beginPath(); ctx.moveTo(x0, 1410); ctx.lineTo(x0 + Math.cos(a - 0.07) * 1800, 1410 + Math.sin(a - 0.07) * 1800); ctx.lineTo(x0 + Math.cos(a + 0.07) * 1800, 1410 + Math.sin(a + 0.07) * 1800); ctx.fill(); }
+  ctx.restore();
+  // strongback + rocket
+  ctx.fillStyle = '#1e2240'; ctx.fillRect(785, 520, 34, 890); ctx.strokeStyle = C.ink; ctx.lineWidth = 4; ctx.strokeRect(785, 520, 34, 890);
+  for (let i = 0; i < 9; i++) { ctx.strokeStyle = '#2c3266'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(785, 560 + i * 95); ctx.lineTo(740, 560 + i * 95); ctx.stroke(); }
+  drawElectron(700, 1400, 76, { glow: 0.4 + 0.2 * Math.sin(sec(f) * 3) });
+  ctx.restore();
+  const nz = L(700, 1400 - 12.6 * 76);
+  // three satellites: fly in on "three" (1094), bob in a row, then dive into the nose one by one (1124 on)
+  [1094, 1098, 1102].forEach((fs, i) => {
+    const k = E.out(inv(fs, fs + 12, f)); if (k <= 0) return;
+    const ld = E.in(inv(1124 + i * 5, 1132 + i * 5, f));
+    if (ld >= 1) {
+      // a small amber pop at the nose as each one goes in
+      const d = (f - (1132 + i * 5)) / 10; if (d < 1) { ctx.strokeStyle = `rgba(245,184,61,${1 - d})`; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(nz[0], nz[1], 14 + d * 60, 0, Math.PI * 2); ctx.stroke(); }
+      return;
+    }
+    const tx = 260 + i * 185 + rx * 0.6, ty = 610 + (i === 1 ? -36 : 0);
+    let x = lerp(-260, tx, k) + Math.sin(sec(f) * 2 + i) * 8 * k, y = lerp(980 - i * 60, ty, k) + Math.sin(sec(f) * 2.4 + i) * 10;
+    x = lerp(x, nz[0], ld); y = lerp(y, nz[1], ld);
+    const sc = 66 * (1 - 0.8 * ld);
+    if (k < 1) speedLines(-18, { n: 10, alpha: 0.6 * (1 - k), speed: 4200, seed: 230 + i, area: [x - 320, y - 90, 380, 180], len: [80, 240], w: [2, 5] });
+    const draw = (s) => drawSat(x - s * 140 * (1 - ld) - s * (nz[0] - x) * 0.3 * ld, y + s * 30, sc, { rot: -0.25 + i * 0.12 + (1 - k) * 0.6 + Math.sin(sec(f) * 1.5 + i) * 0.08 + ld * 1.2 });
+    if (k < 1 || ld > 0) smear(draw, 3, 0.35); else draw(0);
+  });
+  // Night Shift on the headland (whole head above y 1500), pointing at the rocket, then a fist pump on "Wednesday"
+  const up = E.back(inv(1058, 1068, on2(f)), 1.6);
+  const pump = E.back(inv(1141, 1147, on2(f)), 2);
+  const cx = lerp(150, 330, pan);
+  const cy = lerp(1700, 930, up) + (f > 1141 ? -16 * Math.max(0, Math.sin(sec(f - 1141) * 9)) * (1 - inv(1141, 1160, f)) : 0) + Math.sin(sec(f) * 2.2) * 5;
+  const jab = 0.3 * Math.max(0, Math.sin(Math.PI * inv(1094, 1100, on2(f))));
+  const pR = pump > 0 ? { e: [2.0, 1.4], w: [lerp(2.7, 1.85, pump), lerp(-0.6, 0.15, pump)], paw: pump > 0.5 ? 'fist' : 'point', front: true, pr: lerp(-1.0, -1.5, pump) } : { e: [2.0, 0.6 - jab], w: [2.7 + jab, -0.6 - jab], paw: 'point', front: true, pr: -1.0 };
+  drawNSBust(cx, cy, 128, { turn: 0.35, mouth: f > 1141 ? 'grin' : 'w', open: speak(f) * 0.8 + (f > 1141 ? 0.3 : 0), look: f > 1124 && f < 1141 ? [0.9, -0.9] : [0.7, -0.6], brow: 0.4, rim: C.cyan, light: 1, blink: 0, glint: kf(f, [[1141, 0], [1145, 1.1], [1160, 0.3]], E.out) }, { R: pR, L: { e: [-1.6, 2.4], w: [-1.3, 3.3], paw: 'mitt' } }, { bottom: 4 });
+  // foreground rock lip hides his jacket hem (he never touches the frame bottom)
+  const fx = lerp(-150, 90, pan);
+  cel(() => shapePath([[-160 + fx, 1400], [150 + fx, 1355], [390 + fx, 1375], [560 + fx, 1440], [640 + fx, 2000], [-160 + fx, 2000]], 240), { fill: '#0b0a16', line: C.ink, lw: 6, shade: '#07060f', shadeFn: () => ctx.rect(-300, 1600, 1200, 500) });
+  // date chip from "Next:" on: the facts of the NEXT line, with the date
+  drawChip(['ROCKET LAB ELECTRON', 'THREE HAWKEYE 360 SATELLITES', { t: 'WED 21 OCT', c: C.amber }], 80, 330, inv(1050, 1056, f), { size: 30 });
+  // date stamp slam on "Wednesday"
+  const dk = E.back(inv(1141, 1147, f), 2);
+  if (dk > 0) {
+    ctx.save(); ctx.translate(490, 690); ctx.rotate(-0.06); ctx.scale(dk, dk);
+    ctx.font = '400 88px "Dela Gothic One"'; ctx.lineJoin = 'round';
+    const tw = ctx.measureText('WED 21 OCT').width;
+    ctx.fillStyle = C.red2; ctx.fillText('WED 21 OCT', -tw / 2 + 6, 8);
+    ctx.strokeStyle = C.paper; ctx.lineWidth = 20; ctx.strokeText('WED 21 OCT', -tw / 2, 0);
+    ctx.strokeStyle = C.ink; ctx.lineWidth = 11; ctx.strokeText('WED 21 OCT', -tw / 2, 0);
+    ctx.fillStyle = C.amber; ctx.fillText('WED 21 OCT', -tw / 2, 0);
+    ctx.restore();
+  }
+  return ['Illustration · facts: Launch Library 2'];
+}
+// ---------------------------------------------------------------- S13 END CARD (f1162-1260)
+function shotEnd(f) {
+  const ff = on2(f);
+  vGrad([[0, '#05060d'], [0.6, '#11142e'], [1, '#2a1a3e']]);
+  const hd = endHead(f);
+  // echo rings ripple out from behind him: a signal and its echo, all through the card
+  ctx.save(); ctx.translate(540, 1250); ctx.rotate(sec(f) * 0.3);
+  for (let i = 0; i < 16; i++) { ctx.rotate(Math.PI / 8); ctx.fillStyle = i % 2 ? 'rgba(245,184,61,0.10)' : 'rgba(245,184,61,0.04)'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(1700, -170); ctx.lineTo(1700, 170); ctx.closePath(); ctx.fill(); }
+  ctx.restore();
+  for (let i = 0; i < 4; i++) { const d = ((f - 1162) / 48 + i / 4) % 1; ctx.strokeStyle = `rgba(245,184,61,${0.45 * (1 - d)})`; ctx.lineWidth = i % 2 ? 10 : 22; ctx.beginPath(); ctx.arc(540, 1250, 160 + d * 900, 0, Math.PI * 2); ctx.stroke(); }
+  focusLines(540, 1300, 560, { n: 90, color: C.amber, alpha: 0.24, seed: 221, wMax: 16, rate: 3 });
+  stars(223, 40, { alpha: 0.6, area: [0, 0, W, 1100], drift: [f * 0.4, 0] });
+  // low-angle hero: salute, a wink, eyes glint on the logo notes
+  const sal = E.back(inv(1167, 1175, ff), 1.8);
+  const flick = E.out(inv(1212, 1218, ff));
+  const wink = f >= 1236 && f < 1250 ? 1 : 0;
+  const p = { turn: -0.15, tilt: 0.04, mouth: f >= 1210 ? 'smirk' : 'w', open: speak(f) * 0.8, slant: 0.35, lidL: 0.1, lidR: wink ? 1 : 0.15, glint: kf(f, [[1211, 0], [1215, 1.1], [1228, 0]], E.out), look: [-0.1, 0.35], rim: C.amber, blink: 0 };
+  const salW = [lerp(1.6, 1.5 + flick * 0.9, sal), lerp(2.6, -0.5 - flick * 0.45, sal)];
+  const salE = [lerp(1.9, 2.35 + flick * 0.3, sal), lerp(2.6, 0.75 - flick * 0.3, sal)];
+  drawNSBust(hd.x, hd.y, hd.s, p, { R: { e: salE, w: salW, paw: 'flat', front: true, pr: lerp(0, -2.5 + flick * 0.9, sal) }, L: { e: [-1.8, 2.5], w: [-1.5, 3.4], paw: 'mitt' } }, { bottom: 5, flap: 1 });
+  speedLines(185, { n: 14, alpha: 0.25, speed: 2400, seed: 222, len: [150, 500], w: [2, 5] });
+  drawWordmark(f);
+  return [];
+}
+// the wordmark lands on "Downlink Cat" (f1184-1200) and holds through the sonic logo. The echo mark
+// (amber dot + hollow ring) flies out of Night Shift's eyes into place; it pulses on the logo note (1212)
+// and on its echo (1224). DOWNLINK paper, CAT amber.
+function drawWordmark(f) {
+  const note = 1212, echo = 1224, land = 1185;
+  ctx.save();
+  const size = 120;
+  ctx.font = `800 ${size}px Archivo`; ctx.fontStretch = 'normal';
+  const wD = ctx.measureText('DOWNLINK ').width, wC = ctx.measureText('CAT').width;
+  const r = size * 0.3, gap = r * 60 / 22, sw = r * 6 / 22 * 2;
+  const markW = r * 2 + gap + 34;
+  const total = markW + wD + wC;
+  const sc = Math.min(1, 740 / total);
+  const x0 = 490 - total * sc / 2, y0 = 640;
+  const my = -size * 0.36;
+  // slab behind
+  const sk = E.out5(inv(land - 6, land, f));
+  ctx.save(); ctx.translate(x0, y0); ctx.scale(sc, sc);
+  if (sk > 0) { ctx.fillStyle = 'rgba(11,11,12,0.9)'; ctx.save(); ctx.transform(1, 0, -0.18, 1, 0, 0); ctx.fillRect(-40, -size * 0.95, (total + 80) * sk, size * 1.35); ctx.fillStyle = C.amber; ctx.fillRect(-40, size * 0.4 - 8, (total + 80) * sk, 8); ctx.restore(); }
+  ctx.restore();
+  // echo mark: flies from the eyes (f1176-1185), then pulses with the logo
+  const hd = endHead(f);
+  const fk = E.io(inv(1176, land, f));
+  const eyeD = [hd.x + (-0.41 - 0.036) * hd.s, hd.y], eyeR = [hd.x + (0.41 - 0.036) * hd.s, hd.y], er = 0.3 * hd.s;
+  const dotT = [x0 + r * sc, y0 + my * sc], ringT = [x0 + (r + gap) * sc, y0 + my * sc];
+  if (fk > 0) {
+    const arc = (a, b, k) => [lerp(a[0], b[0], k), lerp(a[1], b[1], k) - Math.sin(Math.PI * k) * 160];
+    const pulse = (fs) => { const d = (f - fs) / 6; return d > 0 && d < 1 ? 1 + 0.35 * Math.sin(Math.PI * d) : 1; };
+    const drawMark = (k, alpha = 1) => {
+      ctx.save(); ctx.globalAlpha *= alpha;
+      const pd = arc(eyeD, dotT, k), pr = arc(eyeR, ringT, k);
+      const rd = lerp(er, r * sc, k) * pulse(note), rr = lerp(er, r * sc, k) * pulse(echo);
+      ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(pd[0], pd[1], rd, 0, Math.PI * 2); ctx.fill();
+      const lw = sw * sc * (k < 1 ? lerp(er / (r * sc), 1, k) : 1);
+      ctx.strokeStyle = C.amber; ctx.lineWidth = lw; ctx.beginPath(); ctx.arc(pr[0], pr[1], Math.max(1, rr - lw / 2), 0, Math.PI * 2); ctx.stroke();
+      ctx.restore();
+    };
+    if (fk < 1) { for (let i = 3; i >= 1; i--) drawMark(Math.max(0, fk - i * 0.08), 0.25); }
+    drawMark(fk);
+    // pulse rings on the logo notes
+    for (const [fs, c] of [[note, dotT], [echo, ringT]]) { const d = (f - fs) / 18; if (d > 0 && d < 1) { ctx.strokeStyle = `rgba(245,184,61,${1 - d})`; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(c[0], c[1], r * sc + d * 90, 0, Math.PI * 2); ctx.stroke(); } }
+  }
+  // letters slam in on the spoken words: DOWNLINK on "Downlink" (1184), CAT on "Cat." (1197)
+  ctx.save(); ctx.translate(x0, y0); ctx.scale(sc, sc);
+  ctx.font = `800 ${size}px Archivo`;
+  const word = 'DOWNLINK CAT';
+  let x = markW;
+  for (let i = 0; i < word.length; i++) {
+    const ch = word[i]; const w = ctx.measureText(ch).width;
+    const fs = i >= 9 ? 1197 + (i - 9) * 0.8 : 1184 + i * 0.8;
+    const lk = E.back(inv(fs, fs + 4, f), 2.6);
+    if (lk > 0 && ch !== ' ') {
+      ctx.save(); ctx.translate(x + w / 2, -size * 0.35); ctx.scale(lk, lk); ctx.translate(-w / 2, size * 0.35);
+      ctx.fillStyle = i >= 9 ? C.amber : C.paper; ctx.fillText(ch, 0, 0); ctx.restore();
+    }
+    x += w;
+  }
+  ctx.restore();
+  ctx.restore();
+}
+// heist progress meter by the kicker: four pips, one per step (hidden while a STEP card shows its own)
+function phoPt(x, y, size, rot, px, py) { const c = Math.cos(rot), s = Math.sin(rot); return [x + (c * px - s * py) * size, y + (s * px + c * py) * size]; }
+// manga insert panel: a diagonal strip with Night Shift's eyes in extreme close-up
+function eyeStrip(f, f0, f1, { cy = 975, hh = 105, ang = -0.07, look = [0.5, 0.25] } = {}) {
+  const k = E.out5(inv(f0, f0 + 5, f));
+  if (k <= 0 || f >= f1) return;
+  const ff = on2(f);
+  ctx.save(); ctx.translate(540 + lerp(-1300, 0, k), cy); ctx.rotate(ang);
+  ctx.fillStyle = C.ink; ctx.fillRect(-760, -hh - 18, 1520, 2 * hh + 36);
+  ctx.fillStyle = C.paper; ctx.fillRect(-760, -hh - 9, 1520, 2 * hh + 18);
+  ctx.beginPath(); ctx.rect(-760, -hh, 1520, 2 * hh); ctx.clip();
+  const g = ctx.createLinearGradient(0, -hh, 0, hh); g.addColorStop(0, '#4a1014'); g.addColorStop(1, '#14060a'); ctx.fillStyle = g; ctx.fillRect(-760, -hh, 1520, 2 * hh);
+  focusLines(-60, 20, 200, { n: 80, color: C.red, alpha: 0.55, seed: 611, wMax: 10, rate: 4, reach: 900 });
+  const lid = lerp(0.1, 0.36, inv(f0 + 4, f0 + 12, ff));
+  drawNSHead(-60 + (f - f0) * 1.6, 22, 470, { slant: 0.8, lidL: lid, lidR: lid, mouth: 'smirk', rim: C.red, glint: kf(ff, [[f0 + 6, 0], [f0 + 10, 0.75], [f1, 0.35]], E.out), look, brow: -0.1 });
+  ctx.restore();
+}
+// a paper tag on a string (number prop)
+function drawTag(x, y, txt, a, { size = 40, len = 70 } = {}) {
+  // len < 0: the tag floats UP on its string (low gravity); the hole is always at the string end
+  const upward = len < 0;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(a);
+  ctx.strokeStyle = C.paper; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, len); ctx.stroke();
+  ctx.font = `400 ${size}px "Dela Gothic One"`;
+  const w = ctx.measureText(txt).width + 50, h = size * (upward ? 2.3 : 2.0);
+  ctx.translate(0, upward ? len - h + 6 : len - 6);
+  if (upward) { ctx.translate(0, h); ctx.scale(1, -1); }
+  const shape = (o) => { ctx.beginPath(); ctx.moveTo(-w / 2 - o, 18); ctx.lineTo(-w / 2 + 20 - o, -o); ctx.lineTo(w / 2 - 20 + o, -o); ctx.lineTo(w / 2 + o, 18); ctx.lineTo(w / 2 + o, h + o); ctx.lineTo(-w / 2 - o, h + o); ctx.closePath(); };
+  shape(6); ctx.fillStyle = C.ink; ctx.fill();
+  shape(0); ctx.fillStyle = C.paper; ctx.fill();
+  ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(0, 12, 6, 0, Math.PI * 2); ctx.fill();
+  if (upward) { ctx.translate(0, h); ctx.scale(1, -1); }
+  ctx.fillStyle = C.ink; ctx.fillText(txt, -w / 2 + 25, upward ? h * 0.52 : h * 0.8);
+  ctx.restore();
+}
+
+// drawn sample canister with a tag (illustration; the tag carries the fact)
+function drawCanister(x, y, s, { tag = 1, rot = 0 } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); G.S = s;
+  const lw = 4 / s;
+  cel(() => { ctx.beginPath(); ctx.roundRect(-0.42, -0.55, 0.84, 1.15, 0.12); }, { fill: '#cfe3f0', shade: '#8fb0c4', shadeFn: () => ctx.rect(0.12, -0.6, 0.4, 1.3), line: C.ink, lw });
+  // grains inside
+  ctx.save(); ctx.beginPath(); ctx.roundRect(-0.42, -0.55, 0.84, 1.15, 0.12); ctx.clip();
+  ctx.fillStyle = C.pho2; ctx.fillRect(-0.5, 0.2, 1, 0.5);
+  for (let i = 0; i < 14; i++) { ctx.fillStyle = i % 2 ? C.pho : C.pho4; ctx.beginPath(); ctx.arc(-0.36 + hash(i, 951, 1) * 0.72, 0.16 + hash(i, 952, 1) * 0.12, 0.05 + hash(i, 953, 1) * 0.04, 0, Math.PI * 2); ctx.fill(); }
+  ctx.fillStyle = 'rgba(255,255,255,0.65)'; ctx.fillRect(-0.3, -0.45, 0.08, 0.9);
+  ctx.restore();
+  cel(() => { ctx.beginPath(); ctx.roundRect(-0.5, -0.78, 1.0, 0.28, 0.08); }, { fill: C.amber, shade: C.amber2, shadeFn: () => ctx.rect(-0.6, -0.62, 1.2, 0.2), line: C.ink, lw });
+  ctx.restore();
+  if (tag > 0) {
+    ctx.save(); ctx.globalAlpha *= clamp(tag);
+    drawTag(x + s * 0.3 + 34, y + s * 0.5, 'AT LEAST 10 G', 0.12 + Math.sin(G.t * 3.2) * 0.06, { size: 34, len: 46 });
+    ctx.restore();
+  }
+}
+function drawNSBack(x, y, size, { tilt = 0, earL = 0, earR = 0, rim = C.cyan } = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(tilt); ctx.scale(size, size); G.S = size;
+  const seed = 1600;
+  // shoulders (jacket back + stand-up collar)
+  const jk = [[-0.55, 0.7], [-1.3, 1.05], [-1.75, 1.6], [-1.85, 3.2], [1.85, 3.2], [1.75, 1.6], [1.3, 1.05], [0.55, 0.7]];
+  cel(() => shapePath(jk, seed), { fill: C.paper3, keyline: C.ink, keyW: 0.08, shade: '#8f887b', shadeFn: () => ctx.ellipse(-0.6, 2.3, 1.4, 1.5, 0, 0, Math.PI * 2) });
+  ctx.save(); shapePath(jk, seed); ctx.clip(); ctx.strokeStyle = rim; ctx.lineWidth = 0.14; shapePath(jk.map(([a, b]) => [a + 0.05, b + 0.04]), seed); ctx.stroke(); ctx.restore();
+  cel(() => shapePath([[-0.62, 0.62], [0.62, 0.62], [0.7, 1.05], [-0.7, 1.05]], seed + 1, { smooth: false }), { fill: C.paper2, line: C.ink, lw: 0.04 });
+  // ears (backs: fur only)
+  for (const [s, a] of [[-1, earL], [1, earR]]) {
+    ctx.save(); ctx.translate(s * 0.6, -0.66); ctx.rotate(s * a);
+    cel(() => shapePath([[s * -0.34, -0.12], [s * 0.05, -0.62], [s * 0.4, -0.86], [s * 0.36, -0.2], [s * 0.3, 0.14]], seed + 5 + s, { smooth: false }), { fill: C.fur, keyline: C.paper, keyW: 0.06 });
+    ctx.restore();
+  }
+  const hp = () => shapePath(headPts(0), seed + 10);
+  cel(hp, { fill: C.fur, keyline: C.paper, keyW: 0.1, shade: C.fur2, shadeFn: () => ctx.ellipse(-0.5, 0.5, 1.2, 1.1, 0, 0, Math.PI * 2) });
+  ctx.save(); hp(); ctx.clip(); ctx.strokeStyle = rim; ctx.lineWidth = 0.2; ctx.translate(0.06, 0.06); hp(); ctx.stroke(); ctx.restore();
+  // tuft from behind
+  cel(() => shapePath([[-0.42, -0.6], [-0.5, -1.12], [-0.16, -0.96], [-0.08, -1.42], [0.16, -1.0], [0.5, -1.24], [0.36, -0.9], [0.46, -0.6]], seed + 20, { smooth: false }), { fill: C.fur, keyline: C.paper, keyW: 0.08 });
+  // headset band over the crown and the cups
+  const band = [[-1.02, -0.12], [-0.9, -0.55], [-0.5, -0.86], [0.5, -0.86], [0.9, -0.55], [1.02, -0.12]];
+  inkLine(band, seed + 30, { color: C.ink, lw: 0.13 }); inkLine(band, seed + 30, { color: C.paper, lw: 0.08 });
+  for (const s of [-1, 1]) cel(() => { ctx.beginPath(); ctx.roundRect(s * 1.04 - 0.12, -0.28, 0.24, 0.44, 0.09); }, { fill: C.paper, shade: C.paper3, shadeFn: () => ctx.rect(s * 1.04 - 0.12, -0.02, 0.24, 0.3), line: C.ink, lw: 0.035 });
+  ctx.restore();
+}
+// ever brought home: pull back from the Phobos photo to reveal it on Night Shift's screen, the screen
+// switches to Curiosity's Earth-and-Phobos photo, and the photo's own inset fills the screen
+
+function endHead(f) {
+  // where the end-card head is (shared by the bust and the flying echo mark)
+  const ent = E.out5(inv(1162, 1170, f));
+  return { x: 540, y: lerp(2100, 1420, ent) + Math.sin(sec(f) * 1.6) * 6, s: 215 };
+}
+function drawHeistPips(f) {
+  if (f < 244 || f >= 913) return;
+  for (const [a, b] of [[314, 356], [560, 600], [758, 792]]) if (f >= a && f < b) return;
+  const step = f < 322 ? 1 : f < 570 ? 2 : f < 768 ? 3 : 4;
+  ctx.save();
+  ctx.font = '600 26px "Plex Mono"';
+  const x0 = 80 + ctx.measureText('LAUNCH DAY').width + 70 + 10;
+  ctx.fillStyle = 'rgba(11,11,12,0.8)'; ctx.fillRect(x0, 262, 4 * 30 + 18, 42);
+  for (let i = 0; i < 4; i++) {
+    const on = i < step;
+    ctx.save(); ctx.translate(x0 + 24 + i * 30, 283); ctx.rotate(Math.PI / 4);
+    if (on) { ctx.fillStyle = C.amber; ctx.fillRect(-8, -8, 16, 16); } else { ctx.strokeStyle = C.paper3; ctx.lineWidth = 3; ctx.strokeRect(-7, -7, 14, 14); }
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ---------------------------------------------------------------- timeline + render
+const SHOTS = [
+  [0, 103, shotHook], [103, 147, shotLaunch], [147, 168, shotHeist], [168, 212, shotTarget],
+  [212, 244, bandOne], [244, 314, sceneMars], [314, 356, bandTwo], [356, 446, sceneDrop],
+  [446, 496, sceneWide], [496, 544, sceneShock], [544, 560, sceneRecover], [560, 600, bandThree],
+  [600, 630, sceneGrab], [630, 687, sceneCore], [687, 758, shotTen], [758, 792, bandFour],
+  [792, 846, sceneBurn], [846, 913, sceneCapsule], [913, 949, sceneLoot], [949, 999, sceneFirst],
+  [999, 1038, sceneEarthset], [1038, 1064, bandNext], [1064, 1162, sceneElectron], [1162, 1300, shotEnd],
+];
+// whip pans: both shots on screen, the outgoing one leaving as the incoming one arrives (dir = where B comes from)
+const TRANS = [
+  { f0: 97, f1: 107, a: shotHook, b: shotLaunch, dir: [0, 1] },
+  { f0: 840, f1: 850, a: sceneBurn, b: sceneCapsule, dir: [-0.62, 0.78] },
+  { f0: 1156, f1: 1166, a: sceneElectron, b: shotEnd, dir: [0, 1] },
+];
+function drawTrans(f, tr) {
+  const u = E.io(inv(tr.f0, tr.f1, f));
+  const D = Math.abs(tr.dir[1]) > 0.9 ? H : 1700;
+  const base = ctx.getTransform();
+  let cr = [];
+  ctx.save(); ctx.translate(-tr.dir[0] * u * D, -tr.dir[1] * u * D); ctx.beginPath(); ctx.rect(-60, -60, W + 120, H + 120); ctx.clip(); const ca = tr.a(f) || []; ctx.restore();
+  ctx.save(); ctx.translate(tr.dir[0] * (1 - u) * D, tr.dir[1] * (1 - u) * D); ctx.beginPath(); ctx.rect(-60, -60, W + 120, H + 120); ctx.clip(); const cb = tr.b(f) || []; ctx.restore();
+  ctx.setTransform(base);
+  const ang = Math.atan2(tr.dir[1], tr.dir[0]) * 180 / Math.PI;
+  speedLines(ang, { n: 50, alpha: 0.85 * Math.sin(Math.PI * u), speed: 7000, seed: 8, color: C.paper });
+  // both shots are on screen during the pan, so both credits show
+  cr = [...new Set([...ca, ...cb])];
+  return cr;
+}
+function impactPost(f) {
+  const i = IMPACTS.indexOf(f);
+  if (i < 0) return;
+  {
+    if (!G.tmp) { G.tmp = document.createElement('canvas'); G.tmp.width = W; G.tmp.height = H; }
+    const tc = G.tmp.getContext('2d'); tc.setTransform(1, 0, 0, 1, 0, 0); tc.filter = 'none'; tc.drawImage(ctx.canvas, 0, 0);
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = 'grayscale(1) contrast(7) brightness(1.15)'; ctx.drawImage(G.tmp, 0, 0); ctx.filter = 'none';
+    ctx.globalCompositeOperation = 'multiply'; ctx.fillStyle = '#ff3b2f'; ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+  }
+}
+function renderFrame(t) {
+  const f = G.f;
+  const [sx, sy, sr] = shakeF(f);
+  let credit = [];
+  G.capBoxes = [];
+  ctx.save();
+  ctx.translate(540 + sx, 960 + sy); ctx.rotate(sr); ctx.scale(1.03, 1.03); ctx.translate(-540, -960); // overscan so shake never shows edges
+  ctx.fillStyle = C.ink; ctx.fillRect(-300, -300, W + 600, H + 600);
+  const tr = TRANS.find((x) => f >= x.f0 && f < x.f1);
+  if (tr) credit = drawTrans(f, tr);
+  else for (const [a, b, fn] of SHOTS) if (f >= a && f < b) { credit = fn(f) || []; break; }
+  ctx.restore();
+  // UI layer (captions shake a little with the hits, clamped to the safe area; credits and kicker do not)
+  ctx.save();
+  drawCaptions(t, { shake: [sx * 0.35, sy * 0.35] });
+  ctx.restore();
+  if (f < 1162) { drawKicker(0.95); drawHeistPips(f); }
+  drawCredit(credit);
+  impactPost(f);
+}
+
+// ===== main.js =====
+// main.js: load assets, expose renderAt(t)
+const cv = document.getElementById('cv');
+useCtx(cv.getContext('2d'));
+window.__ready = (async () => {
+  await Promise.all([
+    loadImg('phobos', 'assets/phobos_a.png'),
+    loadImg('phobosB', 'assets/phobos_b.png'),
+    loadImg('mars', 'assets/mars.png'),
+    loadImg('earthset', 'assets/earth_setting.jpg'),
+  ]);
+  await document.fonts.ready;
+  await Promise.all(['800 40px Archivo', 'italic 900 40px Archivo', '600 40px "Plex Mono"', '500 40px "Plex Mono"', '40px "Dela Gothic One"'].map((f) => document.fonts.load(f, 'Aa1ゴ')));
+})();
+const MODE = (location.hash || '').slice(1);
+window.renderAt = function (t) {
+  setFrame(t);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none';
+  renderFrame(t);
+};
+
+</script></body></html>

@@ -1,0 +1,18 @@
+[
+ {"frame":9,"fps":30,"type":"cat_in","note":"cat pops up from behind the caption"},
+ {"frame":109,"fps":30,"type":"hard_cut","sfx":"whoosh_short","note":"Phobos shrinks into the orbit dot, Mars into the line circle"},
+ {"frame":139,"fps":30,"type":"number_slam","note":"6 FT"},
+ {"frame":245,"fps":30,"type":"number_slam","gain_db":-2,"note":"50 (count-up)"},
+ {"frame":317,"fps":30,"type":"impact","note":"the dot hits Mars (line art)"},
+ {"frame":332,"fps":30,"type":"glitch","gain_db":2,"note":"the dot breaks into a ring of fragments"},
+ {"frame":393,"fps":30,"type":"number_slam","gain_db":-2,"note":"MON"},
+ {"frame":503,"fps":30,"type":"number_slam","gain_db":-2,"note":"MMX"},
+ {"frame":548,"fps":30,"type":"impact","gain_db":-3,"note":"MMX touches down (line art)"},
+ {"frame":598,"fps":30,"type":"scene_move","note":"capsule flies home, the camera follows to Mars"},
+ {"frame":707,"fps":30,"type":"chip_in","note":"SIGNAL DELAY MARS 12 min 43 s"},
+ {"frame":731,"fps":30,"type":"echo_land","note":"chip echo ring lands"},
+ {"frame":751,"fps":30,"type":"cat_chirp","gain_db":-2,"note":"cat floats in for \"Why bother?\""},
+ {"frame":852,"fps":30,"type":"reveal","gain_db":-3,"note":"the Phobos lens opens into the close-up"},
+ {"frame":927,"fps":30,"type":"next_card_in","note":"hard cut on \"Liftoff\" to the NEXT card"},
+ {"frame":1038,"fps":30,"type":"wordmark_echo","note":"wordmark dot (sonic logo; its echo lands with the ring 12 frames later)"}
+]

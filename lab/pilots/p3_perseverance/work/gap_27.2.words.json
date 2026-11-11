@@ -1,0 +1,57 @@
+{
+ "audio": "gap_27.2.mp3",
+ "duration": 3.7,
+ "text": "Next stop, Idubi, to look for ancient hot water systems.",
+ "words": [
+  {
+   "w": "Next",
+   "start": 0,
+   "end": 0.72
+  },
+  {
+   "w": "stop,",
+   "start": 0.72,
+   "end": 1.12
+  },
+  {
+   "w": "Idubi,",
+   "start": 1.12,
+   "end": 1.64
+  },
+  {
+   "w": "to",
+   "start": 1.64,
+   "end": 1.9
+  },
+  {
+   "w": "look",
+   "start": 1.9,
+   "end": 2.04
+  },
+  {
+   "w": "for",
+   "start": 2.04,
+   "end": 2.2
+  },
+  {
+   "w": "ancient",
+   "start": 2.2,
+   "end": 2.54
+  },
+  {
+   "w": "hot",
+   "start": 2.54,
+   "end": 2.86
+  },
+  {
+   "w": "water",
+   "start": 2.86,
+   "end": 3.12
+  },
+  {
+   "w": "systems.",
+   "start": 3.12,
+   "end": 3.52
+  }
+ ]
+}

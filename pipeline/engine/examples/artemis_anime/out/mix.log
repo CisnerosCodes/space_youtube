@@ -1,0 +1,41 @@
+{
+ "out": "pipeline/engine/examples/artemis_anime/out/mix.m4a",
+ "duration_s": 33.867,
+ "final": {
+  "integrated_lufs": -13.9,
+  "true_peak_dbtp": -2.0,
+  "lra": 3.0,
+  "loudnorm_mode": "linear",
+  "limiter": {
+   "max_gr_db": 3.21,
+   "at_s": 13.06,
+   "median_gr_while_talking_db": 0.02,
+   "pct_time_over_1db": 3.77,
+   "pct_time_over_3db": 0.05
+  },
+  "voice_compressor": {
+   "max_gr_db": 9.89,
+   "at_s": 30.762,
+   "median_gr_while_talking_db": 3.22,
+   "pct_time_over_1db": 71.37,
+   "pct_time_over_3db": 44.84
+  },
+  "loudnorm_pass1": {
+   "input_i": "-21.58",
+   "input_tp": "-9.80",
+   "input_lra": "3.40"
+  },
+  "attempts": 1
+ },
+ "voice_vs_bed": {
+  "voice_lufs_while_talking": -23.89,
+  "bed_lufs_while_talking": -41.89,
+  "difference_while_talking_lu": 18.0,
+  "bed_lufs_in_gaps": -39.79,
+  "difference_voice_vs_bed_in_gaps_lu": 15.9,
+  "gap_rise_lu": 2.1,
+  "duck_depth_db": 6.0,
+  "note": "measured on the stems before the shared final gain, so the differences hold in the final file"
+ },
+ "warnings": []
+}

@@ -1,0 +1,22 @@
+[
+  {"frame": 54,   "fps": 30, "type": "number_slam", "gain_db": -2},
+  {"frame": 102,  "fps": 30, "type": "scene_move"},
+  {"frame": 147,  "fps": 30, "type": "number_slam"},
+  {"frame": 214,  "fps": 30, "type": "hard_cut"},
+  {"frame": 280,  "fps": 30, "type": "number_slam"},
+  {"frame": 375,  "fps": 30, "type": "impact"},
+  {"frame": 404,  "fps": 30, "type": "number_slam", "gain_db": -3},
+  {"frame": 496,  "fps": 30, "type": "number_slam"},
+  {"frame": 568,  "fps": 30, "type": "hard_cut"},
+  {"frame": 604,  "fps": 30, "type": "impact", "gain_db": 2},
+  {"frame": 653,  "fps": 30, "type": "impact", "sfx": "whoosh_short", "gain_db": 3},
+  {"frame": 723,  "fps": 30, "type": "number_slam", "gain_db": -4},
+  {"frame": 802,  "fps": 30, "type": "impact", "sfx": "impact_big", "gain_db": -2},
+  {"frame": 845,  "fps": 30, "type": "scene_move"},
+  {"frame": 886,  "fps": 30, "type": "number_slam"},
+  {"frame": 940,  "fps": 30, "type": "cat_chirp"},
+  {"frame": 949,  "fps": 30, "type": "reveal"},
+  {"frame": 1040, "fps": 30, "type": "next_card_in"},
+  {"frame": 1141, "fps": 30, "type": "impact", "gain_db": -2},
+  {"frame": 1211, "fps": 30, "type": "wordmark_echo"}
+]

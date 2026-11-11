@@ -1,0 +1,1038 @@
+{
+ "windows": [
+  [
+   6,
+   89
+  ],
+  [
+   353,
+   498
+  ],
+  [
+   555,
+   759
+  ],
+  [
+   820,
+   950
+  ]
+ ],
+ "framesOn": 566,
+ "share": 0.595,
+ "hits": [
+  {
+   "frame": 7,
+   "kind": "subject",
+   "during": "enter float",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    77,
+    108
+   ]
+  },
+  {
+   "frame": 8,
+   "kind": "subject",
+   "during": "enter float",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    120,
+    26
+   ]
+  },
+  {
+   "frame": 9,
+   "kind": "subject",
+   "during": "enter float",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    137,
+    19
+   ]
+  },
+  {
+   "frame": 11,
+   "kind": "subject",
+   "during": "enter float",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    16
+   ]
+  },
+  {
+   "frame": 12,
+   "kind": "subject",
+   "during": "enter float",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    124,
+    16
+   ]
+  },
+  {
+   "frame": 398,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    182,
+    198
+   ]
+  },
+  {
+   "frame": 399,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    185,
+    180
+   ]
+  },
+  {
+   "frame": 400,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    188,
+    163
+   ]
+  },
+  {
+   "frame": 401,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    190,
+    158
+   ]
+  },
+  {
+   "frame": 402,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    173,
+    247
+   ]
+  },
+  {
+   "frame": 403,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    182,
+    230
+   ]
+  },
+  {
+   "frame": 404,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    190,
+    156
+   ]
+  },
+  {
+   "frame": 405,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    197,
+    86
+   ]
+  },
+  {
+   "frame": 406,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    204,
+    21
+   ]
+  },
+  {
+   "frame": 418,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    10,
+    220
+   ]
+  },
+  {
+   "frame": 419,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    13,
+    220
+   ]
+  },
+  {
+   "frame": 420,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    16,
+    220
+   ]
+  },
+  {
+   "frame": 421,
+   "kind": "subject",
+   "during": "hop",
+   "exempt": false,
+   "transit": true,
+   "overlap": [
+    11,
+    220
+   ]
+  },
+  {
+   "frame": 486,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    25,
+    224
+   ]
+  },
+  {
+   "frame": 487,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    41,
+    227
+   ]
+  },
+  {
+   "frame": 488,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    238,
+    10
+   ]
+  },
+  {
+   "frame": 488,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    49,
+    229
+   ]
+  },
+  {
+   "frame": 490,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    235,
+    330
+   ]
+  },
+  {
+   "frame": 491,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    229,
+    340
+   ]
+  },
+  {
+   "frame": 492,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    220,
+    357
+   ]
+  },
+  {
+   "frame": 493,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    219,
+    374
+   ]
+  },
+  {
+   "frame": 494,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    227,
+    370
+   ]
+  },
+  {
+   "frame": 495,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    238,
+    386
+   ]
+  },
+  {
+   "frame": 496,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    257,
+    350
+   ]
+  },
+  {
+   "frame": 497,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    286,
+    298
+   ]
+  },
+  {
+   "frame": 498,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    206,
+    228
+   ]
+  },
+  {
+   "frame": 555,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    126,
+    58
+   ]
+  },
+  {
+   "frame": 556,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    124,
+    96
+   ]
+  },
+  {
+   "frame": 557,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 558,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    186,
+    96
+   ]
+  },
+  {
+   "frame": 559,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    186,
+    96
+   ]
+  },
+  {
+   "frame": 560,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    186,
+    96
+   ]
+  },
+  {
+   "frame": 561,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    186,
+    96
+   ]
+  },
+  {
+   "frame": 562,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    187,
+    96
+   ]
+  },
+  {
+   "frame": 563,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    187,
+    96
+   ]
+  },
+  {
+   "frame": 564,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    186,
+    96
+   ]
+  },
+  {
+   "frame": 565,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    160,
+    96
+   ]
+  },
+  {
+   "frame": 566,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 567,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 568,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 569,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 570,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    96
+   ]
+  },
+  {
+   "frame": 571,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    118,
+    96
+   ]
+  },
+  {
+   "frame": 572,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    118,
+    96
+   ]
+  },
+  {
+   "frame": 572,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    118,
+    96
+   ]
+  },
+  {
+   "frame": 573,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    181,
+    96
+   ]
+  },
+  {
+   "frame": 573,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    181,
+    96
+   ]
+  },
+  {
+   "frame": 574,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    126,
+    96
+   ]
+  },
+  {
+   "frame": 574,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    126,
+    96
+   ]
+  },
+  {
+   "frame": 575,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    127,
+    96
+   ]
+  },
+  {
+   "frame": 575,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    127,
+    96
+   ]
+  },
+  {
+   "frame": 576,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    130,
+    96
+   ]
+  },
+  {
+   "frame": 576,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    130,
+    96
+   ]
+  },
+  {
+   "frame": 577,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 577,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    133,
+    96
+   ]
+  },
+  {
+   "frame": 578,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    136,
+    96
+   ]
+  },
+  {
+   "frame": 578,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    136,
+    96
+   ]
+  },
+  {
+   "frame": 579,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    138,
+    96
+   ]
+  },
+  {
+   "frame": 579,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    138,
+    96
+   ]
+  },
+  {
+   "frame": 580,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    141,
+    96
+   ]
+  },
+  {
+   "frame": 580,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    141,
+    96
+   ]
+  },
+  {
+   "frame": 581,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    144,
+    96
+   ]
+  },
+  {
+   "frame": 581,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    144,
+    96
+   ]
+  },
+  {
+   "frame": 582,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    146,
+    96
+   ]
+  },
+  {
+   "frame": 582,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    146,
+    96
+   ]
+  },
+  {
+   "frame": 583,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    96
+   ]
+  },
+  {
+   "frame": 583,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    96
+   ]
+  },
+  {
+   "frame": 584,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    96
+   ]
+  },
+  {
+   "frame": 584,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    148,
+    96
+   ]
+  },
+  {
+   "frame": 585,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    96
+   ]
+  },
+  {
+   "frame": 585,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    149,
+    96
+   ]
+  },
+  {
+   "frame": 586,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    154,
+    96
+   ]
+  },
+  {
+   "frame": 586,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    154,
+    96
+   ]
+  },
+  {
+   "frame": 587,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    96
+   ]
+  },
+  {
+   "frame": 587,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    157,
+    96
+   ]
+  },
+  {
+   "frame": 588,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    156,
+    96
+   ]
+  },
+  {
+   "frame": 588,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    156,
+    96
+   ]
+  },
+  {
+   "frame": 589,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    96
+   ]
+  },
+  {
+   "frame": 589,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    147,
+    96
+   ]
+  },
+  {
+   "frame": 590,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    96
+   ]
+  },
+  {
+   "frame": 590,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    143,
+    9
+   ]
+  },
+  {
+   "frame": 591,
+   "kind": "caption",
+   "during": "enter pop",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    140,
+    51
+   ]
+  },
+  {
+   "frame": 685,
+   "kind": "safe",
+   "during": "enter pop",
+   "exempt": false,
+   "transit": false,
+   "overlap": null
+  },
+  {
+   "frame": 755,
+   "kind": "caption",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    138,
+    14
+   ]
+  },
+  {
+   "frame": 757,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    121,
+    219
+   ]
+  },
+  {
+   "frame": 758,
+   "kind": "subject",
+   "during": "exit zip",
+   "exempt": true,
+   "transit": false,
+   "overlap": [
+    120,
+    330
+   ]
+  }
+ ],
+ "moves": [
+  "enter float",
+  "point",
+  "exit zip",
+  "enter skid",
+  "shrug",
+  "what",
+  "hop",
+  "gasp",
+  "enter pop",
+  "sign",
+  "listen",
+  "nod",
+  "thumbs",
+  "wave"
+ ]
+}

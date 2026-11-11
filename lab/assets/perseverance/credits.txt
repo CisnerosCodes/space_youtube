@@ -1,0 +1,34 @@
+Signal Delay pilot 3 (Perseverance driving record) image credits. Downloaded 2026-10-15.
+NASA imagery is generally not subject to copyright in the US (https://www.nasa.gov/nasa-brand-center/images-and-media/); acknowledge NASA, imply no endorsement, no NASA logos.
+
+infographic_driving_record.png
+  "Out-of-this-world records! Driving distances on Mars and the Moon" (as of October 12, 2026), 4500 x 8000
+  https://assets.science.nasa.gov/content/dam/science/missions/mars2020/2026/JPL_DrivingDistanceRecord_GraphicRecreation_August2026_v3.png
+  Credit: NASA/JPL-Caltech. A GRAPHIC, not a photo. Used only as row crops (icon + track); its distance labels
+  (rounded 45.2 KM, Curiosity 38.15 KM), names (note the graphic misspells "Perserverance") and year ranges are cropped out.
+
+PIA26812_navcam_record.png
+  NAVCAM image from the record sol, Oct. 11, 2026 (PIA26812), 1288 x 968
+  https://assets.science.nasa.gov/content/dam/science/missions/mars2020/2026/perseverance-rover-updates/e1%20-%20PIA26812%20-%20NAVCAM%20record.png
+  Credit: NASA/JPL-Caltech
+
+PIA26574.jpg
+  "Dust Devil Photobombs Perseverance's Selfie", May 10, 2025 (sol 1,500), WATSON mosaic, 12033 x 7168
+  https://images-assets.nasa.gov/image/PIA26574/PIA26574~orig.jpg  (images-api.nasa.gov, nasa_id PIA26574)
+  Credit: NASA/JPL-Caltech/MSSS
+
+PIA17759.jpg
+  "Self-Portrait by Opportunity Mars Rover in January 2014", 3408 x 2772
+  https://images-assets.nasa.gov/image/PIA17759/PIA17759~orig.jpg  (images-api.nasa.gov, nasa_id PIA17759)
+  Credit: NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.
+
+PIA01122.jpg
+  "Sojourner Rover Near The [rock]" (Mars Pathfinder, 1997), 1276 x 1175
+  https://images-assets.nasa.gov/image/PIA01122/PIA01122~orig.jpg  (images-api.nasa.gov, nasa_id PIA01122)
+  Credit: NASA/JPL
+
+Downloaded but not used in the cut:
+PIA24542.jpg  "Perseverance's Selfie with Ingenuity" (Apr 6, 2021), large, Credit: NASA/JPL-Caltech/MSSS
+  https://images-assets.nasa.gov/image/PIA24542/PIA24542~large.jpg  (not used: the helicopter would need its own mention)
+PIA01551.jpg  "Newly Deployed Sojourner Rover", Credit: NASA/JPL
+  https://images-assets.nasa.gov/image/PIA01551/PIA01551~orig.jpg

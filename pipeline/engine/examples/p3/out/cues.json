@@ -1,0 +1,139 @@
+[
+ {
+  "frame": 10,
+  "fps": 30,
+  "t": 0.333,
+  "type": "cat_in",
+  "note": "the cat enters (pop)"
+ },
+ {
+  "frame": 26,
+  "fps": 30,
+  "t": 0.867,
+  "type": "chip_in",
+  "note": "signal delay chip"
+ },
+ {
+  "frame": 41,
+  "fps": 30,
+  "t": 1.367,
+  "type": "cat_chirp",
+  "note": "the cat reacts (gasp)"
+ },
+ {
+  "frame": 50,
+  "fps": 30,
+  "t": 1.667,
+  "type": "echo_land",
+  "note": "chip echo ring lands",
+  "gain_db": -2
+ },
+ {
+  "frame": 60,
+  "fps": 30,
+  "t": 2,
+  "type": "scene_move",
+  "note": "every_vehicle: the rows race in",
+  "gain_db": -2
+ },
+ {
+  "frame": 127,
+  "fps": 30,
+  "t": 4.233,
+  "type": "impact",
+  "note": "every_vehicle: ring on a row",
+  "sfx": "tick"
+ },
+ {
+  "frame": 138,
+  "fps": 30,
+  "t": 4.6,
+  "type": "hard_cut",
+  "note": "every_vehicle leaves up, record_day arrives",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 232,
+  "fps": 30,
+  "t": 7.733,
+  "type": "number_slam",
+  "note": "record_day: 28.10 rolls in"
+ },
+ {
+  "frame": 246,
+  "fps": 30,
+  "t": 8.2,
+  "type": "scene_move",
+  "note": "record_day irises into the dot, old_record opens",
+  "gain_db": -1
+ },
+ {
+  "frame": 322,
+  "fps": 30,
+  "t": 10.733,
+  "type": "number_slam",
+  "note": "old_record: 28.06 slams in"
+ },
+ {
+  "frame": 369,
+  "fps": 30,
+  "t": 12.3,
+  "type": "scene_move",
+  "note": "old_record shrinks into the dot, years opens",
+  "gain_db": -1
+ },
+ {
+  "frame": 427,
+  "fps": 30,
+  "t": 14.233,
+  "type": "number_slam",
+  "note": "years: bar 1 lands on 15",
+  "gain_db": -3
+ },
+ {
+  "frame": 487,
+  "fps": 30,
+  "t": 16.233,
+  "type": "number_slam",
+  "note": "years: bar 2 lands on 5.5",
+  "gain_db": -3
+ },
+ {
+  "frame": 672,
+  "fps": 30,
+  "t": 22.4,
+  "type": "hard_cut",
+  "note": "drives_itself leaves down, points arrives",
+  "sfx": "whoosh_short"
+ },
+ {
+  "frame": 706,
+  "fps": 30,
+  "t": 23.533,
+  "type": "impact",
+  "note": "points: 20 points pop in"
+ },
+ {
+  "frame": 772,
+  "fps": 30,
+  "t": 25.733,
+  "type": "reveal",
+  "note": "points: 600,000 points burst out",
+  "sfx": "swell_reveal",
+  "gain_db": -2
+ },
+ {
+  "frame": 836,
+  "fps": 30,
+  "t": 27.867,
+  "type": "next_card_in",
+  "note": "next: the NEXT card"
+ },
+ {
+  "frame": 1065,
+  "fps": 30,
+  "t": 35.5,
+  "type": "wordmark_echo",
+  "note": "wordmark dot, then its echo ring 12 frames later (sonic logo)"
+ }
+]

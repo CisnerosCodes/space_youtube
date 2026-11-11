@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Perseverance Driving Record</title>
+<!-- build: __BUILDINFO__ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=block" rel="stylesheet">
+<style>
+  :root { --ink: #0B0B0C; --paper: #F2EFE8; --amber: #F5B83D; --muted: #8C8A85; }
+  html, body { margin: 0; background: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); color: var(--paper); font-family: 'Archivo', sans-serif; }
+  canvas, .layer { position: absolute; left: 0; top: 0; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+  .box { background: var(--ink); white-space: nowrap; }
+  .giant { position: absolute; left: 40px; display: none; font-weight: 800; font-stretch: 112%; text-transform: uppercase; white-space: nowrap;
+           transform-origin: 0 50%; color: var(--amber); font-variant-numeric: tabular-nums; line-height: 0.88; }
+  .gdata { position: absolute; left: 80px; display: none; font-size: 28px; line-height: 36px; color: var(--paper); white-space: nowrap; padding: 6px 12px; }
+  .gdata .u { color: var(--muted); }
+  .gdata .a { color: var(--amber); }
+  .dig { display: inline-block; height: 0.9em; overflow: hidden; vertical-align: top; }
+  .strip { display: block; line-height: 0.9em; }
+  .dlab { position: absolute; display: none; font-size: 24px; line-height: 28px; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 8px; }
+  #caps { position: absolute; left: 80px; top: 1196px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .line { padding: 8px 16px; background: rgba(11,11,12,0.88); font-weight: 700; font-stretch: 100%; font-size: 90px; line-height: 96px; white-space: nowrap; }
+  .w { color: var(--paper); }
+  .w.on { color: var(--amber); }
+  #next > * { position: absolute; display: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="pic" width="1080" height="1920"></canvas>
+  <svg class="layer" width="0" height="0" aria-hidden="true"><defs id="fdefs"></defs></svg>
+
+  <!-- giant numbers (paper on a scrimmed photo, amber on ink) -->
+  <div class="giant" id="odo" style="top: 314px; font-size: 280px; color: var(--amber); line-height: 0.9; background: var(--ink); padding: 6px 16px 10px 16px">2<span>8</span>.<span class="dig" id="odoT"><span class="strip"></span></span><span class="dig" id="odoH"><span class="strip"></span></span></div>
+  <div class="gdata mono box" id="odoDate">SUN 11 OCT</div>
+  <div class="gdata mono box" id="odoUnit">MILES <span class="u">·</span> 45.22 KM</div>
+  <div class="giant" id="g2806" style="top: 314px; font-size: 300px">28.06</div>
+  <div class="gdata mono box" id="g2806d">MILES <span class="u">·</span> 45.16 KM</div>
+  <div class="giant" id="g15" style="top: 300px; font-size: 260px">15</div>
+  <div class="gdata mono box" id="g15d">ALMOST 15 YEARS</div>
+  <div class="giant" id="g55" style="top: 740px; font-size: 260px">5.5</div>
+  <div class="gdata mono box" id="g55d">FIVE AND A HALF YEARS</div>
+  <div class="dlab mono box" id="labO">OPPORTUNITY</div>
+  <div class="dlab mono box" id="labP">PERSEVERANCE</div>
+  <div class="giant" id="g20" style="top: 314px; font-size: 340px">20</div>
+  <div class="gdata mono box" id="g20d">POINTS AHEAD <span class="u">·</span> SOJOURNER</div>
+  <div class="giant" id="g600" style="top: 314px; font-size: 240px">600,000</div>
+  <div class="gdata mono box" id="g600d">POINTS <span class="u">·</span> WITH EVERY LOOK</div>
+
+  <!-- NEXT card text (the route line art lives on the canvas) -->
+  <div id="next" class="layer" style="width: 1080px; height: 1920px">
+    <div id="nHead1" style="left: 80px; top: 330px; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">Next stop:</div>
+    <div id="nHead2" style="left: 80px; top: 414px; font-weight: 800; font-stretch: 112%; font-size: 88px; line-height: 84px; text-transform: uppercase; white-space: nowrap; color: var(--amber)">Idubi</div>
+    <div id="nLine1" class="mono" style="left: 80px; top: 528px; font-size: 28px; line-height: 36px; white-space: nowrap; color: var(--paper)">HUNTING ANCIENT HOT WATER</div>
+    <div id="nLine2" class="mono" style="left: 80px; top: 572px; font-size: 28px; line-height: 36px; white-space: nowrap; color: var(--muted)">EXTENDED MISSION: <span style="color: var(--amber)">ABOUT THROUGH 2028</span></div>
+    <div id="nIdubi" class="mono" style="left: 724px; top: 1002px; font-size: 24px; line-height: 28px; letter-spacing: 0.05em; white-space: nowrap; color: var(--paper)">IDUBI</div>
+    <div id="nPoint" class="mono" style="left: 80px; top: 1020px; padding: 10px 18px 10px 14px; border: 2px solid var(--amber); font-size: 28px; line-height: 38px; white-space: nowrap; color: var(--paper); background: var(--ink)">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 14 H23 M15 6 L23 14 L15 22" fill="none" stroke="#F5B83D" stroke-width="3"></path></svg>
+        <span><span style="color: var(--amber)">Follow</span> Downlink Cat</span>
+      </div>
+    </div>
+    <div id="nMark" style="left: 80px; top: 1112px; align-items: center; gap: 24px">
+      <svg width="104" height="44" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+        <circle id="nDot" cx="22" cy="22" r="22" fill="#F5B83D" style="transform-box: fill-box; transform-origin: center"></circle>
+        <circle id="nRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+      </svg>
+      <div id="nWord" style="font-weight: 800; font-stretch: 125%; font-size: 64px; line-height: 64px; text-transform: uppercase; white-space: nowrap; color: var(--paper)">Downlink <span style="color: var(--amber)">Cat</span></div>
+    </div>
+  </div>
+
+  <!-- mascot (v3 actor), drawn per frame; under the captions, never over caption words or a photo's subject -->
+  <svg id="cat" class="layer" width="1080" height="1920" viewBox="0 0 1080 1920" aria-hidden="true" style="display: none; overflow: hidden"></svg>
+
+  <!-- series kicker: identical on every frame; reads NEXT ON BY THE NUMBERS on the NEXT card -->
+  <div class="mono box" id="kicker" style="position: absolute; left: 80px; top: 246px; display: flex; align-items: center; gap: 12px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px; text-transform: uppercase">
+    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M2 17 H8 V25 H2 Z M11 10 H17 V25 H11 Z M20 3 H26 V25 H20 Z" fill="#F5B83D"></path></svg>
+    <span id="kText">By the numbers</span>
+  </div>
+
+  <!-- signal delay chip: Mars, Oct. 15, 2026, JPL Horizons one-way light time 12.9856 min at 12:00 UT -->
+  <div class="mono box" id="chip" style="position: absolute; left: 80px; top: 302px; display: none; align-items: center; gap: 14px; padding: 8px 16px 8px 12px; font-size: 28px; line-height: 36px">
+    <svg width="47.27" height="20" viewBox="0 0 104 44" aria-hidden="true" style="overflow: visible">
+      <circle cx="22" cy="22" r="22" fill="#F5B83D"></circle>
+      <circle id="chipRing" cx="82" cy="22" r="19" fill="none" stroke="#F5B83D" stroke-width="6" style="transform-box: fill-box; transform-origin: center"></circle>
+    </svg>
+    <span>SIGNAL DELAY</span><span style="color: var(--amber)">MARS 12 min 59 s</span>
+  </div>
+
+  <div id="caps"></div>
+
+  <!-- credit slot: the photo credit, or the source of the facts on a line-art beat -->
+  <div class="mono box" id="credit" style="position: absolute; left: 80px; top: 1458px; display: none; padding: 6px 12px; font-size: 24px; line-height: 28px"></div>
+</div>
+
+<script>
+const SCHEDULE = /*__CAPTIONS__*/null;
+const IMAGES = /*__IMAGES__*/null;
+const META = /*__META__*/null;
+/*__RIG__*/
+(() => {
+  // ================================================================ constants
+  const FPS = 30;
+  const C = { ink: '#0B0B0C', paper: '#F2EFE8', amber: '#F5B83D', muted: '#8C8A85' };
+  const CR = {
+    persev: 'NASA/JPL-Caltech/MSSS',
+    graphic: 'NASA/JPL-Caltech',
+    navcam: 'NASA/JPL-Caltech',
+    oppy: 'NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.',
+    bars: 'Source: NASA · rover icons NASA/JPL-Caltech',
+    nasa: 'Source: NASA',
+    soj: 'NASA/JPL',
+    sojPts: 'NASA/JPL · Source: NASA',
+    perPts: 'NASA/JPL-Caltech/MSSS · Source: NASA',
+  };
+
+  // ================================================================ easing, springs, noise
+  function bezier(x1, y1, x2, y2) {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t, sy = (t) => ((ay * t + by) * t + cy) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) { const e = sx(t) - x, d = dx(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+      let lo = 0, hi = 1;
+      for (let i = 0; i < 30 && Math.abs(sx(t) - x) > 1e-6; i++) { if (sx(t) < x) lo = t; else hi = t; t = (lo + hi) / 2; }
+      return sy(t);
+    };
+  }
+  const enter = bezier(0.16, 1, 0.3, 1), move = bezier(0.76, 0, 0.24, 1), exitE = bezier(0.7, 0, 0.84, 0);
+  const clamp01 = (x) => Math.max(0, Math.min(1, x));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const elerp = (a, b, t) => a * Math.pow(b / a, t);
+  const k = (f, a, d, e = (x) => x) => e(clamp01((f - a) / d));
+  function spring(t, zeta, fr) {
+    if (t <= 0) return 0;
+    const w = 2 * Math.PI * fr, wd = w * Math.sqrt(1 - zeta * zeta);
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+  }
+  const sp = (df, zeta = 0.7, fr = 4) => (df <= 0 ? 0 : spring(df / FPS, zeta, fr));
+  const punch = (f, list, amt = 0.04) => list.reduce((p, pf) => p * (1 + amt * sp(f - pf)), 1);
+  // count-up: spring zeta 0.8, f 2, monotonic (running peak), capped at 1
+  const countU = (f, a) => { let p = 0; for (let q = a; q <= f; q++) p = Math.max(p, spring((q - a + 1) / FPS, 0.8, 2)); return Math.min(1, p); };
+  function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+  // ================================================================ timing from the caption schedule
+  const W = SCHEDULE.words.map((w) => ({ ...w, f: Math.round(w.start * FPS), fe: Math.round(w.end * FPS), key: w.text.toLowerCase().replace(/[^a-z0-9]/g, '') }));
+  function at(re, from = 0) {
+    for (let i = Math.max(0, from); i < W.length; i++) if (re.test(W[i].key)) return i;
+    throw new Error('anchor not found: ' + re + ' after word ' + from);
+  }
+  const I = {};
+  I.mars = at(/^mars$/);
+  I.outdrove = at(/^outdrove$/, I.mars);
+  I.every = at(/^every$/, I.outdrove);
+  I.vehicle = at(/^vehicle$/, I.every);
+  I.world = at(/^world$/, I.vehicle);
+  I.on = at(/^on$/, I.world);
+  I.october = at(/^october$/, I.on);
+  I.passed = at(/^passed$/, I.october);
+  I.n2810 = at(/^2810$/, I.passed);
+  I.miles = at(/^miles$/, I.n2810);
+  I.the = at(/^the$/, I.miles);
+  I.opp1 = at(/^opportunity$/, I.the);
+  I.n2806 = at(/^2806$/, I.opp1);
+  I.opp2 = at(/^opportunity$/, I.n2806);
+  I.almost = at(/^almost$/, I.opp2);
+  I.fifteen = at(/^(fifteen|15)$/, I.almost);
+  I.years1 = at(/^years$/, I.fifteen);
+  I.persev1 = at(/^perseverance$/, I.years1);
+  I.five = at(/^(five|5)$/, I.persev1);
+  I.half = at(/^half$/, I.five);
+  I.how = at(/^how$/, I.half);
+  I.drives = at(/^drives$/, I.how);
+  I.itself = at(/^itself$/, I.drives);
+  I.mapping = at(/^mapping$/, I.itself);
+  I.rolling = at(/^rolling$/, I.mapping);
+  I.sojourner = at(/^sojourner$/, I.rolling);
+  I.twenty = at(/^(twenty|20)$/, I.sojourner);
+  I.persev2 = at(/^perseverance$/, I.twenty);
+  I.n600 = at(/^600000$/, I.persev2);
+  I.next = at(/^next$/, I.n600);
+  I.idubi = at(/^idubi$/, I.next);
+  I.ancient = at(/^ancient$/, I.idubi);
+  I.hot = at(/^hot$/, I.ancient);
+  I.nasa = at(/^nasa$/, I.hot);
+  I.keep = at(/^keep$/, I.nasa);
+  I.growing = at(/^growing$/, I.keep);
+  I.follow = at(/^follow$/, I.growing);
+  I.watch = at(/^watch$/, I.follow);
+  const F = {};
+  for (const [name, i] of Object.entries(I)) F[name] = W[i].f;
+  const FE = (name) => W[I[name]].fe;
+  // the wordmark dot lands just after the last word; the sonic logo (1.45 s) plays from there,
+  // so the page runs 48 frames past the dot (the last frame is the finished wordmark)
+  const WM = F.watch + 3;
+  const NF = Math.max(Math.ceil(SCHEDULE.duration * FPS - 1e-6), WM + 48);
+  const LAST = NF - 1;
+  F.end = LAST;
+
+  // ================================================================ images and parallax layers
+  // Photo = the image plus soft-masked copies of nearer regions; on a push the near layers scale and
+  // drift more. layers: [cx, cy, radius (fraction of width), depth]
+  const PH = {
+    persev: { cx: 0.643, cy: 0.5, layers: [[0.64, 0.52, 0.2, 1.0], [0.62, 0.62, 0.1, 1.7]] },
+    navcam: { cx: 0.5, cy: 0.5, layers: [[0.5, 0.8, 0.3, 1.0], [0.45, 0.92, 0.14, 1.8]] },
+    oppy: { cx: 0.5, cy: 0.47, layers: [[0.5, 0.5, 0.26, 1.0]] },
+    sojourner: { cx: 0.53, cy: 0.6, layers: [[0.5, 0.62, 0.3, 1.0], [0.48, 0.7, 0.14, 1.6]] },
+  };
+  const imgPromises = [];
+  for (const [name, P] of Object.entries(PH)) {
+    const im = new Image(); im.src = IMAGES[name]; P.img = im;
+    imgPromises.push(im.decode().then(() => {
+      P.w = im.naturalWidth; P.h = im.naturalHeight;
+      P.lay = P.layers.map(([mx, my, r, d]) => {
+        const c = document.createElement('canvas'); c.width = P.w; c.height = P.h;
+        const g = c.getContext('2d'); g.drawImage(im, 0, 0);
+        g.globalCompositeOperation = 'destination-in';
+        const R = r * P.w, gr = g.createRadialGradient(mx * P.w, my * P.h, R * 0.35, mx * P.w, my * P.h, R);
+        gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+        g.fillStyle = gr; g.fillRect(0, 0, P.w, P.h);
+        return { c, d };
+      });
+    }));
+  }
+  // infographic rows (graphic crops: icon + its track, labels left out)
+  const ROW = {};
+  for (const r of META.rows) {
+    const im = new Image(); im.src = IMAGES['row_' + r.name];
+    ROW[r.name] = { ...r, img: im };
+    imgPromises.push(im.decode());
+  }
+  const ROWS = META.rows.map((r) => r.name);
+
+  // ================================================================ canvas helpers
+  const pic = document.getElementById('pic'), pctx = pic.getContext('2d');
+  const mk = () => { const c = document.createElement('canvas'); c.width = 1080; c.height = 1920; return c; };
+  const tmp = mk(), tctx = tmp.getContext('2d'), acc = mk(), actx = acc.getContext('2d');
+  let PROBE = null;
+  const track = (...pts) => { if (PROBE) for (let i = 0; i < pts.length; i += 2) PROBE.push(pts[i], pts[i + 1]); return !!PROBE; };
+
+  function photo(g, P, o) {
+    const s = o.s, x = o.x, y = o.y;
+    if (track(x, y, x + (P.w * s) / 2, y)) return;
+    const rot = ((o.rot || 0) * Math.PI) / 180, push = o.push || 0, [dx, dy] = o.drift || [0, 0];
+    g.save(); g.globalAlpha = o.alpha ?? 1;
+    const ax = P.cx * P.w, ay = P.cy * P.h;
+    const one = (src, d) => {
+      g.save(); g.translate(x + dx * d, y + dy * d); g.rotate(rot); const ss = s * (1 + push * d); g.scale(ss, ss);
+      g.drawImage(src, -ax, -ay); g.restore();
+    };
+    one(P.img, 0);
+    if (P.lay) for (const L of P.lay) one(L.c, L.d);
+    g.restore();
+  }
+  function photoPt(P, o, nx, ny) {
+    const s = o.s, px = (nx - P.cx) * P.w * s, py = (ny - P.cy) * P.h * s;
+    return [o.x + px, o.y + py];
+  }
+  function scrim(g, a = 0.3) { if (PROBE) return; g.save(); g.fillStyle = `rgba(11,11,12,${a})`; g.fillRect(0, 0, 1080, 1920); g.restore(); }
+  function dot(g, x, y, r = 11, color = C.amber, alpha = 1) {
+    if (track(x, y)) return;
+    g.save(); g.globalAlpha = alpha; g.fillStyle = color; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.restore();
+  }
+  function ring(g, x, y, r, w = 4, alpha = 1, dash = null) {
+    if (track(x, y, x + r, y)) return;
+    g.save(); g.globalAlpha = alpha; g.strokeStyle = C.amber; g.lineWidth = w; if (dash) g.setLineDash(dash);
+    g.beginPath(); g.arc(x, y, Math.max(0.1, r), 0, Math.PI * 2); g.stroke(); g.restore();
+  }
+  function line(g, pts, w = 4, dash = null, alpha = 1, color = C.amber) {
+    if (PROBE) return;
+    g.save(); g.globalAlpha = alpha; g.strokeStyle = color; g.lineWidth = w; g.lineCap = 'butt'; g.lineJoin = 'round'; if (dash) g.setLineDash(dash);
+    g.beginPath(); pts.forEach((p, i) => (i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]))); g.stroke(); g.restore();
+  }
+  // a framed photo inside a circle (the "lens"), amber ring around it
+  function lens(g, P, st, inner) {
+    if (track(st.x, st.y, st.x + st.r, st.y)) return;
+    if (st.r < 12) { dot(g, st.x, st.y, 11); return; }
+    g.save(); g.beginPath(); g.arc(st.x, st.y, st.r, 0, Math.PI * 2); g.fillStyle = C.ink; g.fill(); g.clip();
+    photo(g, P, inner); g.restore();
+    ring(g, st.x, st.y, st.r);
+  }
+  // one infographic row: xf = { x: screen x of row-local 0, y: screen y of the track (baseline), z }
+  // front = row-local x of the icon's right edge while it races in (default: its true end)
+  function row(g, name, xf, front = Infinity, alpha = 1) {
+    const R = ROW[name], z = xf.z;
+    const d = R.iconX1 - Math.min(front, R.iconX1);
+    const top = xf.y - R.trackY * z;
+    const iconL = R.iconX0 - d;
+    if (track(xf.x + iconL * z, top, xf.x + R.iconX1 * z, top)) return;
+    g.save(); g.globalAlpha = alpha;
+    const trackEnd = Math.max(0, Math.min(R.iconX0, iconL));
+    if (trackEnd > 1) g.drawImage(R.img, 0, 0, trackEnd, R.h, xf.x, top, trackEnd * z, R.h * z);
+    const sw = R.w - R.iconX0;
+    g.drawImage(R.img, R.iconX0, 0, sw, R.h, xf.x + iconL * z, top, sw * z, R.h * z);
+    g.restore();
+  }
+  // just the icon of a row, its bottom-left (rear wheel on the track) at (x, y), scale z
+  function icon(g, name, x, y, z, alpha = 1) {
+    const R = ROW[name], sw = R.iconX1 - R.iconX0 + 6;
+    if (track(x, y, x + sw * z, y)) return;
+    g.save(); g.globalAlpha = alpha;
+    g.drawImage(R.img, R.iconX0 - 2, 0, sw, R.trackY + 4, x, y - R.trackY * z, sw * z, (R.trackY + 4) * z);
+    g.restore();
+  }
+  const iconSize = (name, z) => { const R = ROW[name]; return [(R.iconX1 - R.iconX0) * z, (R.trackY - R.iconY0) * z]; };
+
+  // ================================================================ scenes (float frame f)
+  const SC = [];
+  const scene = (a, b, draw) => SC.push({ a, b, draw });
+
+  // ---- 1. hook: Perseverance's selfie (sol 1,500), slow push; punch-in on "out-drove"
+  const hookCam = (f) => {
+    const p = k(f, 0, 90);
+    return { x: 800, y: 980, s: 0.84 * (1 + 0.035 * p) * punch(f, [F.outdrove]), push: 0.05 * p };
+  };
+  // ---- 2. every vehicle: the photo shrinks into the Perseverance icon at the start of its track,
+  // then every vehicle's track races in at one speed (the infographic's own distance scale)
+  const M0 = F.every, MD = 14;                 // morph
+  const RZ = 0.26, RSP = 470;                  // row scale and row spacing (row-local px)
+  const R0 = { x: 40, y: 470 };                // screen position of row 0's track start at zoom RZ
+  const raceA = M0 + MD - 2, raceB = F.world - 6;
+  const front = (f) => lerp(700, ROW.persev.iconX1, k(f, raceA, raceB - raceA, move));
+  // camera over the chart: zoom out to show all twelve rows, zoom back in on the top two at "world"
+  const chartCam = (f) => {
+    const out = k(f, raceA + 4, 24, move), back = k(f, F.world - 14, 16, move);
+    const u = out * (1 - back);
+    return { z: lerp(1, 0.62, u), x: lerp(R0.x, 70, u), y: lerp(R0.y, 352, u) };
+  };
+  const rowXf = (f, i, extra = 0) => { const c = chartCam(f), z = RZ * c.z; return { x: c.x, y: c.y + i * RSP * z + extra, z }; };
+  const persevStart = () => { const xf = rowXf(raceA, 0); const R = ROW.persev, d = R.iconX1 - 700; return [xf.x + (R.iconX0 - d) * xf.z, xf.y, xf.z]; };
+  scene(0, M0 + MD + 1, (g, f) => {
+    const cam = hookCam(Math.min(f, M0));
+    const m = k(f, M0, MD, move);
+    if (m <= 0) { photo(g, PH.persev, cam); return; }
+    // shrink the whole frame onto the icon: the rover's box maps onto the icon's box
+    const [ix, iy, iz] = persevStart();
+    const [iw, ih] = iconSize('persev', iz);
+    const target = { x: ix + iw / 2, y: iy - ih / 2 };
+    const roverPx = 0.372 * PH.persev.w;                     // rover width in the prepared image
+    const sEnd = iw / roverPx;
+    const s = elerp(cam.s, sEnd, m);
+    const P = PH.persev, rcx = 0.643, rcy = 0.5;
+    const o = { ...cam, s, x: lerp(cam.x, target.x, m), y: lerp(cam.y, target.y, m), push: cam.push * (1 - m), alpha: 1 - k(m, 0.55, 0.45) };
+    photo(g, P, o);
+  });
+  const S2end = F.on + 16;
+  scene(M0 + Math.round(MD * 0.5), S2end, (g, f) => {
+    const exitY = -1920 * k(f, F.on - 4, 16, exitE);          // the chart leaves upward (camera tilts down)
+    const fr = front(f);
+    const show = k(f, M0 + MD * 0.5, MD * 0.5);
+    ROWS.forEach((name, i) => {
+      const xf = rowXf(f, i, exitY);
+      if (xf.y - 140 > 1920 || xf.y < -200) return;
+      const a = (i === 0 ? show : k(f, raceA + i, 6)) * clamp01((1200 - (xf.y - exitY)) / 50);
+      if (a <= 0) return;
+      row(g, name, xf, f < raceA ? 700 : fr, a);
+    });
+    // ring on Perseverance at "world"
+    const dw = f - F.world;
+    if (dw >= 0) {
+      const xf = rowXf(f, 0, exitY), R = ROW.persev, [iw, ih] = iconSize('persev', xf.z);
+      const cx = xf.x + R.iconX0 * xf.z + iw * 0.42, cy = xf.y - ih * 0.55;
+      ring(g, cx, cy, Math.max(iw, ih) * 0.62 * (0.4 + 0.6 * sp(dw)));
+    }
+  });
+
+  // ---- 3. the record day: NAVCAM image from sol 2,006 rises in; odometer rolls 28.06 -> 28.10
+  const S3a = F.on - 4;
+  const navCam = (f) => {
+    const p = k(f, S3a, 120);
+    return { x: 540, y: 960 + 1920 * (1 - k(f, S3a, 18, enter)) - 70 * p, s: 1.24 * (1 + 0.06 * p), push: 0.06 * p };
+  };
+  const S4a = F.the - 2;
+  scene(S3a, S4a + 18, (g, f) => {
+    const cam = navCam(f), ex = -1920 * k(f, S4a, 16, exitE);
+    photo(g, PH.navcam, { ...cam, y: cam.y + ex });
+  });
+
+  // ---- 4. the old record: Opportunity's self-portrait in a lens; 28.06 slams
+  const LENS_O = { x: 360, y: 915, r: 240 };
+  const S5a = F.opp2 - 2;
+  const lensO = (f) => {
+    const inE = k(f, S4a + 4, 20, enter);
+    const m = k(f, S5a, 16, move);                                   // into the icon on bar 1
+    const [bx, by] = barIconPos(f, 'oppy');
+    const [iw, ih] = iconSize('oppy', BAR.zO);
+    return { x: lerp(LENS_O.x, bx + iw / 2, m), y: lerp(LENS_O.y + 1300 * (1 - inE), by - ih / 2, m), r: lerp(LENS_O.r, Math.max(iw, ih) / 2, m), m };
+  };
+  scene(S4a + 4, S5a + 17, (g, f) => {
+    const st = lensO(f);
+    const inner = { x: st.x, y: st.y + 40 * (st.r / LENS_O.r), s: (st.r * 2.35) / PH.oppy.w * (1 + 0.04 * k(f, S4a, 110)), push: 0.04 * k(f, S4a, 110) };
+    if (st.m < 1) {
+      if (PROBE) { lens(g, PH.oppy, st, inner); return; }
+      g.save(); g.globalAlpha = 1 - k(st.m, 0.6, 0.4); lens(g, PH.oppy, st, inner); g.restore();
+    }
+  });
+
+  // ---- 5. time: two bars on one scale of years, each rover icon riding its bar's front
+  const BAR = { x0: 80, perYear: 54, y1: 672, y2: 1112, zO: 0.5, zP: 0.3 };
+  // both bars grow at the same speed (years per frame), so the shorter one stops first
+  const BO0 = F.opp2 + 8, BO1 = F.fifteen + 6, PER_F = 15 / (BO1 - BO0);
+  const BP0 = F.five - 4, BP1 = BP0 + 5.5 / PER_F;
+  const EA = 0.15, ease = (x) => (x < EA ? (x * x) / (2 * EA * (1 - EA)) : x > 1 - EA ? 1 - ((1 - x) * (1 - x)) / (2 * EA * (1 - EA)) : (x - EA / 2) / (1 - EA));
+  const yrsO = (f) => 15 * ease(clamp01((f - BO0) / (BO1 - BO0)));
+  const yrsP = (f) => 5.5 * ease(clamp01((f - BP0) / (BP1 - BP0)));
+  const S5out = F.how - 8;                       // everything leaves left just before "How?"
+  const outX = (f) => -1200 * k(f, S5out, 12, exitE);
+  function barIconPos(f, which) {
+    if (which === 'oppy') return [BAR.x0 + yrsO(f) * BAR.perYear + outX(f), BAR.y1];
+    const inE = k(f, F.years1 + 4, 16, enter);
+    return [BAR.x0 + yrsP(f) * BAR.perYear - 700 * (1 - inE), BAR.y2];
+  }
+  function bar(g, f, y, yrs, total, ox) {
+    if (PROBE) return;
+    const L = yrs * BAR.perYear;
+    line(g, [[BAR.x0 + ox, y + 6], [BAR.x0 + ox + L, y + 6]], 4);
+    for (let i = 1; i <= Math.floor(yrs + 1e-6); i++) line(g, [[BAR.x0 + ox + i * BAR.perYear, y + 8], [BAR.x0 + ox + i * BAR.perYear, y + 24]], 4);
+  }
+  scene(S5a, S5out + 13, (g, f) => {
+    const ox = outX(f);
+    bar(g, f, BAR.y1, yrsO(f), 15, ox);
+    if (f >= S5a + 14) { const [x, y] = barIconPos(f, 'oppy'); icon(g, 'oppy', x, y + 4, BAR.zO, k(f, S5a + 10, 6)); }
+    if (f >= F.years1 + 4) {
+      bar(g, f, BAR.y2, yrsP(f), 5.5, ox);
+      const [x, y] = barIconPos(f, 'persev');
+      if (f < S5out) icon(g, 'persev', x + ox, y + 4, BAR.zP);
+    }
+  });
+
+  // ---- 6+7. "How?": the Perseverance icon shrinks into the amber dot (the rover from here on);
+  // it drives itself up a field of hazards, a view fan maps each rock as it comes into range
+  const D0 = { x: 610, y: 1000 };
+  const driveA = F.drives - 2, driveB = F.sojourner + 6;
+  const AV = (() => {
+    const r = rng(611), rocks = [];
+    for (let yy = 900, i = 0; yy > -2000; yy -= 52 + r() * 30, i++) {
+      const side = r() < 0.5 ? 1 : -1, px = pathX(yy);
+      rocks.push({ x: px + side * (70 + r() * 260), y: yy, rx: 12 + r() * 34, ry: 0, rot: r() * 0.6 - 0.3 });
+    }
+    rocks.forEach((q) => (q.ry = q.rx * (0.55 + 0.2 * Math.sin(q.x))));
+    return rocks.filter((q) => q.x > 340 && q.x < 1010 && Math.abs(q.x - pathX(q.y)) > q.rx + 40);
+  })();
+  function pathX(wy) { return D0.x + 120 * Math.sin((D0.y - wy) / 210) + 40 * Math.sin((D0.y - wy) / 77); }
+  const dotWY = (f) => D0.y - 1750 * k(f, driveA, driveB - driveA, (x) => (x < 0.12 ? 0.5 * x * x / 0.12 : x - 0.06) / 0.94);
+  const camS = (f) => { const d = 900 - dotWY(f); return d > 0 ? d : 0; };
+  const dotPos = (f) => { const wy = dotWY(f); return [pathX(wy), wy + camS(f)]; };
+  const S7out = F.sojourner - 6;
+  const avOff = (f) => 1920 * k(f, S7out, 16, exitE);     // the diagram leaves downward as the camera moves up
+  scene(S5out, S7out + 17, (g, f) => {
+    const off = avOff(f), cs = camS(f);
+    // the icon -> dot
+    const m = k(f, S5out, 14, move);
+    if (m < 1) {
+      const [x, y] = barIconPos(S5out, 'persev'), [iw, ih] = iconSize('persev', BAR.zP);
+      const cx = lerp(x + iw / 2, D0.x, m), cy = lerp(y - ih / 2, D0.y, m);
+      if (m < 0.6) icon(g, 'persev', cx - (iw / 2) * (1 - m), cy + (ih / 2) * (1 - m), BAR.zP * (1 - m), 1 - k(m, 0.3, 0.3));
+      if (m > 0.3) dot(g, cx, cy, 11, C.amber, k(m, 0.3, 0.2));
+      return;
+    }
+    if (!PROBE) { g.save(); g.beginPath(); g.rect(0, 220, 1080, 960); g.clip(); }
+    const wy = dotWY(f), [dx, dy] = [pathX(wy), wy + cs + off];
+    // heading from the path tangent
+    const ahead = 40, hx = pathX(wy - ahead) - pathX(wy), hy = -ahead, hl = Math.hypot(hx, hy), ux = hx / hl, uy = hy / hl;
+    const fanOn = k(f, F.drives, 8, enter), RANGE = 420 * fanOn, HALF = 0.55;
+    // rocks: mapped (drawn) when the fan first reaches them, then they stay
+    if (!PROBE) {
+      g.save(); g.strokeStyle = C.amber; g.lineWidth = 4;
+      for (const q of AV) {
+        // first frame the rock was within range and inside the fan
+        let first = null;
+        for (let qf = driveA; qf <= f; qf += 2) {
+          const wy2 = dotWY(qf), px = pathX(wy2), vx = q.x - px, vy = q.y - wy2, dd = Math.hypot(vx, vy);
+          if (qf < F.drives) continue;
+          if (dd < 420 && (vy < 0 && Math.abs(vx) / Math.max(1, -vy) < 1.3)) { first = qf; break; }
+        }
+        if (first === null) continue;
+        const u = k(f, first, 8, enter), sy = q.y + cs + off;
+        if (sy < 220 || sy > 1180) continue;
+        g.beginPath(); g.ellipse(q.x, sy, q.rx, q.ry, q.rot, 0, Math.PI * 2 * u); g.stroke();
+      }
+      g.restore();
+    }
+    // driven path (dashed) and the plan ahead (solid) between waypoints
+    const past = [], plan = [];
+    for (let yy = D0.y; yy >= wy; yy -= 8) past.push([pathX(yy), yy + cs + off]);
+    past.push([dx, dy]);
+    const pl = 300 * k(f, F.itself, 10, enter);
+    for (let yy = wy; yy >= wy - pl; yy -= 8) plan.push([pathX(yy), yy + cs + off]);
+    if (past.length > 1) line(g, past, 4, [10, 12]);
+    if (plan.length > 1) line(g, plan, 2);
+    if (plan.length > 1) { const e = plan[plan.length - 1]; ring(g, e[0], e[1], 9, 3); }
+    // view fan
+    if (fanOn > 0 && !PROBE) {
+      const a0 = Math.atan2(uy, ux);
+      g.save(); g.strokeStyle = C.amber; g.lineWidth = 2; g.globalAlpha = 0.9;
+      g.beginPath(); g.moveTo(dx, dy); g.lineTo(dx + RANGE * Math.cos(a0 - HALF), dy + RANGE * Math.sin(a0 - HALF));
+      g.arc(dx, dy, RANGE, a0 - HALF, a0 + HALF); g.lineTo(dx, dy); g.stroke(); g.restore();
+    }
+    if (!PROBE) g.restore();
+    dot(g, dx, dy, 11);
+  });
+
+  // ---- 8. Sojourner checked 20 points; Perseverance checks 600,000 (all 600,000 are drawn)
+  const S8a = S7out;
+  const soCam = (f) => { const p = k(f, S8a, 60); return { x: 540, y: 760 - 1500 * (1 - k(f, S8a, 18, enter)), s: 0.66 * (1 + 0.05 * p), push: 0.05 * p }; };
+  const LENS_S = { x: 800, y: 470, r: 160 };
+  const IRIS = F.twenty - 2;
+  const lensS = (f) => {
+    const u = k(f, IRIS, 14, move), out = k(f, F.n600 - 8, 12, move);
+    const c = soCam(f);
+    return { x: lerp(lerp(540, LENS_S.x, u), VIEW.x, out), y: lerp(lerp(c.y, LENS_S.y, u), VIEW.y, out), r: lerp(lerp(420, LENS_S.r, u), 6, out), u, out };
+  };
+  // ground ahead in perspective: depth z in [1, 6], lateral l in [-1, 1]
+  const VIEW = { x: 540, y: 1140 };
+  // terrain ahead (schematic): a ground plane with a few rock bumps, seen in perspective
+  const BUMPS = (() => { const r = rng(2006), b = []; for (let i = 0; i < 70; i++) { const z = 1.2 + r() * 6; b.push({ l: (r() * 2 - 1) * 0.9 * z, z, a: 0.03 + r() * 0.1, rr: 0.06 + r() * 0.16 }); } return b; })();
+  const hgt = (l, z) => { let h = 0; for (const b of BUMPS) { const d2 = (l - b.l) ** 2 + ((z - b.z) / 2.2) ** 2; h += b.a * Math.exp(-d2 / (b.rr * b.rr)); } return h; };
+  const proj = (l, z) => { const hy = 640, ny = 1150, h = hgt(l, z); return [540 + (l * 560) / z, hy + (ny - hy - h * 420) / z]; };
+  const P20 = (() => { const out = []; for (let rI = 0; rI < 4; rI++) for (let c = 0; c < 5; c++) out.push(proj(-0.7 + c * 0.35, 1.25 + rI * 0.55)); return out; })();
+  const NPTS = 600000;
+  let PTS = null;          // Float32Array [tx, ty, parent] built once
+  function buildPoints() {
+    const r = rng(600000); PTS = new Float32Array(NPTS * 3);
+    for (let i = 0; i < NPTS; i++) {
+      const z = 1 + r() * 6.5, l = (r() * 2 - 1) * 0.93 * z;                 // uniform on the ground, all inside the frame
+      const [x, y] = proj(l, z);
+      // nearest of the 20 parents
+      let best = 0, bd = 1e9; for (let j = 0; j < 20; j++) { const d = (P20[j][0] - x) ** 2 + (P20[j][1] - y) ** 2; if (d < bd) { bd = d; best = j; } }
+      PTS[i * 3] = x; PTS[i * 3 + 1] = y; PTS[i * 3 + 2] = best;
+    }
+  }
+  const FIELD = { y0: 520, h: 680 };
+  const fieldC = document.createElement('canvas'); fieldC.width = 1080; fieldC.height = FIELD.h;
+  const fctx = fieldC.getContext('2d'); const fImg = fctx.createImageData(1080, FIELD.h); const fBuf = new Uint32Array(fImg.data.buffer);
+  const cnt = new Uint16Array(1080 * FIELD.h);
+  const AMBER32 = (() => { const a = new Uint8Array([245, 184, 61, 255]); return new Uint32Array(a.buffer)[0]; })();
+  const ALPHA = (() => { const t = new Uint32Array(64); for (let c = 0; c < 64; c++) { const al = Math.round(255 * (1 - Math.exp(-0.32 * c))); const a = new Uint8Array([245, 184, 61, al]); t[c] = new Uint32Array(a.buffer)[0]; } return t; })();
+  const n600 = (f) => (f < F.n600 ? 0 : Math.max(20, Math.min(NPTS, Math.floor(20 + (NPTS - 20) * countU(f, F.n600)))));
+  const IMP = F.next - 10;                     // implosion into the route dot
+  function field(g, f) {
+    const n = n600(f); if (n <= 20 || PROBE) return;
+    cnt.fill(0);
+    const imp = k(f, IMP, 10, (x) => x * x * x), T = ROUTE.start;
+    for (let i = 0; i < n; i++) {
+      const tx = PTS[i * 3], ty = PTS[i * 3 + 1], p = PTS[i * 3 + 2] | 0;
+      // each point flies out of its parent over ~10 frames after it is released
+      const rel = F.n600 + (i / NPTS) * 2;   // the count-up decides which points exist; travel is quick
+      const e = enter(clamp01((f - Math.max(F.n600, rel) + 1) / 10));
+      let x = lerp(P20[p][0], tx, e), y = lerp(P20[p][1], ty, e);
+      if (imp > 0) { x = lerp(x, T[0], imp); y = lerp(y, T[1], imp); }
+      const xi = x | 0, yi = (y | 0) - FIELD.y0;
+      if (xi < 0 || xi >= 1080 || yi < 0 || yi >= FIELD.h) continue;
+      const q = yi * 1080 + xi; if (cnt[q] < 63) cnt[q]++;
+    }
+    for (let q = 0; q < cnt.length; q++) fBuf[q] = cnt[q] ? ALPHA[cnt[q]] : 0;
+    fctx.putImageData(fImg, 0, 0);
+    g.drawImage(fieldC, 0, FIELD.y0);
+  }
+  scene(S8a, F.next, (g, f) => {
+    const L = lensS(f), cam = soCam(f);
+    // photo full frame, then it irises into the lens; on "Perseverance" the lens cuts to Perseverance
+    const isP = f >= F.persev2;
+    const P = isP ? PH.persev : PH.sojourner;
+    const inner = isP ? { x: L.x, y: L.y + L.r * 0.05, s: (L.r * 2.1) / (0.372 * PH.persev.w) }
+      : { x: L.x, y: L.y + L.r * 0.12, s: (L.r * 2.25) / (0.73 * PH.sojourner.w) * (1 + 0.05 * k(f, S8a, 60)), push: cam.push * (1 - L.u) };
+    if (L.r > 7) lens(g, P, L, inner);
+    if (isP && f - F.persev2 < 16) { const d = f - F.persev2; ring(g, L.x, L.y, L.r + 50 * enter(d / 16), 4, 1 - d / 16); }
+    // the 20 points ahead (they pop in with the count), and the viewpoint dot
+    if (f >= F.twenty) {
+      const n = Math.max(1, Math.min(20, Math.floor(20 * countU(f, F.twenty))));
+      const imp = k(f, IMP, 10, (x) => x * x * x), T = ROUTE.start;
+      const fade = n600(f) > 20 ? 1 - k(f, F.n600, 10) : 1;
+      for (let j = 0; j < n; j++) { const [x, y] = P20[j]; dot(g, lerp(x, T[0], imp), lerp(y, T[1], imp), 7, C.amber, Math.max(fade, imp)); }
+      if (!PROBE && L.out <= 0) {
+        // rays from the viewpoint to the 20 points
+        g.save(); g.strokeStyle = C.amber; g.globalAlpha = 0.35 * fade; g.lineWidth = 2;
+        for (let j = 0; j < n; j++) { g.beginPath(); g.moveTo(VIEW.x, VIEW.y); g.lineTo(P20[j][0], P20[j][1]); g.stroke(); }
+        g.restore();
+      }
+      if (L.out <= 0 || L.r <= 7) dot(g, lerp(VIEW.x, ROUTE.start[0], imp), lerp(VIEW.y, ROUTE.start[1], imp), 11);
+    }
+    field(g, f);
+  });
+
+  // ---- 9. NEXT card: hard cut on "Next". Route line art: the dot drives on to Idubi; the line keeps growing
+  const ROUTE = { start: [300, 965], idubi: [760, 965], y: 965 };
+  const routeY = (x) => ROUTE.y + (x > 560 ? -14 * Math.sin(((x - 560) / 520) * Math.PI) : 0);
+  const driveToIdubi = (f) => lerp(ROUTE.start[0], ROUTE.idubi[0] - 34, k(f, F.idubi, F.hot - F.idubi, move));
+  const dotX = (f) => driveToIdubi(f) + 150 * k(f, F.keep - 4, 40, move);
+  scene(F.next, LAST + 1, (g, f) => {
+    // driven route (dashed) from the left edge to the dot; the plan (solid) from the dot to Idubi; then on
+    const xd = dotX(f);
+    const pts = (a, b) => { const out = []; for (let x = a; x <= b; x += 6) out.push([x, routeY(x)]); out.push([b, routeY(b)]); return out; };
+    line(g, pts(-20, xd), 4, [10, 12]);
+    const planEnd = lerp(xd, ROUTE.idubi[0], k(f, F.next + 2, 14, enter));
+    if (planEnd > xd + 2) line(g, pts(xd, Math.max(xd, planEnd)), 4);
+    const grow = k(f, F.keep - 2, 30, enter);
+    if (grow > 0) line(g, pts(ROUTE.idubi[0], lerp(ROUTE.idubi[0], 1120, grow)), 4);
+    const ri = k(f, F.idubi - 2, 10, enter);
+    if (ri > 0) { inkFill(g, ROUTE.idubi[0], routeY(ROUTE.idubi[0]), 26); ring(g, ROUTE.idubi[0], routeY(ROUTE.idubi[0]), 26 * (0.4 + 0.6 * sp(f - F.idubi + 2))); }
+    const dh = f - F.hot; if (dh >= 0 && dh < 18) ring(g, ROUTE.idubi[0], routeY(ROUTE.idubi[0]), 26 + 60 * enter(dh / 18), 4, 1 - dh / 18);
+    dot(g, xd, routeY(xd), 11);
+  });
+  function inkFill(g, x, y, r) { if (PROBE) return; g.save(); g.fillStyle = C.ink; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.restore(); }
+
+  // ================================================================ picture with motion blur
+  function drawPicture(g, f) {
+    if (!PROBE) { g.globalAlpha = 1; g.fillStyle = C.ink; g.fillRect(0, 0, 1080, 1920); }
+    for (const s of SC) if (f >= s.a && f < s.b) s.draw(g, f);
+  }
+  const SHUTTER = 0.5;
+  function blurSamples(f) {
+    PROBE = []; drawPicture(null, f); const a = PROBE;
+    PROBE = []; drawPicture(null, f - SHUTTER); const b = PROBE; PROBE = null;
+    if (a.length !== b.length || f - SHUTTER < 0) return 1;
+    let mx = 0; for (let i = 0; i < a.length; i += 2) mx = Math.max(mx, Math.hypot(a[i] - b[i], a[i + 1] - b[i + 1]));
+    return Math.max(1, Math.min(16, Math.ceil(mx / 2.5)));
+  }
+  function renderPicture(f) {
+    let N = blurSamples(f);
+    if (f >= F.n600 && f < F.next) N = Math.min(N, 6);     // the 600,000-point field is costly per sample
+    if (N <= 1) { drawPicture(pctx, f); return 1; }
+    actx.clearRect(0, 0, 1080, 1920);
+    for (let i = 0; i < N; i++) {
+      drawPicture(tctx, f - (SHUTTER * i) / (N - 1));
+      actx.globalAlpha = 1 / (i + 1); actx.drawImage(tmp, 0, 0);
+    }
+    actx.globalAlpha = 1; pctx.drawImage(acc, 0, 0);
+    return N;
+  }
+
+  // ================================================================ DOM layers
+  const $ = (id) => document.getElementById(id);
+  const show = (el, on, disp = 'block') => { el.style.display = on ? disp : 'none'; };
+  const fdefs = $('fdefs');
+  function blurFilter(el) {
+    const id = 'mb_' + el.id;
+    if (!$(id)) fdefs.insertAdjacentHTML('beforeend', `<filter id="${id}" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur id="${id}_g" stdDeviation="0 0"/></filter>`);
+    return $(id + '_g');
+  }
+  function setBlur(el, vx, vy) {
+    const fe = blurFilter(el), sx = Math.min(40, Math.abs(vx) * 0.35), sy = Math.min(60, Math.abs(vy) * 0.35);
+    if (sx < 0.3 && sy < 0.3) { el.style.filter = 'none'; return; }
+    fe.setAttribute('stdDeviation', `${sx.toFixed(2)} ${sy.toFixed(2)}`); el.style.filter = `url(#mb_${el.id})`;
+  }
+  const slam = (df) => 1.12 - 0.12 * enter(clamp01(df / 5));
+  // giant type: slam in, leave fast with blur. dir: [dx, dy] unit direction of the exit
+  function giant(id, f, a, b, dir = [0, -1], exitLen = 8, extra = null) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    const ex = (q) => 1200 * k(q, b, exitLen, exitE);
+    const e = ex(f), v = e - ex(f - 1);
+    let tx = dir[0] * e, ty = dir[1] * e, sc = slam(f - a);
+    if (extra) { const o = extra(f); tx += o.x || 0; ty += o.y || 0; sc *= o.s || 1; }
+    el.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${sc.toFixed(4)})`;
+    setBlur(el, dir[0] * v, dir[1] * v);
+  }
+  function gdata(id, f, a, b, dir = [0, -1], exitLen = 8, pos = null) {
+    const el = $(id), on = f >= a && f < b + exitLen;
+    show(el, on); if (!on) return;
+    if (pos) { el.style.left = pos[0] + 'px'; el.style.top = pos[1] + 'px'; }
+    const ex = (q) => 1200 * k(q, b, exitLen, exitE);
+    const e = ex(f), v = e - ex(f - 1);
+    el.style.transform = `translate(${(dir[0] * e).toFixed(1)}px, ${(dir[1] * e).toFixed(1)}px)`; setBlur(el, dir[0] * v, dir[1] * v);
+  }
+  const ringEl = (el, df) => {
+    el.style.opacity = df < 0 ? 0 : clamp01((df + 1) / 3);
+    el.style.transform = `scale(${(0.4 + 0.6 * sp(Math.max(0, df))).toFixed(4)})`;
+  };
+
+  // ---- odometer: digit strips roll like a mechanical counter (each digit carries when the one to its right passes 9)
+  const odoT = $('odoT').firstChild, odoH = $('odoH').firstChild;
+  odoT.innerHTML = odoH.innerHTML = '0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0';
+  const ODO0 = F.passed, ODO1 = F.miles - 4;
+  const odoU = (f) => 2806 + 4 * k(f, ODO0 + 2, ODO1 - ODO0 - 2, move);   // hundredths of a mile
+  function odometer(f) {
+    const u = odoU(f), h = u % 10, t = Math.floor(u / 10) % 10 + Math.max(0, h - 9);
+    const uh = odoU(f - 1) % 10;
+    odoH.style.transform = `translateY(${(-h * 0.9).toFixed(4)}em)`;
+    odoT.style.transform = `translateY(${(-t * 0.9).toFixed(4)}em)`;
+    const v = Math.abs(h - uh) * 0.9 * 300;
+    setBlur($('odoH'), 0, Math.min(v, 120));
+  }
+
+  // ---- captions
+  let CHUNKS = [];
+  const GLUE = /^(a|an|the|to|of|on|by|set|in|into|and|or|is|it|its|from|that|almost|five|ever)$/i;
+  function buildChunks() {
+    const m = document.createElement('canvas').getContext('2d');
+    m.font = "700 90px 'Archivo'";
+    const wid = (ws) => m.measureText(ws.map((w) => w.text).join(' ')).width;
+    const MAXW = 820 - 32;
+    const segs = []; let cur = [];
+    W.forEach((w, i) => {
+      const prev = W[i - 1];
+      if (cur.length && ((prev && /[.?!:]$/.test(prev.text)) || (prev && w.start - prev.end > 0.45))) { segs.push(cur); cur = []; }
+      cur.push(w);
+    });
+    if (cur.length) segs.push(cur);
+    const chunks = [];
+    for (const sg of segs) {
+      const n = sg.length, best = new Array(n + 1).fill(Infinity), from = new Array(n + 1).fill(-1); best[0] = 0;
+      for (let i = 1; i <= n; i++) for (let j = Math.max(0, i - 4); j < i; j++) {
+        const ws = sg.slice(j, i), w = wid(ws); if (w > MAXW || best[j] === Infinity) continue;
+        let c = i === n ? 0.3 * ((MAXW - w) / 100) ** 2 : ((MAXW - w) / 100) ** 2;
+        if (ws.length === 1 && n > 1) c += 40;
+        if (i < n && /,$/.test(sg[i - 1].text)) c -= 12;
+        if (ws.slice(0, -1).some((x) => /,$/.test(x.text))) c += 18;
+        if (i < n && GLUE.test(sg[i - 1].text)) c += 30;
+        if (i < n && /^(\d[\d.,]*)$/.test(sg[i - 1].text) && /^(miles|years|points)/i.test(sg[i].text)) c += 60;
+        if (i < n && /^downlink$/i.test(sg[i - 1].text) && /^cat\b/i.test(sg[i].text)) c += 120;   // keep the channel name on one line
+        if (best[j] + c < best[i]) { best[i] = best[j] + c; from[i] = j; }
+      }
+      const lines = []; for (let i = n; i > 0; i = from[i]) lines.unshift(sg.slice(from[i], i));
+      const L = lines.length, cb = new Array(L + 1).fill(Infinity), cf = new Array(L + 1).fill(-1); cb[0] = 0;
+      for (let i = 1; i <= L; i++) for (let j = Math.max(0, i - 2); j < i; j++) {
+        let c = i - j === 1 ? (L === 1 ? 0 : 10 + (lines[j].length === 1 ? 30 : 0)) : 0;
+        if (cb[j] + c < cb[i]) { cb[i] = cb[j] + c; cf[i] = j; }
+      }
+      const grp = []; for (let i = L; i > 0; i = cf[i]) grp.unshift(lines.slice(cf[i], i));
+      for (const g of grp) chunks.push({ lines: g });
+    }
+    chunks.forEach((c) => { c.f0 = c.lines[0][0].f; c.lastW = c.lines[c.lines.length - 1].slice(-1)[0]; });
+    chunks.forEach((c, j) => {
+      const nxt = chunks[j + 1];
+      c.f1 = !nxt ? LAST + 1 : nxt.f0 - c.lastW.fe > 30 ? c.lastW.fe + 24 : nxt.f0;
+      c.rects = c.lines.map((ln, li) => [80, 1196 + li * 120, Math.ceil(wid(ln)) + 32, 112]);
+      c.el = document.createElement('div'); c.el.style.cssText = 'display:none;flex-direction:column;align-items:flex-start;gap:8px';
+      c.lineEls = c.lines.map((ln) => {
+        const le = document.createElement('div'); le.className = 'line';
+        ln.forEach((w, q) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = (q ? ' ' : '') + w.text; le.appendChild(s); w.el = s; });
+        c.el.appendChild(le); return le;
+      });
+      $('caps').appendChild(c.el);
+    });
+    CHUNKS = chunks;
+  }
+  const chunkAt = (f) => CHUNKS.find((c) => f >= c.f0 && f < c.f1);
+  function renderCaptions(f) {
+    for (const c of CHUNKS) {
+      const on = f >= c.f0 && f < c.f1; show(c.el, on, 'flex'); if (!on) continue;
+      let lastW = null;
+      c.lines.forEach((ln, li) => {
+        let any = false;
+        ln.forEach((w) => { const v = f >= w.f; w.el.style.display = v ? 'inline' : 'none'; w.el.classList.remove('on'); if (v) { lastW = w; any = true; } });
+        c.lineEls[li].style.display = any ? 'block' : 'none';
+      });
+      if (lastW) lastW.el.classList.add('on');
+    }
+  }
+
+  // ---- the cat (v3 actor): a guide and a reaction, never the source of a fact
+  const { Actor, motionBlur } = M_actor;
+  let cat = null, CAT_ON = [];
+  const STRESS = /^(outdrove|every|2810|2806|fifteen|five|half|itself|20|600000|idubi)$/;
+  function buildCat() {
+    const ts = (fr) => fr / FPS;
+    const cap0 = chunkAt(14).rects[0];
+    const capAt = (fr) => chunkAt(fr).rects[0];
+    const K = 0.34, KN = 0.25;
+    cat = new Actor({ scale: K, seed: 9, safe: [40, 200, 900, 1300] });
+    const TL = [
+      // hook: pops up from behind the first caption box, gasps at the rover, hops right, points at the chart
+      { t: ts(4), do: 'enter', how: 'pop', box: cap0, at: Math.min(0.13, 100 / cap0[2]) },
+      { t: ts(F.outdrove - 2), do: 'gasp', at: [700, 700], dur: 0.5 },
+      { t: ts(F.every - 4), do: 'hop', to: [800, 1196] },
+      { t: ts(F.every + 12), do: 'point', at: [420, 700], dur: 1.0 },
+      { t: ts(F.every + 44), do: 'exit', how: 'tether', dur: 0.7 },
+      // record day: drops in on a line at the left, thumbs up on the record, hops right, holds the sign
+      { t: ts(F.october - 10), do: 'enter', how: 'drop', to: [185, 1196] },
+      { t: ts(F.october + 6), do: 'look', at: [500, 470] },
+      { t: ts(F.n2810), do: 'thumbs', dur: 0.55 },
+      { t: ts(F.n2810 + 16), do: 'hop', to: [770, 1196] },
+      { t: ts(F.miles + 8), do: 'sign', text: '28.10', sub: 'MILES', dur: (F.n2806 - F.miles - 12) / FPS, size: 2.1 },
+      { t: ts(F.n2806 + 2), do: 'point', at: [300, 450], dur: 0.6 },
+      { t: ts(F.n2806 + 10), do: 'exit', how: 'zip', to: 'right' },
+      // "How?": drops onto the short caption box, WHAT, hops right, nods, points at the rover dot, floats off
+      { t: ts(F.how), do: 'enter', how: 'drop', to: [250, 1196] },
+      { t: ts(F.how + 17), do: 'what', dur: 0.8 },
+      { t: ts(F.drives - 2), do: 'listen', dur: 0.9 },
+      { t: ts(F.itself + 2), do: 'nod', count: 2, dur: 0.8 },
+      { t: ts(F.mapping + 4), do: 'point', at: [610, 900], dur: 0.8 },
+      { t: ts(F.rolling - 14), do: 'exit', how: 'zip', to: 'left' },
+      // NEXT card: skids onto the route, walks after the rover dot, points at Idubi, bounces, points at the pointer
+      { t: ts(F.idubi + 4), do: 'enter', how: 'skid', from: 'left', to: [175, ROUTE.y], scale: KN },
+      { t: ts(F.nasa - 6), do: 'walk', to: [430, ROUTE.y], scale: KN },
+      { t: ts(F.nasa + 30), do: 'point', at: [ROUTE.idubi[0], ROUTE.y - 10], dur: 0.9 },
+      { t: ts(F.keep - 2), do: 'bounce', count: 2, period: 0.34 },
+      { t: ts(F.follow - 2), do: 'point', at: [240, 1050], dur: 1.2 },
+      { t: ts(F.watch - 2), do: 'thumbs', dur: 1.5 },
+      { t: 0, do: 'say', words: W.map((w) => ({ w: w.text, s: w.start, e: w.end, stress: STRESS.test(w.key) })) },
+      { t: 0, do: 'expr', expr: 'curious' },
+      { t: ts(F.october), do: 'expr', expr: 'excited' },
+      { t: ts(F.how), do: 'expr', expr: 'curious' },
+      { t: ts(F.next), do: 'expr', expr: 'happy' },
+    ];
+    cat.timeline(TL);
+    // on-screen windows: from each entrance until he is fully out of frame after the next exit
+    const E = TL.filter((q) => q.do === 'enter' || q.do === 'exit').sort((p, q) => p.t - q.t);
+    const gone = (fr) => { const t = fr / FPS; if (!cat.render(t)) return true; const b = cat.box(t); return b[0] > 1080 || b[0] + b[2] < 0 || b[1] > 1920 || b[1] + b[3] < 0; };
+    CAT_ON = [];
+    for (let i = 0; i < E.length; i++) if (E[i].do === 'enter') {
+      let a0 = Math.round(E[i].t * FPS); while (a0 < LAST && gone(a0)) a0++;
+      let b0 = LAST;
+      if (E[i + 1] && E[i + 1].do === 'exit') { b0 = Math.round(E[i + 1].t * FPS); while (b0 < LAST && !gone(b0)) b0++; b0--; }
+      CAT_ON.push([a0, b0]);
+    }
+  }
+  const catOn = (f) => CAT_ON.some(([a, b]) => f >= a - 1 && f <= b + 1);
+  function renderCat(f) {
+    const svg = $('cat');
+    if (!catOn(f)) { show(svg, false); return 1; }
+    const t = f / FPS, bl = cat.blur(t);
+    const g = motionBlur((tt) => cat.render(tt), t, bl.n, bl.shutter * 0.5, FPS);
+    show(svg, !!g); svg.innerHTML = g;
+    return bl.n;
+  }
+  // subject rectangles the cat must never cover, per frame (captions are added per chunk)
+  function subjects(f) {
+    const R = [];
+    if (f < F.every - 4) R.push([370, 330, 710, 1260]);                  // the rover in the selfie
+    if (f >= F.every && f < F.world - 14) R.push([60, 250, 620, 930]);   // the vehicle chart, zoomed out
+    if (f >= F.world - 14 && f < F.on) R.push([40, 300, 1000, 330]);     // the top two rows
+    if (f >= F.passed && f < F.the) R.push([40, 300, 900, 300]);         // odometer
+    if (f >= F.the && f < F.opp2) R.push([LENS_O.x - LENS_O.r, LENS_O.y - LENS_O.r, 2 * LENS_O.r, 2 * LENS_O.r]);
+    if (f >= F.n2806 && f < F.opp2) R.push([40, 300, 820, 300]);         // 28.06
+    if (f >= F.drives && f < F.sojourner) R.push([400, 300, 600, 860]);  // the drive diagram
+    if (f >= F.next) R.push([80, 320, 760, 300], [ROUTE.idubi[0] - 40, ROUTE.y - 40, 80, 80], [80, 1020, 420, 160]);
+    return R;
+  }
+  function lintCat() {
+    const out = [];
+    for (const [a, b] of CAT_ON) for (let f = a; f <= Math.min(b, LAST); f++) {
+      const c = chunkAt(f); const rects = [...(c ? c.rects : []), ...subjects(f)];
+      for (const h of cat.lint(f / FPS, f / FPS, rects)) out.push({ ...h, kind: typeof h.rect === 'number' ? (h.rect < (c ? c.rects.length : 0) ? 'caption' : 'subject') : h.rect });
+    }
+    const on = CAT_ON.reduce((s, [a, b]) => s + Math.min(b, LAST) - a + 1, 0);
+    return { windows: CAT_ON, framesOn: on, share: +(on / NF).toFixed(3), hits: out };
+  }
+
+  // ---- credit slot
+  function creditAt(f) {
+    if (f < M0 + 8) return CR.persev;
+    if (f < S3a + 8) return CR.graphic;
+    if (f < S4a + 10) return CR.navcam;
+    if (f < S5a + 8) return CR.oppy;
+    if (f < S5out + 8) return CR.bars;
+    if (f < S8a + 6) return CR.nasa;
+    if (f < IRIS + 6) return CR.soj;
+    if (f < F.persev2) return CR.sojPts;
+    if (f < F.n600 - 2) return CR.perPts;
+    return CR.nasa;
+  }
+
+  // ================================================================ frame
+  let lastN = 1;
+  function renderAt(t) {
+    const f = Math.min(LAST, Math.max(0, Math.round(t * FPS)));
+    lastN = renderPicture(f);
+    const next = f >= F.next;
+
+    // 3. odometer, date and unit
+    show($('odo'), f >= F.passed && f < F.miles + 20);
+    if (f >= F.passed && f < F.miles + 20) {
+      odometer(f);
+      // on "miles" the number flies down into the cat's sign (it leaves fast, shrinking)
+      const u = k(f, F.miles + 8, 8, exitE);
+      $('odo').style.transform = `translate(${(754 * u).toFixed(1)}px, ${(400 * u).toFixed(1)}px) scale(${(slam(f - F.passed) * (1 - 0.8 * u)).toFixed(4)})`;
+      $('odo').style.opacity = 1 - k(f, F.miles + 14, 3);
+      const du = u - k(f - 1, F.miles + 8, 8, exitE);
+      setBlur($('odo'), 754 * du, 400 * du);
+    }
+    gdata('odoDate', f, F.october, F.passed - 1, [0, -1], 1, [80, 632]);
+    gdata('odoUnit', f, F.miles, S4a, [0, -1], 10, [80, 632]);
+    // 4. 28.06
+    giant('g2806', f, F.n2806, S5a, [0, -1], 8);
+    gdata('g2806d', f, F.n2806 + 4, S5a, [0, -1], 8, [80, 612]);
+    // 5. years
+    giant('g15', f, BO0 + 2, S5out, [-1, 0], 12);
+    if (f >= BO0 + 2) $('g15').textContent = String(Math.max(1, Math.floor(yrsO(f) + 1e-6)));
+    giant('g55', f, BP0 + 3, S5out, [-1, 0], 12);
+    if (f >= BP0 + 3) { const v = Math.max(1, Math.floor(yrsP(f) * 2 + 1e-6) / 2); $('g55').textContent = v % 1 ? v.toFixed(1) : String(v); }
+    gdata('g15d', f, F.fifteen, S5out, [-1, 0], 12, [Math.round(G15W + 24), 300 + 150]);
+    gdata('g55d', f, F.half, S5out, [-1, 0], 12, [Math.round(G55W + 24), 740 + 150]);
+    const ox = outX(f);
+    show($('labO'), f >= S5a + 14 && f < S5out + 12); $('labO').style.left = (80 + ox) + 'px'; $('labO').style.top = (BAR.y1 + 30) + 'px';
+    show($('labP'), f >= F.years1 + 16 && f < S5out + 12); $('labP').style.left = (80 + ox) + 'px'; $('labP').style.top = (BAR.y2 + 30) + 'px';
+    // 8. points
+    giant('g20', f, F.twenty, F.persev2 + 2, [0, -1], 8);
+    if (f >= F.twenty) $('g20').textContent = String(Math.max(1, Math.min(20, Math.floor(20 * countU(f, F.twenty)))));
+    gdata('g20d', f, F.twenty + 6, F.persev2 + 2, [0, -1], 8, [80, 632]);
+    giant('g600', f, F.n600, IMP, [0, -1], 8);
+    if (f >= F.n600) $('g600').textContent = n600(f).toLocaleString('en-US');
+    gdata('g600d', f, F.n600 + 6, IMP, [0, -1], 8, [80, 314 + G600H + 20]);
+
+    // kicker
+    $('kText').textContent = next ? 'Next on By the numbers' : 'By the numbers';
+    // chip on the Mars hook: cuts in 4 frames after "Mars"; echo ring 24 frames later (the real 12 min 59 s cannot be waited out)
+    const chipA = F.mars + 4, chipB = F.vehicle + 6;
+    show($('chip'), f >= chipA && f < chipB, 'flex');
+    if (f >= chipA && f < chipB) ringEl($('chipRing'), f - (chipA + 24));
+
+    // NEXT card
+    $('next').style.display = next ? 'block' : 'none';
+    if (next) {
+      const sl = (id, a) => { const el = $(id); show(el, f >= a); el.style.transform = `scale(${slam(f - a).toFixed(4)})`; el.style.transformOrigin = '0 50%'; };
+      sl('nHead1', F.next); sl('nHead2', F.idubi);
+      show($('nLine1'), f >= F.ancient);
+      show($('nLine2'), f >= F.nasa);
+      show($('nIdubi'), f >= F.idubi + 4);
+      show($('nPoint'), f >= F.follow);
+      show($('nMark'), f >= WM, 'flex');
+      const de = sp(f - WM, 0.7, 4);
+      $('nDot').style.transform = `scale(${(0.4 + 0.6 * de).toFixed(4)})`;
+      ringEl($('nRing'), f - (WM + 12));
+      $('nWord').style.visibility = f >= WM + 4 ? 'visible' : 'hidden';
+    }
+
+    const cr = creditAt(f), ce = $('credit');
+    ce.textContent = cr; show(ce, !!cr);
+    renderCaptions(f);
+    const cn = renderCat(f);
+    lastN = Math.max(lastN, cn);
+  }
+  let G15W = 400, G55W = 500, G600H = 200;
+
+  // ================================================================ cue list for the sound mixer (curated)
+  function cues() {
+    const L = [];
+    const c = (frame, type, note, extra = {}) => L.push({ frame: Math.round(frame), fps: FPS, t: +(Math.round(frame) / FPS).toFixed(3), type, note, ...extra });
+    c(10, 'cat_in', 'cat pops up behind the caption box');
+    c(F.mars + 4, 'chip_in', 'SIGNAL DELAY MARS 12 min 59 s');
+    c(F.mars + 28, 'echo_land', 'chip echo ring lands', { gain_db: -2 });
+    c(M0 + 6, 'scene_move', 'selfie shrinks into the Perseverance icon; the tracks race in', { gain_db: -1 });
+    c(S3a, 'hard_cut', 'chart leaves up, the record-day NAVCAM image rises in', { sfx: 'whoosh_short' });
+    c(F.n2810, 'number_slam', 'odometer rolls 28.06 to 28.10', { gain_db: -2 });
+    c(F.miles + 14, 'cat_chirp', 'the number lands on the cat\'s sign');
+    c(F.n2806, 'number_slam', '28.06, the old record', { sfx: 'impact_soft' });
+    c(BO1, 'number_slam', 'the years count lands on 15', { gain_db: -3 });
+    c(Math.round(BP1), 'number_slam', 'the years count lands on 5.5', { gain_db: -3 });
+    c(S5out, 'scene_move', 'everything leaves left before the cat drops in for "How?"', { sfx: 'whoosh_short', gain_db: -1 });
+    c(S7out, 'hard_cut', 'Sojourner photo drops in from above', { sfx: 'whoosh_short' });
+    c(F.twenty, 'impact', '20 points pop in');
+    c(F.n600, 'reveal', '600,000 points burst out', { sfx: 'swell_reveal', gain_db: -2 });
+    c(F.next, 'next_card_in', 'hard cut on "Next" to the NEXT card');
+    c(F.hot, 'impact', 'the rover dot reaches Idubi', { sfx: 'tick' });
+    c(WM, 'wordmark_echo', 'wordmark dot, then its echo ring 12 frames later (sonic logo)');
+    return L.sort((a, b) => a.frame - b.frame);
+  }
+
+  window.renderAt = renderAt;
+  window.SD = { F, I, NF, LAST, FPS, W, get CHUNKS() { return CHUNKS; }, cues, lastSamples: () => lastN, captionsAt: renderCaptions, lintCat: () => lintCat(), get cat() { return cat; } };
+  window.__ready = (async () => {
+    await Promise.all([document.fonts.load("800 100px 'Archivo'"), document.fonts.load("700 90px 'Archivo'"), document.fonts.load("500 28px 'IBM Plex Mono'")]);
+    await document.fonts.ready;
+    await Promise.all(imgPromises);
+    buildChunks();
+    buildCat();
+    buildPoints();
+    // measure the giant type once (final values), so data lines sit beside them
+    const meas = (id, txt) => { const el = $(id); el.style.display = 'block'; el.style.transform = 'none'; el.textContent = txt; const w = el.offsetWidth, h = el.offsetHeight; el.style.display = 'none'; return [w, h]; };
+    G15W = 40 + meas('g15', '15')[0];
+    G55W = 40 + meas('g55', '5.5')[0];
+    // 600,000 must fit inside x 40 to 900
+    const g6 = $('g600'); g6.style.fontSize = '300px'; let [w6] = meas('g600', '600,000');
+    const fs = Math.min(300, Math.floor((300 * 860) / w6)); g6.style.fontSize = fs + 'px';
+    G600H = meas('g600', '600,000')[1];
+    window.CUES = cues();
+  })();
+
+  const params = new URLSearchParams(location.search);
+  window.__ready.then(() => {
+    if (params.has('t')) renderAt(Number(params.get('t')) || 0);
+    else {
+      let t0 = null;
+      const loop = (ts) => { if (t0 === null) t0 = ts; renderAt(((ts - t0) / 1000) % (NF / FPS)); requestAnimationFrame(loop); };
+      requestAnimationFrame(loop);
+    }
+  });
+})();
+</script>
+</body>
+</html>

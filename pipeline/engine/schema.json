@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://downlinkcat/pipeline/engine/schema.json",
+  "title": "Downlink Cat shot list (v1, classic style)",
+  "description": "What a director model writes for one Short. The builder (pipeline/engine/build.mjs) checks it with lib/validate.mjs, which applies this schema plus the rules that depend on the narration (anchors, beat order, cat choreography) and reports each problem with its path. Word anchors: \"word\", \"word#2\" (second occurrence), \"word@end\" (end of the word), \"word+4f\" / \"word-6f\" (frame offset), or a frame number. A word that occurs more than once must carry #n.",
+  "type": "object",
+  "required": ["version", "series", "title", "bed", "assets", "beats", "cat"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "style": { "const": "classic", "description": "This schema is the classic style. Anime (the house style and the default when \"style\" is missing and there is no \"cat\") is described in schema_anime.json." },
+    "series": { "enum": ["LAUNCH DAY", "JUST DISCOVERED", "HOW DOES THAT WORK", "BY THE NUMBERS"] },
+    "title": { "type": "string", "description": "Page title: a name of two to four words." },
+    "bed": { "type": "string", "description": "Music bed id from lab/sound/beds/beds.json (rotate: never the same bed two Shorts in a row)." },
+    "captions": { "type": "string", "default": "captions.json", "description": "The aligner output, relative to the Short folder." },
+    "voice": { "type": "string", "default": "voice.mp3" },
+    "stress": { "type": "array", "items": { "type": "string" }, "description": "Emphasis words of the script: the cat's mouth and head stress them." },
+    "assets": {
+      "type": "object",
+      "description": "Every image the Short shows, by name.",
+      "additionalProperties": { "$ref": "#/$defs/asset" }
+    },
+    "beats": {
+      "type": "array", "minItems": 3,
+      "description": "In narration order. The first is the hook, the last the NEXT card.",
+      "items": { "$ref": "#/$defs/beat" }
+    },
+    "cat": { "$ref": "#/$defs/cat" }
+  },
+  "$defs": {
+    "anchor": {
+      "description": "A narration word (see the top description) or a frame number.",
+      "oneOf": [{ "type": "string", "pattern": "^.+?(#\\d+)?(@end)?([+-]\\d+f)?$" }, { "type": "integer", "minimum": 0 }]
+    },
+    "markup": { "type": "string", "description": "On-screen text. *word* is amber, _word_ is muted. Facts only: no filler labels such as \"not to scale\"." },
+    "asset": {
+      "type": "object", "required": ["file", "credit"], "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "description": "Path relative to the Short folder (jpg, png or webp; larger than 3200 px is downscaled)." },
+        "credit": { "type": "string", "description": "Exactly as the source gives it (NASA/JPL-Caltech; ESA with its required line)." },
+        "kind": { "enum": ["photo", "graphic"], "default": "photo", "description": "graphic: a cut-out such as an infographic icon (no parallax layers)." },
+        "focus": { "type": "array", "items": { "type": "number", "minimum": 0, "maximum": 1 }, "minItems": 4, "maxItems": 4, "description": "The subject box [x, y, w, h] as fractions of the image. Required for photos: framing, parallax and the cat's keep-out all come from it." },
+        "crop": { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4, "description": "Pixel box [x, y, w, h] of the file to use (icons riding bars)." },
+        "note": { "type": "string", "description": "Where the image comes from (asset id, page)." }
+      }
+    },
+    "number": {
+      "type": "object", "additionalProperties": false,
+      "description": "The giant number block. On a photo it sits on an ink box (amber on ink).",
+      "properties": {
+        "value": { "type": "number", "exclusiveMinimum": 0 },
+        "text": { "type": "string", "description": "Instead of value, for a non-numeric slam (\"1/1000\")." },
+        "decimals": { "type": "integer", "minimum": 0 },
+        "prefix": { "type": "string" }, "suffix": { "type": "string", "description": "For example \"x\"." },
+        "style": { "enum": ["count", "slam", "roll"], "default": "count", "description": "count: spring count-up from the first nonzero step; slam: the whole value; roll: an odometer from `from` to `value`." },
+        "from": { "type": "number" },
+        "at": { "$ref": "#/$defs/anchor" }, "land": { "$ref": "#/$defs/anchor" }, "exit_at": { "$ref": "#/$defs/anchor" },
+        "data": { "description": "The mono line under the number (units in _muted_).", "oneOf": [{ "$ref": "#/$defs/markup" }, { "type": "array", "items": { "type": "object", "required": ["text"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "text": { "$ref": "#/$defs/markup" } } } }] },
+        "size": { "type": "number", "description": "Font px; default fits x 40 to 900, at most 340." }
+      }
+    },
+    "diagram": {
+      "type": "object",
+      "description": "Flat amber line art in diagram units: a `size` box (default [1000, 800]) fitted into the content zone or its left or right part.",
+      "properties": {
+        "region": { "enum": ["full", "left", "right"], "default": "full" },
+        "size": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+        "subject": { "description": "What the cat must not cover: a unit box, \"none\", or (default) every drawn element.", "oneOf": [{ "const": "none" }, { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 }] },
+        "elements": { "type": "array", "items": { "$ref": "#/$defs/element" } },
+        "dot": {
+          "type": "object", "required": ["keys"], "description": "The persistent amber dot inside the drawing.",
+          "properties": {
+            "path": { "type": "string", "description": "id of a path element the dot travels along (keys then give u, 0..1)." },
+            "keys": { "type": "array", "items": { "type": "object", "required": ["at"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "u": { "type": "number" }, "pos": { "type": "array", "items": { "type": "number" } } } } },
+            "ease": { "enum": ["move", "linear", "drive"] },
+            "pulse": { "type": "array", "items": { "$ref": "#/$defs/anchor" } }
+          }
+        },
+        "camera": {
+          "description": "Camera keys over the drawing, or follow the dot.",
+          "oneOf": [
+            { "type": "array", "items": { "type": "object", "required": ["at"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "center": { "type": "array" }, "zoom": { "type": "number" }, "frames": { "type": "integer" } } } },
+            { "type": "object", "properties": { "follow": { "const": "dot" }, "lead": { "type": "number" } } }
+          ]
+        },
+        "number": { "$ref": "#/$defs/number" }
+      }
+    },
+    "element": {
+      "type": "object",
+      "description": "Exactly one of path, circle, ellipse, marker, ring, craft, label, glyph, hazards, fan. Every element also takes at, until, draw (frames to draw in, default 16), mute_at (turns muted and dashed), id.",
+      "properties": {
+        "path": { "type": "array", "items": { "type": "array", "items": { "type": "number" } } },
+        "style": { "enum": ["solid", "dashed", "thin", "route"], "description": "route: dashed behind the dot, solid ahead." },
+        "smooth": { "type": "boolean", "default": true },
+        "grow": { "type": "object", "properties": { "at": { "$ref": "#/$defs/anchor" }, "to": { "type": "array" } } },
+        "circle": { "type": "array" }, "ellipse": { "type": "array" },
+        "marker": { "type": "array", "description": "Filled amber event marker [x, y]." },
+        "ring": { "type": "array", "description": "[x, y, r]; pulse: words; ink: fill inside." },
+        "craft": { "type": "array", "description": "Spacecraft: a paper square [x, y]." },
+        "label": { "$ref": "#/$defs/markup" }, "pos": { "type": "array" }, "anchor": { "enum": ["right", "left", "above", "below", "center"] },
+        "glyph": { "enum": ["dish", "dome", "rocket", "rover", "spiral", "blob", "planet", "binary"] }, "size": { "type": "number" }, "rot": { "type": "number" }, "seed": { "type": "integer" },
+        "hazards": { "type": "array", "description": "[x, y, w, h]: seeded rocks, revealed when the dot's fan reaches them." }, "count": { "type": "integer" }, "reveal": { "enum": ["fan", "at"] },
+        "fan": { "type": "number", "description": "A view fan on the dot, range in units." }, "half": { "type": "number" },
+        "at": { "$ref": "#/$defs/anchor" }, "until": { "$ref": "#/$defs/anchor" }, "mute_at": { "$ref": "#/$defs/anchor" },
+        "pulse": { "type": "array", "items": { "$ref": "#/$defs/anchor" } },
+        "draw": { "type": "integer" }, "id": { "type": "string" }, "cue": { "type": "string" }
+      }
+    },
+    "beat": {
+      "type": "object", "required": ["id", "start", "shot"],
+      "properties": {
+        "id": { "type": "string" },
+        "start": { "$ref": "#/$defs/anchor", "description": "The word the beat lands on (the transition is centred on it)." },
+        "end": { "$ref": "#/$defs/anchor" },
+        "hit": { "type": "boolean", "description": "The start word is a hit word: allows a hard cut." },
+        "transition": {
+          "type": "object", "description": "How this beat enters (none on the hook).",
+          "properties": {
+            "type": { "enum": ["push", "iris", "morph", "cut"], "description": "push: both shots travel together (camera move); iris: the outgoing closes into the amber dot, the incoming opens from it; morph: the outgoing shrinks into the dot, the incoming grows or draws in from it; cut: hit words only." },
+            "dir": { "enum": ["up", "down", "left", "right"] },
+            "frames": { "type": "integer", "minimum": 6, "maximum": 16, "default": 12 }
+          }
+        },
+        "source": { "type": "string", "description": "Source of the facts on line art (\"NASA\"); shown as \"Source: NASA\" in the credit slot. Required for line-art beats." },
+        "chip": {
+          "type": "object", "required": ["body", "value", "source"],
+          "properties": {
+            "body": { "type": "string" }, "value": { "type": "string", "description": "Computed from a real distance for the story date (\"12 min 59 s\")." },
+            "source": { "type": "string" }, "at": { "$ref": "#/$defs/anchor" }, "until": { "$ref": "#/$defs/anchor" },
+            "seconds": { "type": "number", "description": "The real delay; at 1.6 s or less the echo ring lands exactly that late." },
+            "echo_frames": { "type": "integer" }
+          }
+        },
+        "shot": {
+          "type": "object", "required": ["type"],
+          "description": "Parameters by type. hook: image (photo) or elements (line art) + number or headline. photo: image, frame, y, fill, zoom, push, drift, punch, layers, camera, marks, number. lens: image, side, r, fill, number. count: number + image (lens) or diagram. bars: rows, max, ticks, race, at, land, mark, dot_row. diagram: see $defs/diagram. points: stages (two). fact: lines, by, by_at, size, art. next: headline, headline_at, date (or null), date_at, lines, pointer, art.",
+          "properties": {
+            "type": { "enum": ["hook", "photo", "lens", "count", "bars", "diagram", "points", "fact", "next"] },
+            "image": { "type": "string" },
+            "frame": { "enum": ["left", "center", "right"] }, "y": { "enum": ["top", "center", "bottom"] },
+            "fill": { "type": "number" }, "zoom": { "type": "number" },
+            "push": { "type": "number", "minimum": 0.03, "maximum": 0.07 },
+            "drift": { "enum": ["left", "right", "up", "down"] },
+            "punch": { "type": "array", "items": { "$ref": "#/$defs/anchor" } },
+            "layers": { "type": "integer", "minimum": 0, "maximum": 2 },
+            "camera": { "type": "array" },
+            "marks": { "type": "array", "items": { "type": "object", "required": ["at", "point"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "point": { "type": "array" }, "r": { "type": "number" }, "label": { "$ref": "#/$defs/markup" }, "until": { "$ref": "#/$defs/anchor" } } } },
+            "headline": { "type": "array", "items": { "$ref": "#/$defs/markup" }, "maxItems": 4 },
+            "headline_at": { "type": "array", "items": { "$ref": "#/$defs/anchor" } },
+            "headline_size": { "type": "number" },
+            "number": { "$ref": "#/$defs/number" },
+            "side": { "enum": ["left", "center", "right"] },
+            "diagram": { "$ref": "#/$defs/diagram" },
+            "rows": { "type": "array", "items": { "type": "object", "required": ["value"], "properties": { "value": { "type": "number" }, "at": { "$ref": "#/$defs/anchor" }, "land": { "$ref": "#/$defs/anchor" }, "label": { "$ref": "#/$defs/markup" }, "data": { "$ref": "#/$defs/markup" }, "data_at": { "$ref": "#/$defs/anchor" }, "icon": { "type": "string" }, "decimals": { "type": "integer" } } } },
+            "race": { "type": "boolean" }, "max": { "type": "number" }, "ticks": { "type": "number" },
+            "mark": { "type": "object", "properties": { "row": { "type": "integer" }, "at": { "$ref": "#/$defs/anchor" } } },
+            "dot_row": { "type": "integer" },
+            "stages": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "object", "required": ["at", "value"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "value": { "type": "integer" }, "data": { "$ref": "#/$defs/markup" }, "image": { "type": "string" }, "image_at": { "$ref": "#/$defs/anchor" } } } },
+            "lines": { "type": "array", "items": { "type": "object", "required": ["text"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "text": { "$ref": "#/$defs/markup" } } } },
+            "by": { "$ref": "#/$defs/markup" }, "by_at": { "$ref": "#/$defs/anchor" }, "size": { "type": "number" },
+            "art": { "$ref": "#/$defs/diagram" },
+            "date": { "oneOf": [{ "type": "string", "pattern": "^[A-Z]{3} \\d{1,2} [A-Z]{3}$" }, { "type": "null" }] },
+            "date_at": { "$ref": "#/$defs/anchor" },
+            "pointer": { "type": "object", "required": ["text"], "properties": { "at": { "$ref": "#/$defs/anchor" }, "text": { "$ref": "#/$defs/markup" } } },
+            "elements": { "type": "array", "items": { "$ref": "#/$defs/element" } },
+            "dot": { "type": "object" }, "region": { "enum": ["full", "left", "right"] }, "subject": {}
+          }
+        }
+      }
+    },
+    "cat": {
+      "type": "object", "required": ["moves"],
+      "properties": {
+        "scale": { "type": "number", "minimum": 0.2, "maximum": 0.45, "default": 0.34 },
+        "seed": { "type": "integer" },
+        "moves": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["at", "do"],
+            "description": "Extra keys pass to the v3 actor (dur, count, period, text, sub, size, spin, height, scale, from).",
+            "properties": {
+              "at": { "$ref": "#/$defs/anchor" },
+              "do": { "enum": ["enter", "exit", "hop", "walk", "scoot", "swing", "fly", "float", "skid", "point", "what", "facepalm", "shrug", "thumbs", "sign", "card", "bounce", "gasp", "nod", "listen", "tilt", "wave", "emote", "idle", "expr", "look"] },
+              "how": { "enum": ["skid", "drop", "float", "pop", "zip", "jet", "tether"] },
+              "to": { "description": "Travel destination (feet): caption, caption:0.3, left, right, center, dot, el:<name>, el:<name>:0.3, el:<beat id>.<name>, or [x, y]. For exit zip/jet: left, right, up.", "oneOf": [{ "type": "string" }, { "type": "array" }] },
+              "target": { "description": "What a point, gasp or look aims at (same forms as to, plus camera).", "oneOf": [{ "type": "string" }, { "type": "array" }] },
+              "box": { "type": "string", "description": "enter pop: the box he pops up from (caption)." },
+              "along": { "type": "number", "description": "enter pop: 0..1 across the box." },
+              "expr": { "enum": ["neutral", "curious", "excited", "shocked", "sad", "skeptical", "angry", "happy", "wink", "keen", "wow", "doh", "meh", "focus", "relief", "dizzy"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

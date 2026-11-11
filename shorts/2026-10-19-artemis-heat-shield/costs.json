@@ -1,0 +1,16 @@
+{
+ "triage": {
+  "usd": 0.003156,
+  "seconds": 16.4,
+  "models": [
+   "anthropic/claude-haiku-5.5"
+  ]
+ },
+ "script": {
+  "usd": 0.020718,
+  "seconds": 6.0,
+  "models": [
+   "anthropic/claude-sonnet-5.5"
+  ]
+ }
+}

@@ -1,0 +1,678 @@
+{
+ "maxAbsDiffFrames": 0.5,
+ "outsideTwoFrames": [],
+ "rows": [
+  {
+   "i": 0,
+   "text": "A",
+   "timedFrom": "transcript \"A\"",
+   "spokenFrame": 2.7,
+   "shownFrame": 3,
+   "diff": 0.3
+  },
+  {
+   "i": 1,
+   "text": "flash",
+   "timedFrom": "transcript \"flash\"",
+   "spokenFrame": 6.3,
+   "shownFrame": 6,
+   "diff": -0.3
+  },
+  {
+   "i": 2,
+   "text": "lasting",
+   "timedFrom": "transcript \"lasting\"",
+   "spokenFrame": 14.1,
+   "shownFrame": 14,
+   "diff": -0.1
+  },
+  {
+   "i": 3,
+   "text": "one",
+   "timedFrom": "transcript \"one\"",
+   "spokenFrame": 27.3,
+   "shownFrame": 27,
+   "diff": -0.3
+  },
+  {
+   "i": 4,
+   "text": "thousandth",
+   "timedFrom": "transcript \"thousandth\"",
+   "spokenFrame": 37.5,
+   "shownFrame": 38,
+   "diff": 0.5
+  },
+  {
+   "i": 5,
+   "text": "of",
+   "timedFrom": "transcript \"of\"",
+   "spokenFrame": 64.5,
+   "shownFrame": 65,
+   "diff": 0.5
+  },
+  {
+   "i": 6,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 66.9,
+   "shownFrame": 67,
+   "diff": 0.1
+  },
+  {
+   "i": 7,
+   "text": "second",
+   "timedFrom": "transcript \"second\"",
+   "spokenFrame": 69.9,
+   "shownFrame": 70,
+   "diff": 0.1
+  },
+  {
+   "i": 8,
+   "text": "left",
+   "timedFrom": "transcript \"left\"",
+   "spokenFrame": 79.5,
+   "shownFrame": 80,
+   "diff": 0.5
+  },
+  {
+   "i": 9,
+   "text": "when",
+   "timedFrom": "transcript \"when\"",
+   "spokenFrame": 87.9,
+   "shownFrame": 88,
+   "diff": 0.1
+  },
+  {
+   "i": 10,
+   "text": "the",
+   "timedFrom": "transcript \"the\"",
+   "spokenFrame": 92.7,
+   "shownFrame": 93,
+   "diff": 0.3
+  },
+  {
+   "i": 11,
+   "text": "universe",
+   "timedFrom": "transcript \"universe\"",
+   "spokenFrame": 95.1,
+   "shownFrame": 95,
+   "diff": -0.1
+  },
+  {
+   "i": 12,
+   "text": "was",
+   "timedFrom": "transcript \"was\"",
+   "spokenFrame": 103.5,
+   "shownFrame": 104,
+   "diff": 0.5
+  },
+  {
+   "i": 13,
+   "text": "only",
+   "timedFrom": "transcript \"only\"",
+   "spokenFrame": 110.1,
+   "shownFrame": 110,
+   "diff": -0.1
+  },
+  {
+   "i": 14,
+   "text": "three",
+   "timedFrom": "transcript \"three\"",
+   "spokenFrame": 117.3,
+   "shownFrame": 117,
+   "diff": -0.3
+  },
+  {
+   "i": 15,
+   "text": "billion",
+   "timedFrom": "transcript \"billion\"",
+   "spokenFrame": 129.3,
+   "shownFrame": 129,
+   "diff": -0.3
+  },
+  {
+   "i": 16,
+   "text": "years",
+   "timedFrom": "transcript \"years\"",
+   "spokenFrame": 144.9,
+   "shownFrame": 145,
+   "diff": 0.1
+  },
+  {
+   "i": 17,
+   "text": "old.",
+   "timedFrom": "transcript \"old.\"",
+   "spokenFrame": 155.7,
+   "shownFrame": 156,
+   "diff": 0.3
+  },
+  {
+   "i": 18,
+   "text": "Astronomers",
+   "timedFrom": "transcript \"Astronomers\"",
+   "spokenFrame": 171.9,
+   "shownFrame": 172,
+   "diff": 0.1
+  },
+  {
+   "i": 19,
+   "text": "just",
+   "timedFrom": "transcript \"just\"",
+   "spokenFrame": 196.5,
+   "shownFrame": 197,
+   "diff": 0.5
+  },
+  {
+   "i": 20,
+   "text": "confirmed",
+   "timedFrom": "transcript \"confirmed\"",
+   "spokenFrame": 203.1,
+   "shownFrame": 203,
+   "diff": -0.1
+  },
+  {
+   "i": 21,
+   "text": "the",
+   "timedFrom": "transcript \"the\"",
+   "spokenFrame": 216.9,
+   "shownFrame": 217,
+   "diff": 0.1
+  },
+  {
+   "i": 22,
+   "text": "farthest",
+   "timedFrom": "transcript \"farthest\"",
+   "spokenFrame": 226.5,
+   "shownFrame": 227,
+   "diff": 0.5
+  },
+  {
+   "i": 23,
+   "text": "fast",
+   "timedFrom": "transcript \"fast\"",
+   "spokenFrame": 245.7,
+   "shownFrame": 246,
+   "diff": 0.3
+  },
+  {
+   "i": 24,
+   "text": "radio",
+   "timedFrom": "transcript \"radio\"",
+   "spokenFrame": 255.9,
+   "shownFrame": 256,
+   "diff": 0.1
+  },
+  {
+   "i": 25,
+   "text": "burst",
+   "timedFrom": "transcript \"burst\"",
+   "spokenFrame": 268.5,
+   "shownFrame": 269,
+   "diff": 0.5
+  },
+  {
+   "i": 26,
+   "text": "ever",
+   "timedFrom": "transcript \"ever\"",
+   "spokenFrame": 277.5,
+   "shownFrame": 278,
+   "diff": 0.5
+  },
+  {
+   "i": 27,
+   "text": "seen.",
+   "timedFrom": "transcript \"seen.\"",
+   "spokenFrame": 290.1,
+   "shownFrame": 290,
+   "diff": -0.1
+  },
+  {
+   "i": 28,
+   "text": "Nobody",
+   "timedFrom": "transcript \"Nobody\"",
+   "spokenFrame": 303.3,
+   "shownFrame": 303,
+   "diff": -0.3
+  },
+  {
+   "i": 29,
+   "text": "knows",
+   "timedFrom": "transcript \"knows\"",
+   "spokenFrame": 319.5,
+   "shownFrame": 320,
+   "diff": 0.5
+  },
+  {
+   "i": 30,
+   "text": "what",
+   "timedFrom": "transcript \"what\"",
+   "spokenFrame": 327.3,
+   "shownFrame": 327,
+   "diff": -0.3
+  },
+  {
+   "i": 31,
+   "text": "makes",
+   "timedFrom": "transcript \"makes\"",
+   "spokenFrame": 332.7,
+   "shownFrame": 333,
+   "diff": 0.3
+  },
+  {
+   "i": 32,
+   "text": "these",
+   "timedFrom": "transcript \"these\"",
+   "spokenFrame": 340.5,
+   "shownFrame": 341,
+   "diff": 0.5
+  },
+  {
+   "i": 33,
+   "text": "bursts.",
+   "timedFrom": "transcript \"bursts.\"",
+   "spokenFrame": 345.9,
+   "shownFrame": 346,
+   "diff": 0.1
+  },
+  {
+   "i": 34,
+   "text": "So",
+   "timedFrom": "transcript \"So\"",
+   "spokenFrame": 357.3,
+   "shownFrame": 357,
+   "diff": -0.3
+  },
+  {
+   "i": 35,
+   "text": "what",
+   "timedFrom": "transcript \"what\"",
+   "spokenFrame": 366.3,
+   "shownFrame": 366,
+   "diff": -0.3
+  },
+  {
+   "i": 36,
+   "text": "was",
+   "timedFrom": "transcript \"was\"",
+   "spokenFrame": 377.7,
+   "shownFrame": 378,
+   "diff": 0.3
+  },
+  {
+   "i": 37,
+   "text": "out",
+   "timedFrom": "transcript \"out\"",
+   "spokenFrame": 381.3,
+   "shownFrame": 381,
+   "diff": -0.3
+  },
+  {
+   "i": 38,
+   "text": "there?",
+   "timedFrom": "transcript \"there?\"",
+   "spokenFrame": 385.5,
+   "shownFrame": 386,
+   "diff": 0.5
+  },
+  {
+   "i": 39,
+   "text": "Ground",
+   "timedFrom": "transcript \"Ground\"",
+   "spokenFrame": 398.7,
+   "shownFrame": 399,
+   "diff": 0.3
+  },
+  {
+   "i": 40,
+   "text": "telescopes",
+   "timedFrom": "transcript \"telescopes\"",
+   "spokenFrame": 417.3,
+   "shownFrame": 417,
+   "diff": -0.3
+  },
+  {
+   "i": 41,
+   "text": "saw",
+   "timedFrom": "transcript \"saw\"",
+   "spokenFrame": 428.7,
+   "shownFrame": 429,
+   "diff": 0.3
+  },
+  {
+   "i": 42,
+   "text": "nothing",
+   "timedFrom": "transcript \"nothing\"",
+   "spokenFrame": 440.7,
+   "shownFrame": 441,
+   "diff": 0.3
+  },
+  {
+   "i": 43,
+   "text": "at",
+   "timedFrom": "transcript \"at\"",
+   "spokenFrame": 460.5,
+   "shownFrame": 461,
+   "diff": 0.5
+  },
+  {
+   "i": 44,
+   "text": "that",
+   "timedFrom": "transcript \"that\"",
+   "spokenFrame": 471.3,
+   "shownFrame": 471,
+   "diff": -0.3
+  },
+  {
+   "i": 45,
+   "text": "spot.",
+   "timedFrom": "transcript \"spot.\"",
+   "spokenFrame": 476.1,
+   "shownFrame": 476,
+   "diff": -0.1
+  },
+  {
+   "i": 46,
+   "text": "Webb",
+   "timedFrom": "transcript \"Webb\"",
+   "spokenFrame": 488.7,
+   "shownFrame": 489,
+   "diff": 0.3
+  },
+  {
+   "i": 47,
+   "text": "found",
+   "timedFrom": "transcript \"found\"",
+   "spokenFrame": 502.5,
+   "shownFrame": 503,
+   "diff": 0.5
+  },
+  {
+   "i": 48,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 515.7,
+   "shownFrame": 516,
+   "diff": 0.3
+  },
+  {
+   "i": 49,
+   "text": "galaxy.",
+   "timedFrom": "transcript \"galaxy.\"",
+   "spokenFrame": 520.5,
+   "shownFrame": 521,
+   "diff": 0.5
+  },
+  {
+   "i": 50,
+   "text": "A",
+   "timedFrom": "transcript \"A\"",
+   "spokenFrame": 539.7,
+   "shownFrame": 540,
+   "diff": 0.3
+  },
+  {
+   "i": 51,
+   "text": "dwarf,",
+   "timedFrom": "transcript \"dwarf\"",
+   "spokenFrame": 554.7,
+   "shownFrame": 555,
+   "diff": 0.3
+  },
+  {
+   "i": 52,
+   "text": "one",
+   "timedFrom": "transcript \"1\"",
+   "spokenFrame": 562.5,
+   "shownFrame": 563,
+   "diff": 0.5
+  },
+  {
+   "i": 53,
+   "text": "thousand",
+   "timedFrom": "transcript \",000\"",
+   "spokenFrame": 573.9,
+   "shownFrame": 574,
+   "diff": 0.1
+  },
+  {
+   "i": 54,
+   "text": "times",
+   "timedFrom": "transcript \"times\"",
+   "spokenFrame": 597.3,
+   "shownFrame": 597,
+   "diff": -0.3
+  },
+  {
+   "i": 55,
+   "text": "less",
+   "timedFrom": "transcript \"less\"",
+   "spokenFrame": 603.3,
+   "shownFrame": 603,
+   "diff": -0.3
+  },
+  {
+   "i": 56,
+   "text": "massive",
+   "timedFrom": "transcript \"massive\"",
+   "spokenFrame": 614.7,
+   "shownFrame": 615,
+   "diff": 0.3
+  },
+  {
+   "i": 57,
+   "text": "than",
+   "timedFrom": "transcript \"than\"",
+   "spokenFrame": 627.9,
+   "shownFrame": 628,
+   "diff": 0.1
+  },
+  {
+   "i": 58,
+   "text": "expected.",
+   "timedFrom": "transcript \"expected.\"",
+   "spokenFrame": 632.1,
+   "shownFrame": 632,
+   "diff": -0.1
+  },
+  {
+   "i": 59,
+   "text": "That",
+   "timedFrom": "transcript \"That\"",
+   "spokenFrame": 649.5,
+   "shownFrame": 650,
+   "diff": 0.5
+  },
+  {
+   "i": 60,
+   "text": "makes",
+   "timedFrom": "transcript \"makes\"",
+   "spokenFrame": 663.3,
+   "shownFrame": 663,
+   "diff": -0.3
+  },
+  {
+   "i": 61,
+   "text": "a",
+   "timedFrom": "transcript \"a\"",
+   "spokenFrame": 669.3,
+   "shownFrame": 669,
+   "diff": -0.3
+  },
+  {
+   "i": 62,
+   "text": "neutron",
+   "timedFrom": "transcript \"neutron\"",
+   "spokenFrame": 675.9,
+   "shownFrame": 676,
+   "diff": 0.1
+  },
+  {
+   "i": 63,
+   "text": "star",
+   "timedFrom": "transcript \"star\"",
+   "spokenFrame": 683.1,
+   "shownFrame": 683,
+   "diff": -0.1
+  },
+  {
+   "i": 64,
+   "text": "merger",
+   "timedFrom": "transcript \"merger\"",
+   "spokenFrame": 693.9,
+   "shownFrame": 694,
+   "diff": 0.1
+  },
+  {
+   "i": 65,
+   "text": "very",
+   "timedFrom": "transcript \"very\"",
+   "spokenFrame": 702.9,
+   "shownFrame": 703,
+   "diff": 0.1
+  },
+  {
+   "i": 66,
+   "text": "unlikely,",
+   "timedFrom": "transcript \"unlikely,\"",
+   "spokenFrame": 720.9,
+   "shownFrame": 721,
+   "diff": 0.1
+  },
+  {
+   "i": 67,
+   "text": "the",
+   "timedFrom": "transcript \"the\"",
+   "spokenFrame": 741.9,
+   "shownFrame": 742,
+   "diff": 0.1
+  },
+  {
+   "i": 68,
+   "text": "team",
+   "timedFrom": "transcript \"team\"",
+   "spokenFrame": 745.5,
+   "shownFrame": 746,
+   "diff": 0.5
+  },
+  {
+   "i": 69,
+   "text": "says.",
+   "timedFrom": "transcript \"says.\"",
+   "spokenFrame": 750.3,
+   "shownFrame": 750,
+   "diff": -0.3
+  },
+  {
+   "i": 70,
+   "text": "MeerKAT",
+   "timedFrom": "interpolated",
+   "spokenFrame": 768.3,
+   "shownFrame": 768,
+   "diff": -0.3
+  },
+  {
+   "i": 71,
+   "text": "may",
+   "timedFrom": "transcript \"may\"",
+   "spokenFrame": 786.9,
+   "shownFrame": 787,
+   "diff": 0.1
+  },
+  {
+   "i": 72,
+   "text": "find",
+   "timedFrom": "transcript \"find\"",
+   "spokenFrame": 792.9,
+   "shownFrame": 793,
+   "diff": 0.1
+  },
+  {
+   "i": 73,
+   "text": "several",
+   "timedFrom": "transcript \"several\"",
+   "spokenFrame": 800.1,
+   "shownFrame": 800,
+   "diff": -0.1
+  },
+  {
+   "i": 74,
+   "text": "more",
+   "timedFrom": "transcript \"more\"",
+   "spokenFrame": 812.7,
+   "shownFrame": 813,
+   "diff": 0.3
+  },
+  {
+   "i": 75,
+   "text": "every",
+   "timedFrom": "transcript \"every\"",
+   "spokenFrame": 818.1,
+   "shownFrame": 818,
+   "diff": -0.1
+  },
+  {
+   "i": 76,
+   "text": "year.",
+   "timedFrom": "transcript \"year.\"",
+   "spokenFrame": 829.5,
+   "shownFrame": 830,
+   "diff": 0.5
+  },
+  {
+   "i": 77,
+   "text": "Follow",
+   "timedFrom": "transcript \"Follow\"",
+   "spokenFrame": 858.4,
+   "shownFrame": 858,
+   "diff": -0.4
+  },
+  {
+   "i": 78,
+   "text": "Downlink",
+   "timedFrom": "transcript \"Downlink\"",
+   "spokenFrame": 866.2,
+   "shownFrame": 866,
+   "diff": -0.2
+  },
+  {
+   "i": 79,
+   "text": "Cat",
+   "timedFrom": "transcript \"Cat\"",
+   "spokenFrame": 877.2,
+   "shownFrame": 877,
+   "diff": -0.2
+  },
+  {
+   "i": 80,
+   "text": "for",
+   "timedFrom": "transcript \"for\"",
+   "spokenFrame": 884.2,
+   "shownFrame": 884,
+   "diff": -0.2
+  },
+  {
+   "i": 81,
+   "text": "the",
+   "timedFrom": "transcript \"the\"",
+   "spokenFrame": 887.2,
+   "shownFrame": 887,
+   "diff": -0.2
+  },
+  {
+   "i": 82,
+   "text": "next",
+   "timedFrom": "transcript \"next\"",
+   "spokenFrame": 889.6,
+   "shownFrame": 890,
+   "diff": 0.4
+  },
+  {
+   "i": 83,
+   "text": "one.",
+   "timedFrom": "transcript \"one.\"",
+   "spokenFrame": 897.4,
+   "shownFrame": 897,
+   "diff": -0.4
+  }
+ ]
+}

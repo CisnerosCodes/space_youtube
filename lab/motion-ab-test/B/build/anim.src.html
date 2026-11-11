@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>Webb Mirror Short</title>
+<!--
+  Fonts: Google Fonts css2 API, family=Inter+Tight:wght@600;800 and family=JetBrains+Mono:wght@500, display=block.
+  The latin woff2 files that API serves are inlined below so this file is self-contained (no network at render time).
+  Photo: NASA/Goddard/Chris Gunn, GSFC_20171208_Archive_e000422 (inlined JPEG, 2068x1550).
+-->
+<style>
+@font-face { font-family: 'Inter Tight'; font-style: normal; font-weight: 600 800; font-display: block;
+  src: url(data:font/woff2;base64,{{FONT_INTER_TIGHT}}) format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: block;
+  src: url(data:font/woff2;base64,{{FONT_JETBRAINS_MONO}}) format('woff2'); }
+
+:root {
+  --ink: #0A0A0A; --paper: #F2EFE8; --gold: #E8B84A; --gray: #8C8A85;
+  --margin: 80px;
+  --scrim: 0.55;
+  --scrimCredit: 0.85;   /* 55% cannot lift the mandated #8C8A85 credit to 4.5:1 over the photo (measured 3.28:1) */
+}
+html, body { margin: 0; padding: 0; background: var(--ink); width: 1080px; height: 1920px; overflow: hidden; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); }
+
+/* Photo windows: shown or hidden with opacity only; image moved with transform only */
+.win { position: absolute; left: 0; overflow: hidden; opacity: 0; }
+#winFull { top: 0; width: 1080px; height: 1920px; }
+#winBand { top: 530px; width: 1080px; height: 809px; }
+.ph { position: absolute; left: 0; top: 0; width: 2068px; height: 1550px; transform-origin: 0 0; display: block; }
+.dim { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: var(--ink); }
+#segSvg { position: absolute; left: 0; top: 0; width: 2068px; height: 1550px; transform-origin: 0 0; overflow: visible; }
+#segOutline { fill: none; stroke: var(--gold); stroke-linejoin: miter; stroke-dasharray: 1 1; }
+
+#diagram { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+#diagram polygon, #diagram path { fill: none; stroke: var(--gold); stroke-width: 4px; vector-effect: non-scaling-stroke; stroke-linejoin: miter; }
+#diagram g { opacity: 0; }
+
+/* Text blocks: left-aligned on the 80 px margin; each block carries its own flat ink scrim */
+.blk { position: absolute; left: var(--margin); width: max-content; opacity: 0; transform-origin: 0 50%; }
+.scrim { position: absolute; left: -24px; right: -24px; top: -14px; bottom: -14px; background: var(--ink); opacity: 0; }
+.onPhoto .scrim { opacity: var(--scrim); }
+#credit.onPhoto .scrim { opacity: var(--scrimCredit); }
+/* line scrims are opaque ink inside one group at 55%, so overlapping lines never double-darken */
+.scrimGroup { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: var(--scrim); }
+.lineScrim { position: absolute; left: -24px; background: var(--ink); transform-origin: 0 0; }
+.lines > .scrim { display: none; }
+.txt { position: relative; }
+.qa-notext .txt { visibility: hidden; }
+
+.head { font: 800 132px/0.95 'Inter Tight', sans-serif; letter-spacing: -0.02em; text-transform: uppercase; color: var(--paper); }
+.head.gold { color: var(--gold); }
+#hl1, #hl2 { width: max-content; transform-origin: 0 50%; }
+#hs2 { transform-origin: 24px 50%; }
+.cap { font: 600 64px/1.1 'Inter Tight', sans-serif; color: var(--paper); }
+.w { position: relative; display: inline-block; opacity: 0; }
+.w .g { position: absolute; left: 0; top: 0; color: var(--gold); opacity: 0; }
+.num { font: 500 96px/1 'JetBrains Mono', monospace; color: var(--gold); white-space: pre; }
+.big { font: 800 220px/0.95 'Inter Tight', sans-serif; letter-spacing: -0.02em; color: var(--gold); font-variant-numeric: tabular-nums; white-space: pre; }
+.credit { font: 500 26px/1.2 'JetBrains Mono', monospace; color: var(--gray); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="win" id="winFull">
+    <img class="ph" id="phFull" alt="" src="data:image/jpeg;base64,{{PHOTO}}">
+    <div class="dim" id="dimFull"></div>
+  </div>
+  <div class="win" id="winBand">
+    <img class="ph" id="phBand" alt="">
+    <div class="dim" id="dimBand"></div>
+    <svg id="segSvg" viewBox="0 0 2068 1550" width="2068" height="1550">
+      <path id="segOutline" pathLength="1" d=""/>
+    </svg>
+  </div>
+  <svg id="diagram" viewBox="0 0 1080 1920" width="1080" height="1920"></svg>
+
+  <!-- Shot 1 headline -->
+  <div class="blk onPhoto" id="head" style="top:300px">
+    <div class="scrimGroup"><div class="lineScrim" id="hs1"></div><div class="lineScrim" id="hs2"></div></div>
+    <div class="txt head" id="hl1">18 mirrors.</div>
+    <div class="txt head gold" id="hl2">One eye.</div>
+  </div>
+
+  <!-- Captions (words filled in by script) -->
+  <div class="blk" id="cap2a" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
+  <div class="blk" id="cap2b" style="top:446px"><div class="scrim"></div><div class="txt cap"></div></div>
+  <div class="blk" id="cap3" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
+  <div class="blk" id="cap4" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
+  <div class="blk onPhoto lines" id="cap5" style="top:300px"><div class="scrim"></div><div class="txt cap"></div></div>
+
+  <!-- Number readouts -->
+  <div class="blk" id="n13" style="top:1358px"><div class="scrim"></div><div class="txt num"></div></div>
+  <div class="blk" id="n40" style="top:1342px"><div class="scrim"></div><div class="txt num"></div></div>
+  <div class="blk" id="n65" style="top:1234px"><div class="scrim"></div><div class="txt big"></div></div>
+
+  <!-- Credit: every frame, bottom-left of the text safe zone -->
+  <div class="blk onPhoto" id="credit" style="top:1462px; opacity:1"><div class="scrim"></div><div class="txt credit">Photo: NASA/Goddard/Chris Gunn</div></div>
+</div>
+
+<script>
+(() => {
+'use strict';
+const FPS = 30;
+const FRAMES = 360;
+
+/* ---------- MOTION TOKENS (the only motion numbers in this file) ---------- */
+const MOTION = {
+  enter: [0.16, 1, 0.3, 1],      // ease-out-expo
+  move:  [0.76, 0, 0.24, 1],     // ease-in-out-quart
+  exit:  [0.7, 0, 0.84, 0],      // ease-in-expo
+  popPeak: 1.08, popFrames: 6,   // 1.0 -> 1.08 -> 1.0, peak on the beat
+  enterFrames: 12, exitFrames: 6,
+  countSpring: { zeta: 0.8, f: 2 },
+  secondaryRatio: 0.6, secondaryDelay: 4,
+  wordGap: 3,
+  pushMax: 0.02,                 // ambient photo push per shot, linear
+  beat: 15                       // 120 BPM at 30 fps
+};
+
+/* ---------- TIMELINE (frame cues, all cuts on multiples of MOTION.beat) ---------- */
+const SHOT = { hook: [0, 45], size: [45, 135], weight: [135, 225], payoff: [225, 315], end: [315, 360] };
+const CUE = {
+  line2: 15,
+  sizeEase: { start: 45, dur: 30, from: 1.10 },   // photo eases out to the whole frame (10% max)
+  outlineDraw: { start: 60, dur: 15 },
+  cap2a: 45, cap2b: 105, n13: 60,
+  hexStart: 135, hexGap: 2,
+  cap3: 150, n40: 165,
+  merge: { start: 225, dur: 24 },
+  union: 255, n65: 255, cap4: 250,
+  cap5: 315
+};
+
+/* ---------- LAYOUT ---------- */
+const IMG = { w: 2068, h: 1550 };
+const STAGE = { w: 1080, h: 1920 };
+const PHOTO_DIM = 0.4;                      // flat #0A0A0A layer over the photo (contrast floor)
+const FULL = { s: STAGE.h / IMG.h, focus: { x: 835, y: 985 } };   // focus = centre of the empty central hexagon
+const BAND = { s: STAGE.w / IMG.w };
+// One real segment, traced from the photo (image pixels): the inner-ring segment directly below the central hole
+const SEGMENT = [[800, 1046], [1058, 1002], [1300, 1030], [1400, 1125], [1057, 1200], [732, 1140]];
+const HEX = { cx: 540, cy: 900, cyMerged: 850, R: 80, spread: 1.25 };   // spread layout is 760 px wide; the merge lifts the cluster 50 px
+const OUTLINE_PX = 4;
+
+/* ---------- MATH ---------- */
+function bezier([x1, y1, x2, y2]) {
+  const bx = (u) => 3 * x1 * u * (1 - u) * (1 - u) + 3 * x2 * u * u * (1 - u) + u * u * u;
+  const by = (u) => 3 * y1 * u * (1 - u) * (1 - u) + 3 * y2 * u * u * (1 - u) + u * u * u;
+  return (x) => {
+    if (x <= 0) return 0;
+    if (x >= 1) return 1;
+    let lo = 0, hi = 1, u = x;
+    for (let i = 0; i < 48; i++) { u = (lo + hi) / 2; if (bx(u) < x) lo = u; else hi = u; }
+    return by(u);
+  };
+}
+const ease = { enter: bezier(MOTION.enter), move: bezier(MOTION.move), exit: bezier(MOTION.exit) };
+const clamp01 = (v) => Math.min(1, Math.max(0, v));
+function spring(t, zeta, f) {
+  if (t <= 0) return 0;
+  const w = 2 * Math.PI * f, wd = w * Math.sqrt(1 - zeta * zeta);
+  return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta * w / wd) * Math.sin(wd * t));
+}
+// Count-up value: spring position, clamped so the readout never shows a number above the fact.
+const countUp = (F, start) => Math.min(1, spring((F - start) / FPS, MOTION.countSpring.zeta, MOTION.countSpring.f));
+// Pop: element cuts in at the peak (on the beat) and settles back to 1.0 over the second half of the 6-frame pop.
+function pop(F, peak) {
+  const half = MOTION.popFrames / 2, d = F - peak;
+  if (d < -half || d > half) return 1;
+  const p = d < 0 ? ease.move(1 + d / half) : 1 - ease.move(d / half);
+  return 1 + (MOTION.popPeak - 1) * p;
+}
+const inRange = (F, a, b) => F >= a - 1e-6 && F < b - 1e-6;
+
+/* ---------- DOM ---------- */
+const $ = (id) => document.getElementById(id);
+const winFull = $('winFull'), winBand = $('winBand');
+const phFull = $('phFull'), phBand = $('phBand'), segSvg = $('segSvg'), segOutline = $('segOutline');
+$('dimFull').style.opacity = PHOTO_DIM; $('dimBand').style.opacity = PHOTO_DIM;
+phBand.src = phFull.src;
+segOutline.setAttribute('d', 'M' + SEGMENT.map((p) => p.join(' ')).join(' L') + ' Z');
+segOutline.style.strokeWidth = (OUTLINE_PX / BAND.s) + 'px';
+
+// Captions: '|' marks the line break
+function buildCaption(id, text) {
+  const el = $(id).querySelector('.txt');
+  const words = [];
+  text.split('|').forEach((line, li) => {
+    if (li) el.appendChild(document.createElement('br'));
+    line.split(' ').forEach((word, wi) => {
+      if (wi) el.appendChild(document.createTextNode(' '));
+      const w = document.createElement('span'); w.className = 'w';
+      w.textContent = word;
+      const g = document.createElement('span'); g.className = 'g'; g.textContent = word;
+      w.appendChild(g); el.appendChild(w); w.dataset.line = li; words.push(w);
+    });
+  });
+  return words;
+}
+const CAPS = {
+  cap2a: { start: CUE.cap2a, end: SHOT.size[1], words: buildCaption('cap2a', 'Each one is 1.3|meters across.') },
+  cap2b: { start: CUE.cap2b, end: SHOT.size[1], words: buildCaption('cap2b', 'About a coffee table.') },
+  cap3:  { start: CUE.cap3, end: null, words: buildCaption('cap3', 'Each weighs about|40 kilograms.') },
+  cap4:  { start: CUE.cap4, end: SHOT.payoff[1], words: buildCaption('cap4', 'Together, one|6.5-meter mirror.') },
+  cap5:  { start: CUE.cap5, end: SHOT.end[1], words: buildCaption('cap5', '18 pieces.|One telescope.') }
+};
+
+// Hexagon diagram: flat-top hexes, two rings around an empty centre (6 + 12)
+const SQ3 = Math.sqrt(3);
+const svgNS = 'http://www.w3.org/2000/svg';
+const diagram = $('diagram');
+const hexPts = (R) => [0, 1, 2, 3, 4, 5].map((i) => [R * Math.cos(i * Math.PI / 3), R * Math.sin(i * Math.PI / 3)]);
+const cells = [];
+for (let q = -2; q <= 2; q++) for (let r = -2; r <= 2; r++) {
+  const d = Math.max(Math.abs(q), Math.abs(r), Math.abs(q + r));
+  if (d === 0 || d > 2) continue;
+  const x = HEX.R * 1.5 * q, y = HEX.R * SQ3 * (r + q / 2);
+  const ang = (Math.atan2(x, -y) + 2 * Math.PI) % (2 * Math.PI);
+  cells.push({ ring: d, x, y, ang });
+}
+cells.sort((a, b) => a.ring - b.ring || a.ang - b.ang);
+const local = hexPts(HEX.R).map((p) => p.map((v) => v.toFixed(3)).join(',')).join(' ');
+cells.forEach((c, i) => {
+  const g = document.createElementNS(svgNS, 'g');
+  const poly = document.createElementNS(svgNS, 'polygon');
+  poly.setAttribute('points', local);
+  g.appendChild(poly); diagram.appendChild(g);
+  c.el = g; c.appear = CUE.hexStart + i * CUE.hexGap;
+});
+// Union outline of the 18 hexes in their closed-up positions: edges used by exactly one hex
+(function buildUnion() {
+  const key = (p) => p[0].toFixed(2) + ',' + p[1].toFixed(2);
+  const count = new Map(), edges = [];
+  cells.forEach((c) => {
+    const pts = hexPts(HEX.R).map(([x, y]) => [HEX.cx + c.x + x, HEX.cy + c.y + y]);
+    for (let i = 0; i < 6; i++) {
+      const a = pts[i], b = pts[(i + 1) % 6];
+      const k = [key(a), key(b)].sort().join('|');
+      count.set(k, (count.get(k) || 0) + 1);
+      edges.push({ k, a, b });
+    }
+  });
+  const adj = new Map(), coord = new Map();
+  edges.filter((e) => count.get(e.k) === 1).forEach(({ a, b }) => {
+    const ka = key(a), kb = key(b);
+    coord.set(ka, a); coord.set(kb, b);
+    if (!adj.has(ka)) adj.set(ka, []); if (!adj.has(kb)) adj.set(kb, []);
+    adj.get(ka).push(kb); adj.get(kb).push(ka);
+  });
+  const seen = new Set(); let d = '';
+  for (const start of adj.keys()) {
+    if (seen.has(start)) continue;
+    let prev = null, cur = start; const loop = [];
+    while (!seen.has(cur)) {
+      seen.add(cur); loop.push(coord.get(cur));
+      const next = adj.get(cur).find((n) => n !== prev && !seen.has(n));
+      prev = cur; if (!next) break; cur = next;
+    }
+    d += 'M' + loop.map((p) => p[0].toFixed(2) + ' ' + p[1].toFixed(2)).join(' L') + ' Z ';
+  }
+  const g = document.createElementNS(svgNS, 'g');
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', d.trim());
+  g.appendChild(path); diagram.appendChild(g);
+  g.style.transformOrigin = HEX.cx + 'px ' + HEX.cy + 'px';
+  window.__union = g;
+})();
+// Hero travel of shot 4 = how far the outermost hex moves while the rings close up
+const heroTravel = Math.max(...cells.map((c) => Math.hypot(c.x * (1 - HEX.spread), c.y * (1 - HEX.spread) + HEX.cyMerged - HEX.cy)));
+const secondaryTravel = heroTravel * MOTION.secondaryRatio;
+
+/* ---------- RENDER ---------- */
+const show = (el, on) => { el.style.opacity = on ? 1 : 0; };
+
+function placePhoto(img, extra, s, base, focus) {
+  // push/zoom by factor k about the screen point "focus": screen = focus + k * (base + s * img - focus)
+  const k = extra;
+  const tx = focus.x + k * (base.x - focus.x), ty = focus.y + k * (base.y - focus.y);
+  img.style.transform = `translate(${tx}px, ${ty}px) scale(${k * s})`;
+}
+
+function setupLineScrims() {
+  // headline: one scrim per line inside a single 55% group (no darker stripe where the lines meet)
+  [['hl1', 'hs1'], ['hl2', 'hs2']].forEach(([t, sc]) => {
+    const line = $(t), el = $(sc), pad = 14, side = 24;
+    el.style.top = (line.offsetTop - pad) + 'px';
+    el.style.height = (line.offsetHeight + 2 * pad) + 'px';
+    el.style.width = (line.offsetWidth + 2 * side) + 'px';
+  });
+  Object.values(CAPS).forEach((c) => {
+    const blk = c.words[0].closest('.blk');
+    if (!blk.classList.contains('lines')) return;
+    const pad = 14, side = 24;
+    const lines = [];
+    const group = document.createElement('div'); group.className = 'scrimGroup';
+    blk.insertBefore(group, blk.firstChild);
+    c.words.forEach((w) => {
+      const li = Number(w.dataset.line);
+      const L = lines[li] || (lines[li] = { top: Infinity, bottom: -Infinity, right: 0, words: [] });
+      L.top = Math.min(L.top, w.offsetTop); L.bottom = Math.max(L.bottom, w.offsetTop + w.offsetHeight);
+      L.right = Math.max(L.right, w.offsetLeft + w.offsetWidth); L.words.push(w);
+    });
+    lines.forEach((L, i) => {
+      const top = L.top - pad, bottom = L.bottom + pad;
+      const el = document.createElement('div'); el.className = 'lineScrim';
+      el.style.top = top + 'px'; el.style.height = (bottom - top) + 'px';
+      el.style.width = (L.right + 2 * side) + 'px';
+      group.appendChild(el);
+      L.el = el; L.full = L.right + 2 * side; L.side = side;
+    });
+    c.lines = lines;
+  });
+}
+
+function renderCaption(c, F) {
+  const blk = c.words[0].closest('.blk');
+  const visible = F >= c.start - 1e-6 && (c.end === null || F < c.end - 1e-6);
+  if (!visible) { blk.style.opacity = 0; return false; }
+  blk.style.opacity = 1;
+  const last = c.words.length - 1;
+  c.words.forEach((w, i) => {
+    const at = c.start + i * MOTION.wordGap;
+    const on = F >= at - 1e-6;
+    w.style.opacity = on ? 1 : 0;
+    const current = on && F < at + MOTION.wordGap - 1e-6;   // the word being "spoken"
+    w.firstElementChild.style.opacity = current ? 1 : 0;
+  });
+  if (c.lines) c.lines.forEach((L) => {
+    // the scrim grows in hard steps with the words, so no empty slab is ever on screen
+    const shown = L.words.filter((w) => w.style.opacity === '1');
+    if (!shown.length) { L.el.style.opacity = 0; return; }
+    const right = Math.max(...shown.map((w) => w.offsetLeft + w.offsetWidth)) + 2 * L.side;
+    L.el.style.opacity = '';
+    L.el.style.transform = `scaleX(${right / L.full})`;
+  });
+  return true;
+}
+
+function renderAt(t) {
+  const F = t * FPS;
+
+  /* photo: full-bleed (shots 1 and 5) */
+  const fullBase = { x: STAGE.w / 2 - FULL.focus.x * FULL.s, y: (STAGE.h - IMG.h * FULL.s) / 2 };
+  const fullFocus = { x: STAGE.w / 2, y: fullBase.y + FULL.focus.y * FULL.s };
+  if (inRange(F, ...SHOT.hook)) {
+    // continues shot 5's push, so the replay cut 359 -> 0 is seamless
+    const p = (F - SHOT.hook[0]) / (SHOT.hook[1] - SHOT.hook[0]);
+    placePhoto(phFull, (1 + MOTION.pushMax) * (1 + MOTION.pushMax * p), FULL.s, fullBase, fullFocus);
+    show(winFull, true);
+  } else if (inRange(F, ...SHOT.end)) {
+    const p = (F - SHOT.end[0]) / (SHOT.end[1] - SHOT.end[0]);
+    placePhoto(phFull, 1 + MOTION.pushMax * p, FULL.s, fullBase, fullFocus);
+    show(winFull, true);
+  } else show(winFull, false);
+
+  /* photo: whole frame in a band (shot 2), eases out about the traced segment */
+  if (inRange(F, ...SHOT.size)) {
+    const e = ease.move(clamp01((F - CUE.sizeEase.start) / CUE.sizeEase.dur));
+    const k = CUE.sizeEase.from + (1 - CUE.sizeEase.from) * e;
+    const cx = SEGMENT.reduce((a, p) => a + p[0], 0) / SEGMENT.length;
+    const cy = SEGMENT.reduce((a, p) => a + p[1], 0) / SEGMENT.length;
+    const focus = { x: cx * BAND.s, y: cy * BAND.s };
+    placePhoto(phBand, k, BAND.s, { x: 0, y: 0 }, focus);
+    placePhoto(segSvg, k, BAND.s, { x: 0, y: 0 }, focus);
+    const d = ease.enter(clamp01((F - CUE.outlineDraw.start) / CUE.outlineDraw.dur));
+    segOutline.style.strokeDashoffset = 1 - d;
+    segOutline.style.opacity = F >= CUE.outlineDraw.start - 1e-6 ? 1 : 0;
+    show(winBand, true);
+  } else show(winBand, false);
+
+  /* shot 1 headline */
+  show($('head'), inRange(F, ...SHOT.hook));
+  const line2On = inRange(F, CUE.line2, SHOT.hook[1]), p2 = `scale(${pop(F, CUE.line2)})`;
+  [$('hl2'), $('hs2')].forEach((el) => { el.style.opacity = line2On ? 1 : 0; el.style.transform = p2; });
+
+  /* captions */
+  renderCaption(CAPS.cap2a, F);
+  renderCaption(CAPS.cap2b, F);
+  renderCaption(CAPS.cap4, F);
+  renderCaption(CAPS.cap5, F);
+
+  /* shot 3 caption + 40 kg, exiting as the shot-4 secondary move */
+  const exitStart = CUE.merge.start + MOTION.secondaryDelay;
+  const xp = ease.exit(clamp01((F - exitStart) / MOTION.exitFrames));
+  const inWeight = F >= CUE.cap3 - 1e-6 && F < exitStart + MOTION.exitFrames - 1e-6;
+  CAPS.cap3.end = exitStart + MOTION.exitFrames;
+  renderCaption(CAPS.cap3, F);
+  const cap3 = $('cap3');
+  cap3.style.opacity = inWeight ? 1 - xp : 0;
+  cap3.style.transform = `translateX(${-secondaryTravel * xp}px)`;
+
+  const n40 = $('n40');
+  const n40on = F >= CUE.n40 - 1e-6 && F < exitStart + MOTION.exitFrames - 1e-6;
+  n40.style.opacity = n40on ? 1 - xp : 0;
+  n40.style.transform = `translateX(${-secondaryTravel * xp}px)`;
+  n40.querySelector('.txt').textContent = Math.round(40 * countUp(F, CUE.n40)) + ' kg';
+
+  /* numbers */
+  const n13 = $('n13');
+  show(n13, inRange(F, CUE.n13, SHOT.size[1]));
+  n13.querySelector('.txt').textContent = (1.3 * countUp(F, CUE.n13)).toFixed(1) + ' m';
+  const n65 = $('n65');
+  show(n65, inRange(F, CUE.n65, SHOT.payoff[1]));
+  n65.querySelector('.txt').textContent = (6.5 * countUp(F, CUE.n65)).toFixed(1) + ' m';
+
+  /* diagram */
+  const mp = ease.move(clamp01((F - CUE.merge.start) / CUE.merge.dur));
+  const spread = HEX.spread + (1 - HEX.spread) * mp;
+  const cy = HEX.cy + (HEX.cyMerged - HEX.cy) * mp;
+  cells.forEach((c) => {
+    const on = F >= c.appear - 1e-6 && F < CUE.union - 1e-6;
+    c.el.style.opacity = on ? 1 : 0;
+    const s = pop(F, c.appear);
+    c.el.style.transform = `translate(${HEX.cx + c.x * spread}px, ${cy + c.y * spread}px) scale(${s})`;
+  });
+  const u = window.__union;
+  u.style.opacity = inRange(F, CUE.union, SHOT.payoff[1]) ? 1 : 0;
+  u.style.transform = `translate(0px, ${HEX.cyMerged - HEX.cy}px) scale(${pop(F, CUE.union)})`;
+}
+
+window.renderAt = renderAt;
+window.__ready = Promise.all([
+  document.fonts.ready,
+  phFull.decode().catch(() => {}),
+  phBand.decode().catch(() => {})
+]).then(() => document.fonts.load("800 132px 'Inter Tight'"))
+  .then(() => document.fonts.load("600 64px 'Inter Tight'"))
+  .then(() => document.fonts.load("500 96px 'JetBrains Mono'"))
+  .then(() => { setupLineScrims(); renderAt(0); });
+
+const params = new URLSearchParams(location.search);
+if (params.has('t')) {
+  window.__ready.then(() => renderAt(Number(params.get('t')) || 0));
+} else {
+  // Preview playback only: t comes from the rAF timestamp, never from Date.now
+  window.__ready.then(() => {
+    let t0 = null;
+    const tick = (ts) => {
+      if (t0 === null) t0 = ts;
+      renderAt(Math.floor((((ts - t0) / 1000) % (FRAMES / FPS)) * FPS) / FPS);
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}
+})();
+</script>
+</body>
+</html>

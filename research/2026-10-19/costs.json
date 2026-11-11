@@ -1,0 +1,9 @@
+{
+ "triage": {
+  "usd": 0.003156,
+  "seconds": 16.4,
+  "models": [
+   "anthropic/claude-haiku-5.5"
+  ]
+ }
+}
